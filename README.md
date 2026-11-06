@@ -12,6 +12,7 @@ Pacote de assets 3D modulares e originais para montar cenários de jogos. As pe�
 | [`kits/casa-enxaimel/`](kits/casa-enxaimel/) | Casa enxaimel de 10 × 8 m com garagem anexa de 4 × 8 m: térreo de pedra, 1º andar em enxaimel, 3 quartos, sótão com 2 lucarnas e portão duplo (49 peças) |
 | [`kits/torre-escalonada/`](kits/torre-escalonada/) | Torre residencial de 9 andares em 3 recuos (24 × 16, 20 × 12 e 16 × 10 m): lojas no térreo, 4 tipos de apartamento, terraços em cada recuo, elevador e terraço na cobertura (39 peças) |
 | [`kits/casa-de-campo/`](kits/casa-de-campo/) | Casa de campo de 14 × 8 m com sótão habitável: tábuas horizontais, base de tijolo, varanda de 12 m, telhado de 50° com 2 lucarnas, lareira e chaminé externa (42 peças) |
+| [`kits/bangalo/`](kits/bangalo/) | Bangalô térreo de 14 × 12 m: telhado de quatro águas a 30°, varanda de 10 m com frontão, pilares de tijolo e colunas cônicas, sala com lareira, 2 quartos (44 peças) |
 | [`scripts/`](scripts/) | Portas que abrem e fecham: Godot 4 (`godot/`) e Unity (`unity/`) |
 
 Cada kit tem:

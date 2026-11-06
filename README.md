@@ -9,6 +9,7 @@ Pacote de assets 3D modulares e originais para montar cenários de jogos. As pe�
 | [`kits/predio-tijolos/`](kits/predio-tijolos/) | Prédio de tijolos de 16 × 10 m: térreo + 3 andares, 2 apartamentos por andar, escada de incêndio usável (38 peças) |
 | [`kits/predio-mansarda/`](kits/predio-mansarda/) | Duas casas geminadas de pedra de 18 × 12 m, com mansarda, lucarnas e sótão habitável (41 peças) |
 | [`kits/padaria/`](kits/padaria/) | Padaria de 12 × 10 m: loja e café com toldo e letreiro, produção com forno de alvenaria, apoio no 1º andar e sótão sob telhado de duas águas (45 peças) |
+| [`kits/casa-enxaimel/`](kits/casa-enxaimel/) | Casa enxaimel de 10 × 8 m com garagem anexa de 4 × 8 m: térreo de pedra, 1º andar em enxaimel, 3 quartos, sótão com 2 lucarnas e portão duplo (49 peças) |
 | [`scripts/`](scripts/) | Portas que abrem e fecham: Godot 4 (`godot/`) e Unity (`unity/`) |
 
 Cada kit tem:

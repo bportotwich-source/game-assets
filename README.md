@@ -15,6 +15,7 @@ Pacote de assets 3D modulares e originais para montar cenários de jogos. As pe�
 | [`kits/bangalo/`](kits/bangalo/) | Bangalô térreo de 14 × 12 m: telhado de quatro águas a 30°, varanda de 10 m com frontão, pilares de tijolo e colunas cônicas, sala com lareira, 2 quartos (44 peças) |
 | [`kits/supermercado/`](kits/supermercado/) | Supermercado de 24 × 16 m: tijolo com pilastras, vitrines com toldos, entrada de vidro, salão de vendas, depósito com portas de carga, área de funcionários e cobertura com equipamentos (28 peças) |
 | [`kits/galeria/`](kits/galeria/) | Galeria comercial de 24 × 26 m com 3 andares: 30 lojas em volta de um átrio com abóbada de vidro, ponte e escadas rolantes, entrada em pele de vidro com lanterna (41 peças) |
+| [`visitar/`](visitar/) + `project.godot` | Projeto Godot 4 para andar dentro de qualquer kit em primeira pessoa, com colisão e portas que abrem |
 | [`scripts/`](scripts/) | Portas que abrem e fecham: Godot 4 (`godot/`) e Unity (`unity/`) |
 
 Cada kit tem:
@@ -30,6 +31,14 @@ Cada kit tem:
 2. Monte o prédio peça por peça seguindo `building_layout.json`, ou use `building_assembled.glb` pronto.
 3. Para o visual toon, use contorno em tela (pós-processo por profundidade e normal) ou casco invertido. Contorno por aresta de cada peça desenha as emendas entre os módulos.
 4. Para as portas, siga `scripts/LEIA-ME.md`.
+
+## Andar dentro dos prédios (Godot 4)
+1. Baixe o repositório e abra a pasta dele no Godot 4.3 ou mais novo (Importar, escolha `project.godot`). A primeira abertura importa todas as peças e leva alguns minutos.
+2. Aperte F5. O jogo começa na frente da galeria.
+3. Clique para prender o mouse. WASD anda, Shift corre, Espaço pula, E ou clique abre e fecha portas, F liga o voo (Espaço sobe, Q desce), Esc solta o mouse.
+4. As teclas 1 a 9 trocam de prédio. Para começar em outro, mude `kit` no nó `Main` de `visitar/main.tscn`.
+
+O prédio é montado na hora a partir do `building_layout.json`, com colisão exata em cada peça. O jogador segue o padrão (cápsula de 1,8 m, olhos a 1,65 m) e sobe degraus e escadas rolantes sozinho.
 
 ## Regenerar um kit
 ```

@@ -11,6 +11,7 @@ Pacote de assets 3D modulares e originais para montar cenários de jogos. As pe�
 | [`kits/padaria/`](kits/padaria/) | Padaria de 12 × 10 m: loja e café com toldo e letreiro, produção com forno de alvenaria, apoio no 1º andar e sótão sob telhado de duas águas (45 peças) |
 | [`kits/casa-enxaimel/`](kits/casa-enxaimel/) | Casa enxaimel de 10 × 8 m com garagem anexa de 4 × 8 m: térreo de pedra, 1º andar em enxaimel, 3 quartos, sótão com 2 lucarnas e portão duplo (49 peças) |
 | [`kits/torre-escalonada/`](kits/torre-escalonada/) | Torre residencial de 9 andares em 3 recuos (24 × 16, 20 × 12 e 16 × 10 m): lojas no térreo, 4 tipos de apartamento, terraços em cada recuo, elevador e terraço na cobertura (39 peças) |
+| [`kits/casa-de-campo/`](kits/casa-de-campo/) | Casa de campo de 14 × 8 m com sótão habitável: tábuas horizontais, base de tijolo, varanda de 12 m, telhado de 50° com 2 lucarnas, lareira e chaminé externa (42 peças) |
 | [`scripts/`](scripts/) | Portas que abrem e fecham: Godot 4 (`godot/`) e Unity (`unity/`) |
 
 Cada kit tem:

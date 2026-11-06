@@ -8,6 +8,7 @@ Pacote de assets 3D modulares e originais para montar cenários de jogos. As pe�
 | [`PADRAO_METRICAS.md`](PADRAO_METRICAS.md) | Padrão de medidas comum a todos os kits: jogador, módulo de 2 m, andares, portas, corredores, escadas e regras contra flicker |
 | [`kits/predio-tijolos/`](kits/predio-tijolos/) | Prédio de tijolos de 16 × 10 m: térreo + 3 andares, 2 apartamentos por andar, escada de incêndio usável (38 peças) |
 | [`kits/predio-mansarda/`](kits/predio-mansarda/) | Duas casas geminadas de pedra de 18 × 12 m, com mansarda, lucarnas e sótão habitável (41 peças) |
+| [`kits/sobrado-padaria/`](kits/sobrado-padaria/) | Sobrado de 8 × 8 m com padaria no térreo (loja de 4 m, toldo e letreiro), apartamento e sótão sob telhado de duas águas (43 peças) |
 | [`scripts/`](scripts/) | Portas que abrem e fecham: Godot 4 (`godot/`) e Unity (`unity/`) |
 
 Cada kit tem:

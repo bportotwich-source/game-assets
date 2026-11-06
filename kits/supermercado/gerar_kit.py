@@ -396,9 +396,12 @@ def hull(p,mat,pts): p.add(mat,trimesh.convex.convex_hull(np.array(pts,float)))
 # ---------- exterior walls ----------
 def ribs(p,y0,y1,xs=(-0.5,0.5)):
     for x in xs: p.box('brick',x-0.15,x+0.15,y0,y1,0.0,0.06)
-def wall_dress(p):
+def wall_dress(p,ow=0.0,step=0.0):
     p.box('brick',-W/2,W/2,-RAISE,0.0,-T,0.0)
-    p.box('stone',-W/2,W/2,-RAISE,0.5,0.0,0.04)                   # concrete plinth: hides the floor slab edge
+    if ow>0:                                                       # concrete plinth stops at the doorway
+        for (x0,x1) in ((-W/2,-ow/2),(ow/2,W/2)): p.box('stone',x0,x1,-RAISE,0.5,0.0,0.04)
+        if step>0: p.box('stone',-ow/2,ow/2,-RAISE,0.0,0.0,step)    # concrete step flush with the floor: hides the slab edge
+    else: p.box('stone',-W/2,W/2,-RAISE,0.5,0.0,0.04)              # concrete plinth: hides the floor slab edge
     p.box('trim',-W/2,W/2,FH-0.4,FH+0.1,0.0,0.1)                    # white cornice band: hides the roof slab edge
     p.box('trim',-W/2,W/2,FH-0.55,FH-0.48,0.0,0.09)
     p.box('coping',-W/2,W/2,HW,HW+0.08,-T-0.04,0.12)
@@ -415,7 +418,7 @@ def wall_entry():
     x=ow/2
     for (a,b) in ((-x,-x+0.06),(x-0.06,x)): p.box('frame2',a,b,oy0,2.6,-T,0.0)
     p.box('frame2',-x,x,2.54,2.6,-T,0.0); p.box('metal',-x+0.06,x-0.06,0.0,0.02,-T+0.01,0.01)
-    ribs(p,3.3,HW); wall_dress(p); return p
+    ribs(p,3.3,HW); wall_dress(p,1.6); return p
 def wall_brick_window(ow=1.2,oy0=1.4,oy1=2.6):
     p=Piece(); wall_with_opening(p,'brick',ow,oy0,oy1,HW); window(p,ow,oy0,oy1,lintel=None)
     p.box('stone',-ow/2-0.1,ow/2+0.1,oy1+0.01,oy1+0.2,0.0,0.05)
@@ -425,19 +428,19 @@ def wall_brick_door():
     """Steel service door 1.0 x 2.25 m with a small canopy. Pivot: bottom-centre of the outer face, floor level."""
     p=Piece(); ow=1.0; x=ow/2; oy0=0.015; oy1=2.25; wall_with_opening(p,'brick',ow,oy0,oy1,HW)
     for (a,b) in ((-x,-x+0.07),(x-0.07,x)): p.box('frame2',a,b,oy0,oy1,-0.24,0.0)
-    p.box('frame2',-x,x,oy1-0.07,oy1,-0.24,0.0); p.box('metal',-x+0.07,x-0.07,0.0,0.01,-0.24,0.0)
+    p.box('frame2',-x,x,oy1-0.07,oy1,-0.24,0.0); p.box('metal',-x+0.07,x-0.07,0.0,0.02,-0.24,0.01)
     p.box('coping',-0.75,0.75,2.55,2.65,0.0,0.9)
     for s in (-1,1): p.seg('steel',(s*0.65,2.62,0.85),(s*0.65,3.4,0.02),0.03)
-    ribs(p,2.8,HW); ribs(p,0.5,2.5,xs=()); wall_dress(p); return p
+    ribs(p,2.8,HW); ribs(p,0.5,2.5,xs=()); wall_dress(p,1.0,0.4); return p
 def wall_dock_door():
     """Double steel delivery doors 1.8 x 2.8 m under a steel canopy. Pivot: bottom-centre of the outer face, floor level."""
     p=Piece(); ow=1.8; x=ow/2; oy0=0.015; oy1=2.8; wall_with_opening(p,'brick',ow,oy0,oy1,HW)
     for (a,b) in ((-x,-x+0.07),(x-0.07,x)): p.box('frame2',a,b,oy0,oy1,-0.24,0.0)
-    p.box('frame2',-x,x,oy1-0.07,oy1,-0.24,0.0); p.box('metal',-x+0.07,x-0.07,0.0,0.01,-0.24,0.0)
+    p.box('frame2',-x,x,oy1-0.07,oy1,-0.24,0.0); p.box('metal',-x+0.07,x-0.07,0.0,0.02,-0.24,0.01)
     p.box('coping',-W/2+0.02,W/2-0.02,3.1,3.2,0.0,1.4)
     for s in (-1,1): p.seg('steel',(s*0.85,3.17,1.35),(s*0.85,4.0,0.02),0.04)
     for s in (-1,1): p.box('dark',s*0.98-0.1,s*0.98+0.1,0.1,0.56,0.0,0.12)      # rubber dock bumpers
-    ribs(p,3.3,HW); wall_dress(p); return p
+    ribs(p,3.3,HW); wall_dress(p,1.8,0.5); return p
 def corner_brick():
     p=Piece(); a=-T-0.02
     p.box('brick',a,0.1,-RAISE,HW,a,0.1); p.box('stone',a+0.01,0.14,-RAISE,0.5,a+0.01,0.14)

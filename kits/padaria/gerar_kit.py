@@ -451,6 +451,8 @@ def awning():
     p.box('iron',-W/2+0.01,W/2-0.01,y0-0.07,y0-0.01,0.025,0.07); return p
 def wall_render_shop_window():
     p=Piece(); wall_with_opening(p,'render',0.9,1.0,2.6,HS); window(p,0.9,1.0,2.6); ledge(p,HS,th=0.15,d=0.06); return p
+def wall_render_shop_small_window():
+    p=Piece(); wall_with_opening(p,'render',0.6,1.6,2.4,HS); window(p,0.6,1.6,2.4,mull=False); ledge(p,HS,th=0.15,d=0.06); return p
 def wall_render_shop_plain():
     p=Piece(); wall_with_opening(p,'render',0,0,0,HS); ledge(p,HS,th=0.15,d=0.06); return p
 def wall_render_shop_door():
@@ -472,9 +474,14 @@ def corner_knee():
 # ---------- attic: knee walls, gable, roof ----------
 def knee_wall():
     p=Piece(); wall_with_opening(p,'render',0,0,0,KNEE); return p
+HSP=5.0     # half span of the gable roof (building depth 10 m)
+KR=0.84     # roof pitch: rise per metre (about 40 degrees)
+TV=0.3      # roof thickness (vertical)
+def roof_in(u): return 1.0+KR*u          # roof underside height above the attic floor, u = metres in from the facade
+def roof_out(u): return 1.0+TV+KR*u
 def knee_wall_dormer():
     """Knee wall module whose middle rises into a dormer front with a window (sill 0.8 m above the attic floor)."""
-    p=Piece(); top=2.6
+    p=Piece(); top=2.6; u1=(top-1.0-TV)/KR        # hole in the roof reaches where the roof top passes the dormer top
     xs=[-W/2,-0.8,-0.4,0.4,0.8,W/2]; ys=[0.0,0.8,KNEE,2.3,top]; zs=[-T,-T+0.02,0.0]
     def cell(i,j,k):
         if i in (0,4) and j>=2: return None
@@ -482,53 +489,69 @@ def knee_wall_dormer():
         return 'plaster' if k==0 else 'render'
     for m,mesh in grid_solid(xs,ys,zs,cell).items(): p.add(m,mesh)
     window(p,0.8,0.8,2.3)
-    tri=Polygon([(-0.8,top),(0.8,top),(0.8,2.63),(0,top+0.52),(-0.8,2.63)])
+    ridge=top+0.5; yu=lambda x:ridge-abs(x)/0.92*0.56          # underside of the dormer roof
+    tri=Polygon([(-0.8,top),(0.8,top),(0.8,yu(0.8)+0.02),(0,ridge+0.02),(-0.8,yu(0.8)+0.02)])
     ext(p,'render',tri,-T+0.02,0.0); ext(p,'plaster',tri,-T,-T+0.02)
-    for sx in (-1,1):   # cheeks: slate outside, plaster inside
+    mid=lambda y:((y-1.0-TV/2)/KR)               # u where height y sits in the middle of the roof thickness
+    for sx in (-1,1):   # cheeks: slate outside, plaster inside; bottom edge buried in the roof
         for (a,b,mat) in ((0.59,0.67,'plaster'),(0.67,0.8,'slate')):
             xa,xb=sorted((sx*a,sx*b))
-            yt=lambda x:top+0.5-abs(x)/0.92*0.56+0.03
-            hull(p,mat,[(x,y,z) for x in (xa,xb) for (z,y) in ((-T,KNEE+0.15),(-T,yt(x)),(-1.3,yt(x)),(-1.3,2.45))])
-    for sx in (-1,1):   # dormer gable roof (slate), runs back into the main roof
-        # back ends stay inside the main roof's thickness (ridge reaches 1.95 m in, eaves 1.4 m)
-        hull(p,'slate',[(x,y,z) for (x,y,zb) in ((0,top+0.5,-1.95),(sx*0.92,top-0.06,-1.4),(0,top+0.58,-1.95),(sx*0.92,top+0.02,-1.4)) for z in (0.15,zb)])
-    ext(p,'plaster',Polygon([(-0.6,top),(0.6,top),(0.6,2.75),(0,top+0.52),(-0.6,2.75)]),-1.32,-1.3)   # closes the back of the dormer
+            hull(p,mat,[(x,y,z) for x in (xa,xb) for (z,y) in ((-T,KNEE+0.15),(-T,yu(x)+0.03),(-u1,yu(x)+0.03),(-u1,roof_in(u1)+0.15))])
+    for sx in (-1,1):   # dormer gable roof (slate); back ends stay inside the main roof thickness
+        hull(p,'slate',[(x,y,z) for (x,y) in ((0,ridge),(sx*0.92,top-0.06),(0,ridge+0.08),(sx*0.92,top+0.02)) for z in (0.15,-mid(y+0.04))])
+    ext(p,'plaster',Polygon([(-0.6,top),(0.6,top),(0.6,yu(0.6)+0.02),(0,ridge+0.02),(-0.6,yu(0.6)+0.02)]),-u1-0.02,-u1)
     p.box('trim',-0.86,0.86,top-0.06,top,0.0,0.05)
     return p
+DORMER_U1=(2.6-1.0-TV)/KR
 def roof_panel(p,x0,x1,hole=None):
-    """45-degree roof slope for one module: from the eave (0.4 m overhang) to the ridge 4 m in.
+    """Roof slope for one module: from the eave (0.4 m overhang) to the ridge HSP m in.
     Grid space (x, u, v): u = distance in from the facade, v = layer (plaster underside, tiles on top)."""
-    us=[-0.4,4.0]; vs=[0.0,0.02,0.3]
+    us=[-0.4,HSP]; vs=[0.0,0.02,TV]
     if hole:
-        hx,u1=hole; xs=[x0,-hx,hx,x1]; us=[-0.4,u1,4.0]
+        hx,u1=hole; xs=[x0,-hx,hx,x1]; us=[-0.4,u1,HSP]
         def cell(i,j,k): return None if (i==1 and j==0) else ('plaster' if k==0 else 'roof_tiles')
     else:
         xs=[x0,x1]
         def cell(i,j,k): return 'plaster' if k==0 else 'roof_tiles'
     for m,mesh in grid_solid(xs,us,vs,cell).items():
         v=mesh.vertices.copy(); u=v[:,1].copy(); w=v[:,2].copy()
-        v[:,1]=1.0+u+w; v[:,2]=-u; mesh.vertices=v
-        if np.linalg.det(np.array([[1,0,0],[0,1,1],[0,-1,0]]))<0: mesh.invert()
+        v[:,1]=1.0+KR*u+w; v[:,2]=-u; mesh.vertices=v
         p.add(m,mesh)
 def roof_slope(): p=Piece(); roof_panel(p,-W/2,W/2); return p
 def roof_slope_end(): p=Piece(); roof_panel(p,-W/2,W/2+0.3); return p          # +x end runs 0.3 m past the gable
 def roof_slope_end_l(): p=Piece(); roof_panel(p,-W/2-0.3,W/2); return p
-def roof_slope_dormer(): p=Piece(); roof_panel(p,-W/2,W/2,hole=(0.6,1.3)); return p
+def roof_slope_dormer(): p=Piece(); roof_panel(p,-W/2,W/2,hole=(0.6,DORMER_U1)); return p
 def ridge_cap(x0=-W/2,x1=W/2):
-    p=Piece(); y=5.3
-    hull(p,'ridge',[(x,yy,z) for x in (x0,x1) for (yy,z) in ((y-0.2,0.22),(y-0.2,-0.22),(y+0.08,0.0),(y-0.12,0.22),(y-0.12,-0.22))]); return p
+    p=Piece(); y=roof_out(HSP); d=0.22
+    hull(p,'ridge',[(x,yy,z) for x in (x0,x1) for (yy,z) in ((y-d*KR-0.04,d),(y-d*KR-0.04,-d),(y+0.08,0.0),(y-d*KR+0.06,d),(y-d*KR+0.06,-d))]); return p
 def gable_wall():
-    """Whole gable end (8 m) above the first floor: knee height at the eaves, apex under the ridge, attic window."""
-    p=Piece(); top=lambda x:1.0+(4-abs(x))+0.15
-    outer=Polygon([(-4,0),(4,0),(4,top(4)),(0,top(0)),(-4,top(-4))])
+    """Whole gable end (10 m) above the first floor: knee height at the eaves, apex under the ridge, attic window."""
+    p=Piece(); top=lambda x:roof_in(HSP-abs(x))+0.15
+    outer=Polygon([(-HSP,0),(HSP,0),(HSP,top(HSP)),(0,top(0)),(-HSP,top(-HSP))])
     hole=sbox(-0.45,1.4,0.45,2.6); body=outer.difference(hole)
     ext(p,'render',body,-T+0.02,0.0); ext(p,'plaster',body,-T,-T+0.02)
     window(p,0.9,1.4,2.6)
     return p
-def chimney():
-    p=Piece(); p.box('brick',-0.4,0.4,0,2.0,-0.3,0.3); p.box('trim',-0.48,0.48,2.0,2.12,-0.38,0.38)
-    for xx in (-0.15,0.15): p.cyl('roof_tiles',0.09,2.12,2.4,xx,0,10)
+def bake_oven():
+    """Built-in masonry bread oven against a wall. Pivot: back-centre on the floor, mouth toward +Z."""
+    p=Piece(); w=1.2; d=2.0; h=1.4
+    p.box('brick',-w,w,0,h,0,d)
+    a=np.linspace(0,math.pi,13); hull(p,'brick',[(w*math.cos(t),h-0.01+0.6*math.sin(t),z) for t in a for z in (0.0,d)])
+    p.box('trim',-w-0.05,w+0.05,0.82,0.9,d,d+0.06)                    # stone hearth ledge
+    p.box('trim',-0.7,0.7,0.86,0.9,d+0.06,d+0.3)
+    p.box('dark',-0.4,0.4,0.9,1.25,d,d+0.02); ext(p,'dark',half_disc(0,1.25,0.4),d,d+0.02)   # mouth
+    ext(p,'trim',arch_half(0,1.25,0.4,0.5),d,d+0.04); p.box('iron',-0.35,0.35,0.92,1.2,d+0.02,d+0.04)
     return p
+def oven_flue(h):
+    """Masonry flue from the oven dome up through both floors and the roof. Pivot: base centre."""
+    p=Piece(); p.box('brick',-0.3,0.3,0,h,-0.3,0.3); p.box('trim',-0.38,0.38,h,h+0.12,-0.38,0.38)
+    for xx in (-0.13,0.13): p.cyl('roof_tiles',0.08,h+0.12,h+0.42,xx,0,10)
+    return p
+def arch_half(cx,cy,r0,r1,n=24):
+    a=np.linspace(0,math.pi,n); o=[(cx+r1*math.cos(t),cy+r1*math.sin(t)) for t in a]; i=[(cx+r0*math.cos(t),cy+r0*math.sin(t)) for t in a[::-1]]
+    return Polygon(o+i)
+def half_disc(cx,cy,r,n=24):
+    a=np.linspace(0,math.pi,n); return Polygon([(cx+r*math.cos(t),cy+r*math.sin(t)) for t in a])
 def interior_wall_end_doorway(h=H-SLAB):
     """End wall (stops at the exterior wall's inner face) with a 0.9 m doorway in the middle of the module."""
     p=Piece(); t=0.12; e=W/2-T
@@ -543,24 +566,26 @@ def stair_core_rail():
     p=Piece(); railing(p,-0.02,0.02,-1.98,1.98,0,sides=(False,True,False),n=24); return p
 
 HI=HS-SLAB
+FLUE_Y=1.6; FLUE_U=0.7
+FLUE_H=round(HS+H+roof_out(FLUE_U)+1.1-FLUE_Y,2)   # from inside the oven dome to 1.1 m above the back roof
 pieces={'floor_tile':floor_tile(),'floor_tile_bath':floor_tile_bath(),'stair_core_slab':stair_core_slab(),'stair_core_rail':stair_core_rail(),
  'stairs_u_4m':stairs_u(HS,run=3.0,land=0.95),'stairs_u_3m':stairs_u(H),
  'door_leaf_shop':door_leaf(0.94,2.36,True,'door'),'door_leaf_back':door_leaf(0.96,2.3,False,'door'),'door_leaf_interior':door_leaf(0.86,2.08,False,'frame'),
  'interior_wall_plain':interior_wall(False),'interior_wall_doorway':interior_wall(True),'interior_wall_end':interior_wall_end(),'interior_wall_end_doorway':interior_wall_end_doorway(),
  'interior_wall_plain_shop':interior_wall(False,HI),'interior_wall_doorway_shop':interior_wall(True,HI),'interior_wall_end_shop':interior_wall_end(HI),'interior_wall_end_doorway_shop':interior_wall_end_doorway(HI),
  'shopfront_window':shopfront_window(),'shopfront_door':shopfront_door(),'shop_fascia':shop_fascia(),'shop_sign':shop_sign(),'awning':awning(),
- 'wall_render_shop_window':wall_render_shop_window(),'wall_render_shop_plain':wall_render_shop_plain(),'wall_render_shop_door':wall_render_shop_door(),
+ 'wall_render_shop_window':wall_render_shop_window(),'wall_render_shop_plain':wall_render_shop_plain(),'wall_render_shop_small_window':wall_render_shop_small_window(),'wall_render_shop_door':wall_render_shop_door(),
  'corner_shop':corner('render',HS,0.15,0.06),'corner_render':corner('render',H,0.08,0.04),'corner_knee':corner_knee(),
  'wall_render_window':wall_render_window(),'wall_render_small_window':wall_render_small_window(),'wall_render_balconette':wall_render_balconette(),'wall_render_plain':wall_render_plain(),
  'knee_wall':knee_wall(),'knee_wall_dormer':knee_wall_dormer(),'gable_wall':gable_wall(),
  'roof_slope':roof_slope(),'roof_slope_end':roof_slope_end(),'roof_slope_end_l':roof_slope_end_l(),'roof_slope_dormer':roof_slope_dormer(),
- 'ridge_cap':ridge_cap(),'ridge_cap_end':ridge_cap(-0.17,0.17),'chimney':chimney(),'player_scale_ref':player_ref(),
+ 'ridge_cap':ridge_cap(),'ridge_cap_end':ridge_cap(-0.17,0.17),'bake_oven':bake_oven(),'oven_flue':oven_flue(FLUE_H),'player_scale_ref':player_ref(),
 }
 import shutil; shutil.rmtree(f'{OUT}/pieces',ignore_errors=True); os.makedirs(f'{OUT}/pieces')
 for n,p in pieces.items(): p.scene(n).export(f'{OUT}/pieces/{n}.glb',include_normals=True)
 
-# ================= assembly: 8 x 8 m shop-house, shop front on +Z, gables on +-X =================
-SX,SZ=4.0,4.0
+# ================= assembly: 12 x 10 m bakery, shop front on +Z, gables on +-X =================
+SX,SZ=6.0,5.0
 L=[]
 def put(n,x,y,z,ry=0,tags=(),door=None):
     e={'piece':n,'pos':[round(x,3),round(y,3),round(z,3)],'rotY':ry,'tags':list(tags)}
@@ -569,74 +594,78 @@ def put(n,x,y,z,ry=0,tags=(),door=None):
 def hinge(x,z,ry,lx,lz):
     r=math.radians(ry); return x+lx*math.cos(r)+lz*math.sin(r), z-lx*math.sin(r)+lz*math.cos(r)
 def ftag(fl): return f'floor{fl}'
-B=[-3,-1,1,3]
-faces=[(0,lambda u:(u,SZ),'front'),(90,lambda u:(SX,-u),'right'),(180,lambda u:(-u,-SZ),'back'),(-90,lambda u:(-SX,u),'left')]
-G={'front':{-3:'shopfront_window',-1:'shopfront_door',1:'shopfront_window',3:'shopfront_window'},
-   'back':{-3:'wall_render_shop_window',-1:'wall_render_shop_door',1:'wall_render_shop_plain',3:'wall_render_shop_plain'},
-   'left':{3:'wall_render_shop_window',1:'wall_render_shop_window',-1:'wall_render_shop_window',-3:'wall_render_shop_window'},
-   'right':{3:'wall_render_shop_window',1:'wall_render_shop_window',-1:'wall_render_shop_plain',-3:'wall_render_shop_plain'}}
-F1={'front':{-3:'wall_render_balconette',-1:'wall_render_balconette',1:'wall_render_window',3:'wall_render_small_window'},
-    'back':{-3:'wall_render_window',-1:'wall_render_window',1:'wall_render_plain',3:'wall_render_plain'},
-    'left':{3:'wall_render_window',1:'wall_render_window',-1:'wall_render_window',-3:'wall_render_window'},
-    'right':{3:'wall_render_small_window',1:'wall_render_window',-1:'wall_render_plain',-3:'wall_render_plain'}}
-for ry,f,tag in faces:
-    for u in B:
-        x,z=f(u); wk=x if tag in ('front','back') else z     # world coordinate along the face
+FB=[-5,-3,-1,1,3,5]; SB=[-4,-2,0,2,4]
+faces=[(0,FB,lambda u:(u,SZ),'front'),(90,SB,lambda u:(SX,-u),'right'),(180,FB,lambda u:(-u,-SZ),'back'),(-90,SB,lambda u:(-SX,u),'left')]
+SW,SP,SD='wall_render_shop_window','wall_render_shop_plain','wall_render_shop_door'
+G={'front':{-5:'shopfront_window',-3:'shopfront_window',-1:'shopfront_door',1:'shopfront_window',3:'shopfront_window',5:'shopfront_window'},
+   'back':{-5:SW,-3:SP,-1:SP,1:SD,3:SP,5:SP},           # oven against the back wall at x=-2, loading door at x=1, stair core x>2
+   'left':{4:SW,2:SW,0:SP,-2:SP,-4:SW},
+   'right':{4:SW,2:SW,0:'wall_render_shop_small_window',-2:SP,-4:SP}}
+RW,RS,RB,RP='wall_render_window','wall_render_small_window','wall_render_balconette','wall_render_plain'
+F1={'front':{-5:RB,-3:RB,-1:RW,1:RW,3:RW,5:RW},
+    'back':{-5:RW,-3:RW,-1:RS,1:RS,3:RP,5:RP},
+    'left':{4:RW,2:RW,0:RW,-2:RW,-4:RW},
+    'right':{4:RW,2:RW,0:RW,-2:RP,-4:RP}}
+DORMERS={-3,3}
+for ry,bays,f,tag in faces:
+    for u in bays:
+        x,z=f(u); wk=x if tag in ('front','back') else z
         put(G[tag][wk],x,0,z,ry,[tag,'ext',ftag(0)])
         put(F1[tag][wk],x,lvl(1),z,ry,[tag,'ext',ftag(1)])
         if tag in ('front','back'):
-            dorm=(tag=='front' and x==1)
+            dorm=(tag=='front' and x in DORMERS)
             put('knee_wall_dormer' if dorm else 'knee_wall',x,lvl(2),z,ry,[tag,'ext',ftag(2)])
-            # roof slopes: the end modules run 0.3 m past the gables
             if dorm: rn='roof_slope_dormer'
-            elif abs(x)==3: rn='roof_slope_end' if (x>0)==(tag=='front') else 'roof_slope_end_l'
+            elif abs(x)==5: rn='roof_slope_end' if (x>0)==(tag=='front') else 'roof_slope_end_l'
             else: rn='roof_slope'
             put(rn,x,lvl(2),z,ry,[tag,'roof'])
-for x in B: put('ridge_cap',x,lvl(2),0,0,['roof'])
+for x in FB: put('ridge_cap',x,lvl(2),0,0,['roof'])
 for x in (-SX-0.15,SX+0.15): put('ridge_cap_end',x,lvl(2),0,0,['roof'])
 put('gable_wall',SX,lvl(2),0,90,['right','ext',ftag(2)]); put('gable_wall',-SX,lvl(2),0,-90,['left','ext',ftag(2)])
-put('chimney',-2.5,lvl(2)+5.0,0,0,['roof'])
 for ry,x,z,tg in [(0,SX,SZ,('front','right')),(90,SX,-SZ,('right','back')),(180,-SX,-SZ,('back','left')),(-90,-SX,SZ,('left','front'))]:
     put('corner_shop',x,0,z,ry,tg+('ext',ftag(0))); put('corner_render',x,lvl(1),z,ry,tg+('ext',ftag(1))); put('corner_knee',x,lvl(2),z,ry,tg+('ext',ftag(2)))
-# shop front dressing
-for x in B: put('shop_fascia',x,0,SZ,0,['front','ext',ftag(0)]); put('awning',x,0,SZ,0,['front','ext',ftag(0)])
-put('shop_sign',0,0,SZ,0,['front','ext',ftag(0)])
-# slabs: stair core x in [0,4], z in [-4,0]
-CORE={(1,-3),(3,-3),(1,-1),(3,-1)}; BATH={1:{(3,3)}}
+for x in FB: put('shop_fascia',x,0,SZ,0,['front','ext',ftag(0)]); put('awning',x,0,SZ,0,['front','ext',ftag(0)])
+put('shop_sign',-1,0,SZ,0,['front','ext',ftag(0)])
+# oven + flue (flue runs inside the upstairs wall line x=-2 and exits the back roof slope)
+put('bake_oven',-2,0,-SZ+T,0,[ftag(0)])
+put('oven_flue',-2,FLUE_Y,-SZ+FLUE_U,0,['roof'])
+# slabs: stair core x in [2,6], z in [-5,-1]
+CORE={(3,-4),(5,-4),(3,-2),(5,-2)}
+TILE={0:{(a,b) for a in (-3,-1,1) for b in (-4,-2,0)}|{(5,0)},1:{(1,-4),(1,-2)}}
 for fl in range(0,3):
     y=lvl(fl)
-    for a in B:
-        for b in B:
+    for a in FB:
+        for b in SB:
             if fl>0 and (a,b) in CORE: continue
-            put('floor_tile_bath' if (a,b) in BATH.get(fl,()) else 'floor_tile',a,y,b,0,[ftag(fl)])
+            put('floor_tile_bath' if (a,b) in TILE.get(fl,()) else 'floor_tile',a,y,b,0,[ftag(fl)])
     if fl>0:
-        put('stair_core_slab',2,y,-2,0,[ftag(fl)]); put('stair_core_rail',2-1.4,y,-2,0,[ftag(fl)]); put('stair_core_rail',2+1.4,y,-2,0,[ftag(fl)])
-put('stairs_u_4m',2,0,0,0,[ftag(0)]); put('stairs_u_3m',2,lvl(1),0,0,[ftag(1)])
-# interior walls
+        put('stair_core_slab',4,y,-3,0,[ftag(fl)]); put('stair_core_rail',4-1.4,y,-3,0,[ftag(fl)]); put('stair_core_rail',4+1.4,y,-3,0,[ftag(fl)])
+put('stairs_u_4m',4,0,-1,0,[ftag(0)]); put('stairs_u_3m',4,lvl(1),-1,0,[ftag(1)])
 def wl(fl,x0,z0,x1,z1,doors=()):
     y=lvl(fl); g='_shop' if fl==0 else ''
-    def end(c,lim): return abs(c)+1>=lim
     if z0==z1:
         for c in range(int(min(x0,x1))+1,int(max(x0,x1)),2):
-            if end(c,SX): put(('interior_wall_end_doorway' if c in doors else 'interior_wall_end')+g,c,y,z0,0 if c>0 else 180,[ftag(fl)]); continue
+            if abs(c)+1>=SX: put(('interior_wall_end_doorway' if c in doors else 'interior_wall_end')+g,c,y,z0,0 if c>0 else 180,[ftag(fl)]); continue
             put(('interior_wall_doorway' if c in doors else 'interior_wall_plain')+g,c,y,z0,0,[ftag(fl)])
     else:
         for c in range(int(min(z0,z1))+1,int(max(z0,z1)),2):
-            if end(c,SZ): put(('interior_wall_end_doorway' if c in doors else 'interior_wall_end')+g,x0,y,c,-90 if c>0 else 90,[ftag(fl)]); continue
+            if abs(c)+1>=SZ: put(('interior_wall_end_doorway' if c in doors else 'interior_wall_end')+g,x0,y,c,-90 if c>0 else 90,[ftag(fl)]); continue
             put(('interior_wall_doorway' if c in doors else 'interior_wall_plain')+g,x0,y,c,90,[ftag(fl)])
 def door(fl,x,z,ry,ang=70):
     hx,hz=hinge(x,z,ry,-0.43,0); put('door_leaf_interior',hx,lvl(fl),hz,ry,[ftag(fl)],door=ang)
-# ground: shop (front 8 x 4), bakery kitchen (back left 4 x 4), stair (back right)
-wl(0,-4,0,0,0,doors=(-1,)); wl(0,0,0,4,0,doors=(1,)); wl(0,0,-4,0,0)
-door(0,-1,0,0); door(0,1,0,0)
-# first floor flat: living (front left), bedroom (back left), hall, kitchen, bath
-wl(1,-4,0,0,0,doors=(-1,)); wl(1,0,0,0,4,doors=(1,)); wl(1,0,2,4,2,doors=(1,3)); wl(1,2,2,2,4); wl(1,0,-4,0,0)
-door(1,-1,0,0); door(1,0,1,90); door(1,1,2,0); door(1,3,2,0)
-# attic: open loft under the roof (no partitions)
+# ground: shop + cafe (front, 12 x 4), production with oven (6 x 6), flour/dry store, customer WC, staff hall + stair
+wl(0,-6,1,6,1,doors=(-1,5)); wl(0,-4,-5,-4,1,doors=(-2,)); wl(0,2,-5,2,1,doors=(0,)); wl(0,4,-1,4,1); wl(0,4,-1,6,-1)
+door(0,-1,1,0); door(0,-4,-2,90); door(0,2,0,90,-70); door(0,5,1,0)
+# first floor (bakery support): pastry room, office, staff room (front); dry store, changing room, staff WC (back)
+wl(1,-6,1,6,1,doors=(-3,-1,3)); wl(1,-6,-1,2,-1,doors=(-3,-1,1))
+wl(1,-2,1,-2,5); wl(1,2,1,2,5); wl(1,-2,-5,-2,-1); wl(1,0,-5,0,-1); wl(1,2,-5,2,-1)
+for (x,z) in ((-3,1),(-1,1),(3,1)): door(1,x,z,0)
+for (x,z) in ((-3,-1),(-1,-1),(1,-1)): door(1,x,z,0,-70)
+# attic: open dry-goods loft
 put('door_leaf_shop',-1-0.47,0.015,SZ-0.18,0,['front','ext',ftag(0)],door=85)
-hx,hz=hinge(-1,-SZ,180,-0.48,-0.18); put('door_leaf_back',hx,0.015,hz,180,['back','ext',ftag(0)],door=85)
-put('player_scale_ref',2.6,0,SZ+1.6); put('player_scale_ref',-2,0,2,0,[ftag(0)]); put('player_scale_ref',-2,lvl(1),2,0,[ftag(1)]); put('player_scale_ref',-1,lvl(2),0,0,[ftag(2)])
-json.dump({'grid':{'module_width':W,'floor_height':H,'shop_ground_floor_height':HS,'wall_thickness':T,'slab':SLAB,'footprint':[2*SX,2*SZ],'roof':'gable 45 deg, ridge along X at z=0'},'placements':L},open(f'{OUT}/building_layout.json','w'),indent=1)
+hx,hz=hinge(1,-SZ,180,-0.48,-0.18); put('door_leaf_back',hx,0.015,hz,180,['back','ext',ftag(0)],door=85)
+put('player_scale_ref',2.6,0,SZ+1.6); put('player_scale_ref',-1,0,3,0,[ftag(0)]); put('player_scale_ref',-1,lvl(1),0,0,[ftag(1)]); put('player_scale_ref',-1,lvl(2),0,0,[ftag(2)])
+json.dump({'grid':{'module_width':W,'floor_height':H,'shop_ground_floor_height':HS,'wall_thickness':T,'slab':SLAB,'footprint':[2*SX,2*SZ],'roof':'gable, pitch 0.84 (40 deg), ridge along X at z=0'},'placements':L},open(f'{OUT}/building_layout.json','w'),indent=1)
 asm=Piece()
 for e in L:
     if e['piece']=='player_scale_ref': continue

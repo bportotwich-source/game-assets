@@ -1,0 +1,558 @@
+{
+ "escala": "1 unidade = 1 m, Y para cima, frente para +Z",
+ "montagem": {
+  "floor": "pivô no centro da base",
+  "wall": "pivô no centro de baixo da face de trás (encosta na parede)"
+ },
+ "partes": "portas, gavetas e tampas são nós do GLB com origem na dobradiça: tipo porta/tampa gira abre_graus em torno do eixo; tipo gaveta desliza o vetor desliza (m)",
+ "campos_jogo": {
+  "conteiner": "pode ser revistado",
+  "saque": "grupos da tabela de saque",
+  "slots": "capacidade",
+  "barricada": "pode ser empurrado para bloquear porta",
+  "comodos": "onde aparece",
+  "estacao": "estação de base"
+ },
+ "itens": [
+  {
+   "id": "geladeira",
+   "nome": "Geladeira duplex",
+   "grupo": "mobilias",
+   "categoria": "cozinha",
+   "montagem": "floor",
+   "conteiner": true,
+   "saque": [
+    "comida",
+    "agua",
+    "remedios"
+   ],
+   "slots": 12,
+   "barricada": true,
+   "comodos": [
+    "cozinha"
+   ],
+   "arquivo": "mobilias/geladeira.glb",
+   "tamanho_m": [
+    0.7,
+    1.762,
+    0.71
+   ],
+   "triangulos": 1780,
+   "kb": 92.3,
+   "partes": [
+    {
+     "no": "porta_geladeira",
+     "origem": [
+      0.35,
+      0,
+      0.325
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 110
+    },
+    {
+     "no": "porta_freezer",
+     "origem": [
+      0.35,
+      0,
+      0.325
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 110
+    }
+   ]
+  },
+  {
+   "id": "fogao",
+   "nome": "Fogão 4 bocas",
+   "grupo": "mobilias",
+   "categoria": "cozinha",
+   "montagem": "floor",
+   "conteiner": true,
+   "saque": [
+    "comida",
+    "utensilios"
+   ],
+   "slots": 4,
+   "comodos": [
+    "cozinha"
+   ],
+   "arquivo": "mobilias/fogao.glb",
+   "tamanho_m": [
+    0.56,
+    0.98,
+    0.637
+   ],
+   "triangulos": 4784,
+   "kb": 232.4,
+   "partes": [
+    {
+     "no": "gaveta",
+     "origem": [
+      0,
+      0,
+      0
+     ],
+     "tipo": "gaveta",
+     "desliza": [
+      0,
+      0,
+      0.35
+     ]
+    },
+    {
+     "no": "porta_forno",
+     "origem": [
+      0,
+      0.17,
+      0.30000000000000004
+     ],
+     "tipo": "porta",
+     "eixo": "x",
+     "abre_graus": 85
+    }
+   ]
+  },
+  {
+   "id": "balcao_pia",
+   "nome": "Balcão com pia",
+   "grupo": "mobilias",
+   "categoria": "cozinha",
+   "montagem": "floor",
+   "conteiner": true,
+   "saque": [
+    "utensilios",
+    "limpeza",
+    "ferramentas"
+   ],
+   "slots": 6,
+   "comodos": [
+    "cozinha"
+   ],
+   "arquivo": "mobilias/balcao_pia.glb",
+   "tamanho_m": [
+    1.22,
+    1.23,
+    0.626
+   ],
+   "triangulos": 2408,
+   "kb": 268.8,
+   "partes": [
+    {
+     "no": "porta_esq",
+     "origem": [
+      -0.6,
+      0,
+      0.28900000000000003
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -100
+    },
+    {
+     "no": "porta_dir",
+     "origem": [
+      0.6,
+      0,
+      0.28900000000000003
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 100
+    }
+   ]
+  },
+  {
+   "id": "estante_metal",
+   "nome": "Estante de aço (5 prateleiras)",
+   "grupo": "mobilias",
+   "categoria": "deposito",
+   "montagem": "floor",
+   "conteiner": true,
+   "saque": [
+    "ferramentas",
+    "materiais",
+    "comida"
+   ],
+   "slots": 10,
+   "comodos": [
+    "deposito",
+    "garagem",
+    "loja"
+   ],
+   "arquivo": "mobilias/estante_metal.glb",
+   "tamanho_m": [
+    1.02,
+    1.9,
+    0.42
+   ],
+   "triangulos": 5264,
+   "kb": 250.2
+  },
+  {
+   "id": "guarda_roupa",
+   "nome": "Guarda-roupa 2 portas",
+   "grupo": "mobilias",
+   "categoria": "quarto",
+   "montagem": "floor",
+   "conteiner": true,
+   "saque": [
+    "roupas",
+    "tecido",
+    "mochila"
+   ],
+   "slots": 10,
+   "barricada": true,
+   "comodos": [
+    "quarto"
+   ],
+   "arquivo": "mobilias/guarda_roupa.glb",
+   "tamanho_m": [
+    1.05,
+    2.0,
+    0.606
+   ],
+   "triangulos": 2444,
+   "kb": 257.3,
+   "partes": [
+    {
+     "no": "porta_esq",
+     "origem": [
+      -0.5,
+      0,
+      0.29200000000000004
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -105
+    },
+    {
+     "no": "porta_dir",
+     "origem": [
+      0.5,
+      0,
+      0.29200000000000004
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 105
+    },
+    {
+     "no": "gaveta",
+     "origem": [
+      0,
+      0,
+      0
+     ],
+     "tipo": "gaveta",
+     "desliza": [
+      0,
+      0,
+      0.4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "comoda",
+   "nome": "Cômoda 3 gavetas",
+   "grupo": "mobilias",
+   "categoria": "quarto",
+   "montagem": "floor",
+   "conteiner": true,
+   "saque": [
+    "roupas",
+    "remedios",
+    "pilhas"
+   ],
+   "slots": 6,
+   "comodos": [
+    "quarto"
+   ],
+   "arquivo": "mobilias/comoda.glb",
+   "tamanho_m": [
+    0.93,
+    0.85,
+    0.473
+   ],
+   "triangulos": 2100,
+   "kb": 169.5,
+   "partes": [
+    {
+     "no": "gaveta_1",
+     "origem": [
+      0,
+      0,
+      0
+     ],
+     "tipo": "gaveta",
+     "desliza": [
+      0,
+      0,
+      0.3
+     ]
+    },
+    {
+     "no": "gaveta_2",
+     "origem": [
+      0,
+      0,
+      0
+     ],
+     "tipo": "gaveta",
+     "desliza": [
+      0,
+      0,
+      0.3
+     ]
+    },
+    {
+     "no": "gaveta_3",
+     "origem": [
+      0,
+      0,
+      0
+     ],
+     "tipo": "gaveta",
+     "desliza": [
+      0,
+      0,
+      0.3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "criado_mudo",
+   "nome": "Criado-mudo",
+   "grupo": "mobilias",
+   "categoria": "quarto",
+   "montagem": "floor",
+   "conteiner": true,
+   "saque": [
+    "remedios",
+    "pilhas",
+    "livros"
+   ],
+   "slots": 3,
+   "comodos": [
+    "quarto"
+   ],
+   "arquivo": "mobilias/criado_mudo.glb",
+   "tamanho_m": [
+    0.474,
+    0.555,
+    0.418
+   ],
+   "triangulos": 1740,
+   "kb": 175.3,
+   "partes": [
+    {
+     "no": "gaveta",
+     "origem": [
+      0,
+      0,
+      0
+     ],
+     "tipo": "gaveta",
+     "desliza": [
+      0,
+      0,
+      0.26
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cama_casal",
+   "nome": "Cama de casal",
+   "grupo": "mobilias",
+   "categoria": "quarto",
+   "montagem": "floor",
+   "conteiner": false,
+   "deitar": true,
+   "comodos": [
+    "quarto"
+   ],
+   "estacao": "cama",
+   "arquivo": "mobilias/cama_casal.glb",
+   "tamanho_m": [
+    1.484,
+    1.05,
+    1.984
+   ],
+   "triangulos": 11820,
+   "kb": 1062.2
+  },
+  {
+   "id": "cama_solteiro",
+   "nome": "Cama de solteiro",
+   "grupo": "mobilias",
+   "categoria": "quarto",
+   "montagem": "floor",
+   "conteiner": false,
+   "deitar": true,
+   "comodos": [
+    "quarto"
+   ],
+   "estacao": "cama",
+   "arquivo": "mobilias/cama_solteiro.glb",
+   "tamanho_m": [
+    0.984,
+    1.05,
+    1.984
+   ],
+   "triangulos": 10076,
+   "kb": 939.7
+  },
+  {
+   "id": "mesa_jantar",
+   "nome": "Mesa de jantar",
+   "grupo": "mobilias",
+   "categoria": "sala",
+   "montagem": "floor",
+   "barricada": true,
+   "comodos": [
+    "sala",
+    "cozinha"
+   ],
+   "arquivo": "mobilias/mesa_jantar.glb",
+   "tamanho_m": [
+    1.4,
+    0.76,
+    0.8
+   ],
+   "triangulos": 1820,
+   "kb": 182.9
+  },
+  {
+   "id": "cadeira",
+   "nome": "Cadeira de madeira",
+   "grupo": "mobilias",
+   "categoria": "sala",
+   "montagem": "floor",
+   "comodos": [
+    "sala",
+    "cozinha"
+   ],
+   "sentar": true,
+   "arquivo": "mobilias/cadeira.glb",
+   "tamanho_m": [
+    0.42,
+    0.955,
+    0.478
+   ],
+   "triangulos": 1872,
+   "kb": 212.2
+  },
+  {
+   "id": "sofa",
+   "nome": "Sofá 3 lugares",
+   "grupo": "mobilias",
+   "categoria": "sala",
+   "montagem": "floor",
+   "barricada": true,
+   "sentar": true,
+   "deitar": true,
+   "comodos": [
+    "sala"
+   ],
+   "conteiner": true,
+   "saque": [
+    "moedas",
+    "pilhas"
+   ],
+   "slots": 2,
+   "arquivo": "mobilias/sofa.glb",
+   "tamanho_m": [
+    1.93,
+    0.88,
+    0.87
+   ],
+   "triangulos": 12624,
+   "kb": 992.9
+  },
+  {
+   "id": "armario_banheiro",
+   "nome": "Armário de banheiro com espelho",
+   "grupo": "mobilias",
+   "categoria": "banheiro",
+   "montagem": "wall",
+   "conteiner": true,
+   "saque": [
+    "remedios",
+    "higiene"
+   ],
+   "slots": 4,
+   "comodos": [
+    "banheiro"
+   ],
+   "altura_sugerida_m": 1.2,
+   "arquivo": "mobilias/armario_banheiro.glb",
+   "tamanho_m": [
+    0.52,
+    0.7,
+    0.17
+   ],
+   "triangulos": 348,
+   "kb": 21.6,
+   "partes": [
+    {
+     "no": "porta_espelho",
+     "origem": [
+      -0.25,
+      0,
+      0.16
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -100
+    }
+   ]
+  },
+  {
+   "id": "caixa_madeira",
+   "nome": "Caixote de madeira",
+   "grupo": "mobilias",
+   "categoria": "deposito",
+   "montagem": "floor",
+   "conteiner": true,
+   "saque": [
+    "comida",
+    "materiais",
+    "ferramentas",
+    "armas"
+   ],
+   "slots": 8,
+   "comodos": [
+    "deposito",
+    "garagem",
+    "estacao"
+   ],
+   "barricada": true,
+   "arquivo": "mobilias/caixa_madeira.glb",
+   "tamanho_m": [
+    0.844,
+    0.562,
+    0.644
+   ],
+   "triangulos": 1972,
+   "kb": 190.3,
+   "partes": [
+    {
+     "no": "tampa",
+     "origem": [
+      0,
+      0.52,
+      -0.30200000000000005
+     ],
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -105
+    }
+   ]
+  }
+ ]
+}

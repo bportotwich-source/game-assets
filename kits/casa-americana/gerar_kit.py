@@ -637,6 +637,9 @@ def interior_wall_wide(h=H-SLAB,ow=1.6):
     for a,b in ((-W/2,-ow/2-0.04),(ow/2+0.04,W/2)): p.box('trim',a,b,0,0.1,t/2,t/2+0.015); p.box('trim',a,b,0,0.1,-t/2-0.015,-t/2)
     return p
 CHIM_TOP=round(ROOFB+roof_out(HSP)+0.7,2)
+import sys as _s; _s.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts', 'detalhe'))
+import retrofit
+retrofit.aplicar(globals(), {'siding': 'siding', 'shingle': 'shingles', 'deck': 'deck', 'brick': 'brick', 'plaster': 'plaster'}, tabuas=0.14)
 pieces={'floor_tile':floor_tile(),'floor_tile_bath':floor_tile_bath(),'stair_core_slab':stair_core_slab(),'stairs_u_3m':stairs_u(H),
  'stair_guard':stair_guard(-0.9,0.9),
  'door_leaf_front':door_leaf(0.94,2.36,True,'door'),'door_leaf_back':door_leaf(0.96,2.3,True,'frame'),'door_leaf_interior':door_leaf(0.86,2.08,False,'frame'),
@@ -817,5 +820,5 @@ for e in L:
     if e['piece']=='player_scale_ref': continue
     Tm=trimesh.transformations.rotation_matrix(math.radians(e['rotY']),[0,1,0]); Tm[:3,3]=e['pos']
     asm.merge(pieces[e['piece']],Tm)
-asm.scene('building').export(f'{OUT}/building_assembled.glb',include_normals=True)
+print('triangulos no montado', retrofit.montar(pieces, L, f'{OUT}/building_assembled.glb')); retrofit.finalizar(f'{OUT}/pieces')
 print(len(pieces),'pieces',len(L),'placements',sum(1 for e in L if 'door' in e),'doors')

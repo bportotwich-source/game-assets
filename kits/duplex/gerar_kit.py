@@ -692,6 +692,9 @@ def wall_siding(kind,upper=False):
     return _wsd(kind,upper)
 def main_slope(x0=-W/2,x1=W/2,over=0.4): p=Piece(); roof_panel(p,x0,x1,hsp=HM,kr=KM,over=over); return p
 def cross_slope(x0=-W/2,x1=W/2): p=Piece(); roof_panel(p,x0,x1,hsp=HC,kr=KM,over=0.4); return p
+import sys as _s; _s.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts', 'detalhe'))
+import retrofit
+retrofit.aplicar(globals(), {'siding': 'siding', 'shingle': 'shingles', 'plaster': 'plaster'}, tabuas=0.14)
 pieces={'floor_tile':floor_tile(),'floor_tile_bath':floor_tile_bath(),'garage_floor':garage_floor(),'stair_core_slab':stair_core_slab(),'stairs_u_3m':stairs_u(H),
  'stair_guard':stair_guard(-0.9,0.9),
  'door_leaf_front':door_leaf(0.94,2.36,True,'door'),'door_leaf_front_b':door_leaf(0.94,2.36,True,'door_b'),'door_leaf_back':door_leaf(0.96,2.3,True,'frame'),
@@ -855,5 +858,5 @@ for e in L:
     if e['piece']=='player_scale_ref': continue
     Tm=trimesh.transformations.rotation_matrix(math.radians(e['rotY']),[0,1,0]); Tm[:3,3]=e['pos']
     asm.merge(pieces[e['piece']],Tm)
-asm.scene('building').export(f'{OUT}/building_assembled.glb',include_normals=True)
+print('triangulos no montado', retrofit.montar(pieces, L, f'{OUT}/building_assembled.glb')); retrofit.finalizar(f'{OUT}/pieces')
 print(len(pieces),'pieces',len(L),'placements',sum(1 for e in L if 'door' in e),'doors')

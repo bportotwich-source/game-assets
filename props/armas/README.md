@@ -10,6 +10,7 @@ Aqui ficam as armas de verdade: divididas em partes, com encaixes para acessóri
 ```
 props/armas/
   gerar_armas.py          gera tudo:  python props/armas/gerar_armas.py   (ou só alguns ids)
+  armaNN_<nome>.py        uma arma e os seus acessórios por arquivo (o gerador carrega todos)
   catalogo.json           dados de jogo de tudo (gerado)      CATALOGO.md  tabelas em português (gerado)
   armas/<id>.glb          armas com partes móveis, encaixes e animações
   acessorios/<id>.glb     miras, supressores, lanternas, carregadores...
@@ -36,7 +37,8 @@ props/armas/
   em todas as armas.
 - **Animações glTF** embutidas, só das peças da arma (as mãos virão com os personagens). O nó raiz da arma também se mexe (coice,
   giro da recarga, inspeção). No Godot ficam no `AnimationPlayer` da cena importada. Nomes padrão:
-  `atirar`, `atirar_ultimo`, `vazia`, `recarregar`, `recarregar_vazia`, `inspecionar`, `ocioso` (e os específicos de cada arma).
+  `atirar`, `atirar_ultimo`, `vazia`, `recarregar`, `recarregar_vazia`, `inspecionar`, `ocioso` (e os específicos de cada arma, como
+  `engatilhar` e `atirar_armado` do revólver). Cada parte e encaixe traz `explodir_m`, um deslocamento para mostrar a arma desmontada.
 - **Materiais com nome** (`aco_oxidado`, `polimero`, `latao`, `aluminio_preto`...) para trocar a cor na engine (ex.: versão bege
   ou inox). Punho pontilhado e recartilhados têm textura PBR própria (cor + normal + ORM).
 
@@ -75,8 +77,8 @@ Uma arma por vez, sempre **junto com os seus acessórios**. Cada uma entra numa 
 | # | Arma | Partes móveis | Acessórios novos | Situação |
 |---|---|---|---|---|
 | 1 | **Pistola Sentinela 9 mm** | ferrolho, cano, gatilho, carregador | mira de ponto vermelho compacta, supressor 9 mm, supressor de garrafa PET, compensador, protetor de rosca, lanterna de trilho, laser, lanterna com laser, carregador 15 e estendido 24; cartucho, estojo, caixa de 50, clarão | **feita** |
-| 2 | Revólver .38 de 6 tiros | tambor (abre de lado e gira), cão, gatilho, vareta do extrator | carregador rápido (speedloader), mira de ponto vermelho de trilho alto, coldre de couro, empunhadura de borracha, cartuchos .38 e caixa | próxima |
-| 3 | Espingarda de bombeamento calibre 12 | telha (soca), ferrolho, gatilho, portinhola | coronha de pistola, porta-cartuchos de coronha, lanterna de cano, prolongador do tubo, choke, bandoleira, cartuchos 12 (chumbo e balote) e caixa | |
+| 2 | **Revólver Vigia .38** de 6 tiros | braço e tambor (abre de lado e gira 60° por tiro), extrator com estrela, cão, gatilho, trava, talas | carregador rápido, mira de ponto vermelho para revólver, talas de madeira e empunhadura de borracha, coldre de couro; cartucho, estojo e caixa de 50 .38 | **feita** |
+| 3 | Espingarda de bombeamento calibre 12 | telha (soca), ferrolho, gatilho, portinhola | coronha de pistola, porta-cartuchos de coronha, lanterna de cano, prolongador do tubo, choke, bandoleira, cartuchos 12 (chumbo e balote) e caixa | próxima |
 | 4 | Espingarda de cano duplo (e versão de cano serrado) | canos basculantes, cães, extrator | cinta de cartuchos, coronha encurtada | |
 | 5 | Carabina de ferrolho .308 | ferrolho (gira e corre), gatilho, carregador | luneta 3-9×, luneta 4× fixa, bipé, bandoleira, freio de boca, supressor de fuzil, munição .308 | |
 | 6 | Fuzil semiautomático 5,56 | ferrolho, alavanca de manejo, carregador, retém, seletor, tampa da janela | mira holográfica, ponto vermelho tubular, luneta 1-6×, miras de ferro rebatíveis, empunhadura vertical e angulada, lanterna de fuzil, laser, bipé, coronha retrátil e fixa, quebra-chamas, compensador, supressor, carregador 30 e tambor 60 | |

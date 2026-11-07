@@ -62,21 +62,36 @@
      "eixo": "x",
      "curso_graus": -14,
      "descricao": "puxa para tras ao atirar",
-     "pai": "pistola_9mm"
+     "pai": "pistola_9mm",
+     "explodir_m": [
+      0.0,
+      -0.03,
+      -0.05
+     ]
     },
     {
      "no": "cano",
      "tipo": "desliza",
      "curso_m": 0.004,
      "descricao": "recua 4 mm com o ferrolho",
-     "pai": "pistola_9mm"
+     "pai": "pistola_9mm",
+     "explodir_m": [
+      0.0,
+      0.07,
+      -0.06
+     ]
     },
     {
      "no": "ferrolho",
      "tipo": "desliza",
      "curso_m": 0.032,
      "descricao": "recua 32 mm ao atirar; fica travado atrás com o carregador vazio",
-     "pai": "pistola_9mm"
+     "pai": "pistola_9mm",
+     "explodir_m": [
+      -0.0,
+      0.035,
+      0.04
+     ]
     },
     {
      "no": "carregador",
@@ -89,7 +104,12 @@
      "municao": "municao_9mm",
      "capacidade": 15,
      "descricao": "sai pelo fundo do punho ao recarregar",
-     "pai": "pistola_9mm"
+     "pai": "pistola_9mm",
+     "explodir_m": [
+      -0.0,
+      -0.07,
+      0.02
+     ]
     }
    ],
    "encaixes": [
@@ -104,6 +124,11 @@
      ],
      "aceita": [
       "mira_ponto_vermelho_compacta"
+     ],
+     "explodir_m": [
+      0.0,
+      0.04,
+      0.0
      ]
     },
     {
@@ -121,7 +146,12 @@
       "compensador_9mm",
       "supressor_garrafa"
      ],
-     "padrao": "protetor_rosca_9mm"
+     "padrao": "protetor_rosca_9mm",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.06
+     ]
     },
     {
      "no": "encaixe_trilho",
@@ -136,6 +166,11 @@
       "lanterna_pistola",
       "laser_pistola",
       "combo_lanterna_laser"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.05,
+      -0.02
      ]
     },
     {
@@ -218,6 +253,258 @@
      "duracao_s": 2.6,
      "laco": false,
      "descricao": "gira a arma, puxa o ferrolho até ver o cartucho na câmara e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "revolver_38",
+   "nome": "Revólver Vigia .38",
+   "grupo": "armas",
+   "categoria": "revolver",
+   "classe": "fogo",
+   "calibre": ".38",
+   "municao": "municao_38",
+   "capacidade": 6,
+   "dano": 45,
+   "alcance_m": 25,
+   "alcance_max_m": 50,
+   "modo": "ação dupla (ou simples com o cão armado)",
+   "tiros_por_s": 2.5,
+   "recarga_s": 3.4,
+   "recarga_vazia_s": 3.4,
+   "precisao": 0.75,
+   "recuo": 0.45,
+   "ruido_m": 70,
+   "durabilidade": 1500,
+   "peso_kg": 0.95,
+   "raridade": "comum",
+   "valor_troca": 35,
+   "onde": [
+    "casas",
+    "casa_de_campo",
+    "armazem",
+    "motel",
+    "quartel"
+   ],
+   "descricao": "Revólver de 6 tiros com tambor que abre de lado. Não engasga nunca e é fácil de achar em casas, mas recarrega devagar sem o carregador rápido.",
+   "arquivo": "armas/revolver_38.glb",
+   "tamanho_m": [
+    0.039,
+    0.131,
+    0.216
+   ],
+   "triangulos": 14130,
+   "kb": 941.6,
+   "partes": [
+    {
+     "no": "punho",
+     "tipo": "fixa",
+     "descricao": "talas de madeira (troca pela empunhadura de borracha)",
+     "pai": "revolver_38",
+     "explodir_m": [
+      -0.0,
+      -0.03,
+      0.03
+     ]
+    },
+    {
+     "no": "cao",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": 38,
+     "descricao": "arma para trás (38°) e cai no tiro",
+     "pai": "revolver_38",
+     "explodir_m": [
+      -0.0,
+      0.04,
+      0.03
+     ]
+    },
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": -22,
+     "descricao": "puxa para trás",
+     "pai": "revolver_38",
+     "explodir_m": [
+      0.0,
+      -0.05,
+      -0.02
+     ]
+    },
+    {
+     "no": "trava",
+     "tipo": "desliza",
+     "curso_m": 0.004,
+     "descricao": "empurra para a frente para abrir o tambor",
+     "pai": "revolver_38",
+     "explodir_m": [
+      -0.03,
+      0.0,
+      0.01
+     ]
+    },
+    {
+     "no": "braco",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -82,
+     "descricao": "braço do tambor: gira para a esquerda e o tambor sai da armação",
+     "pai": "revolver_38",
+     "explodir_m": [
+      -0.06,
+      -0.02,
+      -0.0
+     ]
+    },
+    {
+     "no": "tambor",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 60,
+     "descricao": "gira 60° a cada tiro (eixo do tambor, paralelo ao cano)",
+     "pai": "braco",
+     "explodir_m": [
+      -0.06,
+      -0.01,
+      -0.0
+     ]
+    },
+    {
+     "no": "extrator",
+     "tipo": "desliza",
+     "curso_m": 0.022,
+     "descricao": "vareta empurrada para trás: a estrela tira os 6 estojos de uma vez",
+     "pai": "tambor",
+     "explodir_m": [
+      -0.07,
+      0.0,
+      0.05
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_mira",
+     "tipo": "mira_revolver",
+     "pai": "revolver_38",
+     "posicao_m": [
+      0.0,
+      0.0822,
+      -0.05
+     ],
+     "aceita": [
+      "mira_ponto_vermelho_revolver"
+     ],
+     "explodir_m": [
+      0.0,
+      0.04,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "punho_38",
+     "pai": "revolver_38",
+     "posicao_m": [
+      -0.0,
+      0.0,
+      0.004
+     ],
+     "substitui": "punho",
+     "aceita": [
+      "empunhadura_madeira_38",
+      "empunhadura_borracha_38"
+     ],
+     "descricao": "ao pôr uma empunhadura aqui, esconda as malhas do nó punho",
+     "explodir_m": [
+      -0.0,
+      -0.03,
+      0.03
+     ]
+    },
+    {
+     "no": "encaixe_recarga",
+     "tipo": "recarga_38",
+     "pai": "tambor",
+     "posicao_m": [
+      0.0,
+      0.0575,
+      -0.0348
+     ],
+     "aceita": [
+      "carregador_rapido_38"
+     ],
+     "descricao": "carregador rápido encosta aqui (atrás do tambor aberto) durante a recarga"
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "revolver_38",
+     "posicao_m": [
+      0.0,
+      0.07,
+      -0.1952
+     ],
+     "descricao": "clarão de boca e origem do disparo (-Z)"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "revolver_38",
+     "posicao_m": [
+      0.0,
+      0.0858,
+      -0.028
+     ],
+     "descricao": "linha de visada: entalhe -> rampa laranja"
+    },
+    {
+     "no": "cinto",
+     "tipo": "coldre",
+     "pai": "revolver_38",
+     "posicao_m": [
+      0.0,
+      0.07,
+      -0.036
+     ],
+     "aceita": [
+      "coldre_revolver"
+     ],
+     "descricao": "a arma entra no coldre pelo pivô (o coldre tem o encaixe \"arma\")"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.32,
+     "laco": false,
+     "descricao": "ação dupla: o gatilho arma o cão e gira o tambor 60°, o cão cai (0,145 s) e a arma dá o coice"
+    },
+    "engatilhar": {
+     "duracao_s": 0.35,
+     "laco": false,
+     "descricao": "polegar arma o cão (ação simples): tambor gira e o gatilho recua um pouco; depois use atirar_armado"
+    },
+    "atirar_armado": {
+     "duracao_s": 0.2,
+     "laco": false,
+     "descricao": "tiro com o cão já armado: gatilho leve, mais preciso"
+    },
+    "recarregar": {
+     "duracao_s": 3.4,
+     "laco": false,
+     "descricao": "abre o tambor (0,55 s), aponta para cima e empurra o extrator (1,05 s: soltar 6 estojos), aponta para baixo, carrega de 1,6 a 2,5 s (carregador rápido em encaixe_recarga, ou um a um) e fecha (3,0 s)"
+    },
+    "inspecionar": {
+     "duracao_s": 3.2,
+     "laco": false,
+     "descricao": "abre o tambor, gira as 6 câmaras com o dedo e fecha com um golpe de pulso"
     },
     "ocioso": {
      "duracao_s": 3.0,
@@ -568,6 +855,166 @@
    ],
    "triangulos": 1386,
    "kb": 70.1
+  },
+  {
+   "id": "carregador_rapido_38",
+   "nome": "Carregador rápido .38 (6)",
+   "grupo": "acessorios",
+   "categoria": "recarga",
+   "encaixe": "recarga_38",
+   "capacidade": 6,
+   "municao": "municao_38",
+   "peso_kg": 0.1,
+   "raridade": "incomum",
+   "valor_troca": 12,
+   "modificadores": {
+    "recarga_s": 0.55
+   },
+   "onde": [
+    "quartel",
+    "motel",
+    "casas"
+   ],
+   "descricao": "Segura 6 cartuchos na posição das câmaras: encosta, gira o botão e os 6 entram de uma vez.",
+   "arquivo": "acessorios/carregador_rapido_38.glb",
+   "tamanho_m": [
+    0.037,
+    0.037,
+    0.062
+   ],
+   "triangulos": 4484,
+   "kb": 222.6
+  },
+  {
+   "id": "mira_ponto_vermelho_revolver",
+   "nome": "Mira de ponto vermelho para revólver",
+   "grupo": "acessorios",
+   "categoria": "mira",
+   "encaixe": "mira_revolver",
+   "peso_kg": 0.12,
+   "raridade": "raro",
+   "valor_troca": 40,
+   "usa": "pilhas",
+   "autonomia_min": 3000,
+   "modificadores": {
+    "precisao_mirando": 1.3,
+    "tempo_mirar": 0.8,
+    "alcance_m": 1.2
+   },
+   "onde": [
+    "quartel",
+    "galeria",
+    "casa_de_campo"
+   ],
+   "linha_de_visada": "encaixe \"olho\"",
+   "descricao": "Tubo de ponto vermelho com base parafusada na ponte do revólver. Mira rápido e acerta mais longe.",
+   "arquivo": "acessorios/mira_ponto_vermelho_revolver.glb",
+   "tamanho_m": [
+    0.035,
+    0.041,
+    0.074
+   ],
+   "triangulos": 2300,
+   "kb": 116.9,
+   "encaixes": [
+    {
+     "no": "olho",
+     "tipo": "mira",
+     "pai": "mira_ponto_vermelho_revolver",
+     "posicao_m": [
+      -0.0,
+      0.0215,
+      0.03
+     ],
+     "descricao": "ocular: linha de visada"
+    }
+   ]
+  },
+  {
+   "id": "empunhadura_madeira_38",
+   "nome": "Talas de madeira .38",
+   "grupo": "acessorios",
+   "categoria": "empunhadura",
+   "encaixe": "punho_38",
+   "peso_kg": 0.08,
+   "raridade": "comum",
+   "modificadores": {},
+   "descricao": "As talas de nogueira quadriculada que vêm no revólver.",
+   "arquivo": "acessorios/empunhadura_madeira_38.glb",
+   "tamanho_m": [
+    0.033,
+    0.082,
+    0.04
+   ],
+   "triangulos": 556,
+   "kb": 285.0
+  },
+  {
+   "id": "empunhadura_borracha_38",
+   "nome": "Empunhadura de borracha .38",
+   "grupo": "acessorios",
+   "categoria": "empunhadura",
+   "encaixe": "punho_38",
+   "peso_kg": 0.1,
+   "raridade": "incomum",
+   "valor_troca": 10,
+   "modificadores": {
+    "recuo": 0.8,
+    "precisao": 1.05
+   },
+   "onde": [
+    "quartel",
+    "casas"
+   ],
+   "descricao": "Borracha com apoio para os dedos e costas fechadas: segura o coice e não escorrega com a mão suada.",
+   "arquivo": "acessorios/empunhadura_borracha_38.glb",
+   "tamanho_m": [
+    0.036,
+    0.09,
+    0.045
+   ],
+   "triangulos": 908,
+   "kb": 44.5
+  },
+  {
+   "id": "coldre_revolver",
+   "nome": "Coldre de couro (revólver)",
+   "grupo": "acessorios",
+   "categoria": "coldre",
+   "encaixe": "coldre",
+   "peso_kg": 0.22,
+   "raridade": "comum",
+   "valor_troca": 8,
+   "modificadores": {
+    "tempo_sacar": 0.7
+   },
+   "onde": [
+    "casas",
+    "casa_de_campo",
+    "armazem"
+   ],
+   "descricao": "Coldre de cinto com presilha de pressão. Leva o revólver sem ocupar espaço na mochila e saca mais rápido.",
+   "arquivo": "acessorios/coldre_revolver.glb",
+   "tamanho_m": [
+    0.056,
+    0.137,
+    0.198
+   ],
+   "triangulos": 1772,
+   "kb": 132.3,
+   "encaixes": [
+    {
+     "no": "arma",
+     "tipo": "efeito",
+     "pai": "coldre_revolver",
+     "posicao_m": [
+      0.027,
+      -0.12,
+      0.046
+     ],
+     "descricao": "ponha a arma aqui (pivô da arma) para guardá-la no coldre"
+    }
+   ]
   }
  ],
  "municao": [
@@ -640,7 +1087,7 @@
     0.118
    ],
    "triangulos": 14004,
-   "kb": 745.8,
+   "kb": 743.0,
    "partes": [
     {
      "no": "tampa",
@@ -648,7 +1095,110 @@
      "eixo": "z",
      "abre_graus": 115,
      "descricao": "gira em torno da ponta de trás",
-     "pai": "caixa_municao_9mm"
+     "pai": "caixa_municao_9mm",
+     "explodir_m": [
+      0.0,
+      0.05,
+      0.0
+     ]
+    }
+   ],
+   "animacoes": {
+    "abrir": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "abre a tampa"
+    },
+    "fechar": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "fecha a tampa"
+    }
+   }
+  },
+  {
+   "id": "municao_38",
+   "nome": "Cartucho .38",
+   "grupo": "municao",
+   "categoria": "municao",
+   "calibre": ".38",
+   "peso_kg": 0.015,
+   "empilha": 60,
+   "raridade": "comum",
+   "onde": [
+    "casas",
+    "casa_de_campo",
+    "armazem",
+    "motel",
+    "quartel"
+   ],
+   "descricao": "Um cartucho .38 (deitado, pivô no centro).",
+   "arquivo": "municao/municao_38.glb",
+   "tamanho_m": [
+    0.011,
+    0.011,
+    0.039
+   ],
+   "triangulos": 672,
+   "kb": 34.0
+  },
+  {
+   "id": "estojo_38",
+   "nome": "Estojo .38 (vazio)",
+   "grupo": "municao",
+   "categoria": "estojo",
+   "calibre": ".38",
+   "peso_kg": 0.005,
+   "descricao": "Estojo vazio: no revólver saem os 6 juntos quando o extrator é empurrado (recarregar, 1,05 s).",
+   "arquivo": "municao/estojo_38.glb",
+   "tamanho_m": [
+    0.011,
+    0.011,
+    0.029
+   ],
+   "triangulos": 384,
+   "kb": 19.8
+  },
+  {
+   "id": "caixa_municao_38",
+   "nome": "Caixa de munição .38 (50)",
+   "grupo": "municao",
+   "categoria": "caixa",
+   "calibre": ".38",
+   "municao": "municao_38",
+   "quantidade": 50,
+   "peso_kg": 0.78,
+   "empilha": 4,
+   "raridade": "comum",
+   "onde": [
+    "casas",
+    "casa_de_campo",
+    "armazem",
+    "motel",
+    "quartel"
+   ],
+   "descricao": "Caixa de papelão com bandeja de 50 cartuchos .38. A tampa abre (nó \"tampa\", animação \"abrir\").",
+   "arquivo": "municao/caixa_municao_38.glb",
+   "tamanho_m": [
+    0.062,
+    0.046,
+    0.122
+   ],
+   "triangulos": 14004,
+   "kb": 738.8,
+   "partes": [
+    {
+     "no": "tampa",
+     "tipo": "tampa",
+     "eixo": "z",
+     "abre_graus": 115,
+     "descricao": "gira em torno da ponta de trás",
+     "pai": "caixa_municao_38",
+     "explodir_m": [
+      0.0,
+      0.05,
+      0.0
+     ]
     }
    ],
    "animacoes": {

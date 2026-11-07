@@ -26,9 +26,12 @@ Biblioteca pública neoclássica em peças 3D (GLB), estilo toon com contorno. S
 - **Cúpula:** `dome_ring` e `dome` vão em (0; 9,4; 0) no lugar dos `roof_tile` do meio. `lib_stair` tem pivô no meio da borda de cima, no piso de baixo, e sobe para +Z.
 - **Pórtico:** `portico_floor`, `portico_entablature` e `pediment` têm pivô em (0, 0, 8); as colunas ficam em z = 11,6.
 
-## Texturas (embutidas nos GLB, UVs em metros)
-- `stone`: silhares de calcário.
-- `plaster`: interno.
+## Alto detalhe
+Versão refeita com `scripts/detalhe/retrofit.py`, sem mudar planta nem encaixes:
+- **Janelas:** caixilho com batente, folhas de guilhotina com baguetes e vidro, peitoril com caimento e pingadeira.
+- **Portas:** almofadas rebaixadas e chanfradas, vidro com baguetes nas portas envidraçadas, maçaneta e dobradiças.
+- **Texturas PBR** (cor + normal + ORM, ladrilho de 2 m, JPEG dentro dos GLB, UVs em metros): `stone` (fachada de pedra), `plaster` (interno).
+- Montado com cerca de 113 mil triângulos (antes 93 mil).
 
 ## Peças (31)
 | Grupo | Peças |
@@ -43,4 +46,4 @@ Biblioteca pública neoclássica em peças 3D (GLB), estilo toon com contorno. S
 | Referência | `player_scale_ref` |
 
 ## Arquivos
-`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, texturas `*_texture.png`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a biblioteca montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.
+`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a biblioteca montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.

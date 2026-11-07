@@ -25,8 +25,8 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Carregador 9 mm estendido (24) (`carregador_9mm_estendido`) | Carregadores | `carregador_9mm` | recarga_s ×1,1 | 0,13 kg | raro | 1386 |
 | Carregador rápido .38 (6) (`carregador_rapido_38`) | Recarga rápida | `recarga_38` | recarga_s ×0,55 | 0,1 kg | incomum | 4484 |
 | Mira de ponto vermelho para revólver (`mira_ponto_vermelho_revolver`) | Miras | `mira_revolver` | precisao_mirando ×1,3, tempo_mirar ×0,8, alcance_m ×1,2 | 0,12 kg | raro | 2300 |
-| Talas de madeira .38 (`empunhadura_madeira_38`) | Empunhaduras | `punho_38` | - | 0,08 kg | comum | 556 |
-| Empunhadura de borracha .38 (`empunhadura_borracha_38`) | Empunhaduras | `punho_38` | recuo ×0,8, precisao ×1,05 | 0,1 kg | incomum | 908 |
+| Talas de madeira .38 (`empunhadura_madeira_38`) | Empunhaduras | `punho_38` | - | 0,08 kg | comum | 5888 |
+| Empunhadura de borracha .38 (`empunhadura_borracha_38`) | Empunhaduras | `punho_38` | recuo ×0,8, precisao ×1,05 | 0,1 kg | incomum | 5696 |
 | Coldre de couro (revólver) (`coldre_revolver`) | Coldres | `coldre` | tempo_sacar ×0,7 | 0,22 kg | comum | 1772 |
 
 ## Munição e efeitos

@@ -149,12 +149,13 @@ def _punho_madeira(q):
     """Talas de madeira com quadriculado e medalhão, cobrem o cabo; nó proprio para trocar pela empunhadura de borracha."""
     tala = arred([(-0.017, -0.046), (-0.024, -0.072), (-0.029, -0.1), (-0.031, -0.112), (-0.056, -0.112), (-0.057, -0.098),
                   (-0.05, -0.064), (-0.038, -0.032), (-0.026, -0.03), (-0.019, -0.036)], 0.004)
-    q.add('madeira_punho', solido(tala, -0.0158, 0.0158, 0.0052))
+    larg = lambda y: 0.0098 + 0.006 * GT.smooth(-0.031, -0.05, y)
+    q.add('madeira_punho', punho_redondo(tala, -0.0305, -0.112, larg, n=2.3, raio_base=0.006))
     for zs in (-1, 1):
-        m = trimesh.creation.cylinder(radius=0.0046, height=0.0008, sections=24); m.apply_translation([-0.035, -0.06, zs * 0.0158])
+        m = trimesh.creation.cylinder(radius=0.0046, height=0.0008, sections=24); m.apply_translation([-0.036, -0.062, zs * 0.0152])
         q.add('latao', m)                                                                                           # medalhão
-    q.add('aco_inox', cil_z(0.0018, 0.0158, 0.0166, -0.041, -0.085, 12))                                             # parafuso da tala
-    q.add('aco_inox', cil_z(0.0018, -0.0166, -0.0158, -0.041, -0.085, 12))
+    q.add('aco_inox', cil_z(0.0018, 0.0146, 0.0156, -0.042, -0.086, 12))                                             # parafuso da tala
+    q.add('aco_inox', cil_z(0.0018, -0.0156, -0.0146, -0.042, -0.086, 12))
 
 
 def _trava(q):
@@ -295,11 +296,9 @@ def empunhadura_borracha_38(A):
     q = A.base
     corpo = arred([(-0.015, -0.044), (-0.019, -0.054), (-0.017, -0.064), (-0.022, -0.072), (-0.02, -0.082), (-0.026, -0.09), (-0.025, -0.1),
                    (-0.03, -0.118), (-0.058, -0.118), (-0.06, -0.1), (-0.052, -0.064), (-0.04, -0.03), (-0.026, -0.028), (-0.018, -0.034)], 0.0035)
-    q.add('borracha_grip', solido(corpo, -0.0172, 0.0172, 0.0065))
-    for zs in (-1, 1):
-        q.add('borracha_grip', solido(arred([(-0.026, -0.05), (-0.034, -0.05), (-0.048, -0.1), (-0.04, -0.1)], 0.002),
-                                      min(zs * 0.0172, zs * 0.0178), max(zs * 0.0172, zs * 0.0178), 0.0003))   # nervura lateral
-    q.add('aco_inox', cil_z(0.0018, 0.0172, 0.018, -0.042, -0.086, 12)).add('aco_inox', cil_z(0.0018, -0.018, -0.0172, -0.042, -0.086, 12))
+    larg = lambda y: 0.0098 + 0.0074 * GT.smooth(-0.029, -0.052, y)
+    q.add('borracha_grip', punho_redondo(corpo, -0.0285, -0.118, larg, n=2.2, raio_base=0.007))
+    q.add('aco_inox', cil_z(0.0018, 0.0158, 0.0168, -0.043, -0.088, 12)).add('aco_inox', cil_z(0.0018, -0.0168, -0.0158, -0.043, -0.088, 12))
     A.pivo = (-0.04, -0.07, 0)
 
 

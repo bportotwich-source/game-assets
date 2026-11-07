@@ -56,7 +56,7 @@ def _tex_grip(seed, px=1024, tile=0.05):
     n = int(tile * px); g = GT.noise(n, n, 0.0006 * px, 0.0006 * px, seed); f = GT.fbm(n, n, 0.003 * px, 3, seed + 3)
     pic = GT.smooth(0.3, 1.4, g)
     c = GT.rgb(CORES['polimero_grip'])[None, None]
-    alb = c * (0.95 + 0.12 * pic[..., None] + 0.03 * f[..., None]); hm = 0.00025 * pic + 0.00005 * f
+    alb = c * (0.72 + 0.1 * pic[..., None] + 0.03 * f[..., None]); hm = 0.00025 * pic + 0.00005 * f
     return alb, hm, 0.75 + 0.15 * pic, 1.2, 0.0004, tile, px
 
 
@@ -152,6 +152,38 @@ def inter(ms): return trimesh.boolean.intersection(ms, engine='manifold')
 def arred(pts, r=0.002, n=4):
     """Poligono com cantos arredondados (buffer para fora e para dentro)."""
     return Polygon(pts).buffer(-r, join_style=1, resolution=n).buffer(r, join_style=1, resolution=n)
+
+
+def punho_redondo(perfil, y_topo, y_base, meia_larg, n=2.6, fatias=70, voltas=40, raio_base=0.006, raio_topo=0.0):
+    """Cabo com secao ARREDONDADA (superelipse) seguindo o perfil lateral: em cada altura y pega a extensao do perfil em x
+    (frente e costas do cabo) e faz uma secao de largura 2 * meia_larg(y). n ~ 2 = oval, maior = mais quadrado.
+    raio_base arredonda a borda de baixo (e raio_topo a de cima). Devolve um solido estanque (serve para booleanos)."""
+    ys = np.linspace(y_topo, y_base, fatias)
+    ang = np.linspace(0, 2 * math.pi, voltas, endpoint=False); c, s_ = np.cos(ang), np.sin(ang)
+    ex = lambda w: np.sign(w) * np.abs(w) ** (2.0 / n)
+    aneis = []
+    for y in ys:
+        g = perfil.intersection(LineString([(-1, y), (1, y)]))
+        segs = [g] if g.geom_type == 'LineString' else [h for h in getattr(g, 'geoms', []) if h.geom_type == 'LineString']
+        if not segs or g.is_empty: continue
+        sg = min(segs, key=lambda h: h.bounds[0]); xa, xb = sg.bounds[0], sg.bounds[2]
+        a = (xb - xa) / 2; b = meia_larg(y); k = 0.0
+        if raio_base and y < y_base + raio_base:
+            t = (y_base + raio_base - y) / raio_base; k = raio_base * (1 - math.sqrt(max(0.0, 1 - t * t)))
+        if raio_topo and y > y_topo - raio_topo:
+            t = (y - (y_topo - raio_topo)) / raio_topo; k = max(k, raio_topo * (1 - math.sqrt(max(0.0, 1 - t * t))))
+        a = max(a - k, 0.0008); b = max(b - k, 0.0008)
+        aneis.append(np.stack([(xa + xb) / 2 + a * ex(c), np.full(voltas, y), b * ex(s_)], 1))
+    V = np.concatenate(aneis + [aneis[0].mean(0, keepdims=True), aneis[-1].mean(0, keepdims=True)]); N = len(aneis); F = []
+    for i in range(N - 1):
+        for j in range(voltas):
+            a0 = i * voltas + j; a1 = i * voltas + (j + 1) % voltas; b0 = a0 + voltas; b1 = a1 + voltas
+            F += [[a0, b0, a1], [a1, b0, b1]]
+    ct, cb = N * voltas, N * voltas + 1
+    for j in range(voltas):
+        F.append([ct, j, (j + 1) % voltas]); F.append([cb, (N - 1) * voltas + (j + 1) % voltas, (N - 1) * voltas + j])
+    m = trimesh.Trimesh(V, np.array(F), process=True); trimesh.repair.fix_normals(m)
+    return _fix(m)
 
 
 def torno_x(perfil, sec=32, y=0.0, z=0.0, x0=0.0):
@@ -408,18 +440,16 @@ def _armacao_pistola(p):
     punho = perfil.intersection(sbox(-0.05, -0.13, 0.06, -0.029))
     alto = perfil.difference(sbox(-0.05, -0.13, 0.06, -0.0295)).union(perfil.intersection(sbox(0.045, -0.06, 0.2, 0)))
     m_alto = solido(alto, -0.0112, 0.0112, 0.0012)
-    m_punho = solido(punho.buffer(0), -0.0148, 0.0148, 0.0042)
-    corpo = uniao([m_alto, m_punho])
+    larg = lambda y: 0.011 + 0.0042 * GT.smooth(-0.0285, -0.052, y)                # cabo alarga devagar a partir da armação
+    m_punho = punho_redondo(perfil, -0.0285, -0.1228, larg, n=2.4, raio_base=0.005)
+    corpo = m_alto
     # poco do carregador: prisma inclinado vazado por baixo (folga de 0,8 mm do carregador)
     poco = _perfil_carregador(0.0008)
     corpo = menos(corpo, solido(poco, -0.0096, 0.0096))
     corpo = menos(corpo, caixa(0.06, 0.082, -0.03, -0.012, -0.0045, 0.0045))   # fenda do gatilho
     p.add('polimero', corpo)
-    # paineis pontilhados (laterais, frente e costas do punho), 0,4 mm salientes
-    painel = arred([(-0.012, -0.04), (0.036, -0.054), (0.03, -0.074), (0.026, -0.1), (0.019, -0.114), (-0.026, -0.114),
-                    (-0.024, -0.092), (-0.017, -0.06)], 0.004)
-    for zs in (-1, 1):
-        z0 = zs * 0.0148; p.add('polimero_grip', solido(painel, min(z0, z0 + zs * 0.0005), max(z0, z0 + zs * 0.0005), 0.0002))
+    # cabo arredondado inteiro em polimero pontilhado, com o poco do carregador vazado
+    p.add('polimero_grip', menos(m_punho, solido(poco, -0.0096, 0.0096), caixa(0.06, 0.082, -0.03, -0.012, -0.0045, 0.0045)))
     # trilho padrao embaixo do guarda-po
     trilho(p, 'polimero', 0.105, 0.177, -0.03, True, 0.019)
     # alavanca do retem do ferrolho (esquerda), botao do retem do carregador, alavanca de desmontagem, pinos

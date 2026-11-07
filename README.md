@@ -12,7 +12,7 @@ Pacote de assets 3D modulares e originais para montar cenários de jogos. As pe�
 | [`kits/casa-enxaimel/`](kits/casa-enxaimel/) | Casa enxaimel de 10 × 8 m com garagem anexa de 4 × 8 m: térreo de pedra, 1º andar em enxaimel, 3 quartos, sótão com 2 lucarnas e portão duplo (49 peças) |
 | [`kits/torre-escalonada/`](kits/torre-escalonada/) | Torre residencial de 9 andares em 3 recuos (24 × 16, 20 × 12 e 16 × 10 m): lojas no térreo, 4 tipos de apartamento, terraços em cada recuo, elevador e terraço na cobertura (39 peças) |
 | [`kits/casa-de-campo/`](kits/casa-de-campo/) | Casa de campo de 14 × 8 m com sótão habitável: tábuas horizontais, base de tijolo, varanda de 12 m, telhado de 50° com 2 lucarnas, lareira e chaminé externa (42 peças) |
-| [`kits/bangalo/`](kits/bangalo/) | Bangalô térreo de 14 × 12 m: telhado de quatro águas a 30°, varanda de 10 m com frontão, pilares de tijolo e colunas cônicas, sala com lareira, 2 quartos (44 peças) |
+| [`kits/bangalo/`](kits/bangalo/) | Bangalô térreo de 14 × 12 m em **alto detalhe**: tábuas e telhas em geometria, telhado de quatro águas a 30°, varanda de 10 m com frontão, janelas de guilhotina, calhas e condutores, portas de almofada, texturas PBR (56 peças) |
 | [`kits/supermercado/`](kits/supermercado/) | Supermercado de 24 × 16 m: tijolo com pilastras, vitrines com toldos, entrada de vidro, salão de vendas, depósito com portas de carga, área de funcionários e cobertura com equipamentos (28 peças) |
 | [`kits/galeria/`](kits/galeria/) | Galeria comercial de 24 × 26 m com 3 andares: 30 lojas em volta de um átrio com abóbada de vidro, ponte e escadas rolantes, entrada em pele de vidro com lanterna (41 peças) |
 | [`kits/casa-americana/`](kits/casa-americana/) | Casa americana de 8 × 12 m com 2 andares e frente em oitão: tábuas sobrepostas azul-acinzentadas, varanda coberta em toda a frente, chaminé de tijolo do lado de fora e garagem de 4 × 6 m com portão duplo (63 peças) |
@@ -29,7 +29,6 @@ Pacote de assets 3D modulares e originais para montar cenários de jogos. As pe�
 | [`kits/three-flats/`](kits/three-flats/) | Three-flats: dois prédios de três apartamentos (tijolo e pedra cinza), bay windows redonda e chanfrada, porão, escadinha de pedra, escada em U e varandas de madeira nos fundos (70 peças) |
 | [`kits/correios/`](kits/correios/) | Agência dos correios: tijolo com quinas de pedra, janelas em arco, telhado de quatro águas com cúpula de cobre, escada e rampa na entrada, doca de carga com marquise, caixas postais e guichês (42 peças) |
 | [`kits/estacao/`](kits/estacao/) | Estação de trem: tijolo, telha de barro com beirais em mão-francesa, torre do relógio com telhado em pirâmide, sala de espera, bilheteria, depósito de cargas, plataforma e trilho (47 peças) |
-| [`kits/bangalo-detalhado/`](kits/bangalo-detalhado/) | **Piloto de alto detalhe**: o bangalô do kit 7 refeito com tábuas e telhas em geometria, janelas de guilhotina, calhas e condutores, portas de almofada (Blender), lanternas e texturas PBR com relevo (56 peças) |
 | [`visitar/`](visitar/) + `project.godot` | Projeto Godot 4 para andar dentro de qualquer kit em primeira pessoa, com colisão e portas que abrem |
 | [`scripts/`](scripts/) | Portas que abrem e fecham: Godot 4 (`godot/`) e Unity (`unity/`) |
 

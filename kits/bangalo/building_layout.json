@@ -19,7 +19,8 @@
     8.5
    ]
   },
-  "roof": "hipped, 30 deg, ridge along X (x in [-1,1]) at z=0, eave overhang 0.5 m"
+  "roof": "hipped, 30 deg, ridge along X (x in [-1,1]) at z=0, eave overhang 0.5 m",
+  "textures": "PBR (albedo + normal + ORM), 2 m tiles, UV in metres / 2"
  },
  "placements": [
   {
@@ -37,7 +38,7 @@
    ]
   },
   {
-   "piece": "roof_main_6_l",
+   "piece": "roof_main_6_l_porch",
    "pos": [
     -6,
     0.45,
@@ -64,7 +65,7 @@
    ]
   },
   {
-   "piece": "roof_main_4_l",
+   "piece": "roof_main_4_l_porch",
    "pos": [
     -4,
     0.45,
@@ -91,7 +92,7 @@
    ]
   },
   {
-   "piece": "roof_main_2_l",
+   "piece": "roof_main_2_l_porch",
    "pos": [
     -2,
     0.45,
@@ -118,7 +119,7 @@
    ]
   },
   {
-   "piece": "roof_main_0",
+   "piece": "roof_main_0_porch",
    "pos": [
     0,
     0.45,
@@ -145,7 +146,7 @@
    ]
   },
   {
-   "piece": "roof_main_2",
+   "piece": "roof_main_2_porch",
    "pos": [
     2,
     0.45,
@@ -172,7 +173,7 @@
    ]
   },
   {
-   "piece": "roof_main_4",
+   "piece": "roof_main_4_porch",
    "pos": [
     4,
     0.45,
@@ -199,7 +200,7 @@
    ]
   },
   {
-   "piece": "roof_main_6",
+   "piece": "roof_main_6_porch",
    "pos": [
     6,
     0.45,
@@ -685,7 +686,7 @@
    ]
   },
   {
-   "piece": "roof_hip_3",
+   "piece": "roof_hip_3_chimney",
    "pos": [
     -7.0,
     0.45,
@@ -850,6 +851,84 @@
    "rotY": 0,
    "tags": [
     "roof"
+   ]
+  },
+  {
+   "piece": "downspout",
+   "pos": [
+    6.62,
+    0,
+    6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext"
+   ]
+  },
+  {
+   "piece": "downspout",
+   "pos": [
+    -6.62,
+    0,
+    6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext"
+   ]
+  },
+  {
+   "piece": "downspout",
+   "pos": [
+    6.62,
+    0,
+    -6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "ext"
+   ]
+  },
+  {
+   "piece": "downspout",
+   "pos": [
+    -6.62,
+    0,
+    -6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "ext"
+   ]
+  },
+  {
+   "piece": "downspout_porch",
+   "pos": [
+    -5.3,
+    0,
+    8.3
+   ],
+   "rotY": -90,
+   "tags": [
+    "front",
+    "porch"
+   ]
+  },
+  {
+   "piece": "downspout_porch",
+   "pos": [
+    5.3,
+    0,
+    8.3
+   ],
+   "rotY": 90,
+   "tags": [
+    "front",
+    "porch"
    ]
   },
   {
@@ -1149,6 +1228,32 @@
     "front",
     "porch",
     "roof"
+   ]
+  },
+  {
+   "piece": "porch_lantern",
+   "pos": [
+    0,
+    3.07,
+    7.15
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "porch"
+   ]
+  },
+  {
+   "piece": "wall_lantern",
+   "pos": [
+    -3.0,
+    2.3,
+    -6.04
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "ext"
    ]
   },
   {

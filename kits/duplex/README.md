@@ -19,10 +19,12 @@ Duas casas espelhadas sob um só telhado, com oitão central sobre as duas garag
 - **Oitão central:** `gable_cross` vai a 6,02 m, na frente. `cross_slope*` vai a 5,0 m em x = ±4, girado ±90°, com a cumeeira 4 m para dentro (x = 0). As 2 fileiras (z de 2 a 6) entram no telhado principal.
 - **Oitões dos lados:** `gable_side` (12 m) a 6,02 m, em x = ±8.
 
-## Texturas (embutidas nos GLB, UVs em metros)
-- `siding`: tábuas sobrepostas de 20 cm.
-- `shingle`: telha asfáltica verde em fiadas de 20 cm.
-- `plaster`: interno.
+## Alto detalhe
+Versão refeita com `scripts/detalhe/retrofit.py`, sem mudar planta nem encaixes:
+- **Janelas:** caixilho com batente, folhas de guilhotina com baguetes e vidro, peitoril com caimento e pingadeira.
+- **Portas:** almofadas rebaixadas e chanfradas, vidro com baguetes nas portas envidraçadas, maçaneta e dobradiças.
+- **Texturas PBR** (cor + normal + ORM, ladrilho de 2 m, JPEG dentro dos GLB, UVs em metros): `siding` (tábuas, também em geometria a partir de 0,14 m, em fase com a textura), `shingle` (telhado), `plaster` (interno).
+- Montado com cerca de 74 mil triângulos (antes 30 mil).
 
 ## Peças (42)
 | Grupo | Peças |
@@ -38,4 +40,4 @@ Duas casas espelhadas sob um só telhado, com oitão central sobre as duas garag
 Nos nomes da escada, `_192_192` é a distância em cm do centro da caixa até a face da parede à esquerda e à direita; na laje, o último número é a faixa de laje atrás do patamar.
 
 ## Arquivos
-`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, texturas `*_texture.png`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com o conjunto montado e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.
+`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com o conjunto montado e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.

@@ -31,6 +31,7 @@ Pacote de assets 3D modulares e originais para montar cenários de jogos. As pe�
 | [`kits/estacao/`](kits/estacao/) | Estação de trem: tijolo, telha de barro com beirais em mão-francesa, torre do relógio com telhado em pirâmide, sala de espera, bilheteria, depósito de cargas, plataforma e trilho (47 peças) |
 | [`kits/armazem/`](kits/armazem/) | Armazém em **alto detalhe** com fachada falsa de 7,4 m e letreiro, varanda com telhado de chapa e guarda-corpo, e celeiro vermelho de tábua e mata-junta com telhado holandês, portão de 2 folhas e capuz da talha; corredor de carga entre os dois (69 peças) |
 | [`kits/patio-missoes/`](kits/patio-missoes/) | Pátio de missão em **alto detalhe**: casa de reboco com telhado de telhas capa-canal modeladas e arcada de 6 arcos, 3 casitas de terraço com platibanda, vigas roliças, gárgulas e lareira de canto, ateliê, portão em arco com campanário e sino, muros com capa de telha e pátio com chafariz (65 peças) |
+| [`props/decoracao/`](props/decoracao/) | 112 itens de decoração low poly para os interiores (camas, sofás, mesas, cozinha, banheiro, eletrônicos, luzes e miudezas), na escala do pacote e com catálogo em JSON |
 | [`visitar/`](visitar/) + `project.godot` | Projeto Godot 4 para andar dentro de qualquer kit em primeira pessoa, com colisão e portas que abrem |
 | [`scripts/`](scripts/) | Portas que abrem e fecham: Godot 4 (`godot/`) e Unity (`unity/`) |
 

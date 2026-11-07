@@ -1,0 +1,1706 @@
+{
+ "escala": "1 unidade = 1 m, Y para cima, frente para +Z",
+ "montagem": {
+  "floor": "pivô no centro da base",
+  "wall": "pivô no centro de baixo da face de trás (encosta na parede)",
+  "ceiling": "pivô no centro do topo (pendura no teto)"
+ },
+ "categorias": {
+  "banheiro": "Banheiro",
+  "camas": "Camas",
+  "tapetes": "Tapetes",
+  "cadeiras": "Cadeiras e poltronas",
+  "portas": "Portas",
+  "comodas": "Cômodas",
+  "eletronicos": "Eletrônicos",
+  "cozinha": "Cozinha",
+  "luzes": "Luzes",
+  "diversos": "Diversos",
+  "estantes": "Estantes",
+  "sofas": "Sofás",
+  "mesas": "Mesas",
+  "janelas": "Janelas"
+ },
+ "itens": [
+  {
+   "id": "bath",
+   "categoria": "banheiro",
+   "arquivo": "banheiro/bath.glb",
+   "origem": "Bathroom/Bath.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    1.34,
+    0.74,
+    0.74
+   ],
+   "tris": 1200,
+   "partes": 1,
+   "nome": "Banheira"
+  },
+  {
+   "id": "shower",
+   "categoria": "banheiro",
+   "arquivo": "banheiro/shower.glb",
+   "origem": "Bathroom/Shower.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.66,
+    1.72,
+    0.66
+   ],
+   "tris": 748,
+   "partes": 2,
+   "nome": "Box de chuveiro"
+  },
+  {
+   "id": "sink",
+   "categoria": "banheiro",
+   "arquivo": "banheiro/sink.glb",
+   "origem": "Bathroom/Sink.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.42,
+    0.72,
+    0.28
+   ],
+   "tris": 1248,
+   "partes": 1,
+   "nome": "Pia de banheiro"
+  },
+  {
+   "id": "toilet_roll_holder",
+   "categoria": "banheiro",
+   "arquivo": "banheiro/toilet_roll_holder.glb",
+   "origem": "Bathroom/Toilet Roll Holder.fbx",
+   "montagem": "wall",
+   "tamanho_m": [
+    0.17,
+    0.12,
+    0.13
+   ],
+   "tris": 328,
+   "partes": 1,
+   "nome": "Porta-papel"
+  },
+  {
+   "id": "toilet_rolls",
+   "categoria": "banheiro",
+   "arquivo": "banheiro/toilet_rolls.glb",
+   "origem": "Bathroom/Toilet Rolls.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.2,
+    0.19,
+    0.1
+   ],
+   "tris": 384,
+   "partes": 1,
+   "nome": "Rolos de papel"
+  },
+  {
+   "id": "toilet",
+   "categoria": "banheiro",
+   "arquivo": "banheiro/toilet.glb",
+   "origem": "Bathroom/Toilet.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.56,
+    0.96,
+    0.73
+   ],
+   "tris": 576,
+   "partes": 1,
+   "nome": "Vaso sanitário"
+  },
+  {
+   "id": "towel_holder",
+   "categoria": "banheiro",
+   "arquivo": "banheiro/towel_holder.glb",
+   "origem": "Bathroom/Towel Holder.fbx",
+   "montagem": "wall",
+   "tamanho_m": [
+    0.94,
+    0.49,
+    0.16
+   ],
+   "tris": 248,
+   "partes": 1,
+   "nome": "Porta-toalha"
+  },
+  {
+   "id": "bed_double",
+   "categoria": "camas",
+   "arquivo": "camas/bed_double.glb",
+   "origem": "Beds/Bed Double.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    1.63,
+    0.68,
+    2.11
+   ],
+   "tris": 1134,
+   "partes": 1,
+   "nome": "Cama de casal"
+  },
+  {
+   "id": "bed_single",
+   "categoria": "camas",
+   "arquivo": "camas/bed_single.glb",
+   "origem": "Beds/Bed Single.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.94,
+    0.68,
+    2.11
+   ],
+   "tris": 946,
+   "partes": 1,
+   "nome": "Cama de solteiro"
+  },
+  {
+   "id": "bunk_bed",
+   "categoria": "camas",
+   "arquivo": "camas/bunk_bed.glb",
+   "origem": "Beds/Bunk Bed.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.99,
+    1.63,
+    2.11
+   ],
+   "tris": 2040,
+   "partes": 1,
+   "nome": "Beliche"
+  },
+  {
+   "id": "triple_bunk_bed",
+   "categoria": "camas",
+   "arquivo": "camas/triple_bunk_bed.glb",
+   "origem": "Beds/Triple Bunk Bed.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.99,
+    2.7,
+    2.11
+   ],
+   "tris": 3014,
+   "partes": 1,
+   "nome": "Treliche"
+  },
+  {
+   "id": "carpet_a",
+   "categoria": "tapetes",
+   "arquivo": "tapetes/carpet_a.glb",
+   "origem": "Carpets/Carpet A.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    2.23,
+    0.06,
+    1.21
+   ],
+   "tris": 140,
+   "partes": 1,
+   "nome": "Tapete A"
+  },
+  {
+   "id": "carpet_b",
+   "categoria": "tapetes",
+   "arquivo": "tapetes/carpet_b.glb",
+   "origem": "Carpets/Carpet B.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    2.22,
+    0.05,
+    0.93
+   ],
+   "tris": 52,
+   "partes": 1,
+   "nome": "Tapete B"
+  },
+  {
+   "id": "carpet_c",
+   "categoria": "tapetes",
+   "arquivo": "tapetes/carpet_c.glb",
+   "origem": "Carpets/Carpet C.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.93,
+    0.05,
+    0.49
+   ],
+   "tris": 28,
+   "partes": 1,
+   "nome": "Tapete C"
+  },
+  {
+   "id": "chair_a",
+   "categoria": "cadeiras",
+   "arquivo": "cadeiras/chair_a.glb",
+   "origem": "Chairs/Chair A.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.39,
+    0.92,
+    0.48
+   ],
+   "tris": 516,
+   "partes": 1,
+   "nome": "Cadeira A"
+  },
+  {
+   "id": "chair_b",
+   "categoria": "cadeiras",
+   "arquivo": "cadeiras/chair_b.glb",
+   "origem": "Chairs/Chair B.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.39,
+    1.01,
+    0.41
+   ],
+   "tris": 516,
+   "partes": 1,
+   "nome": "Cadeira B"
+  },
+  {
+   "id": "chair_c",
+   "categoria": "cadeiras",
+   "arquivo": "cadeiras/chair_c.glb",
+   "origem": "Chairs/Chair C.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.35,
+    0.59,
+    0.35
+   ],
+   "tris": 286,
+   "partes": 1,
+   "nome": "Banqueta"
+  },
+  {
+   "id": "chair_d",
+   "categoria": "cadeiras",
+   "arquivo": "cadeiras/chair_d.glb",
+   "origem": "Chairs/Chair D.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.4,
+    0.32,
+    0.4
+   ],
+   "tris": 176,
+   "partes": 1,
+   "nome": "Banquinho"
+  },
+  {
+   "id": "chair_e",
+   "categoria": "cadeiras",
+   "arquivo": "cadeiras/chair_e.glb",
+   "origem": "Chairs/Chair E.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.82,
+    1.08,
+    0.63
+   ],
+   "tris": 1558,
+   "partes": 1,
+   "nome": "Poltrona"
+  },
+  {
+   "id": "door_a",
+   "categoria": "portas",
+   "arquivo": "portas/door_a.glb",
+   "origem": "Doors/Door A.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.88,
+    1.95,
+    0.29
+   ],
+   "tris": 364,
+   "partes": 2,
+   "nome": "Porta A"
+  },
+  {
+   "id": "door_b",
+   "categoria": "portas",
+   "arquivo": "portas/door_b.glb",
+   "origem": "Doors/Door B.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.85,
+    1.94,
+    0.27
+   ],
+   "tris": 1008,
+   "partes": 2,
+   "nome": "Porta B"
+  },
+  {
+   "id": "door_c",
+   "categoria": "portas",
+   "arquivo": "portas/door_c.glb",
+   "origem": "Doors/Door C.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.87,
+    1.99,
+    0.28
+   ],
+   "tris": 1024,
+   "partes": 2,
+   "nome": "Porta C"
+  },
+  {
+   "id": "drawer_a",
+   "categoria": "comodas",
+   "arquivo": "comodas/drawer_a.glb",
+   "origem": "Drawers/Drawer A.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    1.47,
+    0.72,
+    0.57
+   ],
+   "tris": 1216,
+   "partes": 8,
+   "nome": "Cômoda"
+  },
+  {
+   "id": "drawer_b",
+   "categoria": "comodas",
+   "arquivo": "comodas/drawer_b.glb",
+   "origem": "Drawers/Drawer B.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.48,
+    0.67,
+    0.5
+   ],
+   "tris": 632,
+   "partes": 4,
+   "nome": "Criado-mudo"
+  },
+  {
+   "id": "console_a",
+   "categoria": "eletronicos",
+   "arquivo": "eletronicos/console_a.glb",
+   "origem": "Electronics/Console A.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.28,
+    0.59,
+    0.28
+   ],
+   "tris": 68,
+   "partes": 1,
+   "nome": "Console A"
+  },
+  {
+   "id": "console_b",
+   "categoria": "eletronicos",
+   "arquivo": "eletronicos/console_b.glb",
+   "origem": "Electronics/Console B.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.51,
+    0.18,
+    0.42
+   ],
+   "tris": 68,
+   "partes": 1,
+   "nome": "Console B"
+  },
+  {
+   "id": "console_c",
+   "categoria": "eletronicos",
+   "arquivo": "eletronicos/console_c.glb",
+   "origem": "Electronics/Console C.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.31,
+    0.61,
+    0.59
+   ],
+   "tris": 328,
+   "partes": 1,
+   "nome": "Console C"
+  },
+  {
+   "id": "console_d",
+   "categoria": "eletronicos",
+   "arquivo": "eletronicos/console_d.glb",
+   "origem": "Electronics/Console D.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.41,
+    0.08,
+    0.45
+   ],
+   "tris": 124,
+   "partes": 1,
+   "nome": "Console D"
+  },
+  {
+   "id": "keyboard",
+   "categoria": "eletronicos",
+   "arquivo": "eletronicos/keyboard.glb",
+   "origem": "Electronics/Keyboard.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.75,
+    0.06,
+    0.3
+   ],
+   "tris": 784,
+   "partes": 1,
+   "nome": "Teclado"
+  },
+  {
+   "id": "laptop",
+   "categoria": "eletronicos",
+   "arquivo": "eletronicos/laptop.glb",
+   "origem": "Electronics/Laptop.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.53,
+    0.38,
+    0.44
+   ],
+   "tris": 396,
+   "partes": 1,
+   "nome": "Notebook"
+  },
+  {
+   "id": "monitor",
+   "categoria": "eletronicos",
+   "arquivo": "eletronicos/monitor.glb",
+   "origem": "Electronics/Monitor.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.86,
+    0.75,
+    0.19
+   ],
+   "tris": 192,
+   "partes": 1,
+   "nome": "Monitor"
+  },
+  {
+   "id": "pc",
+   "categoria": "eletronicos",
+   "arquivo": "eletronicos/pc.glb",
+   "origem": "Electronics/Pc.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.33,
+    0.72,
+    0.63
+   ],
+   "tris": 72,
+   "partes": 1,
+   "nome": "Gabinete de PC"
+  },
+  {
+   "id": "phone",
+   "categoria": "eletronicos",
+   "arquivo": "eletronicos/phone.glb",
+   "origem": "Electronics/Phone.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.15,
+    0.03,
+    0.29
+   ],
+   "tris": 92,
+   "partes": 1,
+   "nome": "Celular"
+  },
+  {
+   "id": "tv_a",
+   "categoria": "eletronicos",
+   "arquivo": "eletronicos/tv_a.glb",
+   "origem": "Electronics/TV A.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.83,
+    0.83,
+    0.76
+   ],
+   "tris": 68,
+   "partes": 1,
+   "nome": "TV antiga"
+  },
+  {
+   "id": "tv_b",
+   "categoria": "eletronicos",
+   "arquivo": "eletronicos/tv_b.glb",
+   "origem": "Electronics/TV B.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    1.78,
+    1.13,
+    0.3
+   ],
+   "tris": 192,
+   "partes": 1,
+   "nome": "TV de tela plana"
+  },
+  {
+   "id": "tablet",
+   "categoria": "eletronicos",
+   "arquivo": "eletronicos/tablet.glb",
+   "origem": "Electronics/Tablet.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.32,
+    0.03,
+    0.44
+   ],
+   "tris": 92,
+   "partes": 1,
+   "nome": "Tablet"
+  },
+  {
+   "id": "blender",
+   "categoria": "cozinha",
+   "arquivo": "cozinha/blender.glb",
+   "origem": "Kitchen/Blender.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.28,
+    0.48,
+    0.28
+   ],
+   "tris": 480,
+   "partes": 1,
+   "nome": "Liquidificador"
+  },
+  {
+   "id": "cupboard_a",
+   "categoria": "cozinha",
+   "arquivo": "cozinha/cupboard_a.glb",
+   "origem": "Kitchen/Cupboard A.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.48,
+    0.83,
+    0.62
+   ],
+   "tris": 368,
+   "partes": 2,
+   "nome": "Balcão A"
+  },
+  {
+   "id": "cupboard_b",
+   "categoria": "cozinha",
+   "arquivo": "cozinha/cupboard_b.glb",
+   "origem": "Kitchen/Cupboard B.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.89,
+    0.83,
+    0.62
+   ],
+   "tris": 584,
+   "partes": 3,
+   "nome": "Balcão B"
+  },
+  {
+   "id": "cupboard_c",
+   "categoria": "cozinha",
+   "arquivo": "cozinha/cupboard_c.glb",
+   "origem": "Kitchen/Cupboard C.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.9,
+    0.86,
+    0.62
+   ],
+   "tris": 628,
+   "partes": 3,
+   "nome": "Balcão C"
+  },
+  {
+   "id": "cupboard_d",
+   "categoria": "cozinha",
+   "arquivo": "cozinha/cupboard_d.glb",
+   "origem": "Kitchen/Cupboard D.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.48,
+    0.86,
+    0.62
+   ],
+   "tris": 420,
+   "partes": 2,
+   "nome": "Balcão D"
+  },
+  {
+   "id": "cupboard_e",
+   "categoria": "cozinha",
+   "arquivo": "cozinha/cupboard_e.glb",
+   "origem": "Kitchen/Cupboard E.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.9,
+    0.86,
+    0.62
+   ],
+   "tris": 860,
+   "partes": 4,
+   "nome": "Balcão E"
+  },
+  {
+   "id": "cupboard_f",
+   "categoria": "cozinha",
+   "arquivo": "cozinha/cupboard_f.glb",
+   "origem": "Kitchen/Cupboard F.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    1.68,
+    0.86,
+    0.62
+   ],
+   "tris": 716,
+   "partes": 3,
+   "nome": "Balcão F"
+  },
+  {
+   "id": "cupboard_sink",
+   "categoria": "cozinha",
+   "arquivo": "cozinha/cupboard_sink.glb",
+   "origem": "Kitchen/Cupboard Sink.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.9,
+    0.96,
+    0.62
+   ],
+   "tris": 1856,
+   "partes": 3,
+   "nome": "Balcão com pia"
+  },
+  {
+   "id": "dishwasher",
+   "categoria": "cozinha",
+   "arquivo": "cozinha/dishwasher.glb",
+   "origem": "Kitchen/Dishwasher.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.58,
+    0.83,
+    0.65
+   ],
+   "tris": 1528,
+   "partes": 2,
+   "nome": "Lava-louças"
+  },
+  {
+   "id": "fridge_a",
+   "categoria": "cozinha",
+   "arquivo": "cozinha/fridge_a.glb",
+   "origem": "Kitchen/Fridge A.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.83,
+    1.8,
+    0.58
+   ],
+   "tris": 744,
+   "partes": 3,
+   "nome": "Geladeira A"
+  },
+  {
+   "id": "fridge_b",
+   "categoria": "cozinha",
+   "arquivo": "cozinha/fridge_b.glb",
+   "origem": "Kitchen/Fridge B.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.76,
+    1.91,
+    0.55
+   ],
+   "tris": 1288,
+   "partes": 3,
+   "nome": "Geladeira B"
+  },
+  {
+   "id": "kettle",
+   "categoria": "cozinha",
+   "arquivo": "cozinha/kettle.glb",
+   "origem": "Kitchen/Kettle.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.39,
+    0.52,
+    0.29
+   ],
+   "tris": 558,
+   "partes": 1,
+   "nome": "Chaleira"
+  },
+  {
+   "id": "kitchen_roll",
+   "categoria": "cozinha",
+   "arquivo": "cozinha/kitchen_roll.glb",
+   "origem": "Kitchen/Kitchen Roll.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.2,
+    0.38,
+    0.2
+   ],
+   "tris": 224,
+   "partes": 1,
+   "nome": "Papel-toalha"
+  },
+  {
+   "id": "knife_block",
+   "categoria": "cozinha",
+   "arquivo": "cozinha/knife_block.glb",
+   "origem": "Kitchen/Knife Block.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.15,
+    0.34,
+    0.35
+   ],
+   "tris": 188,
+   "partes": 1,
+   "nome": "Faqueiro"
+  },
+  {
+   "id": "microwave",
+   "categoria": "cozinha",
+   "arquivo": "cozinha/microwave.glb",
+   "origem": "Kitchen/Microwave.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.72,
+    0.37,
+    0.4
+   ],
+   "tris": 332,
+   "partes": 2,
+   "nome": "Micro-ondas"
+  },
+  {
+   "id": "oven",
+   "categoria": "cozinha",
+   "arquivo": "cozinha/oven.glb",
+   "origem": "Kitchen/Oven.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.68,
+    0.86,
+    0.64
+   ],
+   "tris": 1348,
+   "partes": 2,
+   "nome": "Fogão"
+  },
+  {
+   "id": "toaster",
+   "categoria": "cozinha",
+   "arquivo": "cozinha/toaster.glb",
+   "origem": "Kitchen/Toaster.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.44,
+    0.32,
+    0.23
+   ],
+   "tris": 248,
+   "partes": 1,
+   "nome": "Torradeira"
+  },
+  {
+   "id": "washing_machine",
+   "categoria": "cozinha",
+   "arquivo": "cozinha/washing_machine.glb",
+   "origem": "Kitchen/Washing Machine.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.58,
+    0.83,
+    0.72
+   ],
+   "tris": 472,
+   "partes": 2,
+   "nome": "Máquina de lavar"
+  },
+  {
+   "id": "ceiling_light",
+   "categoria": "luzes",
+   "arquivo": "luzes/ceiling_light.glb",
+   "origem": "Lights/Ceiling Light.fbx",
+   "montagem": "ceiling",
+   "tamanho_m": [
+    0.58,
+    0.8,
+    0.58
+   ],
+   "tris": 526,
+   "partes": 1,
+   "nome": "Luminária de teto"
+  },
+  {
+   "id": "lamp_a",
+   "categoria": "luzes",
+   "arquivo": "luzes/lamp_a.glb",
+   "origem": "Lights/Lamp A.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.69,
+    1.59,
+    0.69
+   ],
+   "tris": 510,
+   "partes": 1,
+   "nome": "Abajur de pé A"
+  },
+  {
+   "id": "lamp_b",
+   "categoria": "luzes",
+   "arquivo": "luzes/lamp_b.glb",
+   "origem": "Lights/Lamp B.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.69,
+    1.59,
+    0.69
+   ],
+   "tris": 510,
+   "partes": 1,
+   "nome": "Abajur de pé B"
+  },
+  {
+   "id": "lamp_c",
+   "categoria": "luzes",
+   "arquivo": "luzes/lamp_c.glb",
+   "origem": "Lights/Lamp C.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.3,
+    0.49,
+    0.3
+   ],
+   "tris": 526,
+   "partes": 1,
+   "nome": "Abajur de mesa"
+  },
+  {
+   "id": "wall_light",
+   "categoria": "luzes",
+   "arquivo": "luzes/wall_light.glb",
+   "origem": "Lights/Wall Light.fbx",
+   "montagem": "wall",
+   "tamanho_m": [
+    0.36,
+    0.19,
+    0.19
+   ],
+   "tris": 60,
+   "partes": 1,
+   "nome": "Arandela"
+  },
+  {
+   "id": "alarm_clock",
+   "categoria": "diversos",
+   "arquivo": "diversos/alarm_clock.glb",
+   "origem": "Miscellaneous/Alarm Clock.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.12,
+    0.07,
+    0.07
+   ],
+   "tris": 92,
+   "partes": 1,
+   "nome": "Despertador"
+  },
+  {
+   "id": "bin",
+   "categoria": "diversos",
+   "arquivo": "diversos/bin.glb",
+   "origem": "Miscellaneous/Bin.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.38,
+    0.54,
+    0.38
+   ],
+   "tris": 116,
+   "partes": 1,
+   "nome": "Lixeira"
+  },
+  {
+   "id": "books_a",
+   "categoria": "diversos",
+   "arquivo": "diversos/books_a.glb",
+   "origem": "Miscellaneous/Books A.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.48,
+    0.28,
+    0.17
+   ],
+   "tris": 588,
+   "partes": 1,
+   "nome": "Livros A"
+  },
+  {
+   "id": "books_b",
+   "categoria": "diversos",
+   "arquivo": "diversos/books_b.glb",
+   "origem": "Miscellaneous/Books B.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.43,
+    0.28,
+    0.17
+   ],
+   "tris": 420,
+   "partes": 1,
+   "nome": "Livros B"
+  },
+  {
+   "id": "bowl",
+   "categoria": "diversos",
+   "arquivo": "diversos/bowl.glb",
+   "origem": "Miscellaneous/Bowl.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.23,
+    0.09,
+    0.23
+   ],
+   "tris": 260,
+   "partes": 1,
+   "nome": "Tigela"
+  },
+  {
+   "id": "broom",
+   "categoria": "diversos",
+   "arquivo": "diversos/broom.glb",
+   "origem": "Miscellaneous/Broom.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.31,
+    1.01,
+    0.16
+   ],
+   "tris": 978,
+   "partes": 1,
+   "nome": "Vassoura"
+  },
+  {
+   "id": "ceiling_fan",
+   "categoria": "diversos",
+   "arquivo": "diversos/ceiling_fan.glb",
+   "origem": "Miscellaneous/Ceiling Fan.fbx",
+   "montagem": "ceiling",
+   "tamanho_m": [
+    1.94,
+    0.31,
+    1.94
+   ],
+   "tris": 296,
+   "partes": 1,
+   "nome": "Ventilador de teto"
+  },
+  {
+   "id": "clock",
+   "categoria": "diversos",
+   "arquivo": "diversos/clock.glb",
+   "origem": "Miscellaneous/Clock.fbx",
+   "montagem": "wall",
+   "tamanho_m": [
+    0.33,
+    0.33,
+    0.05
+   ],
+   "tris": 184,
+   "partes": 1,
+   "nome": "Relógio de parede"
+  },
+  {
+   "id": "curtains",
+   "categoria": "diversos",
+   "arquivo": "diversos/curtains.glb",
+   "origem": "Miscellaneous/Curtains.fbx",
+   "montagem": "wall",
+   "tamanho_m": [
+    1.41,
+    1.61,
+    0.13
+   ],
+   "tris": 436,
+   "partes": 1,
+   "nome": "Cortinas"
+  },
+  {
+   "id": "fan",
+   "categoria": "diversos",
+   "arquivo": "diversos/fan.glb",
+   "origem": "Miscellaneous/Fan.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.42,
+    0.56,
+    0.29
+   ],
+   "tris": 2400,
+   "partes": 1,
+   "nome": "Ventilador"
+  },
+  {
+   "id": "glass",
+   "categoria": "diversos",
+   "arquivo": "diversos/glass.glb",
+   "origem": "Miscellaneous/Glass.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.08,
+    0.17,
+    0.08
+   ],
+   "tris": 124,
+   "partes": 1,
+   "nome": "Copo"
+  },
+  {
+   "id": "globe",
+   "categoria": "diversos",
+   "arquivo": "diversos/globe.glb",
+   "origem": "Miscellaneous/Globe.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.31,
+    0.4,
+    0.26
+   ],
+   "tris": 408,
+   "partes": 1,
+   "nome": "Globo"
+  },
+  {
+   "id": "hoover",
+   "categoria": "diversos",
+   "arquivo": "diversos/hoover.glb",
+   "origem": "Miscellaneous/Hoover.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.24,
+    0.08,
+    0.24
+   ],
+   "tris": 236,
+   "partes": 1,
+   "nome": "Aspirador robô"
+  },
+  {
+   "id": "ladder",
+   "categoria": "diversos",
+   "arquivo": "diversos/ladder.glb",
+   "origem": "Miscellaneous/Ladder.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.28,
+    1.36,
+    0.06
+   ],
+   "tris": 260,
+   "partes": 1,
+   "nome": "Escada de mão"
+  },
+  {
+   "id": "light_switch",
+   "categoria": "diversos",
+   "arquivo": "diversos/light_switch.glb",
+   "origem": "Miscellaneous/Light Switch.fbx",
+   "montagem": "wall",
+   "tamanho_m": [
+    0.08,
+    0.08,
+    0.02
+   ],
+   "tris": 108,
+   "partes": 1,
+   "nome": "Interruptor"
+  },
+  {
+   "id": "mirror_a",
+   "categoria": "diversos",
+   "arquivo": "diversos/mirror_a.glb",
+   "origem": "Miscellaneous/Mirror A.fbx",
+   "montagem": "wall",
+   "tamanho_m": [
+    0.63,
+    1.35,
+    0.07
+   ],
+   "tris": 44,
+   "partes": 1,
+   "nome": "Espelho A"
+  },
+  {
+   "id": "mirror_b",
+   "categoria": "diversos",
+   "arquivo": "diversos/mirror_b.glb",
+   "origem": "Miscellaneous/Mirror B.fbx",
+   "montagem": "wall",
+   "tamanho_m": [
+    0.49,
+    0.78,
+    0.07
+   ],
+   "tris": 44,
+   "partes": 1,
+   "nome": "Espelho B"
+  },
+  {
+   "id": "mug",
+   "categoria": "diversos",
+   "arquivo": "diversos/mug.glb",
+   "origem": "Miscellaneous/Mug.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.13,
+    0.1,
+    0.1
+   ],
+   "tris": 320,
+   "partes": 1,
+   "nome": "Caneca"
+  },
+  {
+   "id": "pan",
+   "categoria": "diversos",
+   "arquivo": "diversos/pan.glb",
+   "origem": "Miscellaneous/Pan.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.36,
+    0.04,
+    0.21
+   ],
+   "tris": 310,
+   "partes": 1,
+   "nome": "Frigideira"
+  },
+  {
+   "id": "plant_a",
+   "categoria": "diversos",
+   "arquivo": "diversos/plant_a.glb",
+   "origem": "Miscellaneous/Plant A.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.5,
+    1.13,
+    0.52
+   ],
+   "tris": 312,
+   "partes": 1,
+   "nome": "Planta grande"
+  },
+  {
+   "id": "plant_b",
+   "categoria": "diversos",
+   "arquivo": "diversos/plant_b.glb",
+   "origem": "Miscellaneous/Plant B.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.17,
+    0.23,
+    0.17
+   ],
+   "tris": 416,
+   "partes": 1,
+   "nome": "Planta pequena"
+  },
+  {
+   "id": "plate",
+   "categoria": "diversos",
+   "arquivo": "diversos/plate.glb",
+   "origem": "Miscellaneous/Plate.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.24,
+    0.03,
+    0.24
+   ],
+   "tris": 188,
+   "partes": 1,
+   "nome": "Prato"
+  },
+  {
+   "id": "pot",
+   "categoria": "diversos",
+   "arquivo": "diversos/pot.glb",
+   "origem": "Miscellaneous/Pot.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.33,
+    0.12,
+    0.19
+   ],
+   "tris": 246,
+   "partes": 1,
+   "nome": "Panela"
+  },
+  {
+   "id": "radiator_a",
+   "categoria": "diversos",
+   "arquivo": "diversos/radiator_a.glb",
+   "origem": "Miscellaneous/Radiator A.fbx",
+   "montagem": "wall",
+   "tamanho_m": [
+    1.7,
+    0.67,
+    0.18
+   ],
+   "tris": 740,
+   "partes": 1,
+   "nome": "Aquecedor A"
+  },
+  {
+   "id": "radiator_b",
+   "categoria": "diversos",
+   "arquivo": "diversos/radiator_b.glb",
+   "origem": "Miscellaneous/Radiator B.fbx",
+   "montagem": "wall",
+   "tamanho_m": [
+    0.93,
+    0.67,
+    0.18
+   ],
+   "tris": 452,
+   "partes": 1,
+   "nome": "Aquecedor B"
+  },
+  {
+   "id": "safe_a",
+   "categoria": "diversos",
+   "arquivo": "diversos/safe_a.glb",
+   "origem": "Miscellaneous/Safe A.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.38,
+    0.18,
+    0.21
+   ],
+   "tris": 392,
+   "partes": 2,
+   "nome": "Cofre A"
+  },
+  {
+   "id": "safe_b",
+   "categoria": "diversos",
+   "arquivo": "diversos/safe_b.glb",
+   "origem": "Miscellaneous/Safe B.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.32,
+    0.46,
+    0.33
+   ],
+   "tris": 436,
+   "partes": 2,
+   "nome": "Cofre B"
+  },
+  {
+   "id": "socket",
+   "categoria": "diversos",
+   "arquivo": "diversos/socket.glb",
+   "origem": "Miscellaneous/Socket.fbx",
+   "montagem": "wall",
+   "tamanho_m": [
+    0.14,
+    0.07,
+    0.02
+   ],
+   "tris": 194,
+   "partes": 1,
+   "nome": "Tomada"
+  },
+  {
+   "id": "speaker",
+   "categoria": "diversos",
+   "arquivo": "diversos/speaker.glb",
+   "origem": "Miscellaneous/Speaker.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.15,
+    0.27,
+    0.15
+   ],
+   "tris": 276,
+   "partes": 1,
+   "nome": "Caixa de som"
+  },
+  {
+   "id": "vase",
+   "categoria": "diversos",
+   "arquivo": "diversos/vase.glb",
+   "origem": "Miscellaneous/Vase.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.15,
+    0.22,
+    0.15
+   ],
+   "tris": 236,
+   "partes": 1,
+   "nome": "Vaso"
+  },
+  {
+   "id": "vent",
+   "categoria": "diversos",
+   "arquivo": "diversos/vent.glb",
+   "origem": "Miscellaneous/Vent.fbx",
+   "montagem": "wall",
+   "tamanho_m": [
+    0.25,
+    0.12,
+    0.02
+   ],
+   "tris": 244,
+   "partes": 1,
+   "nome": "Grade de ventilação"
+  },
+  {
+   "id": "shelf_a",
+   "categoria": "estantes",
+   "arquivo": "estantes/shelf_a.glb",
+   "origem": "Shelves/Shelf A.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.62,
+    2.04,
+    0.45
+   ],
+   "tris": 376,
+   "partes": 2,
+   "nome": "Armário estreito"
+  },
+  {
+   "id": "shelf_b",
+   "categoria": "estantes",
+   "arquivo": "estantes/shelf_b.glb",
+   "origem": "Shelves/Shelf B.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    1.17,
+    2.04,
+    0.47
+   ],
+   "tris": 512,
+   "partes": 3,
+   "nome": "Armário de 2 portas"
+  },
+  {
+   "id": "shelf_c",
+   "categoria": "estantes",
+   "arquivo": "estantes/shelf_c.glb",
+   "origem": "Shelves/Shelf C.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.62,
+    2.04,
+    0.36
+   ],
+   "tris": 240,
+   "partes": 1,
+   "nome": "Estante estreita"
+  },
+  {
+   "id": "shelf_d",
+   "categoria": "estantes",
+   "arquivo": "estantes/shelf_d.glb",
+   "origem": "Shelves/Shelf D.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    1.17,
+    2.04,
+    0.36
+   ],
+   "tris": 240,
+   "partes": 1,
+   "nome": "Estante larga"
+  },
+  {
+   "id": "shelf_e",
+   "categoria": "estantes",
+   "arquivo": "estantes/shelf_e.glb",
+   "origem": "Shelves/Shelf E.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    1.17,
+    1.51,
+    0.36
+   ],
+   "tris": 240,
+   "partes": 1,
+   "nome": "Estante baixa"
+  },
+  {
+   "id": "wall_shelf_a",
+   "categoria": "estantes",
+   "arquivo": "estantes/wall_shelf_a.glb",
+   "origem": "Shelves/Wall Shelf A.fbx",
+   "montagem": "wall",
+   "tamanho_m": [
+    1.51,
+    0.34,
+    0.38
+   ],
+   "tris": 220,
+   "partes": 1,
+   "nome": "Prateleira A"
+  },
+  {
+   "id": "wall_shelf_b",
+   "categoria": "estantes",
+   "arquivo": "estantes/wall_shelf_b.glb",
+   "origem": "Shelves/Wall Shelf B.fbx",
+   "montagem": "wall",
+   "tamanho_m": [
+    0.62,
+    0.34,
+    0.38
+   ],
+   "tris": 132,
+   "partes": 1,
+   "nome": "Prateleira B"
+  },
+  {
+   "id": "sofa_a",
+   "categoria": "sofas",
+   "arquivo": "sofas/sofa_a.glb",
+   "origem": "Sofas/Sofa A.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    1.98,
+    0.84,
+    0.83
+   ],
+   "tris": 1220,
+   "partes": 1,
+   "nome": "Sofá de 2 lugares"
+  },
+  {
+   "id": "sofa_b",
+   "categoria": "sofas",
+   "arquivo": "sofas/sofa_b.glb",
+   "origem": "Sofas/Sofa B.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    1.17,
+    0.83,
+    0.83
+   ],
+   "tris": 844,
+   "partes": 1,
+   "nome": "Namoradeira"
+  },
+  {
+   "id": "sofa_c",
+   "categoria": "sofas",
+   "arquivo": "sofas/sofa_c.glb",
+   "origem": "Sofas/Sofa C.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    1.06,
+    0.52,
+    0.77
+   ],
+   "tris": 800,
+   "partes": 1,
+   "nome": "Poltrona baixa"
+  },
+  {
+   "id": "sofa_d",
+   "categoria": "sofas",
+   "arquivo": "sofas/sofa_d.glb",
+   "origem": "Sofas/Sofa D.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    2.44,
+    0.7,
+    0.79
+   ],
+   "tris": 1740,
+   "partes": 1,
+   "nome": "Sofá grande"
+  },
+  {
+   "id": "desk",
+   "categoria": "mesas",
+   "arquivo": "mesas/desk.glb",
+   "origem": "Tables/Desk.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    1.96,
+    1.4,
+    0.85
+   ],
+   "tris": 820,
+   "partes": 3,
+   "nome": "Escrivaninha"
+  },
+  {
+   "id": "rounded_table_a",
+   "categoria": "mesas",
+   "arquivo": "mesas/rounded_table_a.glb",
+   "origem": "Tables/Rounded Table A.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    1.73,
+    0.68,
+    1.09
+   ],
+   "tris": 244,
+   "partes": 1,
+   "nome": "Mesa oval"
+  },
+  {
+   "id": "rounded_table_b",
+   "categoria": "mesas",
+   "arquivo": "mesas/rounded_table_b.glb",
+   "origem": "Tables/Rounded Table B.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    1.09,
+    0.67,
+    1.09
+   ],
+   "tris": 420,
+   "partes": 1,
+   "nome": "Mesa redonda"
+  },
+  {
+   "id": "rounded_table_c",
+   "categoria": "mesas",
+   "arquivo": "mesas/rounded_table_c.glb",
+   "origem": "Tables/Rounded Table C.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    1.09,
+    0.79,
+    1.09
+   ],
+   "tris": 238,
+   "partes": 1,
+   "nome": "Mesa redonda alta"
+  },
+  {
+   "id": "table_a",
+   "categoria": "mesas",
+   "arquivo": "mesas/table_a.glb",
+   "origem": "Tables/Table A.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    1.58,
+    0.76,
+    0.68
+   ],
+   "tris": 220,
+   "partes": 1,
+   "nome": "Mesa A"
+  },
+  {
+   "id": "table_b",
+   "categoria": "mesas",
+   "arquivo": "mesas/table_b.glb",
+   "origem": "Tables/Table B.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    0.63,
+    0.35,
+    0.68
+   ],
+   "tris": 220,
+   "partes": 1,
+   "nome": "Mesinha"
+  },
+  {
+   "id": "table_c",
+   "categoria": "mesas",
+   "arquivo": "mesas/table_c.glb",
+   "origem": "Tables/Table C.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    1.28,
+    0.35,
+    0.68
+   ],
+   "tris": 252,
+   "partes": 1,
+   "nome": "Mesa de centro"
+  },
+  {
+   "id": "table_d",
+   "categoria": "mesas",
+   "arquivo": "mesas/table_d.glb",
+   "origem": "Tables/Table D.fbx",
+   "montagem": "floor",
+   "tamanho_m": [
+    2.43,
+    0.51,
+    0.8
+   ],
+   "tris": 216,
+   "partes": 1,
+   "nome": "Rack baixo"
+  },
+  {
+   "id": "window_a",
+   "categoria": "janelas",
+   "arquivo": "janelas/window_a.glb",
+   "origem": "Windows/Window A.fbx",
+   "montagem": "wall",
+   "tamanho_m": [
+    0.63,
+    1.29,
+    0.09
+   ],
+   "tris": 156,
+   "partes": 1,
+   "nome": "Janela A"
+  },
+  {
+   "id": "window_b",
+   "categoria": "janelas",
+   "arquivo": "janelas/window_b.glb",
+   "origem": "Windows/Window B.fbx",
+   "montagem": "wall",
+   "tamanho_m": [
+    1.07,
+    1.4,
+    0.08
+   ],
+   "tris": 244,
+   "partes": 1,
+   "nome": "Janela B"
+  },
+  {
+   "id": "window_c",
+   "categoria": "janelas",
+   "arquivo": "janelas/window_c.glb",
+   "origem": "Windows/Window C.fbx",
+   "montagem": "wall",
+   "tamanho_m": [
+    0.85,
+    0.85,
+    0.06
+   ],
+   "tris": 156,
+   "partes": 1,
+   "nome": "Janela C"
+  }
+ ]
+}

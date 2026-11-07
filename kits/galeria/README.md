@@ -19,12 +19,12 @@ Galeria de lojas de 3 andares em peças 3D (GLB), estilo toon com contorno. Segu
 - **Átrio:** `atrium_rail` tem pivô na borda da laje, com o vazio para +Z local. `escalator` tem pivô no pé da escada e sobe para -Z. `skylight_vault` (faixas de 2 m), `skylight_end`, `skylight_curb` e `skylight_curb_end` ficam na cota da cobertura.
 - **Vitrines internas:** `shopfront_glass` e `shopfront_door` são centradas na linha da parede, como as paredes internas.
 
-## Texturas (embutidas nos GLB, UVs em metros)
-- `render`: reboco com junta a cada metro.
-- `stone`: rodapé e degraus.
-- `canvas`: toldo listrado.
-- `plaster`: interno.
-- `sign`: o letreiro.
+## Alto detalhe
+Versão refeita com `scripts/detalhe/retrofit.py`, sem mudar planta nem encaixes:
+- **Janelas:** caixilho com batente, folhas de guilhotina com baguetes e vidro, peitoril com caimento e pingadeira.
+- **Portas:** almofadas rebaixadas e chanfradas, vidro com baguetes nas portas envidraçadas, maçaneta e dobradiças.
+- **Texturas PBR** (cor + normal + ORM, ladrilho de 2 m, JPEG dentro dos GLB, UVs em metros): `render` (fachada), `stone` (embasamento), `plaster` (interno); toldos e letreiro mantêm as texturas antigas. Vitrines e a fachada de vidro do átrio continuam como eram.
+- Montado com cerca de 88 mil triângulos (antes 57 mil).
 
 ## Peças (41)
 | Grupo | Peças |
@@ -39,4 +39,4 @@ Galeria de lojas de 3 andares em peças 3D (GLB), estilo toon com contorno. Segu
 | Referência | `player_scale_ref` |
 
 ## Arquivos
-`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, texturas `*_texture.png`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com o prédio montado e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.
+`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com o prédio montado e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.

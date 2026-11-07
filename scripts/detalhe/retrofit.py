@@ -53,7 +53,7 @@ def aplicar(g, tipos, tabuas=None, tabuas_mats=None, portas=True, janelas=True):
     if janelas:
         old_window = g['window']
         def window(p, ow, oy0, oy1, lintel='trim', mull=True, sill_top=None, glass=True, **kw):
-            if not glass or sill_top is not None or oy1 - oy0 < 0.5 or ow < 0.35:
+            if not glass or sill_top is not None or oy1 - oy0 < 0.5 or ow < 0.35 or ow > 1.5:   # vitrines e janelas largas ficam como eram
                 return old_window(p, ow, oy0, oy1, lintel=lintel, mull=mull, sill_top=sill_top, glass=glass, **kw)
             x = ow / 2; f = 0.05
             p.box('frame', -x, -x + f, oy0, oy1, -0.2, -0.04); p.box('frame', x - f, x, oy0, oy1, -0.2, -0.04); p.box('frame', -x, x, oy1 - f, oy1, -0.2, -0.04)

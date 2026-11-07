@@ -93,7 +93,7 @@ Uma arma por vez, sempre **junto com os seus acessórios**. Cada uma entra numa 
 | 17 | Bastão com pregos / com arame farpado (melhoria do taco do loot) | - | receita na bancada | |
 | 18 | Coquetel molotov, bomba de pregos (lata), isca sonora (despertador) | pavio, ponteiro | - | |
 
-O roteiro substitui o "arco e flechas, lança, facão" do lote 4 de `props/README.md`: essas armas são feitas aqui.
+O arco, a lança e o facão do lote 4 de `props/loot/` são itens de loot simples (uma peça só); aqui eles ganham a versão completa, com partes, acessórios e animações.
 
 ## Verificação
 

@@ -47,7 +47,13 @@ FOSCOS = {'borracha': 0.92, 'tecido_sofa': 0.95, 'tecido_almofada': 0.95, 'tecid
           'fita_preta': 0.85, 'cartela': 0.6, 'pilha_corpo': 0.35, 'madeira_branca': 0.5}
 TRANSP = {'vidro_prateleira': ((200, 226, 230), 0.35, 0.05), 'pet': ((200, 228, 240), 0.32, 0.08), 'agua': ((150, 200, 230), 0.45, 0.02),
           'plastico_transp': ((230, 236, 240), 0.4, 0.15), 'ambar': ((168, 84, 20), 0.82, 0.2), 'galao_azul': ((90, 150, 210), 0.6, 0.25)}
+EMISSIVOS = {}          # material -> emissiveFactor (brasa da fogueira)
 UV_ESCALA = {}          # material -> tamanho do ladrilho em metros (projecao em caixa)
+TEX_PROPRIAS = [        # (material, tipo, ladrilho m, px/m): texturas de _ruido_tex; os lotes acrescentam as suas
+    ('tecido_sofa', 'tecido', 0.5, 768), ('tecido_almofada', 'tecido', 0.5, 768), ('tecido_cadeira', 'tecido', 0.5, 768),
+    ('colchao', 'tecido', 0.5, 768), ('lencol', 'tecido', 0.5, 768), ('cobertor', 'tecido', 0.5, 768),
+    ('travesseiro', 'tecido', 0.5, 768), ('atadura', 'tecido', 0.25, 1024), ('papelao', 'papelao', 0.5, 512),
+    ('ferrugem', 'ferrugem', 1.0, 384), ('granito', 'granito', 1.0, 512)]
 
 
 def _ruido_tex(col, seed, px, tile, kind):
@@ -81,11 +87,7 @@ def materiais():
     for k, (met, rough) in METALICOS.items():
         MATS[k].metallicFactor = met; MATS[k].roughnessFactor = rough
     for k, r in FOSCOS.items(): MATS[k].roughnessFactor = r
-    for i, (k, kind, tile, px) in enumerate((
-            ('tecido_sofa', 'tecido', 0.5, 768), ('tecido_almofada', 'tecido', 0.5, 768), ('tecido_cadeira', 'tecido', 0.5, 768),
-            ('colchao', 'tecido', 0.5, 768), ('lencol', 'tecido', 0.5, 768), ('cobertor', 'tecido', 0.5, 768),
-            ('travesseiro', 'tecido', 0.5, 768), ('atadura', 'tecido', 0.25, 1024), ('papelao', 'papelao', 0.5, 512),
-            ('ferrugem', 'ferrugem', 1.0, 384), ('granito', 'granito', 1.0, 512))):
+    for i, (k, kind, tile, px) in enumerate(TEX_PROPRIAS):
         a, nm, o = tex_set(*_ruido_tex(CORES[k], 101 + 7 * i, px, tile, kind), px)
         TEX[k] = (a, nm, o); UV_ESCALA[k] = tile
         MATS[k] = PBRMaterial(name=k, baseColorTexture=a, normalTexture=nm, occlusionTexture=o, metallicRoughnessTexture=o,
@@ -93,6 +95,7 @@ def materiais():
     for k, (c, alpha, rough) in TRANSP.items():
         MATS[k] = PBRMaterial(name=k, baseColorFactor=[c[0] / 255, c[1] / 255, c[2] / 255, alpha], alphaMode='BLEND',
                               metallicFactor=0.0, roughnessFactor=rough, doubleSided=False)
+    for k, e in EMISSIVOS.items(): MATS[k].emissiveFactor = e
     MATS['espelho'].roughnessFactor = 0.03
 
 
@@ -324,9 +327,9 @@ def pe_torneado(p, mat, x, z, y0, y1, r=0.025, sec=16):
 
 
 # ============================================================================ itens
-ITENS = {}
+ITENS = {}; LOTE = [1]
 def item(id, nome, grupo, categoria, montagem='floor', **dados):
-    def deco(fn): ITENS[id] = dict(id=id, nome=nome, grupo=grupo, categoria=categoria, montagem=montagem, fn=fn, **dados); return fn
+    def deco(fn): ITENS[id] = dict(id=id, nome=nome, grupo=grupo, categoria=categoria, montagem=montagem, lote=LOTE[0], fn=fn, **dados); return fn
     return deco
 
 
@@ -1048,6 +1051,12 @@ def pilhas(M):
         torno(p, 'aco_polido', [(0.0065, -0.0255), (0.0065, -0.025)], 16, 'z', c)
 
 
+# ============================================================================ lotes seguintes (props/lote2.py, lote3.py, ...)
+for _n in (2, 3, 4, 5):
+    _f = os.path.join(AQUI, f'lote{_n}.py')
+    if os.path.exists(_f): LOTE[0] = _n; exec(compile(open(_f, encoding='utf-8').read(), _f, 'exec'), globals())
+
+
 # ============================================================================ exportacao
 def exportar(it, raiz):
     M = Montagem(); it['fn'](M)
@@ -1095,21 +1104,24 @@ CABECALHO = {
 
 NOMES = {'cozinha': 'Cozinha', 'quarto': 'Quarto', 'sala': 'Sala', 'banheiro': 'Banheiro', 'deposito': 'Depósito',
          'comida': 'Comida', 'agua': 'Água', 'remedios': 'Remédios', 'ferramentas': 'Ferramentas', 'armas': 'Armas improvisadas',
-         'materiais': 'Materiais de construção', 'combustivel': 'Combustível', 'energia': 'Energia'}
+         'materiais': 'Materiais de construção', 'combustivel': 'Combustível', 'energia': 'Energia',
+         'lavanderia': 'Lavanderia', 'escritorio': 'Escritório', 'loja': 'Loja', 'saude': 'Saúde', 'oficina': 'Oficina', 'abrigo': 'Abrigo',
+         'roupas': 'Roupas e equipamento', 'utensilios': 'Utensílios', 'eletronicos': 'Luz e eletrônicos', 'higiene': 'Higiene',
+         'agricultura': 'Agricultura', 'barricadas': 'Barricadas e alarmes', 'rua': 'Rua e quintal', 'pistas': 'Chaves e pistas'}
 
 
 def catalogo_md(regs):
     """props/CATALOGO.md: tabelas em portugues geradas a partir dos catalogos."""
     L = ['# Catálogo de mobílias e loot', '', 'Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/catalogo.json`. Medidas em metros (largura × altura × profundidade).', '']
-    L += ['## Mobílias', '', '| Item | Cômodo | Medidas | Revistar | Partes móveis | Uso no jogo | Triângulos |', '|---|---|---|---|---|---|---|']
+    L += ['## Mobílias', '', '| Item | Lote | Cômodo | Medidas | Revistar | Partes móveis | Uso no jogo | Triângulos |', '|---|---|---|---|---|---|---|---|']
     for r in regs['mobilias']:
         usos = [u for u, k in (('barricada', 'barricada'), ('dormir', 'deitar'), ('sentar', 'sentar')) if r.get(k)]
         rev = f"{r['slots']} espaços: {', '.join(r['saque'])}" if r.get('conteiner') else '-'
         pt = ', '.join(p['no'] for p in r.get('partes', [])) or '-'
-        L.append(f"| {r['nome']} (`{r['id']}`) | {NOMES[r['categoria']]} | {' × '.join(f'{x:.2f}' for x in r['tamanho_m'])} | {rev} | {pt} | {', '.join(usos) or '-'} | {r['triangulos']} |")
-    L += ['', '## Loot', '', '| Item | Categoria | Recurso | Rende | Peso | Empilha | Efeito | Aparece em |', '|---|---|---|---|---|---|---|---|']
+        L.append(f"| {r['nome']} (`{r['id']}`) | {r['lote']} | {NOMES[r['categoria']]} | {' × '.join(f'{x:.2f}' for x in r['tamanho_m'])} | {rev} | {pt} | {', '.join(usos) or '-'} | {r['triangulos']} |")
+    L += ['', '## Loot', '', '| Item | Lote | Categoria | Recurso | Rende | Peso | Empilha | Efeito | Aparece em |', '|---|---|---|---|---|---|---|---|---|']
     for r in regs['loot']:
-        L.append(f"| {r['nome']} (`{r['id']}`) | {NOMES[r['categoria']]} | {r['recurso']} | {r['valor']} | {r['peso_kg']} kg | {r['empilha']} | {r['efeito']}"
+        L.append(f"| {r['nome']} (`{r['id']}`) | {r['lote']} | {NOMES[r['categoria']]} | {r['recurso']} | {r['valor']} | {r['peso_kg']} kg | {r['empilha']} | {r['efeito']}"
                  f"{' (dano ' + str(r['dano']) + ')' if r.get('arma') else ''} | {', '.join(r['onde'])} |")
     import re
     open(os.path.join(AQUI, 'CATALOGO.md'), 'w', encoding='utf-8').write(re.sub(r'(\d)\.(\d)', r'\1,\2', '\n'.join(L)) + '\n')

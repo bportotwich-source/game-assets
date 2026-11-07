@@ -19,11 +19,13 @@ Casa de campo de um pavimento e meio, com sótão habitável, em peças 3D (GLB)
 - **Divisórias do sótão:** `attic_partition_full` (de fachada a fachada, com porta) e `attic_partition_bath` correm ao longo de Z e têm o topo 1 cm abaixo do telhado.
 - **Chaminé:** pivô no centro da face do oitão, no chão.
 
-## Texturas (embutidas nos GLB, UVs em metros)
-- `siding`: tábuas horizontais de 0,2 m.
-- `shingles`: telha asfáltica em fiadas de 0,2 m.
-- `brick`: base, lareira e chaminé.
-- `plaster`: interno.
+## Alto detalhe
+Versão refeita com `scripts/detalhe/retrofit.py` (a mesma biblioteca do bangalô), sem mudar planta nem encaixes:
+- **Janelas:** caixilho com batente, 2 folhas de guilhotina com baguetes e vidro, peitoril com caimento e pingadeira.
+- **Portas:** almofadas rebaixadas e chanfradas, vidro com baguetes na porta da frente, maçaneta e dobradiças.
+- **Fachada:** tábuas sobrepostas em geometria (0,2 m, a partir de 0,14 m), em fase com a textura.
+- **Texturas PBR** (cor + normal + ORM, ladrilho de 2 m, JPEG dentro dos GLB): `siding`, `shingles`, `brick`, `plaster`.
+- Casa montada com cerca de 39 mil triângulos (antes 14 mil).
 
 ## Peças (42)
 | Grupo | Peças |
@@ -39,4 +41,4 @@ Casa de campo de um pavimento e meio, com sótão habitável, em peças 3D (GLB)
 As escadas vão de parede a parede da caixa de 4 m. Nos nomes, `_192_168` é a distância em cm do centro da caixa até a face da parede à esquerda e à direita; nas lajes, o último número é a faixa de laje atrás do patamar.
 
 ## Arquivos
-`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, texturas `*_texture.png`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a casa montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.
+`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a casa montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.

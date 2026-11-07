@@ -1,5 +1,5 @@
 # Monta um kit do pacote a partir do building_layout.json e coloca um jogador
-# em primeira pessoa na frente da entrada. Teclas 1 a 9 trocam de prédio.
+# em primeira pessoa na frente da entrada. Teclas 1 a 9 e 0 trocam de prédio.
 extends Node3D
 
 const KitDoorScript = preload("res://scripts/godot/door.gd")
@@ -8,6 +8,7 @@ const PlayerScript = preload("res://visitar/player.gd")
 const KITS := [
 	"predio-tijolos", "predio-mansarda", "padaria", "casa-enxaimel",
 	"torre-escalonada", "casa-de-campo", "bangalo", "supermercado", "galeria",
+	"casa-americana",
 ]
 
 @export var kit: String = "galeria"
@@ -31,7 +32,7 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo:
-		var i: int = event.physical_keycode - KEY_1
+		var i: int = 9 if event.physical_keycode == KEY_0 else event.physical_keycode - KEY_1
 		if i >= 0 and i < KITS.size():
 			_load_kit(KITS[i])
 
@@ -134,7 +135,7 @@ func _update_hud() -> void:
 	lines += "E ou clique: abrir/fechar porta | F: voar (Espaço sobe, Q desce) | Esc: soltar o mouse\n"
 	lines += "Trocar de prédio: "
 	for i in KITS.size():
-		lines += "%d %s  " % [i + 1, KITS[i]]
+		lines += "%d %s  " % [(i + 1) % 10, KITS[i]]
 	_hud.text = lines
 
 

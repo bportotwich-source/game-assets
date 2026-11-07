@@ -17,11 +17,12 @@ Módulo 2 m, parede externa 0,3 m, interna 0,12 m, laje 0,2 m. Eixo Y para cima,
 - Paredes internas: centro inferior, espessura centrada na grade. Folhas de porta: na dobradiça.
 - Lajes, telhado (`roof_tile`, `roof_cap_a/b`), chaminé: centro da base.
 
-## Texturas (embutidas nos GLB, UVs em metros, sem emenda entre módulos)
-- `ashlar`: pedra clara em blocos de 1,0 × 0,5 m (andares).
-- `rustic`: pedra rústica com sulcos a cada 0,4 m (térreo).
-- `zinc`: zinco com juntas a cada 0,5 m (mansarda, lucarnas, telhado).
-- `plaster`: reboco fosco (paredes internas).
+## Alto detalhe
+Versão refeita com `scripts/detalhe/retrofit.py`, sem mudar planta nem encaixes:
+- **Janelas:** caixilho com batente, folhas de guilhotina com baguetes e vidro, peitoril com caimento e pingadeira.
+- **Portas:** almofadas rebaixadas e chanfradas, vidro com baguetes nas portas envidraçadas, maçaneta e dobradiças.
+- **Texturas PBR** (cor + normal + ORM, ladrilho de 2 m, JPEG dentro dos GLB, UVs em metros): `ashlar` e `rustic` (pedra) na fachada, `plaster` no interno; o zinco da mansarda mantém a textura antiga.
+- Montado com cerca de 176 mil triângulos (antes 75 mil).
 
 ## Peças (41)
 | Grupo | Peças |
@@ -37,4 +38,4 @@ Módulo 2 m, parede externa 0,3 m, interna 0,12 m, laje 0,2 m. Eixo Y para cima,
 As escadas vão de parede a parede da caixa de 4 m. Nos nomes, `_192_168` é a distância em cm do centro da caixa até a face da parede à esquerda e à direita; nas lajes, o último número é a faixa de laje atrás do patamar.
 
 ## Arquivos
-`pieces/*.glb`, `building_layout.json` (posições, rotações, tags e portas `door: {closed, open}`), `building_assembled.glb`, texturas `*_texture.png`, `gerar_kit.py` (gerador), `verificar_flicker.py` (teste: montado e `SOLO=1`, ambos TOTAL 0). Scripts de porta para Godot e Unity em `../../scripts/`.
+`pieces/*.glb`, `building_layout.json` (posições, rotações, tags e portas `door: {closed, open}`), `building_assembled.glb`, `gerar_kit.py` (gerador), `verificar_flicker.py` (teste: montado e `SOLO=1`, ambos TOTAL 0). Scripts de porta para Godot e Unity em `../../scripts/`.

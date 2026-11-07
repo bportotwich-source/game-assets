@@ -23,10 +23,12 @@ Agência dos correios de um pavimento em peças 3D (GLB), estilo toon com contor
 - **Cúpula e chaminés:** pivô no chão (alturas absolutas). A cúpula fica no centro da cumeeira; as chaminés ficam em (-4,5; 0) e (5; -3,2).
 - **Doca:** `loading_dock` tem pivô na face da parede esquerda, em z = -2, com rotação -90.
 
-## Texturas (embutidas nos GLB, UVs em metros)
-- `brick`: fachadas.
-- `shingle`: telha.
-- `plaster`: interno.
+## Alto detalhe
+Versão refeita com `scripts/detalhe/retrofit.py`, sem mudar planta nem encaixes:
+- **Janelas:** caixilho com batente, folhas de guilhotina com baguetes e vidro, peitoril com caimento e pingadeira.
+- **Portas:** almofadas rebaixadas e chanfradas, vidro com baguetes nas portas envidraçadas, maçaneta e dobradiças.
+- **Texturas PBR** (cor + normal + ORM, ladrilho de 2 m, JPEG dentro dos GLB, UVs em metros): `brick` (fachada), `shingle` (telhado), `plaster` (interno). As janelas em arco continuam como eram.
+- Montado com cerca de 40 mil triângulos (antes 30 mil).
 
 ## Peças (42)
 | Grupo | Peças |
@@ -39,4 +41,4 @@ Agência dos correios de um pavimento em peças 3D (GLB), estilo toon com contor
 | Referência | `player_scale_ref` |
 
 ## Arquivos
-`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, texturas `*_texture.png`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com o prédio montado e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.
+`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com o prédio montado e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.

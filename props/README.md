@@ -25,15 +25,17 @@ props/
   - mobílias: `conteiner` (pode ser revistado), `slots`, `saque` (grupos da tabela de saque), `barricada` (dá para empurrar contra uma porta), `deitar`, `sentar`, `estacao`, `comodos`.
   - loot: `recurso` (os 6 do MVP: comida, agua, madeira, sucata, remedios, combustivel; ou ferramenta/arma/energia), `valor` (quanto rende), `peso_kg`, `empilha`, `efeito`, `onde` (prédios), `arma` e `dano`.
 
-## Lista completa proposta
+## Lotes
 
-O **lote 1** (feito) cobre o que o jogador mais encontra e revista: cozinha, quarto, sala, banheiro e depósito, e o loot dos 6 recursos do MVP.
+91 itens no total (41 mobílias e 50 itens de loot). O campo `lote` do catálogo diz de qual lote é cada um.
 
 | Lote | Mobílias | Loot |
 |---|---|---|
-| **1 (feito)** | geladeira, fogão, balcão com pia, estante de aço, guarda-roupa, cômoda, criado-mudo, cama de casal, cama de solteiro, mesa de jantar, cadeira, sofá, armário de banheiro, caixote | lata de feijão, sardinha, arroz, cereal, garrafa de água, galão de água, kit médico, comprimidos, atadura, martelo, pé de cabra, machado, chave inglesa, lanterna, taco, tábua, pregos, fita adesiva, chapa ondulada, cano, galão de gasolina, pilhas |
-| 2. Casa completa | armário aéreo de cozinha, pia e vaso de banheiro, banheira/box, estante de livros, rack com TV, poltrona, escrivaninha, berço, máquina de lavar, aquecedor | mochila, roupas, sabão, livro, rádio portátil, vela e fósforos, isqueiro, garrafa de vidro, panela, faca de cozinha |
-| 3. Comércio e serviços | gôndola de supermercado, balcão de caixa, freezer horizontal, prateleira de padaria, mesa de escritório, arquivo de aço, armário de vestiário, maca, carrinho de compras | caixa de cereal grande, saco de farinha, saco de sementes, enlatados variados, seringa, máscara, kit de costura, bateria de carro |
-| 4. Sobrevivência e oficina | bancada de trabalho, fogareiro, beliche de abrigo, mesa de rádio, gerador, tambor de 200 L, pallet | arco e flechas, lança, facão, serrote, pá, enxada, corda, arame farpado, sacos de areia, peças de motor |
+| 1. Básico | geladeira duplex, fogão 4 bocas, balcão com pia, estante de aço (5 prateleiras), guarda-roupa 2 portas, cômoda 3 gavetas, criado-mudo, cama de casal, cama de solteiro, mesa de jantar, cadeira de madeira, sofá 3 lugares, armário de banheiro com espelho, caixote de madeira | lata de feijão, lata de sardinha, pacote de arroz 1 kg, caixa de flocos de milho, garrafa de água 1,5 L, galão de água 5 L, kit de primeiros socorros, frasco de comprimidos, rolo de atadura, martelo de unha, pé de cabra, machado, chave inglesa, lanterna, taco de madeira, tábua de madeira, caixa de pregos, fita adesiva prata, chapa de metal ondulada, cano de ferro, galão de gasolina 20 L, cartela de pilhas AA |
+| 2. Casa completa | armário aéreo de cozinha, pia de coluna, vaso sanitário com caixa, banheira, estante de livros, rack com TV, poltrona, escrivaninha com luminária, berço, máquina de lavar, aquecedor a óleo | mochila, pilha de roupas dobradas, sabonete embrulhado, livro técnico, rádio portátil, vela e caixa de fósforos, isqueiro, garrafa de vidro vazia, panela com tampa, faca de cozinha |
+| 3. Comércio e serviços | gôndola de supermercado, balcão de caixa com registradora, freezer horizontal, prateleira de pães, mesa de escritório, arquivo de aço 4 gavetas, armário de vestiário (3 portas), maca hospitalar, carrinho de compras | caixa de leite longa vida, saco de farinha 5 kg, saco de sementes, lata de milho, seringa com antibiótico, máscara de proteção, lata de costura, bateria de carro |
+| 4. Sobrevivência e oficina | bancada de trabalho com morsa, fogareiro a gás de camping, beliche de abrigo, mesa de rádio amador, gerador portátil a gasolina, tambor de 200 L, pallet de madeira | arco e flechas, lança improvisada, facão, serrote, pá, enxada, rolo de corda, rolo de arame farpado, saco de areia, caixa de peças de motor |
 
-O lote 4 conversa com o kit de construções de sobrevivência (seção 9 do plano). Cada lote entra como uma PR.
+O lote 1 fica em `gerar_props.py`; os outros em `lote2.py`, `lote3.py` e `lote4.py`, que o gerador carrega com as mesmas funções e materiais. Para um lote novo, crie `lote5.py` e acrescente o número no laço do gerador.
+
+Algumas mobílias trazem campos a mais para o jogo: `esconderijo` (vaso sanitário), `modulo_m` (gôndola, encaixa lado a lado), `empurrar` (carrinho), `vagas` (beliche), `desmontavel` (pallet), `usa` (rádio, gerador), `portatil` e `peso_kg` (fogareiro, gerador).

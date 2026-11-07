@@ -96,12 +96,12 @@ def _cao(q):
 
 
 def _gatilho_rev(q):
-    lam = arred([(0.0035, -0.031), (0.0095, -0.031), (0.0105, -0.038), (0.0085, -0.047), (0.004, -0.053), (0.0015, -0.0535),
-                 (0.0015, -0.051), (0.0045, -0.046), (0.0055, -0.038)], 0.0007)
-    q.add('aco_azulado', solido(lam, -0.0045, 0.0045, 0.0012))
-    for i in range(5):                                                                                       # estrias da tecla
-        y = -0.036 - i * 0.0028
-        q.add('aco_azulado', caixa(0.0095 - i * 0.0006, 0.0108 - i * 0.0007, y - 0.0004, y + 0.0004, -0.0044, 0.0044))
+    """Gatilho largo e liso: desce do pino e a ponta curva para a FRENTE (o dedo puxa pela face da frente, concava)."""
+    lam = LineString([(0.0062, -0.0305), (0.0046, -0.037), (0.0042, -0.0425), (0.0052, -0.0465), (0.0082, -0.0492)]).buffer(0.0019, cap_style=1, join_style=1)
+    q.add('aco_azulado', solido(lam, -0.0045, 0.0045, 0.0013))
+    for i in range(4):                                                                                       # estrias da face da frente
+        y = -0.038 - i * 0.0022
+        q.add('aco_azulado', caixa(0.0058, 0.0064, y - 0.0003, y + 0.0003, -0.0043, 0.0043))
 
 
 def _armacao_rev(p):
@@ -120,7 +120,9 @@ def _armacao_rev(p):
                   caixa(0.001, 0.0125, -0.045, -0.026, -0.0047, 0.0047),                                         # fenda do gatilho
                   cil_x(0.0014, -0.02, 0.0, 0.0, 0.0, 10),                                                        # furo do percussor
                   caixa(0.004, 0.038, 0.0105, 0.02, -0.0012, 0.0012))                                            # sulco de mira na ponte
+    corpo = menos(corpo, caixa(-0.08, -0.0128, -0.2, -0.033, -0.03, 0.03))           # o cabo chato sai: entra o núcleo arredondado
     p.add('aco_azulado', corpo)
+    p.add('aco_azulado', punho_redondo(CABO38, -0.0295, -0.1148, LARG_NUCLEO38, n=2.3, fatias=110, voltas=56, raio_base=0.005))
     # cano com proteção da vareta (lug cheio), mira de rampa com inserto laranja, coroa
     cano = uniao([cil_x(0.0088, 0.05, 0.158, sec=40),
                   solido(arred([(0.052, -0.0065), (0.15, -0.0065), (0.152, -0.016), (0.146, -0.0215), (0.06, -0.0215), (0.052, -0.018)], 0.002),
@@ -145,17 +147,18 @@ def _armacao_rev(p):
     for zs in (-1, 1): p.add('aco_inox', cil_z(0.0013, min(zs * 0.0092, zs * 0.0098), max(zs * 0.0092, zs * 0.0098), -0.017, -0.006, 12))
 
 
+CABO38 = suave([(-0.0165, -0.03), (-0.0175, -0.046), (-0.0225, -0.068), (-0.0275, -0.092), (-0.0305, -0.108), (-0.0335, -0.1148),
+                (-0.0545, -0.1148), (-0.0582, -0.1085), (-0.0575, -0.096), (-0.0515, -0.066), (-0.043, -0.042), (-0.0355, -0.03)])
+LARG_TALA38 = lambda y: 0.0085 + 0.0068 * GT.smooth(-0.03, -0.048, y) + 0.0008 * math.exp(-((y + 0.08) / 0.02) ** 2)
+LARG_NUCLEO38 = lambda y: 0.0092 - 0.0016 * GT.smooth(-0.03, -0.045, y)
+
+
 def _punho_madeira(q):
-    """Talas de madeira com quadriculado e medalhão, cobrem o cabo; nó proprio para trocar pela empunhadura de borracha."""
-    tala = arred([(-0.017, -0.046), (-0.024, -0.072), (-0.029, -0.1), (-0.031, -0.112), (-0.056, -0.112), (-0.057, -0.098),
-                  (-0.05, -0.064), (-0.038, -0.032), (-0.026, -0.03), (-0.019, -0.036)], 0.004)
-    larg = lambda y: 0.0098 + 0.006 * GT.smooth(-0.031, -0.05, y)
-    q.add('madeira_punho', punho_redondo(tala, -0.0305, -0.112, larg, n=2.3, raio_base=0.006))
-    for zs in (-1, 1):
-        m = trimesh.creation.cylinder(radius=0.0046, height=0.0008, sections=24); m.apply_translation([-0.036, -0.062, zs * 0.0152])
-        q.add('latao', m)                                                                                           # medalhão
-    q.add('aco_inox', cil_z(0.0018, 0.0146, 0.0156, -0.042, -0.086, 12))                                             # parafuso da tala
-    q.add('aco_inox', cil_z(0.0018, -0.0156, -0.0146, -0.042, -0.086, 12))
+    """Talas de nogueira que seguem a curva do cabo: borda lisa, quadriculado levantado, medalhão e parafuso.
+    Nó próprio para trocar pela empunhadura de borracha. O núcleo de aço (costas e frente do cabo) fica na armação."""
+    cabo_com_talas(q, CABO38, -0.0305, -0.1148, LARG_NUCLEO38, LARG_TALA38, 'aco_azulado', 'madeira_escura', 'madeira_punho',
+                   borda=0.0018, borda_xadrez=0.0032, n=2.3, raio_base=0.005, medalhao=(-0.0385, -0.058, 0.0048, 'latao'),
+                   parafuso=(-0.041, -0.089), nucleo=False)
 
 
 def _trava(q):
@@ -294,10 +297,11 @@ def empunhadura_madeira_38(A):
             descricao='Borracha com apoio para os dedos e costas fechadas: segura o coice e não escorrega com a mão suada.')
 def empunhadura_borracha_38(A):
     q = A.base
-    corpo = arred([(-0.015, -0.044), (-0.019, -0.054), (-0.017, -0.064), (-0.022, -0.072), (-0.02, -0.082), (-0.026, -0.09), (-0.025, -0.1),
-                   (-0.03, -0.118), (-0.058, -0.118), (-0.06, -0.1), (-0.052, -0.064), (-0.04, -0.03), (-0.026, -0.028), (-0.018, -0.034)], 0.0035)
-    larg = lambda y: 0.0098 + 0.0074 * GT.smooth(-0.029, -0.052, y)
-    q.add('borracha_grip', punho_redondo(corpo, -0.0285, -0.118, larg, n=2.2, raio_base=0.007))
+    corpo = suave([(-0.0155, -0.03), (-0.0165, -0.046), (-0.0205, -0.055), (-0.0185, -0.064), (-0.0235, -0.073), (-0.0215, -0.082),
+                   (-0.0275, -0.091), (-0.0265, -0.1), (-0.0315, -0.117), (-0.034, -0.1205), (-0.056, -0.1205), (-0.0605, -0.113),
+                   (-0.0595, -0.098), (-0.0525, -0.066), (-0.0435, -0.04), (-0.036, -0.028)])
+    larg = lambda y: 0.0095 + 0.0076 * GT.smooth(-0.029, -0.05, y)
+    q.add('borracha_grip', punho_redondo(corpo, -0.0285, -0.1205, larg, n=2.15, fatias=110, voltas=56, raio_base=0.0065))
     q.add('aco_inox', cil_z(0.0018, 0.0158, 0.0168, -0.043, -0.088, 12)).add('aco_inox', cil_z(0.0018, -0.0168, -0.0158, -0.043, -0.088, 12))
     A.pivo = (-0.04, -0.07, 0)
 

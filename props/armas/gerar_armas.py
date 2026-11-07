@@ -186,6 +186,56 @@ def punho_redondo(perfil, y_topo, y_base, meia_larg, n=2.6, fatias=70, voltas=40
     return _fix(m)
 
 
+def suave(pts, it=4):
+    """Contorno fechado suavizado (Chaikin): cantos viram curvas, sem facetas."""
+    P_ = np.array(pts, float)
+    for _ in range(it):
+        Q = np.roll(P_, -1, 0); P_ = np.stack([0.75 * P_ + 0.25 * Q, 0.25 * P_ + 0.75 * Q], 1).reshape(-1, 2)
+    return Polygon(P_).buffer(0)
+
+
+def _fatia(contorno, y):
+    g = contorno.intersection(LineString([(-1, y), (1, y)]))
+    segs = [g] if g.geom_type == 'LineString' else [h for h in getattr(g, 'geoms', []) if h.geom_type == 'LineString']
+    sg = min(segs, key=lambda h: h.bounds[0]); return sg.bounds[0], sg.bounds[2]
+
+
+def z_superficie(contorno, x, y, meia_larg, n):
+    """Altura z da superficie do punho_redondo no ponto (x, y) do lado direito."""
+    xa, xb = _fatia(contorno, y); a = (xb - xa) / 2; u = min(abs(x - (xa + xb) / 2) / a, 0.999)
+    return meia_larg(y) * (1 - u ** n) ** (1 / n)
+
+
+def cabo_com_talas(q, contorno, y_topo, y_base, larg_nucleo, larg_tala, mat_nucleo, mat_tala, mat_xadrez=None, borda=0.0016,
+                   borda_xadrez=0.0035, n=2.3, raio_base=0.006, medalhao=None, parafuso=None, nucleo=True):
+    """Cabo de verdade: nucleo arredondado da armacao (aparece nas costas e na frente) + talas que seguem a curva do cabo,
+    com borda lisa e area quadriculada levantada, medalhao e parafuso da tala. contorno = Polygon suave do cabo (vista de lado)."""
+    if nucleo: q.add(mat_nucleo, punho_redondo(contorno, y_topo, y_base, larg_nucleo, n=n, fatias=110, voltas=56, raio_base=raio_base))
+    prisma = lambda pl: solido(pl, -0.05, 0.05)
+    tala = punho_redondo(contorno, y_topo, y_base, larg_tala, n=n, fatias=110, voltas=56, raio_base=raio_base)
+    q.add(mat_tala, inter([tala, prisma(contorno.buffer(-borda, join_style=1))]))
+    if mat_xadrez:
+        lx = lambda y: larg_tala(y) + 0.0005
+        xz = punho_redondo(contorno, y_topo, y_base, lx, n=n, fatias=110, voltas=56, raio_base=raio_base)
+        area = contorno.buffer(-borda - borda_xadrez, join_style=1).intersection(sbox(-1, y_base + raio_base + 0.002, 1, y_topo - 0.004))
+        q.add(mat_xadrez, inter([xz, prisma(area)]))
+        if medalhao:                                                  # medalhao liso no meio do quadriculado
+            mx, my, mr, mm = medalhao
+            for zs in (-1, 1):
+                zc = z_superficie(contorno, mx, my, lx, n)
+                d = torno_x([(0.0, -0.0006), (mr, -0.0006), (mr, 0.0002), (mr * 0.85, 0.0007), (0.0, 0.0008)], 32)
+                d.apply_transform(TF.rotation_matrix(-zs * math.pi / 2, [0, 1, 0])); d.apply_translation([mx, my, zs * zc]); q.add(mm, d)
+                sol = torno_x([(0.0, 0.0), (mr * 0.5, 0.0), (mr * 0.5, 0.0003), (0.0, 0.0003)], 24)       # sol nascente (marca do Recomeco)
+                sol.apply_transform(TF.rotation_matrix(-zs * math.pi / 2, [0, 1, 0])); sol.apply_translation([mx, my, zs * (zc + 0.0008)]); q.add('aco_oxidado', sol)
+    if parafuso:
+        px, py = parafuso; zc = z_superficie(contorno, px, py, larg_tala, n)
+        for zs in (-1, 1):
+            m = torno_x([(0.0, -0.0004), (0.0021, -0.0004), (0.0021, 0.0002), (0.0015, 0.0007), (0.0, 0.0008)], 20)
+            m.apply_transform(TF.rotation_matrix(-zs * math.pi / 2, [0, 1, 0])); m.apply_translation([px, py, zs * zc]); q.add('aco_inox', m)
+            f = caixa(px - 0.0016, px + 0.0016, py - 0.00025, py + 0.00025, zs * (zc + 0.0005) - 0.0003, zs * (zc + 0.0005) + 0.0003)
+            q.add('aco_oxidado', f)
+
+
 def torno_x(perfil, sec=32, y=0.0, z=0.0, x0=0.0):
     """Solido de revolucao ao longo de x: perfil [(raio, x), ...]."""
     pts = list(perfil)
@@ -440,8 +490,12 @@ def _armacao_pistola(p):
     punho = perfil.intersection(sbox(-0.05, -0.13, 0.06, -0.029))
     alto = perfil.difference(sbox(-0.05, -0.13, 0.06, -0.0295)).union(perfil.intersection(sbox(0.045, -0.06, 0.2, 0)))
     m_alto = solido(alto, -0.0112, 0.0112, 0.0012)
-    larg = lambda y: 0.011 + 0.0042 * GT.smooth(-0.0285, -0.052, y)                # cabo alarga devagar a partir da armação
-    m_punho = punho_redondo(perfil, -0.0285, -0.1228, larg, n=2.4, raio_base=0.005)
+    CABO9 = suave([(-0.0125, -0.0262), (-0.0168, -0.044), (-0.0235, -0.068), (-0.0305, -0.094), (-0.0345, -0.114), (-0.0338, -0.1225),
+                   (-0.0272, -0.1255), (0.0182, -0.1255), (0.0238, -0.1218), (0.0258, -0.112), (0.0306, -0.101), (0.0308, -0.093), (0.0352, -0.084),
+                   (0.0354, -0.076), (0.0398, -0.067), (0.0402, -0.059), (0.0452, -0.047), (0.0478, -0.031), (0.04, -0.0262)])
+    palma = lambda y: 0.0012 * math.exp(-((y + 0.075) / 0.02) ** 2)                 # apoio da palma (incha no meio)
+    larg = lambda y: 0.0105 + 0.0038 * GT.smooth(-0.0285, -0.05, y) + palma(y)
+    m_punho = punho_redondo(CABO9, -0.0285, -0.1255, larg, n=2.25, fatias=110, voltas=56, raio_base=0.0045)
     corpo = m_alto
     # poco do carregador: prisma inclinado vazado por baixo (folga de 0,8 mm do carregador)
     poco = _perfil_carregador(0.0008)
@@ -449,7 +503,11 @@ def _armacao_pistola(p):
     corpo = menos(corpo, caixa(0.06, 0.082, -0.03, -0.012, -0.0045, 0.0045))   # fenda do gatilho
     p.add('polimero', corpo)
     # cabo arredondado inteiro em polimero pontilhado, com o poco do carregador vazado
-    p.add('polimero_grip', menos(m_punho, solido(poco, -0.0096, 0.0096), caixa(0.06, 0.082, -0.03, -0.012, -0.0045, 0.0045)))
+    p.add('polimero', menos(m_punho, solido(poco, -0.0096, 0.0096), caixa(0.06, 0.082, -0.03, -0.012, -0.0045, 0.0045)))
+    lp = lambda y: larg(y) + 0.0004
+    pont = punho_redondo(CABO9, -0.0285, -0.1255, lp, n=2.25, fatias=110, voltas=56, raio_base=0.0045)
+    area = CABO9.buffer(-0.0022, join_style=1).intersection(sbox(-1, -0.117, 1, -0.038))
+    p.add('polimero_grip', menos(inter([pont, solido(area, -0.05, 0.05)]), solido(poco, -0.0096, 0.0096)))   # pontilhado com borda lisa
     # trilho padrao embaixo do guarda-po
     trilho(p, 'polimero', 0.105, 0.177, -0.03, True, 0.019)
     # alavanca do retem do ferrolho (esquerda), botao do retem do carregador, alavanca de desmontagem, pinos
@@ -514,12 +572,11 @@ def _cartucho_9mm_malha(sec=28):
 
 
 def _gatilho_pistola(q):
-    """Gatilho curvo com tecla de seguranca, origem no pino (0.071, -0.0215)."""
-    cam = [(0.071 + 0.004 * math.sin(a) - 0.006 * (1 - math.cos(a)) * 0, -0.0215 - 0.019 * a / 1.1, 0) for a in np.linspace(0, 1.1, 2)]
-    lam = arred([(0.0655, -0.022), (0.0705, -0.022), (0.0718, -0.028), (0.0705, -0.036), (0.068, -0.041), (0.0655, -0.0425),
-                 (0.0638, -0.041), (0.0652, -0.036), (0.066, -0.029)], 0.0007)
-    q.add('polimero', solido(lam, -0.0035, 0.0035, 0.0008))
-    q.add('aco_oxidado', solido(arred([(0.0668, -0.027), (0.0706, -0.027), (0.0695, -0.037), (0.0668, -0.0385), (0.0662, -0.033)], 0.0005), -0.0009, 0.0009))
+    """Gatilho curvo (ponta para a FRENTE) com tecla de seguranca no meio; origem no pino (0.071, -0.0215)."""
+    lam = LineString([(0.0712, -0.0235), (0.0692, -0.0295), (0.0686, -0.0355), (0.0698, -0.0398), (0.0728, -0.0425)]).buffer(0.0017, cap_style=1, join_style=1)
+    q.add('polimero', menos(solido(lam, -0.0035, 0.0035, 0.0008), caixa(0.06, 0.08, -0.04, -0.028, -0.0011, 0.0011)))
+    tec = LineString([(0.0688, -0.029), (0.0682, -0.0355), (0.0694, -0.0392)]).buffer(0.0011, cap_style=1, join_style=1)
+    q.add('aco_oxidado', solido(tec, -0.0009, 0.0009))
 
 
 @arma('pistola_9mm', 'Pistola Sentinela 9 mm', 'armas', 'pistola', classe='fogo', calibre='9 mm', municao='municao_9mm',

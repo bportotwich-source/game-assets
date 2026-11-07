@@ -1,5 +1,5 @@
 import os,sys,math,collections,numpy as np
-src=open('gen.py',encoding='utf-8').read().split("asm=Piece()\nfor e in L:")[0]
+src=open('gerar_kit.py',encoding='utf-8').read().split("asm=Piece()\nfor e in L:")[0]
 src=src.replace("import shutil; shutil.rmtree(f'{OUT}/pieces',ignore_errors=True); os.makedirs(f'{OUT}/pieces')","")
 src=src.replace("for n,p in pieces.items(): p.scene(n).export(f'{OUT}/pieces/{n}.glb',include_normals=True)","")
 g={'__file__':os.path.abspath('gen.py')}; exec(compile(src,'gen.py','exec'),g)

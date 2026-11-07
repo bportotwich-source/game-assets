@@ -56,7 +56,7 @@ STONE_TEX=stone_texture()
 PLASTER_TEX=plaster_texture(); PLASTER_TEX.save(os.path.join(OUT,'plaster_texture.png'))
 TEX={'brick':(BRICK_TEX,1.0,1.0),'stone':(STONE_TEX,1.0,0.8),'plaster':(PLASTER_TEX,1.0,1.0)}  # material: (image, tile width m, tile height m)
 MATS = {k:PBRMaterial(name=k, baseColorFactor=[c/255 for c in v]+[1.0], metallicFactor=0.0, roughnessFactor=0.9) for k,v in COL.items()}
-for k,(im,_,_) in TEX.items(): MATS[k]=PBRMaterial(name=k,baseColorTexture=im,baseColorFactor=[1,1,1,1],metallicFactor=0.0,roughnessFactor=0.9)
+for k,(im,_,_) in TEX.items(): MATS[k]=PBRMaterial(name=k,baseColorTexture=im,baseColorFactor=[255,255,255,255],metallicFactor=0.0,roughnessFactor=0.9)
 
 class Piece:
     def __init__(s): s.parts={}
@@ -346,7 +346,8 @@ def interior_wall(doorway,h=H-SLAB,ow=0.9):
     if doorway:
         for xx in (-ow/2,ow/2): p.box('frame',xx-0.04,xx+0.04,0,2.14,-t/2-0.02,t/2+0.02)
         p.box('frame',-ow/2-0.04,ow/2+0.04,2.08,2.18,-t/2-0.02,t/2+0.02)
-    p.box('trim',-W/2,W/2,0,0.1,t/2,t/2+0.015); p.box('trim',-W/2,W/2,0,0.1,-t/2-0.015,-t/2)
+    segs=[(-W/2,-ow/2-0.04),(ow/2+0.04,W/2)] if doorway else [(-W/2,W/2)]  # rodapé para na porta
+    for a,b in segs: p.box('trim',a,b,0,0.1,t/2,t/2+0.015); p.box('trim',a,b,0,0.1,-t/2-0.015,-t/2)
     return p
 def interior_wall_end(h=H-SLAB):
     # plain interior wall that stops at the inner face of an exterior wall (+X end shortened by T)
@@ -384,7 +385,7 @@ SIGN_TEX=sign_texture(); SIGN_TEX.save(os.path.join(OUT,'sign_texture.png')); BR
 TEX={'brick':(BRICK_TEX,1.0,1.0),'stone':(STONE_TEX,1.0,0.8),'plaster':(PLASTER_TEX,1.0,1.0),'sign':(SIGN_TEX,1.0,1.0)}
 SIGN=(-3.3,4.25,6.6,1.0)
 MATS = {k:PBRMaterial(name=k, baseColorFactor=[c/255 for c in v]+[1.0], metallicFactor=0.0, roughnessFactor=0.9) for k,v in COL.items()}
-for k,(im,_,_) in TEX.items(): MATS[k]=PBRMaterial(name=k,baseColorTexture=im,baseColorFactor=[1,1,1,1],metallicFactor=0.0,roughnessFactor=0.9)
+for k,(im,_,_) in TEX.items(): MATS[k]=PBRMaterial(name=k,baseColorTexture=im,baseColorFactor=[255,255,255,255],metallicFactor=0.0,roughnessFactor=0.9)
 
 RAISE=0.15  # slab on grade, one small step at the doors
 FH=4.0      # floor to roof top (standard shop ground floor)

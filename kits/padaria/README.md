@@ -33,10 +33,12 @@ vôs
 | Produção | `bake_oven` (forno de alvenaria, pivô na parede), `oven_flue` (chaminé do forno, pivô na base) |
 | 1º andar | `wall_render_window`, `wall_render_small_window`, `wall_render_balconette`, `wall_render_plain`, `corner_render` |
 | Sótão e telhado | `knee_wall`, `knee_wall_dormer`, `corner_knee`, `gable_wall`, `roof_slope`, `roof_slope_end`, `roof_slope_end_l`, `roof_slope_dormer`, `ridge_cap`, `ridge_cap_end` |
-| Pisos e escada | `floor_tile`, `floor_tile_bath`, `stair_core_slab`, `stair_core_rail`, `stairs_u_4m`, `stairs_u_3m` |
+| Pisos e escada | `floor_tile`, `floor_tile_bath`, `stair_core_slab_192_168_29`, `stair_core_slab_192_168_5`, `stair_core_rail`, `stairs_u_4m_192_168`, `stairs_u_3m_192_168` |
 | Paredes internas | `interior_wall_plain`, `interior_wall_doorway`, `interior_wall_end`, `interior_wall_end_doorway` e as versões `_shop` (3,8 m) |
 | Portas | `door_leaf_shop`, `door_leaf_back`, `door_leaf_interior` |
 | Referência | `player_scale_ref` |
+
+As escadas vão de parede a parede da caixa de 4 m. Nos nomes, `_192_168` é a distância em cm do centro da caixa até a face da parede à esquerda e à direita; nas lajes, o último número é a faixa de laje atrás do patamar.
 
 ## Arquivos
 `pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, texturas `*_texture.png`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com o prédio montado e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.

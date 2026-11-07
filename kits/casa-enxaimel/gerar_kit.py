@@ -56,7 +56,7 @@ STONE_TEX=stone_texture()
 PLASTER_TEX=plaster_texture(); PLASTER_TEX.save(os.path.join(OUT,'plaster_texture.png'))
 TEX={'brick':(BRICK_TEX,1.0,1.0),'stone':(STONE_TEX,1.0,0.8),'plaster':(PLASTER_TEX,1.0,1.0)}  # material: (image, tile width m, tile height m)
 MATS = {k:PBRMaterial(name=k, baseColorFactor=[c/255 for c in v]+[1.0], metallicFactor=0.0, roughnessFactor=0.9) for k,v in COL.items()}
-for k,(im,_,_) in TEX.items(): MATS[k]=PBRMaterial(name=k,baseColorTexture=im,baseColorFactor=[1,1,1,1],metallicFactor=0.0,roughnessFactor=0.9)
+for k,(im,_,_) in TEX.items(): MATS[k]=PBRMaterial(name=k,baseColorTexture=im,baseColorFactor=[255,255,255,255],metallicFactor=0.0,roughnessFactor=0.9)
 
 class Piece:
     def __init__(s): s.parts={}
@@ -303,17 +303,22 @@ def floor_tile():
 def floor_tile_bath():
     p=Piece(); p.box('tile',-W/2,W/2,-0.03,0,-W/2,W/2); p.box('plaster',-W/2+0.02,W/2-0.02,-SLAB,-0.03,-W/2+0.02,W/2-0.02); return p
 CORE=4.0; HOLE=1.35
-def stair_core_slab(top='floor'):
+def stair_core_slab(top='floor',xl=None,xr=None,back=0.0):
     """4x4 m slab with the stair hole (x in [-1.35,1.35], full depth). Pivot: centre."""
     p=Piece(); h=CORE/2
-    for (a,b) in ((-h,-HOLE),(HOLE,h)):
+    xl=-HOLE if xl is None else xl; xr=HOLE if xr is None else xr; p._sargs=(top,)
+    for (a,b) in ((-h,xl),(xr,h)):
         p.box(top,a,b,-0.03 if top!='roof' else -0.04,0,-h,h); p.box('plaster',a+0.02,b-0.02,-SLAB,-0.03 if top!='roof' else -0.04,-h+0.02,h-0.02)
+    if back>0.02:
+        p.box(top,xl,xr,-0.03 if top!='roof' else -0.04,0,-h,-h+back); p.box('plaster',xl-0.02,xr+0.02,-SLAB,-0.03 if top!='roof' else -0.04,-h+0.02,-h+back)
     return p
-def stairs_u(rise,run=2.0,w=1.2,gap=0.1,land=1.7):
+def stairs_u(rise,run=2.0,w=1.2,gap=0.1,land=1.7,xl=None,xr=None):
     """U-shaped stair: flight A goes up toward -Z on the left, landing at the back, flight B returns on the right.
     Pivot: centre of the core's open (front) edge, at the lower floor level."""
     p=Piece(); n=math.ceil(rise/0.18-1e-9); n+=n%2; k=n//2; st=rise/n; tr=run/k
     xa0,xa1=-gap/2-w,-gap/2; xb0,xb1=gap/2,gap/2+w
+    p._uargs=dict(rise=rise,run=run,w=w,gap=gap,land=land); ow=0.04
+    if xl is not None: xa0,xb1,ow=xl,xr,0.08   # flights run wall to wall
     for i in range(k-1):
         top=(i+1)*st; p.box('floor',xa0,xa1,top-0.04,top,-(i+1)*tr,-i*tr); p.box('plaster',xa0,xa1,top-0.26,top-0.04,-(i+1)*tr,-i*tr)
     mid=k*st
@@ -322,9 +327,9 @@ def stairs_u(rise,run=2.0,w=1.2,gap=0.1,land=1.7):
         top=mid+j*st
         p.box('floor',xb0,xb1,top-0.04,top,-run+(j)*tr,-run+(j+1)*tr); p.box('plaster',xb0,xb1,top-0.26,top-0.04,-run+(j)*tr,-run+(j+1)*tr)
     # handrails (inner pair + outer pair)
-    for x in (xa0+0.04,xa1-0.04):
+    for x in (xa0+ow,xa1-0.04):
         p.seg('iron',(x,0.9,0),(x,mid+0.9,-run),0.05)
-    for x in (xb0+0.04,xb1-0.04):
+    for x in (xb0+0.04,xb1-ow):
         p.seg('iron',(x,mid+0.9,-run+tr),(x,rise+0.9,0),0.05)
     for i in range(0,k+1,2):
         z=-i*tr; ya=i*st; yb=rise-i*st
@@ -346,7 +351,8 @@ def interior_wall(doorway,h=H-SLAB,ow=0.9):
     if doorway:
         for xx in (-ow/2,ow/2): p.box('frame',xx-0.04,xx+0.04,0,2.14,-t/2-0.02,t/2+0.02)
         p.box('frame',-ow/2-0.04,ow/2+0.04,2.08,2.18,-t/2-0.02,t/2+0.02)
-    p.box('trim',-W/2,W/2,0,0.1,t/2,t/2+0.015); p.box('trim',-W/2,W/2,0,0.1,-t/2-0.015,-t/2)
+    segs=[(-W/2,-ow/2-0.04),(ow/2+0.04,W/2)] if doorway else [(-W/2,W/2)]  # rodapé para na porta
+    for a,b in segs: p.box('trim',a,b,0,0.1,t/2,t/2+0.015); p.box('trim',a,b,0,0.1,-t/2-0.015,-t/2)
     return p
 def interior_wall_end(h=H-SLAB):
     # plain interior wall that stops at the inner face of an exterior wall (+X end shortened by T)
@@ -415,7 +421,7 @@ for nm,im in (('render',RENDER_TEX),('stone2',STONE2_TEX),('roof_tiles',TILES_TE
 TEX={'render':(RENDER_TEX,1.0,1.0),'stone2':(STONE2_TEX,1.0,0.6),'roof_tiles':(TILES_TEX,1.0,1.0),'plaster':(PLASTER_TEX,1.0,1.0)}
 SIGN=(0,0,1,1)
 MATS = {k:PBRMaterial(name=k, baseColorFactor=[c/255 for c in v]+[1.0], metallicFactor=0.0, roughnessFactor=0.9) for k,v in COL.items()}
-for k,(im,_,_) in TEX.items(): MATS[k]=PBRMaterial(name=k,baseColorTexture=im,baseColorFactor=[1,1,1,1],metallicFactor=0.0,roughnessFactor=0.9)
+for k,(im,_,_) in TEX.items(): MATS[k]=PBRMaterial(name=k,baseColorTexture=im,baseColorFactor=[255,255,255,255],metallicFactor=0.0,roughnessFactor=0.9)
 
 KNEE=1.3
 def lvl(fl): return fl*H
@@ -738,6 +744,57 @@ put('garage_door_leaf',GC-1.28,0.015,GZ1-0.1,0,['front','garage','ext',ftag(0)],
 put('garage_door_leaf',GC+1.28,0.015,GZ1-0.1,180,['front','garage','ext',ftag(0)],door=85)
 put('player_scale_ref',1.8,0,SZ+1.6); put('player_scale_ref',-6,0,3,0,['garage',ftag(0)]); put('player_scale_ref',-3,0,1,0,[ftag(0)])
 put('player_scale_ref',-3,lvl(1),1,0,[ftag(1)]); put('player_scale_ref',-2,lvl(2),1.2,0,[ftag(2)])
+# --- Stairs fill the whole core, wall to wall (Bruno, 2026-11-07) ---
+_CORE_SAVE=CORE; CORE=4.0
+def _wall_face(cx,y,cz,side):
+    best=None
+    for e in L:
+        x,yy,z=e['pos']
+        if abs(yy-y)<0.6 and abs(x-(cx+2*side))<0.05 and e['rotY'] in (90,-90,270) and any(k in e['piece'] for k in ('wall','partition')) and abs(z-cz)<=1.05:
+            f=CORE/2-0.06-0.02 if 'interior' in e['piece'] else CORE/2-T-0.02   # clear of the skirting
+            best=f if best is None else min(best,f)
+    return best
+_new={}; _holes=[]; pieces_src=dict(pieces)
+for e in L:
+    if not hasattr(pieces.get(e['piece']),'_uargs'): continue
+    cx,y,zf=e['pos']; cz=zf-CORE/2
+    fl=_wall_face(cx,y,cz,-1) or CORE/2-T; fr=_wall_face(cx,y,cz,1) or CORE/2-T
+    n=f"{e['piece']}_{int(round(fl*100))}_{int(round(fr*100))}"
+    if n not in _new: _new[n]=stairs_u(**pieces[e['piece']]._uargs,xl=-fl,xr=fr)
+    _holes.append((cx,y,zf,fl,fr,e['piece'])); e['piece']=n
+_keep=[]
+for e in L:
+    pc=pieces.get(e['piece'])
+    cx,y,cz=e['pos']
+    if hasattr(pc,'_sargs') or e['piece'].startswith('stair_core_rail'):
+        dx=0.0 if hasattr(pc,'_sargs') else 1.4
+        below=[h for h in _holes if abs(abs(h[0]-cx)-dx)<0.3 and abs(h[2]-CORE/2-cz)<0.3 and h[1]<y-0.5]
+        hx=None if not below else max(below,key=lambda h:h[1])
+        if hx is None: _keep.append(e); continue
+        fl,fr=hx[3],hx[4]
+        if hasattr(pc,'_sargs'):
+            n=f"{e['piece']}_{int(round(fl*100))}_{int(round(fr*100))}"
+            _in=lambda v: v+0.03 if v<CORE/2-0.1 else v+0.02   # slab edge sits at the wall face (tucked 1 cm into exterior walls)
+            ua=pieces_src[hx[5]]._uargs; bk=round(min(0.29,CORE-ua['run']-ua['land']),3)   # stops 1 cm inside the 0.3 m back wall
+            n=f"{n}_{int(round(bk*100))}"
+            if n not in _new: _new[n]=stair_core_slab(*pc._sargs,xl=-_in(fl),xr=_in(fr),back=bk)
+            e['piece']=n
+        else:
+            side=1 if cx>hx[0] else -1
+            if _wall_face(hx[0],y,cz,side) is not None: continue   # the wall already closes this side
+            if any('hut' in o['piece'] and abs(o['pos'][1]-y)<0.6 and abs(o['pos'][0]-hx[0])<1.0 and abs(o['pos'][2]-cz)<1.0 for o in L): continue   # inside a roof hut
+            e['pos'][0]=round(hx[0]+side*((fr if side>0 else fl)+0.05),3)   # on the slab strip, clear of the hole
+    _keep.append(e)
+L[:]=_keep
+_used={e['piece'] for e in L}
+for n in [n for n in pieces if (hasattr(pieces[n],'_uargs') or hasattr(pieces[n],'_sargs')) and n not in _used]:
+    del pieces[n]
+    if __name__=='__main__' and os.path.exists(f'{OUT}/pieces/{n}.glb'): os.remove(f'{OUT}/pieces/{n}.glb')
+pieces.update(_new)
+if __name__=='__main__':
+    for n,p in _new.items(): p.scene(n).export(f'{OUT}/pieces/{n}.glb',include_normals=True)
+CORE=_CORE_SAVE
+
 json.dump({'grid':{'module_width':W,'floor_height':H,'wall_thickness':T,'slab':SLAB,'footprint_house':[2*SX,2*SZ],'footprint_garage':[4,8],
   'roof':'house: gable 45 deg, ridge along X at z=0; garage: gable 45 deg, ridge along Z at x=-7'},'placements':L},open(f'{OUT}/building_layout.json','w'),indent=1)
 asm=Piece()

@@ -29,11 +29,13 @@ Torre residencial de 9 andares em três recuos, com terraço em cada recuo e na 
 |---|---|
 | Térreo | `storefront`, `storefront_door`, `wall_ground_panel`, `wall_ground_window`, `wall_ground_door`, `corner_ground`, `entrance_canopy` |
 | Andares | `wall_ribbon`, `wall_ribbon_small`, `wall_ribbon_door`, `wall_tower_panel`, `corner_tower` |
-| Terraços e cobertura | `terrace_tile`, `parapet`, `corner_parapet`, `roof_hut`, `stair_core_slab_roof` |
-| Pisos, escada e elevador | `floor_tile`, `floor_tile_bath`, `stair_core_slab`, `stair_core_rail`, `core_lintel`, `stairs_u_4m`, `stairs_u_3m`, `elevator_door`, `elevator_door_tall` |
+| Terraços e cobertura | `terrace_tile`, `parapet`, `corner_parapet`, `roof_hut`, `stair_core_slab_roof_192_192_29` |
+| Pisos, escada e elevador | `floor_tile`, `floor_tile_bath`, `stair_core_slab_192_192_29`, `stair_core_slab_192_192_5`, `stair_core_rail`, `core_lintel`, `stairs_u_4m_192_192`, `stairs_u_3m_192_192`, `elevator_door`, `elevator_door_tall` |
 | Paredes internas | `interior_wall_plain`, `interior_wall_doorway`, `interior_wall_end`, `interior_wall_end_doorway` e as versões `_tall` (3,8 m) |
 | Portas | `door_leaf_entrance`, `door_leaf_back`, `door_leaf_interior`, `door_leaf_terrace` |
 | Referência | `player_scale_ref` |
+
+As escadas vão de parede a parede da caixa de 4 m. Nos nomes, `_192_168` é a distância em cm do centro da caixa até a face da parede à esquerda e à direita; nas lajes, o último número é a faixa de laje atrás do patamar.
 
 ## Arquivos
 `pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}` e a lista de recuos), `building_assembled.glb`, textura `panel_texture.png` e `plaster_texture.png`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a torre montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.

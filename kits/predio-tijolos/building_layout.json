@@ -3014,7 +3014,7 @@
    ]
   },
   {
-   "piece": "stair_core_slab",
+   "piece": "stair_core_slab_192_192_29",
    "pos": [
     0,
     3.2,
@@ -3026,30 +3026,6 @@
    ]
   },
   {
-   "piece": "stair_core_rail",
-   "pos": [
-    -1.4,
-    3.2,
-    -3
-   ],
-   "rotY": 0,
-   "tags": [
-    "floor1"
-   ]
-  },
-  {
-   "piece": "stair_core_rail",
-   "pos": [
-    1.4,
-    3.2,
-    -3
-   ],
-   "rotY": 0,
-   "tags": [
-    "floor1"
-   ]
-  },
-  {
    "piece": "floor_tile",
    "pos": [
     -7,
@@ -3482,7 +3458,7 @@
    ]
   },
   {
-   "piece": "stair_core_slab",
+   "piece": "stair_core_slab_192_192_29",
    "pos": [
     0,
     6.2,
@@ -3494,30 +3470,6 @@
    ]
   },
   {
-   "piece": "stair_core_rail",
-   "pos": [
-    -1.4,
-    6.2,
-    -3
-   ],
-   "rotY": 0,
-   "tags": [
-    "floor2"
-   ]
-  },
-  {
-   "piece": "stair_core_rail",
-   "pos": [
-    1.4,
-    6.2,
-    -3
-   ],
-   "rotY": 0,
-   "tags": [
-    "floor2"
-   ]
-  },
-  {
    "piece": "floor_tile",
    "pos": [
     -7,
@@ -3950,7 +3902,7 @@
    ]
   },
   {
-   "piece": "stair_core_slab",
+   "piece": "stair_core_slab_192_192_29",
    "pos": [
     0,
     9.2,
@@ -3962,30 +3914,6 @@
    ]
   },
   {
-   "piece": "stair_core_rail",
-   "pos": [
-    -1.4,
-    9.2,
-    -3
-   ],
-   "rotY": 0,
-   "tags": [
-    "floor3"
-   ]
-  },
-  {
-   "piece": "stair_core_rail",
-   "pos": [
-    1.4,
-    9.2,
-    -3
-   ],
-   "rotY": 0,
-   "tags": [
-    "floor3"
-   ]
-  },
-  {
    "piece": "roof_tile",
    "pos": [
     -7,
@@ -4418,7 +4346,7 @@
    ]
   },
   {
-   "piece": "roof_stair_core",
+   "piece": "roof_stair_core_192_192_29",
    "pos": [
     0,
     12.2,
@@ -4430,7 +4358,7 @@
    ]
   },
   {
-   "piece": "stairs_u_3m2",
+   "piece": "stairs_u_3m2_192_192",
    "pos": [
     0,
     0,
@@ -4442,7 +4370,7 @@
    ]
   },
   {
-   "piece": "stairs_u_3m",
+   "piece": "stairs_u_3m_192_192",
    "pos": [
     0,
     3.2,
@@ -4454,7 +4382,7 @@
    ]
   },
   {
-   "piece": "stairs_u_3m",
+   "piece": "stairs_u_3m_192_192",
    "pos": [
     0,
     6.2,
@@ -4466,7 +4394,7 @@
    ]
   },
   {
-   "piece": "stairs_u_3m",
+   "piece": "stairs_u_3m_192_192",
    "pos": [
     0,
     9.2,
@@ -6174,11 +6102,11 @@
    ]
   },
   {
-   "piece": "fire_escape_stairs_ground",
+   "piece": "fire_escape_flight_ground",
    "pos": [
     8.0,
     0,
-    3
+    -0.2
    ],
    "rotY": 90,
    "tags": [
@@ -6189,22 +6117,7 @@
    ]
   },
   {
-   "piece": "fire_escape_platform_stairwell",
-   "pos": [
-    8.0,
-    3.25,
-    2
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor1"
-   ]
-  },
-  {
-   "piece": "fire_escape_platform_stairwell",
+   "piece": "fire_escape_landing_b",
    "pos": [
     8.0,
     3.25,
@@ -6219,11 +6132,11 @@
    ]
   },
   {
-   "piece": "fire_escape_end_rail",
+   "piece": "fire_escape_flight_a",
    "pos": [
     8.0,
     3.25,
-    3
+    0.2
    ],
    "rotY": 90,
    "tags": [
@@ -6234,67 +6147,7 @@
    ]
   },
   {
-   "piece": "fire_escape_stairs_3m",
-   "pos": [
-    8.0,
-    3.25,
-    3
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor1"
-   ]
-  },
-  {
-   "piece": "fire_escape_platform",
-   "pos": [
-    8.0,
-    3.25,
-    -2
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor1"
-   ]
-  },
-  {
-   "piece": "fire_escape_end_rail",
-   "pos": [
-    8.0,
-    3.25,
-    -3
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor1"
-   ]
-  },
-  {
-   "piece": "fire_escape_platform_stairwell",
-   "pos": [
-    8.0,
-    6.25,
-    2
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor2"
-   ]
-  },
-  {
-   "piece": "fire_escape_platform_stairwell",
+   "piece": "fire_escape_landing_a",
    "pos": [
     8.0,
     6.25,
@@ -6309,11 +6162,11 @@
    ]
   },
   {
-   "piece": "fire_escape_end_rail",
+   "piece": "fire_escape_flight_b",
    "pos": [
     8.0,
     6.25,
-    3
+    -0.2
    ],
    "rotY": 90,
    "tags": [
@@ -6324,67 +6177,7 @@
    ]
   },
   {
-   "piece": "fire_escape_stairs_3m",
-   "pos": [
-    8.0,
-    6.25,
-    3
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor2"
-   ]
-  },
-  {
-   "piece": "fire_escape_platform",
-   "pos": [
-    8.0,
-    6.25,
-    -2
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor2"
-   ]
-  },
-  {
-   "piece": "fire_escape_end_rail",
-   "pos": [
-    8.0,
-    6.25,
-    -3
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor2"
-   ]
-  },
-  {
-   "piece": "fire_escape_platform_stairwell",
-   "pos": [
-    8.0,
-    9.25,
-    2
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor3"
-   ]
-  },
-  {
-   "piece": "fire_escape_platform_stairwell",
+   "piece": "fire_escape_landing_b",
    "pos": [
     8.0,
     9.25,
@@ -6399,11 +6192,11 @@
    ]
   },
   {
-   "piece": "fire_escape_end_rail",
+   "piece": "fire_escape_flight_a",
    "pos": [
     8.0,
     9.25,
-    3
+    0.2
    ],
    "rotY": 90,
    "tags": [
@@ -6414,71 +6207,11 @@
    ]
   },
   {
-   "piece": "fire_escape_stairs_3m",
-   "pos": [
-    8.0,
-    9.25,
-    3
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor3"
-   ]
-  },
-  {
-   "piece": "fire_escape_platform",
-   "pos": [
-    8.0,
-    9.25,
-    -2
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor3"
-   ]
-  },
-  {
-   "piece": "fire_escape_end_rail",
-   "pos": [
-    8.0,
-    9.25,
-    -3
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor3"
-   ]
-  },
-  {
-   "piece": "fire_escape_platform",
+   "piece": "fire_escape_landing_a",
    "pos": [
     8.0,
     12.25,
-    -2
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor4"
-   ]
-  },
-  {
-   "piece": "fire_escape_end_rail",
-   "pos": [
-    8.0,
-    12.25,
-    -3
+    0
    ],
    "rotY": 90,
    "tags": [

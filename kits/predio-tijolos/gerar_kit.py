@@ -56,7 +56,7 @@ STONE_TEX=stone_texture(); STONE_TEX.save(os.path.join(OUT,'stone_texture.png'))
 PLASTER_TEX=plaster_texture(); PLASTER_TEX.save(os.path.join(OUT,'plaster_texture.png'))
 TEX={'brick':(BRICK_TEX,1.0,1.0),'stone':(STONE_TEX,1.0,0.8),'plaster':(PLASTER_TEX,1.0,1.0)}  # material: (image, tile width m, tile height m)
 MATS = {k:PBRMaterial(name=k, baseColorFactor=[c/255 for c in v]+[1.0], metallicFactor=0.0, roughnessFactor=0.9) for k,v in COL.items()}
-for k,(im,_,_) in TEX.items(): MATS[k]=PBRMaterial(name=k,baseColorTexture=im,baseColorFactor=[1,1,1,1],metallicFactor=0.0,roughnessFactor=0.9)
+for k,(im,_,_) in TEX.items(): MATS[k]=PBRMaterial(name=k,baseColorTexture=im,baseColorFactor=[255,255,255,255],metallicFactor=0.0,roughnessFactor=0.9)
 
 class Piece:
     def __init__(s): s.parts={}
@@ -273,6 +273,48 @@ def fire_escape_stairs(rise=H,run=4.0,w=0.9):
     p.seg('iron',(0,1.0,z1),(run,rise+1.0,z1),0.05)
     for i in range(0,n+1,3): xx=i*tr; yy=i*st; p.box('iron',xx-0.02,xx+0.02,yy,yy+1.0,z1-0.02,z1+0.02)
     return p
+# --- Zigzag fire escape (2026-11-07): one 6 m landing per floor, flights alternate direction ---
+FE_U=3.0; FE_HOLE=(0.2,3.0)   # flights run in the outer strip (z 1..2) between |u|=0.2 and 3.0
+def fe_landing(hole):
+    """Full 6 x 2 m landing (local x = along the facade, z = out from the wall, deck top y=0).
+    hole='b': opening for a flight arriving from below in x 0.2..3 ; hole='a': mirrored (x -3..-0.2)."""
+    p=Piece(); s=1 if hole=='b' else -1; h0,h1=sorted((s*FE_HOLE[0],s*FE_HOLE[1]))
+    so0,so1=(-FE_U,h0) if s>0 else (h1,FE_U)            # solid part of the outer strip
+    p.box('iron',-FE_U,FE_U,-0.06,-0.02,0,FE_W); p.box('iron',so0,so1,-0.06,-0.02,FE_W,FE_D)
+    for i in range(int(FE_W/0.1)):
+        zz=0.03+i*0.1; p.box('iron',-FE_U,FE_U,-0.02,0,zz,zz+0.05)
+    for i in range(int((FE_D-FE_W)/0.1)):
+        zz=FE_W+0.03+i*0.1; p.box('iron',so0,so1,-0.02,0,zz,zz+0.05)
+    p.box('iron',-FE_U,FE_U,-0.16,-0.06,0,0.05)                      # wall beam
+    p.box('iron',so0,so1,-0.16,-0.06,FE_D-0.05,FE_D)                 # outer beam
+    p.box('iron',h0,h1,-0.16,-0.06,FE_W-0.05,FE_W)                   # beam along the opening
+    for xx in (-FE_U,FE_U-0.05): p.box('iron',xx,xx+0.05,-0.16,-0.06,0.05,FE_D-0.05 if (xx<0)==(s>0) else FE_W-0.05)
+    e=(h0 if s>0 else h1); p.box('iron',e-0.025,e+0.025,-0.16,-0.06,FE_W,FE_D-0.05)   # opening end beam
+    for xx in (-FE_U+0.1,-1.0,1.0,FE_U-0.1):
+        zb=FE_D*0.8 if so0<=xx<=so1 else FE_W*0.8
+        p.seg('iron',(xx,-0.7,0.02),(xx,-0.14,zb),0.05)
+    fe_rail_run(p,(so0+0.02,FE_D-0.02),(so1-0.02,FE_D-0.02))         # outer edge
+    for xx in (-FE_U+0.02,FE_U-0.02): fe_rail_run(p,(xx,0.05),(xx,FE_D-0.02))   # both ends
+    e2=e-0.02*s; fe_rail_run(p,(e2,FE_W+0.02),(e2,FE_D-0.04))        # closes the opening on the inner end
+    g0,g1=sorted((e2,s*(FE_U-0.9)))                                   # guard on the walkway side, open 0.9 m where the flight arrives
+    fe_rail_run(p,(g0,FE_W-0.02),(g1,FE_W-0.02))
+    return p
+def fe_flight(rise,s=1,run=FE_HOLE[1]-FE_HOLE[0]):
+    """Steep fire-escape flight in the outer strip. Pivot: bottom end at x=0, rises toward s*x, arrives at x=s*run."""
+    p=Piece(); n=math.ceil(rise/0.18-1e-6); tr=run/n; st=rise/n; z0=FE_W+0.05; z1=FE_D-0.05
+    for i in range(n):
+        a,b=sorted((s*i*tr,s*(i+1)*tr)); top=(i+1)*st
+        p.box('iron',a,b,top-0.04,top,z0,z1)
+        for k in range(1,3): p.box('dark',a+0.02,b-0.02,top-0.005,top+0.003,z0+k*(z1-z0)/3-0.01,z0+k*(z1-z0)/3+0.01)
+    for z in (z0,z1): p.seg('iron',(0,0,z),(s*run,rise,z),0.06)
+    p.seg('iron',(0,1.0,z1),(s*run,rise+1.0,z1),0.05)                # outer handrail, full length
+    xa,xb=0.9,run-0.9                                                  # inner handrail leaves room to step on and off
+    p.seg('iron',(s*xa,xa/run*rise+1.0,z0),(s*xb,xb/run*rise+1.0,z0),0.05)
+    for i in range(0,n+1,3):
+        xx=i*tr; yy=i*st
+        p.box('iron',s*xx-0.02,s*xx+0.02,yy,yy+1.0,z1-0.02,z1+0.02)
+        if xa<=xx<=xb: p.box('iron',s*xx-0.02,s*xx+0.02,yy,yy+1.0,z0-0.02,z0+0.02)
+    return p
 def entrance_canopy():
     p=Piece(); x=0.9; d=1.0
     p.box('dark',-x,x,0,0.14,0,d); p.box('iron',-x-0.02,x+0.02,0.14,0.18,-0.02,d+0.02)
@@ -302,17 +344,22 @@ def floor_tile():
 def floor_tile_bath():
     p=Piece(); p.box('tile',-W/2,W/2,-0.03,0,-W/2,W/2); p.box('plaster',-W/2+0.02,W/2-0.02,-SLAB,-0.03,-W/2+0.02,W/2-0.02); return p
 CORE=4.0; HOLE=1.35
-def stair_core_slab(top='floor'):
+def stair_core_slab(top='floor',xl=None,xr=None,back=0.0):
     """4x4 m slab with the stair hole (x in [-1.35,1.35], full depth). Pivot: centre."""
     p=Piece(); h=CORE/2
-    for (a,b) in ((-h,-HOLE),(HOLE,h)):
+    xl=-HOLE if xl is None else xl; xr=HOLE if xr is None else xr; p._sargs=(top,)
+    for (a,b) in ((-h,xl),(xr,h)):
         p.box(top,a,b,-0.03 if top!='roof' else -0.04,0,-h,h); p.box('plaster',a+0.02,b-0.02,-SLAB,-0.03 if top!='roof' else -0.04,-h+0.02,h-0.02)
+    if back>0.02:
+        p.box(top,xl,xr,-0.03 if top!='roof' else -0.04,0,-h,-h+back); p.box('plaster',xl-0.02,xr+0.02,-SLAB,-0.03 if top!='roof' else -0.04,-h+0.02,-h+back)
     return p
-def stairs_u(rise,run=2.0,w=1.2,gap=0.1,land=1.7):
+def stairs_u(rise,run=2.0,w=1.2,gap=0.1,land=1.7,xl=None,xr=None):
     """U-shaped stair: flight A goes up toward -Z on the left, landing at the back, flight B returns on the right.
     Pivot: centre of the core's open (front) edge, at the lower floor level."""
     p=Piece(); n=round(rise/0.18); n+=n%2; k=n//2; st=rise/n; tr=run/k
     xa0,xa1=-gap/2-w,-gap/2; xb0,xb1=gap/2,gap/2+w
+    p._uargs=dict(rise=rise,run=run,w=w,gap=gap,land=land); ow=0.04
+    if xl is not None: xa0,xb1,ow=xl,xr,0.08   # flights run wall to wall
     for i in range(k-1):
         top=(i+1)*st; p.box('floor',xa0,xa1,top-0.04,top,-(i+1)*tr,-i*tr); p.box('plaster',xa0,xa1,top-0.26,top-0.04,-(i+1)*tr,-i*tr)
     mid=k*st
@@ -321,9 +368,9 @@ def stairs_u(rise,run=2.0,w=1.2,gap=0.1,land=1.7):
         top=mid+j*st
         p.box('floor',xb0,xb1,top-0.04,top,-run+(j)*tr,-run+(j+1)*tr); p.box('plaster',xb0,xb1,top-0.26,top-0.04,-run+(j)*tr,-run+(j+1)*tr)
     # handrails (inner pair + outer pair)
-    for x in (xa0+0.04,xa1-0.04):
+    for x in (xa0+ow,xa1-0.04):
         p.seg('iron',(x,0.9,0),(x,mid+0.9,-run),0.05)
-    for x in (xb0+0.04,xb1-0.04):
+    for x in (xb0+0.04,xb1-ow):
         p.seg('iron',(x,mid+0.9,-run+tr),(x,rise+0.9,0),0.05)
     for i in range(0,k+1,2):
         z=-i*tr; ya=i*st; yb=rise-i*st
@@ -345,7 +392,8 @@ def interior_wall(doorway,h=H-SLAB,ow=0.9):
     if doorway:
         for xx in (-ow/2,ow/2): p.box('frame',xx-0.04,xx+0.04,0,2.14,-t/2-0.02,t/2+0.02)
         p.box('frame',-ow/2-0.04,ow/2+0.04,2.08,2.18,-t/2-0.02,t/2+0.02)
-    p.box('trim',-W/2,W/2,0,0.1,t/2,t/2+0.015); p.box('trim',-W/2,W/2,0,0.1,-t/2-0.015,-t/2)
+    segs=[(-W/2,-ow/2-0.04),(ow/2+0.04,W/2)] if doorway else [(-W/2,W/2)]  # rodapé para na porta
+    for a,b in segs: p.box('trim',a,b,0,0.1,t/2,t/2+0.015); p.box('trim',a,b,0,0.1,-t/2-0.015,-t/2)
     return p
 def interior_wall_end(h=H-SLAB):
     # plain interior wall that stops at the inner face of an exterior wall (+X end shortened by T)
@@ -450,7 +498,7 @@ pieces={'floor_tile':floor_tile(),'floor_tile_bath':floor_tile_bath(),'stair_cor
  'corner_brick':corner('brick',H,0.08,0.04),'corner_ground':corner('stone',HG,0.2,0.08,True),
  'cornice_parapet':cornice(),'cornice_parapet_corner':cornice(True),'cornice_parapet_opening':cornice(gap=1.2),'roof_tile':roof_tile(),
  'roof_stair_hut':roof_stair_hut(),'water_tower':water_tower(),
- 'balcony':balcony(),'fire_escape_platform':fire_escape_platform(),'fire_escape_platform_stairwell':fire_escape_platform_stairwell(),'fire_escape_end_rail':fire_escape_end_rail(),'fire_escape_stairs_3m':fire_escape_stairs(H),'fire_escape_stairs_ground':fire_escape_stairs(HG+0.05),
+ 'balcony':balcony(),'fire_escape_landing_a':fe_landing('a'),'fire_escape_landing_b':fe_landing('b'),'fire_escape_flight_a':fe_flight(H,-1),'fire_escape_flight_b':fe_flight(H,1),'fire_escape_flight_ground':fe_flight(HG+0.05,1),
  'entrance_canopy':entrance_canopy(),
  
  
@@ -551,13 +599,14 @@ for fl in (1,2,3):
 # fire escape on the right face (+X): local x = u, flights climb toward -Z
 def fe(n,u,y,fl): put(n,SX,y,-u,90,['right','fire_escape','ext',ftag(fl)])
 levels=[lvl(f)+0.05 for f in (1,2,3,4)]
-fe('fire_escape_stairs_ground',-3,0,0)
+# zigzag: ground flight rises toward +u into floor 1; then the flights alternate direction floor by floor
+fe('fire_escape_flight_ground',FE_HOLE[0],0,0)
 for i,yv in enumerate(levels):
-    fl=i+1; top=(fl==4)
-    if not top:
-        fe('fire_escape_platform_stairwell',-2,yv,fl); fe('fire_escape_platform_stairwell',0,yv,fl)
-        fe('fire_escape_end_rail',-3,yv,fl); fe('fire_escape_stairs_3m',-3,yv,fl)
-    fe('fire_escape_platform',2,yv,fl); fe('fire_escape_end_rail',3,yv,fl)
+    fl=i+1; arrive='b' if fl%2 else 'a'
+    fe(f'fire_escape_landing_{arrive}',0,yv,fl)
+    if fl<4:
+        go='a' if arrive=='b' else 'b'
+        fe(f'fire_escape_flight_{go}',(-FE_HOLE[0] if go=='a' else FE_HOLE[0]),yv,fl)
 # entrance + street
 put('door_leaf_entrance',1-0.48,0,SZ-0.18,0,['front','ext',ftag(0)],door=85); put('entrance_canopy',1,2.6,SZ,0,['front','ext',ftag(0)])
 put('water_tower',4.5,lvl(4),1.5,0,['roof'])
@@ -569,6 +618,57 @@ for e in [e for e in L if e['piece']=='wall_brick_balcony_door']:
     hx,hz=hinge(e['pos'][0],e['pos'][2],e['rotY'],-0.38,-0.12)
     put('door_leaf_balcony',hx,e['pos'][1]+0.12,hz,e['rotY'],[t for t in e['tags'] if t!='door'],door=80)
 hx,hz=hinge(0,-2,0,-0.55,2.6); put('door_leaf_hut',hx,lvl(4),hz,0,['roof'],door=80)
+# --- Stairs fill the whole core, wall to wall (Bruno, 2026-11-07) ---
+_CORE_SAVE=CORE; CORE=4.0
+def _wall_face(cx,y,cz,side):
+    best=None
+    for e in L:
+        x,yy,z=e['pos']
+        if abs(yy-y)<0.6 and abs(x-(cx+2*side))<0.05 and e['rotY'] in (90,-90,270) and any(k in e['piece'] for k in ('wall','partition')) and abs(z-cz)<=1.05:
+            f=CORE/2-0.06-0.02 if 'interior' in e['piece'] else CORE/2-T-0.02   # clear of the skirting
+            best=f if best is None else min(best,f)
+    return best
+_new={}; _holes=[]; pieces_src=dict(pieces)
+for e in L:
+    if not hasattr(pieces.get(e['piece']),'_uargs'): continue
+    cx,y,zf=e['pos']; cz=zf-CORE/2
+    fl=_wall_face(cx,y,cz,-1) or CORE/2-T; fr=_wall_face(cx,y,cz,1) or CORE/2-T
+    n=f"{e['piece']}_{int(round(fl*100))}_{int(round(fr*100))}"
+    if n not in _new: _new[n]=stairs_u(**pieces[e['piece']]._uargs,xl=-fl,xr=fr)
+    _holes.append((cx,y,zf,fl,fr,e['piece'])); e['piece']=n
+_keep=[]
+for e in L:
+    pc=pieces.get(e['piece'])
+    cx,y,cz=e['pos']
+    if hasattr(pc,'_sargs') or e['piece'].startswith('stair_core_rail'):
+        dx=0.0 if hasattr(pc,'_sargs') else 1.4
+        below=[h for h in _holes if abs(abs(h[0]-cx)-dx)<0.3 and abs(h[2]-CORE/2-cz)<0.3 and h[1]<y-0.5]
+        hx=None if not below else max(below,key=lambda h:h[1])
+        if hx is None: _keep.append(e); continue
+        fl,fr=hx[3],hx[4]
+        if hasattr(pc,'_sargs'):
+            n=f"{e['piece']}_{int(round(fl*100))}_{int(round(fr*100))}"
+            _in=lambda v: v+0.03 if v<CORE/2-0.1 else v+0.02   # slab edge sits at the wall face (tucked 1 cm into exterior walls)
+            ua=pieces_src[hx[5]]._uargs; bk=round(min(0.29,CORE-ua['run']-ua['land']),3)   # stops 1 cm inside the 0.3 m back wall
+            n=f"{n}_{int(round(bk*100))}"
+            if n not in _new: _new[n]=stair_core_slab(*pc._sargs,xl=-_in(fl),xr=_in(fr),back=bk)
+            e['piece']=n
+        else:
+            side=1 if cx>hx[0] else -1
+            if _wall_face(hx[0],y,cz,side) is not None: continue   # the wall already closes this side
+            if any('hut' in o['piece'] and abs(o['pos'][1]-y)<0.6 and abs(o['pos'][0]-hx[0])<1.0 and abs(o['pos'][2]-cz)<1.0 for o in L): continue   # inside a roof hut
+            e['pos'][0]=round(hx[0]+side*((fr if side>0 else fl)+0.05),3)   # on the slab strip, clear of the hole
+    _keep.append(e)
+L[:]=_keep
+_used={e['piece'] for e in L}
+for n in [n for n in pieces if (hasattr(pieces[n],'_uargs') or hasattr(pieces[n],'_sargs')) and n not in _used]:
+    del pieces[n]
+    if __name__=='__main__' and os.path.exists(f'{OUT}/pieces/{n}.glb'): os.remove(f'{OUT}/pieces/{n}.glb')
+pieces.update(_new)
+if __name__=='__main__':
+    for n,p in _new.items(): p.scene(n).export(f'{OUT}/pieces/{n}.glb',include_normals=True)
+CORE=_CORE_SAVE
+
 json.dump({'grid':{'module_width':W,'floor_height':H,'ground_floor_height':HG,'wall_thickness':T,'slab':SLAB,'footprint':[2*SX,2*SZ]},'placements':L},open(f'{OUT}/building_layout.json','w'),indent=1)
 asm=Piece()
 for e in L:

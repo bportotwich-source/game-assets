@@ -21,6 +21,7 @@ Pacote de assets 3D modulares e originais para montar cenários de jogos. As pe�
 | [`kits/brownstones/`](kits/brownstones/) | Sobrados geminados: três casas de tijolo de 6 × 14 m em fileira, com 3, 2 e 4 andares, térreo de pedra marrom, escadaria alta até o andar nobre, cornijas creme com mísulas e escada em U em cada casa (36 peças) |
 | [`kits/quartel-bombeiros/`](kits/quartel-bombeiros/) | Quartel de bombeiros: galpão de tijolo de 16 × 12 m com 3 portões, telhado de metal, mezanino com alojamentos e mastro de descida, e anexo de madeira branca com escritório e cozinha (61 peças) |
 | [`kits/posto-gasolina/`](kits/posto-gasolina/) | Posto de gasolina: loja de conveniência de 14 × 8 m com vitrine, depósito, escritório e 2 banheiros, cobertura de 18 × 10 m sobre 2 ilhas de bombas, totem e cercado de lixo (30 peças) |
+| [`kits/casas-shotgun/`](kits/casas-shotgun/) | Casas shotgun: cinco casas estreitas de 4 × 12 m coladas, cada uma de uma cor, piso elevado sobre treliça, oitão de 45°, varanda com escada e cômodos em fila (67 peças) |
 | [`visitar/`](visitar/) + `project.godot` | Projeto Godot 4 para andar dentro de qualquer kit em primeira pessoa, com colisão e portas que abrem |
 | [`scripts/`](scripts/) | Portas que abrem e fecham: Godot 4 (`godot/`) e Unity (`unity/`) |
 

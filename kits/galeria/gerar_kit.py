@@ -542,7 +542,7 @@ def shopfront(door=False,h=HI):
         p.box('glass',-W/2+0.07,W/2-0.07,0.12,top,-0.01,0.01); p.box('frame2',-W/2+0.07,W/2-0.07,0.0,0.12,-0.04,0.04)
     return p
 def escalator(rise=FH,run=6.0,w=1.2):
-    """Escalator flight (modelled as a walkable stair, 24 steps of 16.7 x 25 cm). Pivot: bottom end, centre, lower floor; rises toward -Z."""
+    """Escalator flight (modelled as a walkable stair, 24 steps of 16.7 x 25 cm). Pivot: bottom end, centre, lower floor; rises toward -Z. Balustrades stop at the void edges so nothing stands in the galleries; only flush 0.6 m comb plates reach the floors."""
     p=Piece(); n=24; r=rise/n; t=run/n; x=w/2
     for i in range(n):
         top=(i+1)*r; p.box('steel',-x,x,max(0.0,top-0.4),top,-(i+1)*t,-i*t); p.box('dark',-x,x,top-0.012,top+0.002,-(i+1)*t+0.005,-(i+1)*t+0.03)
@@ -550,11 +550,11 @@ def escalator(rise=FH,run=6.0,w=1.2):
     hull(p,'steel',[(xx,y,z) for xx in (-x,x) for (z,y) in ((-0.4,0.0),(-0.4,0.02),(-run,rise-0.6),(-run,rise-0.4))])
     for s in (-1,1):
         a,b=sorted((s*x,s*(x+0.1)))
-        hull(p,'metal',[(xx,y,z) for xx in (a,b) for (z,y) in ((0.6,0.0),(0.6,0.25),(0.0,0.0),(0.0,0.25),(-run,rise),(-run,rise+0.25),(-run-0.6,rise),(-run-0.6,rise+0.25))])
+        hull(p,'metal',[(xx,y,z) for xx in (a,b) for (z,y) in ((0.0,0.0),(0.0,0.25),(-run,rise),(-run,rise+0.25))])
         a,b=sorted((s*(x+0.03),s*(x+0.05)))
-        hull(p,'glass',[(xx,y,z) for xx in (a,b) for (z,y) in ((0.55,0.25),(0.55,0.95),(-run-0.55,rise+0.25),(-run-0.55,rise+0.95))])
+        hull(p,'glass',[(xx,y,z) for xx in (a,b) for (z,y) in ((-0.05,0.25),(-0.05,0.95),(-run+0.05,rise+0.25),(-run+0.05,rise+0.95))])
         a,b=sorted((s*(x+0.0),s*(x+0.1)))
-        hull(p,'dark',[(xx,y,z) for xx in (a,b) for (z,y) in ((0.6,0.95),(0.6,1.02),(0.0,0.95),(0.0,1.02),(-run,rise+0.95),(-run,rise+1.02),(-run-0.6,rise+0.95),(-run-0.6,rise+1.02))])
+        hull(p,'dark',[(xx,y,z) for xx in (a,b) for (z,y) in ((0.0,0.95),(0.0,1.02),(-run,rise+0.95),(-run,rise+1.02))])
     return p
 def interior_wall_end_doorway(h=HI):
     p=Piece(); t=0.12; e=W/2-T

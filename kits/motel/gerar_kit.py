@@ -845,6 +845,9 @@ def door_leaf_glass(w=0.88,h=2.12):
     p.box('alu',0,f,0,h,-0.025,0.025); p.box('alu',w-f,w,0,h,-0.025,0.025); p.box('alu',f,w-f,0,0.2,-0.025,0.025); p.box('alu',f,w-f,h-f,h,-0.025,0.025)
     p.box('glass',f,w-f,0.2,h-f,-0.008,0.008); p.box('dark',w-0.16,w-0.12,0.8,1.5,0.025,0.06); p.box('dark',w-0.16,w-0.12,0.8,1.5,-0.06,-0.025); return p
 
+import sys as _s; _s.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts', 'detalhe'))
+import retrofit
+retrofit.aplicar(globals(), {'stucco': 'render', 'shingle': 'shingles', 'plaster': 'plaster', 'sign': None})
 pieces={'floor_tile':floor_tile(),'floor_tile_bath':floor_tile_bath(),'roof_tile':roof_tile(),
  'interior_wall_plain':interior_wall(False),'interior_wall_doorway':interior_wall(True),'interior_wall_end':interior_wall_end(),'interior_wall_end_doorway':interior_wall_end_doorway(),
  'party_wall':party_wall(),
@@ -926,5 +929,5 @@ for e in L:
     if e['piece']=='player_scale_ref': continue
     Tm=trimesh.transformations.rotation_matrix(math.radians(e['rotY']),[0,1,0]); Tm[:3,3]=e['pos']
     asm.merge(pieces[e['piece']],Tm)
-asm.scene('building').export(f'{OUT}/building_assembled.glb',include_normals=True)
+print('triangulos no montado', retrofit.montar(pieces, L, f'{OUT}/building_assembled.glb')); retrofit.finalizar(f'{OUT}/pieces')
 print(len(pieces),'pieces',len(L),'placements',sum(1 for e in L if 'door' in e),'doors')

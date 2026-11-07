@@ -20,11 +20,12 @@ Motel de dois andares com galerias abertas, em peças 3D (GLB), estilo toon com 
 - **Galeria:** `gallery_walk` no chão, `gallery_deck` em y = 3,15, `gallery_rail` na borda (z = 1,92), pilares `gallery_post_low` e `gallery_post_high`. `outdoor_stair` tem pivô no meio da borda de cima, no chão, e sobe para +Z.
 - **Telhado:** `roof_tile` em y = 6,15; `mansard` tem pivô na linha da borda (face da parede ou borda da galeria) e se abre para fora; `mansard_corner` fecha os cantos.
 
-## Texturas (embutidas nos GLB, UVs em metros)
-- `stucco`: reboco creme.
-- `shingle`: telha verde da mansarda.
-- `sign`: placa do motel.
-- `plaster`: interno.
+## Alto detalhe
+Versão refeita com `scripts/detalhe/retrofit.py`, sem mudar planta nem encaixes:
+- **Janelas:** caixilho com batente, folhas de guilhotina com baguetes e vidro, peitoril com caimento e pingadeira.
+- **Portas:** almofadas rebaixadas e chanfradas, vidro com baguetes nas portas envidraçadas, maçaneta e dobradiças.
+- **Texturas PBR** (cor + normal + ORM, ladrilho de 2 m, JPEG dentro dos GLB, UVs em metros): `stucco` (reboco da fachada), `shingle` (mansarda), `plaster` (interno); o letreiro mantém a textura antiga. As janelas largas dos quartos continuam como eram.
+- Montado com cerca de 45 mil triângulos (antes 22 mil).
 
 ## Peças (42)
 | Grupo | Peças |
@@ -40,4 +41,4 @@ Motel de dois andares com galerias abertas, em peças 3D (GLB), estilo toon com 
 | Referência | `player_scale_ref` |
 
 ## Arquivos
-`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, texturas `*_texture.png`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com o motel montado e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.
+`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com o motel montado e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.

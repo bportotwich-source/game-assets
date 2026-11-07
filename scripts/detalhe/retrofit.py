@@ -19,9 +19,9 @@ from trimesh.visual import TextureVisuals
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import detalhe as D
 
-def aplicar(g, tipos, tabuas=None, tabuas_mats=None, portas=True, janelas=True):
+def aplicar(g, tipos, tabuas=None, tabuas_mats=None, portas=True, janelas=True, cores=None):
     old_TEX, old_MATS, old_Piece = dict(g.get('TEX', {})), dict(g.get('MATS', {})), g['Piece']
-    cores = {k: v for k, v in g['COL'].items()}
+    base = {k: v for k, v in g['COL'].items()}; base.update(cores or {}); cores = base   # cores: troca a cor-base de um material texturizado
     D.configurar(cores=cores, texturas={k: t for k, t in tipos.items() if t})
     kept = {k: old_TEX[k] for k, t in tipos.items() if not t and k in old_TEX}
     for k in kept: D.MATS[k] = old_MATS[k]

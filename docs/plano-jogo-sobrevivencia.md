@@ -216,6 +216,6 @@ Total: cerca de 28 semanas (7 meses). Depois do MVP, a ordem sugerida é: fase 4
 
 ## 13. Próximos passos
 
-1. Bruno revisa este plano e escolhe a câmera principal (a recomendação é o híbrido).
+1. Câmera principal decidida por Bruno em 7/11/2026: **híbrido** (a pé + modo prefeito).
 2. Criar o repositório do jogo e começar o **M0**.
 3. Em paralelo, no pacote de assets: script de **ruínas** e de **LOD** para os kits, e o **kit 25** de construções de sobrevivência.

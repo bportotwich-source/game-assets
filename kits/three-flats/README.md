@@ -19,10 +19,12 @@ Dois prédios de três apartamentos lado a lado, em peças 3D (GLB), estilo toon
 - **Platibanda:** `cornice_*` na frente e `parapet_*` nos fundos atravessam os cantos. Nas laterais vão `parapet_side_*`; as `_lo`/`_hi` param 0,3 m antes do canto.
 - **Varandas:** `porch_deck*` têm pivô no meio da borda junto à parede. `porch_stair` fica 0,9 m à direita, na borda de fora (z = -9,6).
 
-## Texturas (embutidas nos GLB, UVs em metros)
-- `brick`: fachada A.
-- `grey`: pedra cinza da fachada B.
-- `plaster`: interno.
+## Alto detalhe
+Versão refeita com `scripts/detalhe/retrofit.py`, sem mudar planta nem encaixes:
+- **Janelas:** caixilho com batente, folhas de guilhotina com baguetes e vidro, peitoril com caimento e pingadeira.
+- **Portas:** almofadas rebaixadas e chanfradas, vidro com baguetes nas portas envidraçadas, maçaneta e dobradiças.
+- **Texturas PBR** (cor + normal + ORM, ladrilho de 2 m, JPEG dentro dos GLB, UVs em metros): `brick` (prédio de tijolo), `grey` (prédio de pedra cinza), `plaster` (interno).
+- Montado com cerca de 103 mil triângulos (antes 47 mil).
 
 ## Peças (70)
 | Grupo | Peças |
@@ -37,4 +39,4 @@ Dois prédios de três apartamentos lado a lado, em peças 3D (GLB), estilo toon
 | Referência | `player_scale_ref` |
 
 ## Arquivos
-`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, texturas `*_texture.png`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com os prédios montados e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.
+`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com os prédios montados e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.

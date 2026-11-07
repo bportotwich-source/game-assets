@@ -1,8 +1,6 @@
 import os,sys,math,collections,numpy as np
-src=open('gerar_kit.py',encoding='utf-8').read().split("asm=Piece()\nfor e in L:")[0]
-src=src.replace("import shutil; shutil.rmtree(f'{OUT}/pieces',ignore_errors=True); os.makedirs(f'{OUT}/pieces')","")
-src=src.replace("for n,p in pieces.items(): p.scene(n).export(f'{OUT}/pieces/{n}.glb',include_normals=True)","")
-g={'__file__':os.path.abspath('gerar_kit.py')}; exec(compile(src,'gen.py','exec'),g)
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+g={'__file__':os.path.abspath('gerar_kit.py'),'__name__':'verificar'}; exec(compile(open('gerar_kit.py',encoding='utf-8').read(),'gerar_kit.py','exec'),g)
 import trimesh
 from shapely.geometry import Polygon
 from shapely.ops import unary_union
@@ -57,7 +55,7 @@ for key,items in groups.items():
             A,Bb=U[ids[a]],U[ids[b]]
             if A.bounds[2]<Bb.bounds[0] or Bb.bounds[2]<A.bounds[0] or A.bounds[3]<Bb.bounds[1] or Bb.bounds[3]<A.bounds[1]: continue
             la,lb=lab[ids[a]],lab[ids[b]]
-            if la[1]==lb[1] and (la[1] not in ('brick','stone','plaster','siding','shingles','brick','trim_tex') or (la[1]=='plaster' and ax==1) or (la[0]==lb[0] and la[2]==lb[2])): continue  # same colour (brick UVs align within a piece)
+            if la[1]==lb[1] and (la[1] not in tuple(g['TEX']) or (la[1] in ('plaster','siding') and ax==1) or (la[0]==lb[0] and la[2]==lb[2])): continue  # same colour (brick UVs align within a piece)
             I=A.intersection(Bb)
             if I.area<=2e-4: continue
             O=opp(key)

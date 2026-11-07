@@ -138,3 +138,9 @@ O script `verificar_flicker.py` (na pasta do kit) monta o prédio e lista todo p
 - O padrão fixa só o que o jogador usa: alturas de andar, portas, corredores, escadas, módulo de 2 m e espessuras de parede.
 - Cada prédio novo muda tamanho, planta (cômodos, número de apartamentos, posição da escada), número de andares e estilo. Não repetir a planta de outro kit.
 - Telhados inclinados (mansarda): o sótão conta como andar de 3 m; paredes internas que encostam no telhado acompanham a inclinação com 1 cm de folga.
+
+
+## Alto detalhe (desde o kit 7 refeito)
+- Os kits usam `scripts/detalhe/detalhe.py`: texturas PBR de 2 m, molduras em perfil, janelas de guilhotina, portas com almofada, calhas e telhas em fiadas. Veja `scripts/detalhe/LEIA-ME.md`.
+- Tábuas em geometria com exposição de 0,2 m na fase da textura. Nenhuma borda de moldura pode cair numa linha de tábua.
+- Teste de flicker com TOTAL 0 montado e com `SOLO=1`, como sempre.

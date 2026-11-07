@@ -19,6 +19,7 @@ Pacote de assets 3D modulares e originais para montar cenários de jogos. As pe�
 | [`kits/duplex/`](kits/duplex/) | Duplex de 16 × 12 m: duas casas espelhadas de 2 andares sob um telhado de duas águas, oitão central sobre as duas garagens, tábuas amarelas, venezianas azul-marinho e cobertura sobre cada porta (42 peças) |
 | [`kits/diner/`](kits/diner/) | Diner de aço inox de 20 × 8 m: pontas arredondadas, faixa contínua de janelas, vestíbulo de vidro, letreiro no telhado, salão com piso xadrez, cozinha, depósito e 2 banheiros (25 peças) |
 | [`kits/brownstones/`](kits/brownstones/) | Sobrados geminados: três casas de tijolo de 6 × 14 m em fileira, com 3, 2 e 4 andares, térreo de pedra marrom, escadaria alta até o andar nobre, cornijas creme com mísulas e escada em U em cada casa (36 peças) |
+| [`kits/quartel-bombeiros/`](kits/quartel-bombeiros/) | Quartel de bombeiros: galpão de tijolo de 16 × 12 m com 3 portões, telhado de metal, mezanino com alojamentos e mastro de descida, e anexo de madeira branca com escritório e cozinha (61 peças) |
 | [`visitar/`](visitar/) + `project.godot` | Projeto Godot 4 para andar dentro de qualquer kit em primeira pessoa, com colisão e portas que abrem |
 | [`scripts/`](scripts/) | Portas que abrem e fecham: Godot 4 (`godot/`) e Unity (`unity/`) |
 

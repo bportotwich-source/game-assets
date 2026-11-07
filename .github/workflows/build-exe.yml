@@ -1,0 +1,43 @@
+# Gera o GameAssets.exe (Windows) a partir do projeto Godot do repositório.
+# O .exe fica em Actions > a execução > Artifacts.
+name: Build exe
+
+on:
+  push:
+    branches: [main, kit-galeria]
+  workflow_dispatch:
+
+jobs:
+  windows:
+    runs-on: ubuntu-latest
+    env:
+      GODOT: "4.3"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Baixar Godot e modelos de exportação
+        run: |
+          base=https://github.com/godotengine/godot/releases/download/${GODOT}-stable
+          wget -q $base/Godot_v${GODOT}-stable_linux.x86_64.zip
+          wget -q $base/Godot_v${GODOT}-stable_export_templates.tpz
+          unzip -q Godot_v${GODOT}-stable_linux.x86_64.zip
+          mv Godot_v${GODOT}-stable_linux.x86_64 godot
+          mkdir -p ~/.local/share/godot/export_templates/${GODOT}.stable
+          unzip -q Godot_v${GODOT}-stable_export_templates.tpz
+          mv templates/* ~/.local/share/godot/export_templates/${GODOT}.stable/
+          rm -rf templates *.zip *.tpz
+
+      - name: Importar peças
+        run: timeout 900 ./godot --headless --editor --quit || true
+
+      - name: Exportar para Windows
+        run: |
+          mkdir -p build
+          ./godot --headless --export-release "Windows Desktop" build/GameAssets.exe
+          ls -la build
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GameAssets-windows
+          path: build/GameAssets.exe
+          retention-days: 30

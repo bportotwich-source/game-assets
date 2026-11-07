@@ -856,8 +856,9 @@ PXM = 4096                                     # atlas das caixas: 1024 px = 0,2
 ATLAS = {'topo': (0, 0), 'lado+': (0, 380), 'lado-': (0, 520), 'ponta+': (500, 380), 'ponta-': (500, 520)}
 
 
-def _arte_caixa(CX, cal, linha2, linha3, cor=(150, 30, 20), marca='GUARDIÃO', tampa=0.012):
+def _arte_caixa(CX, cal, linha2, linha3, cor=(150, 30, 20), marca='GUARDIÃO', tampa=0.012, atlas=None):
     """Arte original da caixa (marca inventada). Cada face tem o seu retangulo no atlas, na mesma densidade."""
+    ATLAS = atlas or globals()['ATLAS']
     im = Image.new('RGB', (1024, 1024), (236, 230, 212)); d = ImageDraw.Draw(im)
     L = int((CX['x1'] - CX['x0']) * PXM); P_ = int((CX['z1'] - CX['z0']) * PXM); H = int((CX['y1'] - CX['y0']) * PXM)
     tp = int(tampa * PXM); vis = (tp + H) // 2                            # centro da parte do lado que a tampa nao cobre
@@ -878,7 +879,8 @@ def _arte_caixa(CX, cal, linha2, linha3, cor=(150, 30, 20), marca='GUARDIÃO', t
     return im
 
 
-def _uv_caixa(CX):
+def _uv_caixa(CX, atlas=None):
+    ATLAS = atlas or globals()['ATLAS']
     def f(v, n):
         uv = np.zeros((len(v), 2)); ax = np.argmax(np.abs(n), axis=1); sg = np.sign(n[np.arange(len(n)), ax])
         X = v[:, 0] - CX['x0']; Y = CX['y1'] - v[:, 1]; Z = v[:, 2] - CX['z0']
@@ -892,11 +894,11 @@ def _uv_caixa(CX):
     return f
 
 
-def caixa_municao(A, mat, CX, arte, cart, nx, nz, passo_x, passo_z, faltam=(7, 23, 24), bandeja=0.012):
+def caixa_municao(A, mat, CX, arte, cart, nx, nz, passo_x, passo_z, faltam=(7, 23, 24), bandeja=0.012, atlas=None):
     """Caixa de papelao aberta em cima, bandeja com nx x nz cartuchos de pe (cart = Piece deitada em x, base em x=0) e tampa animada."""
     mat_imagem(mat, arte, 0.7)
     x0, x1, y0, y1, z0, z1 = (CX[k] for k in ('x0', 'x1', 'y0', 'y1', 'z0', 'z1')); t = 0.0012; yt = y1 - 0.006
-    q = A.base; uvf = _uv_caixa(CX)
+    q = A.base; uvf = _uv_caixa(CX, atlas)
     q.add(mat, menos(caixa(x0, x1, y0, yt, z0, z1), caixa(x0 + t, x1 - t, y0 + t, yt + 0.01, z0 + t, z1 - t))); q.uv[mat] = uvf
     q.add('papelao', caixa(x0 + t, x1 - t, y0 + t, y0 + t + 0.0008, z0 + t, z1 - t))
     q.add('plastico_branco', caixa(x0 + t, x1 - t, yt - bandeja, yt - bandeja + 0.0015, z0 + t, z1 - t))       # bandeja
@@ -965,7 +967,7 @@ CAB = {
                     'ruido_m': 'raio em que os zumbis ouvem o tiro', 'durabilidade': 'tiros até precisar de reparo',
                     'modificadores': 'multiplicadores aplicados à arma pelo acessório', 'valor_troca': 'preço na troca entre comunidades'},
 }
-NOMES = {'revolver': 'Revólveres', 'recarga': 'Recarga rápida', 'empunhadura': 'Empunhaduras', 'coldre': 'Coldres', 'pistola': 'Pistolas', 'boca': 'Boca do cano', 'trilho': 'Trilho', 'mira': 'Miras', 'carregador': 'Carregadores',
+NOMES = {'espingarda': 'Espingardas', 'coronha': 'Coronhas', 'tubo': 'Tubo do carregador', 'lanterna': 'Lanternas', 'porta_cartuchos': 'Porta-cartuchos', 'bandoleira': 'Bandoleiras', 'revolver': 'Revólveres', 'recarga': 'Recarga rápida', 'empunhadura': 'Empunhaduras', 'coldre': 'Coldres', 'pistola': 'Pistolas', 'boca': 'Boca do cano', 'trilho': 'Trilho', 'mira': 'Miras', 'carregador': 'Carregadores',
          'municao': 'Munição', 'estojo': 'Estojos', 'caixa': 'Caixas de munição', 'efeito': 'Efeitos'}
 
 

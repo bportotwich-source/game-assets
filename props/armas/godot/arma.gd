@@ -91,11 +91,13 @@ func atributo(nome: String) -> float:
 
 ## Tiros por carregador, contando um carregador trocado (ex.: estendido de 24).
 func capacidade() -> int:
+	var extra := 0
 	for no in instalados:
 		var a := item(instalados[no])
 		if a.has("capacidade"):
 			return int(a["capacidade"])
-	return int(dados.get("capacidade", 0))
+		extra += int(a.get("capacidade_extra", 0))     # ex.: prolongador do tubo da espingarda (+1)
+	return int(dados.get("capacidade", 0)) + extra
 
 
 func tocar(nome: String) -> void:
@@ -110,11 +112,18 @@ func atirar() -> bool:
 	municao -= 1
 	tocar("atirar_ultimo" if municao == 0 and anim.has_animation("atirar_ultimo") else "atirar")
 	_clarao()
-	get_tree().create_timer(0.04).timeout.connect(_estojo)
+	get_tree().create_timer(float(dados.get("estojo_s", 0.04))).timeout.connect(_estojo)   # espingarda: casca sai no bombeamento
 	return true
 
 
 func recarregar(quantos := -1) -> void:
+	if dados.get("recarga_por_cartucho", false):     # espingarda: um cartucho por vez (a animação "recarregar" é de um cartucho)
+		var alvo := capacidade() if quantos < 0 else quantos
+		if municao == 0 and anim.has_animation("recarregar_vazia"):
+			tocar("recarregar_vazia"); await anim.animation_finished; municao = 1
+		while municao < alvo:
+			tocar("recarregar"); await anim.animation_finished; municao += 1
+		return
 	tocar("recarregar_vazia" if municao == 0 and anim.has_animation("recarregar_vazia") else "recarregar")
 	municao = capacidade() if quantos < 0 else quantos
 
@@ -135,7 +144,7 @@ func _estojo() -> void:
 	var mun := item(dados.get("municao", ""))
 	if s == null or mun.is_empty():
 		return
-	var estojo_id := String(mun["id"]).replace("municao_", "estojo_")
+	var estojo_id := String(mun.get("estojo", String(mun["id"]).replace("municao_", "estojo_")))
 	var e := item(estojo_id)
 	if e.is_empty():
 		return

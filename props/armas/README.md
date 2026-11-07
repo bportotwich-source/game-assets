@@ -72,13 +72,15 @@ arma.recarregar()
 
 ## Lista completa (roteiro)
 
-Uma arma por vez, sempre **junto com os seus acessórios**. Cada uma entra numa PR.
+Uma arma por vez, sempre **junto com os seus acessórios**. Ordem atual (fotos de referência do Bruno, só inspiração): espingarda 12, carabina .308 (chassi e caça), fuzil 5,56, fuzil estilo AK, submetralhadoras compacta e de tambor, rifle .22, sinalizadora, fuzil de precisão 7,62 e pistola de serviço com trilho.
+
+A espingarda recarrega **um cartucho por vez** (`recarga_por_cartucho`, a animação `recarregar` é de um cartucho) e solta a casca no bombeamento (`estojo_s` = 0,36 s).
 
 | # | Arma | Partes móveis | Acessórios novos | Situação |
 |---|---|---|---|---|
 | 1 | **Pistola Sentinela 9 mm** | ferrolho, cano, gatilho, carregador | mira de ponto vermelho compacta, supressor 9 mm, supressor de garrafa PET, compensador, protetor de rosca, lanterna de trilho, laser, lanterna com laser, carregador 15 e estendido 24; cartucho, estojo, caixa de 50, clarão | **feita** |
 | 2 | **Revólver Vigia .38** de 6 tiros | braço e tambor (abre de lado e gira 60° por tiro), extrator com estrela, cão, gatilho, trava, talas | carregador rápido, mira de ponto vermelho para revólver, talas de madeira e empunhadura de borracha, coldre de couro; cartucho, estojo e caixa de 50 .38 | **feita** |
-| 3 | Espingarda de bombeamento calibre 12 | telha (soca), ferrolho, gatilho, portinhola | coronha de pistola, porta-cartuchos de coronha, lanterna de cano, prolongador do tubo, choke, bandoleira, cartuchos 12 (chumbo e balote) e caixa | próxima |
+| 3 | **Espingarda Mutirão 12** de bombeamento, longa e curta | telha (bombeia), ferrolho, gatilho, elevador, tampa do tubo | coronha retrátil e fixa (sem coronha = só punho), mira de ponto vermelho de tubo com tampas basculantes, choke estendido, freio dentado de arrombamento, lanterna de cano, prolongador do tubo (+1), porta-cartuchos lateral (6), bandoleira; cartuchos 12 de chumbo e balote, casca e caixa de 25 | **feita** |
 | 4 | Espingarda de cano duplo (e versão de cano serrado) | canos basculantes, cães, extrator | cinta de cartuchos, coronha encurtada | |
 | 5 | Carabina de ferrolho .308 | ferrolho (gira e corre), gatilho, carregador | luneta 3-9×, luneta 4× fixa, bipé, bandoleira, freio de boca, supressor de fuzil, munição .308 | |
 | 6 | Fuzil semiautomático 5,56 | ferrolho, alavanca de manejo, carregador, retém, seletor, tampa da janela | mira holográfica, ponto vermelho tubular, luneta 1-6×, miras de ferro rebatíveis, empunhadura vertical e angulada, lanterna de fuzil, laser, bipé, coronha retrátil e fixa, quebra-chamas, compensador, supressor, carregador 30 e tambor 60 | |

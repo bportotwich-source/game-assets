@@ -18,11 +18,12 @@ Módulo de parede 2 m; andar 3 m; térreo 3,2 m; parede externa 0,3 m; interna 0
 - Lajes, telhado, caixa d'água: centro da base.
 - Escada em U: centro da borda aberta do núcleo, na cota do andar de baixo.
 
-## Texturas
-Embutidas nos GLB, com UVs projetadas em metros, então continuam sem emenda entre módulos vizinhos.
-- `brick` (`brick_texture.png`): bloco de 1×1 m, 8 fiadas de 0,125 m, tijolos de 0,25 m em amarração corrida. Fachada dos andares.
-- `stone` (`stone_texture.png`): bloco de 1×0,8 m, blocos de pedra de 1,0×0,4 m em amarração corrida (8 fiadas no térreo de 3,2 m). Térreo, peitoris de pedra, degrau.
-- `plaster` (`plaster_texture.png`): reboco fosco de 1×1 m, sem repetição visível. Paredes internas e faces internas das externas; faces horizontais ficam em cor lisa.
+## Alto detalhe
+Versão refeita com `scripts/detalhe/retrofit.py`, sem mudar planta nem encaixes:
+- **Janelas:** caixilho com batente, 2 folhas de guilhotina com baguetes e vidro, peitoril com caimento e pingadeira.
+- **Portas:** almofadas rebaixadas e chanfradas, vidro com baguetes na porta de entrada, maçaneta e dobradiças.
+- **Texturas PBR** (cor + normal + ORM, ladrilho de 2 m, JPEG dentro dos GLB, UVs em metros): `brick` nos andares, `stone` no térreo, peitoris de pedra e degrau, `plaster` no interno.
+- Prédio montado com cerca de 134 mil triângulos (antes 54 mil).
 
 ## Peças (38)
 | Grupo | Peças |

@@ -27,6 +27,7 @@ Pacote de assets 3D modulares e originais para montar cenários de jogos. As pe�
 | [`kits/biblioteca/`](kits/biblioteca/) | Biblioteca: bloco neoclássico de pedra sobre pódio, pórtico de seis colunas com frontão, salão central sob cúpula de cobre, galerias e escada (31 peças) |
 | [`kits/escolinha/`](kits/escolinha/) | Escolinha: escola de uma sala de tábuas vermelhas sobre tijolo, vestíbulo com frontão, cúpula do sino, chaminé, tablado e telheiro de lenha (32 peças) |
 | [`kits/three-flats/`](kits/three-flats/) | Three-flats: dois prédios de três apartamentos (tijolo e pedra cinza), bay windows redonda e chanfrada, porão, escadinha de pedra, escada em U e varandas de madeira nos fundos (70 peças) |
+| [`kits/correios/`](kits/correios/) | Agência dos correios: tijolo com quinas de pedra, janelas em arco, telhado de quatro águas com cúpula de cobre, escada e rampa na entrada, doca de carga com marquise, caixas postais e guichês (42 peças) |
 | [`visitar/`](visitar/) + `project.godot` | Projeto Godot 4 para andar dentro de qualquer kit em primeira pessoa, com colisão e portas que abrem |
 | [`scripts/`](scripts/) | Portas que abrem e fecham: Godot 4 (`godot/`) e Unity (`unity/`) |
 

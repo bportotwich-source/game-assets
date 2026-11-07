@@ -6102,11 +6102,11 @@
    ]
   },
   {
-   "piece": "fire_escape_stairs_ground",
+   "piece": "fire_escape_flight_ground",
    "pos": [
     8.0,
     0,
-    3
+    -0.2
    ],
    "rotY": 90,
    "tags": [
@@ -6117,22 +6117,7 @@
    ]
   },
   {
-   "piece": "fire_escape_platform_stairwell",
-   "pos": [
-    8.0,
-    3.25,
-    2
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor1"
-   ]
-  },
-  {
-   "piece": "fire_escape_platform_stairwell",
+   "piece": "fire_escape_landing_b",
    "pos": [
     8.0,
     3.25,
@@ -6147,11 +6132,11 @@
    ]
   },
   {
-   "piece": "fire_escape_end_rail",
+   "piece": "fire_escape_flight_a",
    "pos": [
     8.0,
     3.25,
-    3
+    0.2
    ],
    "rotY": 90,
    "tags": [
@@ -6162,67 +6147,7 @@
    ]
   },
   {
-   "piece": "fire_escape_stairs_3m",
-   "pos": [
-    8.0,
-    3.25,
-    3
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor1"
-   ]
-  },
-  {
-   "piece": "fire_escape_platform",
-   "pos": [
-    8.0,
-    3.25,
-    -2
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor1"
-   ]
-  },
-  {
-   "piece": "fire_escape_end_rail",
-   "pos": [
-    8.0,
-    3.25,
-    -3
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor1"
-   ]
-  },
-  {
-   "piece": "fire_escape_platform_stairwell",
-   "pos": [
-    8.0,
-    6.25,
-    2
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor2"
-   ]
-  },
-  {
-   "piece": "fire_escape_platform_stairwell",
+   "piece": "fire_escape_landing_a",
    "pos": [
     8.0,
     6.25,
@@ -6237,11 +6162,11 @@
    ]
   },
   {
-   "piece": "fire_escape_end_rail",
+   "piece": "fire_escape_flight_b",
    "pos": [
     8.0,
     6.25,
-    3
+    -0.2
    ],
    "rotY": 90,
    "tags": [
@@ -6252,67 +6177,7 @@
    ]
   },
   {
-   "piece": "fire_escape_stairs_3m",
-   "pos": [
-    8.0,
-    6.25,
-    3
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor2"
-   ]
-  },
-  {
-   "piece": "fire_escape_platform",
-   "pos": [
-    8.0,
-    6.25,
-    -2
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor2"
-   ]
-  },
-  {
-   "piece": "fire_escape_end_rail",
-   "pos": [
-    8.0,
-    6.25,
-    -3
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor2"
-   ]
-  },
-  {
-   "piece": "fire_escape_platform_stairwell",
-   "pos": [
-    8.0,
-    9.25,
-    2
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor3"
-   ]
-  },
-  {
-   "piece": "fire_escape_platform_stairwell",
+   "piece": "fire_escape_landing_b",
    "pos": [
     8.0,
     9.25,
@@ -6327,11 +6192,11 @@
    ]
   },
   {
-   "piece": "fire_escape_end_rail",
+   "piece": "fire_escape_flight_a",
    "pos": [
     8.0,
     9.25,
-    3
+    0.2
    ],
    "rotY": 90,
    "tags": [
@@ -6342,71 +6207,11 @@
    ]
   },
   {
-   "piece": "fire_escape_stairs_3m",
-   "pos": [
-    8.0,
-    9.25,
-    3
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor3"
-   ]
-  },
-  {
-   "piece": "fire_escape_platform",
-   "pos": [
-    8.0,
-    9.25,
-    -2
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor3"
-   ]
-  },
-  {
-   "piece": "fire_escape_end_rail",
-   "pos": [
-    8.0,
-    9.25,
-    -3
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor3"
-   ]
-  },
-  {
-   "piece": "fire_escape_platform",
+   "piece": "fire_escape_landing_a",
    "pos": [
     8.0,
     12.25,
-    -2
-   ],
-   "rotY": 90,
-   "tags": [
-    "right",
-    "fire_escape",
-    "ext",
-    "floor4"
-   ]
-  },
-  {
-   "piece": "fire_escape_end_rail",
-   "pos": [
-    8.0,
-    12.25,
-    -3
+    0
    ],
    "rotY": 90,
    "tags": [

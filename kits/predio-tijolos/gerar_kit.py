@@ -273,6 +273,48 @@ def fire_escape_stairs(rise=H,run=4.0,w=0.9):
     p.seg('iron',(0,1.0,z1),(run,rise+1.0,z1),0.05)
     for i in range(0,n+1,3): xx=i*tr; yy=i*st; p.box('iron',xx-0.02,xx+0.02,yy,yy+1.0,z1-0.02,z1+0.02)
     return p
+# --- Zigzag fire escape (2026-11-07): one 6 m landing per floor, flights alternate direction ---
+FE_U=3.0; FE_HOLE=(0.2,3.0)   # flights run in the outer strip (z 1..2) between |u|=0.2 and 3.0
+def fe_landing(hole):
+    """Full 6 x 2 m landing (local x = along the facade, z = out from the wall, deck top y=0).
+    hole='b': opening for a flight arriving from below in x 0.2..3 ; hole='a': mirrored (x -3..-0.2)."""
+    p=Piece(); s=1 if hole=='b' else -1; h0,h1=sorted((s*FE_HOLE[0],s*FE_HOLE[1]))
+    so0,so1=(-FE_U,h0) if s>0 else (h1,FE_U)            # solid part of the outer strip
+    p.box('iron',-FE_U,FE_U,-0.06,-0.02,0,FE_W); p.box('iron',so0,so1,-0.06,-0.02,FE_W,FE_D)
+    for i in range(int(FE_W/0.1)):
+        zz=0.03+i*0.1; p.box('iron',-FE_U,FE_U,-0.02,0,zz,zz+0.05)
+    for i in range(int((FE_D-FE_W)/0.1)):
+        zz=FE_W+0.03+i*0.1; p.box('iron',so0,so1,-0.02,0,zz,zz+0.05)
+    p.box('iron',-FE_U,FE_U,-0.16,-0.06,0,0.05)                      # wall beam
+    p.box('iron',so0,so1,-0.16,-0.06,FE_D-0.05,FE_D)                 # outer beam
+    p.box('iron',h0,h1,-0.16,-0.06,FE_W-0.05,FE_W)                   # beam along the opening
+    for xx in (-FE_U,FE_U-0.05): p.box('iron',xx,xx+0.05,-0.16,-0.06,0.05,FE_D-0.05 if (xx<0)==(s>0) else FE_W-0.05)
+    e=(h0 if s>0 else h1); p.box('iron',e-0.025,e+0.025,-0.16,-0.06,FE_W,FE_D-0.05)   # opening end beam
+    for xx in (-FE_U+0.1,-1.0,1.0,FE_U-0.1):
+        zb=FE_D*0.8 if so0<=xx<=so1 else FE_W*0.8
+        p.seg('iron',(xx,-0.7,0.02),(xx,-0.14,zb),0.05)
+    fe_rail_run(p,(so0+0.02,FE_D-0.02),(so1-0.02,FE_D-0.02))         # outer edge
+    for xx in (-FE_U+0.02,FE_U-0.02): fe_rail_run(p,(xx,0.05),(xx,FE_D-0.02))   # both ends
+    e2=e-0.02*s; fe_rail_run(p,(e2,FE_W+0.02),(e2,FE_D-0.04))        # closes the opening on the inner end
+    g0,g1=sorted((e2,s*(FE_U-0.9)))                                   # guard on the walkway side, open 0.9 m where the flight arrives
+    fe_rail_run(p,(g0,FE_W-0.02),(g1,FE_W-0.02))
+    return p
+def fe_flight(rise,s=1,run=FE_HOLE[1]-FE_HOLE[0]):
+    """Steep fire-escape flight in the outer strip. Pivot: bottom end at x=0, rises toward s*x, arrives at x=s*run."""
+    p=Piece(); n=math.ceil(rise/0.18-1e-6); tr=run/n; st=rise/n; z0=FE_W+0.05; z1=FE_D-0.05
+    for i in range(n):
+        a,b=sorted((s*i*tr,s*(i+1)*tr)); top=(i+1)*st
+        p.box('iron',a,b,top-0.04,top,z0,z1)
+        for k in range(1,3): p.box('dark',a+0.02,b-0.02,top-0.005,top+0.003,z0+k*(z1-z0)/3-0.01,z0+k*(z1-z0)/3+0.01)
+    for z in (z0,z1): p.seg('iron',(0,0,z),(s*run,rise,z),0.06)
+    p.seg('iron',(0,1.0,z1),(s*run,rise+1.0,z1),0.05)                # outer handrail, full length
+    xa,xb=0.9,run-0.9                                                  # inner handrail leaves room to step on and off
+    p.seg('iron',(s*xa,xa/run*rise+1.0,z0),(s*xb,xb/run*rise+1.0,z0),0.05)
+    for i in range(0,n+1,3):
+        xx=i*tr; yy=i*st
+        p.box('iron',s*xx-0.02,s*xx+0.02,yy,yy+1.0,z1-0.02,z1+0.02)
+        if xa<=xx<=xb: p.box('iron',s*xx-0.02,s*xx+0.02,yy,yy+1.0,z0-0.02,z0+0.02)
+    return p
 def entrance_canopy():
     p=Piece(); x=0.9; d=1.0
     p.box('dark',-x,x,0,0.14,0,d); p.box('iron',-x-0.02,x+0.02,0.14,0.18,-0.02,d+0.02)
@@ -456,7 +498,7 @@ pieces={'floor_tile':floor_tile(),'floor_tile_bath':floor_tile_bath(),'stair_cor
  'corner_brick':corner('brick',H,0.08,0.04),'corner_ground':corner('stone',HG,0.2,0.08,True),
  'cornice_parapet':cornice(),'cornice_parapet_corner':cornice(True),'cornice_parapet_opening':cornice(gap=1.2),'roof_tile':roof_tile(),
  'roof_stair_hut':roof_stair_hut(),'water_tower':water_tower(),
- 'balcony':balcony(),'fire_escape_platform':fire_escape_platform(),'fire_escape_platform_stairwell':fire_escape_platform_stairwell(),'fire_escape_end_rail':fire_escape_end_rail(),'fire_escape_stairs_3m':fire_escape_stairs(H),'fire_escape_stairs_ground':fire_escape_stairs(HG+0.05),
+ 'balcony':balcony(),'fire_escape_landing_a':fe_landing('a'),'fire_escape_landing_b':fe_landing('b'),'fire_escape_flight_a':fe_flight(H,-1),'fire_escape_flight_b':fe_flight(H,1),'fire_escape_flight_ground':fe_flight(HG+0.05,1),
  'entrance_canopy':entrance_canopy(),
  
  
@@ -557,13 +599,14 @@ for fl in (1,2,3):
 # fire escape on the right face (+X): local x = u, flights climb toward -Z
 def fe(n,u,y,fl): put(n,SX,y,-u,90,['right','fire_escape','ext',ftag(fl)])
 levels=[lvl(f)+0.05 for f in (1,2,3,4)]
-fe('fire_escape_stairs_ground',-3,0,0)
+# zigzag: ground flight rises toward +u into floor 1; then the flights alternate direction floor by floor
+fe('fire_escape_flight_ground',FE_HOLE[0],0,0)
 for i,yv in enumerate(levels):
-    fl=i+1; top=(fl==4)
-    if not top:
-        fe('fire_escape_platform_stairwell',-2,yv,fl); fe('fire_escape_platform_stairwell',0,yv,fl)
-        fe('fire_escape_end_rail',-3,yv,fl); fe('fire_escape_stairs_3m',-3,yv,fl)
-    fe('fire_escape_platform',2,yv,fl); fe('fire_escape_end_rail',3,yv,fl)
+    fl=i+1; arrive='b' if fl%2 else 'a'
+    fe(f'fire_escape_landing_{arrive}',0,yv,fl)
+    if fl<4:
+        go='a' if arrive=='b' else 'b'
+        fe(f'fire_escape_flight_{go}',(-FE_HOLE[0] if go=='a' else FE_HOLE[0]),yv,fl)
 # entrance + street
 put('door_leaf_entrance',1-0.48,0,SZ-0.18,0,['front','ext',ftag(0)],door=85); put('entrance_canopy',1,2.6,SZ,0,['front','ext',ftag(0)])
 put('water_tower',4.5,lvl(4),1.5,0,['roof'])

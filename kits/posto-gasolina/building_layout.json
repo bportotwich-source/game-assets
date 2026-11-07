@@ -1,0 +1,2947 @@
+{
+ "grid": {
+  "module_width": 2.0,
+  "wall_height": 4.0,
+  "wall_thickness": 0.3,
+  "slab": 0.2,
+  "footprint": [
+   18,
+   22
+  ],
+  "store": {
+   "x": [
+    -7,
+    7
+   ],
+   "z": [
+    -10,
+    -2
+   ],
+   "roof": "flat, blue parapet"
+  },
+  "canopy": {
+   "x": [
+    -9,
+    9
+   ],
+   "z": [
+    2,
+    12
+   ],
+   "clear_height": 5.0
+  }
+ },
+ "placements": [
+  {
+   "piece": "wall_store_plain",
+   "pos": [
+    -6,
+    0,
+    -2
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wall_store_plain",
+   "pos": [
+    -6,
+    0,
+    -10
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    -6,
+    4.0,
+    -2
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "roof"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    -6,
+    4.0,
+    -10
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wall_store_storefront",
+   "pos": [
+    -4,
+    0,
+    -2
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wall_store_service_door",
+   "pos": [
+    -4,
+    0,
+    -10
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    -4,
+    4.0,
+    -2
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "roof"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    -4,
+    4.0,
+    -10
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wall_store_storefront",
+   "pos": [
+    -2,
+    0,
+    -2
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wall_store_plain",
+   "pos": [
+    -2,
+    0,
+    -10
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    -2,
+    4.0,
+    -2
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "roof"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    -2,
+    4.0,
+    -10
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wall_store_entry",
+   "pos": [
+    0,
+    0,
+    -2
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wall_store_small_window",
+   "pos": [
+    0,
+    0,
+    -10
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    0,
+    4.0,
+    -2
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "roof"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    0,
+    4.0,
+    -10
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wall_store_storefront",
+   "pos": [
+    2,
+    0,
+    -2
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wall_store_plain",
+   "pos": [
+    2,
+    0,
+    -10
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    2,
+    4.0,
+    -2
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "roof"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    2,
+    4.0,
+    -10
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wall_store_storefront",
+   "pos": [
+    4,
+    0,
+    -2
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wall_store_small_window",
+   "pos": [
+    4,
+    0,
+    -10
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    4,
+    4.0,
+    -2
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "roof"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    4,
+    4.0,
+    -10
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wall_store_plain",
+   "pos": [
+    6,
+    0,
+    -2
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wall_store_small_window",
+   "pos": [
+    6,
+    0,
+    -10
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    6,
+    4.0,
+    -2
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "roof"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    6,
+    4.0,
+    -10
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wall_store_plain",
+   "pos": [
+    7,
+    0,
+    -9
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wall_store_plain",
+   "pos": [
+    -7,
+    0,
+    -9
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    7,
+    4.0,
+    -9
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "roof"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    -7,
+    4.0,
+    -9
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wall_store_plain",
+   "pos": [
+    7,
+    0,
+    -7
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wall_store_plain",
+   "pos": [
+    -7,
+    0,
+    -7
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    7,
+    4.0,
+    -7
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "roof"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    -7,
+    4.0,
+    -7
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wall_store_plain",
+   "pos": [
+    7,
+    0,
+    -5
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wall_store_plain",
+   "pos": [
+    -7,
+    0,
+    -5
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    7,
+    4.0,
+    -5
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "roof"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    -7,
+    4.0,
+    -5
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wall_store_storefront",
+   "pos": [
+    7,
+    0,
+    -3
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wall_store_storefront",
+   "pos": [
+    -7,
+    0,
+    -3
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    7,
+    4.0,
+    -3
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "roof"
+   ]
+  },
+  {
+   "piece": "parapet",
+   "pos": [
+    -7,
+    4.0,
+    -3
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "roof"
+   ]
+  },
+  {
+   "piece": "corner_store",
+   "pos": [
+    7,
+    0,
+    -2
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "right",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "parapet_corner",
+   "pos": [
+    7,
+    4.0,
+    -2
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "right",
+    "roof"
+   ]
+  },
+  {
+   "piece": "corner_store",
+   "pos": [
+    7,
+    0,
+    -10
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "back",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "parapet_corner",
+   "pos": [
+    7,
+    4.0,
+    -10
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "back",
+    "roof"
+   ]
+  },
+  {
+   "piece": "corner_store",
+   "pos": [
+    -7,
+    0,
+    -10
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "left",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "parapet_corner",
+   "pos": [
+    -7,
+    4.0,
+    -10
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "left",
+    "roof"
+   ]
+  },
+  {
+   "piece": "corner_store",
+   "pos": [
+    -7,
+    0,
+    -2
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "front",
+    "store",
+    "ext",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "parapet_corner",
+   "pos": [
+    -7,
+    4.0,
+    -2
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "front",
+    "roof"
+   ]
+  },
+  {
+   "piece": "door_leaf_glass",
+   "pos": [
+    -0.84,
+    0.015,
+    -2.14
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "store",
+    "ext",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0,
+    "open": -85
+   }
+  },
+  {
+   "piece": "door_leaf_glass",
+   "pos": [
+    0.84,
+    0.015,
+    -2.14
+   ],
+   "rotY": 180,
+   "tags": [
+    "front",
+    "store",
+    "ext",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 180,
+    "open": 265
+   }
+  },
+  {
+   "piece": "door_leaf_service",
+   "pos": [
+    -3.57,
+    0.015,
+    -9.82
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "store",
+    "ext",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 180,
+    "open": 265
+   }
+  },
+  {
+   "piece": "storage_floor",
+   "pos": [
+    -6,
+    0,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    -6,
+    4.0,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "storage_floor",
+   "pos": [
+    -6,
+    0,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    -6,
+    4.0,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "store_floor",
+   "pos": [
+    -6,
+    0,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    -6,
+    4.0,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "store_floor",
+   "pos": [
+    -6,
+    0,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    -6,
+    4.0,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "storage_floor",
+   "pos": [
+    -4,
+    0,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    -4,
+    4.0,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "storage_floor",
+   "pos": [
+    -4,
+    0,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    -4,
+    4.0,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "store_floor",
+   "pos": [
+    -4,
+    0,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    -4,
+    4.0,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "store_floor",
+   "pos": [
+    -4,
+    0,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    -4,
+    4.0,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "storage_floor",
+   "pos": [
+    -2,
+    0,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    -2,
+    4.0,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "storage_floor",
+   "pos": [
+    -2,
+    0,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    -2,
+    4.0,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "store_floor",
+   "pos": [
+    -2,
+    0,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    -2,
+    4.0,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "store_floor",
+   "pos": [
+    -2,
+    0,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    -2,
+    4.0,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "floor_tile",
+   "pos": [
+    0,
+    0,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    0,
+    4.0,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "floor_tile",
+   "pos": [
+    0,
+    0,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    0,
+    4.0,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "store_floor",
+   "pos": [
+    0,
+    0,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    0,
+    4.0,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "store_floor",
+   "pos": [
+    0,
+    0,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    0,
+    4.0,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "floor_tile",
+   "pos": [
+    2,
+    0,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    2,
+    4.0,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "floor_tile",
+   "pos": [
+    2,
+    0,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    2,
+    4.0,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "store_floor",
+   "pos": [
+    2,
+    0,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    2,
+    4.0,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "store_floor",
+   "pos": [
+    2,
+    0,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    2,
+    4.0,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "floor_tile_bath",
+   "pos": [
+    4,
+    0,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    4,
+    4.0,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "floor_tile_bath",
+   "pos": [
+    4,
+    0,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    4,
+    4.0,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "store_floor",
+   "pos": [
+    4,
+    0,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    4,
+    4.0,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "store_floor",
+   "pos": [
+    4,
+    0,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    4,
+    4.0,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "floor_tile_bath",
+   "pos": [
+    6,
+    0,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    6,
+    4.0,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "floor_tile_bath",
+   "pos": [
+    6,
+    0,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    6,
+    4.0,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "store_floor",
+   "pos": [
+    6,
+    0,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    6,
+    4.0,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "store_floor",
+   "pos": [
+    6,
+    0,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tile",
+   "pos": [
+    6,
+    4.0,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "ac_unit",
+   "pos": [
+    -3,
+    4.0,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "ac_unit",
+   "pos": [
+    3,
+    4.0,
+    -8
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "interior_wall_end",
+   "pos": [
+    -6,
+    0,
+    -6
+   ],
+   "rotY": 180,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "interior_wall_doorway",
+   "pos": [
+    -4,
+    0,
+    -6
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "interior_wall_plain",
+   "pos": [
+    -2,
+    0,
+    -6
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "interior_wall_doorway",
+   "pos": [
+    0,
+    0,
+    -6
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "interior_wall_plain",
+   "pos": [
+    2,
+    0,
+    -6
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "interior_wall_doorway",
+   "pos": [
+    4,
+    0,
+    -6
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "interior_wall_end_doorway",
+   "pos": [
+    6,
+    0,
+    -6
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "interior_wall_end",
+   "pos": [
+    -1,
+    0,
+    -9
+   ],
+   "rotY": 90,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "interior_wall_plain",
+   "pos": [
+    -1,
+    0,
+    -7
+   ],
+   "rotY": 90,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "interior_wall_end",
+   "pos": [
+    3,
+    0,
+    -9
+   ],
+   "rotY": 90,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "interior_wall_plain",
+   "pos": [
+    3,
+    0,
+    -7
+   ],
+   "rotY": 90,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "interior_wall_end",
+   "pos": [
+    5,
+    0,
+    -9
+   ],
+   "rotY": 90,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "interior_wall_plain",
+   "pos": [
+    5,
+    0,
+    -7
+   ],
+   "rotY": 90,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "door_leaf_interior",
+   "pos": [
+    -4.43,
+    0,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0,
+    "open": 85
+   }
+  },
+  {
+   "piece": "door_leaf_interior",
+   "pos": [
+    -0.43,
+    0,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0,
+    "open": 85
+   }
+  },
+  {
+   "piece": "door_leaf_interior",
+   "pos": [
+    3.57,
+    0,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0,
+    "open": 85
+   }
+  },
+  {
+   "piece": "door_leaf_interior",
+   "pos": [
+    5.57,
+    0,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0,
+    "open": 85
+   }
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    -8,
+    0,
+    3
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    -8,
+    0,
+    5
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    -8,
+    0,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    -8,
+    0,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    -8,
+    0,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    -8,
+    0,
+    12
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "front"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    -8,
+    0,
+    2
+   ],
+   "rotY": 180,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    -6,
+    0,
+    3
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    -6,
+    0,
+    5
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    -6,
+    0,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    -6,
+    0,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    -6,
+    0,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    -6,
+    0,
+    12
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "front"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    -6,
+    0,
+    2
+   ],
+   "rotY": 180,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    -4,
+    0,
+    3
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    -4,
+    0,
+    5
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    -4,
+    0,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    -4,
+    0,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    -4,
+    0,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    -4,
+    0,
+    12
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "front"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    -4,
+    0,
+    2
+   ],
+   "rotY": 180,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    -2,
+    0,
+    3
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    -2,
+    0,
+    5
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    -2,
+    0,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    -2,
+    0,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    -2,
+    0,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    -2,
+    0,
+    12
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "front"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    -2,
+    0,
+    2
+   ],
+   "rotY": 180,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    0,
+    0,
+    3
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    0,
+    0,
+    5
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    0,
+    0,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    0,
+    0,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    0,
+    0,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    0,
+    0,
+    12
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "front"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    0,
+    0,
+    2
+   ],
+   "rotY": 180,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    2,
+    0,
+    3
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    2,
+    0,
+    5
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    2,
+    0,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    2,
+    0,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    2,
+    0,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    2,
+    0,
+    12
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "front"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    2,
+    0,
+    2
+   ],
+   "rotY": 180,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    4,
+    0,
+    3
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    4,
+    0,
+    5
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    4,
+    0,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    4,
+    0,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    4,
+    0,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    4,
+    0,
+    12
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "front"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    4,
+    0,
+    2
+   ],
+   "rotY": 180,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    6,
+    0,
+    3
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    6,
+    0,
+    5
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    6,
+    0,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    6,
+    0,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    6,
+    0,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    6,
+    0,
+    12
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "front"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    6,
+    0,
+    2
+   ],
+   "rotY": 180,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    8,
+    0,
+    3
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    8,
+    0,
+    5
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    8,
+    0,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    8,
+    0,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_panel",
+   "pos": [
+    8,
+    0,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    8,
+    0,
+    12
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy",
+    "front"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    8,
+    0,
+    2
+   ],
+   "rotY": 180,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    9,
+    0,
+    3
+   ],
+   "rotY": 90,
+   "tags": [
+    "canopy",
+    "right"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    -9,
+    0,
+    3
+   ],
+   "rotY": -90,
+   "tags": [
+    "canopy",
+    "left"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    9,
+    0,
+    5
+   ],
+   "rotY": 90,
+   "tags": [
+    "canopy",
+    "right"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    -9,
+    0,
+    5
+   ],
+   "rotY": -90,
+   "tags": [
+    "canopy",
+    "left"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    9,
+    0,
+    7
+   ],
+   "rotY": 90,
+   "tags": [
+    "canopy",
+    "right"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    -9,
+    0,
+    7
+   ],
+   "rotY": -90,
+   "tags": [
+    "canopy",
+    "left"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    9,
+    0,
+    9
+   ],
+   "rotY": 90,
+   "tags": [
+    "canopy",
+    "right"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    -9,
+    0,
+    9
+   ],
+   "rotY": -90,
+   "tags": [
+    "canopy",
+    "left"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    9,
+    0,
+    11
+   ],
+   "rotY": 90,
+   "tags": [
+    "canopy",
+    "right"
+   ]
+  },
+  {
+   "piece": "canopy_fascia",
+   "pos": [
+    -9,
+    0,
+    11
+   ],
+   "rotY": -90,
+   "tags": [
+    "canopy",
+    "left"
+   ]
+  },
+  {
+   "piece": "canopy_fascia_corner",
+   "pos": [
+    9,
+    0,
+    12
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "canopy_fascia_corner",
+   "pos": [
+    9,
+    0,
+    2
+   ],
+   "rotY": 90,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "canopy_fascia_corner",
+   "pos": [
+    -9,
+    0,
+    2
+   ],
+   "rotY": 180,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "canopy_fascia_corner",
+   "pos": [
+    -9,
+    0,
+    12
+   ],
+   "rotY": -90,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "pump_island",
+   "pos": [
+    0,
+    0,
+    4.5
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "canopy_column",
+   "pos": [
+    -2.7,
+    0.15,
+    4.5
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "canopy_column",
+   "pos": [
+    2.7,
+    0.15,
+    4.5
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "fuel_pump",
+   "pos": [
+    -1.0,
+    0.15,
+    4.5
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "fuel_pump",
+   "pos": [
+    1.0,
+    0.15,
+    4.5
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "pump_island",
+   "pos": [
+    0,
+    0,
+    9.5
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "canopy_column",
+   "pos": [
+    -2.7,
+    0.15,
+    9.5
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "canopy_column",
+   "pos": [
+    2.7,
+    0.15,
+    9.5
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "fuel_pump",
+   "pos": [
+    -1.0,
+    0.15,
+    9.5
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "fuel_pump",
+   "pos": [
+    1.0,
+    0.15,
+    9.5
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "price_pylon",
+   "pos": [
+    11,
+    0,
+    13
+   ],
+   "rotY": -30,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "dumpster_enclosure",
+   "pos": [
+    9.5,
+    0,
+    -8
+   ],
+   "rotY": 0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    -3,
+    0,
+    0.5
+   ],
+   "rotY": 0,
+   "tags": []
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    2,
+    0,
+    6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "canopy"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    3,
+    0,
+    -4
+   ],
+   "rotY": 0,
+   "tags": [
+    "store",
+    "floor0"
+   ]
+  }
+ ]
+}

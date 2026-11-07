@@ -18,11 +18,12 @@ Casa de família em enxaimel, com garagem anexa, em peças 3D (GLB), estilo toon
 - **Telhado da garagem:** `garage_roof*` com o mesmo pivô, colocado a 2,0 m de altura e girado ±90°. As versões `_house` têm beiral de 0,25 m, que entra na parede da casa.
 - **Oitões:** `gable_timbered` (8 m) e `garage_gable_front` / `garage_gable_back` (4 m) são peças únicas.
 
-## Texturas (embutidas nos GLB, UVs em metros)
-- `stone2`: pedra do térreo e do rodapé da garagem.
-- `render`: reboco creme entre as vigas e na garagem.
-- `roof_tiles`: telha de barro vermelha em fiadas de 0,25 m.
-- `plaster`: interno.
+## Alto detalhe
+Versão refeita com `scripts/detalhe/retrofit.py`, sem mudar planta nem encaixes:
+- **Janelas:** caixilho com batente, folhas de guilhotina com baguetes e vidro, peitoril com caimento e pingadeira.
+- **Portas:** almofadas rebaixadas e chanfradas, vidro com baguetes nas portas envidraçadas, maçaneta e dobradiças.
+- **Texturas PBR** (cor + normal + ORM, ladrilho de 2 m, JPEG dentro dos GLB, UVs em metros): `render` (reboco entre as madeiras), `stone2` (embasamento de pedra), `roof_tiles` (telhado), `plaster` (interno).
+- Montado com cerca de 47 mil triângulos (antes 24 mil).
 
 ## Peças (49)
 | Grupo | Peças |
@@ -39,4 +40,4 @@ Casa de família em enxaimel, com garagem anexa, em peças 3D (GLB), estilo toon
 As escadas vão de parede a parede da caixa de 4 m. Nos nomes, `_192_168` é a distância em cm do centro da caixa até a face da parede à esquerda e à direita; nas lajes, o último número é a faixa de laje atrás do patamar.
 
 ## Arquivos
-`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, texturas `*_texture.png`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a casa montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.
+`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a casa montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.

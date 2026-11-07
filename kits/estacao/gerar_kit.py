@@ -937,6 +937,9 @@ def floor_slab(mat,poly):
 def ceiling_hall():
     p=Piece(); plan_slab(p,'plaster',sbox(-IN,-IZ,IN,IZ),YC-SLAB,YC); return p
 
+import sys as _s; _s.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts', 'detalhe'))
+import retrofit
+retrofit.aplicar(globals(), {'brick': 'brick', 'roof': 'roof_tiles', 'plaster': 'plaster'})
 pieces={'floor_waiting':floor_slab('floor',sbox(-IN,-IZ,2.0,IZ)),'floor_freight':floor_slab('conc',sbox(2.0,-IZ,IN,IZ).difference(WC)),
  'floor_washroom':floor_slab('tile',WC),'ceiling_hall':ceiling_hall(),
  'interior_wall_plain':interior_wall(False,h=HI),'interior_wall_doorway':interior_wall(True,h=HI),
@@ -1024,5 +1027,5 @@ for e in L:
     if e['piece']=='player_scale_ref': continue
     Tm=trimesh.transformations.rotation_matrix(math.radians(e['rotY']),[0,1,0]); Tm[:3,3]=e['pos']
     asm.merge(pieces[e['piece']],Tm)
-asm.scene('building').export(f'{OUT}/building_assembled.glb',include_normals=True)
+print('triangulos no montado', retrofit.montar(pieces, L, f'{OUT}/building_assembled.glb')); retrofit.finalizar(f'{OUT}/pieces')
 print(len(pieces),'pieces',len(L),'placements',sum(1 for e in L if 'door' in e),'doors')

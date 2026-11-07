@@ -589,6 +589,9 @@ def player_ref():
     p=Piece(); c=trimesh.creation.capsule(height=1.8-0.6,radius=0.3,count=[8,8]); c.apply_transform(trimesh.transformations.rotation_matrix(-math.pi/2,[1,0,0])); c.apply_translation([0,0.9,0]); p.add('player',c)
     p.box('dark',-0.15,0.15,1.5,1.6,0.22,0.32); return p
 CHIM_H=round(lvl(1)+roof_out(HSP)+0.8,2)
+import sys as _s; _s.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts', 'detalhe'))
+import retrofit
+retrofit.aplicar(globals(), {'siding': 'siding', 'shingles': 'shingles', 'brick': 'brick', 'plaster': 'plaster'}, tabuas=0.14)
 pieces={'floor_tile':floor_tile(),'floor_tile_bath':floor_tile_bath(),'stair_core_slab':stair_core_slab(),'stair_core_rail':stair_core_rail(),
  'stairs_u_3m':stairs_u(H),
  'door_leaf_front':door_leaf(0.94,2.26,True,'door'),'door_leaf_back':door_leaf(0.94,2.26,False,'door'),'door_leaf_interior':door_leaf(0.86,2.08,False,'frame'),
@@ -746,5 +749,5 @@ for e in L:
     if e['piece']=='player_scale_ref': continue
     Tm=trimesh.transformations.rotation_matrix(math.radians(e['rotY']),[0,1,0]); Tm[:3,3]=e['pos']
     asm.merge(pieces[e['piece']],Tm)
-asm.scene('building').export(f'{OUT}/building_assembled.glb',include_normals=True)
+print('triangulos no montado', retrofit.montar(pieces, L, f'{OUT}/building_assembled.glb')); retrofit.finalizar(f'{OUT}/pieces')
 print(len(pieces),'pieces',len(L),'placements',sum(1 for e in L if 'door' in e),'doors')

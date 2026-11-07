@@ -24,10 +24,12 @@ Estação ferroviária de cidade pequena em peças 3D (GLB), estilo toon com con
 - **Torre:** `tower_wall` serve nas três faces livres. `tower_wall_east` encosta na `wall_tower_end` do salão, costas com costas, com as passagens alinhadas.
 - **Plataforma e trilho:** `platform` (6 m), `platform_tower` (8 m) e `track` têm pivô na borda e seguem para fora com rotação 180.
 
-## Texturas (embutidas nos GLB, UVs em metros)
-- `brick`: paredes.
-- `roof`: telha de barro.
-- `plaster`: interno.
+## Alto detalhe
+Versão refeita com `scripts/detalhe/retrofit.py`, sem mudar planta nem encaixes:
+- **Janelas:** caixilho com batente, folhas de guilhotina com baguetes e vidro, peitoril com caimento e pingadeira.
+- **Portas:** almofadas rebaixadas e chanfradas, vidro com baguetes nas portas envidraçadas, maçaneta e dobradiças.
+- **Texturas PBR** (cor + normal + ORM, ladrilho de 2 m, JPEG dentro dos GLB, UVs em metros): `brick` (fachada e torre), `roof` (telhas cerâmicas), `plaster` (interno).
+- Montado com cerca de 46 mil triângulos (antes 30 mil).
 
 ## Peças (47)
 | Grupo | Peças |
@@ -41,4 +43,4 @@ Estação ferroviária de cidade pequena em peças 3D (GLB), estilo toon com con
 | Referência | `player_scale_ref` |
 
 ## Arquivos
-`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, texturas `*_texture.png`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a estação montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.
+`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a estação montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.

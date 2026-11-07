@@ -31,10 +31,12 @@ Casa de família em enxaimel, com garagem anexa, em peças 3D (GLB), estilo toon
 | 1º andar enxaimel | `wall_timber_window`, `wall_timber_small_window`, `wall_timber_plain`, `corner_timber` |
 | Sótão e telhado | `knee_wall`, `knee_wall_dormer`, `corner_knee`, `gable_timbered`, `roof_slope`, `roof_slope_end`, `roof_slope_end_l`, `roof_slope_dormer`, `ridge_cap`, `ridge_cap_end`, `chimney` |
 | Garagem | `wall_garage_plain`, `wall_garage_window`, `corner_garage`, `garage_gable_front`, `garage_gable_back`, `garage_door_leaf`, `garage_floor`, `garage_roof`, `garage_roof_end`, `garage_roof_end_l`, `garage_roof_house`, `garage_roof_house_end`, `garage_ridge_cap`, `garage_ridge_cap_end` |
-| Pisos e escada | `floor_tile`, `floor_tile_bath`, `stair_core_slab`, `stair_core_rail`, `stairs_u_3m` |
+| Pisos e escada | `floor_tile`, `floor_tile_bath`, `stair_core_slab_192_168_29`, `stair_core_rail`, `stairs_u_3m_192_168` |
 | Paredes internas | `interior_wall_plain`, `interior_wall_doorway`, `interior_wall_end`, `interior_wall_end_doorway` |
 | Portas | `door_leaf_front`, `door_leaf_back`, `door_leaf_interior` |
 | Referência | `player_scale_ref` |
+
+As escadas vão de parede a parede da caixa de 4 m. Nos nomes, `_192_168` é a distância em cm do centro da caixa até a face da parede à esquerda e à direita; nas lajes, o último número é a faixa de laje atrás do patamar.
 
 ## Arquivos
 `pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, texturas `*_texture.png`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a casa montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.

@@ -29,13 +29,15 @@ Embutidas nos GLB, com UVs projetadas em metros, então continuam sem emenda ent
 |---|---|
 | Fachada térreo | `wall_ground_window`, `wall_ground_door`, `corner_ground` |
 | Fachada andares | `wall_brick_window`, `wall_brick_balcony_door`, `wall_brick_plain`, `corner_brick`, `balcony` |
-| Topo | `cornice_parapet`, `cornice_parapet_corner`, `cornice_parapet_opening`, `roof_tile`, `roof_stair_core`, `roof_stair_hut`, `water_tower` |
-| Pisos e escada | `floor_tile`, `floor_tile_bath`, `stair_core_slab`, `stair_core_rail`, `stairs_u_3m`, `stairs_u_3m2` |
+| Topo | `cornice_parapet`, `cornice_parapet_corner`, `cornice_parapet_opening`, `roof_tile`, `roof_stair_core_192_192_29`, `roof_stair_hut`, `water_tower` |
+| Pisos e escada | `floor_tile`, `floor_tile_bath`, `stair_core_slab_192_192_29`, `stair_core_rail`, `stairs_u_3m_192_192`, `stairs_u_3m2_192_192` |
 | Paredes internas | `interior_wall_plain`, `interior_wall_doorway`, `interior_wall_end` (1,7 m, termina na face interna da parede externa) e as versões `_ground` (3,0 m) |
 | Portas | `door_leaf_entrance`, `door_leaf_interior`, `door_leaf_balcony`, `door_leaf_hut` |
 | Escada de incêndio | `fire_escape_platform`, `fire_escape_platform_stairwell`, `fire_escape_end_rail`, `fire_escape_stairs_3m`, `fire_escape_stairs_ground` |
 | Entrada | `entrance_canopy` |
 | Referência | `player_scale_ref` (cápsula de 1,8 m, não vai no jogo) |
+
+As escadas vão de parede a parede da caixa de 4 m. Nos nomes, `_192_168` é a distância em cm do centro da caixa até a face da parede à esquerda e à direita; nas lajes, o último número é a faixa de laje atrás do patamar.
 
 ## Portas
 - 43 portas com folha: internas, entrada, sacadas e casinha do terraço.

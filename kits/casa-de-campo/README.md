@@ -31,10 +31,12 @@ Casa de campo de um pavimento e meio, com sótão habitável, em peças 3D (GLB)
 | Térreo | `wall_siding_window`, `wall_siding_small_window`, `wall_siding_plain`, `wall_siding_door`, `corner_siding`, `fireplace`, `chimney` |
 | Sótão e telhado | `knee_wall`, `knee_wall_dormer`, `corner_knee`, `gable_siding_center`, `gable_siding_pair`, `roof_slope`, `roof_slope_end`, `roof_slope_end_l`, `roof_slope_dormer`, `ridge_cap`, `ridge_cap_end` |
 | Varanda | `porch_deck`, `porch_post`, `porch_rail`, `porch_skirt`, `porch_roof`, `porch_roof_end`, `porch_roof_end_l`, `steps` |
-| Pisos e escada | `floor_tile`, `floor_tile_bath`, `stair_core_slab`, `stair_core_rail`, `stairs_u_3m` |
+| Pisos e escada | `floor_tile`, `floor_tile_bath`, `stair_core_slab_192_192_29`, `stair_core_rail`, `stairs_u_3m_192_192` |
 | Paredes internas | `interior_wall_plain`, `interior_wall_doorway`, `interior_wall_end`, `interior_wall_end_doorway`, `attic_partition_full`, `attic_partition_bath`, `attic_wall_bath` |
 | Portas | `door_leaf_front`, `door_leaf_back`, `door_leaf_interior` |
 | Referência | `player_scale_ref` |
+
+As escadas vão de parede a parede da caixa de 4 m. Nos nomes, `_192_168` é a distância em cm do centro da caixa até a face da parede à esquerda e à direita; nas lajes, o último número é a faixa de laje atrás do patamar.
 
 ## Arquivos
 `pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, texturas `*_texture.png`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a casa montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.

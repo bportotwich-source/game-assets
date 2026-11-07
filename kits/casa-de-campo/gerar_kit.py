@@ -56,7 +56,7 @@ STONE_TEX=stone_texture()
 PLASTER_TEX=plaster_texture(); PLASTER_TEX.save(os.path.join(OUT,'plaster_texture.png'))
 TEX={'brick':(BRICK_TEX,1.0,1.0),'stone':(STONE_TEX,1.0,0.8),'plaster':(PLASTER_TEX,1.0,1.0)}  # material: (image, tile width m, tile height m)
 MATS = {k:PBRMaterial(name=k, baseColorFactor=[c/255 for c in v]+[1.0], metallicFactor=0.0, roughnessFactor=0.9) for k,v in COL.items()}
-for k,(im,_,_) in TEX.items(): MATS[k]=PBRMaterial(name=k,baseColorTexture=im,baseColorFactor=[1,1,1,1],metallicFactor=0.0,roughnessFactor=0.9)
+for k,(im,_,_) in TEX.items(): MATS[k]=PBRMaterial(name=k,baseColorTexture=im,baseColorFactor=[255,255,255,255],metallicFactor=0.0,roughnessFactor=0.9)
 
 class Piece:
     def __init__(s): s.parts={}
@@ -405,7 +405,7 @@ for nm,im in (('siding',SIDING_TEX),('shingles',SHINGLES_TEX),('brick',BRICK2_TE
 TEX={'siding':(SIDING_TEX,1.0,1.0),'shingles':(SHINGLES_TEX,1.0,1.0),'brick':(BRICK2_TEX,1.0,1.0),'plaster':(PLASTER_TEX,1.0,1.0)}
 SIGN=(0,0,1,1)
 MATS = {k:PBRMaterial(name=k, baseColorFactor=[c/255 for c in v]+[1.0], metallicFactor=0.0, roughnessFactor=0.9) for k,v in COL.items()}
-for k,(im,_,_) in TEX.items(): MATS[k]=PBRMaterial(name=k,baseColorTexture=im,baseColorFactor=[1,1,1,1],metallicFactor=0.0,roughnessFactor=0.9)
+for k,(im,_,_) in TEX.items(): MATS[k]=PBRMaterial(name=k,baseColorTexture=im,baseColorFactor=[255,255,255,255],metallicFactor=0.0,roughnessFactor=0.9)
 
 RAISE=0.6   # ground floor raised on a brick base (3 steps)
 KNEE=1.3

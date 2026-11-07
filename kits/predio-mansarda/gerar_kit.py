@@ -56,7 +56,7 @@ STONE_TEX=stone_texture()
 PLASTER_TEX=plaster_texture(); PLASTER_TEX.save(os.path.join(OUT,'plaster_texture.png'))
 TEX={'brick':(BRICK_TEX,1.0,1.0),'stone':(STONE_TEX,1.0,0.8),'plaster':(PLASTER_TEX,1.0,1.0)}  # material: (image, tile width m, tile height m)
 MATS = {k:PBRMaterial(name=k, baseColorFactor=[c/255 for c in v]+[1.0], metallicFactor=0.0, roughnessFactor=0.9) for k,v in COL.items()}
-for k,(im,_,_) in TEX.items(): MATS[k]=PBRMaterial(name=k,baseColorTexture=im,baseColorFactor=[1,1,1,1],metallicFactor=0.0,roughnessFactor=0.9)
+for k,(im,_,_) in TEX.items(): MATS[k]=PBRMaterial(name=k,baseColorTexture=im,baseColorFactor=[255,255,255,255],metallicFactor=0.0,roughnessFactor=0.9)
 
 class Piece:
     def __init__(s): s.parts={}
@@ -414,7 +414,7 @@ ASHLAR_TEX=ashlar_texture(); RUSTIC_TEX=rustic_texture(); ZINC_TEX=zinc_texture(
 for nm,im in (('ashlar',ASHLAR_TEX),('rustic',RUSTIC_TEX),('zinc',ZINC_TEX)): im.save(os.path.join(OUT,nm+'_texture.png'))
 TEX={'ashlar':(ASHLAR_TEX,1.0,1.0),'rustic':(RUSTIC_TEX,1.0,0.8),'zinc':(ZINC_TEX,1.0,1.0),'plaster':(PLASTER_TEX,1.0,1.0)}
 MATS = {k:PBRMaterial(name=k, baseColorFactor=[c/255 for c in v]+[1.0], metallicFactor=0.0, roughnessFactor=0.9) for k,v in COL.items()}
-for k,(im,_,_) in TEX.items(): MATS[k]=PBRMaterial(name=k,baseColorTexture=im,baseColorFactor=[1,1,1,1],metallicFactor=0.0,roughnessFactor=0.9)
+for k,(im,_,_) in TEX.items(): MATS[k]=PBRMaterial(name=k,baseColorTexture=im,baseColorFactor=[255,255,255,255],metallicFactor=0.0,roughnessFactor=0.9)
 
 from shapely.geometry import Point
 from shapely.ops import unary_union

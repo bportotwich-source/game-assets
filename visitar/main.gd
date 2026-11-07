@@ -43,9 +43,28 @@ func _load_kit(k: String) -> void:
 	_scenes.clear()
 	_shapes.clear()
 	var box := _build_kit(k)
-	var spawn := Vector3((box.position.x + box.end.x) * 0.5, 0.1, box.end.z + 6.0)
+	var spawn := Vector3(_front_door_x(box), 0.1, box.end.z + 6.0)
 	_player.respawn(spawn)
 	_update_hud()
+
+
+# X da porta da frente mais perto do centro da fachada, para o jogador nascer de frente para ela.
+func _front_door_x(box: AABB) -> float:
+	var mid := (box.position.x + box.end.x) * 0.5
+	var best := mid
+	var best_d := INF
+	var front := -INF
+	for d in _building.get_children():
+		if d.has_method("interact"):
+			front = maxf(front, d.position.z)
+	for d in _building.get_children():
+		if not d.has_method("interact") or d.position.z < front - 1.0:
+			continue
+		var c: Vector3 = d.position + Basis(Vector3.UP, d.rotation.y) * Vector3(0.45, 0, 0)
+		if absf(c.x - mid) < best_d:
+			best_d = absf(c.x - mid)
+			best = c.x
+	return best
 
 
 func _make_world() -> void:
@@ -58,8 +77,10 @@ func _make_world() -> void:
 	var env := Environment.new()
 	env.background_mode = Environment.BG_SKY
 	env.sky = sky
-	env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
-	env.ambient_light_energy = 0.9
+	# Luz ambiente neutra e forte: dentro dos prédios não há lâmpadas, e o céu azul deixava tudo escuro e azulado.
+	env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
+	env.ambient_light_color = Color(0.92, 0.9, 0.86)
+	env.ambient_light_energy = 0.55
 	env.tonemap_mode = Environment.TONE_MAPPER_FILMIC
 	env.ssao_enabled = true
 	var we := WorldEnvironment.new()
@@ -142,6 +163,8 @@ func _build_kit(k: String) -> AABB:
 	var lo := Vector3(INF, INF, INF)
 	var hi := Vector3(-INF, -INF, -INF)
 	for p in data["placements"]:
+		if p["piece"] == "player_scale_ref":
+			continue   # boneco de escala, só para as prévias
 		var ps := _piece(p["piece"])
 		if ps == null:
 			continue

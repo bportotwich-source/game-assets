@@ -17,6 +17,7 @@ Pacote de assets 3D modulares e originais para montar cenários de jogos. As pe�
 | [`kits/galeria/`](kits/galeria/) | Galeria comercial de 24 × 26 m com 3 andares: 30 lojas em volta de um átrio com abóbada de vidro, ponte e escadas rolantes, entrada em pele de vidro com lanterna (41 peças) |
 | [`kits/casa-americana/`](kits/casa-americana/) | Casa americana de 8 × 12 m com 2 andares e frente em oitão: tábuas sobrepostas azul-acinzentadas, varanda coberta em toda a frente, chaminé de tijolo do lado de fora e garagem de 4 × 6 m com portão duplo (63 peças) |
 | [`kits/duplex/`](kits/duplex/) | Duplex de 16 × 12 m: duas casas espelhadas de 2 andares sob um telhado de duas águas, oitão central sobre as duas garagens, tábuas amarelas, venezianas azul-marinho e cobertura sobre cada porta (42 peças) |
+| [`kits/diner/`](kits/diner/) | Diner de aço inox de 20 × 8 m: pontas arredondadas, faixa contínua de janelas, vestíbulo de vidro, letreiro no telhado, salão com piso xadrez, cozinha, depósito e 2 banheiros (25 peças) |
 | [`visitar/`](visitar/) + `project.godot` | Projeto Godot 4 para andar dentro de qualquer kit em primeira pessoa, com colisão e portas que abrem |
 | [`scripts/`](scripts/) | Portas que abrem e fecham: Godot 4 (`godot/`) e Unity (`unity/`) |
 

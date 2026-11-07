@@ -920,6 +920,9 @@ def interior_wall_counter():
     for a,b in ((-W/2,W/2),): p.box('trim',a,b,0,0.1,t/2,t/2+0.015); p.box('trim',a,b,0,0.1,-t/2-0.015,-t/2)
     return p
 
+import sys as _s; _s.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts', 'detalhe'))
+import retrofit
+retrofit.aplicar(globals(), {'brick': 'brick', 'shingle': 'shingles', 'plaster': 'plaster'})
 pieces={'floor_tile':floor_tile(),'floor_tile_bath':floor_tile_bath(),'ceiling_tile':ceiling_tile(),
  'interior_wall_plain':interior_wall(False,h=HI),'interior_wall_doorway':interior_wall(True,h=HI),
  'interior_wall_end':interior_wall_end(h=HI),'interior_wall_boxes':interior_wall_boxes(),'interior_wall_counter':interior_wall_counter(),
@@ -1000,5 +1003,5 @@ for e in L:
     if e['piece']=='player_scale_ref': continue
     Tm=trimesh.transformations.rotation_matrix(math.radians(e['rotY']),[0,1,0]); Tm[:3,3]=e['pos']
     asm.merge(pieces[e['piece']],Tm)
-asm.scene('building').export(f'{OUT}/building_assembled.glb',include_normals=True)
+print('triangulos no montado', retrofit.montar(pieces, L, f'{OUT}/building_assembled.glb')); retrofit.finalizar(f'{OUT}/pieces')
 print(len(pieces),'pieces',len(L),'placements',sum(1 for e in L if 'door' in e),'doors')

@@ -911,6 +911,9 @@ def _rail(p,x0,x1,z,y0=0.0,h=0.9):
     L=x1-x0; k=max(2,int(L/0.13))
     for i in range(1,k): xx=x0+i*L/k; p.box('trim',xx-0.018,xx+0.018,y0+0.14,y0+h-0.06,z-0.018,z+0.018)
 
+import sys as _s; _s.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts', 'detalhe'))
+import retrofit
+retrofit.aplicar(globals(), {'siding': 'siding', 'shingle': 'shingles', 'stone': 'stone', 'plaster': 'plaster'}, tabuas=0.14)
 pieces={'floor_tile':floor_tile(),'roof_tile':roof_tile(),
  'nave_wall_window':nave_wall('window'),'nave_wall_door':nave_wall('door'),'nave_wall_plain':nave_wall('plain'),'nave_wall_belt':nave_wall('belt'),
  'nave_corner':nave_corner(),'gable_nave_back':gable_nave(),'gable_nave_front':gable_nave(notch=True,window=False),'nave_tower_wall':nave_tower_wall(),
@@ -985,5 +988,5 @@ for e in L:
     if e['piece']=='player_scale_ref': continue
     Tm=trimesh.transformations.rotation_matrix(math.radians(e['rotY']),[0,1,0]); Tm[:3,3]=e['pos']
     asm.merge(pieces[e['piece']],Tm)
-asm.scene('building').export(f'{OUT}/building_assembled.glb',include_normals=True)
+print('triangulos no montado', retrofit.montar(pieces, L, f'{OUT}/building_assembled.glb')); retrofit.finalizar(f'{OUT}/pieces')
 print(len(pieces),'pieces',len(L),'placements',sum(1 for e in L if 'door' in e),'doors')

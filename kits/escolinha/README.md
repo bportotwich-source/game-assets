@@ -20,11 +20,12 @@ Escola rural de uma sala em peças 3D (GLB), estilo toon com contorno. Segue o [
 - **Vestíbulo:** `vest_*` têm pivô na sua face da frente (z = 8,4) ou no começo da parede. `vest_slope` fica em y = 2,2.
 - **Cúpula e chaminé:** `cupola` tem pivô na linha da cumeeira, no chão (alturas absolutas); `chimney` tem pivô no seu centro, no chão.
 
-## Texturas (embutidas nos GLB, UVs em metros)
-- `siding`: tábuas vermelhas.
-- `shingle`: telha cinza.
-- `brick`: fundação e chaminé.
-- `plaster`: interno.
+## Alto detalhe
+Versão refeita com `scripts/detalhe/retrofit.py`, sem mudar planta nem encaixes:
+- **Janelas:** caixilho com batente, folhas de guilhotina com baguetes e vidro, peitoril com caimento e pingadeira.
+- **Portas:** almofadas rebaixadas e chanfradas, vidro com baguetes nas portas envidraçadas, maçaneta e dobradiças.
+- **Texturas PBR** (cor + normal + ORM, ladrilho de 2 m, JPEG dentro dos GLB, UVs em metros): `siding` (tábuas), `shingle` (telhado), `brick` (base e chaminé), `plaster` (interno).
+- Montado com cerca de 17 mil triângulos (antes 10 mil).
 
 ## Peças (32)
 | Grupo | Peças |
@@ -38,4 +39,4 @@ Escola rural de uma sala em peças 3D (GLB), estilo toon com contorno. Segue o [
 | Referência | `player_scale_ref` |
 
 ## Arquivos
-`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, texturas `*_texture.png`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a escola montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.
+`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a escola montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.

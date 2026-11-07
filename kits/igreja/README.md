@@ -17,11 +17,12 @@ Igreja de madeira com torre frontal e agulha, em peças 3D (GLB), estilo toon co
 - **Torre:** `tower_base`, `tower_clock`, `tower_belfry` e `tower_lantern` empilham no centro da torre (0, 0, 10), cada estágio no seu próprio nível; dá para usar só a base com o relógio, ou tirar a lanterna.
 - **Coro:** `loft_stair` tem pivô no meio da borda de cima, no piso de baixo, e sobe para +Z.
 
-## Texturas (embutidas nos GLB, UVs em metros)
-- `siding`: tábuas sobrepostas brancas.
-- `shingle`: telha escura.
-- `stone`: embasamento de pedra.
-- `plaster`: interno.
+## Alto detalhe
+Versão refeita com `scripts/detalhe/retrofit.py`, sem mudar planta nem encaixes:
+- **Janelas:** caixilho com batente, folhas de guilhotina com baguetes e vidro, peitoril com caimento e pingadeira.
+- **Portas:** almofadas rebaixadas e chanfradas, vidro com baguetes nas portas envidraçadas, maçaneta e dobradiças.
+- **Texturas PBR** (cor + normal + ORM, ladrilho de 2 m, JPEG dentro dos GLB, UVs em metros): `siding` (tábuas, também em geometria a partir de 0,14 m nas paredes retas), `shingle` (telhado), `stone` (embasamento e degraus), `plaster` (interno).
+- Montado com cerca de 38 mil triângulos (antes 33 mil).
 
 ## Peças (35)
 | Grupo | Peças |
@@ -36,4 +37,4 @@ Igreja de madeira com torre frontal e agulha, em peças 3D (GLB), estilo toon co
 | Referência | `player_scale_ref` |
 
 ## Arquivos
-`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, texturas `*_texture.png`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a igreja montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.
+`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a igreja montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.

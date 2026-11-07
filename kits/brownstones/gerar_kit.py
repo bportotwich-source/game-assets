@@ -562,6 +562,9 @@ def _rail(p,x0,x1,z,y0=0.0,h=0.9):
 def stair_guard(x0,x1):
     p=Piece(); _rail(p,x0,x1,0.0); return p
 
+import sys as _s; _s.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts', 'detalhe'))
+import retrofit
+retrofit.aplicar(globals(), {'brick': 'brick', 'stone': 'stone', 'plaster': 'plaster'}, cores={'stone': (138, 96, 74)})   # arenito marrom
 pieces={'floor_tile':floor_tile(),'floor_tile_bath':floor_tile_bath(),'stair_core_slab':stair_core_slab(),'stairs_u_3m':stairs_u(H),
  'stair_guard':stair_guard(-0.9,0.9),'roof_tile':roof_tile(),
  'door_leaf_front':door_leaf(0.96,2.28,True,'door'),'door_leaf_front_b':door_leaf(0.96,2.28,True,'door_b'),'door_leaf_front_c':door_leaf(0.96,2.28,True,'door_c'),
@@ -745,5 +748,5 @@ for e in L:
     if e['piece']=='player_scale_ref': continue
     Tm=trimesh.transformations.rotation_matrix(math.radians(e['rotY']),[0,1,0]); Tm[:3,3]=e['pos']
     asm.merge(pieces[e['piece']],Tm)
-asm.scene('building').export(f'{OUT}/building_assembled.glb',include_normals=True)
+print('triangulos no montado', retrofit.montar(pieces, L, f'{OUT}/building_assembled.glb')); retrofit.finalizar(f'{OUT}/pieces')
 print(len(pieces),'pieces',len(L),'placements',sum(1 for e in L if 'door' in e),'doors')

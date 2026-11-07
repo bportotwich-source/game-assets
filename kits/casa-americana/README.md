@@ -21,12 +21,12 @@ Sobrado americano com a frente em oitão, varanda coberta e garagem ao lado, em 
 - **Varanda:** todas as peças `porch_*` têm pivô no centro do módulo, na face da parede da frente, no chão. As versões `_end_l` e `_end_r` fecham as pontas.
 - **Telhado da garagem:** `garage_roof*` com o mesmo pivô do telhado da casa, colocado a 2,2 m de altura. As versões `_house` têm beiral de 0,25 m, que entra na parede da casa.
 
-## Texturas (embutidas nos GLB, UVs em metros)
-- `siding`: tábuas sobrepostas de 20 cm.
-- `shingle`: telha asfáltica em fiadas de 20 cm.
-- `deck`: tábuas do piso da varanda.
-- `brick`: tijolo da chaminé.
-- `plaster`: interno.
+## Alto detalhe
+Versão refeita com `scripts/detalhe/retrofit.py`, sem mudar planta nem encaixes:
+- **Janelas:** caixilho com batente, folhas de guilhotina com baguetes e vidro, peitoril com caimento e pingadeira.
+- **Portas:** almofadas rebaixadas e chanfradas, vidro com baguetes nas portas envidraçadas, maçaneta e dobradiças.
+- **Texturas PBR** (cor + normal + ORM, ladrilho de 2 m, JPEG dentro dos GLB, UVs em metros): `siding` (tábuas, também em geometria a partir de 0,14 m, em fase com a textura), `shingle` (telhado), `deck` (varanda), `brick` (chaminé e base), `plaster` (interno).
+- Montado com cerca de 57 mil triângulos (antes 23 mil).
 
 ## Peças (63)
 | Grupo | Peças |
@@ -44,4 +44,4 @@ Sobrado americano com a frente em oitão, varanda coberta e garagem ao lado, em 
 Nos nomes da escada, `_192_168` é a distância em cm do centro da caixa até a face da parede à esquerda e à direita; na laje, o último número é a faixa de laje atrás do patamar.
 
 ## Arquivos
-`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, texturas `*_texture.png`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a casa montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.
+`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a casa montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.

@@ -884,6 +884,9 @@ def recolor(pc,mp):
 PORCH_STAIR=recolor(_pst,{'floor':'wood','plaster':'wood'})
 PSX=0.9       # stair pivot offset from the deck pivot (x), at the deck's outer edge
 
+import sys as _s; _s.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts', 'detalhe'))
+import retrofit
+retrofit.aplicar(globals(), {'brick': 'brick', 'grey': 'stone', 'plaster': 'plaster'})
 pieces={'floor_tile':floor_tile(),'floor_tile_bath':floor_tile_bath(),'roof_tile':roof_tile(),'stair_core_slab':stair_core_slab(),'stairs_u_3m':stairs_u(H),
  'stair_guard':stair_guard(-0.9,0.9),
  'interior_wall_plain':interior_wall(False),'interior_wall_doorway':interior_wall(True),'interior_wall_wide':interior_wall_wide(),
@@ -1054,5 +1057,5 @@ for e in L:
     if e['piece']=='player_scale_ref': continue
     Tm=trimesh.transformations.rotation_matrix(math.radians(e['rotY']),[0,1,0]); Tm[:3,3]=e['pos']
     asm.merge(pieces[e['piece']],Tm)
-asm.scene('building').export(f'{OUT}/building_assembled.glb',include_normals=True)
+print('triangulos no montado', retrofit.montar(pieces, L, f'{OUT}/building_assembled.glb')); retrofit.finalizar(f'{OUT}/pieces')
 print(len(pieces),'pieces',len(L),'placements',sum(1 for e in L if 'door' in e),'doors')

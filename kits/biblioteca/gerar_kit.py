@@ -902,6 +902,9 @@ def back_steps():
     for k in range(1,7): p.box('granite',-x,x,0,k*r,1.2,1.2+(7-k)*0.3)
     return p
 
+import sys as _s; _s.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts', 'detalhe'))
+import retrofit
+retrofit.aplicar(globals(), {'stone': 'stone', 'plaster': 'plaster'})
 pieces={'floor_tile':floor_tile(),'floor_tile_bath':floor_tile_bath(),'roof_tile':roof_tile(),
  'lib_wall_window':lib_wall('window'),'lib_wall_plain':lib_wall('plain'),'lib_wall_door':lib_wall('door',w=4.0),'lib_wall_backdoor':lib_wall('backdoor'),
  'lib_wall_up_window':lib_wall('window',True),'lib_wall_up_plain':lib_wall('plain',True),'lib_corner':lib_corner(),
@@ -984,5 +987,5 @@ for e in L:
     if e['piece']=='player_scale_ref': continue
     Tm=trimesh.transformations.rotation_matrix(math.radians(e['rotY']),[0,1,0]); Tm[:3,3]=e['pos']
     asm.merge(pieces[e['piece']],Tm)
-asm.scene('building').export(f'{OUT}/building_assembled.glb',include_normals=True)
+print('triangulos no montado', retrofit.montar(pieces, L, f'{OUT}/building_assembled.glb')); retrofit.finalizar(f'{OUT}/pieces')
 print(len(pieces),'pieces',len(L),'placements',sum(1 for e in L if 'door' in e),'doors')

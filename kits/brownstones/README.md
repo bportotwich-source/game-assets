@@ -23,10 +23,12 @@ Três sobrados de tijolo colados em fileira, com térreo de pedra marrom e escad
 - **Cornija:** `cornice` na altura do telhado, com pivô como as paredes. `cornice_corner` nos cantos. `cornice_end_l` e `cornice_end_r` param 3 cm antes do canto da casa vizinha mais alta.
 - **Escada:** `stairs_u_3m_*` com pivô no centro da borda aberta do núcleo (z = 1), núcleo de z -3 a 1. `stair_guard` no último andar, sobre o lance que desce.
 
-## Texturas (embutidas nos GLB, UVs em metros)
-- `brick`: tijolo vermelho-escuro, fiadas de 12,5 cm.
-- `stone`: pedra marrom em fiadas de 37,5 cm (8 por andar).
-- `plaster`: interno.
+## Alto detalhe
+Versão refeita com `scripts/detalhe/retrofit.py`, sem mudar planta nem encaixes:
+- **Janelas:** caixilho com batente, folhas de guilhotina com baguetes e vidro, peitoril com caimento e pingadeira.
+- **Portas:** almofadas rebaixadas e chanfradas, vidro com baguetes nas portas envidraçadas, maçaneta e dobradiças.
+- **Texturas PBR** (cor + normal + ORM, ladrilho de 2 m, JPEG dentro dos GLB, UVs em metros): `brick` (fachada), `stone` (arenito marrom do porão e das escadas), `plaster` (interno).
+- Montado com cerca de 110 mil triângulos (antes 45 mil).
 
 ## Peças (36)
 | Grupo | Peças |
@@ -43,4 +45,4 @@ Três sobrados de tijolo colados em fileira, com térreo de pedra marrom e escad
 Nos nomes da escada, `_168_192` é a distância em cm do centro da caixa até a face da parede à esquerda e à direita; na laje, o último número é a faixa de laje atrás do patamar.
 
 ## Arquivos
-`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, texturas `*_texture.png`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a fileira montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.
+`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a fileira montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.

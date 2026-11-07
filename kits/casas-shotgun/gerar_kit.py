@@ -822,6 +822,9 @@ def back_steps():
     for y,z0 in ((FY-0.03,0.0),(FY-0.2,0.6),(FY-0.4,0.9)): p.box('concrete',-0.7,0.7,0.0,y,z0,z0+(0.6 if z0==0.0 else 0.3))
     return p
 
+import sys as _s; _s.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts', 'detalhe'))
+import retrofit
+retrofit.aplicar(globals(), {**{'siding_' + c: 'siding' for c in HUES}, 'shingle': 'shingles', 'shingle_g': 'shingles', 'deck': 'deck', 'plaster': 'plaster'})
 pieces={'floor_tile':floor_tile(),'floor_tile_bath':floor_tile_bath(),'corner_board':corner16(),'back_steps':back_steps(),
  'door_leaf_front':door_leaf(0.86,2.22,True,'door'),'door_leaf_back':door_leaf(0.86,2.22,True,'frame'),'door_leaf_interior':door_leaf(0.86,2.08,False,'frame'),
  'interior_wall_plain':interior_wall(False),'interior_wall_doorway':interior_wall(True),'interior_wall_end':interior_wall_end(),'interior_wall_end_doorway':interior_wall_end_doorway(),
@@ -913,5 +916,5 @@ for e in L:
     if e['piece']=='player_scale_ref': continue
     Tm=trimesh.transformations.rotation_matrix(math.radians(e['rotY']),[0,1,0]); Tm[:3,3]=e['pos']
     asm.merge(pieces[e['piece']],Tm)
-asm.scene('building').export(f'{OUT}/building_assembled.glb',include_normals=True)
+print('triangulos no montado', retrofit.montar(pieces, L, f'{OUT}/building_assembled.glb')); retrofit.finalizar(f'{OUT}/pieces')
 print(len(pieces),'pieces',len(L),'placements',sum(1 for e in L if 'door' in e),'doors')

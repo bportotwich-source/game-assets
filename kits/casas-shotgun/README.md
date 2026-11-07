@@ -18,11 +18,12 @@ Cinco casas estreitas coladas em fileira, cada uma de uma cor, em peças 3D (GLB
 - **Varanda:** `porch_*` têm pivô no centro da casa, na face da fachada, no chão. `porch_skirt_side` fecha a treliça nas pontas.
 - **Cores:** `a` rosa, `b` amarela, `c` verde, `d` lilás, `e` azul.
 
-## Texturas (embutidas nos GLB, UVs em metros)
-- `siding_a` a `siding_e`: tábuas sobrepostas de 20 cm, uma por cor.
-- `shingle` e `shingle_g`: telha asfáltica marrom e cinza.
-- `deck`: tábuas do deque.
-- `plaster`: interno.
+## Alto detalhe
+Versão refeita com `scripts/detalhe/retrofit.py`, sem mudar planta nem encaixes:
+- **Janelas:** caixilho com batente, folhas de guilhotina com baguetes e vidro, peitoril com caimento e pingadeira.
+- **Portas:** almofadas rebaixadas e chanfradas, vidro com baguetes nas portas envidraçadas, maçaneta e dobradiças.
+- **Texturas PBR** (cor + normal + ORM, ladrilho de 2 m, JPEG dentro dos GLB, UVs em metros): `siding_a` a `siding_e` (tábuas de cada casa), `shingle` e `shingle_g` (telhados), `deck` (varandas), `plaster` (interno).
+- Montado com cerca de 61 mil triângulos (antes 27 mil).
 
 ## Peças (67)
 | Grupo | Peças |
@@ -37,4 +38,4 @@ Cinco casas estreitas coladas em fileira, cada uma de uma cor, em peças 3D (GLB
 | Referência | `player_scale_ref` |
 
 ## Arquivos
-`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, texturas `*_texture.png`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a fileira montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.
+`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com a fileira montada e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.

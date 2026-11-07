@@ -24,6 +24,7 @@ Pacote de assets 3D modulares e originais para montar cenários de jogos. As pe�
 | [`kits/casas-shotgun/`](kits/casas-shotgun/) | Casas shotgun: cinco casas estreitas de 4 × 12 m coladas, cada uma de uma cor, piso elevado sobre treliça, oitão de 45°, varanda com escada e cômodos em fila (67 peças) |
 | [`kits/igreja/`](kits/igreja/) | Igreja: nave de madeira de 12 × 16 m com janelas em arco, torre com relógio, campanário, lanterna e agulha de 24 m, coro alto e presbitério (35 peças) |
 | [`kits/motel/`](kits/motel/) | Motel: dois andares com 12 quartos e recepção, galerias abertas com pilares de aço, escada externa, telhado plano com mansarda verde e placa (42 peças) |
+| [`kits/biblioteca/`](kits/biblioteca/) | Biblioteca: bloco neoclássico de pedra sobre pódio, pórtico de seis colunas com frontão, salão central sob cúpula de cobre, galerias e escada (31 peças) |
 | [`visitar/`](visitar/) + `project.godot` | Projeto Godot 4 para andar dentro de qualquer kit em primeira pessoa, com colisão e portas que abrem |
 | [`scripts/`](scripts/) | Portas que abrem e fecham: Godot 4 (`godot/`) e Unity (`unity/`) |
 

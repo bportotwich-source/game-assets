@@ -35,7 +35,7 @@ jobs:
           rm -rf templates *.zip *.tpz
 
       - name: Importar peças
-        run: timeout 900 ./godot --headless --editor --quit || true
+        run: timeout 1500 ./godot --headless --import || true
 
       - name: Exportar para Windows
         run: |

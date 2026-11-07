@@ -1,0 +1,685 @@
+{
+ "escala": "1 unidade = 1 m, Y para cima. Armas em posição de tiro: cano para -Z, lado direito +X, pivô na empunhadura.",
+ "encaixes": "nós vazios \"encaixe_<tipo>\" com a orientação da arma; o acessório entra como filho do nó, transformação identidade. O \"tipo\" do encaixe tem que bater com o \"encaixe\" do acessório. Os acessórios têm o pivô no ponto de encaixe.",
+ "partes": "partes móveis são nós do GLB: tipo desliza (curso_m ao longo do cano), gira (eixo, curso_graus), remove (direcao).",
+ "animacoes": "animações glTF embutidas, só das peças da arma (sem mãos); o nó raiz também se mexe (coice, recarga, inspeção).",
+ "campos_jogo": {
+  "dano": "por tiro (zumbi comum tem 100 de vida, cabeça x2,5)",
+  "alcance_m": "alcance efetivo; depois disso o dano cai",
+  "alcance_max_m": "alcance máximo",
+  "tiros_por_s": "cadência máxima",
+  "precisao": "0 a 1",
+  "recuo": "0 a 1",
+  "ruido_m": "raio em que os zumbis ouvem o tiro",
+  "durabilidade": "tiros até precisar de reparo",
+  "modificadores": "multiplicadores aplicados à arma pelo acessório",
+  "valor_troca": "preço na troca entre comunidades"
+ },
+ "armas": [
+  {
+   "id": "pistola_9mm",
+   "nome": "Pistola Sentinela 9 mm",
+   "grupo": "armas",
+   "categoria": "pistola",
+   "classe": "fogo",
+   "calibre": "9 mm",
+   "municao": "municao_9mm",
+   "capacidade": 15,
+   "dano": 34,
+   "alcance_m": 25,
+   "alcance_max_m": 50,
+   "modo": "semiautomático",
+   "tiros_por_s": 4.0,
+   "recarga_s": 1.6,
+   "recarga_vazia_s": 2.1,
+   "precisao": 0.72,
+   "recuo": 0.3,
+   "ruido_m": 60,
+   "durabilidade": 600,
+   "peso_kg": 0.78,
+   "raridade": "incomum",
+   "valor_troca": 40,
+   "onde": [
+    "quartel",
+    "correios",
+    "motel",
+    "posto",
+    "casas"
+   ],
+   "descricao": "Pistola de polímero com ferrolho de aço, 15 tiros. Leve e confiável, mas o tiro chama zumbis num raio de 60 m.",
+   "arquivo": "armas/pistola_9mm.glb",
+   "tamanho_m": [
+    0.031,
+    0.154,
+    0.233
+   ],
+   "triangulos": 9332,
+   "kb": 486.4,
+   "partes": [
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": -14,
+     "descricao": "puxa para tras ao atirar",
+     "pai": "pistola_9mm"
+    },
+    {
+     "no": "cano",
+     "tipo": "desliza",
+     "curso_m": 0.004,
+     "descricao": "recua 4 mm com o ferrolho",
+     "pai": "pistola_9mm"
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": 0.032,
+     "descricao": "recua 32 mm ao atirar; fica travado atrás com o carregador vazio",
+     "pai": "pistola_9mm"
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      -0.0,
+      -0.956,
+      0.292
+     ],
+     "municao": "municao_9mm",
+     "capacidade": 15,
+     "descricao": "sai pelo fundo do punho ao recarregar",
+     "pai": "pistola_9mm"
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_mira",
+     "tipo": "mira_ferrolho",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0,
+      0.0851,
+      -0.036
+     ],
+     "aceita": [
+      "mira_ponto_vermelho_compacta"
+     ]
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_rosca_9mm",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.1922
+     ],
+     "aceita": [
+      "protetor_rosca_9mm",
+      "supressor_9mm",
+      "compensador_9mm",
+      "supressor_garrafa"
+     ],
+     "padrao": "protetor_rosca_9mm"
+    },
+    {
+     "no": "encaixe_trilho",
+     "tipo": "trilho_curto",
+     "pai": "pistola_9mm",
+     "posicao_m": [
+      0.0,
+      0.0325,
+      -0.135
+     ],
+     "aceita": [
+      "lanterna_pistola",
+      "laser_pistola",
+      "combo_lanterna_laser"
+     ]
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_9mm",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.052,
+      -0.0155
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_9mm",
+      "carregador_9mm_estendido"
+     ],
+     "descricao": "filho do nó carregador (anda com a recarga); ao pôr um carregador aqui, esconda as malhas próprias do nó carregador"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "pistola_9mm",
+     "posicao_m": [
+      0.012,
+      0.08,
+      -0.086
+     ],
+     "descricao": "onde nasce o estojo ejetado (vai para +X e para cima)"
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.1932
+     ],
+     "descricao": "clarão de boca e origem do disparo (raycast para -Z)"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0,
+      0.0895,
+      -0.005
+     ],
+     "descricao": "linha de visada: alça -> massa"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.14,
+     "laco": false,
+     "descricao": "um disparo: gatilho, recuo do ferrolho e do cano, coice da arma (soltar estojo em saida_estojo aos 0,04 s)"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.14,
+     "laco": false,
+     "descricao": "último tiro: o ferrolho fica travado atrás"
+    },
+    "vazia": {
+     "duracao_s": 0.1,
+     "laco": true,
+     "descricao": "pose parada: ferrolho travado atrás, carregador vazio"
+    },
+    "recarregar": {
+     "duracao_s": 1.6,
+     "laco": false,
+     "descricao": "troca tática: solta o carregador (0,3 s), carregador novo entra (1,2 s); trocar o nó carregador entre 0,5 e 0,9 s"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 2.1,
+     "laco": false,
+     "descricao": "recarga com a arma vazia: troca o carregador e solta o ferrolho (1,5 s)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "gira a arma, puxa o ferrolho até ver o cartucho na câmara e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  }
+ ],
+ "acessorios": [
+  {
+   "id": "protetor_rosca_9mm",
+   "nome": "Protetor de rosca 9 mm",
+   "grupo": "acessorios",
+   "categoria": "boca",
+   "encaixe": "boca_rosca_9mm",
+   "modificadores": {},
+   "peso_kg": 0.01,
+   "raridade": "comum",
+   "descricao": "Capa que protege a rosca do cano. Vem na pistola.",
+   "arquivo": "acessorios/protetor_rosca_9mm.glb",
+   "tamanho_m": [
+    0.018,
+    0.018,
+    0.014
+   ],
+   "triangulos": 640,
+   "kb": 31.1
+  },
+  {
+   "id": "supressor_9mm",
+   "nome": "Supressor 9 mm",
+   "grupo": "acessorios",
+   "categoria": "boca",
+   "encaixe": "boca_rosca_9mm",
+   "peso_kg": 0.2,
+   "durabilidade": 1200,
+   "raridade": "raro",
+   "valor_troca": 60,
+   "modificadores": {
+    "ruido_m": 0.3,
+    "dano": 0.95,
+    "alcance_m": 1.05,
+    "recuo": 0.85
+   },
+   "onde": [
+    "quartel",
+    "motel"
+   ],
+   "descricao": "Tubo de alumínio com defletores. O tiro só é ouvido a 18 m: essencial para não chamar a horda.",
+   "arquivo": "acessorios/supressor_9mm.glb",
+   "tamanho_m": [
+    0.036,
+    0.036,
+    0.162
+   ],
+   "triangulos": 4056,
+   "kb": 213.7
+  },
+  {
+   "id": "compensador_9mm",
+   "nome": "Compensador 9 mm",
+   "grupo": "acessorios",
+   "categoria": "boca",
+   "encaixe": "boca_rosca_9mm",
+   "peso_kg": 0.04,
+   "raridade": "incomum",
+   "valor_troca": 15,
+   "modificadores": {
+    "recuo": 0.7,
+    "ruido_m": 1.15
+   },
+   "onde": [
+    "quartel",
+    "galeria"
+   ],
+   "descricao": "Joga os gases para cima e segura o cano: menos coice, mas um pouco mais de barulho.",
+   "arquivo": "acessorios/compensador_9mm.glb",
+   "tamanho_m": [
+    0.02,
+    0.02,
+    0.03
+   ],
+   "triangulos": 548,
+   "kb": 27.6
+  },
+  {
+   "id": "supressor_garrafa",
+   "nome": "Supressor improvisado (garrafa PET)",
+   "grupo": "acessorios",
+   "categoria": "boca",
+   "encaixe": "boca_rosca_9mm",
+   "peso_kg": 0.08,
+   "durabilidade": 12,
+   "raridade": "comum",
+   "modificadores": {
+    "ruido_m": 0.55,
+    "precisao": 0.8
+   },
+   "receita": {
+    "garrafa_agua": 1,
+    "fita_adesiva": 1,
+    "sucata": 1
+   },
+   "descricao": "Garrafa PET com palha de aço, presa com fita e um adaptador de cano. Abafa bem, mas rasga em uns 12 tiros.",
+   "arquivo": "acessorios/supressor_garrafa.glb",
+   "tamanho_m": [
+    0.092,
+    0.092,
+    0.268
+   ],
+   "triangulos": 2672,
+   "kb": 129.5
+  },
+  {
+   "id": "lanterna_pistola",
+   "nome": "Lanterna tática de trilho",
+   "grupo": "acessorios",
+   "categoria": "trilho",
+   "encaixe": "trilho_curto",
+   "peso_kg": 0.11,
+   "raridade": "incomum",
+   "valor_troca": 25,
+   "usa": "pilhas",
+   "autonomia_min": 90,
+   "luz": {
+    "alcance_m": 35,
+    "angulo_graus": 22,
+    "lumens": 600
+   },
+   "modificadores": {},
+   "onde": [
+    "quartel",
+    "posto",
+    "galeria"
+   ],
+   "descricao": "Lanterna de 600 lm presa no trilho. Ilumina sem ocupar a mão, mas a luz atrai zumbis que estão de frente.",
+   "liga_desliga": "no \"luz\": ligue um SpotLight3D no encaixe \"feixe\" (aponta para -Z)",
+   "arquivo": "acessorios/lanterna_pistola.glb",
+   "tamanho_m": [
+    0.032,
+    0.035,
+    0.081
+   ],
+   "triangulos": 4468,
+   "kb": 226.1,
+   "encaixes": [
+    {
+     "no": "feixe",
+     "tipo": "efeito",
+     "pai": "lanterna_pistola",
+     "posicao_m": [
+      0.0,
+      -0.017,
+      -0.028
+     ],
+     "descricao": "SpotLight3D aqui, apontando para -Z"
+    }
+   ]
+  },
+  {
+   "id": "laser_pistola",
+   "nome": "Mira laser de trilho",
+   "grupo": "acessorios",
+   "categoria": "trilho",
+   "encaixe": "trilho_curto",
+   "peso_kg": 0.06,
+   "raridade": "raro",
+   "valor_troca": 30,
+   "usa": "pilhas",
+   "autonomia_min": 240,
+   "modificadores": {
+    "precisao_sem_mirar": 1.35
+   },
+   "onde": [
+    "quartel",
+    "galeria"
+   ],
+   "descricao": "Ponto vermelho projetado: acerta melhor atirando sem mirar pela alça.",
+   "liga_desliga": "raio laser a partir do encaixe \"laser\" (para -Z), ponto onde bater",
+   "arquivo": "acessorios/laser_pistola.glb",
+   "tamanho_m": [
+    0.029,
+    0.028,
+    0.052
+   ],
+   "triangulos": 848,
+   "kb": 50.7,
+   "encaixes": [
+    {
+     "no": "laser",
+     "tipo": "efeito",
+     "pai": "laser_pistola",
+     "posicao_m": [
+      0.0,
+      -0.0175,
+      -0.011
+     ],
+     "descricao": "origem do raio laser (-Z)"
+    }
+   ]
+  },
+  {
+   "id": "combo_lanterna_laser",
+   "nome": "Lanterna com laser",
+   "grupo": "acessorios",
+   "categoria": "trilho",
+   "encaixe": "trilho_curto",
+   "peso_kg": 0.15,
+   "raridade": "muito raro",
+   "valor_troca": 55,
+   "usa": "pilhas",
+   "autonomia_min": 75,
+   "luz": {
+    "alcance_m": 30,
+    "angulo_graus": 24,
+    "lumens": 500
+   },
+   "modificadores": {
+    "precisao_sem_mirar": 1.35
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Lanterna e laser num corpo só, com chave de três posições.",
+   "arquivo": "acessorios/combo_lanterna_laser.glb",
+   "tamanho_m": [
+    0.029,
+    0.038,
+    0.076
+   ],
+   "triangulos": 1208,
+   "kb": 63.8,
+   "encaixes": [
+    {
+     "no": "feixe",
+     "tipo": "efeito",
+     "pai": "combo_lanterna_laser",
+     "posicao_m": [
+      0.004,
+      -0.024,
+      -0.018
+     ],
+     "descricao": "SpotLight3D aqui (-Z)"
+    },
+    {
+     "no": "laser",
+     "tipo": "efeito",
+     "pai": "combo_lanterna_laser",
+     "posicao_m": [
+      -0.0075,
+      -0.0145,
+      -0.018
+     ],
+     "descricao": "origem do laser (-Z)"
+    }
+   ]
+  },
+  {
+   "id": "mira_ponto_vermelho_compacta",
+   "nome": "Mira de ponto vermelho compacta",
+   "grupo": "acessorios",
+   "categoria": "mira",
+   "encaixe": "mira_ferrolho",
+   "peso_kg": 0.03,
+   "raridade": "raro",
+   "valor_troca": 45,
+   "usa": "pilhas",
+   "autonomia_min": 3000,
+   "modificadores": {
+    "precisao_mirando": 1.25,
+    "tempo_mirar": 0.85
+   },
+   "onde": [
+    "quartel",
+    "galeria"
+   ],
+   "linha_de_visada": "encaixe \"olho\": centro da lente, a câmera mira por ali",
+   "descricao": "Mira refletora pequena para o ferrolho da pistola: ponto vermelho, mira mais rápido.",
+   "arquivo": "acessorios/mira_ponto_vermelho_compacta.glb",
+   "tamanho_m": [
+    0.025,
+    0.026,
+    0.028
+   ],
+   "triangulos": 540,
+   "kb": 33.4,
+   "encaixes": [
+    {
+     "no": "olho",
+     "tipo": "mira",
+     "pai": "mira_ponto_vermelho_compacta",
+     "posicao_m": [
+      0.0,
+      0.015,
+      -0.009
+     ],
+     "descricao": "centro da lente: linha de visada"
+    }
+   ]
+  },
+  {
+   "id": "carregador_9mm",
+   "nome": "Carregador 9 mm (15)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_9mm",
+   "capacidade": 15,
+   "municao": "municao_9mm",
+   "peso_kg": 0.09,
+   "raridade": "comum",
+   "valor_troca": 8,
+   "modificadores": {},
+   "descricao": "Carregador padrão da pistola, 15 tiros.",
+   "arquivo": "acessorios/carregador_9mm.glb",
+   "tamanho_m": [
+    0.026,
+    0.125,
+    0.072
+   ],
+   "triangulos": 1192,
+   "kb": 60.9
+  },
+  {
+   "id": "carregador_9mm_estendido",
+   "nome": "Carregador 9 mm estendido (24)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_9mm",
+   "capacidade": 24,
+   "municao": "municao_9mm",
+   "peso_kg": 0.13,
+   "raridade": "raro",
+   "valor_troca": 20,
+   "modificadores": {
+    "recarga_s": 1.1
+   },
+   "onde": [
+    "quartel",
+    "galeria"
+   ],
+   "descricao": "Mais 9 tiros, mas sai pelo fundo do punho e deixa a recarga um pouco mais lenta.",
+   "arquivo": "acessorios/carregador_9mm_estendido.glb",
+   "tamanho_m": [
+    0.026,
+    0.163,
+    0.084
+   ],
+   "triangulos": 1386,
+   "kb": 70.1
+  }
+ ],
+ "municao": [
+  {
+   "id": "municao_9mm",
+   "nome": "Cartucho 9 mm",
+   "grupo": "municao",
+   "categoria": "municao",
+   "calibre": "9 mm",
+   "peso_kg": 0.012,
+   "empilha": 100,
+   "raridade": "comum",
+   "onde": [
+    "quartel",
+    "correios",
+    "motel",
+    "casas",
+    "galeria"
+   ],
+   "descricao": "Um cartucho (deitado, pivô no centro). No inventário conta por unidade.",
+   "arquivo": "municao/municao_9mm.glb",
+   "tamanho_m": [
+    0.01,
+    0.01,
+    0.029
+   ],
+   "triangulos": 672,
+   "kb": 34.0
+  },
+  {
+   "id": "estojo_9mm",
+   "nome": "Estojo 9 mm (vazio)",
+   "grupo": "municao",
+   "categoria": "estojo",
+   "calibre": "9 mm",
+   "peso_kg": 0.004,
+   "descricao": "Estojo ejetado: o jogo cria um em saida_estojo a cada tiro (corpo rígido pequeno, some depois de uns segundos).",
+   "arquivo": "municao/estojo_9mm.glb",
+   "tamanho_m": [
+    0.01,
+    0.01,
+    0.019
+   ],
+   "triangulos": 496,
+   "kb": 25.0
+  },
+  {
+   "id": "caixa_municao_9mm",
+   "nome": "Caixa de munição 9 mm (50)",
+   "grupo": "municao",
+   "categoria": "caixa",
+   "calibre": "9 mm",
+   "municao": "municao_9mm",
+   "quantidade": 50,
+   "peso_kg": 0.62,
+   "empilha": 4,
+   "raridade": "incomum",
+   "onde": [
+    "quartel",
+    "correios",
+    "motel",
+    "casas",
+    "posto"
+   ],
+   "descricao": "Caixa de papelão com bandeja de 50 cartuchos. A tampa abre (nó \"tampa\", animação \"abrir\").",
+   "arquivo": "municao/caixa_municao_9mm.glb",
+   "tamanho_m": [
+    0.09,
+    0.034,
+    0.118
+   ],
+   "triangulos": 14004,
+   "kb": 745.8,
+   "partes": [
+    {
+     "no": "tampa",
+     "tipo": "tampa",
+     "eixo": "z",
+     "abre_graus": 115,
+     "descricao": "gira em torno da ponta de trás",
+     "pai": "caixa_municao_9mm"
+    }
+   ],
+   "animacoes": {
+    "abrir": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "abre a tampa"
+    },
+    "fechar": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "fecha a tampa"
+    }
+   }
+  }
+ ],
+ "efeitos": [
+  {
+   "id": "clarao_boca",
+   "nome": "Clarão de boca",
+   "grupo": "efeitos",
+   "categoria": "efeito",
+   "descricao": "Mostrar por 1 ou 2 quadros no encaixe boca_fogo a cada tiro; girar ao acaso em -Z e variar a escala (0,8 a 1,2). Material emissivo com transparência.",
+   "arquivo": "efeitos/clarao_boca.glb",
+   "tamanho_m": [
+    0.04,
+    0.046,
+    0.079
+   ],
+   "triangulos": 372,
+   "kb": 19.4
+  }
+ ]
+}

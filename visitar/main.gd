@@ -1,5 +1,5 @@
 # Monta um kit do pacote a partir do building_layout.json e coloca um jogador
-# em primeira pessoa na frente da entrada. Teclas 1 a 9 e 0 trocam de prédio.
+# em primeira pessoa na frente da entrada. [ e ] trocam de prédio (1 a 9 e 0 vão direto aos 10 primeiros).
 extends Node3D
 
 const KitDoorScript = preload("res://scripts/godot/door.gd")
@@ -8,7 +8,7 @@ const PlayerScript = preload("res://visitar/player.gd")
 const KITS := [
 	"predio-tijolos", "predio-mansarda", "padaria", "casa-enxaimel",
 	"torre-escalonada", "casa-de-campo", "bangalo", "supermercado", "galeria",
-	"casa-americana",
+	"casa-americana", "duplex",
 ]
 
 @export var kit: String = "galeria"
@@ -32,8 +32,16 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo:
+		var cur := KITS.find(kit)
+		match event.physical_keycode:
+			KEY_BRACKETRIGHT, KEY_PAGEDOWN:
+				_load_kit(KITS[(cur + 1) % KITS.size()])
+				return
+			KEY_BRACKETLEFT, KEY_PAGEUP:
+				_load_kit(KITS[(cur - 1 + KITS.size()) % KITS.size()])
+				return
 		var i: int = 9 if event.physical_keycode == KEY_0 else event.physical_keycode - KEY_1
-		if i >= 0 and i < KITS.size():
+		if i >= 0 and i < mini(10, KITS.size()):
 			_load_kit(KITS[i])
 
 
@@ -130,12 +138,10 @@ func _make_hud() -> void:
 
 
 func _update_hud() -> void:
-	var lines := "Prédio: %s\n" % kit
+	var lines := "Prédio %d de %d: %s\n" % [KITS.find(kit) + 1, KITS.size(), kit]
 	lines += "Clique: prender o mouse | WASD: andar | Shift: correr | Espaço: pular\n"
 	lines += "E ou clique: abrir/fechar porta | F: voar (Espaço sobe, Q desce) | Esc: soltar o mouse\n"
-	lines += "Trocar de prédio: "
-	for i in KITS.size():
-		lines += "%d %s  " % [(i + 1) % 10, KITS[i]]
+	lines += "Trocar de prédio: [ anterior | ] próximo (ou Page Up / Page Down; 1 a 9 e 0 vão aos 10 primeiros)"
 	_hud.text = lines
 
 

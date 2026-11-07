@@ -848,6 +848,9 @@ def wing_wall(kind):
         p=_wsd('door',True); p.merge(door_hood()); p.box('concrete',-0.8,0.8,0,0.15,0.0,0.6); return p
     return _wsd(kind,True)
 
+import sys as _s; _s.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts', 'detalhe'))
+import retrofit
+retrofit.aplicar(globals(), {'siding': 'siding', 'shingle': 'shingles', 'brick': 'brick', 'plaster': 'plaster', 'metal_roof': None, 'sign': None}, tabuas=0.14)
 pieces={'floor_tile':floor_tile(),'floor_tile_bath':floor_tile_bath(),'apparatus_floor':garage_floor(),'floor_tile_pole':floor_tile_pole(),
  'stair_core_slab':stair_core_slab(),'stairs_u_3m':stairs_u(H),'stair_guard':stair_guard(-0.9,0.9),
  'gallery_rail':gallery_rail(),'gallery_beam':gallery_beam(),'gallery_rail_end':gallery_rail(-W/2+0.25),'gallery_beam_end':gallery_beam(-W/2+0.25),'attic_wall_end':attic_wall(-W/2+0.25),'gallery_post':gallery_post(),'pole_guard':pole_guard(),'fire_pole':fire_pole(),'attic_wall':attic_wall(),
@@ -1033,5 +1036,5 @@ for e in L:
     if e['piece']=='player_scale_ref': continue
     Tm=trimesh.transformations.rotation_matrix(math.radians(e['rotY']),[0,1,0]); Tm[:3,3]=e['pos']
     asm.merge(pieces[e['piece']],Tm)
-asm.scene('building').export(f'{OUT}/building_assembled.glb',include_normals=True)
+print('triangulos no montado', retrofit.montar(pieces, L, f'{OUT}/building_assembled.glb')); retrofit.finalizar(f'{OUT}/pieces')
 print(len(pieces),'pieces',len(L),'placements',sum(1 for e in L if 'door' in e),'doors')

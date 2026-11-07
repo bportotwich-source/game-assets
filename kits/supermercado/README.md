@@ -18,11 +18,11 @@ Supermercado de bairro térreo em peças 3D (GLB), estilo toon com contorno. Seg
 - **Entrada e letreiro:** `vestibule` e `roof_sign` têm pivô no centro da fachada, na cota do piso. `awning` usa o mesmo pivô da vitrine.
 - **Portas internas:** as paredes internas têm 3,75 m e encostam na laje.
 
-## Texturas (embutidas nos GLB, UVs em metros)
-- `brick`: tijolo das paredes e quinas.
-- `stone`: rodapé de concreto e vergas.
-- `plaster`: interno.
-- `sign`: o letreiro, mapeado na placa inteira.
+## Alto detalhe
+Versão refeita com `scripts/detalhe/retrofit.py`, sem mudar planta nem encaixes:
+- **Portas:** almofadas rebaixadas e chanfradas, vidro com baguetes nas portas envidraçadas, maçaneta e dobradiças.
+- **Texturas PBR** (cor + normal + ORM, ladrilho de 2 m, JPEG dentro dos GLB, UVs em metros): `brick` (fachada), `stone` (embasamento), `plaster` (interno); o letreiro mantém a textura antiga. As vitrines continuam como eram.
+- Montado com cerca de 26 mil triângulos (antes 17 mil).
 
 ## Peças (28)
 | Grupo | Peças |
@@ -36,4 +36,4 @@ Supermercado de bairro térreo em peças 3D (GLB), estilo toon com contorno. Seg
 | Referência | `player_scale_ref` |
 
 ## Arquivos
-`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, texturas `*_texture.png`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com o prédio montado e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.
+`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com o prédio montado e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.

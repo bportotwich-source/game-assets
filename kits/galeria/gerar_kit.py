@@ -575,6 +575,9 @@ def roof_hvac():
     for x in (-0.4,0.4): p.cyl('dark',0.3,1.15,1.18,x,0.0,20); p.cyl('steel',0.06,1.18,1.2,x,0.0,8)
     return p
 CROWN_H=2.4
+import sys as _s; _s.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts', 'detalhe'))
+import retrofit
+retrofit.aplicar(globals(), {'render': 'render', 'stone': 'stone', 'plaster': 'plaster', 'canvas': None, 'sign': None})
 pieces={'floor_tile_mall':floor_tile_mall(),'floor_tile_shop':floor_tile_shop(),'floor_tile_bath':floor_tile_bath(),'roof_tile_flat':roof_tile_flat(),
  'wall_render_plain_ground':wall_render(True),'wall_render_window_ground':wall_render(True,'window'),'wall_render_small_window_ground':wall_render(True,'small'),
  'wall_render_plain':wall_render(),'wall_render_window':wall_render(False,'window'),'wall_render_small_window':wall_render(False,'small'),'wall_render_panel':wall_render(False,'panel'),
@@ -705,5 +708,5 @@ for e in L:
     if e['piece']=='player_scale_ref': continue
     Tm=trimesh.transformations.rotation_matrix(math.radians(e['rotY']),[0,1,0]); Tm[:3,3]=e['pos']
     asm.merge(pieces[e['piece']],Tm)
-asm.scene('building').export(f'{OUT}/building_assembled.glb',include_normals=True)
+print('triangulos no montado', retrofit.montar(pieces, L, f'{OUT}/building_assembled.glb')); retrofit.finalizar(f'{OUT}/pieces')
 print(len(pieces),'pieces',len(L),'placements',sum(1 for e in L if 'door' in e),'doors')

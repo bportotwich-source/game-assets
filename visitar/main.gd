@@ -159,6 +159,7 @@ func _build_kit(k: String) -> AABB:
 			d.start_open = start_doors_open
 			_building.add_child(d)
 			var body := AnimatableBody3D.new()
+			body.sync_to_physics = false
 			d.add_child(body)
 			body.add_child(inst)
 			_add_shapes(inst, body)

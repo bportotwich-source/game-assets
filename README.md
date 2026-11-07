@@ -38,7 +38,7 @@ Cada kit tem:
 3. Clique para prender o mouse. WASD anda, Shift corre, Espaço pula, E ou clique abre e fecha portas, F liga o voo (Espaço sobe, Q desce), Esc solta o mouse.
 4. As teclas 1 a 9 trocam de prédio. Para começar em outro, mude `kit` no nó `Main` de `visitar/main.tscn`.
 
-O prédio é montado na hora a partir do `building_layout.json`, com colisão exata em cada peça. O jogador segue o padrão (cápsula de 1,8 m, olhos a 1,65 m) e sobe degraus e escadas rolantes sozinho.
+O prédio é montado na hora a partir do `building_layout.json`, com colisão exata em cada peça. O jogador segue o padrão (cápsula de 1,8 m, olhos a 1,65 m) e passa por soleiras e degraus de até 35 cm sem pular, inclusive nas escadas rolantes.
 
 ## Regenerar um kit
 ```

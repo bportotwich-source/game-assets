@@ -1,12 +1,14 @@
-# Jogador em primeira pessoa no padrão do pacote: cápsula de 1,8 m e raio 0,3 m,
-# olhos a 1,65 m. Sobe degraus de até 0,25 m sozinho (escadas e escadas rolantes).
+# Jogador em primeira pessoa no padrão do pacote: 1,8 m de altura, raio 0,3 m,
+# olhos a 1,65 m. A cápsula "flutua" 0,35 m acima dos pés e raios para baixo
+# acham o chão, então soleiras, degraus e escadas rolantes não travam o passo.
 extends CharacterBody3D
 
 const WALK := 4.0
 const RUN := 7.5
 const JUMP := 4.2
 const GRAVITY := 9.8
-const STEP := 0.25
+const STEP := 0.35        # degrau mais alto que ele sobe sem pular
+const PROBE := 0.7
 const SENS := 0.0025
 
 var flying := false
@@ -19,9 +21,9 @@ func _ready() -> void:
 	_shape = CollisionShape3D.new()
 	var cap := CapsuleShape3D.new()
 	cap.radius = 0.3
-	cap.height = 1.8
+	cap.height = 1.8 - STEP
 	_shape.shape = cap
-	_shape.position.y = 0.9
+	_shape.position.y = STEP + cap.height * 0.5
 	add_child(_shape)
 
 	_cam = Camera3D.new()
@@ -36,8 +38,7 @@ func _ready() -> void:
 	_ray.add_exception(self)
 	_cam.add_child(_ray)
 
-	floor_snap_length = 0.3
-	floor_max_angle = deg_to_rad(46.0)
+	motion_mode = CharacterBody3D.MOTION_MODE_FLOATING
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 
@@ -110,11 +111,12 @@ func _physics_process(delta: float) -> void:
 	var move := global_transform.basis * dir * speed
 	velocity.x = move.x
 	velocity.z = move.z
-	if is_on_floor():
-		if Input.is_physical_key_pressed(KEY_SPACE):
-			velocity.y = JUMP
-		else:
-			_step_up(delta)
+	var floor_y = _floor_height()
+	var feet := global_position.y
+	if floor_y != null and velocity.y <= 0.0 and feet - floor_y <= STEP:
+		# No chão: acompanha a altura do piso (sobe e desce degraus suavemente).
+		global_position.y = lerpf(feet, floor_y, minf(1.0, 18.0 * delta))
+		velocity.y = JUMP if Input.is_physical_key_pressed(KEY_SPACE) else 0.0
 	else:
 		velocity.y -= GRAVITY * delta
 	move_and_slide()
@@ -123,27 +125,16 @@ func _physics_process(delta: float) -> void:
 		velocity = Vector3.ZERO
 
 
-# Se um degrau baixo bloqueia o passo, sobe o jogador para cima dele.
-func _step_up(delta: float) -> void:
-	var motion := Vector3(velocity.x, 0.0, velocity.z) * delta
-	if motion.length() < 0.0005:
-		return
-	var t := global_transform
-	var hit := KinematicCollision3D.new()
-	if not test_move(t, motion, hit):
-		return
-	if hit.get_normal().y > 0.7:
-		return
-	var up := Vector3(0.0, STEP, 0.0)
-	if test_move(t, up):
-		return
-	var t2 := t.translated(up)
-	if test_move(t2, motion):
-		return
-	t2 = t2.translated(motion)
-	var down := KinematicCollision3D.new()
-	if not test_move(t2, -up, down):
-		return
-	if down.get_normal().y < 0.7:
-		return
-	global_position = t2.origin + down.get_travel()
+# Maior altura de piso sob o jogador (centro e 4 pontos em volta), ou null.
+func _floor_height():
+	var space := get_world_3d().direct_space_state
+	var best = null
+	for o in [Vector2.ZERO, Vector2(0.2, 0), Vector2(-0.2, 0), Vector2(0, 0.2), Vector2(0, -0.2)]:
+		var from := global_position + Vector3(o.x, PROBE, o.y)
+		var q := PhysicsRayQueryParameters3D.create(from, from - Vector3(0, PROBE + STEP, 0))
+		q.exclude = [get_rid()]
+		var hit := space.intersect_ray(q)
+		if hit and hit.normal.y > 0.6:
+			if best == null or hit.position.y > best:
+				best = hit.position.y
+	return best

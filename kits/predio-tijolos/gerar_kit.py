@@ -345,7 +345,8 @@ def interior_wall(doorway,h=H-SLAB,ow=0.9):
     if doorway:
         for xx in (-ow/2,ow/2): p.box('frame',xx-0.04,xx+0.04,0,2.14,-t/2-0.02,t/2+0.02)
         p.box('frame',-ow/2-0.04,ow/2+0.04,2.08,2.18,-t/2-0.02,t/2+0.02)
-    p.box('trim',-W/2,W/2,0,0.1,t/2,t/2+0.015); p.box('trim',-W/2,W/2,0,0.1,-t/2-0.015,-t/2)
+    segs=[(-W/2,-ow/2-0.04),(ow/2+0.04,W/2)] if doorway else [(-W/2,W/2)]  # rodapé para na porta
+    for a,b in segs: p.box('trim',a,b,0,0.1,t/2,t/2+0.015); p.box('trim',a,b,0,0.1,-t/2-0.015,-t/2)
     return p
 def interior_wall_end(h=H-SLAB):
     # plain interior wall that stops at the inner face of an exterior wall (+X end shortened by T)

@@ -7,12 +7,14 @@
 
 O jogador acorda sozinho numa cidade pequena tomada por zumbis. Ele junta recursos, transforma um prédio abandonado em abrigo, encontra outros sobreviventes e, com eles, reconstrói uma comunidade que cresce até virar uma cidade nova.
 
-**Recomendação de escopo:** fazer um jogo **híbrido em duas câmeras sobre o mesmo mundo**.
+**Recomendação de escopo:** fazer um jogo **híbrido com três vistas sobre o mesmo mundo**: primeira pessoa, terceira pessoa e vista de cima.
 
-- **A pé** (terceira pessoa, com opção de primeira pessoa): explorar, saquear, lutar e conversar. Aproveita direto o que já existe: todos os kits são entráveis, têm portas que abrem e escala real.
+- **Primeira pessoa** (1ª): a vista mais tensa, para dentro de prédios, corredores escuros e mira. Já existe no projeto Godot de visita aos kits.
+- **Terceira pessoa** (3ª): câmera atrás do ombro para andar pela rua, lutar em grupo, carregar coisas e ver o próprio personagem. Encostada em parede ou em interior apertado, aproxima sozinha para não atravessar o cenário.
+- As duas vistas a pé servem para explorar, saquear, lutar e conversar, e trocam a qualquer momento com uma tecla (V). Aproveitam direto o que já existe: todos os kits são entráveis, têm portas que abrem e escala real.
 - **Modo prefeito** (vista de cima, inclinada): planejar a base, posicionar construções no grid de 2 m, distribuir tarefas e acompanhar os números da comunidade. É aqui que entra o estilo de construção de cidade das referências.
 
-O jogador começa só com a câmera a pé. O modo prefeito é **desbloqueado** quando a base tem o primeiro sobrevivente além dele (fim da fase 1). Assim o jogo começa simples, como sobrevivência, e vai virando gestão aos poucos, sem dois jogos separados.
+A troca para a vista de cima é outra tecla (Tab), com uma transição suave subindo do personagem. O jogador começa só com as vistas a pé. O modo prefeito é **desbloqueado** quando a base tem o primeiro sobrevivente além dele (fim da fase 1). Assim o jogo começa simples, como sobrevivência, e vai virando gestão aos poucos, sem dois jogos separados.
 
 **MVP:** uma cidadezinha (cerca de 400 × 400 m) montada com uns 15 kits, de 2 a 3 horas de jogo, indo do "sozinho" até "vila de 20 pessoas com rádio funcionando". Estimativa: **cerca de 7 meses** para uma pessoa trabalhando com IA, dividido em 6 marcos (seção 10).
 
@@ -133,6 +135,7 @@ Visual da interface: painéis claros com cantos arredondados e ícones desenhado
 ### 8.2 Módulos
 | Módulo | Responsabilidade |
 |---|---|
+| `Cameras` | As 3 vistas (1ª, 3ª e de cima), troca suave entre elas, colisão da câmera de 3ª pessoa |
 | `Mundo` | Carrega o mapa da cidade, prédios (com LOD), terreno, ruas, vegetação |
 | `Grid` | Grid de 2 m: ocupação, o que é construível, ligação por trilha, área dentro do muro |
 | `Construcao` | Plantas, obras em andamento, reparo de ruínas (reaproveita o editor) |
@@ -171,7 +174,7 @@ Em ordem de prioridade:
 
 ### Entra
 - 1 mapa: cidadezinha de cerca de 400 × 400 m com uns 15 kits (cerca de 40 prédios, repetindo os kits de casas)
-- Câmera a pé + modo prefeito
+- As 3 vistas: 1ª pessoa, 3ª pessoa e vista de cima (modo prefeito)
 - 4 necessidades do jogador, saque, inventário, 10 receitas de produção
 - 6 recursos: comida, água, madeira, sucata, remédios, combustível
 - Ocupar prédio, barricar, reparar ruínas
@@ -195,7 +198,7 @@ Estimativas para uma pessoa com ajuda de IA, trabalhando com frequência. Cada m
 
 | Marco | Duração | Entrega | Pronto quando |
 |---|---|---|---|
-| **M0. Fundação** | 2 semanas | Repositório do jogo, mapa de teste com 5 kits, LODs e ruínas geradas por script, câmera a pé e de cima | Dá para andar pela cidade e trocar de câmera a 60 fps |
+| **M0. Fundação** | 2 semanas | Repositório do jogo, mapa de teste com 5 kits, LODs e ruínas geradas por script, as 3 vistas (1ª, 3ª e de cima) | Dá para andar pela cidade e trocar entre as 3 vistas a 60 fps |
 | **M1. Sobrevivente** | 5 semanas | Necessidades, saque, inventário, combate corpo a corpo, 1 tipo de zumbi, dia/noite | Dá para sobreviver 3 dias sozinho e morrer de jeitos diferentes |
 | **M2. Abrigo** | 5 semanas | Ocupar e barricar, reparar ruínas, estações de trabalho, kit 25 (construções), 1ª horda | Uma base barricada aguenta (ou não) uma horda |
 | **M3. Comunidade** | 6 semanas | Sobreviventes com IA de tarefas, moral, cartões de pedido, recrutamento | 5 moradores vivem sozinhos por 3 dias sem o jogador mandar |
@@ -216,6 +219,6 @@ Total: cerca de 28 semanas (7 meses). Depois do MVP, a ordem sugerida é: fase 4
 
 ## 13. Próximos passos
 
-1. Câmera principal decidida por Bruno em 7/11/2026: **híbrido** (a pé + modo prefeito).
+1. Câmera principal decidida por Bruno em 7/11/2026: **híbrido com 3 vistas**: 1ª pessoa, 3ª pessoa e vista de cima.
 2. Criar o repositório do jogo e começar o **M0**.
 3. Em paralelo, no pacote de assets: script de **ruínas** e de **LOD** para os kits, e o **kit 25** de construções de sobrevivência.

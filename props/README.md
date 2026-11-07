@@ -38,6 +38,8 @@ props/
 | 4. Sobrevivência e oficina | bancada de trabalho com morsa, fogareiro a gás de camping, beliche de abrigo, mesa de rádio amador, gerador portátil a gasolina, tambor de 200 L, pallet de madeira | arco e flechas, lança improvisada, facão, serrote, pá, enxada, rolo de corda, rolo de arame farpado, saco de areia, caixa de peças de motor |
 | 5. Fase 1 (Sozinho) | barricada de tábuas para porta, barricada de tábuas para janela, alarme de latas, fogueira de pedras, colchão no chão, caixa de papelão de mudança, lixeira de rua com rodas, mala de viagem, pilha de sucata, toco de rachar lenha | feixe de lenha, pacote de salgadinho, barra de chocolate, cantil de alumínio, saco de dormir enrolado, molho de chaves com etiqueta, mapa da cidade dobrado, bilhete de sobrevivente |
 
+As versões completas das armas (fogo, arcos, facas, facão, lança), com partes, acessórios e animações, ficam em `props/armas/`; o arco, a lança e o facão daqui são o loot simples.
+
 O lote 1 fica em `gerar_props.py`; os outros em `lote2.py` a `lote5.py`, que o gerador carrega com as mesmas funções e materiais. Para um lote novo, crie `lote6.py` e acrescente o número no laço do gerador.
 
 Algumas mobílias trazem campos a mais para o jogo: `esconderijo` (vaso sanitário), `modulo_m` (gôndola, encaixa lado a lado), `empurrar` (carrinho), `vagas` (beliche), `desmontavel` (pallet), `usa` (rádio, gerador), `portatil` e `peso_kg` (fogareiro, gerador).

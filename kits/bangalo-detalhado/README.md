@@ -53,7 +53,7 @@ Igual ao kit 7 (veja o [README dele](../bangalo/README.md)), com estas diferenç
 
 ## Testes
 - `verificar_flicker.py`: TOTAL 0 com a casa montada e com `SOLO=1` (cada peça sozinha).
-- Godot 4.3: o jogador sai da calçada, sobe os degraus, cruza a varanda e entra na sala pela porta da frente. No visitante, é o prédio 21 (tecla `]` até chegar nele).
+- Godot 4.3: o jogador sai da calçada, sobe os degraus, cruza a varanda e entra na sala pela porta da frente. No visitante, é o último da lista (tecla `[` a partir do primeiro).
 
 ## Regenerar
 ```

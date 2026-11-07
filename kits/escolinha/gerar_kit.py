@@ -730,6 +730,7 @@ def wall_poly(p,poly,hole=None,x0=-W/2,x1=W/2,top=HW,frieze=True,skip=None):
 WIN=(1.0,FY+0.85,FY+3.0)
 def sash(p,w,y0,y1):
     window(p,w,y0,y1,lintel=None); casing(p,w,y0,y1)
+    if 'retrofit' in globals(): return   # a janela detalhada ja tem travessa e baguetes
     x=w/2; p.box('frame',-x,x,(y0+y1)/2-0.03,(y0+y1)/2+0.03,-0.17,-0.1)
     for f in (1/3,2/3):
         for yy0,yy1 in ((y0,(y0+y1)/2),((y0+y1)/2,y1)): xx=-x+f*w; p.box('frame',xx-0.015,xx+0.015,yy0,yy1,-0.165,-0.11)
@@ -846,6 +847,9 @@ def woodshed():
     hull(p,'shingle',[(xx,hh,zz) for xx in (-x-0.15,x+0.15) for zz,hh in ((-z-0.2,hb-0.06),(z+0.25,hf+0.02))]+[(xx,hh+0.08,zz) for xx in (-x-0.15,x+0.15) for zz,hh in ((-z-0.2,hb-0.06),(z+0.25,hf+0.02))])
     return p
 
+import sys as _s; _s.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts', 'detalhe'))
+import retrofit
+retrofit.aplicar(globals(), {'siding': 'siding', 'shingle': 'shingles', 'brick': 'brick', 'plaster': 'plaster'}, tabuas=0.14)
 pieces={'floor_tile':floor_tile(),'roof_tile':roof_tile(),
  'school_wall_window':school_wall('window'),'school_wall_plain':school_wall('plain'),'school_wall_door':school_wall('door',w=4.0),'school_wall_backdoor':school_wall('backdoor'),
  'school_corner':school_corner(),'vest_corner':school_corner(VHW),
@@ -914,5 +918,5 @@ for e in L:
     if e['piece']=='player_scale_ref': continue
     Tm=trimesh.transformations.rotation_matrix(math.radians(e['rotY']),[0,1,0]); Tm[:3,3]=e['pos']
     asm.merge(pieces[e['piece']],Tm)
-asm.scene('building').export(f'{OUT}/building_assembled.glb',include_normals=True)
+print('triangulos no montado', retrofit.montar(pieces, L, f'{OUT}/building_assembled.glb')); retrofit.finalizar(f'{OUT}/pieces')
 print(len(pieces),'pieces',len(L),'placements',sum(1 for e in L if 'door' in e),'doors')

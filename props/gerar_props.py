@@ -47,6 +47,7 @@ FOSCOS = {'borracha': 0.92, 'tecido_sofa': 0.95, 'tecido_almofada': 0.95, 'tecid
           'fita_preta': 0.85, 'cartela': 0.6, 'pilha_corpo': 0.35, 'madeira_branca': 0.5}
 TRANSP = {'vidro_prateleira': ((200, 226, 230), 0.35, 0.05), 'pet': ((200, 228, 240), 0.32, 0.08), 'agua': ((150, 200, 230), 0.45, 0.02),
           'plastico_transp': ((230, 236, 240), 0.4, 0.15), 'ambar': ((168, 84, 20), 0.82, 0.2), 'galao_azul': ((90, 150, 210), 0.6, 0.25)}
+EMISSIVOS = {}          # material -> emissiveFactor (brasa da fogueira)
 UV_ESCALA = {}          # material -> tamanho do ladrilho em metros (projecao em caixa)
 TEX_PROPRIAS = [        # (material, tipo, ladrilho m, px/m): texturas de _ruido_tex; os lotes acrescentam as suas
     ('tecido_sofa', 'tecido', 0.5, 768), ('tecido_almofada', 'tecido', 0.5, 768), ('tecido_cadeira', 'tecido', 0.5, 768),
@@ -94,6 +95,7 @@ def materiais():
     for k, (c, alpha, rough) in TRANSP.items():
         MATS[k] = PBRMaterial(name=k, baseColorFactor=[c[0] / 255, c[1] / 255, c[2] / 255, alpha], alphaMode='BLEND',
                               metallicFactor=0.0, roughnessFactor=rough, doubleSided=False)
+    for k, e in EMISSIVOS.items(): MATS[k].emissiveFactor = e
     MATS['espelho'].roughnessFactor = 0.03
 
 
@@ -1050,7 +1052,7 @@ def pilhas(M):
 
 
 # ============================================================================ lotes seguintes (props/lote2.py, lote3.py, ...)
-for _n in (2, 3, 4):
+for _n in (2, 3, 4, 5):
     _f = os.path.join(AQUI, f'lote{_n}.py')
     if os.path.exists(_f): LOTE[0] = _n; exec(compile(open(_f, encoding='utf-8').read(), _f, 'exec'), globals())
 
@@ -1105,7 +1107,7 @@ NOMES = {'cozinha': 'Cozinha', 'quarto': 'Quarto', 'sala': 'Sala', 'banheiro': '
          'materiais': 'Materiais de construção', 'combustivel': 'Combustível', 'energia': 'Energia',
          'lavanderia': 'Lavanderia', 'escritorio': 'Escritório', 'loja': 'Loja', 'saude': 'Saúde', 'oficina': 'Oficina', 'abrigo': 'Abrigo',
          'roupas': 'Roupas e equipamento', 'utensilios': 'Utensílios', 'eletronicos': 'Luz e eletrônicos', 'higiene': 'Higiene',
-         'agricultura': 'Agricultura'}
+         'agricultura': 'Agricultura', 'barricadas': 'Barricadas e alarmes', 'rua': 'Rua e quintal', 'pistas': 'Chaves e pistas'}
 
 
 def catalogo_md(regs):

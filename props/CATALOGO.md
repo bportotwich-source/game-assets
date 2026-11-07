@@ -47,6 +47,16 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Gerador portátil a gasolina (`gerador`) | 4 | Oficina | 0,68 × 0,56 × 0,53 | - | - | - | 3332 |
 | Tambor de 200 L (`tambor_200l`) | 4 | Depósito | 0,60 × 0,88 × 0,60 | 4 espaços: combustivel, agua, materiais | - | barricada | 1952 |
 | Pallet de madeira (`pallet`) | 4 | Depósito | 1,20 × 0,14 × 0,80 | - | - | barricada | 1340 |
+| Barricada de tábuas para porta (`barricada_porta`) | 5 | Barricadas e alarmes | 1,30 × 2,14 × 0,08 | - | tabua_1, tabua_2, tabua_3, tabua_4, tabua_5, tabua_6 | - | 2800 |
+| Barricada de tábuas para janela (`barricada_janela`) | 5 | Barricadas e alarmes | 1,27 × 1,56 × 0,08 | - | tabua_1, tabua_2, tabua_3, tabua_4, tabua_5 | - | 2428 |
+| Alarme de latas (`alarme_latas`) | 5 | Barricadas e alarmes | 1,06 × 0,79 × 0,11 | - | - | - | 3140 |
+| Fogueira de pedras (`fogueira`) | 5 | Abrigo | 0,88 × 0,45 × 0,85 | - | - | - | 8200 |
+| Colchão no chão (`colchao_chao`) | 5 | Abrigo | 1,41 × 0,27 × 2,19 | - | - | dormir | 3972 |
+| Caixa de papelão de mudança (`caixa_papelao`) | 5 | Depósito | 0,50 × 0,37 × 0,40 | 4 espaços: utensilios, roupas, materiais | aba_esq, aba_dir, aba_frente, aba_tras | - | 208 |
+| Lixeira de rua com rodas (`lixeira`) | 5 | Rua e quintal | 0,61 × 1,05 × 0,84 | 5 espaços: comida, utensilios, materiais | tampa | barricada | 3060 |
+| Mala de viagem (`mala_viagem`) | 5 | Quarto | 0,75 × 0,25 × 0,52 | 5 espaços: roupas, remedios, utensilios | tampa | - | 2696 |
+| Pilha de sucata (`pilha_sucata`) | 5 | Rua e quintal | 1,70 × 0,59 × 1,64 | - | - | - | 4040 |
+| Toco de rachar lenha (`toco_lenha`) | 5 | Rua e quintal | 1,09 × 0,50 × 0,74 | - | - | - | 1668 |
 
 ## Loot
 
@@ -102,3 +112,11 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Rolo de arame farpado (`arame_farpado`) | 4 | Materiais de construção | sucata | 3 | 6,0 kg | 1 | defesa: segura e fere zumbis no muro | armazem, casa_de_campo, quartel |
 | Saco de areia (`saco_areia`) | 4 | Materiais de construção | material | 1 | 18,0 kg | 1 | defesa: 3 sacos = 1 m de trincheira à prova de mordida | quartel, armazem, estacao |
 | Caixa de peças de motor (`peca_motor`) | 4 | Energia | pecas | 1 | 2,5 kg | 2 | repara o gerador e a subestação (marco da fase 4) | posto, garagem, estacao |
+| Feixe de lenha (`lenha`) | 5 | Materiais de construção | madeira | 2 | 4,0 kg | 5 | queima 2 h na fogueira ou rende 2 madeira | armazem, padaria, casas, quartel, abrigo |
+| Pacote de salgadinho (`salgadinho`) | 5 | Comida | comida | 1 | 0,1 kg | 8 | fome -10, sede +5 (leve, não estraga) | posto, supermercado, diner, galeria, casas |
+| Barra de chocolate (`barra_chocolate`) | 5 | Comida | comida | 1 | 0,09 kg | 10 | fome -10 e ânimo +5 | posto, supermercado, galeria, casas, escolinha |
+| Cantil de alumínio (`cantil`) | 5 | Água | equipamento | 1 | 0,35 kg | 1 | leva 1 L de água; pode ir ao fogo para ferver | quartel, casas, armazem, galeria |
+| Saco de dormir enrolado (`saco_dormir`) | 5 | Roupas e equipamento | equipamento | 1 | 1,6 kg | 1 | dormir em qualquer lugar (recupera 85% da energia) | casas, armazem, quartel, galeria |
+| Molho de chaves com etiqueta (`chave_casa`) | 5 | Chaves e pistas | chave | 1 | 0,05 kg | 1 | abre uma porta trancada (a casa escrita na etiqueta) | casas, motel, escritorio, quartel |
+| Mapa da cidade dobrado (`mapa_cidade`) | 5 | Chaves e pistas | mapa | 1 | 0,08 kg | 1 | revela os prédios do bairro no mapa do jogo | posto, correios, estacao, casas, biblioteca |
+| Bilhete de sobrevivente (`bilhete`) | 5 | Chaves e pistas | pista | 1 | 0,01 kg | 1 | pista do 1º sobrevivente: marca um encontro no mapa (fim da fase 1) | casas, igreja, posto, escolinha, supermercado |

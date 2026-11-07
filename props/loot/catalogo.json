@@ -1454,6 +1454,232 @@
    ],
    "triangulos": 816,
    "kb": 64.5
+  },
+  {
+   "id": "lenha",
+   "nome": "Feixe de lenha",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 5,
+   "recurso": "madeira",
+   "valor": 2,
+   "peso_kg": 4.0,
+   "empilha": 5,
+   "onde": [
+    "armazem",
+    "padaria",
+    "casas",
+    "quartel",
+    "abrigo"
+   ],
+   "efeito": "queima 2 h na fogueira ou rende 2 madeira",
+   "arquivo": "loot/lenha.glb",
+   "tamanho_m": [
+    0.424,
+    0.21,
+    0.21
+   ],
+   "triangulos": 732,
+   "kb": 172.6
+  },
+  {
+   "id": "salgadinho",
+   "nome": "Pacote de salgadinho",
+   "grupo": "loot",
+   "categoria": "comida",
+   "montagem": "floor",
+   "lote": 5,
+   "recurso": "comida",
+   "valor": 1,
+   "peso_kg": 0.1,
+   "empilha": 8,
+   "onde": [
+    "posto",
+    "supermercado",
+    "diner",
+    "galeria",
+    "casas"
+   ],
+   "efeito": "fome -10, sede +5 (leve, não estraga)",
+   "arquivo": "loot/salgadinho.glb",
+   "tamanho_m": [
+    0.17,
+    0.044,
+    0.264
+   ],
+   "triangulos": 1768,
+   "kb": 142.5
+  },
+  {
+   "id": "barra_chocolate",
+   "nome": "Barra de chocolate",
+   "grupo": "loot",
+   "categoria": "comida",
+   "montagem": "floor",
+   "lote": 5,
+   "recurso": "comida",
+   "valor": 1,
+   "peso_kg": 0.09,
+   "empilha": 10,
+   "onde": [
+    "posto",
+    "supermercado",
+    "galeria",
+    "casas",
+    "escolinha"
+   ],
+   "efeito": "fome -10 e ânimo +5",
+   "arquivo": "loot/barra_chocolate.glb",
+   "tamanho_m": [
+    0.08,
+    0.011,
+    0.194
+   ],
+   "triangulos": 132,
+   "kb": 27.6
+  },
+  {
+   "id": "cantil",
+   "nome": "Cantil de alumínio",
+   "grupo": "loot",
+   "categoria": "agua",
+   "montagem": "floor",
+   "lote": 5,
+   "recurso": "equipamento",
+   "valor": 1,
+   "peso_kg": 0.35,
+   "empilha": 1,
+   "onde": [
+    "quartel",
+    "casas",
+    "armazem",
+    "galeria"
+   ],
+   "efeito": "leva 1 L de água; pode ir ao fogo para ferver",
+   "pega": [
+    0,
+    0.04,
+    0
+   ],
+   "arquivo": "loot/cantil.glb",
+   "tamanho_m": [
+    0.176,
+    0.176,
+    0.268
+   ],
+   "triangulos": 2268,
+   "kb": 109.6
+  },
+  {
+   "id": "saco_dormir",
+   "nome": "Saco de dormir enrolado",
+   "grupo": "loot",
+   "categoria": "roupas",
+   "montagem": "floor",
+   "lote": 5,
+   "recurso": "equipamento",
+   "valor": 1,
+   "peso_kg": 1.6,
+   "empilha": 1,
+   "onde": [
+    "casas",
+    "armazem",
+    "quartel",
+    "galeria"
+   ],
+   "efeito": "dormir em qualquer lugar (recupera 85% da energia)",
+   "arquivo": "loot/saco_dormir.glb",
+   "tamanho_m": [
+    0.432,
+    0.236,
+    0.236
+   ],
+   "triangulos": 3812,
+   "kb": 292.4
+  },
+  {
+   "id": "chave_casa",
+   "nome": "Molho de chaves com etiqueta",
+   "grupo": "loot",
+   "categoria": "pistas",
+   "montagem": "floor",
+   "lote": 5,
+   "recurso": "chave",
+   "valor": 1,
+   "peso_kg": 0.05,
+   "empilha": 1,
+   "onde": [
+    "casas",
+    "motel",
+    "escritorio",
+    "quartel"
+   ],
+   "efeito": "abre uma porta trancada (a casa escrita na etiqueta)",
+   "arquivo": "loot/chave_casa.glb",
+   "tamanho_m": [
+    0.159,
+    0.007,
+    0.08
+   ],
+   "triangulos": 1014,
+   "kb": 75.2
+  },
+  {
+   "id": "mapa_cidade",
+   "nome": "Mapa da cidade dobrado",
+   "grupo": "loot",
+   "categoria": "pistas",
+   "montagem": "floor",
+   "lote": 5,
+   "recurso": "mapa",
+   "valor": 1,
+   "peso_kg": 0.08,
+   "empilha": 1,
+   "onde": [
+    "posto",
+    "correios",
+    "estacao",
+    "casas",
+    "biblioteca"
+   ],
+   "efeito": "revela os prédios do bairro no mapa do jogo",
+   "arquivo": "loot/mapa_cidade.glb",
+   "tamanho_m": [
+    0.155,
+    0.007,
+    0.22
+   ],
+   "triangulos": 192,
+   "kb": 50.9
+  },
+  {
+   "id": "bilhete",
+   "nome": "Bilhete de sobrevivente",
+   "grupo": "loot",
+   "categoria": "pistas",
+   "montagem": "floor",
+   "lote": 5,
+   "recurso": "pista",
+   "valor": 1,
+   "peso_kg": 0.01,
+   "empilha": 1,
+   "onde": [
+    "casas",
+    "igreja",
+    "posto",
+    "escolinha",
+    "supermercado"
+   ],
+   "efeito": "pista do 1º sobrevivente: marca um encontro no mapa (fim da fase 1)",
+   "arquivo": "loot/bilhete.glb",
+   "tamanho_m": [
+    0.15,
+    0.004,
+    0.2
+   ],
+   "triangulos": 96,
+   "kb": 36.1
   }
  ]
 }

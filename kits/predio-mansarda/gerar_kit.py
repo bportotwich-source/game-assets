@@ -571,6 +571,9 @@ def stair_core_rail(z0=-1.98):
     p=Piece(); railing(p,-0.02,0.02,z0,1.98,0,sides=(False,True,False),n=int((1.98-z0)/0.165)); return p
 def corner_ground():
     p=corner('rustic',HW,0.2,0.08,True); e=0.03; p.box('trim',-T,e+0.03,0.25,0.57,-T,e+0.03); return p
+import sys as _s; _s.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts', 'detalhe'))
+import retrofit
+retrofit.aplicar(globals(), {'ashlar': 'stone', 'rustic': 'stone', 'zinc': None, 'plaster': 'plaster'})
 pieces={'floor_tile':floor_tile(),'floor_tile_bath':floor_tile_bath(),'stair_core_slab':stair_core_slab(),'stair_core_rail':stair_core_rail(),'stair_core_rail_attic':stair_core_rail(-1.2),
  'stairs_u_3m':stairs_u(H),'stairs_u_3m2':stairs_u(HG),
  'door_leaf_entrance':door_leaf(0.96,2.28),'door_leaf_entrance_b':door_leaf(0.96,2.32,True,'door_b'),'door_leaf_interior':door_leaf(0.86,2.08,False,'frame'),'door_leaf_balcony':door_leaf_balcony(),
@@ -745,5 +748,5 @@ for e in L:
     if e['piece']=='player_scale_ref': continue
     Tm=trimesh.transformations.rotation_matrix(math.radians(e['rotY']),[0,1,0]); Tm[:3,3]=e['pos']
     asm.merge(pieces[e['piece']],Tm)
-asm.scene('building').export(f'{OUT}/building_assembled.glb',include_normals=True)
+print('triangulos no montado', retrofit.montar(pieces, L, f'{OUT}/building_assembled.glb')); retrofit.finalizar(f'{OUT}/pieces')
 print(len(pieces),'pieces',len(L),'placements',sum(1 for e in L if 'door' in e),'doors')

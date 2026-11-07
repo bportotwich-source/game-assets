@@ -21,9 +21,13 @@ import detalhe as D
 
 def aplicar(g, tipos, tabuas=None, tabuas_mats=None, portas=True, janelas=True, cores=None):
     old_TEX, old_MATS, old_Piece = dict(g.get('TEX', {})), dict(g.get('MATS', {})), g['Piece']
-    base = {k: v for k, v in g['COL'].items()}; base.update(cores or {}); cores = base   # cores: troca a cor-base de um material texturizado
+    base = {k: v for k, v in g['COL'].items()}
+    for k, t in tipos.items():   # a cor real de um material texturizado antigo esta na imagem (fator branco): usa a mediana dela
+        if t and k in old_TEX:
+            a = np.asarray(old_TEX[k][0].convert('RGB')).reshape(-1, 3); base[k] = tuple(int(c) for c in np.median(a, axis=0))
+    base.update(cores or {}); cores = base   # cores: troca a cor-base de um material texturizado
     D.configurar(cores=cores, texturas={k: t for k, t in tipos.items() if t})
-    kept = {k: old_TEX[k] for k, t in tipos.items() if not t and k in old_TEX}
+    kept = {k: old_TEX[k] for k in old_TEX if not tipos.get(k)}   # sem tipo (None ou fora da lista): textura antiga
     for k in kept: D.MATS[k] = old_MATS[k]
     for k, m in old_MATS.items():          # materiais que so o kit tem (cores especiais) continuam
         if k not in D.MATS: D.MATS[k] = m

@@ -18,13 +18,12 @@ Quartel com galpão de tijolo de 3 portões e anexo de madeira branca, em peças
 - **Mezanino:** pisos em y = 3, forro em y = 6 sobre os quartos e `attic_wall` em z = -3 fechando o vão até o telhado. As peças `_end` param dentro da parede externa.
 - **Escada:** `stairs_u_3m_192_192` com pivô em (6, 0, -3), núcleo de z -7 a -3.
 
-## Texturas (embutidas nos GLB, UVs em metros)
-- `brick`: tijolo, fiadas de 12,5 cm.
-- `metal_roof`: telha metálica com junta a cada 50 cm.
-- `siding`: tábuas sobrepostas de 20 cm.
-- `shingle`: telha asfáltica.
-- `sign`: letreiro BOMBEIROS.
-- `plaster`: interno.
+## Alto detalhe
+Versão refeita com `scripts/detalhe/retrofit.py`, sem mudar planta nem encaixes:
+- **Janelas:** caixilho com batente, folhas de guilhotina com baguetes e vidro, peitoril com caimento e pingadeira.
+- **Portas:** almofadas rebaixadas e chanfradas, vidro com baguetes nas portas envidraçadas, maçaneta e dobradiças.
+- **Texturas PBR** (cor + normal + ORM, ladrilho de 2 m, JPEG dentro dos GLB, UVs em metros): `siding` (tábuas da casa anexa, também em geometria a partir de 0,14 m), `shingle` (telhado do anexo), `brick` (galpão), `plaster` (interno); o telhado metálico e o letreiro mantêm as texturas antigas.
+- Montado com cerca de 61 mil triângulos (antes 25 mil).
 
 ## Peças (61)
 | Grupo | Peças |
@@ -40,4 +39,4 @@ Quartel com galpão de tijolo de 3 portões e anexo de madeira branca, em peças
 | Referência | `player_scale_ref` |
 
 ## Arquivos
-`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, texturas `*_texture.png`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com o quartel montado e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.
+`pieces/*.glb`, `building_layout.json` (com portas `door: {closed, open}`), `building_assembled.glb`, `gerar_kit.py` e `verificar_flicker.py`. O teste dá TOTAL 0 com o quartel montado e com `SOLO=1`. Os scripts de porta estão em `../../scripts/`.

@@ -5,8 +5,8 @@ config_version=5
 
 [application]
 
-config/name="Game Assets - Visitar"
-run/main_scene="res://visitar/main.tscn"
+config/name="Game Assets"
+run/main_scene="res://menu/menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 
 [display]

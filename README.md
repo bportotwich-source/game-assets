@@ -30,6 +30,7 @@ Pacote de assets 3D modulares e originais para montar cenários de jogos. As pe�
 | [`kits/correios/`](kits/correios/) | Agência dos correios: tijolo com quinas de pedra, janelas em arco, telhado de quatro águas com cúpula de cobre, escada e rampa na entrada, doca de carga com marquise, caixas postais e guichês (42 peças) |
 | [`kits/estacao/`](kits/estacao/) | Estação de trem: tijolo, telha de barro com beirais em mão-francesa, torre do relógio com telhado em pirâmide, sala de espera, bilheteria, depósito de cargas, plataforma e trilho (47 peças) |
 | [`kits/armazem/`](kits/armazem/) | Armazém em **alto detalhe** com fachada falsa de 7,4 m e letreiro, varanda com telhado de chapa e guarda-corpo, e celeiro vermelho de tábua e mata-junta com telhado holandês, portão de 2 folhas e capuz da talha; corredor de carga entre os dois (69 peças) |
+| [`editor/`](editor/) + [`menu/`](menu/) | Editor de montagem no Godot: monte seu próprio prédio com peças de qualquer kit, salve em JSON e ande dentro |
 | [`visitar/`](visitar/) + `project.godot` | Projeto Godot 4 para andar dentro de qualquer kit em primeira pessoa, com colisão e portas que abrem |
 | [`scripts/`](scripts/) | Portas que abrem e fecham: Godot 4 (`godot/`) e Unity (`unity/`) |
 
@@ -49,11 +50,32 @@ Cada kit tem:
 
 ## Andar dentro dos prédios (Godot 4)
 1. Baixe o repositório e abra a pasta dele no Godot 4.3 ou mais novo (Importar, escolha `project.godot`). A primeira abertura importa todas as peças e leva alguns minutos.
-2. Aperte F5. O jogo começa na frente da galeria.
+2. Aperte F5 e escolha **Visitar os prédios prontos** no menu. O jogo começa na frente da galeria.
 3. Clique para prender o mouse. WASD anda, Shift corre, Espaço pula, E ou clique abre e fecha portas, F liga o voo (Espaço sobe, Q desce), Esc solta o mouse.
 4. As teclas [ e ] (ou Page Up e Page Down) trocam de prédio; 1 a 9 e 0 vão direto aos 10 primeiros. Para começar em outro, mude `kit` no nó `Main` de `visitar/main.tscn`.
 
 O prédio é montado na hora a partir do `building_layout.json`, com colisão exata em cada peça. O jogador segue o padrão (cápsula de 1,8 m, olhos a 1,65 m) e passa por soleiras e degraus de até 35 cm sem pular, inclusive nas escadas rolantes.
+
+## Montar o seu prédio (editor)
+O `GameAssets.exe` abre num menu com **Montar um prédio com as peças** e **Visitar os prédios prontos**. Baixe a última versão em [Releases](https://github.com/bportotwich-source/game-assets/releases/tag/ultima-versao) (o CI gera a cada merge na `main`).
+
+No editor:
+- Escolha o kit e clique numa peça da lista (dá para buscar por nome). Ela aparece verde no mouse; clique no chão para colocar. A prévia embaixo da lista mostra a peça e o tamanho.
+- Todas as peças de todos os kits encaixam na mesma grade: passo de 1 m (G troca para 2 m, 0,5, 0,25 e 0,05 m), módulo de parede de 2 m e andar de 3 m (Page Up / Page Down). Ctrl + Page Up / Page Down ajusta a altura em 5 cm, para kits com piso elevado; H copia a altura da peça sob o mouse.
+- Q / E giram 90° (com Shift, 45°). Clique numa peça colocada para selecionar: Delete apaga, setas movem um passo da grade, M pega com o mouse, Ctrl+D duplica, C pega o tipo da peça sob o mouse. Ctrl+Z desfaz.
+- Paredes com vão de porta já vêm com a folha certa do kit, que abre no modo de andar (dá para desligar no painel).
+- **Inserir o prédio inteiro deste kit** põe o prédio pronto no cursor, para modificar ou montar uma rua.
+- **Salvar** grava a montagem em JSON (padrão em Documentos/Montagens GameAssets). O editor também guarda sozinho o que você está fazendo e reabre de onde parou.
+- **Tab** entra para andar em primeira pessoa, nascendo onde está o mouse; Tab volta ao editor.
+
+O JSON da montagem usa o mesmo formato do `building_layout.json`, com o kit em cada peça:
+```json
+{"format": "game-assets-montagem", "version": 1,
+ "placements": [{"kit": "bangalo", "piece": "wall_siding_door", "pos": [2, 0, 4], "rotY": 90},
+                {"kit": "bangalo", "piece": "door_leaf_front", "pos": [1.82, 0.015, 4.47], "rotY": 90,
+                 "door": {"closed": 90, "open": 175}, "parent": 0}]}
+```
+`parent` prende a folha da porta à parede (as duas andam juntas no editor). O editor também abre o `building_layout.json` de um kit (as peças vêm do kit escolhido no painel).
 
 ## Regenerar um kit
 ```

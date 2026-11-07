@@ -1,11 +1,18 @@
 # Gera o GameAssets.exe (Windows) a partir do projeto Godot do repositório.
-# O .exe fica em Actions > a execução > Artifacts.
+# O .exe fica em Actions > a execução > Artifacts. Em cada push na main ele
+# também vai para a página de Releases, com link fixo:
+# https://github.com/bportotwich-source/game-assets/releases/download/ultima-versao/GameAssets.exe
 name: Build exe
 
 on:
   push:
     branches: [main, kit-galeria]
+  pull_request:
+    paths: ["editor/**", "menu/**", "visitar/**", "scripts/godot/**", "project.godot", "export_presets.cfg", ".github/workflows/build-exe.yml"]
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   windows:
@@ -41,3 +48,14 @@ jobs:
           name: GameAssets-windows
           path: build/GameAssets.exe
           retention-days: 30
+
+      - name: Publicar em Releases (última versão)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete ultima-versao --yes --cleanup-tag || true
+          gh release create ultima-versao build/GameAssets.exe \
+            --target "${{ github.sha }}" \
+            --title "GameAssets (última versão)" \
+            --notes "Gerado automaticamente a partir da main (${{ github.sha }}). Baixe o GameAssets.exe abaixo: menu com o editor de montagem e o passeio pelos prédios."

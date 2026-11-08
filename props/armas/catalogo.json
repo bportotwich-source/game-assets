@@ -328,8 +328,8 @@
     0.133,
     0.217
    ],
-   "triangulos": 43964,
-   "kb": 2782.7,
+   "triangulos": 44096,
+   "kb": 2789.0,
    "partes": [
     {
      "no": "punho",
@@ -474,6 +474,27 @@
      "descricao": "carregador rápido encosta aqui (atrás do tambor aberto) durante a recarga"
     },
     {
+     "no": "encaixe_trilho",
+     "tipo": "trilho_curto",
+     "pai": "revolver_38",
+     "posicao_m": [
+      0.0,
+      0.044,
+      -0.164
+     ],
+     "aceita": [
+      "lanterna_pistola",
+      "laser_pistola",
+      "combo_lanterna_laser"
+     ],
+     "descricao": "trilho curto embaixo da proteção da vareta",
+     "explodir_m": [
+      0.0,
+      -0.05,
+      -0.02
+     ]
+    },
+    {
      "no": "boca_fogo",
      "tipo": "efeito",
      "pai": "revolver_38",
@@ -585,12 +606,12 @@
    "descricao": "Espingarda de bombeamento com coronha retrátil, punho de pistola, protetor de calor e trilho. 5 no tubo; a curta distância derruba qualquer zumbi, mas o estrondo chama tudo num raio de 110 m. Recarrega um cartucho por vez.",
    "arquivo": "armas/espingarda_12.glb",
    "tamanho_m": [
-    0.043,
+    0.045,
     0.179,
     0.787
    ],
-   "triangulos": 70220,
-   "kb": 3560.1,
+   "triangulos": 71388,
+   "kb": 3616.5,
    "partes": [
     {
      "no": "gatilho",
@@ -753,6 +774,54 @@
      ]
     },
     {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "telha",
+     "posicao_m": [
+      -0.0225,
+      0.061,
+      -0.476
+     ],
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "placa de M-LOK do lado esquerdo da telha (filho da telha: anda junto quando bombeia)",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "telha",
+     "posicao_m": [
+      0.0,
+      0.04,
+      -0.418
+     ],
+     "aceita": [
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_quadrada",
+      "empunhadura_cilindrica",
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "batente_mao"
+     ],
+     "descricao": "placa de M-LOK embaixo da telha (filho da telha: a mão de apoio bombeia pela empunhadura)",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
      "no": "encaixe_lateral",
      "tipo": "lateral_12",
      "pai": "espingarda_12",
@@ -910,12 +979,12 @@
    "descricao": "Versão de cano curto e só punho, com freio dentado na boca: boa para arrombar portas e lutar dentro de casa. Espalha mais os bagos e coice forte; aceita coronha.",
    "arquivo": "armas/espingarda_12_curta.glb",
    "tamanho_m": [
-    0.043,
+    0.045,
     0.179,
     0.635
    ],
-   "triangulos": 64094,
-   "kb": 3273.1,
+   "triangulos": 65262,
+   "kb": 3329.5,
    "partes": [
     {
      "no": "gatilho",
@@ -1053,6 +1122,54 @@
      "explodir_m": [
       0.05,
       0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "telha",
+     "posicao_m": [
+      -0.0225,
+      0.061,
+      -0.448
+     ],
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "placa de M-LOK do lado esquerdo da telha (filho da telha: anda junto quando bombeia)",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "telha",
+     "posicao_m": [
+      0.0,
+      0.04,
+      -0.4025
+     ],
+     "aceita": [
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_quadrada",
+      "empunhadura_cilindrica",
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "batente_mao"
+     ],
+     "descricao": "placa de M-LOK embaixo da telha (filho da telha: a mão de apoio bombeia pela empunhadura)",
+     "explodir_m": [
+      0.0,
+      -0.06,
       0.0
      ]
     },
@@ -1211,8 +1328,8 @@
     0.171,
     1.058
    ],
-   "triangulos": 58958,
-   "kb": 2992.7,
+   "triangulos": 59026,
+   "kb": 2996.1,
    "partes": [
     {
      "no": "apoio_face",
@@ -1368,6 +1485,74 @@
      ]
     },
     {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "carabina_308",
+     "posicao_m": [
+      0.022,
+      0.0745,
+      -0.533
+     ],
+     "aceita": [
+      "lanterna_fuzil",
+      "lanterna_compacta"
+     ],
+     "descricao": "fendas da direita do guarda-mão",
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "carabina_308",
+     "posicao_m": [
+      -0.022,
+      0.0745,
+      -0.533
+     ],
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "fendas da esquerda do guarda-mão",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "carabina_308",
+     "posicao_m": [
+      0.0,
+      0.049,
+      -0.393
+     ],
+     "aceita": [
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_quadrada",
+      "empunhadura_cilindrica",
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "batente_mao"
+     ],
+     "descricao": "fendas de baixo do guarda-mão",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
      "no": "boca_fogo",
      "tipo": "efeito",
      "pai": "carabina_308",
@@ -1465,8 +1650,8 @@
     0.147,
     1.048
    ],
-   "triangulos": 44668,
-   "kb": 3017.8,
+   "triangulos": 46672,
+   "kb": 3110.5,
    "partes": [
     {
      "no": "gatilho",
@@ -1605,6 +1790,74 @@
      "explodir_m": [
       0.0,
       -0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "carabina_308_caca",
+     "posicao_m": [
+      0.0205,
+      0.0505,
+      -0.44
+     ],
+     "aceita": [
+      "lanterna_fuzil",
+      "lanterna_compacta"
+     ],
+     "descricao": "placa de M-LOK do lado direito da telha",
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "carabina_308_caca",
+     "posicao_m": [
+      -0.0205,
+      0.0505,
+      -0.44
+     ],
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "placa de M-LOK do lado esquerdo da telha",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "carabina_308_caca",
+     "posicao_m": [
+      0.0,
+      0.0315,
+      -0.355
+     ],
+     "aceita": [
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_quadrada",
+      "empunhadura_cilindrica",
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "batente_mao"
+     ],
+     "descricao": "placa de M-LOK embaixo da telha",
+     "explodir_m": [
+      0.0,
+      -0.06,
       0.0
      ]
     },
@@ -2672,7 +2925,7 @@
     0.666
    ],
    "triangulos": 42068,
-   "kb": 2205.0,
+   "kb": 2205.1,
    "partes": [
     {
      "no": "tampa",
@@ -2883,6 +3136,33 @@
       0.06,
       0.0,
       0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "fuzil_762",
+     "posicao_m": [
+      -0.0245,
+      0.0855,
+      -0.348
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_trilhos_ak",
+       "guarda_mao_fendas_ak"
+      ]
+     },
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "trilho da esquerda do guarda-mão de quatro trilhos (ou fendas da esquerda)",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
      ]
     },
     {
@@ -3122,7 +3402,7 @@
     0.666
    ],
    "triangulos": 47772,
-   "kb": 3378.0,
+   "kb": 3378.1,
    "partes": [
     {
      "no": "tampa",
@@ -3340,6 +3620,34 @@
       0.06,
       0.0,
       0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "fuzil_762_tatico",
+     "posicao_m": [
+      -0.0245,
+      0.0855,
+      -0.348
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_fendas_ak",
+       "guarda_mao_fendas_ak_gasto",
+       "guarda_mao_trilhos_ak"
+      ]
+     },
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "trilho da esquerda do guarda-mão de quatro trilhos (ou fendas da esquerda)",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
      ]
     },
     {
@@ -6043,8 +6351,8 @@
     0.143,
     0.929
    ],
-   "triangulos": 41278,
-   "kb": 2796.5,
+   "triangulos": 43282,
+   "kb": 2891.3,
    "partes": [
     {
      "no": "gatilho",
@@ -6202,6 +6510,74 @@
      ]
     },
     {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "rifle_22",
+     "posicao_m": [
+      0.0175,
+      0.0465,
+      -0.348
+     ],
+     "aceita": [
+      "lanterna_fuzil",
+      "lanterna_compacta"
+     ],
+     "descricao": "placa de M-LOK do lado direito da telha",
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "rifle_22",
+     "posicao_m": [
+      -0.0175,
+      0.0465,
+      -0.348
+     ],
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "placa de M-LOK do lado esquerdo da telha",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "rifle_22",
+     "posicao_m": [
+      0.0,
+      0.0275,
+      -0.278
+     ],
+     "aceita": [
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_quadrada",
+      "empunhadura_cilindrica",
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "batente_mao"
+     ],
+     "descricao": "placa de M-LOK embaixo da telha",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
      "no": "boca_fogo",
      "tipo": "efeito",
      "pai": "rifle_22",
@@ -6300,8 +6676,8 @@
     0.143,
     0.929
    ],
-   "triangulos": 41278,
-   "kb": 2036.4,
+   "triangulos": 43282,
+   "kb": 2130.6,
    "partes": [
     {
      "no": "gatilho",
@@ -6455,6 +6831,74 @@
      "explodir_m": [
       0.0,
       -0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "rifle_22_sintetico",
+     "posicao_m": [
+      0.0175,
+      0.0465,
+      -0.348
+     ],
+     "aceita": [
+      "lanterna_fuzil",
+      "lanterna_compacta"
+     ],
+     "descricao": "placa de M-LOK do lado direito da telha",
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "rifle_22_sintetico",
+     "posicao_m": [
+      -0.0175,
+      0.0465,
+      -0.348
+     ],
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "placa de M-LOK do lado esquerdo da telha",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "rifle_22_sintetico",
+     "posicao_m": [
+      0.0,
+      0.0275,
+      -0.278
+     ],
+     "aceita": [
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_quadrada",
+      "empunhadura_cilindrica",
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "batente_mao"
+     ],
+     "descricao": "placa de M-LOK embaixo da telha",
+     "explodir_m": [
+      0.0,
+      -0.06,
       0.0
      ]
     },

@@ -227,6 +227,8 @@ def fuzil_762(A):
                       'empunhadura_cilindrica', 'batente_mao'], descricao='trilho de baixo do guarda-mão de quatro trilhos')
     A.encaixe('encaixe_lanterna', (0.33, -0.0045, 0.0245), 'mlok_lado', explodir=(0, 0, 0.06), requer={'encaixe_guarda_mao': ['guarda_mao_trilhos_ak', 'guarda_mao_fendas_ak']},
               aceita=['lanterna_fuzil', 'lanterna_compacta'], descricao='trilho da direita do guarda-mão de quatro trilhos')
+    A.encaixe('encaixe_laser', (0.33, -0.0045, -0.0245), 'mlok_esq', explodir=(0, 0, -0.06), requer={'encaixe_guarda_mao': ['guarda_mao_trilhos_ak', 'guarda_mao_fendas_ak']},
+              aceita=ACEITA_LASER, descricao='trilho da esquerda do guarda-mão de quatro trilhos (ou fendas da esquerda)')
     A.encaixe('encaixe_guarda_mao', GM0, 'guarda_mao_ak', explodir=(0, -0.05, 0.05),
               aceita=['guarda_mao_madeira_ak', 'guarda_mao_polimero_ak', 'guarda_mao_trilhos_ak', 'guarda_mao_fendas_ak'], padrao='guarda_mao_madeira_ak')
     A.encaixe('encaixe_enfeite', (0.293, -0.0035, 0), 'guarda_mao_enfeite', explodir=(0, 0.06, 0.04), aceita=['elastico_ak'],

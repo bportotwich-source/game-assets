@@ -7,15 +7,15 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Arma | Calibre | Tiros | Dano | Alcance | Cadência | Ruído | Durab. | Peso | Encaixes | Animações |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Pistola Sentinela 9 mm (`pistola_9mm`) | 9 mm | 15 | 34 | 25 m | 4,0/s | 60 m | 600 | 0,78 kg | mira, ponte, boca, trilho, carregador | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
-| Revólver Vigia .38 (`revolver_38`) | .38 | 6 | 45 | 25 m | 2,5/s | 70 m | 1500 | 0,95 kg | mira, empunhadura, recarga, cinto | atirar, engatilhar, atirar_armado, recarregar, inspecionar, ocioso |
-| Espingarda Mutirão 12 (`espingarda_12`) | 12 | 5 | 150 | 15 m | 1,3/s | 110 m | 900 | 3,4 kg | mira, coronha, boca, tubo, cano, lateral, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
-| Espingarda Mutirão 12 curta (`espingarda_12_curta`) | 12 | 4 | 150 | 12 m | 1,3/s | 120 m | 900 | 2,7 kg | mira, coronha, boca, cano, lateral, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
-| Carabina Paciência .308 (`carabina_308`) | .308 | 10 | 95 | 150 m | 0,8/s | 220 m | 2500 | 6,2 kg | mira, boca, carregador, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
-| Carabina Paciência .308 de caça (`carabina_308_caca`) | .308 | 5 | 95 | 120 m | 0,8/s | 220 m | 2500 | 3,9 kg | mira, boca, carregador, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
+| Revólver Vigia .38 (`revolver_38`) | .38 | 6 | 45 | 25 m | 2,5/s | 70 m | 1500 | 0,95 kg | mira, empunhadura, recarga, trilho, cinto | atirar, engatilhar, atirar_armado, recarregar, inspecionar, ocioso |
+| Espingarda Mutirão 12 (`espingarda_12`) | 12 | 5 | 150 | 15 m | 1,3/s | 110 m | 900 | 3,4 kg | mira, coronha, boca, tubo, cano, laser, empunhadura, lateral, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
+| Espingarda Mutirão 12 curta (`espingarda_12_curta`) | 12 | 4 | 150 | 12 m | 1,3/s | 120 m | 900 | 2,7 kg | mira, coronha, boca, cano, laser, empunhadura, lateral, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
+| Carabina Paciência .308 (`carabina_308`) | .308 | 10 | 95 | 150 m | 0,8/s | 220 m | 2500 | 6,2 kg | mira, boca, carregador, bipe, bandoleira, lanterna, laser, empunhadura | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
+| Carabina Paciência .308 de caça (`carabina_308_caca`) | .308 | 5 | 95 | 120 m | 0,8/s | 220 m | 2500 | 3,9 kg | mira, boca, carregador, bipe, bandoleira, lanterna, laser, empunhadura | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Fuzil Vigília 5,56 (`fuzil_556`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,3 kg | punho, mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
 | Fuzil Vigília 5,56 bicolor (`fuzil_556_bicolor`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,3 kg | punho, mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
-| Fuzil Brasa 7,62 (`fuzil_762`) | 7,62×39 | 30 | 55 | 70 m | 10/s | 180 m | 6000 | 3,6 kg | mira, boca, carregador, coronha, empunhadura, lanterna, guarda_mao, enfeite, tampa, mira_tampa, baioneta, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
-| Fuzil Brasa 7,62 tático (`fuzil_762_tatico`) | 7,62×39 | 30 | 55 | 70 m | 10/s | 180 m | 6000 | 3,6 kg | mira, boca, carregador, coronha, empunhadura, lanterna, guarda_mao, enfeite, tampa, mira_tampa, baioneta, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
+| Fuzil Brasa 7,62 (`fuzil_762`) | 7,62×39 | 30 | 55 | 70 m | 10/s | 180 m | 6000 | 3,6 kg | mira, boca, carregador, coronha, empunhadura, lanterna, laser, guarda_mao, enfeite, tampa, mira_tampa, baioneta, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
+| Fuzil Brasa 7,62 tático (`fuzil_762_tatico`) | 7,62×39 | 30 | 55 | 70 m | 10/s | 180 m | 6000 | 3,6 kg | mira, boca, carregador, coronha, empunhadura, lanterna, laser, guarda_mao, enfeite, tampa, mira_tampa, baioneta, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
 | Submetralhadora Faísca 9 mm (`smg_9mm`) | 9 mm | 30 | 28 | 40 m | 14/s | 120 m | 5000 | 1,9 kg | mira, alca, massa, boca, carregador, empunhadura, lanterna, laser, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, estender, recolher, inspecionar, ocioso |
 | Submetralhadora Faísca 9 mm caramelo (`smg_9mm_tan`) | 9 mm | 30 | 28 | 40 m | 14/s | 120 m | 5000 | 1,9 kg | mira, alca, massa, boca, carregador, empunhadura, lanterna, laser, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, estender, recolher, inspecionar, ocioso |
 | Pistola Sentinela 9 mm (areia) (`pistola_9mm_tan`) | 9 mm | 15 | 34 | 25 m | 4,0/s | 60 m | 600 | 0,78 kg | mira, ponte, boca, trilho, carregador | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
@@ -23,8 +23,8 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Pistola Sentinela 9 mm (cinza) (`pistola_9mm_cinza`) | 9 mm | 15 | 34 | 25 m | 4,0/s | 60 m | 600 | 0,78 kg | mira, ponte, boca, trilho, carregador | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Submetralhadora Ciclone 9 mm (`smg_ciclone_9mm`) | 9 mm | 30 | 28 | 40 m | 18/s | 120 m | 6000 | 2,7 kg | mira, alca, massa, boca, carregador, empunhadura, lanterna, laser, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, dobrar_coronha, abrir_coronha, inspecionar, ocioso |
 | Submetralhadora Ciclone 9 mm (areia) (`smg_ciclone_9mm_tan`) | 9 mm | 30 | 28 | 40 m | 18/s | 120 m | 6000 | 2,7 kg | mira, alca, massa, boca, carregador, empunhadura, lanterna, laser, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, dobrar_coronha, abrir_coronha, inspecionar, ocioso |
-| Rifle Pardal .22 (`rifle_22`) | .22 | 10 | 34 | 70 m | 1,1/s | 70 m | 5000 | 2,7 kg | mira, alca, boca, carregador, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
-| Rifle Pardal .22 sintético (`rifle_22_sintetico`) | .22 | 10 | 34 | 70 m | 1,1/s | 70 m | 5000 | 2,5 kg | mira, alca, boca, carregador, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
+| Rifle Pardal .22 (`rifle_22`) | .22 | 10 | 34 | 70 m | 1,1/s | 70 m | 5000 | 2,7 kg | mira, alca, boca, carregador, bandoleira, lanterna, laser, empunhadura | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
+| Rifle Pardal .22 sintético (`rifle_22_sintetico`) | .22 | 10 | 34 | 70 m | 1,1/s | 70 m | 5000 | 2,5 kg | mira, alca, boca, carregador, bandoleira, lanterna, laser, empunhadura | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Pistola sinalizadora (`pistola_sinalizadora`) | sinal 12 | 1 | 25 | 15 m | 0,3/s | 90 m | 800 | 0,45 kg | cartucho | atirar, armar, recarregar, inspecionar, ocioso |
 | Fuzil Atalaia .308 de precisão (`fuzil_308_precisao`) | .308 | 20 | 92 | 200 m | 3/s | 240 m | 3500 | 5,6 kg | punho, mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
 | Fuzil Atalaia .308 curto (`fuzil_308_precisao_curto`) | .308 | 20 | 92 | 150 m | 3/s | 250 m | 3500 | 4,9 kg | punho, mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
@@ -208,18 +208,23 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Revólver Vigia .38**, `encaixe_mira`: mira_ponto_vermelho_revolver
 - **Revólver Vigia .38**, `encaixe_empunhadura`: empunhadura_madeira_38, empunhadura_borracha_38
 - **Revólver Vigia .38**, `encaixe_recarga`: carregador_rapido_38
+- **Revólver Vigia .38**, `encaixe_trilho`: lanterna_pistola, laser_pistola, combo_lanterna_laser
 - **Revólver Vigia .38**, `cinto`: coldre_revolver
 - **Espingarda Mutirão 12**, `encaixe_mira`: mira_ponto_vermelho_tubo
 - **Espingarda Mutirão 12**, `encaixe_coronha`: coronha_retratil_12, coronha_fixa_12
 - **Espingarda Mutirão 12**, `encaixe_boca`: choke_estendido_12, freio_rompimento_12
 - **Espingarda Mutirão 12**, `encaixe_tubo`: tampa_tubo_12, prolongador_tubo_12
 - **Espingarda Mutirão 12**, `encaixe_cano`: lanterna_cano_12
+- **Espingarda Mutirão 12**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
+- **Espingarda Mutirão 12**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, empunhadura_reta, empunhadura_reta_tan, batente_mao
 - **Espingarda Mutirão 12**, `encaixe_lateral`: porta_cartuchos_lateral_12
 - **Espingarda Mutirão 12**, `encaixe_bandoleira`: bandoleira
 - **Espingarda Mutirão 12 curta**, `encaixe_mira`: mira_ponto_vermelho_tubo
 - **Espingarda Mutirão 12 curta**, `encaixe_coronha`: coronha_retratil_12, coronha_fixa_12
 - **Espingarda Mutirão 12 curta**, `encaixe_boca`: choke_estendido_12, freio_rompimento_12
 - **Espingarda Mutirão 12 curta**, `encaixe_cano`: lanterna_cano_12
+- **Espingarda Mutirão 12 curta**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
+- **Espingarda Mutirão 12 curta**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, empunhadura_reta, empunhadura_reta_tan, batente_mao
 - **Espingarda Mutirão 12 curta**, `encaixe_lateral`: porta_cartuchos_lateral_12
 - **Espingarda Mutirão 12 curta**, `encaixe_bandoleira`: bandoleira
 - **Carabina Paciência .308**, `encaixe_mira`: luneta_3_9, luneta_4x, mira_ponto_vermelho_tubo
@@ -227,11 +232,17 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Carabina Paciência .308**, `encaixe_carregador`: carregador_308_10, carregador_308_5
 - **Carabina Paciência .308**, `encaixe_bipe`: bipe
 - **Carabina Paciência .308**, `encaixe_bandoleira`: bandoleira
+- **Carabina Paciência .308**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
+- **Carabina Paciência .308**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
+- **Carabina Paciência .308**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, empunhadura_reta, empunhadura_reta_tan, batente_mao
 - **Carabina Paciência .308 de caça**, `encaixe_mira`: luneta_3_9, luneta_4x, mira_ponto_vermelho_tubo
 - **Carabina Paciência .308 de caça**, `encaixe_boca`: protetor_rosca_308, freio_boca_308, supressor_308
 - **Carabina Paciência .308 de caça**, `encaixe_carregador`: carregador_308_5, carregador_308_10
 - **Carabina Paciência .308 de caça**, `encaixe_bipe`: bipe
 - **Carabina Paciência .308 de caça**, `encaixe_bandoleira`: bandoleira
+- **Carabina Paciência .308 de caça**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
+- **Carabina Paciência .308 de caça**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
+- **Carabina Paciência .308 de caça**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, empunhadura_reta, empunhadura_reta_tan, batente_mao
 - **Fuzil Vigília 5,56**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan
 - **Fuzil Vigília 5,56**, `encaixe_mira`: mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa
 - **Fuzil Vigília 5,56**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
@@ -262,6 +273,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Fuzil Brasa 7,62**, `encaixe_coronha`: coronha_madeira_ak, coronha_polimero_ak, coronha_rebativel_ak, coronha_retratil_ak, coronha_leve_ak, coronha_leve_ak_tan, coronha_esqueleto_ak
 - **Fuzil Brasa 7,62**, `encaixe_empunhadura`: empunhadura_reta, empunhadura_reta_tan, empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_quadrada, empunhadura_cilindrica, batente_mao
 - **Fuzil Brasa 7,62**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
+- **Fuzil Brasa 7,62**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
 - **Fuzil Brasa 7,62**, `encaixe_guarda_mao`: guarda_mao_madeira_ak, guarda_mao_polimero_ak, guarda_mao_trilhos_ak, guarda_mao_fendas_ak
 - **Fuzil Brasa 7,62**, `encaixe_enfeite`: elastico_ak
 - **Fuzil Brasa 7,62**, `encaixe_tampa`: tampa_trilho_ak
@@ -274,6 +286,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Fuzil Brasa 7,62 tático**, `encaixe_coronha`: coronha_madeira_ak, coronha_polimero_ak, coronha_rebativel_ak, coronha_retratil_ak, coronha_leve_ak, coronha_leve_ak_tan, coronha_esqueleto_ak, coronha_esqueleto_ak_gasto
 - **Fuzil Brasa 7,62 tático**, `encaixe_empunhadura`: empunhadura_reta, empunhadura_reta_tan, empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_quadrada, empunhadura_cilindrica, batente_mao
 - **Fuzil Brasa 7,62 tático**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta, lanterna_compacta_gasto
+- **Fuzil Brasa 7,62 tático**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
 - **Fuzil Brasa 7,62 tático**, `encaixe_guarda_mao`: guarda_mao_madeira_ak, guarda_mao_polimero_ak, guarda_mao_trilhos_ak, guarda_mao_fendas_ak, guarda_mao_fendas_ak_gasto
 - **Fuzil Brasa 7,62 tático**, `encaixe_enfeite`: elastico_ak
 - **Fuzil Brasa 7,62 tático**, `encaixe_tampa`: tampa_trilho_ak, tampa_trilho_ak_gasto
@@ -336,11 +349,17 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Rifle Pardal .22**, `encaixe_boca`: protetor_rosca_22, supressor_22
 - **Rifle Pardal .22**, `encaixe_carregador`: carregador_22_10, carregador_22_25
 - **Rifle Pardal .22**, `encaixe_bandoleira`: bandoleira
+- **Rifle Pardal .22**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
+- **Rifle Pardal .22**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
+- **Rifle Pardal .22**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, empunhadura_reta, empunhadura_reta_tan, batente_mao
 - **Rifle Pardal .22 sintético**, `encaixe_mira`: luneta_4x_22, luneta_4x, luneta_3_9, mira_ponto_vermelho_tubo, mira_reflexa
 - **Rifle Pardal .22 sintético**, `encaixe_alca`: alca_cano_22
 - **Rifle Pardal .22 sintético**, `encaixe_boca`: protetor_rosca_22, supressor_22
 - **Rifle Pardal .22 sintético**, `encaixe_carregador`: carregador_22_10, carregador_22_25
 - **Rifle Pardal .22 sintético**, `encaixe_bandoleira`: bandoleira
+- **Rifle Pardal .22 sintético**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
+- **Rifle Pardal .22 sintético**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
+- **Rifle Pardal .22 sintético**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, empunhadura_reta, empunhadura_reta_tan, batente_mao
 - **Pistola sinalizadora**, `encaixe_cartucho`: cartucho_sinal_vermelho, cartucho_sinal_verde
 - **Fuzil Atalaia .308 de precisão**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan
 - **Fuzil Atalaia .308 de precisão**, `encaixe_mira`: luneta_5_25, luneta_3_9, luneta_4x, luneta_1_6, mira_holografica, mira_ponto_vermelho_tubo, mira_reflexa

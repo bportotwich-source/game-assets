@@ -311,6 +311,36 @@ def trilho(p, mat, x0, x1, y_base, para_baixo=True, larg=0.021, passo=0.01):
     return n
 
 
+# listas de acessorios para os encaixes de lanterna, laser e empunhadura que toda arma longa ganha
+ACEITA_LANTERNA = ['lanterna_fuzil', 'lanterna_compacta']
+ACEITA_LASER = ['laser_fuzil', 'modulo_laser', 'modulo_laser_tan']
+ACEITA_EMPUNHADURA = ['empunhadura_vertical', 'empunhadura_angulada', 'empunhadura_curta', 'empunhadura_curta_tan', 'empunhadura_quadrada',
+                      'empunhadura_cilindrica', 'empunhadura_reta', 'empunhadura_reta_tan', 'batente_mao']
+
+
+def placa_mlok(p, mat, x0, x1, yc, zf, lado=1, alt=0.016, esp=0.0035, mat_paraf='aco_inox'):
+    """Placa curta de M-LOK aparafusada no lado da coronha ou do guarda-mao (para lanterna ou laser). zf = face de fora
+    (lado +1 = direita, -1 = esquerda); a placa entra esp para dentro da peca. Fendas oblongas rasas e dois parafusos."""
+    z0, z1 = sorted((zf, zf - lado * esp))
+    pl = solido(arred([(x0, yc - alt / 2), (x1, yc - alt / 2), (x1, yc + alt / 2), (x0, yc + alt / 2)], 0.003), z0, z1, 0.0008)
+    n = max(1, int((x1 - x0 - 0.012) / 0.02)); xa = (x0 + x1) / 2 - (n - 1) * 0.01
+    zc0, zc1 = sorted((zf - lado * 0.0012, zf + lado * 0.001))
+    fendas = [solido(LineString([(xa + i * 0.02 - 0.0045, yc), (xa + i * 0.02 + 0.0045, yc)]).buffer(0.0028, 10), zc0, zc1) for i in range(n)]
+    p.add(mat, menos(pl, *fendas))
+    for x in (x0 + 0.0045, x1 - 0.0045):
+        a, b = sorted((zf, zf + lado * 0.0006)); p.add(mat_paraf, cil_z(0.0018, a, b, x, yc, 12))
+
+
+def placa_mlok_baixo(p, mat, x0, x1, yf, meia=0.008, esp=0.004, mat_paraf='aco_inox'):
+    """Placa de M-LOK embaixo (para empunhadura): yf = face de baixo; a placa sobe esp para dentro da peca."""
+    pl = solido(arred([(x0, yf), (x1, yf), (x1, yf + esp), (x0, yf + esp)], 0.0012), -meia, meia, 0.0008)
+    n = max(1, int((x1 - x0 - 0.012) / 0.02)); xa = (x0 + x1) / 2 - (n - 1) * 0.01
+    fendas = [ext_y(LineString([(xa + i * 0.02 - 0.0045, 0.0), (xa + i * 0.02 + 0.0045, 0.0)]).buffer(0.0028, 10), yf - 0.001, yf + 0.0012) for i in range(n)]
+    p.add(mat, menos(pl, *fendas))
+    for x in (x0 + 0.0045, x1 - 0.0045):
+        p.add(mat_paraf, trimesh.creation.cylinder(radius=0.0018, segment=[[x, yf, 0], [x, yf - 0.0006, 0]], sections=12))
+
+
 # ============================================================================ registro
 REG = {}
 def arma(id, nome, grupo, categoria, **dados):

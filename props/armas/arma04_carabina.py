@@ -196,6 +196,9 @@ def _coronha_caca(p):
     dentro = arred([(-0.05, -0.0385), (-0.008, -0.0385), (-0.01, -0.048), (-0.02, -0.058), (-0.046, -0.06), (-0.055, -0.05)], 0.004)
     p.add('aco_azulado', solido(fora.difference(dentro), -0.0055, 0.0055, 0.0012))
     p.add('aco_azulado', solido(arred([(-0.07, -0.0395), (0.095, -0.0395), (0.095, -0.035), (-0.07, -0.035)], 0.001), -0.0085, 0.0085, 0.0005))
+    # placas de M-LOK pretas aparafusadas na telha: lanterna (direita), laser (esquerda) e empunhadura (embaixo)
+    for zs in (-1, 1): placa_mlok(p, 'polimero', 0.33, 0.39, -0.0175, zs * 0.0205, zs, esp=0.0057)
+    placa_mlok_baixo(p, 'polimero', 0.245, 0.305, -0.0365, esp=0.006)
     for x, y in ((0.38, -0.03), (-0.29, -0.107)):                                                                       # pinos da bandoleira
         p.add('aco_inox', trimesh.creation.cylinder(radius=0.0026, segment=[[x, y + 0.002, 0], [x, y - 0.006, 0]], sections=16))
         p.add('aco_inox', solido(Point(x, y - 0.0105).buffer(0.0062, 32).difference(Point(x, y - 0.0105).buffer(0.0041, 32)), -0.0013, 0.0013, 0.0004))
@@ -229,6 +232,15 @@ def _carabina(A, cfg, caca):
     yb = -0.031 if not caca else -0.031
     A.encaixe('encaixe_bipe', (cfg['bipe'], yb, 0), 'bipe', explodir=(0, -0.06, 0), aceita=['bipe'])
     A.encaixe('encaixe_bandoleira', (cfg['band'], yb - 0.0105, 0), 'bandoleira', explodir=(0, -0.05, 0), aceita=['bandoleira'])
+    if caca:
+        zl = 0.0205
+        A.encaixe('encaixe_lanterna', (0.36, -0.0175, zl), 'mlok_lado', explodir=(0, 0, 0.06), aceita=ACEITA_LANTERNA, descricao='placa de M-LOK do lado direito da telha')
+        A.encaixe('encaixe_laser', (0.36, -0.0175, -zl), 'mlok_esq', explodir=(0, 0, -0.06), aceita=ACEITA_LASER, descricao='placa de M-LOK do lado esquerdo da telha')
+        A.encaixe('encaixe_empunhadura', (0.275, -0.0365, 0), 'mlok_baixo', explodir=(0, -0.06, 0), aceita=ACEITA_EMPUNHADURA, descricao='placa de M-LOK embaixo da telha')
+    else:
+        A.encaixe('encaixe_lanterna', (0.44, -0.0055, 0.022), 'mlok_lado', explodir=(0, 0, 0.06), aceita=ACEITA_LANTERNA, descricao='fendas da direita do guarda-mão')
+        A.encaixe('encaixe_laser', (0.44, -0.0055, -0.022), 'mlok_esq', explodir=(0, 0, -0.06), aceita=ACEITA_LASER, descricao='fendas da esquerda do guarda-mão')
+        A.encaixe('encaixe_empunhadura', (0.30, -0.031, 0), 'mlok_baixo', explodir=(0, -0.06, 0), aceita=ACEITA_EMPUNHADURA, descricao='fendas de baixo do guarda-mão')
     A.encaixe('boca_fogo', (xm, 0, 0), 'efeito', descricao='clarão de boca e origem do disparo (-Z)')
     A.encaixe('saida_estojo', (0.07, 0.01, RR), 'efeito', descricao='onde nasce o estojo (quando o ferrolho volta, aos 0,6 s do "atirar")')
     fr = lambda ks: ('ferrolho', 'r', (1, 0, 0), pose(ks))

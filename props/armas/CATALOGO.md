@@ -16,6 +16,8 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Fuzil Vigília 5,56 bicolor (`fuzil_556_bicolor`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,3 kg | mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
 | Fuzil Brasa 7,62 (`fuzil_762`) | 7,62×39 | 30 | 55 | 70 m | 10/s | 180 m | 6000 | 3,6 kg | mira, boca, carregador, coronha, empunhadura, lanterna, guarda_mao, enfeite, tampa, mira_tampa, baioneta, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
 | Fuzil Brasa 7,62 tático (`fuzil_762_tatico`) | 7,62×39 | 30 | 55 | 70 m | 10/s | 180 m | 6000 | 3,6 kg | mira, boca, carregador, coronha, empunhadura, lanterna, guarda_mao, enfeite, tampa, mira_tampa, baioneta, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
+| Submetralhadora Faísca 9 mm (`smg_9mm`) | 9 mm | 30 | 28 | 40 m | 14/s | 120 m | 5000 | 1,9 kg | mira, alca, massa, boca, carregador, empunhadura, lanterna, laser, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, estender, recolher, inspecionar, ocioso |
+| Submetralhadora Faísca 9 mm caramelo (`smg_9mm_tan`) | 9 mm | 30 | 28 | 40 m | 14/s | 120 m | 5000 | 1,9 kg | mira, alca, massa, boca, carregador, empunhadura, lanterna, laser, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, estender, recolher, inspecionar, ocioso |
 
 ## Acessórios
 
@@ -120,6 +122,9 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Supressor 7,62 (gasto) (`supressor_762_gasto`) | Boca do cano | `boca_762` | ruido_m ×0,35, clarao ×0,05, recuo ×0,8 | 0,55 kg | muito raro | 2752 |
 | Lanterna compacta de trilho (gasto) (`lanterna_compacta_gasto`) | Lanternas | `mlok_lado` | - | 0,11 kg | incomum | 2104 |
 | Carregador 7,62 de polímero (30) (gasto) (`carregador_762_30_grade_gasto`) | Carregadores | `carregador_762` | - | 0,25 kg | incomum | 12552 |
+| Carregador da submetralhadora (20) (`carregador_smg_20`) | Carregadores | `carregador_smg` | recarga_s ×0,95 | 0,1 kg | incomum | 1624 |
+| Carregador da submetralhadora (30) (`carregador_smg_30`) | Carregadores | `carregador_smg` | - | 0,13 kg | incomum | 1672 |
+| Carregador da submetralhadora (40) (`carregador_smg_40`) | Carregadores | `carregador_smg` | recarga_s ×1,08 | 0,17 kg | raro | 1768 |
 
 ## Munição e efeitos
 
@@ -225,3 +230,21 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Fuzil Brasa 7,62 tático**, `encaixe_mira_tampa`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa_gasto
 - **Fuzil Brasa 7,62 tático**, `encaixe_baioneta`: baioneta_ak
 - **Fuzil Brasa 7,62 tático**, `encaixe_bandoleira`: bandoleira
+- **Submetralhadora Faísca 9 mm**, `encaixe_mira`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo
+- **Submetralhadora Faísca 9 mm**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
+- **Submetralhadora Faísca 9 mm**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
+- **Submetralhadora Faísca 9 mm**, `encaixe_boca`: protetor_rosca_9mm, supressor_9mm, compensador_9mm, supressor_garrafa
+- **Submetralhadora Faísca 9 mm**, `encaixe_carregador`: carregador_smg_20, carregador_smg_30, carregador_smg_40
+- **Submetralhadora Faísca 9 mm**, `encaixe_empunhadura`: empunhadura_reta, empunhadura_reta_tan, empunhadura_curta, empunhadura_curta_tan, empunhadura_vertical, empunhadura_angulada, batente_mao
+- **Submetralhadora Faísca 9 mm**, `encaixe_lanterna`: lanterna_compacta, lanterna_fuzil
+- **Submetralhadora Faísca 9 mm**, `encaixe_laser`: modulo_laser, laser_fuzil
+- **Submetralhadora Faísca 9 mm**, `encaixe_bandoleira`: bandoleira
+- **Submetralhadora Faísca 9 mm caramelo**, `encaixe_mira`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo
+- **Submetralhadora Faísca 9 mm caramelo**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
+- **Submetralhadora Faísca 9 mm caramelo**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
+- **Submetralhadora Faísca 9 mm caramelo**, `encaixe_boca`: protetor_rosca_9mm, supressor_9mm, compensador_9mm, supressor_garrafa
+- **Submetralhadora Faísca 9 mm caramelo**, `encaixe_carregador`: carregador_smg_20, carregador_smg_30, carregador_smg_40
+- **Submetralhadora Faísca 9 mm caramelo**, `encaixe_empunhadura`: empunhadura_reta, empunhadura_reta_tan, empunhadura_curta, empunhadura_curta_tan, empunhadura_vertical, empunhadura_angulada, batente_mao
+- **Submetralhadora Faísca 9 mm caramelo**, `encaixe_lanterna`: lanterna_compacta, lanterna_fuzil
+- **Submetralhadora Faísca 9 mm caramelo**, `encaixe_laser`: modulo_laser, laser_fuzil
+- **Submetralhadora Faísca 9 mm caramelo**, `encaixe_bandoleira`: bandoleira

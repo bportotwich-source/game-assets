@@ -9940,6 +9940,124 @@
      "descricao": "respiração leve parado"
     }
    }
+  },
+  {
+   "id": "machadinha_tatica",
+   "nome": "Machadinha tática",
+   "grupo": "armas",
+   "categoria": "machadinha",
+   "classe": "corpo_a_corpo",
+   "calibre": "lâmina",
+   "capacidade": "-",
+   "dano": 70,
+   "dano_golpe_forte": 105,
+   "alcance_m": 0.7,
+   "tiros_por_s": 1.1,
+   "precisao": 1.0,
+   "ruido_m": 3,
+   "durabilidade": 3500,
+   "peso_kg": 0.75,
+   "raridade": "incomum",
+   "valor_troca": 40,
+   "arromba": true,
+   "corta_madeira": true,
+   "prende_no_alvo": 0.2,
+   "onde": [
+    "quartel",
+    "quartel_bombeiros",
+    "delegacia",
+    "loja_caca",
+    "armazem"
+   ],
+   "descricao": "Cabeça e espiga numa peça só de aço escurecido: fio curvo com barba de um lado e ponta do outro para arrombar portas e janelas. Cabo com talas e cordão enrolado (dá para desenrolar e usar o cordão). Bate mais forte que o facão, mas alcança menos.",
+   "arquivo": "armas/machadinha_tatica.glb",
+   "tamanho_m": [
+    0.029,
+    0.388,
+    0.181
+   ],
+   "triangulos": 38626,
+   "kb": 1820.3,
+   "encaixes": [
+    {
+     "no": "capa",
+     "tipo": "capa_machadinha",
+     "pai": "machadinha_tatica",
+     "posicao_m": [
+      0.0,
+      0.225,
+      -0.06
+     ],
+     "aceita": [
+      "capa_machadinha"
+     ],
+     "descricao": "capa por cima do fio (tirar antes de usar; a animação \"tirar_capa\" puxa para a frente)",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.06
+     ]
+    },
+    {
+     "no": "fio_meio",
+     "tipo": "efeito",
+     "pai": "machadinha_tatica",
+     "posicao_m": [
+      0.0,
+      0.244,
+      -0.094
+     ],
+     "descricao": "meio do fio (teste de acerto do golpe)"
+    },
+    {
+     "no": "ponta_tras",
+     "tipo": "efeito",
+     "pai": "machadinha_tatica",
+     "posicao_m": [
+      -0.0,
+      0.251,
+      0.082
+     ],
+     "descricao": "ponta de trás (golpe de ponta e alavanca para arrombar)"
+    }
+   ],
+   "animacoes": {
+    "golpear": {
+     "duracao_s": 0.65,
+     "laco": false,
+     "descricao": "golpe de cima para baixo na frente: acerto entre 0,26 e 0,38 s no encaixe fio_meio"
+    },
+    "golpe_forte": {
+     "duracao_s": 1.0,
+     "laco": false,
+     "descricao": "levanta atrás do ombro e desce com tudo (racha porta e cabeça): acerto entre 0,55 e 0,68 s"
+    },
+    "golpe_ponta": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "vira a machadinha e bate com a ponta de trás (fura capacete e crânio; pode prender)"
+    },
+    "arrombar": {
+     "duracao_s": 2.0,
+     "laco": false,
+     "descricao": "encaixa a ponta de trás na fresta e faz alavanca (porta, janela, tampa de caixa)"
+    },
+    "tirar_capa": {
+     "duracao_s": 0.4,
+     "laco": false,
+     "descricao": "segura firme enquanto a mão puxa a capa (esconda o encaixe capa aos 0,25 s)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.2,
+     "laco": false,
+     "descricao": "gira a machadinha olhando o fio e a ponta"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
   }
  ],
  "acessorios": [
@@ -15069,6 +15187,31 @@
      "descricao": "ponha o facão aqui (pivô do facão) para guardá-lo na bainha"
     }
    ]
+  },
+  {
+   "id": "capa_machadinha",
+   "nome": "Capa da lâmina (machadinha)",
+   "grupo": "acessorios",
+   "categoria": "capa",
+   "encaixe": "capa_machadinha",
+   "peso_kg": 0.07,
+   "raridade": "comum",
+   "valor_troca": 4,
+   "modificadores": {},
+   "onde": [
+    "quartel",
+    "loja_caca",
+    "armazem"
+   ],
+   "descricao": "Capa moldada que cobre o fio, com tira de náilon e botão de pressão por cima da cabeça. Não corta a mochila.",
+   "arquivo": "acessorios/capa_machadinha.glb",
+   "tamanho_m": [
+    0.021,
+    0.135,
+    0.156
+   ],
+   "triangulos": 3180,
+   "kb": 194.3
   }
  ],
  "municao": [

@@ -35,6 +35,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Besta recurva (`besta_recurva`) | virote | 1 | 110 | 45 m | 0,2/s | 10 m | 1400 | 3,4 kg | virote, mira, alca, massa, estribo, trilho | atirar, vazia, armar, destravar, travar, carregar, inspecionar, ocioso |
 | Faca de combate (`faca_combate`) | lâmina | - | 45 | 0,6 m | 1,8/s | 1 m | 3000 | 0,32 kg | cinto | golpear, estocar, golpe_baixo, sacar, guardar, inspecionar, ocioso |
 | Facão de mato (`facao`) | lâmina | - | 60 | 0,85 m | 1,3/s | 2 m | 2600 | 0,62 kg | cinto | golpear, golpe_forte, cortar_mato, sacar, guardar, inspecionar, ocioso |
+| Machadinha tática (`machadinha_tatica`) | lâmina | - | 70 | 0,7 m | 1,1/s | 3 m | 3500 | 0,75 kg | capa | golpear, golpe_forte, golpe_ponta, arrombar, tirar_capa, inspecionar, ocioso |
 
 ## Acessórios
 
@@ -187,6 +188,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Estribo de besta (`estribo_besta`) | Estribos | `estribo_besta` | armar_s ×0,78 | 0,18 kg | comum | 5056 |
 | Bainha de cinto (faca de combate) (`bainha_cinto_faca`) | Bainhas | `bainha_faca` | sacar_s ×0,85 | 0,14 kg | comum | 10892 |
 | Bainha de lona (facão) (`bainha_lona_facao`) | Bainhas | `bainha_facao` | sacar_s ×0,9 | 0,18 kg | comum | 13026 |
+| Capa da lâmina (machadinha) (`capa_machadinha`) | Capas | `capa_machadinha` | - | 0,07 kg | comum | 3180 |
 
 ## Munição e efeitos
 
@@ -445,3 +447,4 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Besta recurva**, `encaixe_trilho`: lanterna_pistola, laser_pistola, combo_lanterna_laser
 - **Faca de combate**, `cinto`: bainha_cinto_faca
 - **Facão de mato**, `cinto`: bainha_lona_facao
+- **Machadinha tática**, `capa`: capa_machadinha

@@ -25,6 +25,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Submetralhadora Ciclone 9 mm (areia) (`smg_ciclone_9mm_tan`) | 9 mm | 30 | 28 | 40 m | 18/s | 120 m | 6000 | 2,7 kg | mira, alca, massa, boca, carregador, empunhadura, lanterna, laser, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, dobrar_coronha, abrir_coronha, inspecionar, ocioso |
 | Rifle Pardal .22 (`rifle_22`) | .22 | 10 | 34 | 70 m | 1,1/s | 70 m | 5000 | 2,7 kg | mira, alca, boca, carregador, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Rifle Pardal .22 sintético (`rifle_22_sintetico`) | .22 | 10 | 34 | 70 m | 1,1/s | 70 m | 5000 | 2,5 kg | mira, alca, boca, carregador, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
+| Pistola sinalizadora (`pistola_sinalizadora`) | sinal 12 | 1 | 25 | 15 m | 0,3/s | 90 m | 800 | 0,45 kg | cartucho | atirar, armar, recarregar, inspecionar, ocioso |
 
 ## Acessórios
 
@@ -181,7 +182,14 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Cartucho .22 (`municao_22`) | Munição | Cartucho pequeno de fogo circular: o mais fácil de achar em casas de campo e lojas. Fraco contra zumbi, ótimo para caça. | 384 |
 | Estojo .22 (vazio) (`estojo_22`) | Estojos | Estojo ejetado: o jogo cria um em saida_estojo a cada tiro (some depois de uns segundos). | 240 |
 | Caixa de munição .22 (50) (`caixa_municao_22`) | Caixas de munição | Caixinha de papelão com bandeja de 50 cartuchos .22 em pé. A tampa abre (nó "tampa", animação "abrir"). | 9308 |
+| Cartucho de sinal vermelho (`cartucho_sinal_vermelho`) | Munição | Sinal de socorro: quem está no rádio ou nas torres vê de longe. Zumbis num raio de 250 m vão para onde ele cai. | 1224 |
+| Cartucho de sinal verde (`cartucho_sinal_verde`) | Munição | Chama sobreviventes para a sua posição (pode render um novo morador). Mas o brilho verde também atrai os zumbis num raio de 300 m. | 1224 |
+| Estojo de sinal (vazio) (`estojo_sinal`) | Estojos | Estojo vazio que sai na recarga (o jogo cria um em saida_estojo). | 880 |
+| Caixa de sinais vermelhos (6) (`caixa_sinal_vermelho`) | Caixas de munição | Caixa de papelão com 6 cartuchos de sinal vermelho em pé. A tampa abre (nó "tampa", animação "abrir"). | 4988 |
+| Caixa de sinais verdes (6) (`caixa_sinal_verde`) | Caixas de munição | Caixa de papelão com 6 cartuchos de sinal verde em pé. A tampa abre (nó "tampa", animação "abrir"). | 4172 |
 | Clarão de boca (`clarao_boca`) | Efeitos | Mostrar por 1 ou 2 quadros no encaixe boca_fogo a cada tiro; girar ao acaso em -Z e variar a escala (0,8 a 1,2). Material emissivo com transparência. | 372 |
+| Luz do sinal vermelho (`sinal_luz_vermelha`) | Efeitos | Bola de luz que sobe até ~80 m e desce devagar por 7 s. Pôr uma luz omnidirecional vermelha forte no centro e piscar a escala (0,9 a 1,1). Material emissivo com transparência no halo. | 1920 |
+| Luz do sinal verde (`sinal_luz_verde`) | Efeitos | Igual ao vermelho, em verde. Pôr uma luz omnidirecional verde forte no centro. | 1920 |
 
 ## Compatibilidade
 
@@ -326,3 +334,4 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Rifle Pardal .22 sintético**, `encaixe_boca`: protetor_rosca_22, supressor_22
 - **Rifle Pardal .22 sintético**, `encaixe_carregador`: carregador_22_10, carregador_22_25
 - **Rifle Pardal .22 sintético**, `encaixe_bandoleira`: bandoleira
+- **Pistola sinalizadora**, `encaixe_cartucho`: cartucho_sinal_vermelho, cartucho_sinal_verde

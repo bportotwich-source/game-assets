@@ -1,0 +1,405 @@
+{
+ "gerado_por": "scripts/acabamento/mapa.py",
+ "camadas": [
+  "pintura",
+  "papel_listrado",
+  "papel_floral",
+  "papel_damasco",
+  "papel_losango",
+  "papel_infantil",
+  "azulejo_branco",
+  "azulejo_metro",
+  "azulejo_verde",
+  "lambri_madeira",
+  "lambri_tabuado",
+  "taco",
+  "tabua_corrida",
+  "ladrilho_xadrez",
+  "ceramica_bege",
+  "vinilico",
+  "cimento_queimado"
+ ],
+ "paredes": [
+  {
+   "cima": 0,
+   "cor_cima": [
+    0.97,
+    0.96,
+    0.93
+   ],
+   "baixo": 0,
+   "altura": 0.0,
+   "cor_baixo": [
+    1,
+    1,
+    1
+   ],
+   "rodape": true,
+   "sanca": true
+  },
+  {
+   "cima": 1,
+   "cor_cima": [
+    1,
+    1,
+    1
+   ],
+   "baixo": 9,
+   "altura": 0.9,
+   "cor_baixo": [
+    1,
+    1,
+    1
+   ],
+   "rodape": true,
+   "sanca": true
+  },
+  {
+   "cima": 3,
+   "cor_cima": [
+    1,
+    1,
+    1
+   ],
+   "baixo": 9,
+   "altura": 0.9,
+   "cor_baixo": [
+    1,
+    1,
+    1
+   ],
+   "rodape": true,
+   "sanca": true
+  },
+  {
+   "cima": 2,
+   "cor_cima": [
+    1,
+    1,
+    1
+   ],
+   "baixo": 2,
+   "altura": 0.0,
+   "cor_baixo": [
+    1,
+    1,
+    1
+   ],
+   "rodape": true,
+   "sanca": true
+  },
+  {
+   "cima": 0,
+   "cor_cima": [
+    0.76,
+    0.84,
+    0.92
+   ],
+   "baixo": 0,
+   "altura": 0.0,
+   "cor_baixo": [
+    1,
+    1,
+    1
+   ],
+   "rodape": true,
+   "sanca": true
+  },
+  {
+   "cima": 5,
+   "cor_cima": [
+    1,
+    1,
+    1
+   ],
+   "baixo": 10,
+   "altura": 0.9,
+   "cor_baixo": [
+    0.97,
+    0.96,
+    0.93
+   ],
+   "rodape": true,
+   "sanca": true
+  },
+  {
+   "cima": 0,
+   "cor_cima": [
+    1.0,
+    0.92,
+    0.7
+   ],
+   "baixo": 6,
+   "altura": 1.5,
+   "cor_baixo": [
+    1,
+    1,
+    1
+   ],
+   "rodape": true,
+   "sanca": true
+  },
+  {
+   "cima": 0,
+   "cor_cima": [
+    0.78,
+    0.86,
+    0.76
+   ],
+   "baixo": 7,
+   "altura": 1.5,
+   "cor_baixo": [
+    1,
+    1,
+    1
+   ],
+   "rodape": true,
+   "sanca": true
+  },
+  {
+   "cima": 0,
+   "cor_cima": [
+    0.97,
+    0.96,
+    0.93
+   ],
+   "baixo": 8,
+   "altura": 2.0,
+   "cor_baixo": [
+    1,
+    1,
+    1
+   ],
+   "rodape": true,
+   "sanca": false
+  },
+  {
+   "cima": 0,
+   "cor_cima": [
+    0.97,
+    0.96,
+    0.93
+   ],
+   "baixo": 6,
+   "altura": 2.0,
+   "cor_baixo": [
+    1,
+    1,
+    1
+   ],
+   "rodape": true,
+   "sanca": false
+  },
+  {
+   "cima": 0,
+   "cor_cima": [
+    0.98,
+    0.93,
+    0.8
+   ],
+   "baixo": 10,
+   "altura": 1.0,
+   "cor_baixo": [
+    1,
+    1,
+    1
+   ],
+   "rodape": true,
+   "sanca": true
+  },
+  {
+   "cima": 4,
+   "cor_cima": [
+    1,
+    1,
+    1
+   ],
+   "baixo": 4,
+   "altura": 0.0,
+   "cor_baixo": [
+    1,
+    1,
+    1
+   ],
+   "rodape": true,
+   "sanca": true
+  },
+  {
+   "cima": 0,
+   "cor_cima": [
+    1.0,
+    0.86,
+    0.74
+   ],
+   "baixo": 0,
+   "altura": 0.0,
+   "cor_baixo": [
+    1,
+    1,
+    1
+   ],
+   "rodape": true,
+   "sanca": true
+  },
+  {
+   "cima": 0,
+   "cor_cima": [
+    0.7,
+    0.82,
+    0.7
+   ],
+   "baixo": 0,
+   "altura": 1.2,
+   "cor_baixo": [
+    0.52,
+    0.66,
+    0.56
+   ],
+   "rodape": true,
+   "sanca": false
+  },
+  {
+   "cima": 0,
+   "cor_cima": [
+    0.98,
+    0.93,
+    0.8
+   ],
+   "baixo": 0,
+   "altura": 1.2,
+   "cor_baixo": [
+    0.62,
+    0.52,
+    0.42
+   ],
+   "rodape": true,
+   "sanca": false
+  },
+  {
+   "cima": 0,
+   "cor_cima": [
+    0.97,
+    0.96,
+    0.93
+   ],
+   "baixo": 6,
+   "altura": 1.6,
+   "cor_baixo": [
+    1,
+    1,
+    1
+   ],
+   "rodape": true,
+   "sanca": false
+  },
+  {
+   "cima": 0,
+   "cor_cima": [
+    0.85,
+    0.86,
+    0.86
+   ],
+   "baixo": 0,
+   "altura": 0.0,
+   "cor_baixo": [
+    1,
+    1,
+    1
+   ],
+   "rodape": false,
+   "sanca": false
+  },
+  {
+   "cima": 0,
+   "cor_cima": [
+    0.98,
+    0.84,
+    0.82
+   ],
+   "baixo": 0,
+   "altura": 0.0,
+   "cor_baixo": [
+    1,
+    1,
+    1
+   ],
+   "rodape": true,
+   "sanca": true
+  },
+  {
+   "cima": 0,
+   "cor_cima": [
+    0.92,
+    0.86,
+    0.76
+   ],
+   "baixo": 9,
+   "altura": 1.0,
+   "cor_baixo": [
+    1,
+    1,
+    1
+   ],
+   "rodape": true,
+   "sanca": true
+  }
+ ],
+ "pisos": [
+  {
+   "camada": 12,
+   "cor": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "camada": 11,
+   "cor": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "camada": 14,
+   "cor": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "camada": 13,
+   "cor": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "camada": 15,
+   "cor": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "camada": 16,
+   "cor": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "camada": 12,
+   "cor": [
+    0.72,
+    0.62,
+    0.55
+   ]
+  }
+ ]
+}

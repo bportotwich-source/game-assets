@@ -1,0 +1,140 @@
+"""Acabamento por comodo: escolhe papel de parede, azulejo, lambri e piso de cada comodo e grava
+kits/<kit>/acabamento.json, que o Godot usa para pintar as paredes e pisos do kit sem mexer nas pecas.
+
+Como funciona
+  - Os comodos e seus tipos vem de scripts/ambientacao (comodos.py e o ambientacao.json do kit).
+  - Para cada andar, uma grade de 0,25 m diz o estilo de parede e de piso de cada celula. As celulas de parede e
+    de porta recebem o comodo mais perto (ate 0,5 m), para a face da parede achar o comodo para onde ela olha.
+  - O shader acabamento.gdshader troca so os materiais listados em 'materiais' (paredes lisas e pisos genericos):
+    na parede, le a celula 0,2 m na frente da face; no piso, a celula embaixo. Fora dos comodos, fica o material original.
+  - Os estilos (camadas, altura do lambri/azulejo, cores) estao em ESTILOS e vao para acabamentos/estilos.json.
+
+Uso: python3 scripts/acabamento/mapa.py [kit ...]     (sem argumentos: todos os kits)
+"""
+import base64, json, math, os, sys
+import numpy as np, trimesh
+from scipy import ndimage
+
+AQUI = os.path.dirname(os.path.abspath(__file__)); RAIZ = os.path.abspath(os.path.join(AQUI, '..', '..'))
+sys.path.insert(0, os.path.join(RAIZ, 'scripts', 'ambientacao'))
+import comodos as CM
+
+CAMADAS = json.load(open(os.path.join(RAIZ, 'acabamentos', 'camadas.json')))['camadas']
+L = {n: i for i, n in enumerate(CAMADAS)}
+
+# Estilo de parede: camada de baixo ate 'altura' (m acima do piso), camada de cima, cores (multiplicam a textura),
+# e se tem rodape pintado (faixa de 12 cm) e sanca (faixa sombreada no alto).
+def P(cima, cor_cima=(1, 1, 1), baixo=None, altura=0.0, cor_baixo=(1, 1, 1), rodape=True, sanca=True):
+    return dict(cima=L[cima], cor_cima=list(cor_cima), baixo=L[baixo or cima], altura=altura, cor_baixo=list(cor_baixo), rodape=rodape, sanca=sanca)
+
+TINTA = {'branco': (0.97, 0.96, 0.93), 'creme': (0.98, 0.93, 0.80), 'salvia': (0.78, 0.86, 0.76), 'azul': (0.76, 0.84, 0.92), 'rosa': (0.98, 0.84, 0.82),
+         'amarelo': (1.0, 0.92, 0.70), 'cinza': (0.85, 0.86, 0.86), 'verde': (0.70, 0.82, 0.70), 'bege': (0.92, 0.86, 0.76), 'pessego': (1.0, 0.86, 0.74)}
+PAREDES = [
+    P('pintura', TINTA['branco']),                                                     # 0 neutro
+    P('papel_listrado', baixo='lambri_madeira', altura=0.9),                           # 1 sala antiga
+    P('papel_damasco', baixo='lambri_madeira', altura=0.9),                            # 2 sala / jantar
+    P('papel_floral'),                                                                 # 3 quarto
+    P('pintura', TINTA['azul']),                                                       # 4 quarto
+    P('papel_infantil', baixo='lambri_tabuado', altura=0.9, cor_baixo=TINTA['branco']), # 5 quarto de crianca
+    P('pintura', TINTA['amarelo'], baixo='azulejo_branco', altura=1.5),                # 6 cozinha
+    P('pintura', TINTA['salvia'], baixo='azulejo_metro', altura=1.5),                  # 7 cozinha
+    P('pintura', TINTA['branco'], baixo='azulejo_verde', altura=2.0, sanca=False),     # 8 banheiro
+    P('pintura', TINTA['branco'], baixo='azulejo_branco', altura=2.0, sanca=False),    # 9 banheiro
+    P('pintura', TINTA['creme'], baixo='lambri_tabuado', altura=1.0),                  # 10 corredor / lavanderia
+    P('papel_losango'),                                                                # 11 escritorio / sala
+    P('pintura', TINTA['pessego']),                                                    # 12 sala
+    P('pintura', TINTA['verde'], baixo='pintura', altura=1.2, cor_baixo=(0.52, 0.66, 0.56), sanca=False),   # 13 reparticao (meia parede verde)
+    P('pintura', TINTA['creme'], baixo='pintura', altura=1.2, cor_baixo=(0.62, 0.52, 0.42), sanca=False),   # 14 comercio (meia parede marrom)
+    P('pintura', TINTA['branco'], baixo='azulejo_branco', altura=1.6, sanca=False),    # 15 clinica / cozinha comercial
+    P('pintura', TINTA['cinza'], rodape=False, sanca=False),                           # 16 deposito, garagem
+    P('pintura', TINTA['rosa']),                                                       # 17 quarto
+    P('pintura', TINTA['bege'], baixo='lambri_madeira', altura=1.0),                   # 18 escritorio formal
+]
+PISOS = [dict(camada=L[n], cor=list(c)) for n, c in [
+    ('tabua_corrida', (1, 1, 1)),            # 0
+    ('taco', (1, 1, 1)),                     # 1
+    ('ceramica_bege', (1, 1, 1)),            # 2
+    ('ladrilho_xadrez', (1, 1, 1)),          # 3
+    ('vinilico', (1, 1, 1)),                 # 4
+    ('cimento_queimado', (1, 1, 1)),         # 5
+    ('tabua_corrida', (0.72, 0.62, 0.55)),   # 6 tabua escura
+]]
+
+# tipo do comodo -> (estilos de parede possiveis, estilos de piso possiveis); a escolha e fixa por comodo (hash)
+POR_TIPO = {
+    'sala': ([1, 2, 11, 12], [0, 1]), 'jantar': ([2, 1, 12], [1, 0]), 'quarto': ([3, 4, 17], [0, 1, 6]), 'quarto_crianca': ([5], [0, 1]),
+    'quarto_solteiro': ([4, 17, 3], [0, 6]), 'cozinha': ([6, 7], [3, 2]), 'banheiro': ([8, 9], [3, 2]), 'lavabo': ([9, 8], [3]),
+    'lavanderia': ([10], [2]), 'corredor': ([10, 0], [0, 1]), 'escritorio': ([18, 11, 13], [1, 4]), 'deposito': ([16], [5]), 'garagem': ([16], [5]),
+    'sotao': ([0], [6]), 'quarto_hotel': ([2, 3, 11], [0]), 'corredor_hotel': ([18, 10], [0]), 'recepcao': ([18, 14], [4, 3]),
+    'clinica': ([15], [4]), 'espera': ([13, 15], [4]), 'cozinha_comercial': ([15], [2]), 'refeitorio': ([14, 15], [4]), 'alojamento': ([13], [4]),
+    'vestiario': ([15], [4]), 'delegacia': ([13], [4]), 'cela': ([16], [5]), 'banco': ([18], [4]), 'cofre': ([16], [5]), 'loja': ([14], [4]),
+    'mercado': ([14], [4]), 'padaria_loja': ([14, 15], [3, 4]), 'padaria_producao': ([15], [2]), 'diner': ([15, 14], [3]), 'posto_loja': ([14], [4]),
+    'oficina': ([16], [5]), 'showroom': ([0], [4]), 'biblioteca': ([18], [0, 1]), 'sala_aula': ([13], [0]), 'correios': ([13], [4]), 'triagem': ([16], [5]),
+    'quartel': ([13, 16], [5]), 'igreja': ([0], [0]), 'cinema_foyer': ([2, 18], [4]), 'cinema_sala': ([0], [5]), 'projecao': ([16], [5]),
+    'galpao': ([16], [5]), 'fabrica': ([16], [5]), 'serraria': ([16], [5]), 'arquivo': ([13], [4]), 'trailer': ([12, 4], [4]),
+}
+FORA = {'vazio', 'patio', 'quintal', 'varanda', 'estacionamento'}
+
+PAREDE_PADRAO = ['plaster']          # so paredes lisas; materiais de parede ja coloridos ficam como estao
+PISO_PADRAO = ['floor']              # so o piso generico; os kits novos ja tem piso por comodo
+
+
+def h(*k):
+    v = 2166136261
+    for x in k:
+        for ch in str(x): v = ((v ^ ord(ch)) * 16777619) & 0xffffffff
+    return v
+
+
+def gerar(kit, cfg):
+    pasta = os.path.join(RAIZ, 'kits', kit)
+    amb = json.load(open(os.path.join(pasta, 'ambientacao.json'), encoding='utf-8'))
+    tipo = {(c['andar'], c['comodo']): c['tipo'] for c in amb['comodos']}
+    res = CM.analisar(pasta)
+    ray = trimesh.ray.ray_triangle.RayMeshIntersector(res['malha'])
+    nx, nz = res['nx'], res['nz']; n_and = len(res['andares'])
+    img = np.zeros((n_and, nz, nx, 4), np.uint8)
+    resumo = []
+    for an in res['andares']:
+        a = an['andar']; rot = an['rotulo'].copy()
+        # celulas de parede/porta herdam o comodo mais perto (ate 2 celulas)
+        vazio = rot < 0
+        d, (ii, jj) = ndimage.distance_transform_edt(vazio, return_indices=True)
+        cheio = np.where(vazio & (d <= 2.01), rot[ii, jj], rot)
+        for c in an['comodos']:
+            t = tipo.get((a, c['id']), 'vazio')
+            if t in FORA or t not in POR_TIPO: continue
+            ps, fs = POR_TIPO[t]
+            sp = ps[h(kit, a, c['id'], 'p') % len(ps)]; sf = fs[h(kit, a, c['id'], 'f') % len(fs)]
+            cx, cz = c['centro']
+            loc, _, _ = ray.intersects_location([[cx, an['y'] + 1.2, cz]], [[0, 1.0, 0]], multiple_hits=True)
+            acima = sorted(v for v in loc[:, 1] if v > an['y'] + 1.9) if len(loc) else []
+            teto = (acima[0] if acima else an['teto'] - 0.2) - an['y']
+            m = cheio == c['id']
+            img[a][m.T] = [sp + 1, sf + 1, int(np.clip(round(teto / 0.02), 0, 255)), 255]
+            resumo.append(dict(andar=a, comodo=c['id'], tipo=t, parede=sp, piso=sf, pe_direito=round(float(teto), 2)))
+    out = dict(kit=kit, gerado_por='scripts/acabamento/mapa.py',
+               convencao="mapa: RGBA8 em base64, andar por andar, linha z, coluna x; R = estilo de parede + 1, G = estilo de piso + 1, "
+                         "B = pé-direito / 0,02 m, A = 255 dentro de um cômodo. Célula (ix, iz) cobre x0 + ix*cel e z0 + iz*cel.",
+               x0=round(float(res['x0']), 4), z0=round(float(res['z0']), 4), cel=CM.CEL, nx=nx, nz=nz, niveis=[round(float(an['y']), 3) for an in res['andares']],
+               materiais=dict(paredes=cfg.get('paredes', PAREDE_PADRAO), pisos=cfg.get('pisos', PISO_PADRAO)),
+               comodos=resumo, mapa=base64.b64encode(img.tobytes()).decode())
+    json.dump(out, open(os.path.join(pasta, 'acabamento.json'), 'w', encoding='utf-8'), ensure_ascii=False)
+    print(f"{kit}: {len(resumo)} cômodos com acabamento, {n_and} andares", flush=True)
+
+
+def estilos():
+    json.dump(dict(gerado_por='scripts/acabamento/mapa.py', camadas=CAMADAS, paredes=PAREDES, pisos=PISOS),
+              open(os.path.join(RAIZ, 'acabamentos', 'estilos.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+
+def main(kits):
+    estilos()
+    cfgs = json.load(open(os.path.join(AQUI, 'kits.json'), encoding='utf-8')) if os.path.exists(os.path.join(AQUI, 'kits.json')) else {}
+    todos = sorted(k for k in os.listdir(os.path.join(RAIZ, 'kits')) if os.path.exists(os.path.join(RAIZ, 'kits', k, 'ambientacao.json')))
+    for k in kits or todos:
+        gerar(k, cfgs.get(k, {}))
+
+
+if __name__ == '__main__':
+    main(sys.argv[1:])

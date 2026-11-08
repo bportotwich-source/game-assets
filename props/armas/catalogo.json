@@ -5188,6 +5188,822 @@
      "descricao": "respiração leve parado"
     }
    }
+  },
+  {
+   "id": "smg_ciclone_9mm",
+   "nome": "Submetralhadora Ciclone 9 mm",
+   "grupo": "armas",
+   "categoria": "submetralhadora",
+   "classe": "fogo",
+   "calibre": "9 mm",
+   "municao": "municao_9mm",
+   "capacidade": 30,
+   "dano": 28,
+   "alcance_m": 40,
+   "alcance_max_m": 150,
+   "modo": "semiautomático, rajada de 2 e automático",
+   "tiros_por_s": 18,
+   "recarga_s": 2.0,
+   "recarga_vazia_s": 2.5,
+   "precisao": 0.66,
+   "recuo": 0.16,
+   "ruido_m": 120,
+   "durabilidade": 6000,
+   "peso_kg": 2.7,
+   "raridade": "muito raro",
+   "valor_troca": 190,
+   "onde": [
+    "quartel"
+   ],
+   "estojo_s": 0.02,
+   "descricao": "Submetralhadora de cano alto, na linha do ombro: o coice vai reto para trás e quase não levanta. Atira muito rápido, aceita carregador de pistola longo e o tambor de 50. A coronha dobra para o lado.",
+   "arquivo": "armas/smg_ciclone_9mm.glb",
+   "tamanho_m": [
+    0.056,
+    0.219,
+    0.644
+   ],
+   "triangulos": 31934,
+   "kb": 1722.6,
+   "partes": [
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -12,
+     "descricao": "puxa para trás",
+     "pai": "smg_ciclone_9mm",
+     "explodir_m": [
+      0.0,
+      -0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "seletor",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -120,
+     "descricao": "dos dois lados: trava (0°), semi (-40°), rajada de 2 (-80°), automático (-120°)",
+     "pai": "smg_ciclone_9mm",
+     "explodir_m": [
+      0.04,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": -0.04,
+     "descricao": "ferrolho visto pela janela da direita",
+     "pai": "smg_ciclone_9mm",
+     "explodir_m": [
+      0.05,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "alavanca",
+     "tipo": "desliza",
+     "curso_m": -0.06,
+     "descricao": "alavanca de manejo dobrável do lado esquerdo",
+     "pai": "smg_ciclone_9mm",
+     "explodir_m": [
+      -0.05,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "coronha",
+     "tipo": "gira",
+     "eixo": "y",
+     "curso_graus": 180,
+     "descricao": "coronha de esqueleto: dobra para a direita (180°)",
+     "pai": "smg_ciclone_9mm",
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.08
+     ]
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      -0.3090169943749474,
+      -0.9510565162951535,
+      0.0
+     ],
+     "municao": "municao_9mm",
+     "capacidade": 30,
+     "descricao": "carregador de 30 na frente do guarda-mato",
+     "pai": "smg_ciclone_9mm",
+     "explodir_m": [
+      0.0,
+      -0.12,
+      0.0
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_mira",
+     "tipo": "trilho_mira",
+     "pai": "smg_ciclone_9mm",
+     "posicao_m": [
+      0.0,
+      0.1075,
+      -0.088
+     ],
+     "aceita": [
+      "mira_holografica",
+      "mira_reflexa",
+      "mira_ponto_vermelho_tubo",
+      "luneta_1_6"
+     ],
+     "descricao": "trilho de cima",
+     "explodir_m": [
+      0.0,
+      0.07,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_alca",
+     "tipo": "alca_trilho",
+     "pai": "smg_ciclone_9mm",
+     "posicao_m": [
+      -0.0,
+      0.1075,
+      0.036
+     ],
+     "aceita": [
+      "alca_rebativel",
+      "alca_polimero",
+      "alca_polimero_tan"
+     ],
+     "padrao": "alca_rebativel",
+     "rebate_com": "encaixe_mira",
+     "descricao": "deita (animação \"dobrar\" do acessório) quando há mira no encaixe_mira",
+     "explodir_m": [
+      -0.0,
+      0.05,
+      0.02
+     ]
+    },
+    {
+     "no": "encaixe_massa",
+     "tipo": "massa_trilho",
+     "pai": "smg_ciclone_9mm",
+     "posicao_m": [
+      0.0,
+      0.1075,
+      -0.3
+     ],
+     "aceita": [
+      "massa_rebativel",
+      "massa_polimero",
+      "massa_polimero_tan"
+     ],
+     "padrao": "massa_rebativel",
+     "rebate_com": "encaixe_mira",
+     "descricao": "deita (animação \"dobrar\" do acessório) quando há mira no encaixe_mira",
+     "explodir_m": [
+      0.0,
+      0.05,
+      -0.02
+     ]
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_rosca_9mm",
+     "pai": "smg_ciclone_9mm",
+     "posicao_m": [
+      0.0,
+      0.08,
+      -0.354
+     ],
+     "aceita": [
+      "protetor_rosca_9mm",
+      "supressor_9mm",
+      "supressor_9mm_tan",
+      "supressor_9mm_verde",
+      "supressor_9mm_cinza",
+      "compensador_9mm",
+      "supressor_garrafa"
+     ],
+     "padrao": "protetor_rosca_9mm",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.06
+     ]
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_ciclone",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.06,
+      -0.182
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_ciclone_30",
+      "carregador_ciclone_17",
+      "tambor_ciclone_50"
+     ],
+     "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda o original"
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "smg_ciclone_9mm",
+     "posicao_m": [
+      0.0,
+      0.0545,
+      -0.276
+     ],
+     "aceita": [
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_dobravel",
+      "empunhadura_vertical",
+      "batente_mao"
+     ],
+     "padrao": "empunhadura_reta",
+     "descricao": "trilho curto de baixo",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "smg_ciclone_9mm",
+     "posicao_m": [
+      0.017,
+      0.08,
+      -0.258
+     ],
+     "aceita": [
+      "lanterna_compacta",
+      "lanterna_fuzil"
+     ],
+     "descricao": "lado direito do guarda-mão",
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "smg_ciclone_9mm",
+     "posicao_m": [
+      -0.017,
+      0.08,
+      -0.258
+     ],
+     "aceita": [
+      "modulo_laser",
+      "modulo_laser_tan",
+      "laser_fuzil"
+     ],
+     "descricao": "lado esquerdo da frente",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_bandoleira",
+     "tipo": "bandoleira",
+     "pai": "smg_ciclone_9mm",
+     "posicao_m": [
+      -0.0205,
+      0.074,
+      0.042
+     ],
+     "aceita": [
+      "bandoleira"
+     ],
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "ombro",
+     "tipo": "efeito",
+     "pai": "coronha",
+     "posicao_m": [
+      -0.0,
+      0.05,
+      0.289
+     ],
+     "descricao": "ponto da soleira que encosta no ombro"
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "smg_ciclone_9mm",
+     "posicao_m": [
+      0.0,
+      0.08,
+      -0.354
+     ],
+     "descricao": "clarão de boca e origem do disparo (-Z)"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "smg_ciclone_9mm",
+     "posicao_m": [
+      0.0185,
+      0.084,
+      -0.178
+     ],
+     "descricao": "onde nasce o estojo (sai para a direita)"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "smg_ciclone_9mm",
+     "posicao_m": [
+      -0.0,
+      0.127,
+      0.036
+     ],
+     "descricao": "centro do furo da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z)"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.055,
+     "laco": false,
+     "descricao": "um tiro (repita a 18 por segundo no automático): ferrolho recua 40 mm; o coice vai reto para trás e quase não levanta"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.06,
+     "laco": false,
+     "descricao": "último tiro: o ferrolho fica aberto atrás"
+    },
+    "recarregar": {
+     "duracao_s": 2.0,
+     "laco": false,
+     "descricao": "aperta o retém atrás do poço, o carregador cai (0,5 s) e o novo entra (1,6 s); troque o nó entre 0,5 e 1,25 s"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 2.5,
+     "laco": false,
+     "descricao": "igual à recarga e no fim puxa a alavanca da esquerda para soltar o ferrolho"
+    },
+    "trocar_modo": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "trava -> semi -> rajada -> automático"
+    },
+    "dobrar_coronha": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "dobra a coronha para a direita (aperte o botão da dobradiça)"
+    },
+    "abrir_coronha": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "abre a coronha"
+    },
+    "inspecionar": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "puxa a alavanca até ver o cartucho pela janela, solta e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "smg_ciclone_9mm_tan",
+   "nome": "Submetralhadora Ciclone 9 mm (areia)",
+   "grupo": "armas",
+   "categoria": "submetralhadora",
+   "classe": "fogo",
+   "calibre": "9 mm",
+   "municao": "municao_9mm",
+   "capacidade": 30,
+   "dano": 28,
+   "alcance_m": 40,
+   "alcance_max_m": 150,
+   "modo": "semiautomático, rajada de 2 e automático",
+   "tiros_por_s": 18,
+   "recarga_s": 2.0,
+   "recarga_vazia_s": 2.5,
+   "precisao": 0.66,
+   "recuo": 0.16,
+   "ruido_m": 120,
+   "durabilidade": 6000,
+   "peso_kg": 2.7,
+   "raridade": "muito raro",
+   "valor_troca": 200,
+   "onde": [
+    "quartel"
+   ],
+   "estojo_s": 0.02,
+   "descricao": "A mesma Ciclone com chassi, punho e coronha cor de areia; corpo de cima e carregador pretos.",
+   "arquivo": "armas/smg_ciclone_9mm_tan.glb",
+   "tamanho_m": [
+    0.056,
+    0.219,
+    0.644
+   ],
+   "triangulos": 31934,
+   "kb": 1726.3,
+   "partes": [
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -12,
+     "descricao": "puxa para trás",
+     "pai": "smg_ciclone_9mm_tan",
+     "explodir_m": [
+      0.0,
+      -0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "seletor",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -120,
+     "descricao": "dos dois lados: trava (0°), semi (-40°), rajada de 2 (-80°), automático (-120°)",
+     "pai": "smg_ciclone_9mm_tan",
+     "explodir_m": [
+      0.04,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": -0.04,
+     "descricao": "ferrolho visto pela janela da direita",
+     "pai": "smg_ciclone_9mm_tan",
+     "explodir_m": [
+      0.05,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "alavanca",
+     "tipo": "desliza",
+     "curso_m": -0.06,
+     "descricao": "alavanca de manejo dobrável do lado esquerdo",
+     "pai": "smg_ciclone_9mm_tan",
+     "explodir_m": [
+      -0.05,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "coronha",
+     "tipo": "gira",
+     "eixo": "y",
+     "curso_graus": 180,
+     "descricao": "coronha de esqueleto: dobra para a direita (180°)",
+     "pai": "smg_ciclone_9mm_tan",
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.08
+     ]
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      -0.3090169943749474,
+      -0.9510565162951535,
+      0.0
+     ],
+     "municao": "municao_9mm",
+     "capacidade": 30,
+     "descricao": "carregador de 30 na frente do guarda-mato",
+     "pai": "smg_ciclone_9mm_tan",
+     "explodir_m": [
+      0.0,
+      -0.12,
+      0.0
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_mira",
+     "tipo": "trilho_mira",
+     "pai": "smg_ciclone_9mm_tan",
+     "posicao_m": [
+      0.0,
+      0.1075,
+      -0.088
+     ],
+     "aceita": [
+      "mira_holografica",
+      "mira_reflexa",
+      "mira_ponto_vermelho_tubo",
+      "luneta_1_6"
+     ],
+     "descricao": "trilho de cima",
+     "explodir_m": [
+      0.0,
+      0.07,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_alca",
+     "tipo": "alca_trilho",
+     "pai": "smg_ciclone_9mm_tan",
+     "posicao_m": [
+      -0.0,
+      0.1075,
+      0.036
+     ],
+     "aceita": [
+      "alca_rebativel",
+      "alca_polimero",
+      "alca_polimero_tan"
+     ],
+     "padrao": "alca_rebativel",
+     "rebate_com": "encaixe_mira",
+     "descricao": "deita (animação \"dobrar\" do acessório) quando há mira no encaixe_mira",
+     "explodir_m": [
+      -0.0,
+      0.05,
+      0.02
+     ]
+    },
+    {
+     "no": "encaixe_massa",
+     "tipo": "massa_trilho",
+     "pai": "smg_ciclone_9mm_tan",
+     "posicao_m": [
+      0.0,
+      0.1075,
+      -0.3
+     ],
+     "aceita": [
+      "massa_rebativel",
+      "massa_polimero",
+      "massa_polimero_tan"
+     ],
+     "padrao": "massa_rebativel",
+     "rebate_com": "encaixe_mira",
+     "descricao": "deita (animação \"dobrar\" do acessório) quando há mira no encaixe_mira",
+     "explodir_m": [
+      0.0,
+      0.05,
+      -0.02
+     ]
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_rosca_9mm",
+     "pai": "smg_ciclone_9mm_tan",
+     "posicao_m": [
+      0.0,
+      0.08,
+      -0.354
+     ],
+     "aceita": [
+      "protetor_rosca_9mm",
+      "supressor_9mm",
+      "supressor_9mm_tan",
+      "supressor_9mm_verde",
+      "supressor_9mm_cinza",
+      "compensador_9mm",
+      "supressor_garrafa"
+     ],
+     "padrao": "protetor_rosca_9mm",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.06
+     ]
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_ciclone",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.06,
+      -0.182
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_ciclone_30",
+      "carregador_ciclone_17",
+      "tambor_ciclone_50"
+     ],
+     "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda o original"
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "smg_ciclone_9mm_tan",
+     "posicao_m": [
+      0.0,
+      0.0545,
+      -0.276
+     ],
+     "aceita": [
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_dobravel",
+      "empunhadura_vertical",
+      "batente_mao"
+     ],
+     "padrao": "empunhadura_reta",
+     "descricao": "trilho curto de baixo",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "smg_ciclone_9mm_tan",
+     "posicao_m": [
+      0.017,
+      0.08,
+      -0.258
+     ],
+     "aceita": [
+      "lanterna_compacta",
+      "lanterna_fuzil"
+     ],
+     "descricao": "lado direito do guarda-mão",
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "smg_ciclone_9mm_tan",
+     "posicao_m": [
+      -0.017,
+      0.08,
+      -0.258
+     ],
+     "aceita": [
+      "modulo_laser",
+      "modulo_laser_tan",
+      "laser_fuzil"
+     ],
+     "descricao": "lado esquerdo da frente",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_bandoleira",
+     "tipo": "bandoleira",
+     "pai": "smg_ciclone_9mm_tan",
+     "posicao_m": [
+      -0.0205,
+      0.074,
+      0.042
+     ],
+     "aceita": [
+      "bandoleira"
+     ],
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "ombro",
+     "tipo": "efeito",
+     "pai": "coronha",
+     "posicao_m": [
+      -0.0,
+      0.05,
+      0.289
+     ],
+     "descricao": "ponto da soleira que encosta no ombro"
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "smg_ciclone_9mm_tan",
+     "posicao_m": [
+      0.0,
+      0.08,
+      -0.354
+     ],
+     "descricao": "clarão de boca e origem do disparo (-Z)"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "smg_ciclone_9mm_tan",
+     "posicao_m": [
+      0.0185,
+      0.084,
+      -0.178
+     ],
+     "descricao": "onde nasce o estojo (sai para a direita)"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "smg_ciclone_9mm_tan",
+     "posicao_m": [
+      -0.0,
+      0.127,
+      0.036
+     ],
+     "descricao": "centro do furo da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z)"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.055,
+     "laco": false,
+     "descricao": "um tiro (repita a 18 por segundo no automático): ferrolho recua 40 mm; o coice vai reto para trás e quase não levanta"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.06,
+     "laco": false,
+     "descricao": "último tiro: o ferrolho fica aberto atrás"
+    },
+    "recarregar": {
+     "duracao_s": 2.0,
+     "laco": false,
+     "descricao": "aperta o retém atrás do poço, o carregador cai (0,5 s) e o novo entra (1,6 s); troque o nó entre 0,5 e 1,25 s"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 2.5,
+     "laco": false,
+     "descricao": "igual à recarga e no fim puxa a alavanca da esquerda para soltar o ferrolho"
+    },
+    "trocar_modo": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "trava -> semi -> rajada -> automático"
+    },
+    "dobrar_coronha": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "dobra a coronha para a direita (aperte o botão da dobradiça)"
+    },
+    "abrir_coronha": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "abre a coronha"
+    },
+    "inspecionar": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "puxa a alavanca até ver o cartucho pela janela, solta e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
   }
  ],
  "acessorios": [
@@ -9294,6 +10110,79 @@
    ],
    "triangulos": 21556,
    "kb": 1227.7
+  },
+  {
+   "id": "carregador_ciclone_17",
+   "nome": "Carregador da Ciclone (17)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_ciclone",
+   "capacidade": 17,
+   "municao": "municao_9mm",
+   "peso_kg": 0.09,
+   "raridade": "incomum",
+   "valor_troca": 8,
+   "modificadores": {
+    "recarga_s": 0.95
+   },
+   "descricao": "Carregador curto de pistola: some dentro do poço, a arma fica baixa.",
+   "arquivo": "acessorios/carregador_ciclone_17.glb",
+   "tamanho_m": [
+    0.026,
+    0.115,
+    0.07
+   ],
+   "triangulos": 1480,
+   "kb": 73.6
+  },
+  {
+   "id": "carregador_ciclone_30",
+   "nome": "Carregador da Ciclone (30)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_ciclone",
+   "capacidade": 30,
+   "municao": "municao_9mm",
+   "peso_kg": 0.14,
+   "raridade": "incomum",
+   "valor_troca": 12,
+   "descricao": "Carregador longo de 30. Vem na arma.",
+   "arquivo": "acessorios/carregador_ciclone_30.glb",
+   "tamanho_m": [
+    0.026,
+    0.176,
+    0.09
+   ],
+   "triangulos": 1672,
+   "kb": 82.7
+  },
+  {
+   "id": "tambor_ciclone_50",
+   "nome": "Tambor da Ciclone (50)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_ciclone",
+   "capacidade": 50,
+   "municao": "municao_9mm",
+   "peso_kg": 0.55,
+   "raridade": "muito raro",
+   "valor_troca": 45,
+   "modificadores": {
+    "recarga_s": 1.25,
+    "tempo_mirar": 1.08
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Tambor de 50 tiros com botão de corda do lado e janelinha de contagem. Pesa e demora para trocar, mas segura uma horda.",
+   "arquivo": "acessorios/tambor_ciclone_50.glb",
+   "tamanho_m": [
+    0.092,
+    0.195,
+    0.089
+   ],
+   "triangulos": 2116,
+   "kb": 109.0
   }
  ],
  "municao": [

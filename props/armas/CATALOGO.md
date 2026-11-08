@@ -21,6 +21,8 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Pistola Sentinela 9 mm (areia) (`pistola_9mm_tan`) | 9 mm | 15 | 34 | 25 m | 4,0/s | 60 m | 600 | 0,78 kg | mira, ponte, boca, trilho, carregador | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Pistola Sentinela 9 mm (verde-oliva) (`pistola_9mm_verde`) | 9 mm | 15 | 34 | 25 m | 4,0/s | 60 m | 600 | 0,78 kg | mira, ponte, boca, trilho, carregador | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Pistola Sentinela 9 mm (cinza) (`pistola_9mm_cinza`) | 9 mm | 15 | 34 | 25 m | 4,0/s | 60 m | 600 | 0,78 kg | mira, ponte, boca, trilho, carregador | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
+| Submetralhadora Ciclone 9 mm (`smg_ciclone_9mm`) | 9 mm | 30 | 28 | 40 m | 18/s | 120 m | 6000 | 2,7 kg | mira, alca, massa, boca, carregador, empunhadura, lanterna, laser, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, dobrar_coronha, abrir_coronha, inspecionar, ocioso |
+| Submetralhadora Ciclone 9 mm (areia) (`smg_ciclone_9mm_tan`) | 9 mm | 30 | 28 | 40 m | 18/s | 120 m | 6000 | 2,7 kg | mira, alca, massa, boca, carregador, empunhadura, lanterna, laser, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, dobrar_coronha, abrir_coronha, inspecionar, ocioso |
 
 ## Acessórios
 
@@ -141,6 +143,9 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Punho emborrachado com cavas (caramelo) (`punho_cavas_tan`) | Punhos | `punho_ar` | recuo ×0,95, estabilidade_mirando ×1,1 | 0,09 kg | incomum | 15960 |
 | Punho reto de polímero (`punho_reto`) | Punhos | `punho_ar` | tempo_mirar ×0,95 | 0,06 kg | incomum | 21556 |
 | Punho reto de polímero (caramelo) (`punho_reto_tan`) | Punhos | `punho_ar` | tempo_mirar ×0,95 | 0,06 kg | incomum | 21556 |
+| Carregador da Ciclone (17) (`carregador_ciclone_17`) | Carregadores | `carregador_ciclone` | recarga_s ×0,95 | 0,09 kg | incomum | 1480 |
+| Carregador da Ciclone (30) (`carregador_ciclone_30`) | Carregadores | `carregador_ciclone` | - | 0,14 kg | incomum | 1672 |
+| Tambor da Ciclone (50) (`tambor_ciclone_50`) | Carregadores | `carregador_ciclone` | recarga_s ×1,25, tempo_mirar ×1,08 | 0,55 kg | muito raro | 2116 |
 
 ## Munição e efeitos
 
@@ -282,3 +287,21 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Pistola Sentinela 9 mm (cinza)**, `encaixe_boca`: protetor_rosca_9mm, supressor_9mm, supressor_9mm_tan, supressor_9mm_verde, supressor_9mm_cinza, compensador_9mm, supressor_garrafa
 - **Pistola Sentinela 9 mm (cinza)**, `encaixe_trilho`: lanterna_pistola, laser_pistola, combo_lanterna_laser
 - **Pistola Sentinela 9 mm (cinza)**, `encaixe_carregador`: carregador_9mm, carregador_9mm_estendido
+- **Submetralhadora Ciclone 9 mm**, `encaixe_mira`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo, luneta_1_6
+- **Submetralhadora Ciclone 9 mm**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
+- **Submetralhadora Ciclone 9 mm**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
+- **Submetralhadora Ciclone 9 mm**, `encaixe_boca`: protetor_rosca_9mm, supressor_9mm, supressor_9mm_tan, supressor_9mm_verde, supressor_9mm_cinza, compensador_9mm, supressor_garrafa
+- **Submetralhadora Ciclone 9 mm**, `encaixe_carregador`: carregador_ciclone_30, carregador_ciclone_17, tambor_ciclone_50
+- **Submetralhadora Ciclone 9 mm**, `encaixe_empunhadura`: empunhadura_reta, empunhadura_reta_tan, empunhadura_curta, empunhadura_curta_tan, empunhadura_dobravel, empunhadura_vertical, batente_mao
+- **Submetralhadora Ciclone 9 mm**, `encaixe_lanterna`: lanterna_compacta, lanterna_fuzil
+- **Submetralhadora Ciclone 9 mm**, `encaixe_laser`: modulo_laser, modulo_laser_tan, laser_fuzil
+- **Submetralhadora Ciclone 9 mm**, `encaixe_bandoleira`: bandoleira
+- **Submetralhadora Ciclone 9 mm (areia)**, `encaixe_mira`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo, luneta_1_6
+- **Submetralhadora Ciclone 9 mm (areia)**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
+- **Submetralhadora Ciclone 9 mm (areia)**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
+- **Submetralhadora Ciclone 9 mm (areia)**, `encaixe_boca`: protetor_rosca_9mm, supressor_9mm, supressor_9mm_tan, supressor_9mm_verde, supressor_9mm_cinza, compensador_9mm, supressor_garrafa
+- **Submetralhadora Ciclone 9 mm (areia)**, `encaixe_carregador`: carregador_ciclone_30, carregador_ciclone_17, tambor_ciclone_50
+- **Submetralhadora Ciclone 9 mm (areia)**, `encaixe_empunhadura`: empunhadura_reta, empunhadura_reta_tan, empunhadura_curta, empunhadura_curta_tan, empunhadura_dobravel, empunhadura_vertical, batente_mao
+- **Submetralhadora Ciclone 9 mm (areia)**, `encaixe_lanterna`: lanterna_compacta, lanterna_fuzil
+- **Submetralhadora Ciclone 9 mm (areia)**, `encaixe_laser`: modulo_laser, modulo_laser_tan, laser_fuzil
+- **Submetralhadora Ciclone 9 mm (areia)**, `encaixe_bandoleira`: bandoleira

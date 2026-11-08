@@ -9717,6 +9717,117 @@
      "descricao": "respiração leve parado"
     }
    }
+  },
+  {
+   "id": "faca_combate",
+   "nome": "Faca de combate",
+   "grupo": "armas",
+   "categoria": "faca",
+   "classe": "corpo_a_corpo",
+   "calibre": "lâmina",
+   "capacidade": "-",
+   "dano": 45,
+   "dano_estocada": 60,
+   "alcance_m": 0.6,
+   "tiros_por_s": 1.8,
+   "precisao": 1.0,
+   "ruido_m": 1,
+   "durabilidade": 3000,
+   "peso_kg": 0.32,
+   "raridade": "incomum",
+   "valor_troca": 30,
+   "prende_no_alvo": 0.15,
+   "onde": [
+    "quartel",
+    "casa_de_campo",
+    "delegacia",
+    "armazem",
+    "loja_caca"
+   ],
+   "descricao": "Lâmina de 18 cm de aço escurecido com ponta recortada, fio liso e serrilha perto do cabo para cortar corda. Cabo de borracha com cavas e pomo com quebra-vidro. Não faz barulho e não gasta munição, mas é preciso chegar muito perto.",
+   "arquivo": "armas/faca_combate.glb",
+   "tamanho_m": [
+    0.026,
+    0.054,
+    0.325
+   ],
+   "triangulos": 24284,
+   "kb": 1434.1,
+   "encaixes": [
+    {
+     "no": "cinto",
+     "tipo": "bainha_faca",
+     "pai": "faca_combate",
+     "posicao_m": [
+      -0.0105,
+      0.003,
+      -0.125
+     ],
+     "aceita": [
+      "bainha_cinto_faca"
+     ],
+     "descricao": "a faca entra na bainha pelo pivô (a bainha tem o encaixe \"arma\")"
+    },
+    {
+     "no": "ponta",
+     "tipo": "efeito",
+     "pai": "faca_combate",
+     "posicao_m": [
+      0.0,
+      0.0042,
+      -0.243
+     ],
+     "descricao": "ponta da lâmina (teste de acerto da estocada)"
+    },
+    {
+     "no": "fio_meio",
+     "tipo": "efeito",
+     "pai": "faca_combate",
+     "posicao_m": [
+      0.0,
+      -0.016,
+      -0.155
+     ],
+     "descricao": "meio do fio (teste de acerto do golpe de corte)"
+    }
+   ],
+   "animacoes": {
+    "golpear": {
+     "duracao_s": 0.55,
+     "laco": false,
+     "descricao": "corte de lado (da direita para a esquerda): o acerto vale entre 0,15 e 0,3 s, use o encaixe fio_meio"
+    },
+    "estocar": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "estocada para a frente (mais dano em zumbi, mas a faca pode prender: acerto entre 0,18 e 0,3 s no encaixe ponta)"
+    },
+    "golpe_baixo": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "golpe de cima para baixo (na cabeça de zumbi caído)"
+    },
+    "sacar": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "tira da bainha na cintura e traz para a frente"
+    },
+    "guardar": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "volta para a bainha"
+    },
+    "inspecionar": {
+     "duracao_s": 2.2,
+     "laco": false,
+     "descricao": "gira a faca na mão olhando os dois lados da lâmina"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
   }
  ],
  "acessorios": [
@@ -14766,6 +14877,46 @@
    ],
    "triangulos": 5056,
    "kb": 239.8
+  },
+  {
+   "id": "bainha_cinto_faca",
+   "nome": "Bainha de cinto (faca de combate)",
+   "grupo": "acessorios",
+   "categoria": "bainha",
+   "encaixe": "bainha_faca",
+   "peso_kg": 0.14,
+   "raridade": "comum",
+   "valor_troca": 8,
+   "modificadores": {
+    "sacar_s": 0.85
+   },
+   "onde": [
+    "quartel",
+    "casa_de_campo",
+    "armazem"
+   ],
+   "descricao": "Bainha rígida moldada com ilhoses, furo de dreno na ponta, passador de cinto e tira com botão de pressão por cima do cabo.",
+   "arquivo": "acessorios/bainha_cinto_faca.glb",
+   "tamanho_m": [
+    0.032,
+    0.077,
+    0.217
+   ],
+   "triangulos": 10892,
+   "kb": 579.1,
+   "encaixes": [
+    {
+     "no": "arma",
+     "tipo": "efeito",
+     "pai": "bainha_cinto_faca",
+     "posicao_m": [
+      0.0105,
+      -0.003,
+      0.125
+     ],
+     "descricao": "ponha a faca aqui (pivô da faca) para guardá-la na bainha"
+    }
+   ]
   }
  ],
  "municao": [

@@ -1,0 +1,6294 @@
+{
+ "grid": {
+  "module_width": 2.0,
+  "floor_height": 3.2,
+  "wall_thickness": 0.3,
+  "slab": 0.25,
+  "floor_raise": 0.3,
+  "hall": {
+   "x": [
+    -10.0,
+    10.0
+   ],
+   "z": [
+    -10.0,
+    6.0
+   ],
+   "valley": 5.7,
+   "ridge": 7.7,
+   "teeth_z": [
+    -10.0,
+    -6.0,
+    -2.0,
+    2.0
+   ]
+  },
+  "office": {
+   "x": [
+    -10.0,
+    0.0
+   ],
+   "z": [
+    6.0,
+    14.0
+   ],
+   "floors": 3,
+   "roof_level": 9.900000000000002
+  },
+  "stair_holes": {
+   "1": [
+    [
+     -9.7,
+     7.939999999999999,
+     -8.6,
+     11.2
+    ]
+   ],
+   "2": [
+    [
+     -8.3,
+     9.439999999999998,
+     -7.2,
+     12.7
+    ]
+   ]
+  },
+  "roof": "sawtooth steel roof with vertical north-light glazing over the hall; flat membrane roof behind a parapet over the office",
+  "textures": "PBR (albedo + normal + ORM), 2 m tiles, UV in metres / 2"
+ },
+ "placements": [
+  {
+   "piece": "h_back_window",
+   "pos": [
+    -9,
+    0.3,
+    -10.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_back_window",
+   "pos": [
+    -7,
+    0.3,
+    -10.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_back_window",
+   "pos": [
+    -5,
+    0.3,
+    -10.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_back_window",
+   "pos": [
+    -3,
+    0.3,
+    -10.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_back_window",
+   "pos": [
+    -1,
+    0.3,
+    -10.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_back_window",
+   "pos": [
+    1,
+    0.3,
+    -10.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_back_window",
+   "pos": [
+    3,
+    0.3,
+    -10.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_back_door",
+   "pos": [
+    5,
+    0.3,
+    -10.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_back_window",
+   "pos": [
+    7,
+    0.3,
+    -10.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_back_window",
+   "pos": [
+    9,
+    0.3,
+    -10.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_front_window",
+   "pos": [
+    1,
+    0.3,
+    6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_front_window",
+   "pos": [
+    7,
+    0.3,
+    6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_front_window",
+   "pos": [
+    9,
+    0.3,
+    6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_front_gate",
+   "pos": [
+    4,
+    0.3,
+    6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_side_window_r0",
+   "pos": [
+    10.0,
+    0.3,
+    -9
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_side_window_l0",
+   "pos": [
+    -10.0,
+    0.3,
+    -9
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_side_window_r1",
+   "pos": [
+    10.0,
+    0.3,
+    -7
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_side_window_l1",
+   "pos": [
+    -10.0,
+    0.3,
+    -7
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_side_window_r0",
+   "pos": [
+    10.0,
+    0.3,
+    -5
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_side_door_l0",
+   "pos": [
+    -10.0,
+    0.3,
+    -5
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_side_window_r1",
+   "pos": [
+    10.0,
+    0.3,
+    -3
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_side_window_l1",
+   "pos": [
+    -10.0,
+    0.3,
+    -3
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_side_door_r0",
+   "pos": [
+    10.0,
+    0.3,
+    -1
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_side_window_l0",
+   "pos": [
+    -10.0,
+    0.3,
+    -1
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_side_window_r1",
+   "pos": [
+    10.0,
+    0.3,
+    1
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_side_window_l1",
+   "pos": [
+    -10.0,
+    0.3,
+    1
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_side_window_r0",
+   "pos": [
+    10.0,
+    0.3,
+    3
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_side_window_l0",
+   "pos": [
+    -10.0,
+    0.3,
+    3
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_side_window_r1",
+   "pos": [
+    10.0,
+    0.3,
+    5
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_side_window_l1",
+   "pos": [
+    -10.0,
+    0.3,
+    5
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_pier_low",
+   "pos": [
+    10.0,
+    0.3,
+    -10.0
+   ],
+   "rotY": 90,
+   "tags": [
+    "back",
+    "right",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_pier_low",
+   "pos": [
+    -10.0,
+    0.3,
+    -10.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "left",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "h_pier_high",
+   "pos": [
+    10.0,
+    0.3,
+    6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "right",
+    "ext",
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    -9,
+    0.3,
+    -10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    -7,
+    0.3,
+    -10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    -5,
+    0.3,
+    -10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    -3,
+    0.3,
+    -10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    -1,
+    0.3,
+    -10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    1,
+    0.3,
+    -10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    3,
+    0.3,
+    -10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    5,
+    0.3,
+    -10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    7,
+    0.3,
+    -10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    9,
+    0.3,
+    -10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "rafter",
+   "pos": [
+    -4,
+    0.3,
+    -10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "rafter",
+   "pos": [
+    4,
+    0.3,
+    -10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "verge_r_first",
+   "pos": [
+    0,
+    0.3,
+    -10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "verge_l_first",
+   "pos": [
+    0,
+    0.3,
+    -10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    -9,
+    0.3,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    -7,
+    0.3,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    -5,
+    0.3,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    -3,
+    0.3,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    -1,
+    0.3,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    1,
+    0.3,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    3,
+    0.3,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    5,
+    0.3,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    7,
+    0.3,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    9,
+    0.3,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "rafter",
+   "pos": [
+    -4,
+    0.3,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "rafter",
+   "pos": [
+    4,
+    0.3,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "verge_r",
+   "pos": [
+    0,
+    0.3,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "verge_l",
+   "pos": [
+    0,
+    0.3,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    -9,
+    0.3,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    -7,
+    0.3,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    -5,
+    0.3,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    -3,
+    0.3,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    -1,
+    0.3,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    1,
+    0.3,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    3,
+    0.3,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    5,
+    0.3,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    7,
+    0.3,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth",
+   "pos": [
+    9,
+    0.3,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "rafter",
+   "pos": [
+    -4,
+    0.3,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "rafter",
+   "pos": [
+    4,
+    0.3,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "verge_r",
+   "pos": [
+    0,
+    0.3,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "verge_l",
+   "pos": [
+    0,
+    0.3,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth_end",
+   "pos": [
+    -9,
+    0.3,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth_end",
+   "pos": [
+    -7,
+    0.3,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth_end",
+   "pos": [
+    -5,
+    0.3,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth_end",
+   "pos": [
+    -3,
+    0.3,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth_end",
+   "pos": [
+    -1,
+    0.3,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth_end",
+   "pos": [
+    1,
+    0.3,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth_end",
+   "pos": [
+    3,
+    0.3,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth_end",
+   "pos": [
+    5,
+    0.3,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth_end",
+   "pos": [
+    7,
+    0.3,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "roof_tooth_end",
+   "pos": [
+    9,
+    0.3,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "rafter_end",
+   "pos": [
+    -4,
+    0.3,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "rafter_end",
+   "pos": [
+    4,
+    0.3,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "verge_r_end",
+   "pos": [
+    0,
+    0.3,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "verge_l_end",
+   "pos": [
+    0,
+    0.3,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "hall"
+   ]
+  },
+  {
+   "piece": "girder",
+   "pos": [
+    0,
+    0.3,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    -4,
+    0.3,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    4,
+    0.3,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "pendant",
+   "pos": [
+    -6,
+    5.24,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "pendant",
+   "pos": [
+    -2,
+    5.24,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "pendant",
+   "pos": [
+    2,
+    5.24,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "pendant",
+   "pos": [
+    6,
+    5.24,
+    -6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "girder",
+   "pos": [
+    0,
+    0.3,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    -4,
+    0.3,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    4,
+    0.3,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "pendant",
+   "pos": [
+    -6,
+    5.24,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "pendant",
+   "pos": [
+    -2,
+    5.24,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "pendant",
+   "pos": [
+    2,
+    5.24,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "pendant",
+   "pos": [
+    6,
+    5.24,
+    -2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "girder",
+   "pos": [
+    0,
+    0.3,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    -4,
+    0.3,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    4,
+    0.3,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "pendant",
+   "pos": [
+    -6,
+    5.24,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "pendant",
+   "pos": [
+    -2,
+    5.24,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "pendant",
+   "pos": [
+    2,
+    5.24,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "pendant",
+   "pos": [
+    6,
+    5.24,
+    2.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "gate_leaf",
+   "pos": [
+    2.4,
+    0.313,
+    5.85
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "hall",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0,
+    "open": 88
+   }
+  },
+  {
+   "piece": "gate_leaf",
+   "pos": [
+    5.6,
+    0.313,
+    5.85
+   ],
+   "rotY": 180,
+   "tags": [
+    "front",
+    "ext",
+    "hall",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 180,
+    "open": 92
+   }
+  },
+  {
+   "piece": "gate_ramp",
+   "pos": [
+    4,
+    0.3,
+    6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext"
+   ]
+  },
+  {
+   "piece": "gooseneck",
+   "pos": [
+    4,
+    5.6,
+    6.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "hall"
+   ]
+  },
+  {
+   "piece": "door_leaf_side",
+   "pos": [
+    9.85,
+    0.313,
+    -0.52
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "hall",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 90,
+    "open": 175
+   }
+  },
+  {
+   "piece": "hall_steps",
+   "pos": [
+    10.0,
+    0.3,
+    -1.0
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext"
+   ]
+  },
+  {
+   "piece": "gooseneck",
+   "pos": [
+    10.0,
+    3.45,
+    -1.0
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "hall"
+   ]
+  },
+  {
+   "piece": "door_leaf_side",
+   "pos": [
+    -9.85,
+    0.313,
+    -5.48
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "hall",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": -90,
+    "open": -5
+   }
+  },
+  {
+   "piece": "hall_steps",
+   "pos": [
+    -10.0,
+    0.3,
+    -5.0
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext"
+   ]
+  },
+  {
+   "piece": "gooseneck",
+   "pos": [
+    -10.0,
+    3.45,
+    -5.0
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "hall"
+   ]
+  },
+  {
+   "piece": "door_leaf_side",
+   "pos": [
+    5.48,
+    0.313,
+    -9.85
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "ext",
+    "hall",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 180,
+    "open": 265
+   }
+  },
+  {
+   "piece": "hall_steps",
+   "pos": [
+    5.0,
+    0.3,
+    -10.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "ext"
+   ]
+  },
+  {
+   "piece": "gooseneck",
+   "pos": [
+    5.0,
+    3.45,
+    -10.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "ext",
+    "hall"
+   ]
+  },
+  {
+   "piece": "o_g_window",
+   "pos": [
+    -9,
+    0.3,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_u1_window",
+   "pos": [
+    -9,
+    3.5,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_u2_window",
+   "pos": [
+    -9,
+    6.7,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_parapet",
+   "pos": [
+    -9,
+    9.9,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_g_plain",
+   "pos": [
+    -9,
+    0.3,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_u1_plain",
+   "pos": [
+    -9,
+    3.5,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_u2_plain",
+   "pos": [
+    -9,
+    6.7,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_parapet",
+   "pos": [
+    -9,
+    9.9,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_g_window",
+   "pos": [
+    -7,
+    0.3,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_u1_window",
+   "pos": [
+    -7,
+    3.5,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_u2_window",
+   "pos": [
+    -7,
+    6.7,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_parapet",
+   "pos": [
+    -7,
+    9.9,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_g_plain",
+   "pos": [
+    -7,
+    0.3,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_u1_plain",
+   "pos": [
+    -7,
+    3.5,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_u2_plain",
+   "pos": [
+    -7,
+    6.7,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_parapet",
+   "pos": [
+    -7,
+    9.9,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_g_door",
+   "pos": [
+    -5,
+    0.3,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_u1_window",
+   "pos": [
+    -5,
+    3.5,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_u2_window",
+   "pos": [
+    -5,
+    6.7,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_parapet",
+   "pos": [
+    -5,
+    9.9,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_g_plain",
+   "pos": [
+    -5,
+    0.3,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_u1_window",
+   "pos": [
+    -5,
+    3.5,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_u2_plain",
+   "pos": [
+    -5,
+    6.7,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_parapet",
+   "pos": [
+    -5,
+    9.9,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_g_window",
+   "pos": [
+    -3,
+    0.3,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_u1_window",
+   "pos": [
+    -3,
+    3.5,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_u2_window",
+   "pos": [
+    -3,
+    6.7,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_parapet",
+   "pos": [
+    -3,
+    9.9,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_g_door_in",
+   "pos": [
+    -3,
+    0.3,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_u1_window",
+   "pos": [
+    -3,
+    3.5,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_u2_plain",
+   "pos": [
+    -3,
+    6.7,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_parapet",
+   "pos": [
+    -3,
+    9.9,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_g_window",
+   "pos": [
+    -1,
+    0.3,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_u1_window",
+   "pos": [
+    -1,
+    3.5,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_u2_window",
+   "pos": [
+    -1,
+    6.7,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_parapet",
+   "pos": [
+    -1,
+    9.9,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_g_plain",
+   "pos": [
+    -1,
+    0.3,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_u1_window",
+   "pos": [
+    -1,
+    3.5,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_u2_plain",
+   "pos": [
+    -1,
+    6.7,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_parapet",
+   "pos": [
+    -1,
+    9.9,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_g_window",
+   "pos": [
+    -10.0,
+    0.3,
+    7
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_u1_window",
+   "pos": [
+    -10.0,
+    3.5,
+    7
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_u2_window",
+   "pos": [
+    -10.0,
+    6.7,
+    7
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_parapet",
+   "pos": [
+    -10.0,
+    9.9,
+    7
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_g_window",
+   "pos": [
+    0.0,
+    0.3,
+    7
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_u1_window",
+   "pos": [
+    0.0,
+    3.5,
+    7
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_u2_window",
+   "pos": [
+    0.0,
+    6.7,
+    7
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_parapet",
+   "pos": [
+    0.0,
+    9.9,
+    7
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_g_window",
+   "pos": [
+    -10.0,
+    0.3,
+    9
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_u1_window",
+   "pos": [
+    -10.0,
+    3.5,
+    9
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_u2_window",
+   "pos": [
+    -10.0,
+    6.7,
+    9
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_parapet",
+   "pos": [
+    -10.0,
+    9.9,
+    9
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_g_window",
+   "pos": [
+    0.0,
+    0.3,
+    9
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_u1_window",
+   "pos": [
+    0.0,
+    3.5,
+    9
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_u2_window",
+   "pos": [
+    0.0,
+    6.7,
+    9
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_parapet",
+   "pos": [
+    0.0,
+    9.9,
+    9
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_g_window",
+   "pos": [
+    -10.0,
+    0.3,
+    11
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_u1_window",
+   "pos": [
+    -10.0,
+    3.5,
+    11
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_u2_window",
+   "pos": [
+    -10.0,
+    6.7,
+    11
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_parapet",
+   "pos": [
+    -10.0,
+    9.9,
+    11
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_g_window",
+   "pos": [
+    0.0,
+    0.3,
+    11
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_u1_window",
+   "pos": [
+    0.0,
+    3.5,
+    11
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_u2_window",
+   "pos": [
+    0.0,
+    6.7,
+    11
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_parapet",
+   "pos": [
+    0.0,
+    9.9,
+    11
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_g_window",
+   "pos": [
+    -10.0,
+    0.3,
+    13
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_u1_window",
+   "pos": [
+    -10.0,
+    3.5,
+    13
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_u2_window",
+   "pos": [
+    -10.0,
+    6.7,
+    13
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "ext",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_parapet",
+   "pos": [
+    -10.0,
+    9.9,
+    13
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_g_window",
+   "pos": [
+    0.0,
+    0.3,
+    13
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_u1_window",
+   "pos": [
+    0.0,
+    3.5,
+    13
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_u2_window",
+   "pos": [
+    0.0,
+    6.7,
+    13
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "ext",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_parapet",
+   "pos": [
+    0.0,
+    9.9,
+    13
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_corner_g",
+   "pos": [
+    0.0,
+    0.3,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "right",
+    "ext",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_corner_u1",
+   "pos": [
+    0.0,
+    3.5,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "right",
+    "ext",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_corner_u2",
+   "pos": [
+    0.0,
+    6.7,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "right",
+    "ext",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_corner_p",
+   "pos": [
+    0.0,
+    9.9,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "right",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_corner_g",
+   "pos": [
+    -10.0,
+    0.3,
+    14.0
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "front",
+    "ext",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_corner_u1",
+   "pos": [
+    -10.0,
+    3.5,
+    14.0
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "front",
+    "ext",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_corner_u2",
+   "pos": [
+    -10.0,
+    6.7,
+    14.0
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "front",
+    "ext",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_corner_p",
+   "pos": [
+    -10.0,
+    9.9,
+    14.0
+   ],
+   "rotY": -90,
+   "tags": [
+    "left",
+    "front",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_corner_back_g",
+   "pos": [
+    -10.0,
+    0.3,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "left",
+    "ext",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_corner_back_u1",
+   "pos": [
+    -10.0,
+    3.5,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "left",
+    "ext",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_corner_back_u2",
+   "pos": [
+    -10.0,
+    6.7,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "left",
+    "ext",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_corner_back_p",
+   "pos": [
+    -10.0,
+    9.9,
+    6.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "back",
+    "left",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "o_corner_back_g",
+   "pos": [
+    0.0,
+    0.3,
+    6.0
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "back",
+    "ext",
+    "office",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "o_corner_back_u1",
+   "pos": [
+    0.0,
+    3.5,
+    6.0
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "back",
+    "ext",
+    "office",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "o_corner_back_u2",
+   "pos": [
+    0.0,
+    6.7,
+    6.0
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "back",
+    "ext",
+    "office",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "o_corner_back_p",
+   "pos": [
+    0.0,
+    9.9,
+    6.0
+   ],
+   "rotY": 90,
+   "tags": [
+    "right",
+    "back",
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "door_leaf_front",
+   "pos": [
+    -5.47,
+    0.313,
+    13.85
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "office",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0,
+    "open": 85
+   }
+  },
+  {
+   "piece": "o_steps",
+   "pos": [
+    -5,
+    0.3,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext"
+   ]
+  },
+  {
+   "piece": "wall_lantern",
+   "pos": [
+    -5.95,
+    2.3,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "office"
+   ]
+  },
+  {
+   "piece": "wall_lantern",
+   "pos": [
+    -4.05,
+    2.3,
+    14.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "front",
+    "ext",
+    "office"
+   ]
+  },
+  {
+   "piece": "door_leaf_hall",
+   "pos": [
+    -2.53,
+    0.313,
+    6.15
+   ],
+   "rotY": 180,
+   "tags": [
+    "office",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 180,
+    "open": 265
+   }
+  },
+  {
+   "piece": "water_tank",
+   "pos": [
+    -3.0,
+    9.9,
+    9.5
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "vent",
+   "pos": [
+    -8.0,
+    9.9,
+    8.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "vent",
+   "pos": [
+    -6.5,
+    9.9,
+    12.6
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "roof_drain",
+   "pos": [
+    -8.8,
+    9.9,
+    12.8
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "roof_drain",
+   "pos": [
+    -1.2,
+    9.9,
+    7.2
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e1010",
+   "pos": [
+    -9,
+    0.3,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e1000",
+   "pos": [
+    -9,
+    0.3,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e1000",
+   "pos": [
+    -9,
+    0.3,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e1000",
+   "pos": [
+    -9,
+    0.3,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e1000",
+   "pos": [
+    -9,
+    0.3,
+    -1
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e1000",
+   "pos": [
+    -9,
+    0.3,
+    1
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e1000",
+   "pos": [
+    -9,
+    0.3,
+    3
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e1000",
+   "pos": [
+    -9,
+    0.3,
+    5
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e0010",
+   "pos": [
+    -7,
+    0.3,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -7,
+    0.3,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -7,
+    0.3,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -7,
+    0.3,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -7,
+    0.3,
+    -1
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -7,
+    0.3,
+    1
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -7,
+    0.3,
+    3
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -7,
+    0.3,
+    5
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e0010",
+   "pos": [
+    -5,
+    0.3,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -5,
+    0.3,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -5,
+    0.3,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -5,
+    0.3,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -5,
+    0.3,
+    -1
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -5,
+    0.3,
+    1
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -5,
+    0.3,
+    3
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -5,
+    0.3,
+    5
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e0010",
+   "pos": [
+    -3,
+    0.3,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -3,
+    0.3,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -3,
+    0.3,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -3,
+    0.3,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -3,
+    0.3,
+    -1
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -3,
+    0.3,
+    1
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -3,
+    0.3,
+    3
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -3,
+    0.3,
+    5
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e0010",
+   "pos": [
+    -1,
+    0.3,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -1,
+    0.3,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -1,
+    0.3,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -1,
+    0.3,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -1,
+    0.3,
+    -1
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -1,
+    0.3,
+    1
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -1,
+    0.3,
+    3
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    -1,
+    0.3,
+    5
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e0010",
+   "pos": [
+    1,
+    0.3,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    1,
+    0.3,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    1,
+    0.3,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    1,
+    0.3,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    1,
+    0.3,
+    -1
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    1,
+    0.3,
+    1
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    1,
+    0.3,
+    3
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e0001",
+   "pos": [
+    1,
+    0.3,
+    5
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e0010",
+   "pos": [
+    3,
+    0.3,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    3,
+    0.3,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    3,
+    0.3,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    3,
+    0.3,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    3,
+    0.3,
+    -1
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    3,
+    0.3,
+    1
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    3,
+    0.3,
+    3
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e0001",
+   "pos": [
+    3,
+    0.3,
+    5
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e0010",
+   "pos": [
+    5,
+    0.3,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    5,
+    0.3,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    5,
+    0.3,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    5,
+    0.3,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    5,
+    0.3,
+    -1
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    5,
+    0.3,
+    1
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    5,
+    0.3,
+    3
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e0001",
+   "pos": [
+    5,
+    0.3,
+    5
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e0010",
+   "pos": [
+    7,
+    0.3,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    7,
+    0.3,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    7,
+    0.3,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    7,
+    0.3,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    7,
+    0.3,
+    -1
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    7,
+    0.3,
+    1
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g",
+   "pos": [
+    7,
+    0.3,
+    3
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e0001",
+   "pos": [
+    7,
+    0.3,
+    5
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e0110",
+   "pos": [
+    9,
+    0.3,
+    -9
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e0100",
+   "pos": [
+    9,
+    0.3,
+    -7
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e0100",
+   "pos": [
+    9,
+    0.3,
+    -5
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e0100",
+   "pos": [
+    9,
+    0.3,
+    -3
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e0100",
+   "pos": [
+    9,
+    0.3,
+    -1
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e0100",
+   "pos": [
+    9,
+    0.3,
+    1
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e0100",
+   "pos": [
+    9,
+    0.3,
+    3
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_hall_g_e0101",
+   "pos": [
+    9,
+    0.3,
+    5
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "floor_marble_g_e1010",
+   "pos": [
+    -9,
+    0.3,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_marble_g_e1000",
+   "pos": [
+    -9,
+    0.3,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_marble_g_e1000",
+   "pos": [
+    -9,
+    0.3,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_marble_g_e1001",
+   "pos": [
+    -9,
+    0.3,
+    13
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_marble_g_e0010",
+   "pos": [
+    -7,
+    0.3,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_marble_g",
+   "pos": [
+    -7,
+    0.3,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_marble_g",
+   "pos": [
+    -7,
+    0.3,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_marble_g_e0001",
+   "pos": [
+    -7,
+    0.3,
+    13
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_g_e0010",
+   "pos": [
+    -5,
+    0.3,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_g",
+   "pos": [
+    -5,
+    0.3,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_marble_g",
+   "pos": [
+    -5,
+    0.3,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_marble_g_e0001",
+   "pos": [
+    -5,
+    0.3,
+    13
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_g_e0010",
+   "pos": [
+    -3,
+    0.3,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_g",
+   "pos": [
+    -3,
+    0.3,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_marble_g",
+   "pos": [
+    -3,
+    0.3,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_marble_g_e0001",
+   "pos": [
+    -3,
+    0.3,
+    13
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_g_e0110",
+   "pos": [
+    -1,
+    0.3,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_g_e0100",
+   "pos": [
+    -1,
+    0.3,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_marble_g_e0100",
+   "pos": [
+    -1,
+    0.3,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_marble_g_e0101",
+   "pos": [
+    -1,
+    0.3,
+    13
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e1010",
+   "pos": [
+    -9,
+    3.5,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e1000",
+   "pos": [
+    -9,
+    3.5,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e1000_h2",
+   "pos": [
+    -9,
+    3.5,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e1001",
+   "pos": [
+    -9,
+    3.5,
+    13
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e0010",
+   "pos": [
+    -7,
+    3.5,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u",
+   "pos": [
+    -7,
+    3.5,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u",
+   "pos": [
+    -7,
+    3.5,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e0001",
+   "pos": [
+    -7,
+    3.5,
+    13
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e0010",
+   "pos": [
+    -5,
+    3.5,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u",
+   "pos": [
+    -5,
+    3.5,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u",
+   "pos": [
+    -5,
+    3.5,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e0001",
+   "pos": [
+    -5,
+    3.5,
+    13
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e0010",
+   "pos": [
+    -3,
+    3.5,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u",
+   "pos": [
+    -3,
+    3.5,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u",
+   "pos": [
+    -3,
+    3.5,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e0001",
+   "pos": [
+    -3,
+    3.5,
+    13
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e0110",
+   "pos": [
+    -1,
+    3.5,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e0100",
+   "pos": [
+    -1,
+    3.5,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e0100",
+   "pos": [
+    -1,
+    3.5,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e0101",
+   "pos": [
+    -1,
+    3.5,
+    13
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e1010_h2",
+   "pos": [
+    -9,
+    6.7,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e1000_h3",
+   "pos": [
+    -9,
+    6.7,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e1000_h4",
+   "pos": [
+    -9,
+    6.7,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e1001_h2",
+   "pos": [
+    -9,
+    6.7,
+    13
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e0010",
+   "pos": [
+    -7,
+    6.7,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_h2",
+   "pos": [
+    -7,
+    6.7,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_h3",
+   "pos": [
+    -7,
+    6.7,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e0001_h2",
+   "pos": [
+    -7,
+    6.7,
+    13
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e0010",
+   "pos": [
+    -5,
+    6.7,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u",
+   "pos": [
+    -5,
+    6.7,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u",
+   "pos": [
+    -5,
+    6.7,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e0001",
+   "pos": [
+    -5,
+    6.7,
+    13
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e0010",
+   "pos": [
+    -3,
+    6.7,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u",
+   "pos": [
+    -3,
+    6.7,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u",
+   "pos": [
+    -3,
+    6.7,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e0001",
+   "pos": [
+    -3,
+    6.7,
+    13
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e0110",
+   "pos": [
+    -1,
+    6.7,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e0100",
+   "pos": [
+    -1,
+    6.7,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e0100",
+   "pos": [
+    -1,
+    6.7,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_floor_u_e0101",
+   "pos": [
+    -1,
+    6.7,
+    13
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_membrane_r_e1010",
+   "pos": [
+    -9,
+    9.9,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_membrane_r_e1000",
+   "pos": [
+    -9,
+    9.9,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_membrane_r_e1000",
+   "pos": [
+    -9,
+    9.9,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_membrane_r_e1001",
+   "pos": [
+    -9,
+    9.9,
+    13
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_membrane_r_e0010",
+   "pos": [
+    -7,
+    9.9,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_membrane_r",
+   "pos": [
+    -7,
+    9.9,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_membrane_r",
+   "pos": [
+    -7,
+    9.9,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_membrane_r_e0001",
+   "pos": [
+    -7,
+    9.9,
+    13
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_membrane_r_e0010",
+   "pos": [
+    -5,
+    9.9,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_membrane_r",
+   "pos": [
+    -5,
+    9.9,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_membrane_r",
+   "pos": [
+    -5,
+    9.9,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_membrane_r_e0001",
+   "pos": [
+    -5,
+    9.9,
+    13
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_membrane_r_e0010",
+   "pos": [
+    -3,
+    9.9,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_membrane_r",
+   "pos": [
+    -3,
+    9.9,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_membrane_r",
+   "pos": [
+    -3,
+    9.9,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_membrane_r_e0001",
+   "pos": [
+    -3,
+    9.9,
+    13
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_membrane_r_e0110",
+   "pos": [
+    -1,
+    9.9,
+    7
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_membrane_r_e0100",
+   "pos": [
+    -1,
+    9.9,
+    9
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_membrane_r_e0100",
+   "pos": [
+    -1,
+    9.9,
+    11
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "floor_membrane_r_e0101",
+   "pos": [
+    -1,
+    9.9,
+    13
+   ],
+   "rotY": 0,
+   "tags": [
+    "roof",
+    "office"
+   ]
+  },
+  {
+   "piece": "stair",
+   "pos": [
+    -9.7,
+    0.3,
+    12.7
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "stair_both",
+   "pos": [
+    -7.2,
+    3.5,
+    7.94
+   ],
+   "rotY": 180,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "rail_326",
+   "pos": [
+    -8.45,
+    3.5,
+    11.2
+   ],
+   "rotY": 90,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "rail_116_10",
+   "pos": [
+    -9.65,
+    3.5,
+    11.2
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "rail_326",
+   "pos": [
+    -8.45,
+    6.7,
+    12.7
+   ],
+   "rotY": 90,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "rail_326",
+   "pos": [
+    -7.1,
+    6.7,
+    12.7
+   ],
+   "rotY": 90,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "rail_127_00",
+   "pos": [
+    -8.41,
+    6.7,
+    9.44
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "iw_end_doorway",
+   "pos": [
+    -6.0,
+    0.3,
+    7
+   ],
+   "rotY": 90,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "door_leaf_interior",
+   "pos": [
+    -6.0,
+    0.31,
+    6.57
+   ],
+   "rotY": -90,
+   "tags": [
+    "floor0",
+    "office",
+    "door"
+   ],
+   "door": {
+    "closed": -90,
+    "open": 0
+   }
+  },
+  {
+   "piece": "iw_plain",
+   "pos": [
+    -6.0,
+    0.3,
+    9
+   ],
+   "rotY": 90,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "iw_doorway",
+   "pos": [
+    -6.0,
+    0.3,
+    11
+   ],
+   "rotY": 90,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "door_leaf_interior",
+   "pos": [
+    -6.0,
+    0.31,
+    10.57
+   ],
+   "rotY": -90,
+   "tags": [
+    "floor0",
+    "office",
+    "door"
+   ],
+   "door": {
+    "closed": -90,
+    "open": 0
+   }
+  },
+  {
+   "piece": "iw_end_plain",
+   "pos": [
+    -6.0,
+    0.3,
+    13
+   ],
+   "rotY": -90,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "iw_plain",
+   "pos": [
+    -5,
+    0.3,
+    10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "iw_doorway",
+   "pos": [
+    -3,
+    0.3,
+    10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "door_leaf_interior",
+   "pos": [
+    -3.43,
+    0.31,
+    10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office",
+    "door"
+   ],
+   "door": {
+    "closed": 0,
+    "open": 75
+   }
+  },
+  {
+   "piece": "iw_end_plain",
+   "pos": [
+    -1,
+    0.3,
+    10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor0",
+    "office"
+   ]
+  },
+  {
+   "piece": "iw_end_doorway",
+   "pos": [
+    -6.0,
+    3.5,
+    7
+   ],
+   "rotY": 90,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "door_leaf_interior",
+   "pos": [
+    -6.0,
+    3.51,
+    6.57
+   ],
+   "rotY": -90,
+   "tags": [
+    "floor1",
+    "office",
+    "door"
+   ],
+   "door": {
+    "closed": -90,
+    "open": 0
+   }
+  },
+  {
+   "piece": "iw_plain",
+   "pos": [
+    -6.0,
+    3.5,
+    9
+   ],
+   "rotY": 90,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "iw_doorway",
+   "pos": [
+    -6.0,
+    3.5,
+    11
+   ],
+   "rotY": 90,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "door_leaf_interior",
+   "pos": [
+    -6.0,
+    3.51,
+    10.57
+   ],
+   "rotY": -90,
+   "tags": [
+    "floor1",
+    "office",
+    "door"
+   ],
+   "door": {
+    "closed": -90,
+    "open": 0
+   }
+  },
+  {
+   "piece": "iw_end_plain",
+   "pos": [
+    -6.0,
+    3.5,
+    13
+   ],
+   "rotY": -90,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "iw_plain",
+   "pos": [
+    -5,
+    3.5,
+    10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "iw_doorway",
+   "pos": [
+    -3,
+    3.5,
+    10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "door_leaf_interior",
+   "pos": [
+    -3.43,
+    3.51,
+    10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office",
+    "door"
+   ],
+   "door": {
+    "closed": 0,
+    "open": 75
+   }
+  },
+  {
+   "piece": "iw_end_plain",
+   "pos": [
+    -1,
+    3.5,
+    10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor1",
+    "office"
+   ]
+  },
+  {
+   "piece": "iw_end_doorway",
+   "pos": [
+    -6.0,
+    6.7,
+    7
+   ],
+   "rotY": 90,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "door_leaf_interior",
+   "pos": [
+    -6.0,
+    6.71,
+    6.57
+   ],
+   "rotY": -90,
+   "tags": [
+    "floor2",
+    "office",
+    "door"
+   ],
+   "door": {
+    "closed": -90,
+    "open": 0
+   }
+  },
+  {
+   "piece": "iw_plain",
+   "pos": [
+    -6.0,
+    6.7,
+    9
+   ],
+   "rotY": 90,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "iw_doorway",
+   "pos": [
+    -6.0,
+    6.7,
+    11
+   ],
+   "rotY": 90,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "door_leaf_interior",
+   "pos": [
+    -6.0,
+    6.71,
+    10.57
+   ],
+   "rotY": -90,
+   "tags": [
+    "floor2",
+    "office",
+    "door"
+   ],
+   "door": {
+    "closed": -90,
+    "open": 0
+   }
+  },
+  {
+   "piece": "iw_end_plain",
+   "pos": [
+    -6.0,
+    6.7,
+    13
+   ],
+   "rotY": -90,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "iw_plain",
+   "pos": [
+    -5,
+    6.7,
+    10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "iw_doorway",
+   "pos": [
+    -3,
+    6.7,
+    10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "door_leaf_interior",
+   "pos": [
+    -3.43,
+    6.71,
+    10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office",
+    "door"
+   ],
+   "door": {
+    "closed": 0,
+    "open": 75
+   }
+  },
+  {
+   "piece": "iw_end_plain",
+   "pos": [
+    -1,
+    6.7,
+    10.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "floor2",
+    "office"
+   ]
+  },
+  {
+   "piece": "chimney",
+   "pos": [
+    -5.5,
+    0.0,
+    -12.5
+   ],
+   "rotY": 0,
+   "tags": [
+    "back",
+    "yard"
+   ]
+  },
+  {
+   "piece": "chimney",
+   "pos": [
+    1.5,
+    0.0,
+    -12.5
+   ],
+   "rotY": 0,
+   "tags": [
+    "back",
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_wall_b",
+   "pos": [
+    14.0,
+    0.0,
+    -11
+   ],
+   "rotY": 90,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_wall_b",
+   "pos": [
+    14.0,
+    0.0,
+    -9
+   ],
+   "rotY": 90,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_wall_b",
+   "pos": [
+    14.0,
+    0.0,
+    -7
+   ],
+   "rotY": 90,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_wall_b",
+   "pos": [
+    14.0,
+    0.0,
+    -5
+   ],
+   "rotY": 90,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_wall_b",
+   "pos": [
+    14.0,
+    0.0,
+    -3
+   ],
+   "rotY": 90,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_wall_b",
+   "pos": [
+    14.0,
+    0.0,
+    -1
+   ],
+   "rotY": 90,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_wall_b",
+   "pos": [
+    14.0,
+    0.0,
+    1
+   ],
+   "rotY": 90,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_wall_b",
+   "pos": [
+    14.0,
+    0.0,
+    3
+   ],
+   "rotY": 90,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_wall_b",
+   "pos": [
+    14.0,
+    0.0,
+    5
+   ],
+   "rotY": 90,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_wall_b",
+   "pos": [
+    14.0,
+    0.0,
+    7
+   ],
+   "rotY": 90,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_wall_b",
+   "pos": [
+    14.0,
+    0.0,
+    9
+   ],
+   "rotY": 90,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_wall_b",
+   "pos": [
+    14.0,
+    0.0,
+    11
+   ],
+   "rotY": 90,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_wall_b",
+   "pos": [
+    14.0,
+    0.0,
+    13
+   ],
+   "rotY": 90,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_wall_b",
+   "pos": [
+    14.0,
+    0.0,
+    15
+   ],
+   "rotY": 90,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_pier",
+   "pos": [
+    14.0,
+    0.0,
+    -12
+   ],
+   "rotY": 0,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_pier",
+   "pos": [
+    14.0,
+    0.0,
+    -8
+   ],
+   "rotY": 0,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_pier",
+   "pos": [
+    14.0,
+    0.0,
+    -4
+   ],
+   "rotY": 0,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_pier",
+   "pos": [
+    14.0,
+    0.0,
+    0
+   ],
+   "rotY": 0,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_pier",
+   "pos": [
+    14.0,
+    0.0,
+    4
+   ],
+   "rotY": 0,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_pier",
+   "pos": [
+    14.0,
+    0.0,
+    8
+   ],
+   "rotY": 0,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_pier",
+   "pos": [
+    14.0,
+    0.0,
+    12
+   ],
+   "rotY": 0,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_pier",
+   "pos": [
+    14.0,
+    0.0,
+    16
+   ],
+   "rotY": 0,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "yard_wall",
+   "pos": [
+    7,
+    0.0,
+    16.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "yard",
+    "front"
+   ]
+  },
+  {
+   "piece": "yard_wall",
+   "pos": [
+    9,
+    0.0,
+    16.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "yard",
+    "front"
+   ]
+  },
+  {
+   "piece": "yard_wall",
+   "pos": [
+    11,
+    0.0,
+    16.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "yard",
+    "front"
+   ]
+  },
+  {
+   "piece": "yard_wall",
+   "pos": [
+    13,
+    0.0,
+    16.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "yard",
+    "front"
+   ]
+  },
+  {
+   "piece": "yard_pier",
+   "pos": [
+    2,
+    0.0,
+    16.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "yard",
+    "front"
+   ]
+  },
+  {
+   "piece": "yard_pier",
+   "pos": [
+    6,
+    0.0,
+    16.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "yard",
+    "front"
+   ]
+  },
+  {
+   "piece": "yard_pier",
+   "pos": [
+    10,
+    0.0,
+    16.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "yard",
+    "front"
+   ]
+  },
+  {
+   "piece": "yard_gate_leaf",
+   "pos": [
+    2.25,
+    0.0,
+    16.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "yard",
+    "front",
+    "door"
+   ],
+   "door": {
+    "closed": 0,
+    "open": 90
+   }
+  },
+  {
+   "piece": "yard_gate_leaf",
+   "pos": [
+    5.75,
+    0.0,
+    16.0
+   ],
+   "rotY": 180,
+   "tags": [
+    "yard",
+    "front",
+    "door"
+   ],
+   "door": {
+    "closed": 180,
+    "open": 90
+   }
+  },
+  {
+   "piece": "path_gate",
+   "pos": [
+    4.0,
+    0.0,
+    12.125
+   ],
+   "rotY": 0,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "path_office",
+   "pos": [
+    -5.0,
+    0.0,
+    17.125
+   ],
+   "rotY": 0,
+   "tags": [
+    "yard"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    4.0,
+    0,
+    9.0
+   ],
+   "rotY": 0,
+   "tags": []
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    1.0,
+    0.3,
+    0.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "hall",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    -3.0,
+    0.3,
+    12.0
+   ],
+   "rotY": 0,
+   "tags": [
+    "office",
+    "floor0"
+   ]
+  }
+ ]
+}

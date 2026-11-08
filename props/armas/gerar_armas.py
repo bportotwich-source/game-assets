@@ -46,7 +46,7 @@ METAL = {'aco_oxidado': (0.75, 0.32), 'aco_fosfatado': (0.55, 0.62), 'aco_inox':
          'aluminio_preto': (0.55, 0.38), 'latao': (0.95, 0.28), 'cobre_bala': (0.95, 0.3), 'chumbo': (0.7, 0.5), 'mola': (0.9, 0.35),
          'polimero': (0.0, 0.55), 'polimero_tan': (0.0, 0.6), 'tinta_branca': (0.0, 0.4), 'tinta_laranja': (0.0, 0.45),
          'borracha_grip': (0.0, 0.9), 'fita_cinza': (0.3, 0.5), 'borracha': (0.0, 0.85), 'plastico_branco': (0.0, 0.5)}
-TRANSP = {'lente': ((120, 160, 150), 0.35, 0.03), 'lente_laser': ((200, 30, 20), 0.6, 0.05), 'pet_garrafa': ((150, 190, 215), 0.22, 0.06)}
+TRANSP = {'lente': ((120, 160, 150), 0.35, 0.03), 'lente_clara': ((170, 205, 195), 0.1, 0.02), 'lente_laser': ((200, 30, 20), 0.6, 0.05), 'pet_garrafa': ((150, 190, 215), 0.22, 0.06)}
 EMISSIVOS = {'ponto_vermelho': (1.0, 0.05, 0.02), 'led_lanterna': (1.0, 0.97, 0.88), 'led_laser': (1.0, 0.08, 0.04),
              'clarao': (1.0, 0.62, 0.22), 'clarao_nucleo': (1.0, 0.92, 0.7)}
 
@@ -864,7 +864,7 @@ def _arte_caixa(CX, cal, linha2, linha3, cor=(150, 30, 20), marca='GUARDIÃO', t
     tp = int(tampa * PXM); vis = (tp + H) // 2                            # centro da parte do lado que a tampa nao cobre
     x, y = ATLAS['topo']
     d.rectangle([x, y, x + 120, y + P_], fill=cor)
-    texto_c(d, (x + 60, y + P_ // 2), cal.split()[0][:3], 64, (250, 240, 220), larg=110)
+    texto_c(d, (x + 60, y + P_ // 2), cal.split()[0], 64, (250, 240, 220), larg=104)
     cx = x + 120 + (L - 120) // 2
     texto_c(d, (cx, y + 80), marca, 58, cor, larg=L - 150); texto_c(d, (cx, y + 160), cal, 80, (40, 30, 26), larg=L - 150)
     texto_c(d, (cx, y + 240), linha2, 36, (40, 30, 26), larg=L - 150); texto_c(d, (cx, y + 290), linha3, 24, (90, 70, 60), False, larg=L - 150)
@@ -967,7 +967,7 @@ CAB = {
                     'ruido_m': 'raio em que os zumbis ouvem o tiro', 'durabilidade': 'tiros até precisar de reparo',
                     'modificadores': 'multiplicadores aplicados à arma pelo acessório', 'valor_troca': 'preço na troca entre comunidades'},
 }
-NOMES = {'carabina': 'Carabinas', 'bipe': 'Bipés', 'espingarda': 'Espingardas', 'coronha': 'Coronhas', 'tubo': 'Tubo do carregador', 'lanterna': 'Lanternas', 'porta_cartuchos': 'Porta-cartuchos', 'bandoleira': 'Bandoleiras', 'revolver': 'Revólveres', 'recarga': 'Recarga rápida', 'empunhadura': 'Empunhaduras', 'coldre': 'Coldres', 'pistola': 'Pistolas', 'boca': 'Boca do cano', 'trilho': 'Trilho', 'mira': 'Miras', 'carregador': 'Carregadores',
+NOMES = {'fuzil': 'Fuzis', 'laser': 'Lasers', 'carabina': 'Carabinas', 'bipe': 'Bipés', 'espingarda': 'Espingardas', 'coronha': 'Coronhas', 'tubo': 'Tubo do carregador', 'lanterna': 'Lanternas', 'porta_cartuchos': 'Porta-cartuchos', 'bandoleira': 'Bandoleiras', 'revolver': 'Revólveres', 'recarga': 'Recarga rápida', 'empunhadura': 'Empunhaduras', 'coldre': 'Coldres', 'pistola': 'Pistolas', 'boca': 'Boca do cano', 'trilho': 'Trilho', 'mira': 'Miras', 'carregador': 'Carregadores',
          'municao': 'Munição', 'estojo': 'Estojos', 'caixa': 'Caixas de munição', 'efeito': 'Efeitos'}
 
 

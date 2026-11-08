@@ -10058,6 +10058,174 @@
      "descricao": "respiração leve parado"
     }
    }
+  },
+  {
+   "id": "lanca_improvisada",
+   "nome": "Lança improvisada",
+   "grupo": "armas",
+   "categoria": "lanca",
+   "classe": "corpo_a_corpo",
+   "calibre": "lâmina",
+   "capacidade": "-",
+   "dano": 48,
+   "dano_golpe_forte": 80,
+   "alcance_m": 1.6,
+   "tiros_por_s": 1.4,
+   "precisao": 1.0,
+   "ruido_m": 2,
+   "durabilidade": 900,
+   "peso_kg": 0.95,
+   "raridade": "comum",
+   "valor_troca": 8,
+   "duas_maos": true,
+   "prende_no_alvo": 0.35,
+   "empurra": true,
+   "receita": {
+    "faca_cozinha": 1,
+    "fita_adesiva": 1,
+    "cabo_madeira": 1
+   },
+   "bancada": false,
+   "reparo": {
+    "fita_adesiva": 1
+   },
+   "onde": [
+    "casas",
+    "quartel",
+    "abrigo"
+   ],
+   "descricao": "Cabo de vassoura com uma faca de cozinha enfiada na ponta serrada, presa com prego, abraçadeiras, fita prata e arame. Mantém o zumbi a 1,5 m, mas a faca pode prender no alvo e a fita afrouxa com o uso. Feita na hora, sem bancada; o cabo pode vir de vassoura, rodo ou enxada.",
+   "arquivo": "armas/lanca_improvisada.glb",
+   "tamanho_m": [
+    0.042,
+    0.095,
+    1.573
+   ],
+   "triangulos": 22544,
+   "kb": 1073.8,
+   "partes": [
+    {
+     "no": "amarracao",
+     "tipo": "remove",
+     "direcao": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "descricao": "fita, arame, prego e abraçadeiras (a fita afrouxa com o uso: refaça com \"refazer_fita\"; tirar solta a faca)",
+     "pai": "lanca_improvisada",
+     "explodir_m": [
+      0.0,
+      0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "faca",
+     "tipo": "remove",
+     "direcao": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "item": "faca_cozinha",
+     "descricao": "faca de cozinha sem as talas; a espiga fica dentro do corte do cabo. Troque quando quebrar (volta como sucata)",
+     "pai": "lanca_improvisada",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.12
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "mao_frente",
+     "tipo": "mao",
+     "pai": "lanca_improvisada",
+     "posicao_m": [
+      0.0,
+      0.0,
+      -0.45
+     ],
+     "descricao": "onde a mão da frente segura (pano enrolado); a de trás fica no pivô (fita)"
+    },
+    {
+     "no": "ponta",
+     "tipo": "efeito",
+     "pai": "lanca_improvisada",
+     "posicao_m": [
+      0.0,
+      -0.016,
+      -1.375
+     ],
+     "descricao": "ponta da faca (teste de acerto da estocada)"
+    },
+    {
+     "no": "fio_meio",
+     "tipo": "efeito",
+     "pai": "lanca_improvisada",
+     "posicao_m": [
+      0.0,
+      -0.033,
+      -1.265
+     ],
+     "descricao": "meio do fio (golpe de lado)"
+    },
+    {
+     "no": "cabo_tras",
+     "tipo": "efeito",
+     "pai": "lanca_improvisada",
+     "posicao_m": [
+      -0.0,
+      0.0,
+      0.198
+     ],
+     "descricao": "ponta de trás do cabo (firmar no chão contra um avanço)"
+    }
+   ],
+   "animacoes": {
+    "estocar": {
+     "duracao_s": 0.55,
+     "laco": false,
+     "descricao": "estocada rápida com as duas mãos: acerto entre 0,2 e 0,3 s no encaixe ponta (a ~1,4 m do corpo)"
+    },
+    "estocar_forte": {
+     "duracao_s": 1.0,
+     "laco": false,
+     "descricao": "recolhe o corpo e enfia com tudo (atravessa e pode prender): acerto entre 0,56 e 0,7 s"
+    },
+    "golpe_lateral": {
+     "duracao_s": 0.8,
+     "laco": false,
+     "descricao": "vira o fio para o lado e varre (corta, empurra e afasta dois zumbis de uma vez)"
+    },
+    "empurrar": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "segura o cabo atravessado na frente do peito e empurra (derruba quem chegou perto demais)"
+    },
+    "firmar": {
+     "duracao_s": 1.2,
+     "laco": false,
+     "descricao": "apoia a ponta de trás no chão e aponta para cima: quem correr para cima se espeta (fica parado no fim)"
+    },
+    "refazer_fita": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "traz a ponta para perto e passa mais fita (gasta 1 fita adesiva e devolve a durabilidade)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.4,
+     "laco": false,
+     "descricao": "traz a ponta para perto e gira olhando a faca e a amarração"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
   }
  ],
  "acessorios": [

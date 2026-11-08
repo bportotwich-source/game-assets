@@ -1,0 +1,1685 @@
+{
+ "escala": "1 unidade = 1 m, Y para cima; item deitado na pose de repouso, pivô no centro da base",
+ "recursos_mvp": [
+  "comida",
+  "agua",
+  "madeira",
+  "sucata",
+  "remedios",
+  "combustivel"
+ ],
+ "campos_jogo": {
+  "recurso": "recurso do MVP ou tipo de item",
+  "valor": "quantidade do recurso que rende",
+  "peso_kg": "peso real",
+  "empilha": "máximo por espaço da mochila",
+  "onde": "prédios onde aparece",
+  "arma/dano": "arma corpo a corpo",
+  "pega": "ponto da mão (m) para segurar"
+ },
+ "itens": [
+  {
+   "id": "lata_feijao",
+   "nome": "Lata de feijão",
+   "grupo": "loot",
+   "categoria": "comida",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "comida",
+   "valor": 1,
+   "peso_kg": 0.45,
+   "empilha": 10,
+   "onde": [
+    "supermercado",
+    "casas",
+    "galeria",
+    "diner",
+    "armazem"
+   ],
+   "efeito": "fome -25",
+   "arquivo": "loot/lata_feijao.glb",
+   "tamanho_m": [
+    0.076,
+    0.11,
+    0.076
+   ],
+   "triangulos": 2800,
+   "kb": 185.5
+  },
+  {
+   "id": "lata_sardinha",
+   "nome": "Lata de sardinha",
+   "grupo": "loot",
+   "categoria": "comida",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "comida",
+   "valor": 1,
+   "peso_kg": 0.13,
+   "empilha": 12,
+   "onde": [
+    "supermercado",
+    "casas",
+    "diner"
+   ],
+   "efeito": "fome -15",
+   "arquivo": "loot/lata_sardinha.glb",
+   "tamanho_m": [
+    0.106,
+    0.026,
+    0.074
+   ],
+   "triangulos": 928,
+   "kb": 74.9
+  },
+  {
+   "id": "pacote_arroz",
+   "nome": "Pacote de arroz 1 kg",
+   "grupo": "loot",
+   "categoria": "comida",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "comida",
+   "valor": 2,
+   "peso_kg": 1.0,
+   "empilha": 5,
+   "onde": [
+    "supermercado",
+    "casas",
+    "armazem",
+    "padaria"
+   ],
+   "efeito": "precisa cozinhar: rende 4 refeições",
+   "arquivo": "loot/pacote_arroz.glb",
+   "tamanho_m": [
+    0.17,
+    0.064,
+    0.27
+   ],
+   "triangulos": 1432,
+   "kb": 126.2
+  },
+  {
+   "id": "caixa_cereal",
+   "nome": "Caixa de flocos de milho",
+   "grupo": "loot",
+   "categoria": "comida",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "comida",
+   "valor": 1,
+   "peso_kg": 0.3,
+   "empilha": 4,
+   "onde": [
+    "supermercado",
+    "casas",
+    "escolinha"
+   ],
+   "efeito": "fome -20",
+   "arquivo": "loot/caixa_cereal.glb",
+   "tamanho_m": [
+    0.19,
+    0.282,
+    0.07
+   ],
+   "triangulos": 56,
+   "kb": 63.4
+  },
+  {
+   "id": "garrafa_agua",
+   "nome": "Garrafa de água 1,5 L",
+   "grupo": "loot",
+   "categoria": "agua",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "agua",
+   "valor": 1,
+   "peso_kg": 1.55,
+   "empilha": 6,
+   "onde": [
+    "supermercado",
+    "casas",
+    "posto",
+    "diner",
+    "galeria"
+   ],
+   "efeito": "sede -40",
+   "arquivo": "loot/garrafa_agua.glb",
+   "tamanho_m": [
+    0.091,
+    0.32,
+    0.091
+   ],
+   "triangulos": 4616,
+   "kb": 264.1
+  },
+  {
+   "id": "galao_agua",
+   "nome": "Galão de água 5 L",
+   "grupo": "loot",
+   "categoria": "agua",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "agua",
+   "valor": 4,
+   "peso_kg": 5.2,
+   "empilha": 1,
+   "onde": [
+    "supermercado",
+    "posto",
+    "quartel",
+    "galeria"
+   ],
+   "efeito": "sede -40 por uso, 5 usos",
+   "arquivo": "loot/galao_agua.glb",
+   "tamanho_m": [
+    0.192,
+    0.328,
+    0.15
+   ],
+   "triangulos": 520,
+   "kb": 27.0
+  },
+  {
+   "id": "kit_medico",
+   "nome": "Kit de primeiros socorros",
+   "grupo": "loot",
+   "categoria": "remedios",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "remedios",
+   "valor": 6,
+   "peso_kg": 0.8,
+   "empilha": 1,
+   "onde": [
+    "quartel",
+    "escolinha",
+    "casas",
+    "motel",
+    "galeria"
+   ],
+   "efeito": "cura 60 e para sangramento",
+   "arquivo": "loot/kit_medico.glb",
+   "tamanho_m": [
+    0.26,
+    0.094,
+    0.198
+   ],
+   "triangulos": 328,
+   "kb": 18.0
+  },
+  {
+   "id": "frasco_remedio",
+   "nome": "Frasco de comprimidos",
+   "grupo": "loot",
+   "categoria": "remedios",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "remedios",
+   "valor": 3,
+   "peso_kg": 0.08,
+   "empilha": 10,
+   "onde": [
+    "casas",
+    "motel",
+    "quartel",
+    "galeria"
+   ],
+   "efeito": "cura doença / alivia dor",
+   "arquivo": "loot/frasco_remedio.glb",
+   "tamanho_m": [
+    0.046,
+    0.084,
+    0.046
+   ],
+   "triangulos": 944,
+   "kb": 77.9
+  },
+  {
+   "id": "atadura",
+   "nome": "Rolo de atadura",
+   "grupo": "loot",
+   "categoria": "remedios",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "remedios",
+   "valor": 1,
+   "peso_kg": 0.03,
+   "empilha": 10,
+   "onde": [
+    "casas",
+    "quartel",
+    "escolinha",
+    "motel"
+   ],
+   "efeito": "para sangramento",
+   "arquivo": "loot/atadura.glb",
+   "tamanho_m": [
+    0.08,
+    0.061,
+    0.075
+   ],
+   "triangulos": 844,
+   "kb": 99.9
+  },
+  {
+   "id": "martelo",
+   "nome": "Martelo de unha",
+   "grupo": "loot",
+   "categoria": "ferramentas",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "ferramenta",
+   "valor": 4,
+   "peso_kg": 0.6,
+   "empilha": 1,
+   "arma": true,
+   "dano": 20,
+   "onde": [
+    "casas",
+    "garagem",
+    "armazem",
+    "quartel"
+   ],
+   "efeito": "constrói e repara; arma corpo a corpo leve",
+   "pega": [
+    -0.1,
+    0.017,
+    0
+   ],
+   "arquivo": "loot/martelo.glb",
+   "tamanho_m": [
+    0.296,
+    0.03,
+    0.16
+   ],
+   "triangulos": 472,
+   "kb": 85.0
+  },
+  {
+   "id": "pe_de_cabra",
+   "nome": "Pé de cabra",
+   "grupo": "loot",
+   "categoria": "armas",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "ferramenta",
+   "valor": 5,
+   "peso_kg": 1.2,
+   "empilha": 1,
+   "arma": true,
+   "dano": 30,
+   "onde": [
+    "garagem",
+    "quartel",
+    "estacao",
+    "armazem"
+   ],
+   "efeito": "abre portas trancadas e caixotes; arma corpo a corpo",
+   "pega": [
+    -0.15,
+    0.012,
+    0
+   ],
+   "arquivo": "loot/pe_de_cabra.glb",
+   "tamanho_m": [
+    0.597,
+    0.022,
+    0.165
+   ],
+   "triangulos": 216,
+   "kb": 11.8
+  },
+  {
+   "id": "machado",
+   "nome": "Machado",
+   "grupo": "loot",
+   "categoria": "armas",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "ferramenta",
+   "valor": 8,
+   "peso_kg": 1.6,
+   "empilha": 1,
+   "arma": true,
+   "dano": 45,
+   "onde": [
+    "quartel",
+    "armazem",
+    "casa_de_campo",
+    "garagem"
+   ],
+   "efeito": "corta lenha e arromba; arma corpo a corpo forte",
+   "pega": [
+    -0.25,
+    0.018,
+    0
+   ],
+   "arquivo": "loot/machado.glb",
+   "tamanho_m": [
+    0.74,
+    0.04,
+    0.19
+   ],
+   "triangulos": 484,
+   "kb": 88.5
+  },
+  {
+   "id": "chave_inglesa",
+   "nome": "Chave inglesa",
+   "grupo": "loot",
+   "categoria": "ferramentas",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "ferramenta",
+   "valor": 3,
+   "peso_kg": 0.45,
+   "empilha": 1,
+   "arma": true,
+   "dano": 15,
+   "onde": [
+    "garagem",
+    "posto",
+    "quartel",
+    "casas"
+   ],
+   "efeito": "desmonta sucata e repara geradores",
+   "pega": [
+    -0.07,
+    0.006,
+    0
+   ],
+   "arquivo": "loot/chave_inglesa.glb",
+   "tamanho_m": [
+    0.217,
+    0.016,
+    0.06
+   ],
+   "triangulos": 1468,
+   "kb": 70.6
+  },
+  {
+   "id": "lanterna",
+   "nome": "Lanterna",
+   "grupo": "loot",
+   "categoria": "ferramentas",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "ferramenta",
+   "valor": 4,
+   "peso_kg": 0.3,
+   "empilha": 1,
+   "usa": "pilhas",
+   "onde": [
+    "casas",
+    "quartel",
+    "posto",
+    "correios"
+   ],
+   "efeito": "luz na mão (gasta pilhas)",
+   "pega": [
+    -0.03,
+    0.024,
+    0
+   ],
+   "arquivo": "loot/lanterna.glb",
+   "tamanho_m": [
+    0.252,
+    0.067,
+    0.067
+   ],
+   "triangulos": 3244,
+   "kb": 156.2
+  },
+  {
+   "id": "taco_madeira",
+   "nome": "Taco de madeira",
+   "grupo": "loot",
+   "categoria": "armas",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "arma",
+   "valor": 3,
+   "peso_kg": 0.9,
+   "empilha": 1,
+   "arma": true,
+   "dano": 25,
+   "onde": [
+    "casas",
+    "escolinha",
+    "garagem"
+   ],
+   "efeito": "arma corpo a corpo de alcance médio",
+   "pega": [
+    -0.3,
+    0.035,
+    0
+   ],
+   "arquivo": "loot/taco_madeira.glb",
+   "tamanho_m": [
+    0.84,
+    0.068,
+    0.068
+   ],
+   "triangulos": 2536,
+   "kb": 191.1
+  },
+  {
+   "id": "tabua",
+   "nome": "Tábua de madeira",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "madeira",
+   "valor": 1,
+   "peso_kg": 2.0,
+   "empilha": 10,
+   "onde": [
+    "armazem",
+    "casas",
+    "estacao",
+    "quartel",
+    "deposito"
+   ],
+   "efeito": "barricadas e construção (1 madeira)",
+   "arquivo": "loot/tabua.glb",
+   "tamanho_m": [
+    1.5,
+    0.026,
+    0.15
+   ],
+   "triangulos": 316,
+   "kb": 128.9
+  },
+  {
+   "id": "caixa_pregos",
+   "nome": "Caixa de pregos",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "sucata",
+   "valor": 2,
+   "peso_kg": 0.5,
+   "empilha": 5,
+   "onde": [
+    "armazem",
+    "garagem",
+    "casas",
+    "deposito"
+   ],
+   "efeito": "construção: 20 pregos",
+   "arquivo": "loot/caixa_pregos.glb",
+   "tamanho_m": [
+    0.11,
+    0.068,
+    0.073
+   ],
+   "triangulos": 200,
+   "kb": 38.7
+  },
+  {
+   "id": "fita_adesiva",
+   "nome": "Fita adesiva prata",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "sucata",
+   "valor": 2,
+   "peso_kg": 0.2,
+   "empilha": 5,
+   "onde": [
+    "casas",
+    "garagem",
+    "galeria",
+    "correios"
+   ],
+   "efeito": "repara armas e barricadas; ingrediente de receitas",
+   "arquivo": "loot/fita_adesiva.glb",
+   "tamanho_m": [
+    0.112,
+    0.048,
+    0.11
+   ],
+   "triangulos": 748,
+   "kb": 66.4
+  },
+  {
+   "id": "chapa_metal",
+   "nome": "Chapa de metal ondulada",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "sucata",
+   "valor": 2,
+   "peso_kg": 4.0,
+   "empilha": 4,
+   "onde": [
+    "armazem",
+    "posto",
+    "estacao",
+    "quartel"
+   ],
+   "efeito": "construção: 2 sucata (muros e telhados)",
+   "arquivo": "loot/chapa_metal.glb",
+   "tamanho_m": [
+    0.9,
+    0.094,
+    0.6
+   ],
+   "triangulos": 740,
+   "kb": 106.0
+  },
+  {
+   "id": "cano_metal",
+   "nome": "Cano de ferro",
+   "grupo": "loot",
+   "categoria": "armas",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "sucata",
+   "valor": 2,
+   "peso_kg": 1.4,
+   "empilha": 4,
+   "arma": true,
+   "dano": 22,
+   "onde": [
+    "garagem",
+    "armazem",
+    "estacao",
+    "posto"
+   ],
+   "efeito": "1 sucata ou arma corpo a corpo",
+   "pega": [
+    -0.25,
+    0.017,
+    0
+   ],
+   "arquivo": "loot/cano_metal.glb",
+   "tamanho_m": [
+    0.75,
+    0.042,
+    0.042
+   ],
+   "triangulos": 2016,
+   "kb": 158.8
+  },
+  {
+   "id": "galao_gasolina",
+   "nome": "Galão de gasolina 20 L",
+   "grupo": "loot",
+   "categoria": "combustivel",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "combustivel",
+   "valor": 10,
+   "peso_kg": 16.0,
+   "empilha": 1,
+   "onde": [
+    "posto",
+    "garagem",
+    "quartel",
+    "armazem"
+   ],
+   "efeito": "abastece gerador (8 horas)",
+   "arquivo": "loot/galao_gasolina.glb",
+   "tamanho_m": [
+    0.346,
+    0.475,
+    0.184
+   ],
+   "triangulos": 744,
+   "kb": 37.5
+  },
+  {
+   "id": "pilhas",
+   "nome": "Cartela de pilhas AA",
+   "grupo": "loot",
+   "categoria": "energia",
+   "montagem": "floor",
+   "lote": 1,
+   "recurso": "energia",
+   "valor": 3,
+   "peso_kg": 0.1,
+   "empilha": 10,
+   "onde": [
+    "casas",
+    "correios",
+    "galeria",
+    "posto",
+    "supermercado"
+   ],
+   "efeito": "4 cargas para lanterna e rádio",
+   "arquivo": "loot/pilhas.glb",
+   "tamanho_m": [
+    0.11,
+    0.018,
+    0.16
+   ],
+   "triangulos": 2104,
+   "kb": 109.6
+  },
+  {
+   "id": "mochila",
+   "nome": "Mochila",
+   "grupo": "loot",
+   "categoria": "roupas",
+   "montagem": "floor",
+   "lote": 2,
+   "recurso": "equipamento",
+   "valor": 1,
+   "peso_kg": 0.9,
+   "empilha": 1,
+   "onde": [
+    "casas",
+    "escolinha",
+    "motel",
+    "estacao"
+   ],
+   "efeito": "+8 espaços no inventário",
+   "pega": [
+    0,
+    0.42,
+    -0.05
+   ],
+   "arquivo": "loot/mochila.glb",
+   "tamanho_m": [
+    0.34,
+    0.477,
+    0.256
+   ],
+   "triangulos": 4956,
+   "kb": 401.5
+  },
+  {
+   "id": "roupas",
+   "nome": "Pilha de roupas dobradas",
+   "grupo": "loot",
+   "categoria": "roupas",
+   "montagem": "floor",
+   "lote": 2,
+   "recurso": "tecido",
+   "valor": 2,
+   "peso_kg": 1.2,
+   "empilha": 3,
+   "onde": [
+    "casas",
+    "motel",
+    "galeria"
+   ],
+   "efeito": "aquece à noite; vira atadura ou tecido para receitas",
+   "arquivo": "loot/roupas.glb",
+   "tamanho_m": [
+    0.312,
+    0.171,
+    0.255
+   ],
+   "triangulos": 4320,
+   "kb": 381.4
+  },
+  {
+   "id": "sabao",
+   "nome": "Sabonete embrulhado",
+   "grupo": "loot",
+   "categoria": "higiene",
+   "montagem": "floor",
+   "lote": 2,
+   "recurso": "higiene",
+   "valor": 1,
+   "peso_kg": 0.09,
+   "empilha": 10,
+   "onde": [
+    "casas",
+    "motel",
+    "supermercado"
+   ],
+   "efeito": "evita doença na base (saneamento)",
+   "arquivo": "loot/sabao.glb",
+   "tamanho_m": [
+    0.09,
+    0.03,
+    0.06
+   ],
+   "triangulos": 44,
+   "kb": 14.8
+  },
+  {
+   "id": "livro",
+   "nome": "Livro técnico",
+   "grupo": "loot",
+   "categoria": "utensilios",
+   "montagem": "floor",
+   "lote": 2,
+   "recurso": "conhecimento",
+   "valor": 1,
+   "peso_kg": 0.6,
+   "empilha": 5,
+   "onde": [
+    "biblioteca",
+    "escolinha",
+    "casas",
+    "correios"
+   ],
+   "efeito": "pesquisa: desbloqueia projetos",
+   "arquivo": "loot/livro.glb",
+   "tamanho_m": [
+    0.171,
+    0.03,
+    0.23
+   ],
+   "triangulos": 164,
+   "kb": 31.4
+  },
+  {
+   "id": "radio_portatil",
+   "nome": "Rádio portátil",
+   "grupo": "loot",
+   "categoria": "eletronicos",
+   "montagem": "floor",
+   "lote": 2,
+   "recurso": "equipamento",
+   "valor": 1,
+   "peso_kg": 0.9,
+   "empilha": 1,
+   "usa": "pilhas",
+   "onde": [
+    "casas",
+    "correios",
+    "quartel",
+    "posto"
+   ],
+   "efeito": "ouve chamados de sobreviventes",
+   "arquivo": "loot/radio_portatil.glb",
+   "tamanho_m": [
+    0.314,
+    0.454,
+    0.102
+   ],
+   "triangulos": 2784,
+   "kb": 135.4
+  },
+  {
+   "id": "vela_fosforos",
+   "nome": "Vela e caixa de fósforos",
+   "grupo": "loot",
+   "categoria": "eletronicos",
+   "montagem": "floor",
+   "lote": 2,
+   "recurso": "luz",
+   "valor": 1,
+   "peso_kg": 0.15,
+   "empilha": 6,
+   "onde": [
+    "casas",
+    "igreja",
+    "supermercado",
+    "motel"
+   ],
+   "efeito": "luz sem pilha por 4 horas; acende fogueira",
+   "arquivo": "loot/vela_fosforos.glb",
+   "tamanho_m": [
+    0.116,
+    0.153,
+    0.044
+   ],
+   "triangulos": 412,
+   "kb": 94.3
+  },
+  {
+   "id": "isqueiro",
+   "nome": "Isqueiro",
+   "grupo": "loot",
+   "categoria": "eletronicos",
+   "montagem": "floor",
+   "lote": 2,
+   "recurso": "ferramenta",
+   "valor": 1,
+   "peso_kg": 0.02,
+   "empilha": 10,
+   "onde": [
+    "casas",
+    "posto",
+    "diner",
+    "motel"
+   ],
+   "efeito": "acende fogueira e molotov (muitos usos)",
+   "arquivo": "loot/isqueiro.glb",
+   "tamanho_m": [
+    0.08,
+    0.025,
+    0.012
+   ],
+   "triangulos": 180,
+   "kb": 10.4
+  },
+  {
+   "id": "garrafa_vidro",
+   "nome": "Garrafa de vidro vazia",
+   "grupo": "loot",
+   "categoria": "utensilios",
+   "montagem": "floor",
+   "lote": 2,
+   "recurso": "sucata",
+   "valor": 1,
+   "peso_kg": 0.4,
+   "empilha": 4,
+   "onde": [
+    "casas",
+    "diner",
+    "galeria",
+    "supermercado"
+   ],
+   "efeito": "guarda água fervida; ingrediente do molotov",
+   "arquivo": "loot/garrafa_vidro.glb",
+   "tamanho_m": [
+    0.071,
+    0.292,
+    0.071
+   ],
+   "triangulos": 832,
+   "kb": 64.7
+  },
+  {
+   "id": "panela",
+   "nome": "Panela com tampa",
+   "grupo": "loot",
+   "categoria": "utensilios",
+   "montagem": "floor",
+   "lote": 2,
+   "recurso": "ferramenta",
+   "valor": 2,
+   "peso_kg": 1.1,
+   "empilha": 1,
+   "onde": [
+    "casas",
+    "diner",
+    "padaria",
+    "motel"
+   ],
+   "efeito": "cozinhar na fogueira; ferver água",
+   "arquivo": "loot/panela.glb",
+   "tamanho_m": [
+    0.32,
+    0.17,
+    0.228
+   ],
+   "triangulos": 1048,
+   "kb": 51.7
+  },
+  {
+   "id": "faca_cozinha",
+   "nome": "Faca de cozinha",
+   "grupo": "loot",
+   "categoria": "armas",
+   "montagem": "floor",
+   "lote": 2,
+   "recurso": "arma",
+   "valor": 2,
+   "peso_kg": 0.15,
+   "empilha": 1,
+   "arma": true,
+   "dano": 18,
+   "onde": [
+    "casas",
+    "diner",
+    "padaria"
+   ],
+   "efeito": "arma rápida e silenciosa; corta comida e tecido",
+   "pega": [
+    -0.08,
+    0.009,
+    0
+   ],
+   "arquivo": "loot/faca_cozinha.glb",
+   "tamanho_m": [
+    0.33,
+    0.019,
+    0.037
+   ],
+   "triangulos": 452,
+   "kb": 23.8
+  },
+  {
+   "id": "caixa_leite",
+   "nome": "Caixa de leite longa vida",
+   "grupo": "loot",
+   "categoria": "comida",
+   "montagem": "floor",
+   "lote": 3,
+   "recurso": "comida",
+   "valor": 1,
+   "peso_kg": 1.05,
+   "empilha": 6,
+   "onde": [
+    "supermercado",
+    "casas",
+    "diner",
+    "padaria"
+   ],
+   "efeito": "fome -10, sede -15",
+   "arquivo": "loot/caixa_leite.glb",
+   "tamanho_m": [
+    0.096,
+    0.214,
+    0.062
+   ],
+   "triangulos": 176,
+   "kb": 40.8
+  },
+  {
+   "id": "saco_farinha",
+   "nome": "Saco de farinha 5 kg",
+   "grupo": "loot",
+   "categoria": "comida",
+   "montagem": "floor",
+   "lote": 3,
+   "recurso": "comida",
+   "valor": 8,
+   "peso_kg": 5.0,
+   "empilha": 1,
+   "onde": [
+    "padaria",
+    "supermercado",
+    "armazem"
+   ],
+   "efeito": "padaria da base: rende 20 pães",
+   "arquivo": "loot/saco_farinha.glb",
+   "tamanho_m": [
+    0.3,
+    0.12,
+    0.51
+   ],
+   "triangulos": 1656,
+   "kb": 163.5
+  },
+  {
+   "id": "saco_sementes",
+   "nome": "Saco de sementes",
+   "grupo": "loot",
+   "categoria": "agricultura",
+   "montagem": "floor",
+   "lote": 3,
+   "recurso": "sementes",
+   "valor": 10,
+   "peso_kg": 1.0,
+   "empilha": 4,
+   "onde": [
+    "armazem",
+    "supermercado",
+    "casa_de_campo"
+   ],
+   "efeito": "planta 1 canteiro da horta",
+   "arquivo": "loot/saco_sementes.glb",
+   "tamanho_m": [
+    0.166,
+    0.216,
+    0.162
+   ],
+   "triangulos": 680,
+   "kb": 55.4
+  },
+  {
+   "id": "lata_milho",
+   "nome": "Lata de milho",
+   "grupo": "loot",
+   "categoria": "comida",
+   "montagem": "floor",
+   "lote": 3,
+   "recurso": "comida",
+   "valor": 1,
+   "peso_kg": 0.3,
+   "empilha": 10,
+   "onde": [
+    "supermercado",
+    "casas",
+    "diner",
+    "armazem"
+   ],
+   "efeito": "fome -20",
+   "arquivo": "loot/lata_milho.glb",
+   "tamanho_m": [
+    0.075,
+    0.075,
+    0.075
+   ],
+   "triangulos": 2128,
+   "kb": 158.3
+  },
+  {
+   "id": "seringa",
+   "nome": "Seringa com antibiótico",
+   "grupo": "loot",
+   "categoria": "remedios",
+   "montagem": "floor",
+   "lote": 3,
+   "recurso": "remedios",
+   "valor": 5,
+   "peso_kg": 0.02,
+   "empilha": 10,
+   "onde": [
+    "quartel",
+    "enfermaria",
+    "casas"
+   ],
+   "efeito": "cura infecção (raro)",
+   "arquivo": "loot/seringa.glb",
+   "tamanho_m": [
+    0.139,
+    0.018,
+    0.024
+   ],
+   "triangulos": 592,
+   "kb": 31.9
+  },
+  {
+   "id": "mascara",
+   "nome": "Máscara de proteção",
+   "grupo": "loot",
+   "categoria": "roupas",
+   "montagem": "floor",
+   "lote": 3,
+   "recurso": "equipamento",
+   "valor": 1,
+   "peso_kg": 0.05,
+   "empilha": 10,
+   "onde": [
+    "quartel",
+    "casas",
+    "enfermaria",
+    "galeria"
+   ],
+   "efeito": "reduz chance de doença ao limpar prédios",
+   "arquivo": "loot/mascara.glb",
+   "tamanho_m": [
+    0.322,
+    0.035,
+    0.12
+   ],
+   "triangulos": 780,
+   "kb": 38.4
+  },
+  {
+   "id": "kit_costura",
+   "nome": "Lata de costura",
+   "grupo": "loot",
+   "categoria": "remedios",
+   "montagem": "floor",
+   "lote": 3,
+   "recurso": "tecido",
+   "valor": 2,
+   "peso_kg": 0.3,
+   "empilha": 3,
+   "onde": [
+    "casas",
+    "motel",
+    "galeria"
+   ],
+   "efeito": "sutura ferimentos; conserta roupas e mochilas",
+   "arquivo": "loot/kit_costura.glb",
+   "tamanho_m": [
+    0.226,
+    0.051,
+    0.154
+   ],
+   "triangulos": 1280,
+   "kb": 193.8
+  },
+  {
+   "id": "bateria_carro",
+   "nome": "Bateria de carro",
+   "grupo": "loot",
+   "categoria": "energia",
+   "montagem": "floor",
+   "lote": 3,
+   "recurso": "energia",
+   "valor": 20,
+   "peso_kg": 15.0,
+   "empilha": 1,
+   "onde": [
+    "posto",
+    "garagem",
+    "quartel",
+    "estacao"
+   ],
+   "efeito": "guarda energia do gerador ou do cata-vento; liga o rádio",
+   "arquivo": "loot/bateria_carro.glb",
+   "tamanho_m": [
+    0.264,
+    0.245,
+    0.18
+   ],
+   "triangulos": 628,
+   "kb": 34.4
+  },
+  {
+   "id": "arco",
+   "nome": "Arco e flechas",
+   "grupo": "loot",
+   "categoria": "armas",
+   "montagem": "floor",
+   "lote": 4,
+   "recurso": "arma",
+   "valor": 1,
+   "peso_kg": 1.0,
+   "empilha": 1,
+   "arma": true,
+   "dano": 35,
+   "distancia": true,
+   "onde": [
+    "casa_de_campo",
+    "galeria",
+    "armazem"
+   ],
+   "efeito": "arma silenciosa à distância (flechas reaproveitáveis)",
+   "pega": [
+    0,
+    0.02,
+    0
+   ],
+   "arquivo": "loot/arco.glb",
+   "tamanho_m": [
+    1.124,
+    0.04,
+    0.23
+   ],
+   "triangulos": 352,
+   "kb": 135.5
+  },
+  {
+   "id": "lanca",
+   "nome": "Lança improvisada",
+   "grupo": "loot",
+   "categoria": "armas",
+   "montagem": "floor",
+   "lote": 4,
+   "recurso": "arma",
+   "valor": 1,
+   "peso_kg": 1.4,
+   "empilha": 1,
+   "arma": true,
+   "dano": 32,
+   "onde": [
+    "quartel",
+    "casas"
+   ],
+   "efeito": "alcance longo para manter zumbis longe (receita: cabo + faca + fita)",
+   "pega": [
+    -0.3,
+    0.02,
+    0
+   ],
+   "arquivo": "loot/lanca.glb",
+   "tamanho_m": [
+    1.6,
+    0.037,
+    0.037
+   ],
+   "triangulos": 3016,
+   "kb": 270.3
+  },
+  {
+   "id": "facao",
+   "nome": "Facão",
+   "grupo": "loot",
+   "categoria": "armas",
+   "montagem": "floor",
+   "lote": 4,
+   "recurso": "ferramenta",
+   "valor": 5,
+   "peso_kg": 0.7,
+   "empilha": 1,
+   "arma": true,
+   "dano": 38,
+   "onde": [
+    "casa_de_campo",
+    "armazem",
+    "garagem"
+   ],
+   "efeito": "corta mato e arma forte e silenciosa",
+   "pega": [
+    -0.2,
+    0.012,
+    0
+   ],
+   "arquivo": "loot/facao.glb",
+   "tamanho_m": [
+    0.64,
+    0.022,
+    0.052
+   ],
+   "triangulos": 208,
+   "kb": 65.2
+  },
+  {
+   "id": "serrote",
+   "nome": "Serrote",
+   "grupo": "loot",
+   "categoria": "ferramentas",
+   "montagem": "floor",
+   "lote": 4,
+   "recurso": "ferramenta",
+   "valor": 4,
+   "peso_kg": 0.6,
+   "empilha": 1,
+   "onde": [
+    "garagem",
+    "armazem",
+    "casas"
+   ],
+   "efeito": "corta tábuas: dobra a madeira de móveis desmontados",
+   "pega": [
+    -0.27,
+    0.012,
+    0
+   ],
+   "arquivo": "loot/serrote.glb",
+   "tamanho_m": [
+    0.68,
+    0.023,
+    0.14
+   ],
+   "triangulos": 416,
+   "kb": 77.6
+  },
+  {
+   "id": "pa",
+   "nome": "Pá",
+   "grupo": "loot",
+   "categoria": "agricultura",
+   "montagem": "floor",
+   "lote": 4,
+   "recurso": "ferramenta",
+   "valor": 4,
+   "peso_kg": 1.8,
+   "empilha": 1,
+   "arma": true,
+   "dano": 26,
+   "onde": [
+    "armazem",
+    "casa_de_campo",
+    "garagem",
+    "quartel"
+   ],
+   "efeito": "cava hortas, valas e covas; arma pesada",
+   "pega": [
+    -0.3,
+    0.02,
+    0
+   ],
+   "arquivo": "loot/pa.glb",
+   "tamanho_m": [
+    1.54,
+    0.039,
+    0.24
+   ],
+   "triangulos": 312,
+   "kb": 75.1
+  },
+  {
+   "id": "enxada",
+   "nome": "Enxada",
+   "grupo": "loot",
+   "categoria": "agricultura",
+   "montagem": "floor",
+   "lote": 4,
+   "recurso": "ferramenta",
+   "valor": 4,
+   "peso_kg": 1.5,
+   "empilha": 1,
+   "arma": true,
+   "dano": 28,
+   "onde": [
+    "armazem",
+    "casa_de_campo"
+   ],
+   "efeito": "prepara canteiros da horta (+50% colheita)",
+   "pega": [
+    -0.3,
+    0.018,
+    0
+   ],
+   "arquivo": "loot/enxada.glb",
+   "tamanho_m": [
+    1.43,
+    0.04,
+    0.267
+   ],
+   "triangulos": 140,
+   "kb": 66.5
+  },
+  {
+   "id": "corda",
+   "nome": "Rolo de corda",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 4,
+   "recurso": "material",
+   "valor": 1,
+   "peso_kg": 1.5,
+   "empilha": 3,
+   "onde": [
+    "armazem",
+    "quartel",
+    "garagem",
+    "estacao"
+   ],
+   "efeito": "armadilhas, escalar e amarrar barricadas (10 m)",
+   "arquivo": "loot/corda.glb",
+   "tamanho_m": [
+    0.317,
+    0.039,
+    0.216
+   ],
+   "triangulos": 11192,
+   "kb": 801.6
+  },
+  {
+   "id": "arame_farpado",
+   "nome": "Rolo de arame farpado",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 4,
+   "recurso": "sucata",
+   "valor": 3,
+   "peso_kg": 6.0,
+   "empilha": 1,
+   "onde": [
+    "armazem",
+    "casa_de_campo",
+    "quartel"
+   ],
+   "efeito": "defesa: segura e fere zumbis no muro",
+   "arquivo": "loot/arame_farpado.glb",
+   "tamanho_m": [
+    0.321,
+    0.404,
+    0.423
+   ],
+   "triangulos": 3876,
+   "kb": 302.2
+  },
+  {
+   "id": "saco_areia",
+   "nome": "Saco de areia",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 4,
+   "recurso": "material",
+   "valor": 1,
+   "peso_kg": 18.0,
+   "empilha": 1,
+   "onde": [
+    "quartel",
+    "armazem",
+    "estacao"
+   ],
+   "efeito": "defesa: 3 sacos = 1 m de trincheira à prova de mordida",
+   "arquivo": "loot/saco_areia.glb",
+   "tamanho_m": [
+    0.619,
+    0.13,
+    0.34
+   ],
+   "triangulos": 2972,
+   "kb": 249.8
+  },
+  {
+   "id": "peca_motor",
+   "nome": "Caixa de peças de motor",
+   "grupo": "loot",
+   "categoria": "energia",
+   "montagem": "floor",
+   "lote": 4,
+   "recurso": "pecas",
+   "valor": 1,
+   "peso_kg": 2.5,
+   "empilha": 2,
+   "onde": [
+    "posto",
+    "garagem",
+    "estacao"
+   ],
+   "efeito": "repara o gerador e a subestação (marco da fase 4)",
+   "arquivo": "loot/peca_motor.glb",
+   "tamanho_m": [
+    0.281,
+    0.125,
+    0.201
+   ],
+   "triangulos": 816,
+   "kb": 64.5
+  },
+  {
+   "id": "lenha",
+   "nome": "Feixe de lenha",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 5,
+   "recurso": "madeira",
+   "valor": 2,
+   "peso_kg": 4.0,
+   "empilha": 5,
+   "onde": [
+    "armazem",
+    "padaria",
+    "casas",
+    "quartel",
+    "abrigo"
+   ],
+   "efeito": "queima 2 h na fogueira ou rende 2 madeira",
+   "arquivo": "loot/lenha.glb",
+   "tamanho_m": [
+    0.424,
+    0.21,
+    0.21
+   ],
+   "triangulos": 732,
+   "kb": 172.6
+  },
+  {
+   "id": "salgadinho",
+   "nome": "Pacote de salgadinho",
+   "grupo": "loot",
+   "categoria": "comida",
+   "montagem": "floor",
+   "lote": 5,
+   "recurso": "comida",
+   "valor": 1,
+   "peso_kg": 0.1,
+   "empilha": 8,
+   "onde": [
+    "posto",
+    "supermercado",
+    "diner",
+    "galeria",
+    "casas"
+   ],
+   "efeito": "fome -10, sede +5 (leve, não estraga)",
+   "arquivo": "loot/salgadinho.glb",
+   "tamanho_m": [
+    0.17,
+    0.044,
+    0.264
+   ],
+   "triangulos": 1768,
+   "kb": 142.5
+  },
+  {
+   "id": "barra_chocolate",
+   "nome": "Barra de chocolate",
+   "grupo": "loot",
+   "categoria": "comida",
+   "montagem": "floor",
+   "lote": 5,
+   "recurso": "comida",
+   "valor": 1,
+   "peso_kg": 0.09,
+   "empilha": 10,
+   "onde": [
+    "posto",
+    "supermercado",
+    "galeria",
+    "casas",
+    "escolinha"
+   ],
+   "efeito": "fome -10 e ânimo +5",
+   "arquivo": "loot/barra_chocolate.glb",
+   "tamanho_m": [
+    0.08,
+    0.011,
+    0.194
+   ],
+   "triangulos": 132,
+   "kb": 27.6
+  },
+  {
+   "id": "cantil",
+   "nome": "Cantil de alumínio",
+   "grupo": "loot",
+   "categoria": "agua",
+   "montagem": "floor",
+   "lote": 5,
+   "recurso": "equipamento",
+   "valor": 1,
+   "peso_kg": 0.35,
+   "empilha": 1,
+   "onde": [
+    "quartel",
+    "casas",
+    "armazem",
+    "galeria"
+   ],
+   "efeito": "leva 1 L de água; pode ir ao fogo para ferver",
+   "pega": [
+    0,
+    0.04,
+    0
+   ],
+   "arquivo": "loot/cantil.glb",
+   "tamanho_m": [
+    0.176,
+    0.176,
+    0.268
+   ],
+   "triangulos": 2268,
+   "kb": 109.6
+  },
+  {
+   "id": "saco_dormir",
+   "nome": "Saco de dormir enrolado",
+   "grupo": "loot",
+   "categoria": "roupas",
+   "montagem": "floor",
+   "lote": 5,
+   "recurso": "equipamento",
+   "valor": 1,
+   "peso_kg": 1.6,
+   "empilha": 1,
+   "onde": [
+    "casas",
+    "armazem",
+    "quartel",
+    "galeria"
+   ],
+   "efeito": "dormir em qualquer lugar (recupera 85% da energia)",
+   "arquivo": "loot/saco_dormir.glb",
+   "tamanho_m": [
+    0.432,
+    0.236,
+    0.236
+   ],
+   "triangulos": 3812,
+   "kb": 292.4
+  },
+  {
+   "id": "chave_casa",
+   "nome": "Molho de chaves com etiqueta",
+   "grupo": "loot",
+   "categoria": "pistas",
+   "montagem": "floor",
+   "lote": 5,
+   "recurso": "chave",
+   "valor": 1,
+   "peso_kg": 0.05,
+   "empilha": 1,
+   "onde": [
+    "casas",
+    "motel",
+    "escritorio",
+    "quartel"
+   ],
+   "efeito": "abre uma porta trancada (a casa escrita na etiqueta)",
+   "arquivo": "loot/chave_casa.glb",
+   "tamanho_m": [
+    0.159,
+    0.007,
+    0.08
+   ],
+   "triangulos": 1014,
+   "kb": 75.2
+  },
+  {
+   "id": "mapa_cidade",
+   "nome": "Mapa da cidade dobrado",
+   "grupo": "loot",
+   "categoria": "pistas",
+   "montagem": "floor",
+   "lote": 5,
+   "recurso": "mapa",
+   "valor": 1,
+   "peso_kg": 0.08,
+   "empilha": 1,
+   "onde": [
+    "posto",
+    "correios",
+    "estacao",
+    "casas",
+    "biblioteca"
+   ],
+   "efeito": "revela os prédios do bairro no mapa do jogo",
+   "arquivo": "loot/mapa_cidade.glb",
+   "tamanho_m": [
+    0.155,
+    0.007,
+    0.22
+   ],
+   "triangulos": 192,
+   "kb": 50.9
+  },
+  {
+   "id": "bilhete",
+   "nome": "Bilhete de sobrevivente",
+   "grupo": "loot",
+   "categoria": "pistas",
+   "montagem": "floor",
+   "lote": 5,
+   "recurso": "pista",
+   "valor": 1,
+   "peso_kg": 0.01,
+   "empilha": 1,
+   "onde": [
+    "casas",
+    "igreja",
+    "posto",
+    "escolinha",
+    "supermercado"
+   ],
+   "efeito": "pista do 1º sobrevivente: marca um encontro no mapa (fim da fase 1)",
+   "arquivo": "loot/bilhete.glb",
+   "tamanho_m": [
+    0.15,
+    0.004,
+    0.2
+   ],
+   "triangulos": 96,
+   "kb": 36.1
+  }
+ ]
+}

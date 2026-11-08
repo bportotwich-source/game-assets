@@ -326,3 +326,19 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Carretel de linha e anzóis (`linha_pesca`) | 13 | Utensílios | material | 1 | 0,1 kg | 6 | vara de pesca, armadilha de linha e costura de ferimento | casa_barcos, casas, supermercado, parque_trailers |
 | Garrafa de álcool 70 % (`alcool`) | 13 | Remédios | remedios | 1 | 1,0 kg | 2 | desinfeta ferimento, acende fogo, combustível da lamparina e do molotov | supermercado, clinica, casas, posto |
 | Pedra de amolar (`pedra_amolar`) | 13 | Ferramentas | ferramenta | 2 | 0,4 kg | 1 | recupera o fio de facas, facão, machado e lança (sem bancada) | casas, fazenda, serraria, casa_de_campo |
+| Tocha de pano e álcool (`tocha`) | 15 | Ferramentas | ferramenta | 1 | 0,5 kg | 3 | luz de 6 m por 10 min; afasta um zumbi encostado (fogo), mas a chama chama outros de longe (dano 12) | abrigo |
+| Lamparina de lata (`lamparina_lata`) | 15 | Luz e eletrônicos | ferramenta | 1 | 0,25 kg | 2 | luz fraca de 3 m por 6 horas (gasta álcool); dá para deixar acesa no abrigo | abrigo |
+| Fogareiro de lata (`fogareiro_lata`) | 15 | Utensílios | ferramenta | 1 | 0,3 kg | 1 | cozinha e ferve água com gravetos ou carvão (fumaça baixa, chama escondida) | abrigo |
+| Kit de acender fogo (`kit_fogo`) | 15 | Ferramentas | ferramenta | 2 | 0,15 kg | 1 | acende fogueira sem isqueiro (30 usos); funciona molhado | abrigo, casa_de_campo, parque_trailers |
+| Filtro de água de garrafa (`filtro_garrafa`) | 15 | Água | ferramenta | 2 | 0,6 kg | 1 | tira a sujeira da água de chuva ou do rio (ainda precisa ferver); 20 litros antes de trocar o carvão | abrigo |
+| Caneca de lata com alça de arame (`caneca_lata`) | 15 | Utensílios | ferramenta | 1 | 0,1 kg | 2 | ferve 0,4 L de água na fogueira (água fervida não dá doença) | abrigo |
+| Curativo de pano fervido (`curativo_improvisado`) | 15 | Remédios | remedios | 1 | 0,05 kg | 6 | para sangramento (cura 15); 20 % de chance de infeccionar se o pano não foi fervido | abrigo |
+| Tala de tábua e pano (`tala_improvisada`) | 15 | Remédios | remedios | 1 | 0,6 kg | 2 | trata perna ou braço quebrado: volta a correr em 1 dia em vez de 4 | abrigo |
+| Armadilha de laço (`armadilha_laco`) | 15 | Agricultura | ferramenta | 1 | 0,4 kg | 3 | montada no mato pega coelho ou pombo (comida 2) em até 1 dia; zumbi pisa e fica preso 5 s | abrigo |
+| Vara de pesca improvisada (`vara_pesca`) | 15 | Agricultura | ferramenta | 1 | 0,4 kg | 1 | pesca no lago (comida 3 a cada 20 min, em silêncio) | abrigo, casa_barcos |
+| Kit de reparo improvisado (`kit_reparo`) | 15 | Ferramentas | ferramenta | 3 | 0,8 kg | 1 | repara arma branca (+40 % de durabilidade) ou barricada (+60 de vida); 3 usos | abrigo, garagem |
+| Colete de revistas e fita (`colete_revistas`) | 15 | Roupas e equipamento | equipamento | 1 | 1,4 kg | 1 | +15 de proteção contra mordida no tronco e nos braços; desgasta a cada mordida | abrigo |
+| Colete de placas de sucata (`colete_sucata`) | 15 | Roupas e equipamento | equipamento | 2 | 4,5 kg | 1 | +35 de proteção; pesado (correr cansa 30 % mais rápido) e barulhento | abrigo, ferrovelho |
+| Capacete de panela acolchoado (`capacete_panela`) | 15 | Roupas e equipamento | equipamento | 1 | 1,0 kg | 1 | +20 de proteção na cabeça; tira 10 % da audição | abrigo |
+| Mochila de lona improvisada (`mochila_lona`) | 15 | Roupas e equipamento | equipamento | 1 | 0,8 kg | 1 | mochila de 4 × 4 células (a de loja tem 5 × 6); faz barulho de lona ao correr | abrigo |
+| Bolsa de cintura de pano (`bolsa_cintura`) | 15 | Roupas e equipamento | equipamento | 1 | 0,3 kg | 1 | +3 × 2 células de acesso rápido (usar sem abrir a mochila) | abrigo |

@@ -2935,6 +2935,670 @@
    ],
    "triangulos": 220,
    "kb": 106.3
+  },
+  {
+   "id": "tocha",
+   "nome": "Tocha de pano e álcool",
+   "grupo": "loot",
+   "categoria": "ferramentas",
+   "montagem": "floor",
+   "lote": 15,
+   "recurso": "ferramenta",
+   "valor": 1,
+   "peso_kg": 0.5,
+   "empilha": 3,
+   "celulas": [
+    3,
+    1
+   ],
+   "fase": 1,
+   "onde": [
+    "abrigo"
+   ],
+   "efeito": "luz de 6 m por 10 min; afasta um zumbi encostado (fogo), mas a chama chama outros de longe",
+   "craft": {
+    "ingredientes": {
+     "lenha": 1,
+     "trapos": 1,
+     "alcool": 1
+    },
+    "estacao": "mao",
+    "tempo_s": 20
+   },
+   "luz_m": 6,
+   "dura_min": 10,
+   "pega": [
+    -0.2,
+    0.02,
+    0
+   ],
+   "arma": true,
+   "dano": 12,
+   "arquivo": "loot/tocha.glb",
+   "tamanho_m": [
+    0.604,
+    0.077,
+    0.077
+   ],
+   "triangulos": 3296,
+   "kb": 274.7
+  },
+  {
+   "id": "lamparina_lata",
+   "nome": "Lamparina de lata",
+   "grupo": "loot",
+   "categoria": "eletronicos",
+   "montagem": "floor",
+   "lote": 15,
+   "recurso": "ferramenta",
+   "valor": 1,
+   "peso_kg": 0.25,
+   "empilha": 2,
+   "celulas": [
+    1,
+    1
+   ],
+   "fase": 1,
+   "onde": [
+    "abrigo"
+   ],
+   "efeito": "luz fraca de 3 m por 6 horas (gasta álcool); dá para deixar acesa no abrigo",
+   "usa": "alcool",
+   "craft": {
+    "ingredientes": {
+     "lata_vazia": 1,
+     "trapos": 1,
+     "alcool": 1
+    },
+    "estacao": "mao",
+    "tempo_s": 40,
+    "ferramenta": "faca_cozinha"
+   },
+   "luz_m": 3,
+   "arquivo": "loot/lamparina_lata.glb",
+   "tamanho_m": [
+    0.103,
+    0.151,
+    0.078
+   ],
+   "triangulos": 2476,
+   "kb": 120.1
+  },
+  {
+   "id": "fogareiro_lata",
+   "nome": "Fogareiro de lata",
+   "grupo": "loot",
+   "categoria": "utensilios",
+   "montagem": "floor",
+   "lote": 15,
+   "recurso": "ferramenta",
+   "valor": 1,
+   "peso_kg": 0.3,
+   "empilha": 1,
+   "celulas": [
+    1,
+    1
+   ],
+   "fase": 1,
+   "onde": [
+    "abrigo"
+   ],
+   "efeito": "cozinha e ferve água com gravetos ou carvão (fumaça baixa, chama escondida)",
+   "usa": "lenha",
+   "craft": {
+    "ingredientes": {
+     "lata_vazia": 2
+    },
+    "estacao": "mao",
+    "tempo_s": 60,
+    "ferramenta": "faca_cozinha"
+   },
+   "estacao_portatil": "fogão",
+   "arquivo": "loot/fogareiro_lata.glb",
+   "tamanho_m": [
+    0.111,
+    0.138,
+    0.111
+   ],
+   "triangulos": 2484,
+   "kb": 229.0
+  },
+  {
+   "id": "kit_fogo",
+   "nome": "Kit de acender fogo",
+   "grupo": "loot",
+   "categoria": "ferramentas",
+   "montagem": "floor",
+   "lote": 15,
+   "recurso": "ferramenta",
+   "valor": 2,
+   "peso_kg": 0.15,
+   "empilha": 1,
+   "celulas": [
+    1,
+    1
+   ],
+   "fase": 1,
+   "onde": [
+    "abrigo",
+    "casa_de_campo",
+    "parque_trailers"
+   ],
+   "efeito": "acende fogueira sem isqueiro (30 usos); funciona molhado",
+   "craft": {
+    "ingredientes": {
+     "pedras": 1,
+     "sucata_metal": 1,
+     "trapos": 1,
+     "carvao": 1
+    },
+    "estacao": "mao",
+    "tempo_s": 90,
+    "ferramenta": "pedra_amolar"
+   },
+   "usos": 30,
+   "arquivo": "loot/kit_fogo.glb",
+   "tamanho_m": [
+    0.155,
+    0.033,
+    0.152
+   ],
+   "triangulos": 1600,
+   "kb": 174.6
+  },
+  {
+   "id": "filtro_garrafa",
+   "nome": "Filtro de água de garrafa",
+   "grupo": "loot",
+   "categoria": "agua",
+   "montagem": "floor",
+   "lote": 15,
+   "recurso": "ferramenta",
+   "valor": 2,
+   "peso_kg": 0.6,
+   "empilha": 1,
+   "celulas": [
+    1,
+    2
+   ],
+   "fase": 1,
+   "onde": [
+    "abrigo"
+   ],
+   "efeito": "tira a sujeira da água de chuva ou do rio (ainda precisa ferver); 20 litros antes de trocar o carvão",
+   "craft": {
+    "ingredientes": {
+     "garrafa_pet": 1,
+     "trapos": 1,
+     "carvao": 1,
+     "pedras": 1
+    },
+    "estacao": "mao",
+    "tempo_s": 120,
+    "ferramenta": "faca_cozinha"
+   },
+   "usos": 20,
+   "arquivo": "loot/filtro_garrafa.glb",
+   "tamanho_m": [
+    0.108,
+    0.36,
+    0.108
+   ],
+   "triangulos": 3252,
+   "kb": 269.6
+  },
+  {
+   "id": "caneca_lata",
+   "nome": "Caneca de lata com alça de arame",
+   "grupo": "loot",
+   "categoria": "utensilios",
+   "montagem": "floor",
+   "lote": 15,
+   "recurso": "ferramenta",
+   "valor": 1,
+   "peso_kg": 0.1,
+   "empilha": 2,
+   "celulas": [
+    1,
+    1
+   ],
+   "fase": 1,
+   "onde": [
+    "abrigo"
+   ],
+   "efeito": "ferve 0,4 L de água na fogueira (água fervida não dá doença)",
+   "craft": {
+    "ingredientes": {
+     "lata_vazia": 1,
+     "arame_liso": 1
+    },
+    "estacao": "mao",
+    "tempo_s": 25
+   },
+   "arquivo": "loot/caneca_lata.glb",
+   "tamanho_m": [
+    0.12,
+    0.12,
+    0.089
+   ],
+   "triangulos": 3676,
+   "kb": 175.6
+  },
+  {
+   "id": "curativo_improvisado",
+   "nome": "Curativo de pano fervido",
+   "grupo": "loot",
+   "categoria": "remedios",
+   "montagem": "floor",
+   "lote": 15,
+   "recurso": "remedios",
+   "valor": 1,
+   "peso_kg": 0.05,
+   "empilha": 6,
+   "celulas": [
+    1,
+    1
+   ],
+   "fase": 1,
+   "onde": [
+    "abrigo"
+   ],
+   "efeito": "para sangramento (cura 15); 20 % de chance de infeccionar se o pano não foi fervido",
+   "craft": {
+    "ingredientes": {
+     "trapos": 2,
+     "alcool": 1
+    },
+    "estacao": "fogueira",
+    "tempo_s": 45
+   },
+   "arquivo": "loot/curativo_improvisado.glb",
+   "tamanho_m": [
+    0.137,
+    0.038,
+    0.085
+   ],
+   "triangulos": 1734,
+   "kb": 135.7
+  },
+  {
+   "id": "tala_improvisada",
+   "nome": "Tala de tábua e pano",
+   "grupo": "loot",
+   "categoria": "remedios",
+   "montagem": "floor",
+   "lote": 15,
+   "recurso": "remedios",
+   "valor": 1,
+   "peso_kg": 0.6,
+   "empilha": 2,
+   "celulas": [
+    2,
+    1
+   ],
+   "fase": 1,
+   "onde": [
+    "abrigo"
+   ],
+   "efeito": "trata perna ou braço quebrado: volta a correr em 1 dia em vez de 4",
+   "craft": {
+    "ingredientes": {
+     "tabua": 1,
+     "trapos": 2
+    },
+    "estacao": "mao",
+    "tempo_s": 60,
+    "ferramenta": "serrote"
+   },
+   "arquivo": "loot/tala_improvisada.glb",
+   "tamanho_m": [
+    0.42,
+    0.046,
+    0.126
+   ],
+   "triangulos": 1952,
+   "kb": 225.7
+  },
+  {
+   "id": "armadilha_laco",
+   "nome": "Armadilha de laço",
+   "grupo": "loot",
+   "categoria": "agricultura",
+   "montagem": "floor",
+   "lote": 15,
+   "recurso": "ferramenta",
+   "valor": 1,
+   "peso_kg": 0.4,
+   "empilha": 3,
+   "celulas": [
+    2,
+    1
+   ],
+   "fase": 1,
+   "onde": [
+    "abrigo"
+   ],
+   "efeito": "montada no mato pega coelho ou pombo (comida 2) em até 1 dia; zumbi pisa e fica preso 5 s",
+   "craft": {
+    "ingredientes": {
+     "arame_liso": 1,
+     "tabua": 1
+    },
+    "estacao": "mao",
+    "tempo_s": 60,
+    "ferramenta": "faca_cozinha"
+   },
+   "montar": "chão (grama ou mato)",
+   "arquivo": "loot/armadilha_laco.glb",
+   "tamanho_m": [
+    0.381,
+    0.046,
+    0.159
+   ],
+   "triangulos": 1498,
+   "kb": 182.2
+  },
+  {
+   "id": "vara_pesca",
+   "nome": "Vara de pesca improvisada",
+   "grupo": "loot",
+   "categoria": "agricultura",
+   "montagem": "floor",
+   "lote": 15,
+   "recurso": "ferramenta",
+   "valor": 1,
+   "peso_kg": 0.4,
+   "empilha": 1,
+   "celulas": [
+    5,
+    1
+   ],
+   "fase": 1,
+   "onde": [
+    "abrigo",
+    "casa_barcos"
+   ],
+   "efeito": "pesca no lago (comida 3 a cada 20 min, em silêncio)",
+   "craft": {
+    "ingredientes": {
+     "lenha": 1,
+     "linha_pesca": 1
+    },
+    "estacao": "mao",
+    "tempo_s": 45,
+    "ferramenta": "faca_cozinha"
+   },
+   "pega": [
+    -0.55,
+    0.02,
+    0
+   ],
+   "arquivo": "loot/vara_pesca.glb",
+   "tamanho_m": [
+    1.62,
+    0.051,
+    0.124
+   ],
+   "triangulos": 1140,
+   "kb": 174.7
+  },
+  {
+   "id": "kit_reparo",
+   "nome": "Kit de reparo improvisado",
+   "grupo": "loot",
+   "categoria": "ferramentas",
+   "montagem": "floor",
+   "lote": 15,
+   "recurso": "ferramenta",
+   "valor": 3,
+   "peso_kg": 0.8,
+   "empilha": 1,
+   "celulas": [
+    2,
+    1
+   ],
+   "fase": 1,
+   "onde": [
+    "abrigo",
+    "garagem"
+   ],
+   "efeito": "repara arma branca (+40 % de durabilidade) ou barricada (+60 de vida); 3 usos",
+   "craft": {
+    "ingredientes": {
+     "fita_adesiva": 1,
+     "pote_parafusos": 1,
+     "arame_liso": 1,
+     "trapos": 1
+    },
+    "estacao": "mao",
+    "tempo_s": 30
+   },
+   "usos": 3,
+   "arquivo": "loot/kit_reparo.glb",
+   "tamanho_m": [
+    0.404,
+    0.066,
+    0.168
+   ],
+   "triangulos": 7848,
+   "kb": 498.9
+  },
+  {
+   "id": "colete_revistas",
+   "nome": "Colete de revistas e fita",
+   "grupo": "loot",
+   "categoria": "roupas",
+   "montagem": "floor",
+   "lote": 15,
+   "recurso": "equipamento",
+   "valor": 1,
+   "peso_kg": 1.4,
+   "empilha": 1,
+   "celulas": [
+    3,
+    2
+   ],
+   "fase": 1,
+   "onde": [
+    "abrigo"
+   ],
+   "efeito": "+15 de proteção contra mordida no tronco e nos braços; desgasta a cada mordida",
+   "equipa": "colete",
+   "protecao": 15,
+   "craft": {
+    "ingredientes": {
+     "livro": 2,
+     "fita_adesiva": 2,
+     "corda": 1
+    },
+    "estacao": "mao",
+    "tempo_s": 90
+   },
+   "arquivo": "loot/colete_revistas.glb",
+   "tamanho_m": [
+    0.48,
+    0.055,
+    0.613
+   ],
+   "triangulos": 1688,
+   "kb": 179.4
+  },
+  {
+   "id": "colete_sucata",
+   "nome": "Colete de placas de sucata",
+   "grupo": "loot",
+   "categoria": "roupas",
+   "montagem": "floor",
+   "lote": 15,
+   "recurso": "equipamento",
+   "valor": 2,
+   "peso_kg": 4.5,
+   "empilha": 1,
+   "celulas": [
+    3,
+    3
+   ],
+   "fase": 2,
+   "onde": [
+    "abrigo",
+    "ferrovelho"
+   ],
+   "efeito": "+35 de proteção; pesado (correr cansa 30 % mais rápido) e barulhento",
+   "equipa": "colete",
+   "protecao": 35,
+   "craft": {
+    "ingredientes": {
+     "chapa_metal": 1,
+     "couro": 2,
+     "pote_parafusos": 1,
+     "corda": 1
+    },
+    "estacao": "bancada_trabalho",
+    "tempo_s": 240,
+    "ferramenta": "martelo"
+   },
+   "arquivo": "loot/colete_sucata.glb",
+   "tamanho_m": [
+    0.53,
+    0.079,
+    0.702
+   ],
+   "triangulos": 2304,
+   "kb": 233.0
+  },
+  {
+   "id": "capacete_panela",
+   "nome": "Capacete de panela acolchoado",
+   "grupo": "loot",
+   "categoria": "roupas",
+   "montagem": "floor",
+   "lote": 15,
+   "recurso": "equipamento",
+   "valor": 1,
+   "peso_kg": 1.0,
+   "empilha": 1,
+   "celulas": [
+    2,
+    2
+   ],
+   "fase": 1,
+   "onde": [
+    "abrigo"
+   ],
+   "efeito": "+20 de proteção na cabeça; tira 10 % da audição",
+   "equipa": "capacete",
+   "protecao": 20,
+   "craft": {
+    "ingredientes": {
+     "panela": 1,
+     "trapos": 2,
+     "corda": 1
+    },
+    "estacao": "mao",
+    "tempo_s": 60,
+    "ferramenta": "faca_cozinha"
+   },
+   "arquivo": "loot/capacete_panela.glb",
+   "tamanho_m": [
+    0.278,
+    0.121,
+    0.257
+   ],
+   "triangulos": 7432,
+   "kb": 509.3
+  },
+  {
+   "id": "mochila_lona",
+   "nome": "Mochila de lona improvisada",
+   "grupo": "loot",
+   "categoria": "roupas",
+   "montagem": "floor",
+   "lote": 15,
+   "recurso": "equipamento",
+   "valor": 1,
+   "peso_kg": 0.8,
+   "empilha": 1,
+   "celulas": [
+    2,
+    3
+   ],
+   "fase": 1,
+   "onde": [
+    "abrigo"
+   ],
+   "efeito": "mochila de 4 × 4 células (a de loja tem 5 × 6); faz barulho de lona ao correr",
+   "equipa": "mochila",
+   "grade": [
+    4,
+    4
+   ],
+   "craft": {
+    "ingredientes": {
+     "lona": 1,
+     "corda": 1,
+     "trapos": 1
+    },
+    "estacao": "mao",
+    "tempo_s": 180,
+    "ferramenta": "kit_costura"
+   },
+   "pega": [
+    0,
+    0.36,
+    -0.06
+   ],
+   "arquivo": "loot/mochila_lona.glb",
+   "tamanho_m": [
+    0.325,
+    0.426,
+    0.273
+   ],
+   "triangulos": 13148,
+   "kb": 994.1
+  },
+  {
+   "id": "bolsa_cintura",
+   "nome": "Bolsa de cintura de pano",
+   "grupo": "loot",
+   "categoria": "roupas",
+   "montagem": "floor",
+   "lote": 15,
+   "recurso": "equipamento",
+   "valor": 1,
+   "peso_kg": 0.3,
+   "empilha": 1,
+   "celulas": [
+    2,
+    1
+   ],
+   "fase": 1,
+   "onde": [
+    "abrigo"
+   ],
+   "efeito": "+3 × 2 células de acesso rápido (usar sem abrir a mochila)",
+   "equipa": "colete_tatico",
+   "grade": [
+    3,
+    2
+   ],
+   "craft": {
+    "ingredientes": {
+     "trapos": 3,
+     "linha_pesca": 1,
+     "corda": 1
+    },
+    "estacao": "mao",
+    "tempo_s": 120,
+    "ferramenta": "kit_costura"
+   },
+   "arquivo": "loot/bolsa_cintura.glb",
+   "tamanho_m": [
+    0.678,
+    0.103,
+    0.114
+   ],
+   "triangulos": 4848,
+   "kb": 427.0
   }
  ]
 }

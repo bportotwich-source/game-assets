@@ -28,7 +28,7 @@ props/
 
 ## Lotes
 
-315 itens no total (222 mobílias e 93 itens de loot). O campo `lote` do catálogo diz de qual lote é cada um.
+331 itens no total (222 mobílias e 109 itens de loot). O campo `lote` do catálogo diz de qual lote é cada um.
 
 | Lote | Mobílias | Loot |
 |---|---|---|
@@ -46,10 +46,11 @@ props/
 | 12. Lazer | canoa no cavalete, boia salva-vidas na parede, balanço de parquinho, barraca de camping abandonada, guarda-sol fechado com base, telescópio refrator no tripé, carta celeste na parede, espreguiçadeira, cadeira alta de salva-vidas, escada de piscina, boia de piscina murcha, placa de regras da piscina, bandeirinha de buraco do minigolfe, estante de partitura, caixa de som de palco, microfone no pedestal, cadeira dobrável de plateia, poste de alto-falante do drive-in | remo de madeira, colete salva-vidas, skate, taco de minigolfe |
 | 13. Materiais de craft | - | punhado de sucata, pote de parafusos e porcas, molas e engrenagens, placa de circuito, motor elétrico pequeno, rolo de fio elétrico, rolo de arame liso, corrente com cadeado, par de dobradiças, pacote de abraçadeiras de nylon, lata de cola de contato, garrafa PET vazia 2 L, lata vazia, cano de PVC, lona dobrada, trapos amarrados, retalho de couro, saco de carvão, punhado de pedras, tijolos, saco de cimento 25 kg, carretel de linha e anzóis, garrafa de álcool 70 %, pedra de amolar |
 | 14. Armazenamento do abrigo | armário de armas de madeira com tela, cofre de armas de aço, suporte de parede para armas, prateleira de tábuas e tijolos, estante de despensa com caixotes, estante aramada com rodinhas, baú de madeira com cadeado, caixote militar verde, caixa organizadora empilhável, caixa de ferramentas de metal, pallet de tábuas cintadas, pallet de tijolos, pallet de sacos de cimento, pallet de sucata separada, pilha de sacos de areia no pallet, lenheiro coberto | - |
+| 15. Feitos à mão (fase Sozinho) | - | tocha de pano e álcool, lamparina de lata, fogareiro de lata, kit de acender fogo, filtro de água de garrafa, caneca de lata com alça de arame, curativo de pano fervido, tala de tábua e pano, armadilha de laço, vara de pesca improvisada, kit de reparo improvisado, colete de revistas e fita, colete de placas de sucata, capacete de panela acolchoado, mochila de lona improvisada, bolsa de cintura de pano |
 
 As versões completas das armas (fogo, arcos, facas, facão, lança), com partes, acessórios e animações, ficam em `props/armas/`; o arco, a lança e o facão daqui são o loot simples.
 
-O lote 1 fica em `gerar_props.py`; os outros em `lote2.py` a `lote14.py`, que o gerador carrega com as mesmas funções e materiais (o laço vai até o lote 29). Para um lote novo, crie `lote15.py`; categorias novas entram no dicionário `NOMES` de `gerar_props.py`.
+O lote 1 fica em `gerar_props.py`; os outros em `lote2.py` a `lote15.py`, que o gerador carrega com as mesmas funções e materiais (o laço vai até o lote 29). Para um lote novo, crie `lote16.py`; categorias novas entram no dicionário `NOMES` de `gerar_props.py`.
 
 Os lotes 6 a 12 trazem os itens únicos de cada tipo de prédio. Quem os põe dentro dos prédios é `scripts/ambientacao/` (ver `ROTEIRO_AMBIENTACAO.md`).
 
@@ -70,3 +71,4 @@ Campos novos:
 - `exibe` [{`y`, `x`, `z`}]: tampos das prateleiras onde o jogo põe os modelos do que está guardado.
 - `estoque` {`item`, `max`} + partes `camada_N` (tipo `camada`, `unidades`, `ordem`): paletes e o lenheiro guardam material de construção; o jogo esconde as camadas de cima conforme o estoque cai.
 - `empilhavel` + `altura_m`: caixas que encaixam uma sobre a outra.
+- `equipa` (capacete, colete, colete_tatico, mochila) + `grade`: onde o item feito à mão é vestido no inventário do jogo e quantas células ele dá; `protecao`, `usos`, `luz_m` e `dura_min` completam os efeitos.

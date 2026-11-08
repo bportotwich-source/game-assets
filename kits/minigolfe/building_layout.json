@@ -1,0 +1,1278 @@
+{
+ "grid": {
+  "module_width": 2.0,
+  "wall_thickness": 0.25,
+  "walk_level": 0.15,
+  "lawn_level": 0.05,
+  "clubhouse": {
+   "x": [
+    10.0,
+    18.0
+   ],
+   "z": [
+    2.0,
+    8.0
+   ],
+   "wall_top": 3.2,
+   "ceiling": 2.9
+  },
+  "holes": [
+   {
+    "path": [
+     [
+      -17.0,
+      10.5
+     ],
+     [
+      -9.0,
+      10.5
+     ],
+     [
+      -9.0,
+      7.0
+     ]
+    ],
+    "width": 1.0
+   },
+   {
+    "path": [
+     [
+      -17.0,
+      2.0
+     ],
+     [
+      -7.0,
+      2.0
+     ]
+    ],
+    "width": 1.0
+   },
+   {
+    "path": [
+     [
+      -17.0,
+      -3.5
+     ],
+     [
+      -11.0,
+      -3.5
+     ],
+     [
+      -11.0,
+      -10.0
+     ],
+     [
+      -5.0,
+      -10.0
+     ]
+    ],
+    "width": 1.0
+   },
+   {
+    "path": [
+     [
+      -2.0,
+      -10.5
+     ],
+     [
+      -2.0,
+      -3.5
+     ],
+     [
+      3.5,
+      -3.5
+     ]
+    ],
+    "width": 1.0
+   },
+   {
+    "path": [
+     [
+      -3.5,
+      9.5
+     ],
+     [
+      3.5,
+      9.5
+     ],
+     [
+      3.5,
+      7.0
+     ]
+    ],
+    "width": 1.0
+   }
+  ],
+  "green_top": 0.23,
+  "windmill": [
+   -12.0,
+   2.0
+  ],
+  "lighthouse": [
+   1.4,
+   -7.4
+  ],
+  "pond": [
+   -2.0,
+   5.25,
+   2.2,
+   1.6
+  ],
+  "bridge_x": [
+   -4.8,
+   0.8
+  ],
+  "site": {
+   "x": [
+    -20.0,
+    20.0
+   ],
+   "z": [
+    -15.0,
+    15.0
+   ]
+  },
+  "fence": {
+   "x": [
+    -19.5,
+    19.5
+   ],
+   "z": [
+    -14.5,
+    14.5
+   ],
+   "gate_x": [
+    6.0,
+    8.5
+   ]
+  },
+  "textures": "PBR (albedo + normal + ORM), 2 m tiles, UV in metres / 2"
+ },
+ "placements": [
+  {
+   "piece": "c_win_ea",
+   "pos": [
+    11.0,
+    0.15,
+    8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "clube",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "c_door",
+   "pos": [
+    13.0,
+    0.15,
+    8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "clube",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "c_svc",
+   "pos": [
+    15.0,
+    0.15,
+    8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "clube",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "c_win_eb",
+   "pos": [
+    17.0,
+    0.15,
+    8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "clube",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "c_sign_eb",
+   "pos": [
+    11.0,
+    0.15,
+    2.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "clube",
+    "ext"
+   ]
+  },
+  {
+   "piece": "c_win",
+   "pos": [
+    13.0,
+    0.15,
+    2.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "clube",
+    "ext"
+   ]
+  },
+  {
+   "piece": "c_door_b",
+   "pos": [
+    15.0,
+    0.15,
+    2.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "clube",
+    "ext"
+   ]
+  },
+  {
+   "piece": "c_plain_ea",
+   "pos": [
+    17.0,
+    0.15,
+    2.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "clube",
+    "ext"
+   ]
+  },
+  {
+   "piece": "c_plain_l_ea",
+   "pos": [
+    10.0,
+    0.15,
+    3.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "clube",
+    "ext"
+   ]
+  },
+  {
+   "piece": "c_plain_r_eb",
+   "pos": [
+    18.0,
+    0.15,
+    3.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "clube",
+    "ext"
+   ]
+  },
+  {
+   "piece": "c_win",
+   "pos": [
+    10.0,
+    0.15,
+    5.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "clube",
+    "ext"
+   ]
+  },
+  {
+   "piece": "c_win",
+   "pos": [
+    18.0,
+    0.15,
+    5.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "clube",
+    "ext"
+   ]
+  },
+  {
+   "piece": "c_plain_r_eb",
+   "pos": [
+    10.0,
+    0.15,
+    7.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "clube",
+    "ext"
+   ]
+  },
+  {
+   "piece": "c_plain_l_ea",
+   "pos": [
+    18.0,
+    0.15,
+    7.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "clube",
+    "ext"
+   ]
+  },
+  {
+   "piece": "c_roof",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "clube",
+    "roof"
+   ]
+  },
+  {
+   "piece": "c_floor",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "clube"
+   ]
+  },
+  {
+   "piece": "c_plan",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "clube"
+   ]
+  },
+  {
+   "piece": "door_front",
+   "pos": [
+    12.53,
+    0.155,
+    7.875
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "clube",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_back",
+   "pos": [
+    15.47,
+    0.155,
+    2.125
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "clube",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "counter",
+   "pos": [
+    15.6,
+    0.15,
+    7.75
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "clube"
+   ]
+  },
+  {
+   "piece": "register",
+   "pos": [
+    16.4,
+    1.07,
+    7.42
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "clube"
+   ]
+  },
+  {
+   "piece": "score_stand",
+   "pos": [
+    14.7,
+    1.07,
+    7.45
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "clube"
+   ]
+  },
+  {
+   "piece": "putter_rack",
+   "pos": [
+    10.25,
+    0.15,
+    3.4
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "clube"
+   ]
+  },
+  {
+   "piece": "putter_rack",
+   "pos": [
+    10.25,
+    0.15,
+    6.6
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "clube"
+   ]
+  },
+  {
+   "piece": "ball_bin",
+   "pos": [
+    12.6,
+    0.15,
+    2.25
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "clube"
+   ]
+  },
+  {
+   "piece": "ball_bin",
+   "pos": [
+    13.5,
+    0.15,
+    2.25
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "clube"
+   ]
+  },
+  {
+   "piece": "shelves",
+   "pos": [
+    11.2,
+    0.15,
+    2.25
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "clube"
+   ]
+  },
+  {
+   "piece": "fridge",
+   "pos": [
+    17.3,
+    0.15,
+    2.25
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "clube"
+   ]
+  },
+  {
+   "piece": "bench_in",
+   "pos": [
+    17.75,
+    0.15,
+    4.6
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "clube"
+   ]
+  },
+  {
+   "piece": "plant",
+   "pos": [
+    17.45,
+    0.15,
+    6.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "clube"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    11.6,
+    0.15,
+    7.45
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "clube"
+   ]
+  },
+  {
+   "piece": "site",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "fence",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "pond",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "bridge",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "hole_1",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "hole_2",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "hole_3",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "hole_4",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "hole_5",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "practice",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "windmill",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lighthouse",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "umbrella_r",
+   "pos": [
+    10.3,
+    0.15,
+    10.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "umbrella_y",
+   "pos": [
+    15.6,
+    0.15,
+    10.5
+   ],
+   "rotY": 20.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "flag_pole",
+   "pos": [
+    18.95,
+    0.05,
+    9.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    -18.9,
+    0.05,
+    13.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    -6.0,
+    0.05,
+    11.7
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    2.0,
+    0.05,
+    11.7
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    -18.9,
+    0.05,
+    5.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    -7.0,
+    0.05,
+    6.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    3.0,
+    0.05,
+    4.1
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    8.9,
+    0.05,
+    6.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    8.9,
+    0.05,
+    -6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    8.9,
+    0.05,
+    -12.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    -18.9,
+    0.05,
+    -12.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    5.6,
+    0.05,
+    -11.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    -15.5,
+    0.05,
+    3.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    4.0,
+    0.05,
+    3.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    9.2,
+    0.05,
+    -3.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    9.2,
+    0.05,
+    -9.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    11.0,
+    0.05,
+    -11.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    17.0,
+    0.05,
+    -3.4
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    5.6,
+    0.05,
+    6.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    9.0,
+    0.15,
+    12.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    8.9,
+    0.05,
+    3.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    -18.9,
+    0.05,
+    6.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    9.0,
+    0.05,
+    -12.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    9.2,
+    0.05,
+    7.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    9.2,
+    0.05,
+    2.7
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    18.8,
+    0.05,
+    7.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    18.8,
+    0.05,
+    3.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    18.8,
+    0.05,
+    5.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    16.8,
+    0.05,
+    0.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    9.4,
+    0.05,
+    1.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "palm",
+   "pos": [
+    4.5,
+    0.05,
+    0.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "palm_b",
+   "pos": [
+    -6.2,
+    0.05,
+    -1.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "palm",
+   "pos": [
+    4.6,
+    0.05,
+    -8.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "palm_b",
+   "pos": [
+    -15.0,
+    0.05,
+    -7.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "palm",
+   "pos": [
+    -19.0,
+    0.05,
+    9.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "palm_b",
+   "pos": [
+    18.9,
+    0.05,
+    1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "palm",
+   "pos": [
+    12.0,
+    0.05,
+    -2.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "palm_b",
+   "pos": [
+    17.6,
+    0.05,
+    -12.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "palm",
+   "pos": [
+    -19.0,
+    0.05,
+    -4.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "palm_b",
+   "pos": [
+    -5.8,
+    0.05,
+    11.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "palm",
+   "pos": [
+    11.0,
+    0.05,
+    -13.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "palm_b",
+   "pos": [
+    18.8,
+    0.05,
+    -7.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo",
+    "roof"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    7.2,
+    0.15,
+    9.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    14.0,
+    0.15,
+    4.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "clube"
+   ]
+  }
+ ]
+}

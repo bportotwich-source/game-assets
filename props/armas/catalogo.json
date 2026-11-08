@@ -5220,11 +5220,11 @@
    "arquivo": "armas/smg_ciclone_9mm.glb",
    "tamanho_m": [
     0.056,
-    0.214,
-    0.522
+    0.219,
+    0.644
    ],
-   "triangulos": 30760,
-   "kb": 1657.2,
+   "triangulos": 31934,
+   "kb": 1722.6,
    "partes": [
     {
      "no": "gatilho",
@@ -5293,8 +5293,8 @@
      "no": "carregador",
      "tipo": "remove",
      "direcao": [
-      0.0697564737441253,
-      -0.9975640502598242,
+      -0.3090169943749474,
+      -0.9510565162951535,
       0.0
      ],
      "municao": "municao_9mm",
@@ -5315,8 +5315,8 @@
      "pai": "smg_ciclone_9mm",
      "posicao_m": [
       0.0,
-      0.1005,
-      -0.08
+      0.1075,
+      -0.088
      ],
      "aceita": [
       "mira_holografica",
@@ -5337,8 +5337,8 @@
      "pai": "smg_ciclone_9mm",
      "posicao_m": [
       -0.0,
-      0.1005,
-      0.02
+      0.1075,
+      0.036
      ],
      "aceita": [
       "alca_rebativel",
@@ -5360,8 +5360,8 @@
      "pai": "smg_ciclone_9mm",
      "posicao_m": [
       0.0,
-      0.1005,
-      -0.192
+      0.1075,
+      -0.3
      ],
      "aceita": [
       "massa_rebativel",
@@ -5383,8 +5383,8 @@
      "pai": "smg_ciclone_9mm",
      "posicao_m": [
       0.0,
-      0.075,
-      -0.248
+      0.08,
+      -0.354
      ],
      "aceita": [
       "protetor_rosca_9mm",
@@ -5409,7 +5409,7 @@
      "posicao_m": [
       0.0,
       0.06,
-      -0.136
+      -0.182
      ],
      "substitui": "carregador",
      "aceita": [
@@ -5426,7 +5426,7 @@
      "posicao_m": [
       0.0,
       0.0545,
-      -0.186
+      -0.276
      ],
      "aceita": [
       "empunhadura_reta",
@@ -5450,15 +5450,15 @@
      "tipo": "mlok_lado",
      "pai": "smg_ciclone_9mm",
      "posicao_m": [
-      0.022,
-      0.0765,
-      -0.18
+      0.017,
+      0.08,
+      -0.258
      ],
      "aceita": [
       "lanterna_compacta",
       "lanterna_fuzil"
      ],
-     "descricao": "trilho da direita",
+     "descricao": "lado direito do guarda-mão",
      "explodir_m": [
       0.06,
       0.0,
@@ -5470,9 +5470,9 @@
      "tipo": "mlok_esq",
      "pai": "smg_ciclone_9mm",
      "posicao_m": [
-      -0.0165,
-      0.0765,
-      -0.18
+      -0.017,
+      0.08,
+      -0.258
      ],
      "aceita": [
       "modulo_laser",
@@ -5492,8 +5492,8 @@
      "pai": "smg_ciclone_9mm",
      "posicao_m": [
       -0.0205,
-      0.069,
-      0.026
+      0.074,
+      0.042
      ],
      "aceita": [
       "bandoleira"
@@ -5510,8 +5510,8 @@
      "pai": "coronha",
      "posicao_m": [
       -0.0,
-      0.045,
-      0.273
+      0.05,
+      0.289
      ],
      "descricao": "ponto da soleira que encosta no ombro"
     },
@@ -5521,8 +5521,8 @@
      "pai": "smg_ciclone_9mm",
      "posicao_m": [
       0.0,
-      0.075,
-      -0.248
+      0.08,
+      -0.354
      ],
      "descricao": "clarão de boca e origem do disparo (-Z)"
     },
@@ -5532,8 +5532,8 @@
      "pai": "smg_ciclone_9mm",
      "posicao_m": [
       0.0185,
-      0.079,
-      -0.055
+      0.084,
+      -0.178
      ],
      "descricao": "onde nasce o estojo (sai para a direita)"
     },
@@ -5543,8 +5543,8 @@
      "pai": "smg_ciclone_9mm",
      "posicao_m": [
       -0.0,
-      0.12,
-      0.02
+      0.127,
+      0.036
      ],
      "descricao": "centro do furo da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z)"
     }
@@ -5628,11 +5628,11 @@
    "arquivo": "armas/smg_ciclone_9mm_tan.glb",
    "tamanho_m": [
     0.056,
-    0.214,
-    0.522
+    0.219,
+    0.644
    ],
-   "triangulos": 30760,
-   "kb": 1660.9,
+   "triangulos": 31934,
+   "kb": 1726.3,
    "partes": [
     {
      "no": "gatilho",
@@ -5701,8 +5701,8 @@
      "no": "carregador",
      "tipo": "remove",
      "direcao": [
-      0.0697564737441253,
-      -0.9975640502598242,
+      -0.3090169943749474,
+      -0.9510565162951535,
       0.0
      ],
      "municao": "municao_9mm",
@@ -5723,8 +5723,8 @@
      "pai": "smg_ciclone_9mm_tan",
      "posicao_m": [
       0.0,
-      0.1005,
-      -0.08
+      0.1075,
+      -0.088
      ],
      "aceita": [
       "mira_holografica",
@@ -5745,8 +5745,8 @@
      "pai": "smg_ciclone_9mm_tan",
      "posicao_m": [
       -0.0,
-      0.1005,
-      0.02
+      0.1075,
+      0.036
      ],
      "aceita": [
       "alca_rebativel",
@@ -5768,8 +5768,8 @@
      "pai": "smg_ciclone_9mm_tan",
      "posicao_m": [
       0.0,
-      0.1005,
-      -0.192
+      0.1075,
+      -0.3
      ],
      "aceita": [
       "massa_rebativel",
@@ -5791,8 +5791,8 @@
      "pai": "smg_ciclone_9mm_tan",
      "posicao_m": [
       0.0,
-      0.075,
-      -0.248
+      0.08,
+      -0.354
      ],
      "aceita": [
       "protetor_rosca_9mm",
@@ -5817,7 +5817,7 @@
      "posicao_m": [
       0.0,
       0.06,
-      -0.136
+      -0.182
      ],
      "substitui": "carregador",
      "aceita": [
@@ -5834,7 +5834,7 @@
      "posicao_m": [
       0.0,
       0.0545,
-      -0.186
+      -0.276
      ],
      "aceita": [
       "empunhadura_reta",
@@ -5858,15 +5858,15 @@
      "tipo": "mlok_lado",
      "pai": "smg_ciclone_9mm_tan",
      "posicao_m": [
-      0.022,
-      0.0765,
-      -0.18
+      0.017,
+      0.08,
+      -0.258
      ],
      "aceita": [
       "lanterna_compacta",
       "lanterna_fuzil"
      ],
-     "descricao": "trilho da direita",
+     "descricao": "lado direito do guarda-mão",
      "explodir_m": [
       0.06,
       0.0,
@@ -5878,9 +5878,9 @@
      "tipo": "mlok_esq",
      "pai": "smg_ciclone_9mm_tan",
      "posicao_m": [
-      -0.0165,
-      0.0765,
-      -0.18
+      -0.017,
+      0.08,
+      -0.258
      ],
      "aceita": [
       "modulo_laser",
@@ -5900,8 +5900,8 @@
      "pai": "smg_ciclone_9mm_tan",
      "posicao_m": [
       -0.0205,
-      0.069,
-      0.026
+      0.074,
+      0.042
      ],
      "aceita": [
       "bandoleira"
@@ -5918,8 +5918,8 @@
      "pai": "coronha",
      "posicao_m": [
       -0.0,
-      0.045,
-      0.273
+      0.05,
+      0.289
      ],
      "descricao": "ponto da soleira que encosta no ombro"
     },
@@ -5929,8 +5929,8 @@
      "pai": "smg_ciclone_9mm_tan",
      "posicao_m": [
       0.0,
-      0.075,
-      -0.248
+      0.08,
+      -0.354
      ],
      "descricao": "clarão de boca e origem do disparo (-Z)"
     },
@@ -5940,8 +5940,8 @@
      "pai": "smg_ciclone_9mm_tan",
      "posicao_m": [
       0.0185,
-      0.079,
-      -0.055
+      0.084,
+      -0.178
      ],
      "descricao": "onde nasce o estojo (sai para a direita)"
     },
@@ -5951,8 +5951,8 @@
      "pai": "smg_ciclone_9mm_tan",
      "posicao_m": [
       -0.0,
-      0.12,
-      0.02
+      0.127,
+      0.036
      ],
      "descricao": "centro do furo da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z)"
     }
@@ -10129,8 +10129,8 @@
    "arquivo": "acessorios/carregador_ciclone_17.glb",
    "tamanho_m": [
     0.026,
-    0.112,
-    0.047
+    0.115,
+    0.07
    ],
    "triangulos": 1480,
    "kb": 73.6
@@ -10150,8 +10150,8 @@
    "arquivo": "acessorios/carregador_ciclone_30.glb",
    "tamanho_m": [
     0.026,
-    0.175,
-    0.052
+    0.176,
+    0.09
    ],
    "triangulos": 1672,
    "kb": 82.7
@@ -10178,11 +10178,11 @@
    "arquivo": "acessorios/tambor_ciclone_50.glb",
    "tamanho_m": [
     0.055,
-    0.169,
-    0.092
+    0.195,
+    0.112
    ],
    "triangulos": 2180,
-   "kb": 112.1
+   "kb": 112.0
   }
  ],
  "municao": [

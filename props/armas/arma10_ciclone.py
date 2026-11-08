@@ -1,13 +1,15 @@
 # Arma 9: submetralhadora Ciclone 9 mm (aceita tambor). Executado por gerar_armas.py (plano de lado: x frente, y cima, z direita).
-# Desenho proprio inspirado nas fotos do Bruno: corpo de cima reto com o cano bem alto (alinhado com o ombro), chassi de baixo
-# com a frente inclinada que segura o carregador, guarda-mato grande, punho atras e coronha de esqueleto que dobra para a direita.
+# Desenho proprio inspirado nas fotos do Bruno: corpo de cima longo e baixo (cano alto, na linha do ombro) com guarda-mao de fendas ovais,
+# chassi de baixo em V: laco do guarda-mato inclinado como o punho, painel triangular rebaixado e o carregador inclinado na frente.
 
-CX0, CX1 = -0.068, 0.178          # corpo de cima em x
-CY0, CY1 = -0.015, 0.02           # fundo e topo do corpo de cima (o trilho fica por cima)
+CX0, CX1 = -0.112, 0.258          # corpo de cima em x (o guarda-mao vai de 0.17 ate a frente)
+CY0, CY1 = -0.02, 0.022           # fundo e topo do corpo de cima (o trilho fica por cima)
 CW = 0.0165                       # meia largura do corpo de cima
-C_XM = 0.218                      # fim da rosca do cano (encaixe da boca)
-CMAG = (0.106, -0.015)            # topo do carregador (centro)
-CANG = math.radians(-4.0)         # carregador quase em pe, embaixo vai um pouco para a frente
+C_XM = 0.296                      # fim da rosca do cano (encaixe da boca)
+CRAKE = math.radians(18.0)        # inclinacao do punho, do laco do guarda-mato e do carregador
+GX0 = -0.036                      # frente do punho no topo
+CMAG = (0.124, CY0)               # topo do carregador (centro)
+CANG = CRAKE                      # carregador inclinado como o punho (embaixo vai para tras)
 CDIR = np.array([-math.sin(CANG), -math.cos(CANG)])
 CHX, CHY, CHZ = CX0 + 0.004, 0.004, CW + 0.004     # dobradica da coronha (lado direito)
 
@@ -33,9 +35,9 @@ def _carregador_ciclone(q, cap=30, mat='polimero'):
 
 def _tambor_ciclone(q, mat='polimero'):
     """Tambor de 50: pescoco curto que entra no poco e disco de lado (eixo z) com tampa recartilhada da corda."""
-    corpo = _paralelo(CMAG, 0.088, 0.0158, CDIR)
+    corpo = _paralelo(CMAG, 0.118, 0.0158, CDIR)
     q.add(mat, solido(arred(list(corpo.exterior.coords)[:-1], 0.0028), -0.0108, 0.0108, 0.0012))
-    c = np.array(CMAG) + CDIR * 0.122; R = 0.046
+    c = np.array(CMAG) + CDIR * 0.152; R = 0.046
     disco = torno_x([(0.0, -0.021), (R - 0.006, -0.021), (R, -0.015), (R, 0.015), (R - 0.006, 0.021), (0.0, 0.021)], 64)
     disco.apply_transform(TF.rotation_matrix(-math.pi / 2, [0, 1, 0])); disco.apply_translation([c[0], c[1], 0])
     q.add(mat, disco)
@@ -56,60 +58,68 @@ def _tambor_ciclone(q, mat='polimero'):
 
 
 def _corpo_ciclone(p, mat_c='aluminio_preto', mat_b='polimero'):
-    # corpo de cima: caixa com chanfros, emenda, janela do estojo a direita e frente com fendas
+    # ---- corpo de cima: caixa longa e baixa, guarda-mao com 2 fileiras de fendas ovais, janela grande do estojo a direita
     lado = arred([(CX0, CY1), (CX1, CY1), (CX1, CY0 + 0.004), (CX1 - 0.004, CY0), (CX0 + 0.004, CY0), (CX0, CY0 + 0.004)], 0.002)
     sec = Polygon([(-CW, CY0), (CW, CY0), (CW, CY1 - 0.004), (CW - 0.004, CY1), (-CW + 0.004, CY1), (-CW, CY1 - 0.004)])
     corpo = inter([solido(lado, -CW, CW), ext_x(sec, CX0 - 0.01, CX1 + 0.01)])
-    porta = solido(arred([(0.0, -0.006), (0.05, -0.006), (0.05, 0.011), (0.0, 0.011)], 0.003), CW - 0.006, CW + 0.01)
-    cortes = [porta]
+    cortes = [solido(arred([(0.098, -0.011), (0.142, -0.011), (0.142, 0.013), (0.098, 0.013)], 0.002), CW - 0.006, CW + 0.01)]   # janela do estojo
     for zs in (-1, 1):
-        for x0 in (0.118, 0.142):                                                                             # fendas da frente
-            cortes.append(solido(arred([(x0, -0.006), (x0 + 0.018, -0.006), (x0 + 0.018, 0.009), (x0, 0.009)], 0.0035),
-                                 min(zs * (CW - 0.0015), zs * (CW + 0.01)), max(zs * (CW - 0.0015), zs * (CW + 0.01))))
-        cortes.append(solido(arred([(0.06, 0.0115), (0.105, 0.0115), (0.105, 0.0135), (0.06, 0.0135)], 0.0008),
-                             min(zs * (CW - 0.0006), zs * (CW + 0.01)), max(zs * (CW - 0.0006), zs * (CW + 0.01))))     # risco decorativo
-    cortes.append(solido(arred([(0.03, -0.0065), (0.098, -0.0065), (0.098, -0.0015), (0.03, -0.0015)], 0.0015), -CW - 0.01, -CW + 0.0018))   # trilho da alavanca (esq.)
+        zz = (min(zs * (CW - 0.0018), zs * (CW + 0.01)), max(zs * (CW - 0.0018), zs * (CW + 0.01)))
+        for x0 in (0.176, 0.206):                                                                         # fendas ovais do guarda-mao
+            for (y0, y1) in ((0.004, 0.012), (-0.012, -0.004)):
+                cortes.append(solido(arred([(x0, y0), (x0 + 0.024, y0), (x0 + 0.024, y1), (x0, y1)], 0.0039), *zz))
+        cortes.append(solido(arred([(0.236, 0.004), (0.25, 0.004), (0.25, 0.012), (0.236, 0.012)], 0.0039), *zz))
+        cortes.append(solido(arred([(0.158, -0.0025), (0.168, -0.0025), (0.168, 0.0025), (0.158, 0.0025)], 0.0024), *zz))     # furo pequeno
+        cortes.append(solido(arred([(CX0 + 0.02, 0.0115), (0.09, 0.0115), (0.09, 0.0135), (CX0 + 0.02, 0.0135)], 0.0008),
+                             min(zs * (CW - 0.0006), zs * (CW + 0.01)), max(zs * (CW - 0.0006), zs * (CW + 0.01))))          # emenda de cima
+    cortes.append(solido(arred([(0.03, -0.0065), (0.095, -0.0065), (0.095, -0.0015), (0.03, -0.0015)], 0.0015), -CW - 0.01, -CW + 0.0018))  # trilho da alavanca (esq.)
     p.add(mat_c, menos(corpo, *cortes))
     trilho(p, mat_c, CX0 + 0.004, CX1 - 0.004, CY1, False)
-    trilho(p, mat_c, 0.128, CX1 - 0.003, CY0, True)
-    lado_t = P(); trilho(lado_t, mat_c, 0.112, CX1 - 0.004, 0.0, False)                                 # trilhos curtos dos dois lados
-    for zs in (-1, 1):
-        R = TF.translation_matrix([0, 0.0015, zs * CW]) @ TF.rotation_matrix(-zs * math.pi / 2, [1, 0, 0])
-        for k, ms in lado_t.parts.items():
-            for m in ms: p.add(k, m.copy().apply_transform(R))
-    # cano com ressalto e rosca 9 mm
-    p.add('aco_cano', torno_x([(0.0, CX1 - 0.01), (0.0098, CX1 - 0.01), (0.0098, CX1 + 0.006), (0.0078, CX1 + 0.009), (0.0078, C_XM - 0.012), (0.0068, C_XM - 0.0118)], 40))
+    trilho(p, mat_c, 0.178, CX1 - 0.004, CY0, True)
+    # cano com porca e rosca 9 mm
+    p.add('aco_cano', torno_x([(0.0, CX1 - 0.01), (0.0105, CX1 - 0.01), (0.0105, CX1 + 0.008), (0.0078, CX1 + 0.011), (0.0078, C_XM - 0.012), (0.0068, C_XM - 0.0118)], 40))
     rosca_x(p, 'aco_cano', 0.0068, C_XM - 0.0118, C_XM, 0.001)
     p.add('aco_cano', tubo_x(0.0045, 0.0068, C_XM - 0.0004, C_XM, sec=32))
-    # chassi de baixo (polimero): placa com o poco do carregador na frente, frente inclinada e guarda-mato grande
-    poco = _paralelo(CMAG, 0.2, 0.0166, CDIR)
-    chassi = arred([(-0.04, CY0 + 0.002), (0.132, CY0 + 0.002), (0.134, -0.03), (0.136, -0.074), (0.128, -0.08), (0.092, -0.08),
-                    (0.064, -0.036), (0.022, -0.033), (-0.004, -0.033), (-0.03, -0.028), (-0.04, -0.02)], 0.003)
-    janela = arred([(0.03, -0.022), (0.06, -0.022), (0.084, -0.06), (0.084, -0.068), (0.078, -0.07)], 0.003)            # vao em V do chassi
-    m_ch = solido(chassi, -CW + 0.0005, CW - 0.0005, 0.0022)
-    m_ch = menos(m_ch, solido(poco, -0.0114, 0.0114), solido(janela, -0.004, 0.004))
-    rebaixo = [solido(arred([(0.07, -0.034), (0.088, -0.034), (0.112, -0.072), (0.096, -0.072)], 0.003),
-                      min(zs * (CW - 0.002), zs * (CW + 0.01)), max(zs * (CW - 0.002), zs * (CW + 0.01))) for zs in (-1, 1)]   # rebaixo em V dos lados
-    p.add(mat_b, menos(m_ch, *rebaixo))
-    fora = arred([(-0.012, -0.03), (0.06, -0.03), (0.088, -0.074), (0.084, -0.086), (-0.006, -0.086), (-0.018, -0.078)], 0.005)
-    dentro = arred([(-0.004, -0.0355), (0.054, -0.0355), (0.077, -0.072), (0.074, -0.0795), (0.002, -0.0795), (-0.009, -0.074)], 0.004)
-    p.add(mat_b, solido(fora.difference(dentro), -0.0062, 0.0062, 0.0014))
-    # punho atras, inclinado, com pontilhado
-    CAB = suave([(-0.046, -0.02), (-0.008, -0.02), (-0.008, -0.036), (-0.012, -0.06), (-0.018, -0.09), (-0.022, -0.114), (-0.028, -0.124),
-                 (-0.06, -0.124), (-0.064, -0.116), (-0.058, -0.09), (-0.05, -0.06), (-0.046, -0.04)], 3)
-    larg = lambda y: 0.0132 + 0.0018 * GT.smooth(-0.03, -0.06, y)
-    p.add(mat_b, punho_redondo(CAB, -0.02, -0.124, larg, n=2.5, fatias=100, voltas=52, raio_base=0.004))
-    pont = punho_redondo(CAB, -0.02, -0.124, lambda y: larg(y) + 0.0004, n=2.5, fatias=100, voltas=52, raio_base=0.004)
-    area = solido(CAB.buffer(-0.0035, join_style=1).intersection(sbox(-1, -0.116, 1, -0.042)), -0.05, 0.05)
-    p.add('polimero_pontos' if mat_b == 'polimero' else 'polimero_pontos_tan', inter([pont, area]))
-    # pinos, retem do carregador (atras do poco), trava da coronha, base da dobradica
+    # ---- corpo de baixo (polimero): placa alta com o laco do guarda-mato (paralelogramo inclinado como o punho),
+    #      barra de baixo, poco do carregador inclinado na frente e o painel triangular rebaixado
+    t = math.tan(CRAKE)
+    gx = lambda y: GX0 - (CY0 - y) * t                       # frente do punho em cada altura
+    fr_x = lambda y: CMAG[0] + 0.0222 - (CY0 - y) * t          # frente do chassi: segue a frente do carregador
+    fora = [(GX0 - 0.046, CY0 + 0.001), (fr_x(CY0) + 0.004, CY0 + 0.001), (fr_x(-0.116), -0.116), (fr_x(-0.116) - 0.03, -0.12),
+            (0.04, -0.124), (gx(-0.128) - 0.004, -0.13), (gx(-0.128) - 0.012, -0.1)]
+    chassi = arred(fora, 0.0035)
+    ya, yb = -0.035, -0.114
+    laco = arred([(gx(ya) + 0.004, ya), (0.022, ya), (0.022 - (yb - ya) * -t, yb), (gx(yb) + 0.004, yb)], 0.006)
+    poco = _paralelo(CMAG, 0.3, 0.0166, CDIR)
+    m_ch = menos(solido(chassi, -CW + 0.0006, CW - 0.0006, 0.0022), solido(laco, -0.05, 0.05), solido(poco, -0.0114, 0.0114))
+    # barra de baixo e frente do laco mais finas que o corpo
+    barra = Polygon([(gx(yb) - 0.02, yb - 0.0005), (0.06, yb - 0.0005), (0.075, -0.15), (gx(yb) - 0.02, -0.15)])
+    finos = [solido(barra, 0.0078, 0.05), solido(barra, -0.05, -0.0078)]
+    # painel triangular rebaixado nos dois lados (ponta para baixo) e chanfro em V ao redor
+    tri = Polygon([(0.034, -0.03), (0.1, -0.03), (0.06, -0.1)]).buffer(-0.004, join_style=2).buffer(0.002)
     for zs in (-1, 1):
-        for (x, y) in ((-0.03, -0.006), (0.02, -0.022), (0.12, -0.024), (0.124, -0.062), (0.044, 0.004), (0.15, 0.012)):
-            p.add('aco_oxidado', cil_z(0.0022, min(zs * (CW - 0.001), zs * (CW + 0.0006)), max(zs * (CW - 0.001), zs * (CW + 0.0006)), x, y, 16))
-        p.add('aco_oxidado', solido(arred([(0.081, -0.04), (0.089, -0.04), (0.089, -0.05), (0.081, -0.05)], 0.0015),
-                                    min(zs * 0.005, zs * 0.0098), max(zs * 0.005, zs * 0.0098), 0.0005))
-    p.add(mat_c, caixa(CX0 - 0.006, CX0 + 0.012, -0.008, 0.016, CW - 0.002, CHZ + 0.0035))                           # bloco da dobradica
-    p.add('aco_oxidado', _cil_y(0.0035, -0.01, 0.018, CHX, CHZ, 20))
+        finos.append(solido(tri, min(zs * (CW - 0.0018), zs * (CW + 0.01)), max(zs * (CW - 0.0018), zs * (CW + 0.01))))
+    p.add(mat_b, menos(m_ch, *finos))
+    for zs in (-1, 1):                                                                                     # fundo do painel com textura
+        p.add('polimero_pontos' if mat_b == 'polimero' else 'polimero_pontos_tan',
+              solido(tri.buffer(-0.0005), min(zs * (CW - 0.0019), zs * (CW - 0.0017)), max(zs * (CW - 0.0019), zs * (CW - 0.0017))))
+    # punho inclinado com pontilhado
+    CAB = suave([(GX0 - 0.046, CY0), (GX0, CY0), (gx(-0.05), -0.05), (gx(-0.1) - 0.002, -0.1), (gx(-0.128) - 0.003, -0.128), (gx(-0.138) - 0.008, -0.138),
+                 (gx(-0.138) - 0.038, -0.138), (gx(-0.13) - 0.044, -0.13), (gx(-0.08) - 0.044, -0.08), (GX0 - 0.044, -0.03)], 3)
+    larg = lambda y: 0.0128 + 0.0016 * GT.smooth(-0.035, -0.06, y)
+    p.add(mat_b, punho_redondo(CAB, CY0, -0.138, larg, n=2.6, fatias=100, voltas=52, raio_base=0.004))
+    pont = punho_redondo(CAB, CY0, -0.138, lambda y: larg(y) + 0.0004, n=2.6, fatias=100, voltas=52, raio_base=0.004)
+    area = solido(CAB.buffer(-0.0035, join_style=1).intersection(sbox(-1, -0.13, 1, -0.045)), -0.05, 0.05)
+    p.add('polimero_pontos' if mat_b == 'polimero' else 'polimero_pontos_tan', inter([pont, area]))
+    # pinos e parafusos, retem do carregador, base da dobradica, argola
+    for zs in (-1, 1):
+        for (x, y, z) in ((GX0 - 0.03, -0.006, CW), (0.03, -0.006, CW), (0.075, 0.004, CW), (0.155, -0.008, CW), (0.215, -0.016, CW),
+                          (0.088, -0.108, CW - 0.0006), (0.035, -0.11, 0.0078), (0.006, -0.04, CW - 0.0006)):
+            p.add('aco_oxidado', cil_z(0.0024, min(zs * (z - 0.001), zs * (z + 0.0006)), max(zs * (z - 0.001), zs * (z + 0.0006)), x, y, 16))
+        p.add('aco_oxidado', solido(arred([(0.024, -0.042), (0.03, -0.042), (0.03, -0.052), (0.024, -0.052)], 0.0015),
+                                    min(zs * 0.005, zs * (CW - 0.0003)), max(zs * 0.005, zs * (CW - 0.0003)), 0.0005))    # retem do carregador
+    p.add(mat_c, caixa(CX0 - 0.006, CX0 + 0.012, -0.012, 0.016, CW - 0.002, CHZ + 0.0035))                                      # bloco da dobradica
+    p.add('aco_oxidado', _cil_y(0.0035, -0.014, 0.018, CHX, CHZ, 20))
     argola = Point(0.0, 0.0).buffer(0.0055, 24).difference(Point(0.0, 0.0).buffer(0.0033, 24))
     p.add('aco_oxidado', solido(affinity.translate(argola, CX0 + 0.012, -0.006), -CW - 0.004, -CW - 0.0005, 0.0006))   # argola esquerda
 
@@ -117,14 +127,14 @@ def _corpo_ciclone(p, mat_c='aluminio_preto', mat_b='polimero'):
 def _coronha_ciclone(q, mat='polimero'):
     """Coronha de esqueleto: barra de cima reta (apoio do rosto), barra de baixo inclinada, soleira com borracha."""
     X, Z = CHX, 0.0                     # aberta fica no meio; dobrada fica do lado direito
-    sup = LineString([(X - 0.004, 0.012), (X - 0.22, 0.012)]).buffer(0.0065, cap_style=2)
-    inf = LineString([(X - 0.004, -0.006), (X - 0.08, -0.03), (X - 0.2, -0.06)]).buffer(0.005, cap_style=1, join_style=1)
+    sup = LineString([(X - 0.004, 0.011), (X - 0.22, 0.011)]).buffer(0.0085, cap_style=2)
+    inf = LineString([(X - 0.004, -0.006), (X - 0.08, -0.03), (X - 0.2, -0.06)]).buffer(0.0068, cap_style=1, join_style=1)
     sol = arred([(X - 0.232, 0.019), (X - 0.212, 0.019), (X - 0.212, -0.075), (X - 0.232, -0.075)], 0.004)
     furo = arred([(X - 0.229, 0.002), (X - 0.216, 0.002), (X - 0.216, -0.05), (X - 0.229, -0.05)], 0.004)
-    q.add(mat, solido(unary_union([sup, inf, sol.difference(furo)]), Z - 0.008, Z + 0.008, 0.0025))
+    q.add(mat, solido(unary_union([sup, inf, sol.difference(furo)]), Z - 0.011, Z + 0.011, 0.003))
     q.add('borracha', solido(arred([(X - 0.239, 0.019), (X - 0.231, 0.019), (X - 0.231, -0.075), (X - 0.239, -0.075)], 0.003), Z - 0.0145, Z + 0.0145, 0.003))
     for y in np.arange(-0.07, 0.016, 0.006): q.add('borracha', caixa(X - 0.2405, X - 0.2385, y, y + 0.0025, Z - 0.0125, Z + 0.0125))
-    q.add(mat, caixa(X - 0.014, X + 0.004, -0.008, 0.016, -0.008, CHZ + 0.0055))                                # cabeca da dobradica
+    q.add(mat, caixa(X - 0.014, X + 0.004, -0.008, 0.016, -0.011, CHZ + 0.0055))                                # cabeca da dobradica
     q.add('aco_oxidado', cil_z(0.0032, CHZ + 0.0055, CHZ + 0.007, X - 0.006, 0.004, 16))                                # botao da trava
 
 
@@ -134,28 +144,28 @@ def _coronha_ciclone(q, mat='polimero'):
       estojo_s=0.02, descricao='Submetralhadora de cano alto, na linha do ombro: o coice vai reto para trás e quase não levanta. Atira muito rápido, '
                                'aceita carregador de pistola longo e o tambor de 50. A coronha dobra para o lado.')
 def smg_ciclone_9mm(A):
-    A.pivo = (-0.03, -0.075, 0.0)
+    A.pivo = (GX0 - 0.022, -0.08, 0.0)
     _corpo_ciclone(A.base)
-    gat = A.parte('gatilho', (0.012, -0.029, 0), explodir=(0.0, -0.05, 0), tipo='gira', eixo='z', curso_graus=-12, descricao='puxa para trás')
-    _gatilho_em(gat, 0.012, -0.029)
-    sel = A.parte('seletor', (-0.028, -0.008, 0), explodir=(0, 0, 0.04), tipo='gira', eixo='z', curso_graus=-120,
+    gat = A.parte('gatilho', (-0.012, -0.028, 0), explodir=(0.0, -0.05, 0), tipo='gira', eixo='z', curso_graus=-12, descricao='puxa para trás')
+    _gatilho_em(gat, -0.012, -0.028)
+    sel = A.parte('seletor', (-0.05, -0.008, 0), explodir=(0, 0, 0.04), tipo='gira', eixo='z', curso_graus=-120,
                   descricao='dos dois lados: trava (0°), semi (-40°), rajada de 2 (-80°), automático (-120°)')
     for zs in (-1, 1):
-        lev = arred([(-0.034, -0.012), (-0.014, -0.011), (-0.006, -0.007), (-0.012, -0.004), (-0.034, -0.004)], 0.0015)
+        lev = arred([(-0.056, -0.012), (-0.036, -0.011), (-0.028, -0.007), (-0.034, -0.004), (-0.056, -0.004)], 0.0015)
         sel.add('aco_oxidado', solido(lev, min(zs * (CW + 0.0006), zs * (CW + 0.0024)), max(zs * (CW + 0.0006), zs * (CW + 0.0024)), 0.0004))
-        sel.add('aco_oxidado', cil_z(0.0048, min(zs * (CW - 0.0004), zs * (CW + 0.0018)), max(zs * (CW - 0.0004), zs * (CW + 0.0018)), -0.028, -0.008, 20))
+        sel.add('aco_oxidado', cil_z(0.0048, min(zs * (CW - 0.0004), zs * (CW + 0.0018)), max(zs * (CW - 0.0004), zs * (CW + 0.0018)), -0.05, -0.008, 20))
     fr = A.parte('ferrolho', (0, 0, 0), explodir=(0.0, 0.0, 0.05), tipo='desliza', curso_m=-0.04, descricao='ferrolho visto pela janela da direita')
-    fr.add('aco_fosfatado', caixa(-0.006, 0.07, -0.0055, 0.0105, CW - 0.0045, CW - 0.0039)); fr.add('aco_inox', caixa(0.028, 0.04, -0.001, 0.005, CW - 0.0039, CW - 0.0033))
+    fr.add('aco_fosfatado', caixa(0.06, 0.15, -0.0105, 0.0125, CW - 0.0062, CW - 0.0056)); fr.add('aco_inox', caixa(0.128, 0.14, -0.002, 0.004, CW - 0.0056, CW - 0.005))
     al = A.parte('alavanca', (0, 0, 0), explodir=(0, 0, -0.05), tipo='desliza', curso_m=-0.06, descricao='alavanca de manejo dobrável do lado esquerdo')
-    al.add('aco_oxidado', caixa(0.088, 0.096, -0.0058, -0.0022, -CW + 0.0005, -CW + 0.0025))
-    al.add(  'polimero', solido(arred([(0.086, -0.008), (0.1, -0.008), (0.1, 0.0005), (0.086, 0.0005)], 0.002), -CW - 0.012, -CW + 0.0005, 0.0015))   # pega
+    al.add('aco_oxidado', caixa(0.085, 0.093, -0.0058, -0.0022, -CW + 0.0005, -CW + 0.0025))
+    al.add(  'polimero', solido(arred([(0.083, -0.008), (0.097, -0.008), (0.097, 0.0005), (0.083, 0.0005)], 0.002), -CW - 0.012, -CW + 0.0005, 0.0015))   # pega
     co = A.parte('coronha', (CHX, CHY, CHZ), explodir=(-0.08, 0, 0), tipo='gira', eixo='y', curso_graus=180, descricao='coronha de esqueleto: dobra para a direita (180°)')
     _coronha_ciclone(co)
     car = A.parte('carregador', (CMAG[0], CMAG[1], 0), explodir=(0, -0.12, 0), tipo='remove', direcao=[float(CDIR[0]), float(CDIR[1]), 0.0], municao='municao_9mm',
                   capacidade=30, descricao='carregador de 30 na frente do guarda-mato')
     _carregador_ciclone(car, 30)
     YM = CY1 + 0.0055
-    A.encaixe('encaixe_mira', (0.05, YM, 0), 'trilho_mira', explodir=(0, 0.07, 0),
+    A.encaixe('encaixe_mira', (0.03, YM, 0), 'trilho_mira', explodir=(0, 0.07, 0),
               aceita=['mira_holografica', 'mira_reflexa', 'mira_ponto_vermelho_tubo', 'luneta_1_6'], descricao='trilho de cima')
     A.encaixe('encaixe_alca', (CX0 + 0.018, YM, 0), 'alca_trilho', explodir=(-0.02, 0.05, 0), aceita=['alca_rebativel', 'alca_polimero', 'alca_polimero_tan'],
               padrao='alca_rebativel', rebate_com='encaixe_mira', descricao='deita (animação "dobrar" do acessório) quando há mira no encaixe_mira')
@@ -166,15 +176,15 @@ def smg_ciclone_9mm(A):
               padrao='protetor_rosca_9mm')
     A.encaixe('encaixe_carregador', (CMAG[0], CMAG[1], 0), 'carregador_ciclone', pai='carregador', substitui='carregador',
               aceita=['carregador_ciclone_30', 'carregador_ciclone_17', 'tambor_ciclone_50'], descricao='filho do nó carregador; ao pôr um carregador aqui, esconda o original')
-    A.encaixe('encaixe_empunhadura', (0.156, CY0 - 0.0055, 0), 'mlok_baixo', explodir=(0, -0.06, 0),
+    A.encaixe('encaixe_empunhadura', (0.218, CY0 - 0.0055, 0), 'mlok_baixo', explodir=(0, -0.06, 0),
               aceita=['empunhadura_reta', 'empunhadura_reta_tan', 'empunhadura_curta', 'empunhadura_curta_tan', 'empunhadura_dobravel', 'empunhadura_vertical', 'batente_mao'],
               padrao='empunhadura_reta', descricao='trilho curto de baixo')
-    A.encaixe('encaixe_lanterna', (0.15, 0.0015, CW + 0.0055), 'mlok_lado', explodir=(0, 0, 0.06), aceita=['lanterna_compacta', 'lanterna_fuzil'], descricao='trilho da direita')
-    A.encaixe('encaixe_laser', (0.15, 0.0015, -CW), 'mlok_esq', explodir=(0, 0, -0.06), aceita=['modulo_laser', 'modulo_laser_tan', 'laser_fuzil'], descricao='lado esquerdo da frente')
+    A.encaixe('encaixe_lanterna', (0.2, 0.0, CW + 0.0005), 'mlok_lado', explodir=(0, 0, 0.06), aceita=['lanterna_compacta', 'lanterna_fuzil'], descricao='lado direito do guarda-mão')
+    A.encaixe('encaixe_laser', (0.2, 0.0, -CW - 0.0005), 'mlok_esq', explodir=(0, 0, -0.06), aceita=['modulo_laser', 'modulo_laser_tan', 'laser_fuzil'], descricao='lado esquerdo da frente')
     A.encaixe('encaixe_bandoleira', (CX0 + 0.012, -0.006, -CW - 0.004), 'bandoleira', explodir=(0, 0, -0.04), aceita=['bandoleira'])
     A.encaixe('ombro', (CHX - 0.239, -0.03, 0), 'efeito', pai='coronha', descricao='ponto da soleira que encosta no ombro')
     A.encaixe('boca_fogo', (C_XM, 0, 0), 'efeito', descricao='clarão de boca e origem do disparo (-Z)')
-    A.encaixe('saida_estojo', (0.025, 0.004, CW + 0.002), 'efeito', descricao='onde nasce o estojo (sai para a direita)')
+    A.encaixe('saida_estojo', (0.12, 0.004, CW + 0.002), 'efeito', descricao='onde nasce o estojo (sai para a direita)')
     A.encaixe('mira_ferro', (CX0 + 0.018, YM + 0.0195, 0), 'mira', descricao='centro do furo da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z)')
     A.anim('atirar', 0.055, [('gatilho', 'r', (0, 0, 1), pose([(0, 0), (0.006, -12), (0.03, -12), (0.05, 0)])),
                              ('ferrolho', 't', pose([(0, (0, 0, 0)), (0.005, (0, 0, 0)), (0.024, (-0.04, 0, 0)), (0.048, (0, 0, 0))])),

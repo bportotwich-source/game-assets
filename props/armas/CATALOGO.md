@@ -67,6 +67,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Supressor 5,56 (`supressor_556`) | Boca do cano | `boca_556` | ruido_m ×0,35, recuo ×0,85, clarao ×0,1 | 0,45 kg | muito raro | 4076 |
 | Carregador 5,56 (30) (`carregador_556_30`) | Carregadores | `carregador_556` | - | 0,13 kg | incomum | 4468 |
 | Tambor 5,56 (60) (`tambor_556_60`) | Carregadores | `carregador_556` | recarga_s ×1,4, tempo_mirar ×1,15 | 0,6 kg | muito raro | 4980 |
+| Tambor tático 5,56 (60) (`tambor_556_60_tatico`) | Carregadores | `carregador_556` | recarga_s ×1,35, tempo_mirar ×1,13 | 0,55 kg | muito raro | 6396 |
 | Carregador longo 5,56 (60) (`carregador_556_60`) | Carregadores | `carregador_556` | recarga_s ×1,2, tempo_mirar ×1,08 | 0,45 kg | muito raro | 13840 |
 | Módulo de mira laser (`modulo_laser`) | Lasers | `mlok_esq` | precisao_sem_mirar ×1,5 | 0,24 kg | muito raro | 5674 |
 | Lanterna compacta de trilho (`lanterna_compacta`) | Lanternas | `mlok_lado` | - | 0,11 kg | incomum | 2104 |
@@ -138,7 +139,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Fuzil Vigília 5,56**, `encaixe_alca`: alca_rebativel
 - **Fuzil Vigília 5,56**, `encaixe_massa`: massa_rebativel
 - **Fuzil Vigília 5,56**, `encaixe_boca`: quebra_chamas_556, compensador_556, supressor_556, supressor_556_tan
-- **Fuzil Vigília 5,56**, `encaixe_carregador`: carregador_556_30, carregador_556_60, tambor_556_60, carregador_556_30_tan
+- **Fuzil Vigília 5,56**, `encaixe_carregador`: carregador_556_30, carregador_556_60, tambor_556_60, carregador_556_30_tan, tambor_556_60_tatico
 - **Fuzil Vigília 5,56**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan
 - **Fuzil Vigília 5,56**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, batente_mao
 - **Fuzil Vigília 5,56**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
@@ -149,7 +150,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_alca`: alca_rebativel
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_massa`: massa_rebativel
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_boca`: quebra_chamas_556, compensador_556, supressor_556, supressor_556_tan
-- **Fuzil Vigília 5,56 bicolor**, `encaixe_carregador`: carregador_556_30, carregador_556_60, tambor_556_60, carregador_556_30_tan
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_carregador`: carregador_556_30, carregador_556_60, tambor_556_60, carregador_556_30_tan, tambor_556_60_tatico
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, batente_mao
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta

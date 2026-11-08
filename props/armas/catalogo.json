@@ -1872,7 +1872,8 @@
       "carregador_556_30",
       "carregador_556_60",
       "tambor_556_60",
-      "carregador_556_30_tan"
+      "carregador_556_30_tan",
+      "tambor_556_60_tatico"
      ],
      "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda as malhas do nó carregador"
     },
@@ -2306,7 +2307,8 @@
       "carregador_556_30",
       "carregador_556_60",
       "tambor_556_60",
-      "carregador_556_30_tan"
+      "carregador_556_30_tan",
+      "tambor_556_60_tatico"
      ],
      "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda as malhas do nó carregador"
     },
@@ -4257,6 +4259,34 @@
    ],
    "triangulos": 4980,
    "kb": 237.7
+  },
+  {
+   "id": "tambor_556_60_tatico",
+   "nome": "Tambor tático 5,56 (60)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_556",
+   "capacidade": 60,
+   "municao": "municao_556",
+   "peso_kg": 0.55,
+   "raridade": "muito raro",
+   "valor_troca": 65,
+   "modificadores": {
+    "recarga_s": 1.35,
+    "tempo_mirar": 1.13
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Tambor de 60 com janela na tampa para ver quantos sobram, abas de pega e alavanca para carregar sem dar corda.",
+   "arquivo": "acessorios/tambor_556_60_tatico.glb",
+   "tamanho_m": [
+    0.102,
+    0.174,
+    0.1
+   ],
+   "triangulos": 6396,
+   "kb": 305.7
   },
   {
    "id": "carregador_556_60",

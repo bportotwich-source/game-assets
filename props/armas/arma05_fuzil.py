@@ -443,6 +443,51 @@ def carregador_556_30(A): _carregador_curvo(A.base, 30); A.pivo = (MAG_X, MAG_Y,
 def tambor_556_60(A): _tambor_60(A.base); A.pivo = (MAG_X, MAG_Y, 0)
 
 
+def _tambor_60_tatico(q):
+    """Tambor tatico de 60 (outro modelo): torre alta com cara de carregador, colar largo, corpo com 4 abas nos cantos da tampa,
+    janela na tampa mostrando os cartuchos, botao central e alavanca de carga em cima."""
+    q.add('polimero', solido(arred([(MAG_X - 0.029, MAG_Y), (MAG_X + 0.029, MAG_Y), (MAG_X + 0.031, -0.09), (MAG_X - 0.031, -0.09)], 0.002),
+                             -0.0102, 0.0102, 0.0012))                                                  # torre alta
+    for zs in (-1, 1):
+        q.add('polimero', solido(arred([(MAG_X - 0.02, -0.03), (MAG_X + 0.004, -0.03), (MAG_X + 0.004, -0.07), (MAG_X - 0.02, -0.07)], 0.003),
+                                 min(zs * 0.0102, zs * 0.011), max(zs * 0.0102, zs * 0.011), 0.0004))      # painel da torre
+        q.add('polimero', solido(arred([(MAG_X + 0.012, -0.034), (MAG_X + 0.016, -0.034), (MAG_X + 0.016, -0.05), (MAG_X + 0.012, -0.05)], 0.001),
+                                 min(zs * 0.0102, zs * 0.0116), max(zs * 0.0102, zs * 0.0116)))            # trava de dedo
+    Rd, cyy = 0.05, -0.138; x0, x1 = MAG_X - 0.04, MAG_X + 0.05
+    q.add('polimero', solido(arred([(MAG_X - 0.038, -0.078), (MAG_X + 0.038, -0.078), (MAG_X + 0.04, -0.098), (MAG_X - 0.04, -0.098)], 0.004),
+                             -0.024, 0.024, 0.005))                                                    # colar largo
+    q.add('polimero', torno_x([(0.0, x0), (Rd - 0.005, x0), (Rd - 0.001, x0 + 0.003), (Rd, x0 + 0.006), (Rd, x1 - 0.004), (Rd - 0.003, x1), (0.0, x1)], 72, y=cyy))
+    q.add('polimero', tubo_x(Rd - 0.002, Rd + 0.0012, x0 + 0.045, x0 + 0.05, y=cyy, sec=72, ch=0.0006))   # junta das metades
+    for k in range(4):                                                                             # abas nos cantos da tampa
+        a = math.pi / 4 + k * math.pi / 2
+        m = solido(arred([(x1 - 0.022, -0.009), (x1 + 0.002, -0.009), (x1 + 0.002, 0.009), (x1 - 0.022, 0.009)], 0.002), -0.006, 0.006, 0.0015)
+        m.apply_transform(TF.rotation_matrix(-math.pi / 2, [1, 0, 0])); m.apply_translation([0, 0, Rd - 0.002])
+        m.apply_transform(TF.rotation_matrix(a, [1, 0, 0])); m.apply_translation([0, cyy, 0]); q.add('polimero', m)
+    tampa = torno_x([(0.0, x1 + 0.004), (Rd - 0.012, x1 + 0.004), (Rd - 0.006, x1 + 0.002), (Rd - 0.004, x1 - 0.001)], 72, y=cyy)
+    jan = caixa(x1 - 0.004, x1 + 0.01, cyy + 0.016, cyy + 0.04, -0.0065, 0.0065)
+    q.add('polimero', menos(tampa, jan))
+    q.add('lente_clara', caixa(x1 + 0.0005, x1 + 0.0012, cyy + 0.016, cyy + 0.04, -0.0065, 0.0065))
+    for i, y in enumerate((cyy + 0.021, cyy + 0.03)):                                              # cartuchos vistos pela janela
+        q.add('latao', cil_x(0.0045, x1 - 0.012, x1 - 0.0005, y, 0.0, 20)); q.add('aco_oxidado', cil_x(0.0012, x1 - 0.0006, x1 - 0.0002, y, 0.0, 10))
+    q.add('tinta_laranja', caixa(x1 - 0.012, x1 - 0.001, cyy + 0.035, cyy + 0.0395, -0.005, 0.005))      # seguidor laranja
+    q.add('polimero', torno_x([(0.0, x1 + 0.007), (0.0105, x1 + 0.007), (0.012, x1 + 0.0055), (0.012, x1 + 0.003)], 48, y=cyy))   # botao central
+    q.add('polimero', torno_x([(0.0, x0 - 0.003), (Rd - 0.012, x0 - 0.003), (Rd - 0.006, x0 - 0.0015), (Rd - 0.005, x0 + 0.001)], 72, y=cyy))
+    for k in range(8):                                                                             # pontilhado de pega embaixo da tampa
+        for j in range(3):
+            q.add('polimero', cil_x(0.0009, x1 + 0.0035, x1 + 0.0045, cyy - 0.03 - j * 0.0035, -0.0105 + k * 0.003, 8))
+    lev = arred([(x1 - 0.03, cyy + Rd - 0.002), (x1 - 0.004, cyy + Rd - 0.002), (x1 - 0.002, cyy + Rd + 0.008), (x1 - 0.012, cyy + Rd + 0.012),
+                 (x1 - 0.026, cyy + Rd + 0.008)], 0.003)
+    q.add('polimero', solido(lev, 0.024, 0.034, 0.0015))                                            # alavanca de carga (direita)
+    q.add('aco_oxidado', cil_z(0.0022, 0.022, 0.0355, x1 - 0.022, cyy + Rd + 0.004, 12))
+    q.merge(_cartucho_556(14), TF.translation_matrix([MAG_X - 0.026, MAG_Y - 0.0035, 0.002]))
+
+
+@_acessorio('tambor_556_60_tatico', 'Tambor tático 5,56 (60)', 'carregador', 'carregador_556', capacidade=60, municao='municao_556', peso_kg=0.55,
+            raridade='muito raro', valor_troca=65, modificadores={'recarga_s': 1.35, 'tempo_mirar': 1.13}, onde=['quartel'],
+            descricao='Tambor de 60 com janela na tampa para ver quantos sobram, abas de pega e alavanca para carregar sem dar corda.')
+def tambor_556_60_tatico(A): _tambor_60_tatico(A.base); A.pivo = (MAG_X, MAG_Y, 0)
+
+
 @_acessorio('carregador_556_60', 'Carregador longo 5,56 (60)', 'carregador', 'carregador_556', capacidade=60, municao='municao_556', peso_kg=0.45,
             raridade='muito raro', valor_troca=50, modificadores={'recarga_s': 1.2, 'tempo_mirar': 1.08}, onde=['quartel'],
             descricao='Carregador longo de alumínio com quatro fileiras: 60 tiros num pente só. Mais leve que o tambor, mas bate no chão quando deitado.')
@@ -654,7 +699,7 @@ def supressor_556_tan(A): supressor_556(A); _em_tan(A)
 def carregador_556_30_tan(A): _carregador_curvo(A.base, 30); _em_tan(A); A.pivo = (MAG_X, MAG_Y, 0)
 
 
-NOVOS = {'encaixe_mira': [], 'encaixe_boca': ['supressor_556_tan'], 'encaixe_carregador': ['carregador_556_30_tan'],
+NOVOS = {'encaixe_mira': [], 'encaixe_boca': ['supressor_556_tan'], 'encaixe_carregador': ['carregador_556_30_tan', 'tambor_556_60_tatico'],
          'encaixe_coronha': ['coronha_retratil_ar_tan'], 'encaixe_laser': ['modulo_laser'], 'encaixe_lanterna': ['lanterna_compacta'],
          'encaixe_empunhadura': ['empunhadura_curta', 'empunhadura_curta_tan', 'empunhadura_quadrada', 'empunhadura_cilindrica', 'batente_mao']}
 

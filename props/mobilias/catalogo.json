@@ -1805,7 +1805,7 @@
    ],
    "constroi": {
     "corda": 1,
-    "latas vazias": 4
+    "lata_vazia": 4
    },
    "ferramenta": "nenhuma",
    "estacao": "alarme (zumbi tropeça na linha, as latas batem e acordam o jogador)",
@@ -6844,6 +6844,2367 @@
    ],
    "triangulos": 876,
    "kb": 94.0
+  },
+  {
+   "id": "armario_armas_abrigo",
+   "nome": "Armário de armas de madeira com tela",
+   "grupo": "mobilias",
+   "categoria": "armazenamento",
+   "montagem": "floor",
+   "lote": 14,
+   "comodos": [
+    "abrigo",
+    "casas",
+    "quartel",
+    "fazenda"
+   ],
+   "conteiner": true,
+   "slots": 12,
+   "grade": [
+    6,
+    4
+   ],
+   "saque": [
+    "armas",
+    "municao"
+   ],
+   "aceita": [
+    "armas",
+    "municao",
+    "acessorios"
+   ],
+   "trancado": true,
+   "tranca": "cadeado",
+   "ferramenta": "martelo",
+   "estacao_obra": "bancada_carpintaria",
+   "constroi": {
+    "tabua": 8,
+    "caixa_pregos": 1,
+    "dobradicas": 1,
+    "corrente_cadeado": 1,
+    "arame_liso": 1
+   },
+   "fase": 2,
+   "estacao": "arsenal (guarda e mostra as armas da base; moradores pegam daqui para a vigia)",
+   "barricada": true,
+   "vagas_armas": [
+    {
+     "tipo": "longa",
+     "pos": [
+      -0.42,
+      0.11,
+      -0.12
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "longa",
+     "pos": [
+      -0.252,
+      0.11,
+      -0.12
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "longa",
+     "pos": [
+      -0.084,
+      0.11,
+      -0.12
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "longa",
+     "pos": [
+      0.084,
+      0.11,
+      -0.12
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "longa",
+     "pos": [
+      0.252,
+      0.11,
+      -0.12
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "longa",
+     "pos": [
+      0.42,
+      0.11,
+      -0.12
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "curta",
+     "pos": [
+      -0.36,
+      1.42,
+      -0.2
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "curta",
+     "pos": [
+      -0.12,
+      1.42,
+      -0.2
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "curta",
+     "pos": [
+      0.12,
+      1.42,
+      -0.2
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "curta",
+     "pos": [
+      0.36,
+      1.42,
+      -0.2
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "branca",
+     "pos": [
+      -0.3,
+      1.72,
+      -0.2
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "branca",
+     "pos": [
+      0.0,
+      1.72,
+      -0.2
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "branca",
+     "pos": [
+      0.3,
+      1.72,
+      -0.2
+     ],
+     "rot_y": 0
+    }
+   ],
+   "exibe": [
+    {
+     "y": 1.265,
+     "x": [
+      -0.5,
+      0.5
+     ],
+     "z": [
+      -0.21,
+      0.15
+     ]
+    }
+   ],
+   "arquivo": "mobilias/armario_armas_abrigo.glb",
+   "tamanho_m": [
+    1.148,
+    2.095,
+    0.858
+   ],
+   "triangulos": 26644,
+   "kb": 1420.2,
+   "partes": [
+    {
+     "no": "porta_esq",
+     "origem": [
+      -0.5700000000000001,
+      0,
+      0.21000000000000002
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -115
+    },
+    {
+     "no": "porta_dir",
+     "origem": [
+      0.5700000000000001,
+      0,
+      0.21000000000000002
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 115
+    }
+   ]
+  },
+  {
+   "id": "cofre_armas",
+   "nome": "Cofre de armas de aço",
+   "grupo": "mobilias",
+   "categoria": "armazenamento",
+   "montagem": "floor",
+   "lote": 14,
+   "comodos": [
+    "delegacia",
+    "mansao",
+    "casas",
+    "concessionaria"
+   ],
+   "conteiner": true,
+   "slots": 14,
+   "grade": [
+    6,
+    5
+   ],
+   "saque": [
+    "armas",
+    "municao",
+    "moedas"
+   ],
+   "aceita": [
+    "armas",
+    "municao",
+    "acessorios",
+    "remedios"
+   ],
+   "trancado": true,
+   "tranca": "segredo (achar o bilhete com a combinação; arrombar leva 10 min e faz muito barulho)",
+   "peso_kg": 280,
+   "fase": 2,
+   "estacao": "arsenal blindado (à prova de saqueadores e de incêndio)",
+   "vagas_armas": [
+    {
+     "tipo": "longa",
+     "pos": [
+      -0.25,
+      0.1,
+      -0.12
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "longa",
+     "pos": [
+      -0.15,
+      0.1,
+      -0.12
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "longa",
+     "pos": [
+      -0.05,
+      0.1,
+      -0.12
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "longa",
+     "pos": [
+      0.05,
+      0.1,
+      -0.12
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "longa",
+     "pos": [
+      0.15,
+      0.1,
+      -0.12
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "longa",
+     "pos": [
+      0.25,
+      0.1,
+      -0.12
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "curta",
+     "pos": [
+      -0.18,
+      1.1,
+      0.22
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "curta",
+     "pos": [
+      -0.06,
+      1.1,
+      0.22
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "curta",
+     "pos": [
+      0.06,
+      1.1,
+      0.22
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "curta",
+     "pos": [
+      0.18,
+      1.1,
+      0.22
+     ],
+     "rot_y": 0
+    }
+   ],
+   "exibe": [
+    {
+     "y": 1.32,
+     "x": [
+      -0.3,
+      0.3
+     ],
+     "z": [
+      -0.2,
+      0.15
+     ]
+    }
+   ],
+   "arquivo": "mobilias/cofre_armas.glb",
+   "tamanho_m": [
+    0.755,
+    1.55,
+    0.599
+   ],
+   "triangulos": 4292,
+   "kb": 256.8,
+   "partes": [
+    {
+     "no": "porta",
+     "origem": [
+      0.36,
+      0,
+      0.2
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -105
+    }
+   ]
+  },
+  {
+   "id": "rack_armas_parede",
+   "nome": "Suporte de parede para armas",
+   "grupo": "mobilias",
+   "categoria": "armazenamento",
+   "montagem": "wall",
+   "lote": 14,
+   "altura_sugerida_m": 1.05,
+   "comodos": [
+    "abrigo",
+    "casas",
+    "fazenda",
+    "casa_de_campo"
+   ],
+   "constroi": {
+    "tabua": 2,
+    "cano_metal": 1,
+    "caixa_pregos": 1
+   },
+   "ferramenta": "martelo",
+   "fase": 1,
+   "estacao": "rack (mostra até 4 armas longas deitadas e 3 armas brancas)",
+   "vagas_armas": [
+    {
+     "tipo": "longa",
+     "pos": [
+      0.0,
+      0.12,
+      0.07
+     ],
+     "rot_y": 90,
+     "deitada": true
+    },
+    {
+     "tipo": "longa",
+     "pos": [
+      0.0,
+      0.32,
+      0.07
+     ],
+     "rot_y": 90,
+     "deitada": true
+    },
+    {
+     "tipo": "longa",
+     "pos": [
+      0.0,
+      0.52,
+      0.07
+     ],
+     "rot_y": 90,
+     "deitada": true
+    },
+    {
+     "tipo": "longa",
+     "pos": [
+      0.0,
+      0.72,
+      0.07
+     ],
+     "rot_y": 90,
+     "deitada": true
+    },
+    {
+     "tipo": "branca",
+     "pos": [
+      -0.3,
+      0.9,
+      0.04
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "branca",
+     "pos": [
+      0.0,
+      0.9,
+      0.04
+     ],
+     "rot_y": 0
+    },
+    {
+     "tipo": "branca",
+     "pos": [
+      0.3,
+      0.9,
+      0.04
+     ],
+     "rot_y": 0
+    }
+   ],
+   "arquivo": "mobilias/rack_armas_parede.glb",
+   "tamanho_m": [
+    1.1,
+    1.0,
+    0.112
+   ],
+   "triangulos": 1952,
+   "kb": 229.8
+  },
+  {
+   "id": "prateleira_improvisada",
+   "nome": "Prateleira de tábuas e tijolos",
+   "grupo": "mobilias",
+   "categoria": "armazenamento",
+   "montagem": "floor",
+   "lote": 14,
+   "comodos": [
+    "abrigo",
+    "casas",
+    "garagem"
+   ],
+   "conteiner": true,
+   "slots": 9,
+   "grade": [
+    6,
+    3
+   ],
+   "saque": [
+    "comida",
+    "utensilios",
+    "materiais"
+   ],
+   "aceita": [],
+   "constroi": {
+    "tabua": 3,
+    "tijolo": 6
+   },
+   "ferramenta": "nenhuma",
+   "fase": 1,
+   "estacao": "prateleira (estoque visível; comida guardada aqui não estraga com rato)",
+   "exibe": [
+    {
+     "y": 0.08,
+     "x": [
+      -0.68,
+      0.68
+     ],
+     "z": [
+      -0.13,
+      0.13
+     ]
+    },
+    {
+     "y": 0.465,
+     "x": [
+      -0.68,
+      0.68
+     ],
+     "z": [
+      -0.13,
+      0.13
+     ]
+    },
+    {
+     "y": 0.85,
+     "x": [
+      -0.68,
+      0.68
+     ],
+     "z": [
+      -0.13,
+      0.13
+     ]
+    }
+   ],
+   "arquivo": "mobilias/prateleira_improvisada.glb",
+   "tamanho_m": [
+    1.489,
+    0.859,
+    0.296
+   ],
+   "triangulos": 2364,
+   "kb": 238.6
+  },
+  {
+   "id": "despensa",
+   "nome": "Estante de despensa com caixotes",
+   "grupo": "mobilias",
+   "categoria": "armazenamento",
+   "montagem": "floor",
+   "lote": 14,
+   "comodos": [
+    "abrigo",
+    "casas",
+    "diner",
+    "armazem",
+    "supermercado"
+   ],
+   "conteiner": true,
+   "slots": 16,
+   "grade": [
+    8,
+    4
+   ],
+   "saque": [
+    "comida",
+    "agua"
+   ],
+   "aceita": [
+    "comida",
+    "agua",
+    "remedios"
+   ],
+   "fase": 2,
+   "constroi": {
+    "tabua": 10,
+    "caixa_pregos": 1
+   },
+   "ferramenta": "martelo",
+   "estacao_obra": "bancada_carpintaria",
+   "estacao": "despensa comunitária (a cozinha e os moradores tiram a comida daqui; mostra quantos dias de comida tem a base)",
+   "exibe": [
+    {
+     "y": 0.12,
+     "x": [
+      -0.58,
+      0.58
+     ],
+     "z": [
+      -0.18,
+      0.18
+     ]
+    },
+    {
+     "y": 0.54,
+     "x": [
+      -0.58,
+      0.58
+     ],
+     "z": [
+      -0.18,
+      0.18
+     ]
+    },
+    {
+     "y": 0.96,
+     "x": [
+      -0.58,
+      0.58
+     ],
+     "z": [
+      -0.18,
+      0.18
+     ]
+    },
+    {
+     "y": 1.38,
+     "x": [
+      -0.58,
+      0.58
+     ],
+     "z": [
+      -0.18,
+      0.18
+     ]
+    }
+   ],
+   "arquivo": "mobilias/despensa.glb",
+   "tamanho_m": [
+    1.2,
+    1.86,
+    0.415
+   ],
+   "triangulos": 20656,
+   "kb": 1481.5
+  },
+  {
+   "id": "estante_aramada",
+   "nome": "Estante aramada com rodinhas",
+   "grupo": "mobilias",
+   "categoria": "armazenamento",
+   "montagem": "floor",
+   "lote": 14,
+   "comodos": [
+    "supermercado",
+    "diner",
+    "clinica",
+    "abrigo",
+    "galeria"
+   ],
+   "conteiner": true,
+   "slots": 10,
+   "grade": [
+    6,
+    4
+   ],
+   "saque": [
+    "comida",
+    "limpeza",
+    "utensilios"
+   ],
+   "aceita": [],
+   "empurrar": true,
+   "barricada": true,
+   "fase": 2,
+   "estacao": "estoque móvel (empurra até a porta numa emergência)",
+   "exibe": [
+    {
+     "y": 0.2,
+     "x": [
+      -0.43,
+      0.43
+     ],
+     "z": [
+      -0.21,
+      0.21
+     ]
+    },
+    {
+     "y": 0.62,
+     "x": [
+      -0.43,
+      0.43
+     ],
+     "z": [
+      -0.21,
+      0.21
+     ]
+    },
+    {
+     "y": 1.04,
+     "x": [
+      -0.43,
+      0.43
+     ],
+     "z": [
+      -0.21,
+      0.21
+     ]
+    },
+    {
+     "y": 1.46,
+     "x": [
+      -0.43,
+      0.43
+     ],
+     "z": [
+      -0.21,
+      0.21
+     ]
+    }
+   ],
+   "arquivo": "mobilias/estante_aramada.glb",
+   "tamanho_m": [
+    0.924,
+    1.615,
+    0.503
+   ],
+   "triangulos": 14240,
+   "kb": 671.7
+  },
+  {
+   "id": "bau_madeira",
+   "nome": "Baú de madeira com cadeado",
+   "grupo": "mobilias",
+   "categoria": "armazenamento",
+   "montagem": "floor",
+   "lote": 14,
+   "comodos": [
+    "abrigo",
+    "casas",
+    "mansao",
+    "fazenda",
+    "casa_barcos"
+   ],
+   "conteiner": true,
+   "slots": 15,
+   "grade": [
+    8,
+    5
+   ],
+   "saque": [
+    "roupas",
+    "ferramentas",
+    "moedas",
+    "lembrancas"
+   ],
+   "aceita": [],
+   "trancado": true,
+   "tranca": "cadeado",
+   "barricada": true,
+   "sentar": true,
+   "fase": 1,
+   "constroi": {
+    "tabua": 5,
+    "dobradicas": 1,
+    "caixa_pregos": 1
+   },
+   "ferramenta": "martelo",
+   "estacao_obra": "bancada_carpintaria",
+   "estacao": "baú pessoal (cada morador tem o seu; mexer no baú dos outros baixa a moral)",
+   "arquivo": "mobilias/bau_madeira.glb",
+   "tamanho_m": [
+    1.051,
+    0.505,
+    0.573
+   ],
+   "triangulos": 2416,
+   "kb": 243.6,
+   "partes": [
+    {
+     "no": "tampa",
+     "origem": [
+      0,
+      0.42,
+      -0.27
+     ],
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -100
+    }
+   ]
+  },
+  {
+   "id": "caixa_militar",
+   "nome": "Caixote militar verde",
+   "grupo": "mobilias",
+   "categoria": "armazenamento",
+   "montagem": "floor",
+   "lote": 14,
+   "comodos": [
+    "quartel",
+    "delegacia",
+    "abrigo",
+    "armazem",
+    "estacao"
+   ],
+   "conteiner": true,
+   "slots": 10,
+   "grade": [
+    6,
+    4
+   ],
+   "saque": [
+    "municao",
+    "remedios",
+    "ferramentas",
+    "comida"
+   ],
+   "aceita": [],
+   "empilhavel": true,
+   "altura_m": 0.38,
+   "carregar": 2,
+   "barricada": true,
+   "fase": 2,
+   "estacao": "caixa de suprimentos (2 moradores carregam; empilha em 3)",
+   "arquivo": "mobilias/caixa_militar.glb",
+   "tamanho_m": [
+    1.006,
+    0.4,
+    0.512
+   ],
+   "triangulos": 1760,
+   "kb": 230.3,
+   "partes": [
+    {
+     "no": "tampa",
+     "origem": [
+      0,
+      0.3,
+      -0.24
+     ],
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -105
+    }
+   ]
+  },
+  {
+   "id": "caixa_organizadora",
+   "nome": "Caixa organizadora empilhável",
+   "grupo": "mobilias",
+   "categoria": "armazenamento",
+   "montagem": "floor",
+   "lote": 14,
+   "comodos": [
+    "casas",
+    "abrigo",
+    "garagem",
+    "escolinha",
+    "galeria"
+   ],
+   "conteiner": true,
+   "slots": 6,
+   "grade": [
+    4,
+    3
+   ],
+   "saque": [
+    "utensilios",
+    "roupas",
+    "higiene",
+    "pilhas"
+   ],
+   "aceita": [],
+   "empilhavel": true,
+   "altura_m": 0.31,
+   "portatil": true,
+   "peso_kg": 1.6,
+   "fase": 1,
+   "estacao": "caixa de estoque (empilha em 4; tampa travada não deixa a água entrar)",
+   "arquivo": "mobilias/caixa_organizadora.glb",
+   "tamanho_m": [
+    0.628,
+    0.316,
+    0.45
+   ],
+   "triangulos": 292,
+   "kb": 25.8,
+   "partes": [
+    {
+     "no": "tampa",
+     "origem": [
+      0,
+      0.29,
+      0
+     ],
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": 0,
+     "remover": true
+    }
+   ]
+  },
+  {
+   "id": "caixa_ferramentas",
+   "nome": "Caixa de ferramentas de metal",
+   "grupo": "mobilias",
+   "categoria": "armazenamento",
+   "montagem": "floor",
+   "lote": 14,
+   "comodos": [
+    "garagem",
+    "oficina",
+    "abrigo",
+    "posto",
+    "serraria"
+   ],
+   "conteiner": true,
+   "slots": 6,
+   "grade": [
+    4,
+    2
+   ],
+   "saque": [
+    "ferramentas",
+    "materiais"
+   ],
+   "aceita": [
+    "ferramentas",
+    "materiais",
+    "armas"
+   ],
+   "portatil": true,
+   "peso_kg": 4.0,
+   "fase": 1,
+   "estacao": "caixa de ferramentas (leva junto as ferramentas para consertar barricadas fora da base)",
+   "arquivo": "mobilias/caixa_ferramentas.glb",
+   "tamanho_m": [
+    0.513,
+    0.269,
+    0.23
+   ],
+   "triangulos": 1684,
+   "kb": 139.0,
+   "partes": [
+    {
+     "no": "tampa",
+     "origem": [
+      0,
+      0.17,
+      -0.11
+     ],
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -110
+    }
+   ]
+  },
+  {
+   "id": "pallet_tabuas",
+   "nome": "Pallet de tábuas cintadas",
+   "grupo": "mobilias",
+   "categoria": "armazenamento",
+   "montagem": "floor",
+   "lote": 14,
+   "comodos": [
+    "armazem",
+    "serraria",
+    "abrigo",
+    "fabrica"
+   ],
+   "estoque": {
+    "item": "tabua",
+    "max": 48
+   },
+   "desmontavel": "48 tábuas + 4 madeira",
+   "barricada": false,
+   "fase": 2,
+   "estacao": "estoque de madeira da obra (construções tiram daqui; a camada de cima some quando acaba)",
+   "arquivo": "mobilias/pallet_tabuas.glb",
+   "tamanho_m": [
+    1.5,
+    0.298,
+    0.849
+   ],
+   "triangulos": 7432,
+   "kb": 578.1,
+   "partes": [
+    {
+     "no": "camada_1",
+     "origem": [
+      0,
+      0.144,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 6,
+     "unidades": 8
+    },
+    {
+     "no": "camada_2",
+     "origem": [
+      0,
+      0.16899999999999998,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 5,
+     "unidades": 8
+    },
+    {
+     "no": "camada_3",
+     "origem": [
+      0,
+      0.194,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 4,
+     "unidades": 8
+    },
+    {
+     "no": "camada_4",
+     "origem": [
+      0,
+      0.219,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 3,
+     "unidades": 8
+    },
+    {
+     "no": "camada_5",
+     "origem": [
+      0,
+      0.244,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 2,
+     "unidades": 8
+    },
+    {
+     "no": "camada_6",
+     "origem": [
+      0,
+      0.269,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 1,
+     "unidades": 8
+    }
+   ]
+  },
+  {
+   "id": "pallet_tijolos",
+   "nome": "Pallet de tijolos",
+   "grupo": "mobilias",
+   "categoria": "armazenamento",
+   "montagem": "floor",
+   "lote": 14,
+   "comodos": [
+    "armazem",
+    "fabrica",
+    "abrigo",
+    "ruinas"
+   ],
+   "estoque": {
+    "item": "tijolo",
+    "max": 120
+   },
+   "fase": 2,
+   "estacao": "estoque de tijolos (fogão, forno, forja e muros)",
+   "arquivo": "mobilias/pallet_tijolos.glb",
+   "tamanho_m": [
+    1.2,
+    0.433,
+    0.802
+   ],
+   "triangulos": 6316,
+   "kb": 353.3,
+   "partes": [
+    {
+     "no": "camada_1",
+     "origem": [
+      0,
+      0.144,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 5,
+     "unidades": 24
+    },
+    {
+     "no": "camada_2",
+     "origem": [
+      0,
+      0.20099999999999998,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 4,
+     "unidades": 24
+    },
+    {
+     "no": "camada_3",
+     "origem": [
+      0,
+      0.258,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 3,
+     "unidades": 24
+    },
+    {
+     "no": "camada_4",
+     "origem": [
+      0,
+      0.315,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 2,
+     "unidades": 24
+    },
+    {
+     "no": "camada_5",
+     "origem": [
+      0,
+      0.372,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 1,
+     "unidades": 24
+    }
+   ]
+  },
+  {
+   "id": "pallet_cimento",
+   "nome": "Pallet de sacos de cimento",
+   "grupo": "mobilias",
+   "categoria": "armazenamento",
+   "montagem": "floor",
+   "lote": 14,
+   "comodos": [
+    "armazem",
+    "fabrica",
+    "garagem_vertical"
+   ],
+   "estoque": {
+    "item": "cimento",
+    "max": 20
+   },
+   "fase": 4,
+   "estacao": "estoque de cimento (muralha, cisterna e reformas da fase Vila)",
+   "arquivo": "mobilias/pallet_cimento.glb",
+   "tamanho_m": [
+    1.2,
+    0.675,
+    0.8
+   ],
+   "triangulos": 17228,
+   "kb": 1145.3,
+   "partes": [
+    {
+     "no": "camada_1",
+     "origem": [
+      0,
+      0.144,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 5,
+     "unidades": 4
+    },
+    {
+     "no": "camada_2",
+     "origem": [
+      0,
+      0.249,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 4,
+     "unidades": 4
+    },
+    {
+     "no": "camada_3",
+     "origem": [
+      0,
+      0.354,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 3,
+     "unidades": 4
+    },
+    {
+     "no": "camada_4",
+     "origem": [
+      0,
+      0.45899999999999996,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 2,
+     "unidades": 4
+    },
+    {
+     "no": "camada_5",
+     "origem": [
+      0,
+      0.564,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 1,
+     "unidades": 4
+    }
+   ]
+  },
+  {
+   "id": "pallet_sucata",
+   "nome": "Pallet de sucata separada",
+   "grupo": "mobilias",
+   "categoria": "armazenamento",
+   "montagem": "floor",
+   "lote": 14,
+   "comodos": [
+    "ferrovelho",
+    "garagem",
+    "abrigo",
+    "posto"
+   ],
+   "estoque": {
+    "item": "sucata_metal",
+    "max": 60
+   },
+   "fase": 2,
+   "estacao": "estoque de sucata (chapas embaixo, peças miúdas no caixote)",
+   "arquivo": "mobilias/pallet_sucata.glb",
+   "tamanho_m": [
+    1.2,
+    0.448,
+    0.803
+   ],
+   "triangulos": 4624,
+   "kb": 372.8,
+   "partes": [
+    {
+     "no": "camada_1",
+     "origem": [
+      0,
+      0.144,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 4,
+     "unidades": 15
+    },
+    {
+     "no": "camada_2",
+     "origem": [
+      0,
+      0.16199999999999998,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 3,
+     "unidades": 15
+    },
+    {
+     "no": "camada_3",
+     "origem": [
+      0,
+      0.18,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 2,
+     "unidades": 15
+    },
+    {
+     "no": "camada_4",
+     "origem": [
+      0,
+      0.19799999999999998,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 1,
+     "unidades": 15
+    }
+   ]
+  },
+  {
+   "id": "pallet_sacos_areia",
+   "nome": "Pilha de sacos de areia no pallet",
+   "grupo": "mobilias",
+   "categoria": "armazenamento",
+   "montagem": "floor",
+   "lote": 14,
+   "comodos": [
+    "quartel",
+    "abrigo",
+    "estacao",
+    "armazem"
+   ],
+   "estoque": {
+    "item": "saco_areia",
+    "max": 18
+   },
+   "fase": 2,
+   "estacao": "estoque de sacos de areia (trincheiras e paredes de defesa)",
+   "arquivo": "mobilias/pallet_sacos_areia.glb",
+   "tamanho_m": [
+    1.212,
+    0.506,
+    1.005
+   ],
+   "triangulos": 21388,
+   "kb": 1420.6,
+   "partes": [
+    {
+     "no": "camada_1",
+     "origem": [
+      0,
+      0.144,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 3,
+     "unidades": 6
+    },
+    {
+     "no": "camada_2",
+     "origem": [
+      0,
+      0.259,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 2,
+     "unidades": 6
+    },
+    {
+     "no": "camada_3",
+     "origem": [
+      0,
+      0.374,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 1,
+     "unidades": 6
+    }
+   ]
+  },
+  {
+   "id": "lenheiro",
+   "nome": "Lenheiro coberto",
+   "grupo": "mobilias",
+   "categoria": "armazenamento",
+   "montagem": "floor",
+   "lote": 14,
+   "comodos": [
+    "abrigo",
+    "casa_de_campo",
+    "fazenda",
+    "casas"
+   ],
+   "estoque": {
+    "item": "lenha",
+    "max": 30
+   },
+   "constroi": {
+    "tabua": 6,
+    "chapa_metal": 2,
+    "caixa_pregos": 1
+   },
+   "ferramenta": "martelo",
+   "fase": 1,
+   "estacao": "lenheiro (lenha guardada seca queima o dobro; chuva estraga a lenha do chão)",
+   "arquivo": "mobilias/lenheiro.glb",
+   "tamanho_m": [
+    1.8,
+    1.526,
+    0.888
+   ],
+   "triangulos": 11164,
+   "kb": 831.1,
+   "partes": [
+    {
+     "no": "camada_1",
+     "origem": [
+      0,
+      0.125,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 4,
+     "unidades": 8
+    },
+    {
+     "no": "camada_2",
+     "origem": [
+      0,
+      0.24,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 3,
+     "unidades": 8
+    },
+    {
+     "no": "camada_3",
+     "origem": [
+      0,
+      0.355,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 2,
+     "unidades": 8
+    },
+    {
+     "no": "camada_4",
+     "origem": [
+      0,
+      0.47000000000000003,
+      0
+     ],
+     "tipo": "camada",
+     "ordem": 1,
+     "unidades": 6
+    }
+   ]
+  },
+  {
+   "id": "bancada_carpintaria",
+   "nome": "Bancada de carpintaria de cavaletes",
+   "grupo": "mobilias",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "serraria",
+    "garagem",
+    "fazenda"
+   ],
+   "constroi": {
+    "tabua": 6,
+    "caixa_pregos": 1
+   },
+   "ferramenta": "serrote",
+   "fase": 2,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.75
+   ],
+   "estacao": "carpintaria (tábuas viram móveis, barricadas reforçadas, cabos de ferramenta e flechas)",
+   "arquivo": "mobilias/bancada_carpintaria.glb",
+   "tamanho_m": [
+    2.229,
+    1.0,
+    0.938
+   ],
+   "triangulos": 3044,
+   "kb": 373.1
+  },
+  {
+   "id": "bancada_costura",
+   "nome": "Mesa de costura com máquina manual",
+   "grupo": "mobilias",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "casas",
+    "galeria",
+    "hotel"
+   ],
+   "fase": 2,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.6
+   ],
+   "sentar": true,
+   "estacao": "costura (roupas, mochilas, coletes acolchoados, sacos e lona de barraca)",
+   "arquivo": "mobilias/bancada_costura.glb",
+   "tamanho_m": [
+    1.1,
+    1.12,
+    0.6
+   ],
+   "triangulos": 2352,
+   "kb": 360.9
+  },
+  {
+   "id": "mesa_enfermaria",
+   "nome": "Mesa de enfermaria improvisada",
+   "grupo": "mobilias",
+   "categoria": "saude",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "clinica",
+    "igreja",
+    "escolinha"
+   ],
+   "constroi": {
+    "tabua": 4,
+    "caixa_pregos": 1,
+    "trapos": 2
+   },
+   "ferramenta": "martelo",
+   "fase": 2,
+   "trabalha": 1,
+   "deitar": true,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.55
+   ],
+   "estacao": "enfermaria (curativos melhores, tala, remédio de ervas; morador ferido se recupera 2× mais rápido deitado aqui)",
+   "arquivo": "mobilias/mesa_enfermaria.glb",
+   "tamanho_m": [
+    2.42,
+    0.925,
+    0.66
+   ],
+   "triangulos": 4908,
+   "kb": 460.5
+  },
+  {
+   "id": "forja_tambor",
+   "nome": "Forja de tambor com fole",
+   "grupo": "mobilias",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "ferrovelho",
+    "fazenda",
+    "fabrica"
+   ],
+   "constroi": {
+    "tambor_200l": 1,
+    "tijolo": 8,
+    "cano_metal": 2,
+    "couro": 2
+   },
+   "ferramenta": "martelo",
+   "fase": 2,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "estacao": "forja (aço vira lâmina, ponta de lança, ferradura e pregos; precisa de carvão)",
+   "usa": "carvao",
+   "luz_m": 5,
+   "ruido_m": 25,
+   "arquivo": "mobilias/forja_tambor.glb",
+   "tamanho_m": [
+    2.011,
+    0.678,
+    0.613
+   ],
+   "triangulos": 3640,
+   "kb": 537.5
+  },
+  {
+   "id": "fogao_tambor",
+   "nome": "Fogão a lenha de tambor",
+   "grupo": "mobilias",
+   "categoria": "cozinha",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "casas",
+    "fazenda",
+    "casa_de_campo"
+   ],
+   "constroi": {
+    "tambor_200l": 1,
+    "cano_metal": 2,
+    "chapa_metal": 1,
+    "tijolo": 4
+   },
+   "ferramenta": "martelo",
+   "fase": 2,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.65
+   ],
+   "estacao": "cozinha (refeições que rendem 2× a comida crua e alegram os moradores; aquece o cômodo)",
+   "usa": "lenha",
+   "luz_m": 2,
+   "aquece": true,
+   "arquivo": "mobilias/fogao_tambor.glb",
+   "tamanho_m": [
+    1.217,
+    2.4,
+    0.67
+   ],
+   "triangulos": 4012,
+   "kb": 348.3,
+   "partes": [
+    {
+     "no": "porta_fornalha",
+     "origem": [
+      -0.445,
+      0.41000000000000003,
+      0.13
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -100
+    }
+   ]
+  },
+  {
+   "id": "defumador",
+   "nome": "Defumador de tábuas",
+   "grupo": "mobilias",
+   "categoria": "cozinha",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "fazenda",
+    "casa_de_campo",
+    "casa_barcos"
+   ],
+   "constroi": {
+    "tabua": 8,
+    "chapa_metal": 1,
+    "caixa_pregos": 1,
+    "tijolo": 4
+   },
+   "ferramenta": "martelo",
+   "fase": 2,
+   "trabalha": 1,
+   "estacao": "defumador (carne e peixe duram 10 dias em vez de 2)",
+   "usa": "lenha",
+   "produz": {
+    "item": "carne_defumada",
+    "qtd": 4,
+    "a_cada_min": 240,
+    "consome": {
+     "carne crua": 4,
+     "lenha": 1
+    }
+   },
+   "arquivo": "mobilias/defumador.glb",
+   "tamanho_m": [
+    0.9,
+    1.82,
+    0.86
+   ],
+   "triangulos": 7328,
+   "kb": 651.4,
+   "partes": [
+    {
+     "no": "porta",
+     "origem": [
+      0.4,
+      0.3,
+      0.355
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -110
+    }
+   ]
+  },
+  {
+   "id": "filtro_barril",
+   "nome": "Filtro de água em barril",
+   "grupo": "mobilias",
+   "categoria": "agua",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "fazenda",
+    "casas"
+   ],
+   "constroi": {
+    "tambor_200l": 1,
+    "carvao": 2,
+    "pedras": 4,
+    "trapos": 2,
+    "tubo_pvc": 1
+   },
+   "ferramenta": "chave_inglesa",
+   "fase": 2,
+   "estacao": "filtro (água de chuva ou do rio fica limpa; ainda precisa ferver se alguém estiver doente)",
+   "conteiner": true,
+   "slots": 1,
+   "saque": [
+    "agua"
+   ],
+   "grade": [
+    2,
+    1
+   ],
+   "produz": {
+    "item": "galao_agua",
+    "qtd": 1,
+    "a_cada_min": 60,
+    "consome": {
+     "agua suja": 5
+    }
+   },
+   "arquivo": "mobilias/filtro_barril.glb",
+   "tamanho_m": [
+    0.604,
+    1.26,
+    0.872
+   ],
+   "triangulos": 8952,
+   "kb": 697.1
+  },
+  {
+   "id": "bancada_eletronica",
+   "nome": "Bancada de eletrônica",
+   "grupo": "mobilias",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "correios",
+    "cinema",
+    "delegacia"
+   ],
+   "constroi": {
+    "tabua": 4,
+    "fio_eletrico": 2,
+    "placa_circuito": 1,
+    "bateria_carro": 1
+   },
+   "ferramenta": "chave_inglesa",
+   "fase": 3,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.6
+   ],
+   "sentar": true,
+   "usa": "energia",
+   "estacao": "eletrônica (rádio de longo alcance, holofote, alarme elétrico, carregador de pilhas; desbloqueia o marco da torre de rádio)",
+   "arquivo": "mobilias/bancada_eletronica.glb",
+   "tamanho_m": [
+    1.5,
+    1.286,
+    0.64
+   ],
+   "triangulos": 4820,
+   "kb": 291.1
+  },
+  {
+   "id": "bancada_municao",
+   "nome": "Mesa de recarga de munição",
+   "grupo": "mobilias",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "delegacia",
+    "quartel",
+    "casa_de_campo"
+   ],
+   "constroi": {
+    "tabua": 5,
+    "caixa_pregos": 1,
+    "pote_parafusos": 1
+   },
+   "ferramenta": "chave_inglesa",
+   "fase": 3,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.6
+   ],
+   "estacao": "recarga (cápsulas vazias + pólvora + chumbo viram munição; 1 erro em 20 dá tiro falho)",
+   "arquivo": "mobilias/bancada_municao.glb",
+   "tamanho_m": [
+    1.2,
+    1.27,
+    0.6
+   ],
+   "triangulos": 3036,
+   "kb": 210.7
+  },
+  {
+   "id": "alambique",
+   "nome": "Alambique de panela",
+   "grupo": "mobilias",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "fazenda",
+    "casa_de_campo"
+   ],
+   "constroi": {
+    "panela": 1,
+    "tubo_pvc": 1,
+    "cano_metal": 1,
+    "tambor_200l": 1,
+    "tijolo": 6
+   },
+   "ferramenta": "chave_inglesa",
+   "fase": 2,
+   "trabalha": 1,
+   "usa": "lenha",
+   "estacao": "alambique (fruta podre ou grão viram álcool: remédio, lamparina, molotov e combustível do gerador)",
+   "produz": {
+    "item": "alcool",
+    "qtd": 1,
+    "a_cada_min": 90,
+    "consome": {
+     "comida": 3,
+     "lenha": 1
+    }
+   },
+   "arquivo": "mobilias/alambique.glb",
+   "tamanho_m": [
+    1.49,
+    0.88,
+    0.592
+   ],
+   "triangulos": 6704,
+   "kb": 379.7
+  },
+  {
+   "id": "composteira",
+   "nome": "Composteira de pallets",
+   "grupo": "mobilias",
+   "categoria": "agricultura",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "fazenda",
+    "casas"
+   ],
+   "constroi": {
+    "pallet": 3,
+    "arame_liso": 1
+   },
+   "ferramenta": "nenhuma",
+   "fase": 2,
+   "estacao": "composteira (restos de comida viram adubo: canteiros dão 50 % mais)",
+   "produz": {
+    "item": "adubo",
+    "qtd": 1,
+    "a_cada_min": 1440,
+    "consome": {
+     "restos de comida": 4
+    }
+   },
+   "arquivo": "mobilias/composteira.glb",
+   "tamanho_m": [
+    1.302,
+    1.331,
+    1.251
+   ],
+   "triangulos": 8084,
+   "kb": 578.6
+  },
+  {
+   "id": "cama_pallet",
+   "nome": "Cama de pallet com colchão",
+   "grupo": "mobilias",
+   "categoria": "abrigo",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "casas",
+    "galeria"
+   ],
+   "deitar": true,
+   "vagas": 1,
+   "constroi": {
+    "pallet": 2,
+    "colchao_chao": 1
+   },
+   "ferramenta": "nenhuma",
+   "fase": 2,
+   "estacao": "cama (morador com cama própria ganha +10 de moral; dorme fora do chão frio)",
+   "arquivo": "mobilias/cama_pallet.glb",
+   "tamanho_m": [
+    1.45,
+    0.51,
+    2.202
+   ],
+   "triangulos": 5872,
+   "kb": 558.4
+  },
+  {
+   "id": "cavalo_frisa",
+   "nome": "Cavalo de frisa de estacas",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "floor",
+   "lote": 17,
+   "comodos": [
+    "abrigo",
+    "rua"
+   ],
+   "constroi": {
+    "lenha": 6,
+    "arame_liso": 1
+   },
+   "ferramenta": "machado",
+   "fase": 2,
+   "vida": 300,
+   "modulo_m": 2,
+   "bloqueia": "passagem",
+   "dano_zumbi": 4,
+   "empurrar": true,
+   "estacao": "barreira (zumbi que encosta se fere e empaca; dá para arrastar e fechar a rua)",
+   "arquivo": "mobilias/cavalo_frisa.glb",
+   "tamanho_m": [
+    1.9,
+    0.967,
+    0.973
+   ],
+   "triangulos": 1104,
+   "kb": 168.9
+  },
+  {
+   "id": "cerca_arame",
+   "nome": "Cerca de arame farpado",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "floor",
+   "lote": 17,
+   "comodos": [
+    "abrigo",
+    "fazenda",
+    "rua"
+   ],
+   "constroi": {
+    "arame_farpado": 1,
+    "lenha": 3
+   },
+   "ferramenta": "martelo",
+   "fase": 2,
+   "vida": 150,
+   "modulo_m": 2,
+   "bloqueia": "passagem",
+   "dano_zumbi": 2,
+   "prende_s": 3,
+   "estacao": "cerca (segura zumbis comuns 3 s e fere; não para o pesado)",
+   "arquivo": "mobilias/cerca_arame.glb",
+   "tamanho_m": [
+    2.1,
+    1.24,
+    0.114
+   ],
+   "triangulos": 2820,
+   "kb": 266.4
+  },
+  {
+   "id": "parede_sacos",
+   "nome": "Parede de sacos de areia",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "floor",
+   "lote": 17,
+   "comodos": [
+    "abrigo",
+    "quartel",
+    "rua"
+   ],
+   "constroi": {
+    "saco_areia": 12
+   },
+   "ferramenta": "pa",
+   "fase": 2,
+   "vida": 900,
+   "modulo_m": 2,
+   "bloqueia": "passagem",
+   "atirar_por_cima": true,
+   "estacao": "trincheira (1,1 m de altura; moradores atiram por cima sem levar mordida; à prova de bala)",
+   "arquivo": "mobilias/parede_sacos.glb",
+   "tamanho_m": [
+    2.044,
+    1.026,
+    0.422
+   ],
+   "triangulos": 14080,
+   "kb": 1016.2
+  },
+  {
+   "id": "barreira_pneus",
+   "nome": "Barreira de pneus com terra",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "floor",
+   "lote": 17,
+   "comodos": [
+    "abrigo",
+    "posto",
+    "ferrovelho",
+    "rua"
+   ],
+   "constroi": {
+    "terra": 6,
+    "pilha_pneus": 1
+   },
+   "ferramenta": "pa",
+   "fase": 2,
+   "vida": 700,
+   "modulo_m": 2,
+   "bloqueia": "passagem",
+   "estacao": "barreira (pneus velhos cheios de terra; carro não passa)",
+   "arquivo": "mobilias/barreira_pneus.glb",
+   "tamanho_m": [
+    1.99,
+    0.439,
+    0.875
+   ],
+   "triangulos": 9024,
+   "kb": 481.1
+  },
+  {
+   "id": "tabua_pregos",
+   "nome": "Tábua de pregos",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "floor",
+   "lote": 17,
+   "comodos": [
+    "abrigo",
+    "rua"
+   ],
+   "constroi": {
+    "tabua": 1,
+    "caixa_pregos": 1
+   },
+   "ferramenta": "martelo",
+   "fase": 1,
+   "vida": 60,
+   "dano_zumbi": 25,
+   "prende_s": 2,
+   "colisao": "nenhuma",
+   "estacao": "armadilha (escondida no mato ou atrás da porta: fere e trava o zumbi que pisa; o jogador também se fere)",
+   "arquivo": "mobilias/tabua_pregos.glb",
+   "tamanho_m": [
+    1.0,
+    0.088,
+    0.31
+   ],
+   "triangulos": 2588,
+   "kb": 231.8
+  },
+  {
+   "id": "fosso_estacas",
+   "nome": "Fosso com estacas",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "floor",
+   "lote": 17,
+   "comodos": [
+    "abrigo",
+    "rua",
+    "fazenda"
+   ],
+   "constroi": {
+    "lenha": 4
+   },
+   "ferramenta": "pa",
+   "fase": 3,
+   "vida": 400,
+   "modulo_m": 2,
+   "dano_zumbi": 60,
+   "prende_s": 999,
+   "colisao": "buraco",
+   "estacao": "armadilha (cavado na frente do muro; zumbi que cai fica preso até alguém acabar com ele)",
+   "arquivo": "mobilias/fosso_estacas.glb",
+   "tamanho_m": [
+    2.555,
+    1.049,
+    1.429
+   ],
+   "triangulos": 3180,
+   "kb": 370.6
+  },
+  {
+   "id": "porta_reforcada",
+   "nome": "Porta reforçada com chapa",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "wall",
+   "lote": 17,
+   "comodos": [
+    "abrigo",
+    "casas",
+    "quartel"
+   ],
+   "vao": "porta 0,9 × 2,1 m (troca a porta do kit)",
+   "vao_m": [
+    0.9,
+    2.1,
+    0.0
+   ],
+   "constroi": {
+    "chapa_metal": 2,
+    "tabua": 3,
+    "pote_parafusos": 1,
+    "corrente_cadeado": 1
+   },
+   "ferramenta": "chave_inglesa",
+   "estacao_obra": "bancada_carpintaria",
+   "fase": 2,
+   "vida": 600,
+   "trancado": true,
+   "tranca": "tranca de barra por dentro",
+   "estacao": "porta (abre e fecha; aguenta 3× uma barricada de tábuas)",
+   "arquivo": "mobilias/porta_reforcada.glb",
+   "tamanho_m": [
+    1.06,
+    2.18,
+    0.207
+   ],
+   "triangulos": 1516,
+   "kb": 187.8,
+   "partes": [
+    {
+     "no": "porta",
+     "origem": [
+      -0.45,
+      0,
+      0.0
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 100
+    }
+   ]
+  },
+  {
+   "id": "grade_janela",
+   "nome": "Grade de janela de vergalhão",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "wall",
+   "lote": 17,
+   "altura_sugerida_m": 0.78,
+   "comodos": [
+    "abrigo",
+    "casas",
+    "galeria"
+   ],
+   "vao": "janela 0,9 × 1,45 m",
+   "vao_m": [
+    0.9,
+    1.45,
+    0.07
+   ],
+   "constroi": {
+    "cano_metal": 3,
+    "sucata_metal": 4,
+    "pote_parafusos": 1
+   },
+   "ferramenta": "chave_inglesa",
+   "estacao_obra": "forja_tambor",
+   "fase": 2,
+   "vida": 500,
+   "bloqueia": "passagem",
+   "estacao": "grade (deixa ver e atirar pela janela; zumbi enfia o braço mas não passa)",
+   "arquivo": "mobilias/grade_janela.glb",
+   "tamanho_m": [
+    1.05,
+    1.56,
+    0.038
+   ],
+   "triangulos": 12808,
+   "kb": 940.8
+  },
+  {
+   "id": "seteira",
+   "nome": "Chapa de seteira para janela",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "wall",
+   "lote": 17,
+   "altura_sugerida_m": 0.78,
+   "comodos": [
+    "abrigo",
+    "quartel"
+   ],
+   "vao": "janela 0,9 × 1,45 m",
+   "vao_m": [
+    0.9,
+    1.45,
+    0.07
+   ],
+   "constroi": {
+    "chapa_metal": 2,
+    "tabua": 2,
+    "pote_parafusos": 1
+   },
+   "ferramenta": "chave_inglesa",
+   "fase": 2,
+   "vida": 450,
+   "bloqueia": "passagem e visao",
+   "atirar_por_cima": false,
+   "estacao": "seteira (fecha a janela e deixa uma fenda para atirar; quem está dentro não é visto de longe)",
+   "arquivo": "mobilias/seteira.glb",
+   "tamanho_m": [
+    1.01,
+    1.64,
+    0.095
+   ],
+   "triangulos": 1596,
+   "kb": 141.8,
+   "partes": [
+    {
+     "no": "tampa_fenda",
+     "origem": [
+      0.0,
+      0.76,
+      0.06
+     ],
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -80
+    }
+   ]
+  },
+  {
+   "id": "holofote",
+   "nome": "Holofote em poste com bateria",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "floor",
+   "lote": 17,
+   "comodos": [
+    "abrigo",
+    "rua",
+    "quartel"
+   ],
+   "constroi": {
+    "cano_metal": 2,
+    "fio_eletrico": 2,
+    "bateria_carro": 1,
+    "placa_circuito": 1,
+    "lanterna": 1
+   },
+   "ferramenta": "chave_inglesa",
+   "estacao_obra": "bancada_eletronica",
+   "fase": 3,
+   "luz_m": 25,
+   "usa": "energia",
+   "vida": 120,
+   "estacao": "holofote (ilumina 25 m no muro: moradores acertam mais de noite, mas a luz atrai zumbis de longe)",
+   "arquivo": "mobilias/holofote.glb",
+   "tamanho_m": [
+    0.85,
+    2.883,
+    0.902
+   ],
+   "triangulos": 1536,
+   "kb": 136.6,
+   "partes": [
+    {
+     "no": "cabeca",
+     "origem": [
+      0.0,
+      2.72,
+      0.0
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 360,
+     "gira_livre": true
+    }
+   ]
+  },
+  {
+   "id": "sino_alarme",
+   "nome": "Sino de alarme de botijão",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "floor",
+   "lote": 17,
+   "comodos": [
+    "abrigo",
+    "rua"
+   ],
+   "constroi": {
+    "tabua": 3,
+    "corrente_cadeado": 1,
+    "cano_metal": 1
+   },
+   "ferramenta": "serrote",
+   "fase": 2,
+   "ruido_m": 120,
+   "estacao": "alarme (quem vê a horda bate o sino: todos os moradores correm para os postos; a horda também ouve)",
+   "arquivo": "mobilias/sino_alarme.glb",
+   "tamanho_m": [
+    1.3,
+    2.296,
+    0.838
+   ],
+   "triangulos": 3728,
+   "kb": 409.4
+  },
+  {
+   "id": "plataforma_tiro",
+   "nome": "Plataforma de tiro de andaime",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "floor",
+   "lote": 17,
+   "comodos": [
+    "abrigo",
+    "quartel",
+    "rua"
+   ],
+   "constroi": {
+    "cano_metal": 6,
+    "tabua": 6,
+    "pote_parafusos": 1,
+    "saco_areia": 4
+   },
+   "ferramenta": "chave_inglesa",
+   "fase": 3,
+   "vida": 500,
+   "modulo_m": 2,
+   "vagas": 2,
+   "atirar_por_cima": true,
+   "estacao": "posto de tiro (2 moradores atiram por cima do muro de 2 m; sobe pela escada)",
+   "arquivo": "mobilias/plataforma_tiro.glb",
+   "tamanho_m": [
+    2.094,
+    2.5,
+    1.06
+   ],
+   "triangulos": 8528,
+   "kb": 584.4
   }
  ]
 }

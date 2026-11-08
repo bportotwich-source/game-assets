@@ -212,6 +212,46 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Microfone no pedestal (`microfone_pedestal`) | 12 | Concha acústica | 0,75 × 1,51 × 0,53 | - | - | - | 556 |
 | Cadeira dobrável de plateia (`cadeira_dobravel`) | 12 | Concha acústica | 0,44 × 0,86 × 0,45 | - | - | sentar | 336 |
 | Poste de alto-falante do drive-in (`poste_som_drivein`) | 12 | Drive-in | 0,73 × 1,27 × 0,53 | - | - | - | 876 |
+| Armário de armas de madeira com tela (`armario_armas_abrigo`) | 14 | Armazenamento do abrigo | 1,15 × 2,10 × 0,86 | 12 espaços: armas, municao | porta_esq, porta_dir | barricada | 26644 |
+| Cofre de armas de aço (`cofre_armas`) | 14 | Armazenamento do abrigo | 0,76 × 1,55 × 0,60 | 14 espaços: armas, municao, moedas | porta | - | 4292 |
+| Suporte de parede para armas (`rack_armas_parede`) | 14 | Armazenamento do abrigo | 1,10 × 1,00 × 0,11 | - | - | - | 1952 |
+| Prateleira de tábuas e tijolos (`prateleira_improvisada`) | 14 | Armazenamento do abrigo | 1,49 × 0,86 × 0,30 | 9 espaços: comida, utensilios, materiais | - | - | 2364 |
+| Estante de despensa com caixotes (`despensa`) | 14 | Armazenamento do abrigo | 1,20 × 1,86 × 0,41 | 16 espaços: comida, agua | - | - | 20656 |
+| Estante aramada com rodinhas (`estante_aramada`) | 14 | Armazenamento do abrigo | 0,92 × 1,61 × 0,50 | 10 espaços: comida, limpeza, utensilios | - | barricada | 14240 |
+| Baú de madeira com cadeado (`bau_madeira`) | 14 | Armazenamento do abrigo | 1,05 × 0,51 × 0,57 | 15 espaços: roupas, ferramentas, moedas, lembrancas | tampa | barricada, sentar | 2416 |
+| Caixote militar verde (`caixa_militar`) | 14 | Armazenamento do abrigo | 1,01 × 0,40 × 0,51 | 10 espaços: municao, remedios, ferramentas, comida | tampa | barricada | 1760 |
+| Caixa organizadora empilhável (`caixa_organizadora`) | 14 | Armazenamento do abrigo | 0,63 × 0,32 × 0,45 | 6 espaços: utensilios, roupas, higiene, pilhas | tampa | - | 292 |
+| Caixa de ferramentas de metal (`caixa_ferramentas`) | 14 | Armazenamento do abrigo | 0,51 × 0,27 × 0,23 | 6 espaços: ferramentas, materiais | tampa | - | 1684 |
+| Pallet de tábuas cintadas (`pallet_tabuas`) | 14 | Armazenamento do abrigo | 1,50 × 0,30 × 0,85 | - | camada_1, camada_2, camada_3, camada_4, camada_5, camada_6 | - | 7432 |
+| Pallet de tijolos (`pallet_tijolos`) | 14 | Armazenamento do abrigo | 1,20 × 0,43 × 0,80 | - | camada_1, camada_2, camada_3, camada_4, camada_5 | - | 6316 |
+| Pallet de sacos de cimento (`pallet_cimento`) | 14 | Armazenamento do abrigo | 1,20 × 0,68 × 0,80 | - | camada_1, camada_2, camada_3, camada_4, camada_5 | - | 17228 |
+| Pallet de sucata separada (`pallet_sucata`) | 14 | Armazenamento do abrigo | 1,20 × 0,45 × 0,80 | - | camada_1, camada_2, camada_3, camada_4 | - | 4624 |
+| Pilha de sacos de areia no pallet (`pallet_sacos_areia`) | 14 | Armazenamento do abrigo | 1,21 × 0,51 × 1,00 | - | camada_1, camada_2, camada_3 | - | 21388 |
+| Lenheiro coberto (`lenheiro`) | 14 | Armazenamento do abrigo | 1,80 × 1,53 × 0,89 | - | camada_1, camada_2, camada_3, camada_4 | - | 11164 |
+| Bancada de carpintaria de cavaletes (`bancada_carpintaria`) | 16 | Oficina | 2,23 × 1,00 × 0,94 | - | - | - | 3044 |
+| Mesa de costura com máquina manual (`bancada_costura`) | 16 | Oficina | 1,10 × 1,12 × 0,60 | - | - | sentar | 2352 |
+| Mesa de enfermaria improvisada (`mesa_enfermaria`) | 16 | Saúde | 2,42 × 0,93 × 0,66 | - | - | dormir | 4908 |
+| Forja de tambor com fole (`forja_tambor`) | 16 | Oficina | 2,01 × 0,68 × 0,61 | - | - | - | 3640 |
+| Fogão a lenha de tambor (`fogao_tambor`) | 16 | Cozinha | 1,22 × 2,40 × 0,67 | - | porta_fornalha | - | 4012 |
+| Defumador de tábuas (`defumador`) | 16 | Cozinha | 0,90 × 1,82 × 0,86 | - | porta | - | 7328 |
+| Filtro de água em barril (`filtro_barril`) | 16 | Água | 0,60 × 1,26 × 0,87 | 1 espaços: agua | - | - | 8952 |
+| Bancada de eletrônica (`bancada_eletronica`) | 16 | Oficina | 1,50 × 1,29 × 0,64 | - | - | sentar | 4820 |
+| Mesa de recarga de munição (`bancada_municao`) | 16 | Oficina | 1,20 × 1,27 × 0,60 | - | - | - | 3036 |
+| Alambique de panela (`alambique`) | 16 | Oficina | 1,49 × 0,88 × 0,59 | - | - | - | 6704 |
+| Composteira de pallets (`composteira`) | 16 | Agricultura | 1,30 × 1,33 × 1,25 | - | - | - | 8084 |
+| Cama de pallet com colchão (`cama_pallet`) | 16 | Abrigo | 1,45 × 0,51 × 2,20 | - | - | dormir | 5872 |
+| Cavalo de frisa de estacas (`cavalo_frisa`) | 17 | Defesa da base | 1,90 × 0,97 × 0,97 | - | - | - | 1104 |
+| Cerca de arame farpado (`cerca_arame`) | 17 | Defesa da base | 2,10 × 1,24 × 0,11 | - | - | - | 2820 |
+| Parede de sacos de areia (`parede_sacos`) | 17 | Defesa da base | 2,04 × 1,03 × 0,42 | - | - | - | 14080 |
+| Barreira de pneus com terra (`barreira_pneus`) | 17 | Defesa da base | 1,99 × 0,44 × 0,88 | - | - | - | 9024 |
+| Tábua de pregos (`tabua_pregos`) | 17 | Defesa da base | 1,00 × 0,09 × 0,31 | - | - | - | 2588 |
+| Fosso com estacas (`fosso_estacas`) | 17 | Defesa da base | 2,56 × 1,05 × 1,43 | - | - | - | 3180 |
+| Porta reforçada com chapa (`porta_reforcada`) | 17 | Defesa da base | 1,06 × 2,18 × 0,21 | - | porta | - | 1516 |
+| Grade de janela de vergalhão (`grade_janela`) | 17 | Defesa da base | 1,05 × 1,56 × 0,04 | - | - | - | 12808 |
+| Chapa de seteira para janela (`seteira`) | 17 | Defesa da base | 1,01 × 1,64 × 0,10 | - | tampa_fenda | - | 1596 |
+| Holofote em poste com bateria (`holofote`) | 17 | Defesa da base | 0,85 × 2,88 × 0,90 | - | cabeca | - | 1536 |
+| Sino de alarme de botijão (`sino_alarme`) | 17 | Defesa da base | 1,30 × 2,30 × 0,84 | - | - | - | 3728 |
+| Plataforma de tiro de andaime (`plataforma_tiro`) | 17 | Defesa da base | 2,09 × 2,50 × 1,06 | - | - | - | 8528 |
 
 ## Loot
 
@@ -286,3 +326,45 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Colete salva-vidas (`colete_salva_vidas`) | 12 | Roupas e equipamento | equipamento | 1 | 0,8 kg | 1 | flutua (atravessa o lago); +5 de proteção leve | casa_de_barcos, piscina, parque |
 | Skate (`skate`) | 12 | Utensílios | equipamento | 2 | 2,2 kg | 1 | anda 40% mais rápido no asfalto (rodinhas fazem barulho); arma leve (dano 10) | pista_skate, casas, escolinha, rua |
 | Taco de minigolfe (`taco_golfe`) | 12 | Armas improvisadas | arma | 2 | 0,5 kg | 1 | arma corpo a corpo leve (quebra fácil) (dano 12) | minigolfe, mansao, casas |
+| Punhado de sucata (`sucata_metal`) | 13 | Materiais de construção | sucata | 1 | 1,2 kg | 10 | 1 sucata: base de quase toda receita de metal | ferrovelho, garagem, posto, fabrica, rua |
+| Pote de parafusos e porcas (`pote_parafusos`) | 13 | Materiais de construção | sucata | 2 | 0,9 kg | 4 | fixa peças: armas, bancadas, portas reforçadas | garagem, casas, fabrica, serraria |
+| Molas e engrenagens (`engrenagens`) | 13 | Materiais de construção | pecas | 1 | 0,6 kg | 6 | mecanismos: armadilhas, besta, bomba d'água, cata-vento | fabrica, garagem, relojoaria, casas |
+| Placa de circuito (`placa_circuito`) | 13 | Luz e eletrônicos | pecas | 1 | 0,2 kg | 6 | eletrônica: rádio, holofote, painel solar | casas, escritorio, cinema, delegacia, correios |
+| Motor elétrico pequeno (`motor_eletrico`) | 13 | Luz e eletrônicos | pecas | 2 | 1,6 kg | 1 | gera energia girando (cata-vento, bicicleta-gerador) ou move bomba d'água | casas, fabrica, garagem, lavanderia |
+| Rolo de fio elétrico (`fio_eletrico`) | 13 | Luz e eletrônicos | pecas | 1 | 0,8 kg | 3 | ligar luzes, alarmes, gerador e painel solar (10 m) | casas, fabrica, garagem, cinema, hotel |
+| Rolo de arame liso (`arame_liso`) | 13 | Materiais de construção | sucata | 1 | 1,0 kg | 3 | amarrar: armadilhas, cercas, lanças e reparos (20 m) | armazem, fazenda, serraria, garagem, casa_de_campo |
+| Corrente com cadeado (`corrente_cadeado`) | 13 | Materiais de construção | sucata | 2 | 2,2 kg | 1 | tranca portão ou armário (zumbi não abre, saqueador precisa de alicate) | garagem, armazem, delegacia, estacao, parque_trailers |
+| Par de dobradiças (`dobradicas`) | 13 | Materiais de construção | sucata | 1 | 0,4 kg | 6 | portões, alçapões, tampas de caixote e armários | casas, garagem, serraria, armazem |
+| Pacote de abraçadeiras de nylon (`abracadeiras`) | 13 | Materiais de construção | material | 1 | 0,1 kg | 10 | amarra rápido: armadilhas, lanternas na arma, reparos | garagem, casas, fabrica, cinema, supermercado |
+| Lata de cola de contato (`cola_contato`) | 13 | Materiais de construção | material | 1 | 0,3 kg | 4 | cola couro, borracha e madeira: proteções, reparo de botas e mochila | casas, garagem, serraria, escolinha |
+| Garrafa PET vazia 2 L (`garrafa_pet`) | 13 | Utensílios | material | 1 | 0,05 kg | 4 | filtro de água, coletor, armadilha de garrafa e isca | casas, rua, supermercado, diner, posto |
+| Lata vazia (`lata_vazia`) | 13 | Utensílios | sucata | 1 | 0,06 kg | 8 | alarme de latas, lamparina, fogareiro e caneca de ferver água | casas, rua, supermercado, diner, abrigo |
+| Cano de PVC (`tubo_pvc`) | 13 | Materiais de construção | material | 1 | 0,6 kg | 4 | calhas, coletor de chuva, irrigação da horta e filtros | casas, armazem, fabrica, piscina, fazenda |
+| Lona dobrada (`lona`) | 13 | Materiais de construção | material | 2 | 2,5 kg | 2 | cobre telhado quebrado, barraca, estufa e coletor de chuva (4 × 3 m) | armazem, fazenda, garagem, parque_trailers, posto |
+| Trapos amarrados (`trapos`) | 13 | Materiais de construção | material | 1 | 0,3 kg | 10 | curativo, tocha, filtro, remendo e pavio de molotov | casas, lavanderia, hotel, motel, garagem |
+| Retalho de couro (`couro`) | 13 | Materiais de construção | material | 1 | 0,5 kg | 6 | protetor de braço anti-mordida, coldre, alças e botas | casas, fazenda, mansao, concessionaria, cinema |
+| Saco de carvão (`carvao`) | 13 | Combustível | combustivel | 3 | 3,0 kg | 1 | combustível da forja e do defumador; carvão moído vai no filtro de água | supermercado, posto, casas, diner, armazem |
+| Punhado de pedras (`pedras`) | 13 | Materiais de construção | material | 1 | 2,0 kg | 10 | fogueira, forno de barro, peso de armadilha e muro de pedra | rua, parque, fazenda, casa_barcos, serraria |
+| Tijolos (`tijolo`) | 13 | Materiais de construção | material | 1 | 2,4 kg | 6 | fogão de tijolo, forno comunitário, forja e muros | fabrica, ruinas, casas, armazem |
+| Saco de cimento 25 kg (`cimento`) | 13 | Materiais de construção | material | 3 | 25,0 kg | 1 | muralha de concreto, cisterna, reforma de prédios (fase 4) | armazem, fabrica, garagem_vertical, ruinas |
+| Carretel de linha e anzóis (`linha_pesca`) | 13 | Utensílios | material | 1 | 0,1 kg | 6 | vara de pesca, armadilha de linha e costura de ferimento | casa_barcos, casas, supermercado, parque_trailers |
+| Garrafa de álcool 70 % (`alcool`) | 13 | Remédios | remedios | 1 | 1,0 kg | 2 | desinfeta ferimento, acende fogo, combustível da lamparina e do molotov | supermercado, clinica, casas, posto |
+| Pedra de amolar (`pedra_amolar`) | 13 | Ferramentas | ferramenta | 2 | 0,4 kg | 1 | recupera o fio de facas, facão, machado e lança (sem bancada) | casas, fazenda, serraria, casa_de_campo |
+| Tocha de pano e álcool (`tocha`) | 15 | Ferramentas | ferramenta | 1 | 0,5 kg | 3 | luz de 6 m por 10 min; afasta um zumbi encostado (fogo), mas a chama chama outros de longe (dano 12) | abrigo |
+| Lamparina de lata (`lamparina_lata`) | 15 | Luz e eletrônicos | ferramenta | 1 | 0,25 kg | 2 | luz fraca de 3 m por 6 horas (gasta álcool); dá para deixar acesa no abrigo | abrigo |
+| Fogareiro de lata (`fogareiro_lata`) | 15 | Utensílios | ferramenta | 1 | 0,3 kg | 1 | cozinha e ferve água com gravetos ou carvão (fumaça baixa, chama escondida) | abrigo |
+| Kit de acender fogo (`kit_fogo`) | 15 | Ferramentas | ferramenta | 2 | 0,15 kg | 1 | acende fogueira sem isqueiro (30 usos); funciona molhado | abrigo, casa_de_campo, parque_trailers |
+| Filtro de água de garrafa (`filtro_garrafa`) | 15 | Água | ferramenta | 2 | 0,6 kg | 1 | tira a sujeira da água de chuva ou do rio (ainda precisa ferver); 20 litros antes de trocar o carvão | abrigo |
+| Caneca de lata com alça de arame (`caneca_lata`) | 15 | Utensílios | ferramenta | 1 | 0,1 kg | 2 | ferve 0,4 L de água na fogueira (água fervida não dá doença) | abrigo |
+| Curativo de pano fervido (`curativo_improvisado`) | 15 | Remédios | remedios | 1 | 0,05 kg | 6 | para sangramento (cura 15); 20 % de chance de infeccionar se o pano não foi fervido | abrigo |
+| Tala de tábua e pano (`tala_improvisada`) | 15 | Remédios | remedios | 1 | 0,6 kg | 2 | trata perna ou braço quebrado: volta a correr em 1 dia em vez de 4 | abrigo |
+| Armadilha de laço (`armadilha_laco`) | 15 | Agricultura | ferramenta | 1 | 0,4 kg | 3 | montada no mato pega coelho ou pombo (comida 2) em até 1 dia; zumbi pisa e fica preso 5 s | abrigo |
+| Vara de pesca improvisada (`vara_pesca`) | 15 | Agricultura | ferramenta | 1 | 0,4 kg | 1 | pesca no lago (comida 3 a cada 20 min, em silêncio) | abrigo, casa_barcos |
+| Kit de reparo improvisado (`kit_reparo`) | 15 | Ferramentas | ferramenta | 3 | 0,8 kg | 1 | repara arma branca (+40 % de durabilidade) ou barricada (+60 de vida); 3 usos | abrigo, garagem |
+| Colete de revistas e fita (`colete_revistas`) | 15 | Roupas e equipamento | equipamento | 1 | 1,4 kg | 1 | +15 de proteção contra mordida no tronco e nos braços; desgasta a cada mordida | abrigo |
+| Colete de placas de sucata (`colete_sucata`) | 15 | Roupas e equipamento | equipamento | 2 | 4,5 kg | 1 | +35 de proteção; pesado (correr cansa 30 % mais rápido) e barulhento | abrigo, ferrovelho |
+| Capacete de panela acolchoado (`capacete_panela`) | 15 | Roupas e equipamento | equipamento | 1 | 1,0 kg | 1 | +20 de proteção na cabeça; tira 10 % da audição | abrigo |
+| Mochila de lona improvisada (`mochila_lona`) | 15 | Roupas e equipamento | equipamento | 1 | 0,8 kg | 1 | mochila de 4 × 4 células (a de loja tem 5 × 6); faz barulho de lona ao correr | abrigo |
+| Bolsa de cintura de pano (`bolsa_cintura`) | 15 | Roupas e equipamento | equipamento | 1 | 0,3 kg | 1 | +3 × 2 células de acesso rápido (usar sem abrir a mochila) | abrigo |
+| Peça de carne defumada (`carne_defumada`) | 16 | Comida | comida | 3 | 0,6 kg | 4 | fome -40; dura 10 dias sem estragar | abrigo, fazenda |
+| Saco de adubo de composto (`adubo`) | 16 | Agricultura | material | 2 | 8,0 kg | 1 | canteiro adubado rende 50 % mais por 3 colheitas | abrigo, fazenda, supermercado |

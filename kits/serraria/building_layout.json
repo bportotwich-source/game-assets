@@ -1,0 +1,1274 @@
+{
+ "grid": {
+  "module_width": 2.0,
+  "wall_thickness": 0.22,
+  "floor_level": 0.15,
+  "yard_level": 0.0,
+  "mill": {
+   "x": [
+    -12.0,
+    0.0
+   ],
+   "z": [
+    -14.0,
+    -4.0
+   ],
+   "eave": 5.0,
+   "pitch_deg": 25.0
+  },
+  "burner": {
+   "center": [
+    9.0,
+    -9.0
+   ],
+   "base_radius": 4.2,
+   "top_radius": 1.4,
+   "height": 11.5
+  },
+  "lumber_shed": {
+   "x": [
+    -14.0,
+    2.0
+   ],
+   "z": [
+    2.0,
+    10.0
+   ],
+   "eave": 4.0,
+   "ridge": 5.6
+  },
+  "office": {
+   "x": [
+    12.0,
+    16.0
+   ],
+   "z": [
+    6.0,
+    10.0
+   ],
+   "eave": 2.8
+  },
+  "site": {
+   "x": [
+    -24.0,
+    24.0
+   ],
+   "z": [
+    -18.0,
+    18.0
+   ]
+  },
+  "textures": "PBR (albedo + normal + ORM), 2 m tiles, UV in metres / 2"
+ },
+ "placements": [
+  {
+   "piece": "m_plain",
+   "pos": [
+    -11.0,
+    0.15,
+    -4.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "m_bay",
+   "pos": [
+    -8.0,
+    0.15,
+    -4.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "m_plain",
+   "pos": [
+    -5.0,
+    0.15,
+    -4.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "m_plain",
+   "pos": [
+    -3.0,
+    0.15,
+    -4.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "m_win",
+   "pos": [
+    -1.0,
+    0.15,
+    -4.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "m_win",
+   "pos": [
+    -11.0,
+    0.15,
+    -14.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "serraria",
+    "ext"
+   ]
+  },
+  {
+   "piece": "m_plain",
+   "pos": [
+    -9.0,
+    0.15,
+    -14.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "serraria",
+    "ext"
+   ]
+  },
+  {
+   "piece": "m_win",
+   "pos": [
+    -7.0,
+    0.15,
+    -14.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "serraria",
+    "ext"
+   ]
+  },
+  {
+   "piece": "m_plain",
+   "pos": [
+    -5.0,
+    0.15,
+    -14.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "serraria",
+    "ext"
+   ]
+  },
+  {
+   "piece": "m_win",
+   "pos": [
+    -3.0,
+    0.15,
+    -14.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "serraria",
+    "ext"
+   ]
+  },
+  {
+   "piece": "m_plain",
+   "pos": [
+    -1.0,
+    0.15,
+    -14.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "serraria",
+    "ext"
+   ]
+  },
+  {
+   "piece": "m_plain_l",
+   "pos": [
+    -12.0,
+    0.15,
+    -13.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "serraria",
+    "ext"
+   ]
+  },
+  {
+   "piece": "m_win",
+   "pos": [
+    -12.0,
+    0.15,
+    -11.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "serraria",
+    "ext"
+   ]
+  },
+  {
+   "piece": "m_plain",
+   "pos": [
+    -12.0,
+    0.15,
+    -9.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "serraria",
+    "ext"
+   ]
+  },
+  {
+   "piece": "m_win",
+   "pos": [
+    -12.0,
+    0.15,
+    -7.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "serraria",
+    "ext"
+   ]
+  },
+  {
+   "piece": "m_plain_r",
+   "pos": [
+    -12.0,
+    0.15,
+    -5.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "serraria",
+    "ext"
+   ]
+  },
+  {
+   "piece": "m_plain_r",
+   "pos": [
+    0.0,
+    0.15,
+    -13.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "serraria",
+    "ext"
+   ]
+  },
+  {
+   "piece": "m_win",
+   "pos": [
+    0.0,
+    0.15,
+    -11.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "serraria",
+    "ext"
+   ]
+  },
+  {
+   "piece": "m_chute",
+   "pos": [
+    0.0,
+    0.15,
+    -9.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "serraria",
+    "ext"
+   ]
+  },
+  {
+   "piece": "m_door",
+   "pos": [
+    0.0,
+    0.15,
+    -7.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "serraria",
+    "ext"
+   ]
+  },
+  {
+   "piece": "m_plain_l",
+   "pos": [
+    0.0,
+    0.15,
+    -5.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "serraria",
+    "ext"
+   ]
+  },
+  {
+   "piece": "m_roof",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria",
+    "roof"
+   ]
+  },
+  {
+   "piece": "m_floor",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria"
+   ]
+  },
+  {
+   "piece": "door_plank",
+   "pos": [
+    -0.125,
+    0.155,
+    -6.53
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "serraria",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "band_saw",
+   "pos": [
+    -6.0,
+    0.15,
+    -10.75
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria"
+   ]
+  },
+  {
+   "piece": "carriage",
+   "pos": [
+    -7.0,
+    0.15,
+    -10.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria"
+   ]
+  },
+  {
+   "piece": "roller_table",
+   "pos": [
+    -4.75,
+    0.15,
+    -12.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria"
+   ]
+  },
+  {
+   "piece": "edger",
+   "pos": [
+    -1.4,
+    0.15,
+    -12.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria"
+   ]
+  },
+  {
+   "piece": "lumber_cart",
+   "pos": [
+    -10.5,
+    0.15,
+    -5.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria"
+   ]
+  },
+  {
+   "piece": "lumber_cart",
+   "pos": [
+    -3.2,
+    0.15,
+    -5.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria"
+   ]
+  },
+  {
+   "piece": "workbench",
+   "pos": [
+    -9.0,
+    0.15,
+    -13.78
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria"
+   ]
+  },
+  {
+   "piece": "drum",
+   "pos": [
+    -11.3,
+    0.15,
+    -12.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria"
+   ]
+  },
+  {
+   "piece": "drum",
+   "pos": [
+    -11.3,
+    0.15,
+    -12.25
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria"
+   ]
+  },
+  {
+   "piece": "fl_light",
+   "pos": [
+    -10.0,
+    4.93,
+    -11.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria",
+    "roof"
+   ]
+  },
+  {
+   "piece": "fl_light",
+   "pos": [
+    -10.0,
+    4.93,
+    -7.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria",
+    "roof"
+   ]
+  },
+  {
+   "piece": "fl_light",
+   "pos": [
+    -6.0,
+    4.93,
+    -11.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria",
+    "roof"
+   ]
+  },
+  {
+   "piece": "fl_light",
+   "pos": [
+    -6.0,
+    4.93,
+    -7.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria",
+    "roof"
+   ]
+  },
+  {
+   "piece": "fl_light",
+   "pos": [
+    -2.0,
+    4.93,
+    -11.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria",
+    "roof"
+   ]
+  },
+  {
+   "piece": "fl_light",
+   "pos": [
+    -2.0,
+    4.93,
+    -7.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "serraria",
+    "roof"
+   ]
+  },
+  {
+   "piece": "o_door",
+   "pos": [
+    13.0,
+    0.15,
+    10.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "escritorio",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "o_win",
+   "pos": [
+    15.0,
+    0.15,
+    10.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "escritorio",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "o_win",
+   "pos": [
+    13.0,
+    0.15,
+    6.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "escritorio",
+    "ext"
+   ]
+  },
+  {
+   "piece": "o_plain",
+   "pos": [
+    15.0,
+    0.15,
+    6.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "escritorio",
+    "ext"
+   ]
+  },
+  {
+   "piece": "o_win_l",
+   "pos": [
+    12.0,
+    0.15,
+    7.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "escritorio",
+    "ext"
+   ]
+  },
+  {
+   "piece": "o_plain_r",
+   "pos": [
+    12.0,
+    0.15,
+    9.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "escritorio",
+    "ext"
+   ]
+  },
+  {
+   "piece": "o_win_l",
+   "pos": [
+    16.0,
+    0.15,
+    9.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "escritorio",
+    "ext"
+   ]
+  },
+  {
+   "piece": "o_plain_r",
+   "pos": [
+    16.0,
+    0.15,
+    7.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "escritorio",
+    "ext"
+   ]
+  },
+  {
+   "piece": "o_roof",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "escritorio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "o_floor",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "escritorio"
+   ]
+  },
+  {
+   "piece": "door_back",
+   "pos": [
+    12.53,
+    0.155,
+    9.875
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "escritorio",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "desk",
+   "pos": [
+    13.2,
+    0.15,
+    7.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "escritorio"
+   ]
+  },
+  {
+   "piece": "office_chair",
+   "pos": [
+    13.2,
+    0.15,
+    6.75
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "escritorio"
+   ]
+  },
+  {
+   "piece": "guest_chair",
+   "pos": [
+    14.4,
+    0.15,
+    8.4
+   ],
+   "rotY": 210.0,
+   "tags": [
+    "escritorio"
+   ]
+  },
+  {
+   "piece": "wood_stove",
+   "pos": [
+    15.0,
+    0.15,
+    7.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "escritorio"
+   ]
+  },
+  {
+   "piece": "file_cab",
+   "pos": [
+    12.22,
+    0.15,
+    8.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "escritorio"
+   ]
+  },
+  {
+   "piece": "site",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "fence",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "lumber_shed",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "burner",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "conveyor",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "stack_a",
+   "pos": [
+    -12.0,
+    0.15,
+    3.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "stack_b",
+   "pos": [
+    -12.0,
+    0.15,
+    6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "stack_a",
+   "pos": [
+    -12.0,
+    0.15,
+    8.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "stack_b",
+   "pos": [
+    -4.0,
+    0.15,
+    3.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "stack_a",
+   "pos": [
+    -4.0,
+    0.15,
+    6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "stack_a",
+   "pos": [
+    0.0,
+    0.15,
+    8.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "stack_a",
+   "pos": [
+    0.0,
+    0.15,
+    3.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "stack_b",
+   "pos": [
+    -4.0,
+    0.15,
+    8.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "log_pile",
+   "pos": [
+    -18.5,
+    0.0,
+    -12.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "log_pile_b",
+   "pos": [
+    -18.5,
+    0.0,
+    -4.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "loader",
+   "pos": [
+    -15.0,
+    0.0,
+    -8.3
+   ],
+   "rotY": -80.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "log_truck",
+   "pos": [
+    17.5,
+    0.0,
+    -6.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "pallet_stack",
+   "pos": [
+    8.5,
+    0.04,
+    12.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "pallet_stack",
+   "pos": [
+    10.0,
+    0.04,
+    12.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "pallet_stack",
+   "pos": [
+    8.5,
+    0.04,
+    14.1
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "sawdust_pile",
+   "pos": [
+    5.2,
+    0.0,
+    -12.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "sawdust_pile",
+   "pos": [
+    -15.5,
+    0.0,
+    0.4
+   ],
+   "rotY": 40.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "drum",
+   "pos": [
+    1.0,
+    0.0,
+    -12.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "drum",
+   "pos": [
+    1.0,
+    0.0,
+    -13.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "yard_light",
+   "pos": [
+    5.8,
+    0.04,
+    1.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "pine",
+   "pos": [
+    -22.0,
+    0.0,
+    -16.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "pine_b",
+   "pos": [
+    -18.0,
+    0.0,
+    -16.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "pine",
+   "pos": [
+    -8.0,
+    0.0,
+    -16.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "pine_b",
+   "pos": [
+    -2.5,
+    0.0,
+    -16.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "pine",
+   "pos": [
+    3.0,
+    0.0,
+    -16.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "pine_b",
+   "pos": [
+    14.0,
+    0.0,
+    -16.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "pine",
+   "pos": [
+    21.5,
+    0.0,
+    -16.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "pine_b",
+   "pos": [
+    22.2,
+    0.0,
+    -8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "pine",
+   "pos": [
+    22.2,
+    0.0,
+    4.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "pine_b",
+   "pos": [
+    22.2,
+    0.0,
+    12.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "pine",
+   "pos": [
+    -22.2,
+    0.0,
+    8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "pine_b",
+   "pos": [
+    -22.2,
+    0.0,
+    14.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "pine",
+   "pos": [
+    -22.0,
+    0.0,
+    1.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    -8.0,
+    0.15,
+    -3.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    13.8,
+    0.15,
+    8.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "escritorio"
+   ]
+  }
+ ]
+}

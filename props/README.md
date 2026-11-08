@@ -28,7 +28,7 @@ props/
 
 ## Lotes
 
-345 itens no total (234 mobílias e 111 itens de loot). O campo `lote` do catálogo diz de qual lote é cada um.
+357 itens no total (246 mobílias e 111 itens de loot). O campo `lote` do catálogo diz de qual lote é cada um.
 
 | Lote | Mobílias | Loot |
 |---|---|---|
@@ -48,10 +48,11 @@ props/
 | 14. Armazenamento do abrigo | armário de armas de madeira com tela, cofre de armas de aço, suporte de parede para armas, prateleira de tábuas e tijolos, estante de despensa com caixotes, estante aramada com rodinhas, baú de madeira com cadeado, caixote militar verde, caixa organizadora empilhável, caixa de ferramentas de metal, pallet de tábuas cintadas, pallet de tijolos, pallet de sacos de cimento, pallet de sucata separada, pilha de sacos de areia no pallet, lenheiro coberto | - |
 | 15. Feitos à mão (fase Sozinho) | - | tocha de pano e álcool, lamparina de lata, fogareiro de lata, kit de acender fogo, filtro de água de garrafa, caneca de lata com alça de arame, curativo de pano fervido, tala de tábua e pano, armadilha de laço, vara de pesca improvisada, kit de reparo improvisado, colete de revistas e fita, colete de placas de sucata, capacete de panela acolchoado, mochila de lona improvisada, bolsa de cintura de pano |
 | 16. Bancadas e estações (fase Abrigo) | bancada de carpintaria de cavaletes, mesa de costura com máquina manual, mesa de enfermaria improvisada, forja de tambor com fole, fogão a lenha de tambor, defumador de tábuas, filtro de água em barril, bancada de eletrônica, mesa de recarga de munição, alambique de panela, composteira de pallets, cama de pallet com colchão | peça de carne defumada, saco de adubo de composto |
+| 17. Defesa da base | cavalo de frisa de estacas, cerca de arame farpado, parede de sacos de areia, barreira de pneus com terra, tábua de pregos, fosso com estacas, porta reforçada com chapa, grade de janela de vergalhão, chapa de seteira para janela, holofote em poste com bateria, sino de alarme de botijão, plataforma de tiro de andaime | - |
 
 As versões completas das armas (fogo, arcos, facas, facão, lança), com partes, acessórios e animações, ficam em `props/armas/`; o arco, a lança e o facão daqui são o loot simples.
 
-O lote 1 fica em `gerar_props.py`; os outros em `lote2.py` a `lote16.py`, que o gerador carrega com as mesmas funções e materiais (o laço vai até o lote 29). Para um lote novo, crie `lote17.py`; categorias novas entram no dicionário `NOMES` de `gerar_props.py`.
+O lote 1 fica em `gerar_props.py`; os outros em `lote2.py` a `lote17.py`, que o gerador carrega com as mesmas funções e materiais (o laço vai até o lote 29). Para um lote novo, crie `lote18.py`; categorias novas entram no dicionário `NOMES` de `gerar_props.py`.
 
 Os lotes 6 a 12 trazem os itens únicos de cada tipo de prédio. Quem os põe dentro dos prédios é `scripts/ambientacao/` (ver `ROTEIRO_AMBIENTACAO.md`).
 
@@ -59,7 +60,7 @@ Algumas mobílias trazem campos a mais para o jogo: `esconderijo` (vaso sanitár
 
 ## Craft e armazenamento (lotes 13 em diante)
 
-A linha do tempo do jogo (Sozinho → Abrigo → Assentamento → Vila → Cidade nova) vira lotes: 13 materiais, 14 armazenamento, e os próximos com itens feitos à mão, bancadas, defesa, comunidade e vila/cidade. `python props/craft.py` gera `CRAFT.md` (receitas por fase, de onde vem cada material e o que cada peça guarda) e confere que todo ingrediente existe no catálogo.
+A linha do tempo do jogo (Sozinho → Abrigo → Assentamento → Vila → Cidade nova) vira lotes: 13 materiais, 14 armazenamento, 15 feitos à mão, 16 bancadas, 17 defesa, e os próximos com comunidade e vila/cidade. `python props/craft.py` gera `CRAFT.md` (receitas por fase, de onde vem cada material e o que cada peça guarda) e confere que todo ingrediente existe no catálogo.
 
 Campos novos:
 
@@ -74,3 +75,4 @@ Campos novos:
 - `empilhavel` + `altura_m`: caixas que encaixam uma sobre a outra.
 - `equipa` (capacete, colete, colete_tatico, mochila) + `grade`: onde o item feito à mão é vestido no inventário do jogo e quantas células ele dá; `protecao`, `usos`, `luz_m` e `dura_min` completam os efeitos.
 - Estações (lote 16): `trabalha` (vagas de morador), `ponto_uso` (onde o personagem fica para usar), `produz` {`item`, `qtd`, `a_cada_min`, `consome`} para as que geram recurso sozinhas, e `estacao_obra` nas mobílias que só se constroem numa bancada.
+- Defesa (lote 17): `vida` (dano que a peça aguenta), `modulo_m` (encaixa no grid de 2 m), `bloqueia`, `dano_zumbi` e `prende_s` nas armadilhas, `atirar_por_cima` e `vagas` nos postos de tiro, `luz_m` e `ruido_m` no holofote e no sino.

@@ -8759,6 +8759,452 @@
    ],
    "triangulos": 5872,
    "kb": 558.4
+  },
+  {
+   "id": "cavalo_frisa",
+   "nome": "Cavalo de frisa de estacas",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "floor",
+   "lote": 17,
+   "comodos": [
+    "abrigo",
+    "rua"
+   ],
+   "constroi": {
+    "lenha": 6,
+    "arame_liso": 1
+   },
+   "ferramenta": "machado",
+   "fase": 2,
+   "vida": 300,
+   "modulo_m": 2,
+   "bloqueia": "passagem",
+   "dano_zumbi": 4,
+   "empurrar": true,
+   "estacao": "barreira (zumbi que encosta se fere e empaca; dá para arrastar e fechar a rua)",
+   "arquivo": "mobilias/cavalo_frisa.glb",
+   "tamanho_m": [
+    1.9,
+    0.967,
+    0.973
+   ],
+   "triangulos": 1104,
+   "kb": 168.9
+  },
+  {
+   "id": "cerca_arame",
+   "nome": "Cerca de arame farpado",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "floor",
+   "lote": 17,
+   "comodos": [
+    "abrigo",
+    "fazenda",
+    "rua"
+   ],
+   "constroi": {
+    "arame_farpado": 1,
+    "lenha": 3
+   },
+   "ferramenta": "martelo",
+   "fase": 2,
+   "vida": 150,
+   "modulo_m": 2,
+   "bloqueia": "passagem",
+   "dano_zumbi": 2,
+   "prende_s": 3,
+   "estacao": "cerca (segura zumbis comuns 3 s e fere; não para o pesado)",
+   "arquivo": "mobilias/cerca_arame.glb",
+   "tamanho_m": [
+    2.1,
+    1.24,
+    0.114
+   ],
+   "triangulos": 2820,
+   "kb": 266.4
+  },
+  {
+   "id": "parede_sacos",
+   "nome": "Parede de sacos de areia",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "floor",
+   "lote": 17,
+   "comodos": [
+    "abrigo",
+    "quartel",
+    "rua"
+   ],
+   "constroi": {
+    "saco_areia": 12
+   },
+   "ferramenta": "pa",
+   "fase": 2,
+   "vida": 900,
+   "modulo_m": 2,
+   "bloqueia": "passagem",
+   "atirar_por_cima": true,
+   "estacao": "trincheira (1,1 m de altura; moradores atiram por cima sem levar mordida; à prova de bala)",
+   "arquivo": "mobilias/parede_sacos.glb",
+   "tamanho_m": [
+    2.044,
+    1.026,
+    0.422
+   ],
+   "triangulos": 14080,
+   "kb": 1016.2
+  },
+  {
+   "id": "barreira_pneus",
+   "nome": "Barreira de pneus com terra",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "floor",
+   "lote": 17,
+   "comodos": [
+    "abrigo",
+    "posto",
+    "ferrovelho",
+    "rua"
+   ],
+   "constroi": {
+    "terra": 6,
+    "pilha_pneus": 1
+   },
+   "ferramenta": "pa",
+   "fase": 2,
+   "vida": 700,
+   "modulo_m": 2,
+   "bloqueia": "passagem",
+   "estacao": "barreira (pneus velhos cheios de terra; carro não passa)",
+   "arquivo": "mobilias/barreira_pneus.glb",
+   "tamanho_m": [
+    1.99,
+    0.439,
+    0.875
+   ],
+   "triangulos": 9024,
+   "kb": 481.1
+  },
+  {
+   "id": "tabua_pregos",
+   "nome": "Tábua de pregos",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "floor",
+   "lote": 17,
+   "comodos": [
+    "abrigo",
+    "rua"
+   ],
+   "constroi": {
+    "tabua": 1,
+    "caixa_pregos": 1
+   },
+   "ferramenta": "martelo",
+   "fase": 1,
+   "vida": 60,
+   "dano_zumbi": 25,
+   "prende_s": 2,
+   "colisao": "nenhuma",
+   "estacao": "armadilha (escondida no mato ou atrás da porta: fere e trava o zumbi que pisa; o jogador também se fere)",
+   "arquivo": "mobilias/tabua_pregos.glb",
+   "tamanho_m": [
+    1.0,
+    0.088,
+    0.31
+   ],
+   "triangulos": 2588,
+   "kb": 231.8
+  },
+  {
+   "id": "fosso_estacas",
+   "nome": "Fosso com estacas",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "floor",
+   "lote": 17,
+   "comodos": [
+    "abrigo",
+    "rua",
+    "fazenda"
+   ],
+   "constroi": {
+    "lenha": 4
+   },
+   "ferramenta": "pa",
+   "fase": 3,
+   "vida": 400,
+   "modulo_m": 2,
+   "dano_zumbi": 60,
+   "prende_s": 999,
+   "colisao": "buraco",
+   "estacao": "armadilha (cavado na frente do muro; zumbi que cai fica preso até alguém acabar com ele)",
+   "arquivo": "mobilias/fosso_estacas.glb",
+   "tamanho_m": [
+    2.555,
+    1.049,
+    1.429
+   ],
+   "triangulos": 3180,
+   "kb": 370.6
+  },
+  {
+   "id": "porta_reforcada",
+   "nome": "Porta reforçada com chapa",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "wall",
+   "lote": 17,
+   "comodos": [
+    "abrigo",
+    "casas",
+    "quartel"
+   ],
+   "vao": "porta 0,9 × 2,1 m (troca a porta do kit)",
+   "vao_m": [
+    0.9,
+    2.1,
+    0.0
+   ],
+   "constroi": {
+    "chapa_metal": 2,
+    "tabua": 3,
+    "pote_parafusos": 1,
+    "corrente_cadeado": 1
+   },
+   "ferramenta": "chave_inglesa",
+   "estacao_obra": "bancada_carpintaria",
+   "fase": 2,
+   "vida": 600,
+   "trancado": true,
+   "tranca": "tranca de barra por dentro",
+   "estacao": "porta (abre e fecha; aguenta 3× uma barricada de tábuas)",
+   "arquivo": "mobilias/porta_reforcada.glb",
+   "tamanho_m": [
+    1.06,
+    2.18,
+    0.207
+   ],
+   "triangulos": 1516,
+   "kb": 187.8,
+   "partes": [
+    {
+     "no": "porta",
+     "origem": [
+      -0.45,
+      0,
+      0.0
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 100
+    }
+   ]
+  },
+  {
+   "id": "grade_janela",
+   "nome": "Grade de janela de vergalhão",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "wall",
+   "lote": 17,
+   "altura_sugerida_m": 0.78,
+   "comodos": [
+    "abrigo",
+    "casas",
+    "galeria"
+   ],
+   "vao": "janela 0,9 × 1,45 m",
+   "vao_m": [
+    0.9,
+    1.45,
+    0.07
+   ],
+   "constroi": {
+    "cano_metal": 3,
+    "sucata_metal": 4,
+    "pote_parafusos": 1
+   },
+   "ferramenta": "chave_inglesa",
+   "estacao_obra": "forja_tambor",
+   "fase": 2,
+   "vida": 500,
+   "bloqueia": "passagem",
+   "estacao": "grade (deixa ver e atirar pela janela; zumbi enfia o braço mas não passa)",
+   "arquivo": "mobilias/grade_janela.glb",
+   "tamanho_m": [
+    1.05,
+    1.56,
+    0.038
+   ],
+   "triangulos": 12808,
+   "kb": 940.8
+  },
+  {
+   "id": "seteira",
+   "nome": "Chapa de seteira para janela",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "wall",
+   "lote": 17,
+   "altura_sugerida_m": 0.78,
+   "comodos": [
+    "abrigo",
+    "quartel"
+   ],
+   "vao": "janela 0,9 × 1,45 m",
+   "vao_m": [
+    0.9,
+    1.45,
+    0.07
+   ],
+   "constroi": {
+    "chapa_metal": 2,
+    "tabua": 2,
+    "pote_parafusos": 1
+   },
+   "ferramenta": "chave_inglesa",
+   "fase": 2,
+   "vida": 450,
+   "bloqueia": "passagem e visao",
+   "atirar_por_cima": false,
+   "estacao": "seteira (fecha a janela e deixa uma fenda para atirar; quem está dentro não é visto de longe)",
+   "arquivo": "mobilias/seteira.glb",
+   "tamanho_m": [
+    1.01,
+    1.64,
+    0.095
+   ],
+   "triangulos": 1596,
+   "kb": 141.8,
+   "partes": [
+    {
+     "no": "tampa_fenda",
+     "origem": [
+      0.0,
+      0.76,
+      0.06
+     ],
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -80
+    }
+   ]
+  },
+  {
+   "id": "holofote",
+   "nome": "Holofote em poste com bateria",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "floor",
+   "lote": 17,
+   "comodos": [
+    "abrigo",
+    "rua",
+    "quartel"
+   ],
+   "constroi": {
+    "cano_metal": 2,
+    "fio_eletrico": 2,
+    "bateria_carro": 1,
+    "placa_circuito": 1,
+    "lanterna": 1
+   },
+   "ferramenta": "chave_inglesa",
+   "estacao_obra": "bancada_eletronica",
+   "fase": 3,
+   "luz_m": 25,
+   "usa": "energia",
+   "vida": 120,
+   "estacao": "holofote (ilumina 25 m no muro: moradores acertam mais de noite, mas a luz atrai zumbis de longe)",
+   "arquivo": "mobilias/holofote.glb",
+   "tamanho_m": [
+    0.85,
+    2.883,
+    0.902
+   ],
+   "triangulos": 1536,
+   "kb": 136.6,
+   "partes": [
+    {
+     "no": "cabeca",
+     "origem": [
+      0.0,
+      2.72,
+      0.0
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 360,
+     "gira_livre": true
+    }
+   ]
+  },
+  {
+   "id": "sino_alarme",
+   "nome": "Sino de alarme de botijão",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "floor",
+   "lote": 17,
+   "comodos": [
+    "abrigo",
+    "rua"
+   ],
+   "constroi": {
+    "tabua": 3,
+    "corrente_cadeado": 1,
+    "cano_metal": 1
+   },
+   "ferramenta": "serrote",
+   "fase": 2,
+   "ruido_m": 120,
+   "estacao": "alarme (quem vê a horda bate o sino: todos os moradores correm para os postos; a horda também ouve)",
+   "arquivo": "mobilias/sino_alarme.glb",
+   "tamanho_m": [
+    1.3,
+    2.296,
+    0.838
+   ],
+   "triangulos": 3728,
+   "kb": 409.4
+  },
+  {
+   "id": "plataforma_tiro",
+   "nome": "Plataforma de tiro de andaime",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "floor",
+   "lote": 17,
+   "comodos": [
+    "abrigo",
+    "quartel",
+    "rua"
+   ],
+   "constroi": {
+    "cano_metal": 6,
+    "tabua": 6,
+    "pote_parafusos": 1,
+    "saco_areia": 4
+   },
+   "ferramenta": "chave_inglesa",
+   "fase": 3,
+   "vida": 500,
+   "modulo_m": 2,
+   "vagas": 2,
+   "atirar_por_cima": true,
+   "estacao": "posto de tiro (2 moradores atiram por cima do muro de 2 m; sobe pela escada)",
+   "arquivo": "mobilias/plataforma_tiro.glb",
+   "tamanho_m": [
+    2.094,
+    2.5,
+    1.06
+   ],
+   "triangulos": 8528,
+   "kb": 584.4
   }
  ]
 }

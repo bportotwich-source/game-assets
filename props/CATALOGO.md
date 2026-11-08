@@ -240,6 +240,18 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Alambique de panela (`alambique`) | 16 | Oficina | 1,49 × 0,88 × 0,59 | - | - | - | 6704 |
 | Composteira de pallets (`composteira`) | 16 | Agricultura | 1,30 × 1,33 × 1,25 | - | - | - | 8084 |
 | Cama de pallet com colchão (`cama_pallet`) | 16 | Abrigo | 1,45 × 0,51 × 2,20 | - | - | dormir | 5872 |
+| Cavalo de frisa de estacas (`cavalo_frisa`) | 17 | Defesa da base | 1,90 × 0,97 × 0,97 | - | - | - | 1104 |
+| Cerca de arame farpado (`cerca_arame`) | 17 | Defesa da base | 2,10 × 1,24 × 0,11 | - | - | - | 2820 |
+| Parede de sacos de areia (`parede_sacos`) | 17 | Defesa da base | 2,04 × 1,03 × 0,42 | - | - | - | 14080 |
+| Barreira de pneus com terra (`barreira_pneus`) | 17 | Defesa da base | 1,99 × 0,44 × 0,88 | - | - | - | 9024 |
+| Tábua de pregos (`tabua_pregos`) | 17 | Defesa da base | 1,00 × 0,09 × 0,31 | - | - | - | 2588 |
+| Fosso com estacas (`fosso_estacas`) | 17 | Defesa da base | 2,56 × 1,05 × 1,43 | - | - | - | 3180 |
+| Porta reforçada com chapa (`porta_reforcada`) | 17 | Defesa da base | 1,06 × 2,18 × 0,21 | - | porta | - | 1516 |
+| Grade de janela de vergalhão (`grade_janela`) | 17 | Defesa da base | 1,05 × 1,56 × 0,04 | - | - | - | 12808 |
+| Chapa de seteira para janela (`seteira`) | 17 | Defesa da base | 1,01 × 1,64 × 0,10 | - | tampa_fenda | - | 1596 |
+| Holofote em poste com bateria (`holofote`) | 17 | Defesa da base | 0,85 × 2,88 × 0,90 | - | cabeca | - | 1536 |
+| Sino de alarme de botijão (`sino_alarme`) | 17 | Defesa da base | 1,30 × 2,30 × 0,84 | - | - | - | 3728 |
+| Plataforma de tiro de andaime (`plataforma_tiro`) | 17 | Defesa da base | 2,09 × 2,50 × 1,06 | - | - | - | 8528 |
 
 ## Loot
 

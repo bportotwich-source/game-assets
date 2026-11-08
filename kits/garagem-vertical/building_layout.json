@@ -1,0 +1,2592 @@
+{
+ "grid": {
+  "module_width": 2.0,
+  "ground_floor": 0.15,
+  "storey_height": 2.85,
+  "levels": [
+   0.15,
+   3.0,
+   5.8500000000000005,
+   8.700000000000001
+  ],
+  "slab": 0.25,
+  "beam_depth": 0.4,
+  "garage": {
+   "x": [
+    -16.0,
+    16.0
+   ],
+   "z": [
+    -10.0,
+    10.0
+   ]
+  },
+  "ramp_band": {
+   "x": [
+    -12.0,
+    12.0
+   ],
+   "z": [
+    -10.0,
+    -4.0
+   ],
+   "rises_to": "+X"
+  },
+  "tower": {
+   "x": [
+    16.2,
+    20.6
+   ],
+   "z": [
+    3.5,
+    10.0
+   ],
+   "roof": 11.700000000000001
+  },
+  "site": {
+   "x": [
+    -25.0,
+    24.0
+   ],
+   "z": [
+    -14.0,
+    14.0
+   ]
+  },
+  "textures": "PBR (albedo + normal + ORM), 2 m tiles, UV in metres / 2"
+ },
+ "placements": [
+  {
+   "piece": "site",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "ramp",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "ramp",
+   "pos": [
+    0.0,
+    3.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "ramp",
+   "pos": [
+    0.0,
+    5.85,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "deck",
+   "pos": [
+    0.0,
+    3.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "deck",
+   "pos": [
+    0.0,
+    5.85,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "deck",
+   "pos": [
+    0.0,
+    8.7,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof",
+    "roof"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    -15.73,
+    0.0,
+    -9.73
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    -15.73,
+    0.0,
+    -4.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    -15.73,
+    0.0,
+    1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    -15.73,
+    0.0,
+    9.73
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    -7.2,
+    0.0,
+    -9.73
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    -7.2,
+    0.0,
+    -4.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    -7.2,
+    0.0,
+    1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    -7.2,
+    0.0,
+    9.73
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    0.0,
+    0.0,
+    -9.73
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    0.0,
+    0.0,
+    -4.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    0.0,
+    0.0,
+    9.73
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    7.2,
+    0.0,
+    -9.73
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    7.2,
+    0.0,
+    -4.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    7.2,
+    0.0,
+    1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    7.2,
+    0.0,
+    9.73
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    15.73,
+    0.0,
+    -9.73
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    15.73,
+    0.0,
+    -4.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    15.73,
+    0.0,
+    1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem"
+   ]
+  },
+  {
+   "piece": "column",
+   "pos": [
+    15.73,
+    0.0,
+    9.73
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem"
+   ]
+  },
+  {
+   "piece": "tower",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "torre",
+    "ext"
+   ]
+  },
+  {
+   "piece": "stair_storey",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "torre",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "stair_storey",
+   "pos": [
+    0.0,
+    3.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "torre",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "stair_storey",
+   "pos": [
+    0.0,
+    5.85,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "torre",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "stair_top",
+   "pos": [
+    0.0,
+    8.7,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "torre",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "elev_door",
+   "pos": [
+    17.05,
+    0.15,
+    7.4
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "torre"
+   ]
+  },
+  {
+   "piece": "door_metal",
+   "pos": [
+    16.3,
+    0.155,
+    6.01
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "torre",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "elev_door",
+   "pos": [
+    17.05,
+    3.0,
+    7.4
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "torre"
+   ]
+  },
+  {
+   "piece": "door_metal",
+   "pos": [
+    16.3,
+    3.005,
+    6.01
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "torre",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "elev_door",
+   "pos": [
+    17.05,
+    5.85,
+    7.4
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "torre"
+   ]
+  },
+  {
+   "piece": "door_metal",
+   "pos": [
+    16.3,
+    5.855,
+    6.01
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "torre",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "elev_door",
+   "pos": [
+    17.05,
+    8.7,
+    7.4
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "torre"
+   ]
+  },
+  {
+   "piece": "door_metal",
+   "pos": [
+    16.3,
+    8.705,
+    6.01
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "torre",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_metal",
+   "pos": [
+    17.49,
+    0.155,
+    3.6
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "torre",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "blade_sign",
+   "pos": [
+    -16.2,
+    0.0,
+    8.4
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "garagem",
+    "ext"
+   ]
+  },
+  {
+   "piece": "car_sedan_r",
+   "pos": [
+    -10.8,
+    0.15,
+    7.45
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "car_wagon_b",
+   "pos": [
+    -8.4,
+    0.15,
+    7.45
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "car_pickup_y",
+   "pos": [
+    -1.2,
+    0.15,
+    7.45
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "car_hatch_g",
+   "pos": [
+    6.0,
+    0.15,
+    7.45
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "car_coupe_t",
+   "pos": [
+    10.8,
+    0.15,
+    7.45
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -13.2,
+    0.15,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -10.8,
+    0.15,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -8.4,
+    0.15,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -6.0,
+    0.15,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -3.6,
+    0.15,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -1.2,
+    0.15,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    1.2,
+    0.15,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    3.6,
+    0.15,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    6.0,
+    0.15,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    8.4,
+    0.15,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    10.8,
+    0.15,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    13.2,
+    0.15,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "car_sedan_w",
+   "pos": [
+    -13.2,
+    3.0,
+    7.45
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "car_sedan_k",
+   "pos": [
+    -6.0,
+    3.0,
+    7.45
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "car_hatch_o",
+   "pos": [
+    -3.6,
+    3.0,
+    7.45
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "car_sedan_r",
+   "pos": [
+    3.6,
+    3.0,
+    7.45
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "car_wagon_b",
+   "pos": [
+    13.2,
+    3.0,
+    7.45
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "car_pickup_y",
+   "pos": [
+    -10.8,
+    3.0,
+    -1.26
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "car_hatch_g",
+   "pos": [
+    1.2,
+    3.0,
+    -1.26
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "car_coupe_t",
+   "pos": [
+    8.4,
+    3.0,
+    -1.26
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -13.2,
+    3.0,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -10.8,
+    3.0,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -8.4,
+    3.0,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -6.0,
+    3.0,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -3.6,
+    3.0,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -1.2,
+    3.0,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    1.2,
+    3.0,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    3.6,
+    3.0,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    6.0,
+    3.0,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    8.4,
+    3.0,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    10.8,
+    3.0,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    13.2,
+    3.0,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -13.2,
+    3.0,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -10.8,
+    3.0,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -8.4,
+    3.0,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -6.0,
+    3.0,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -3.6,
+    3.0,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -1.2,
+    3.0,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    1.2,
+    3.0,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    3.6,
+    3.0,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    6.0,
+    3.0,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    8.4,
+    3.0,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    10.8,
+    3.0,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    13.2,
+    3.0,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "car_sedan_w",
+   "pos": [
+    -8.4,
+    5.85,
+    7.45
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "car_sedan_k",
+   "pos": [
+    -1.2,
+    5.85,
+    7.45
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "car_hatch_o",
+   "pos": [
+    1.2,
+    5.85,
+    7.45
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "car_sedan_r",
+   "pos": [
+    8.4,
+    5.85,
+    7.45
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "car_wagon_b",
+   "pos": [
+    -13.2,
+    5.85,
+    -1.26
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "car_pickup_y",
+   "pos": [
+    -3.6,
+    5.85,
+    -1.26
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "car_hatch_g",
+   "pos": [
+    10.8,
+    5.85,
+    -1.26
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -13.2,
+    5.85,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -10.8,
+    5.85,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -8.4,
+    5.85,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -6.0,
+    5.85,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -3.6,
+    5.85,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -1.2,
+    5.85,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    1.2,
+    5.85,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    3.6,
+    5.85,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    6.0,
+    5.85,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    8.4,
+    5.85,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    10.8,
+    5.85,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    13.2,
+    5.85,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -13.2,
+    5.85,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -10.8,
+    5.85,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -8.4,
+    5.85,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -6.0,
+    5.85,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -3.6,
+    5.85,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -1.2,
+    5.85,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    1.2,
+    5.85,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    3.6,
+    5.85,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    6.0,
+    5.85,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    8.4,
+    5.85,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    10.8,
+    5.85,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    13.2,
+    5.85,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "car_coupe_t",
+   "pos": [
+    -10.8,
+    8.7,
+    7.45
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "car_sedan_w",
+   "pos": [
+    -3.6,
+    8.7,
+    7.45
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "car_sedan_k",
+   "pos": [
+    6.0,
+    8.7,
+    -1.26
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "car_hatch_o",
+   "pos": [
+    -6.0,
+    8.7,
+    -1.26
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -13.2,
+    8.7,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -10.8,
+    8.7,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -8.4,
+    8.7,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -6.0,
+    8.7,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -3.6,
+    8.7,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -1.2,
+    8.7,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    1.2,
+    8.7,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    3.6,
+    8.7,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    6.0,
+    8.7,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    8.4,
+    8.7,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    10.8,
+    8.7,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    13.2,
+    8.7,
+    9.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -13.2,
+    8.7,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -10.8,
+    8.7,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -8.4,
+    8.7,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -6.0,
+    8.7,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -3.6,
+    8.7,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -1.2,
+    8.7,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    1.2,
+    8.7,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    3.6,
+    8.7,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    6.0,
+    8.7,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    8.4,
+    8.7,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    10.8,
+    8.7,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    13.2,
+    8.7,
+    -3.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "car_sedan_w",
+   "pos": [
+    -20.2,
+    0.15,
+    3.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "roof_light",
+   "pos": [
+    -3.6,
+    8.7,
+    1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "roof_light",
+   "pos": [
+    3.6,
+    8.7,
+    1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "roof_light",
+   "pos": [
+    -14.2,
+    8.7,
+    -7.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "roof_light",
+   "pos": [
+    14.2,
+    8.7,
+    -7.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "ext_cabinet",
+   "pos": [
+    15.48,
+    0.15,
+    1.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "garagem",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "ext_cabinet",
+   "pos": [
+    15.48,
+    3.0,
+    1.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "ext_cabinet",
+   "pos": [
+    15.48,
+    5.85,
+    1.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "ext_cabinet",
+   "pos": [
+    15.48,
+    8.7,
+    1.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "ext_cabinet",
+   "pos": [
+    -15.48,
+    0.15,
+    1.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "garagem",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "ext_cabinet",
+   "pos": [
+    -15.48,
+    3.0,
+    1.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "ext_cabinet",
+   "pos": [
+    -15.48,
+    5.85,
+    1.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "ext_cabinet",
+   "pos": [
+    -15.48,
+    8.7,
+    1.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "garagem",
+    "floor3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "mirror_convex",
+   "pos": [
+    12.3,
+    5.3,
+    -3.98
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "mirror_convex",
+   "pos": [
+    12.3,
+    8.15,
+    -3.98
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "booth",
+   "pos": [
+    -18.2,
+    0.15,
+    5.95
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "barrier",
+   "pos": [
+    -17.6,
+    0.15,
+    1.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "barrier",
+   "pos": [
+    -17.6,
+    0.15,
+    0.65
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "ticket_kiosk",
+   "pos": [
+    -16.9,
+    0.15,
+    5.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "pay_station",
+   "pos": [
+    -16.9,
+    0.15,
+    -3.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "height_bar",
+   "pos": [
+    -19.5,
+    0.0,
+    0.9
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bollard",
+   "pos": [
+    -19.6,
+    0.0,
+    -3.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bollard",
+   "pos": [
+    -19.6,
+    0.0,
+    7.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bollard",
+   "pos": [
+    -17.0,
+    0.0,
+    1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -8.0,
+    0.11,
+    -12.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    2.0,
+    0.11,
+    -12.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -10.0,
+    0.11,
+    12.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    9.0,
+    0.11,
+    12.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -11.0,
+    0.11,
+    -12.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -5.0,
+    0.11,
+    -12.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -1.0,
+    0.11,
+    -12.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    5.0,
+    0.11,
+    -12.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -14.5,
+    0.11,
+    12.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -5.0,
+    0.11,
+    12.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    5.5,
+    0.11,
+    12.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    12.5,
+    0.11,
+    12.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "street_lamp",
+   "pos": [
+    -19.2,
+    0.15,
+    -11.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "street_lamp",
+   "pos": [
+    -19.2,
+    0.15,
+    11.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "street_lamp",
+   "pos": [
+    21.5,
+    0.15,
+    -11.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "street_lamp",
+   "pos": [
+    21.5,
+    0.15,
+    12.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    21.2,
+    0.15,
+    3.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    -19.2,
+    0.15,
+    -6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    -14.0,
+    0.15,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    15.0,
+    3.0,
+    2.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "garagem",
+    "floor1"
+   ]
+  }
+ ]
+}

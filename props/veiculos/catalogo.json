@@ -310,7 +310,7 @@
      "peca": null,
      "pai": "sedan_rumo",
      "origem_m": [
-      0.81,
+      0.7908,
       0.8,
       -1.77
      ],
@@ -1356,37 +1356,1350 @@
      ]
     }
    ]
+  },
+  {
+   "id": "hatch_brisa",
+   "nome": "Hatch Brisa",
+   "classe": "compacto",
+   "portas": 4,
+   "lugares": 5,
+   "descricao": "Hatch compacto de 4 portas da família Rumo, desenho próprio e sem marca. A frente, as portas dianteiras, o motor, as rodas, o tanque, os bancos e o volante são os mesmos do sedã Rumo e trocam entre os dois. A tampa traseira leva o vidro e abre inteira.",
+   "fisica": {
+    "massa_kg": 960,
+    "centro_massa_m": [
+     0,
+     0.45,
+     0.12
+    ],
+    "tracao": "dianteira",
+    "forca_motor_n": 3200,
+    "freio": 40,
+    "direcao_graus": [
+     32,
+     8
+    ],
+    "vel_max_kmh": 145,
+    "roda_raio_m": 0.305,
+    "roda_largura_m": 0.185,
+    "suspensao": {
+     "curso_m": 0.15,
+     "rigidez": 38,
+     "compressao": 0.85,
+     "retorno": 0.9
+    },
+    "atrito_pneu": {
+     "asfalto": 2.6,
+     "terra": 1.8,
+     "grama": 1.4,
+     "lama": 0.9
+    }
+   },
+   "combustivel": {
+    "tanque_l": 45,
+    "consumo_l_100km": 7.5,
+    "marcha_lenta_l_h": 0.8,
+    "bocal": "tampa_combustivel"
+   },
+   "bateria": {
+    "capacidade_ah": 45
+   },
+   "cor_padrao": [
+    0.68,
+    0.3993,
+    0.017
+   ],
+   "cores_sorteio": [
+    [
+     0.68,
+     0.3993,
+     0.017
+    ],
+    [
+     0.7969,
+     0.7818,
+     0.7227
+    ],
+    [
+     0.0135,
+     0.1062,
+     0.2674
+    ],
+    [
+     0.3112,
+     0.009,
+     0.0104
+    ],
+    [
+     0.0915,
+     0.139,
+     0.0415
+    ],
+    [
+     0.0415,
+     0.0415,
+     0.0478
+    ],
+    [
+     0.5234,
+     0.1905,
+     0.0582
+    ],
+    [
+     0.3587,
+     0.4423,
+     0.4995
+    ]
+   ],
+   "arquivo": "hatch_brisa.glb",
+   "tamanho_m": [
+    2.077,
+    1.547,
+    4.275
+   ],
+   "triangulos": 221156,
+   "kb": 11282.7,
+   "partes": [
+    {
+     "no": "capo",
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -68,
+     "peca": "capo",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      30,
+      40
+     ],
+     "depende_de": [
+      "capo:aberto"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.0,
+      0.9075,
+      0.7
+     ],
+     "triangulos": 3446
+    },
+    {
+     "no": "tampa_porta_malas",
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": 80,
+     "peca": "tampa_traseira_hatch",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      30,
+      40
+     ],
+     "depende_de": [
+      "tampa_porta_malas:aberta"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.0,
+      1.3635,
+      -1.335
+     ],
+     "triangulos": 2944
+    },
+    {
+     "no": "porta_de",
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -66,
+     "peca": "porta_dianteira_e",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      75
+     ],
+     "depende_de": [],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.8,
+      0.6,
+      0.605
+     ],
+     "triangulos": 9994
+    },
+    {
+     "no": "porta_dd",
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 66,
+     "peca": "porta_dianteira_d",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      75
+     ],
+     "depende_de": [],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      -0.8,
+      0.6,
+      0.605
+     ],
+     "triangulos": 9984
+    },
+    {
+     "no": "porta_te",
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -66,
+     "peca": "porta_traseira_e_hatch",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      75
+     ],
+     "depende_de": [],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.8,
+      0.6,
+      -0.5
+     ],
+     "triangulos": 6126
+    },
+    {
+     "no": "porta_td",
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 66,
+     "peca": "porta_traseira_d_hatch",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      75
+     ],
+     "depende_de": [],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      -0.8,
+      0.6,
+      -0.5
+     ],
+     "triangulos": 6102
+    },
+    {
+     "no": "paralama_e",
+     "tipo": "peca",
+     "peca": "paralama_e",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      70
+     ],
+     "depende_de": [
+      "farol:fora"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.8,
+      0.55,
+      1.27
+     ],
+     "triangulos": 5710
+    },
+    {
+     "no": "paralama_d",
+     "tipo": "peca",
+     "peca": "paralama_d",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      70
+     ],
+     "depende_de": [
+      "farol:fora"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      -0.8,
+      0.55,
+      1.27
+     ],
+     "triangulos": 5694
+    },
+    {
+     "no": "tampa_combustivel",
+     "tipo": "tampa",
+     "eixo": "y",
+     "abre_graus": -80,
+     "peca": null,
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.7846,
+      0.8,
+      -1.645
+     ],
+     "triangulos": 328
+    },
+    {
+     "no": "para_brisa",
+     "tipo": "peca",
+     "peca": "para_brisa",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      90,
+      120
+     ],
+     "depende_de": [],
+     "quebra_ao_tirar": 0.3,
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.0,
+      1.0,
+      0.55
+     ],
+     "triangulos": 2476
+    },
+    {
+     "no": "vidro_traseiro",
+     "tipo": "peca",
+     "peca": "vidro_traseiro_hatch",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      90,
+      120
+     ],
+     "depende_de": [],
+     "quebra_ao_tirar": 0.3,
+     "pai": "tampa_porta_malas",
+     "origem_m": [
+      0.0,
+      1.17,
+      -1.62
+     ],
+     "triangulos": 1272
+    },
+    {
+     "no": "para_choque_d",
+     "tipo": "peca",
+     "peca": "para_choque_dianteiro",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      40,
+      50
+     ],
+     "depende_de": [],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.0,
+      0.315,
+      2.1
+     ],
+     "triangulos": 7864
+    },
+    {
+     "no": "para_choque_t",
+     "tipo": "peca",
+     "peca": "para_choque_traseiro_hatch",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      40,
+      50
+     ],
+     "depende_de": [],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.0,
+      0.315,
+      -2.0
+     ],
+     "triangulos": 7688
+    },
+    {
+     "no": "farol_e",
+     "tipo": "peca",
+     "peca": "farol",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      20,
+      25
+     ],
+     "depende_de": [
+      "capo:aberto"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.58,
+      0.61,
+      2.03
+     ],
+     "triangulos": 1408
+    },
+    {
+     "no": "farol_d",
+     "tipo": "peca",
+     "peca": "farol",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      20,
+      25
+     ],
+     "depende_de": [
+      "capo:aberto"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      -0.58,
+      0.61,
+      2.03
+     ],
+     "triangulos": 1408
+    },
+    {
+     "no": "lanterna_e",
+     "tipo": "peca",
+     "peca": "lanterna_vertical",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      15,
+      20
+     ],
+     "depende_de": [
+      "tampa_porta_malas:aberta"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.7,
+      0.79,
+      -1.94
+     ],
+     "triangulos": 788
+    },
+    {
+     "no": "lanterna_d",
+     "tipo": "peca",
+     "peca": "lanterna_vertical",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      15,
+      20
+     ],
+     "depende_de": [
+      "tampa_porta_malas:aberta"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      -0.7,
+      0.79,
+      -1.94
+     ],
+     "triangulos": 788
+    },
+    {
+     "no": "retrovisor_e",
+     "tipo": "peca",
+     "peca": "retrovisor",
+     "obrigatoria": false,
+     "ferramentas": [],
+     "tempo_s": [
+      5,
+      20
+     ],
+     "depende_de": [],
+     "pai": "porta_de",
+     "origem_m": [
+      0.7686,
+      0.955,
+      0.5
+     ],
+     "triangulos": 114
+    },
+    {
+     "no": "retrovisor_d",
+     "tipo": "peca",
+     "peca": "retrovisor",
+     "obrigatoria": false,
+     "ferramentas": [],
+     "tempo_s": [
+      5,
+      20
+     ],
+     "depende_de": [],
+     "pai": "porta_dd",
+     "origem_m": [
+      -0.7686,
+      0.955,
+      0.5
+     ],
+     "triangulos": 114
+    },
+    {
+     "no": "roda_de",
+     "tipo": "roda",
+     "peca": "roda_aro14",
+     "tracao": true,
+     "direcao": true,
+     "obrigatoria": true,
+     "ferramentas": [
+      "chave_de_roda",
+      "macaco_sanfona|macaco_jacare"
+     ],
+     "tempo_s": [
+      40,
+      50
+     ],
+     "depende_de": [
+      "carro:no_macaco"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.71,
+      0.305,
+      1.27
+     ],
+     "triangulos": 9344
+    },
+    {
+     "no": "roda_dd",
+     "tipo": "roda",
+     "peca": "roda_aro14",
+     "tracao": true,
+     "direcao": true,
+     "obrigatoria": true,
+     "ferramentas": [
+      "chave_de_roda",
+      "macaco_sanfona|macaco_jacare"
+     ],
+     "tempo_s": [
+      40,
+      50
+     ],
+     "depende_de": [
+      "carro:no_macaco"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      -0.71,
+      0.305,
+      1.27
+     ],
+     "triangulos": 9344
+    },
+    {
+     "no": "roda_te",
+     "tipo": "roda",
+     "peca": "roda_aro14",
+     "tracao": false,
+     "direcao": false,
+     "obrigatoria": true,
+     "ferramentas": [
+      "chave_de_roda",
+      "macaco_sanfona|macaco_jacare"
+     ],
+     "tempo_s": [
+      40,
+      50
+     ],
+     "depende_de": [
+      "carro:no_macaco"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.71,
+      0.305,
+      -1.28
+     ],
+     "triangulos": 9344
+    },
+    {
+     "no": "roda_td",
+     "tipo": "roda",
+     "peca": "roda_aro14",
+     "tracao": false,
+     "direcao": false,
+     "obrigatoria": true,
+     "ferramentas": [
+      "chave_de_roda",
+      "macaco_sanfona|macaco_jacare"
+     ],
+     "tempo_s": [
+      40,
+      50
+     ],
+     "depende_de": [
+      "carro:no_macaco"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      -0.71,
+      0.305,
+      -1.28
+     ],
+     "triangulos": 9344
+    },
+    {
+     "no": "estepe",
+     "tipo": "peca",
+     "peca": "roda_aro14",
+     "obrigatoria": false,
+     "ferramentas": [],
+     "tempo_s": [
+      5,
+      5
+     ],
+     "depende_de": [
+      "tampa_porta_malas:aberta",
+      "assoalho_porta_malas:aberto"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.0,
+      0.36,
+      -1.685
+     ],
+     "triangulos": 9344
+    },
+    {
+     "no": "motor",
+     "tipo": "peca",
+     "peca": "motor_1_6",
+     "obrigatoria": true,
+     "ferramentas": [
+      "jogo_de_chaves",
+      "talha"
+     ],
+     "tempo_s": [
+      240,
+      300
+     ],
+     "depende_de": [
+      "capo:aberto",
+      "radiador:fora",
+      "bateria:fora"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.0,
+      0.26,
+      1.3
+     ],
+     "triangulos": 6624
+    },
+    {
+     "no": "alternador",
+     "tipo": "peca",
+     "peca": "alternador",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      45,
+      60
+     ],
+     "depende_de": [
+      "capo:aberto"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      -0.22,
+      0.5,
+      1.46
+     ],
+     "triangulos": 532
+    },
+    {
+     "no": "radiador",
+     "tipo": "peca",
+     "peca": "radiador",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      75
+     ],
+     "depende_de": [
+      "capo:aberto"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.0,
+      0.37,
+      1.905
+     ],
+     "triangulos": 992
+    },
+    {
+     "no": "bateria",
+     "tipo": "peca",
+     "peca": "bateria_12v",
+     "obrigatoria": true,
+     "ferramentas": [
+      "jogo_de_chaves|chave_inglesa"
+     ],
+     "tempo_s": [
+      15,
+      20
+     ],
+     "depende_de": [
+      "capo:aberto"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.3,
+      0.565,
+      0.93
+     ],
+     "triangulos": 696
+    },
+    {
+     "no": "escapamento",
+     "tipo": "peca",
+     "peca": "escapamento_curto",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves",
+      "macaco_sanfona|macaco_jacare"
+     ],
+     "tempo_s": [
+      60,
+      75
+     ],
+     "depende_de": [
+      "carro:no_macaco"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.0,
+      0.165,
+      -0.5
+     ],
+     "triangulos": 2092
+    },
+    {
+     "no": "tanque",
+     "tipo": "peca",
+     "peca": "tanque_45l",
+     "obrigatoria": true,
+     "ferramentas": [
+      "jogo_de_chaves",
+      "macaco_sanfona|macaco_jacare"
+     ],
+     "tempo_s": [
+      90,
+      120
+     ],
+     "depende_de": [
+      "carro:no_macaco"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.0,
+      0.125,
+      -0.83
+     ],
+     "triangulos": 172
+    },
+    {
+     "no": "banco_motorista",
+     "tipo": "peca",
+     "peca": "banco_dianteiro",
+     "obrigatoria": true,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      70
+     ],
+     "depende_de": [
+      "porta_de:aberta"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.37,
+      0.29,
+      -0.28
+     ],
+     "triangulos": 6256
+    },
+    {
+     "no": "banco_passageiro",
+     "tipo": "peca",
+     "peca": "banco_dianteiro",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      70
+     ],
+     "depende_de": [
+      "porta_dd:aberta"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      -0.37,
+      0.29,
+      -0.28
+     ],
+     "triangulos": 6256
+    },
+    {
+     "no": "banco_traseiro",
+     "tipo": "peca",
+     "peca": "banco_traseiro",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      70
+     ],
+     "depende_de": [
+      "porta_te|porta_td:aberta"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.0,
+      0.3,
+      -1.13
+     ],
+     "triangulos": 6028
+    },
+    {
+     "no": "volante",
+     "tipo": "peca",
+     "peca": "volante",
+     "obrigatoria": true,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      30,
+      30
+     ],
+     "depende_de": [
+      "porta_de:aberta"
+     ],
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.37,
+      0.82,
+      0.06
+     ],
+     "triangulos": 1208
+    },
+    {
+     "no": "porta_luvas",
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -75,
+     "peca": null,
+     "pai": "hatch_brisa",
+     "origem_m": [
+      -0.375,
+      0.586,
+      0.215
+     ],
+     "triangulos": 56
+    },
+    {
+     "no": "assoalho_porta_malas",
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": 75,
+     "peca": null,
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.0,
+      0.478,
+      -1.585
+     ],
+     "triangulos": 284
+    },
+    {
+     "no": "quebra_sol_e",
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -80,
+     "peca": null,
+     "pai": "hatch_brisa",
+     "origem_m": [
+      0.38,
+      1.336,
+      -0.215
+     ],
+     "triangulos": 44
+    },
+    {
+     "no": "quebra_sol_d",
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -80,
+     "peca": null,
+     "pai": "hatch_brisa",
+     "origem_m": [
+      -0.38,
+      1.336,
+      -0.215
+     ],
+     "triangulos": 56
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "camera_1a_pessoa",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.37,
+      1.13,
+      -0.32
+     ]
+    },
+    {
+     "no": "assento_motorista",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.37,
+      0.48,
+      -0.3
+     ]
+    },
+    {
+     "no": "assento_passageiro",
+     "tipo": "ponto",
+     "posicao_m": [
+      -0.37,
+      0.48,
+      -0.3
+     ]
+    },
+    {
+     "no": "assento_traseiro_e",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.4,
+      0.5,
+      -1.12
+     ]
+    },
+    {
+     "no": "assento_traseiro_m",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.0,
+      0.5,
+      -1.12
+     ]
+    },
+    {
+     "no": "assento_traseiro_d",
+     "tipo": "ponto",
+     "posicao_m": [
+      -0.4,
+      0.5,
+      -1.12
+     ]
+    },
+    {
+     "no": "saida_motorista",
+     "tipo": "ponto",
+     "posicao_m": [
+      1.35,
+      0.0,
+      -0.05
+     ]
+    },
+    {
+     "no": "saida_passageiro",
+     "tipo": "ponto",
+     "posicao_m": [
+      -1.35,
+      0.0,
+      -0.05
+     ]
+    },
+    {
+     "no": "saida_traseira_e",
+     "tipo": "ponto",
+     "posicao_m": [
+      1.35,
+      0.0,
+      -0.95
+     ]
+    },
+    {
+     "no": "saida_traseira_d",
+     "tipo": "ponto",
+     "posicao_m": [
+      -1.35,
+      0.0,
+      -0.95
+     ]
+    },
+    {
+     "no": "bocal_tanque",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.781,
+      0.8,
+      -1.735
+     ]
+    },
+    {
+     "no": "saida_escape",
+     "tipo": "ponto",
+     "posicao_m": [
+      -0.43,
+      0.19,
+      -2.1
+     ]
+    },
+    {
+     "no": "luz_farol_e",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.58,
+      0.614,
+      2.09
+     ]
+    },
+    {
+     "no": "luz_farol_d",
+     "tipo": "ponto",
+     "posicao_m": [
+      -0.58,
+      0.614,
+      2.09
+     ]
+    },
+    {
+     "no": "luz_freio_e",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.7,
+      0.86,
+      -2.03
+     ]
+    },
+    {
+     "no": "luz_freio_d",
+     "tipo": "ponto",
+     "posicao_m": [
+      -0.7,
+      0.86,
+      -2.03
+     ]
+    },
+    {
+     "no": "macaco_e",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.7,
+      0.22,
+      -0.2
+     ]
+    },
+    {
+     "no": "macaco_d",
+     "tipo": "ponto",
+     "posicao_m": [
+      -0.7,
+      0.22,
+      -0.2
+     ]
+    },
+    {
+     "no": "talha_motor",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.0,
+      1.4,
+      1.3
+     ]
+    }
+   ],
+   "compartimentos": [
+    {
+     "id": "porta_malas",
+     "nome": "Porta-malas",
+     "grade": [
+      7,
+      4
+     ],
+     "abre_por": "tampa_porta_malas",
+     "saque": [
+      [
+       "mochila",
+       0.3
+      ],
+      [
+       "macaco_sanfona",
+       0.5
+      ],
+      [
+       "chave_de_roda",
+       0.5
+      ],
+      [
+       "garrafa_agua",
+       0.25
+      ],
+      [
+       "oleo_motor",
+       0.2
+      ],
+      [
+       "cabos_chupeta",
+       0.15
+      ],
+      [
+       "bola",
+       0.1
+      ],
+      [
+       "sacola_compras",
+       0.3
+      ],
+      [
+       "roupas",
+       0.25
+      ],
+      [
+       "lata_feijao",
+       0.2
+      ]
+     ],
+     "tranca": true
+    },
+    {
+     "id": "fundo_porta_malas",
+     "nome": "Fundo do porta-malas",
+     "grade": [
+      3,
+      3
+     ],
+     "abre_por": "assoalho_porta_malas",
+     "so_aceita": [
+      "roda_aro14"
+     ],
+     "parte": "estepe"
+    },
+    {
+     "id": "porta_luvas",
+     "nome": "Porta-luvas",
+     "grade": [
+      3,
+      2
+     ],
+     "abre_por": "porta_luvas",
+     "saque": [
+      [
+       "mapa_cidade",
+       0.4
+      ],
+      [
+       "lanterna",
+       0.3
+      ],
+      [
+       "pilhas",
+       0.3
+      ],
+      [
+       "isqueiro",
+       0.25
+      ],
+      [
+       "oculos_sol",
+       0.2
+      ],
+      [
+       "chave_casa",
+       0.1
+      ],
+      [
+       "frasco_remedio",
+       0.15
+      ]
+     ]
+    },
+    {
+     "id": "bolsa_porta_de",
+     "nome": "Bolsa da porta do motorista",
+     "grade": [
+      3,
+      1
+     ],
+     "abre_por": "porta_de",
+     "saque": [
+      [
+       "garrafa_agua",
+       0.2
+      ],
+      [
+       "salgadinho",
+       0.2
+      ],
+      [
+       "chave_carro",
+       0.02
+      ]
+     ]
+    },
+    {
+     "id": "bolsa_porta_dd",
+     "nome": "Bolsa da porta do passageiro",
+     "grade": [
+      3,
+      1
+     ],
+     "abre_por": "porta_dd",
+     "saque": [
+      [
+       "garrafa_agua",
+       0.2
+      ],
+      [
+       "salgadinho",
+       0.2
+      ],
+      [
+       "chave_carro",
+       0.02
+      ]
+     ]
+    },
+    {
+     "id": "console",
+     "nome": "Console",
+     "grade": [
+      2,
+      1
+     ],
+     "abre_por": null,
+     "saque": [
+      [
+       "isqueiro",
+       0.3
+      ],
+      [
+       "pilhas",
+       0.2
+      ]
+     ]
+    },
+    {
+     "id": "quebra_sol_e",
+     "nome": "Quebra-sol do motorista",
+     "grade": [
+      1,
+      1
+     ],
+     "abre_por": "quebra_sol_e",
+     "saque": [
+      [
+       "chave_carro",
+       0.1
+      ]
+     ]
+    },
+    {
+     "id": "quebra_sol_d",
+     "nome": "Quebra-sol do passageiro",
+     "grade": [
+      1,
+      1
+     ],
+     "abre_por": "quebra_sol_d",
+     "saque": [
+      [
+       "chave_carro",
+       0.1
+      ]
+     ]
+    },
+    {
+     "id": "banco_tras",
+     "nome": "Banco de trás",
+     "grade": [
+      8,
+      4
+     ],
+     "abre_por": null,
+     "saque": [
+      [
+       "mochila",
+       0.1
+      ],
+      [
+       "roupas",
+       0.2
+      ],
+      [
+       "cadeirinha_bebe",
+       0.08
+      ]
+     ],
+     "vira_carga_sem": "banco_traseiro",
+     "carga_sem_banco": [
+      9,
+      6
+     ]
+    }
+   ]
   }
  ],
  "pecas": [
-  {
-   "id": "capo",
-   "nome": "Capô",
-   "grupo": "loot",
-   "categoria": "veiculo",
-   "montagem": "floor",
-   "recurso": "peca_veiculo",
-   "valor": 1,
-   "peso_kg": 14,
-   "empilha": 1,
-   "padrao": "sedan_rumo",
-   "efeito": "protege o motor de batidas e da chuva",
-   "onde": [
-    "ferro_velho",
-    "concessionaria",
-    "posto",
-    "garagem"
-   ],
-   "carga_maos": true,
-   "arquivo": "pecas/capo.glb",
-   "tamanho_m": [
-    1.504,
-    0.215,
-    1.335
-   ],
-   "triangulos": 3334,
-   "kb": 258.1
-  },
   {
    "id": "tampa_porta_malas",
    "nome": "Tampa do porta-malas",
@@ -1414,62 +2727,6 @@
    ],
    "triangulos": 2162,
    "kb": 174.5
-  },
-  {
-   "id": "porta_dianteira_e",
-   "nome": "Porta dianteira esquerda",
-   "grupo": "loot",
-   "categoria": "veiculo",
-   "montagem": "floor",
-   "recurso": "peca_veiculo",
-   "valor": 1,
-   "peso_kg": 22,
-   "empilha": 1,
-   "padrao": "sedan_rumo",
-   "efeito": "protege o motorista; vidro e bolsa da porta",
-   "onde": [
-    "ferro_velho",
-    "concessionaria",
-    "posto",
-    "garagem"
-   ],
-   "carga_maos": true,
-   "arquivo": "pecas/porta_dianteira_e.glb",
-   "tamanho_m": [
-    0.997,
-    0.394,
-    1.005
-   ],
-   "triangulos": 9910,
-   "kb": 668.6
-  },
-  {
-   "id": "porta_dianteira_d",
-   "nome": "Porta dianteira direita",
-   "grupo": "loot",
-   "categoria": "veiculo",
-   "montagem": "floor",
-   "recurso": "peca_veiculo",
-   "valor": 1,
-   "peso_kg": 22,
-   "empilha": 1,
-   "padrao": "sedan_rumo",
-   "efeito": "protege o passageiro; vidro e bolsa da porta",
-   "onde": [
-    "ferro_velho",
-    "concessionaria",
-    "posto",
-    "garagem"
-   ],
-   "carga_maos": true,
-   "arquivo": "pecas/porta_dianteira_d.glb",
-   "tamanho_m": [
-    0.997,
-    0.394,
-    1.005
-   ],
-   "triangulos": 9880,
-   "kb": 667.2
   },
   {
    "id": "porta_traseira_e",
@@ -1528,96 +2785,6 @@
    "kb": 441.6
   },
   {
-   "id": "paralama_e",
-   "nome": "Para-lama dianteiro esquerdo",
-   "grupo": "loot",
-   "categoria": "veiculo",
-   "montagem": "floor",
-   "recurso": "peca_veiculo",
-   "valor": 1,
-   "peso_kg": 5,
-   "empilha": 1,
-   "padrao": "sedan_rumo",
-   "efeito": "protege a roda e o farol de lado",
-   "onde": [
-    "ferro_velho",
-    "concessionaria",
-    "posto",
-    "garagem"
-   ],
-   "celulas": [
-    4,
-    2
-   ],
-   "arquivo": "pecas/paralama_e.glb",
-   "tamanho_m": [
-    0.643,
-    0.189,
-    1.454
-   ],
-   "triangulos": 5560,
-   "kb": 405.6
-  },
-  {
-   "id": "paralama_d",
-   "nome": "Para-lama dianteiro direito",
-   "grupo": "loot",
-   "categoria": "veiculo",
-   "montagem": "floor",
-   "recurso": "peca_veiculo",
-   "valor": 1,
-   "peso_kg": 5,
-   "empilha": 1,
-   "padrao": "sedan_rumo",
-   "efeito": "protege a roda e o farol de lado",
-   "onde": [
-    "ferro_velho",
-    "concessionaria",
-    "posto",
-    "garagem"
-   ],
-   "celulas": [
-    4,
-    2
-   ],
-   "arquivo": "pecas/paralama_d.glb",
-   "tamanho_m": [
-    0.643,
-    0.189,
-    1.454
-   ],
-   "triangulos": 5534,
-   "kb": 404.3
-  },
-  {
-   "id": "para_brisa",
-   "nome": "Para-brisa",
-   "grupo": "loot",
-   "categoria": "veiculo",
-   "montagem": "floor",
-   "recurso": "peca_veiculo",
-   "valor": 1,
-   "peso_kg": 12,
-   "empilha": 1,
-   "padrao": "sedan_rumo",
-   "efeito": "protege a frente da cabine (30% de quebrar ao tirar)",
-   "onde": [
-    "ferro_velho",
-    "concessionaria",
-    "posto",
-    "garagem"
-   ],
-   "carga_maos": true,
-   "arquivo": "pecas/para_brisa.glb",
-   "tamanho_m": [
-    1.463,
-    0.537,
-    0.76
-   ],
-   "triangulos": 2552,
-   "kb": 120.6
-  },
-  {
    "id": "vidro_traseiro",
    "nome": "Vidro traseiro",
    "grupo": "loot",
@@ -1646,37 +2813,6 @@
    "kb": 88.0
   },
   {
-   "id": "para_choque_dianteiro",
-   "nome": "Para-choque dianteiro",
-   "grupo": "loot",
-   "categoria": "veiculo",
-   "montagem": "floor",
-   "recurso": "peca_veiculo",
-   "valor": 1,
-   "peso_kg": 7,
-   "empilha": 1,
-   "padrao": "sedan_rumo",
-   "efeito": "absorve a primeira parte das batidas de frente",
-   "onde": [
-    "ferro_velho",
-    "concessionaria",
-    "posto",
-    "garagem"
-   ],
-   "celulas": [
-    7,
-    1
-   ],
-   "arquivo": "pecas/para_choque_dianteiro.glb",
-   "tamanho_m": [
-    1.73,
-    0.213,
-    0.44
-   ],
-   "triangulos": 7864,
-   "kb": 373.8
-  },
-  {
    "id": "para_choque_traseiro",
    "nome": "Para-choque traseiro",
    "grupo": "loot",
@@ -1703,6 +2839,416 @@
     1.747,
     0.185,
     0.456
+   ],
+   "triangulos": 7688,
+   "kb": 370.0
+  },
+  {
+   "id": "lanterna_traseira",
+   "nome": "Lanterna traseira",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 1,
+   "empilha": 1,
+   "padrao": "universal",
+   "efeito": "luz de freio, de ré e pisca",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    2,
+    1
+   ],
+   "arquivo": "pecas/lanterna_traseira.glb",
+   "tamanho_m": [
+    0.304,
+    0.177,
+    0.373
+   ],
+   "triangulos": 504,
+   "kb": 34.8
+  },
+  {
+   "id": "escapamento",
+   "nome": "Escapamento com silencioso",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 8,
+   "empilha": 1,
+   "padrao": "compacto_1_6",
+   "efeito": "sem ele o motor faz o dobro de barulho",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    6,
+    1
+   ],
+   "arquivo": "pecas/escapamento.glb",
+   "tamanho_m": [
+    0.524,
+    0.317,
+    3.89
+   ],
+   "triangulos": 2092,
+   "kb": 159.5
+  },
+  {
+   "id": "capo",
+   "nome": "Capô",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 14,
+   "empilha": 1,
+   "padrao": "familia_rumo",
+   "efeito": "protege o motor de batidas e da chuva",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/capo.glb",
+   "tamanho_m": [
+    1.504,
+    0.215,
+    1.335
+   ],
+   "triangulos": 3446,
+   "kb": 265.9
+  },
+  {
+   "id": "tampa_traseira_hatch",
+   "nome": "Tampa traseira do hatch",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 12,
+   "empilha": 1,
+   "padrao": "hatch_brisa",
+   "efeito": "fecha a traseira; leva o vidro e o limpador",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/tampa_traseira_hatch.glb",
+   "tamanho_m": [
+    1.24,
+    0.757,
+    0.691
+   ],
+   "triangulos": 4216,
+   "kb": 282.8
+  },
+  {
+   "id": "porta_dianteira_e",
+   "nome": "Porta dianteira esquerda",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 22,
+   "empilha": 1,
+   "padrao": "familia_rumo",
+   "efeito": "protege o motorista; vidro e bolsa da porta",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/porta_dianteira_e.glb",
+   "tamanho_m": [
+    0.997,
+    0.394,
+    1.005
+   ],
+   "triangulos": 10108,
+   "kb": 682.3
+  },
+  {
+   "id": "porta_dianteira_d",
+   "nome": "Porta dianteira direita",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 22,
+   "empilha": 1,
+   "padrao": "familia_rumo",
+   "efeito": "protege o passageiro; vidro e bolsa da porta",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/porta_dianteira_d.glb",
+   "tamanho_m": [
+    0.997,
+    0.394,
+    1.005
+   ],
+   "triangulos": 10098,
+   "kb": 682.0
+  },
+  {
+   "id": "porta_traseira_e_hatch",
+   "nome": "Porta traseira esquerda do hatch",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 18,
+   "empilha": 1,
+   "padrao": "hatch_brisa",
+   "efeito": "protege quem vai atrás",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/porta_traseira_e_hatch.glb",
+   "tamanho_m": [
+    0.997,
+    0.205,
+    0.77
+   ],
+   "triangulos": 6126,
+   "kb": 424.6
+  },
+  {
+   "id": "porta_traseira_d_hatch",
+   "nome": "Porta traseira direita do hatch",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 18,
+   "empilha": 1,
+   "padrao": "hatch_brisa",
+   "efeito": "protege quem vai atrás",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/porta_traseira_d_hatch.glb",
+   "tamanho_m": [
+    0.997,
+    0.205,
+    0.77
+   ],
+   "triangulos": 6102,
+   "kb": 423.0
+  },
+  {
+   "id": "paralama_e",
+   "nome": "Para-lama dianteiro esquerdo",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 5,
+   "empilha": 1,
+   "padrao": "familia_rumo",
+   "efeito": "protege a roda e o farol de lado",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    4,
+    2
+   ],
+   "arquivo": "pecas/paralama_e.glb",
+   "tamanho_m": [
+    0.643,
+    0.189,
+    1.454
+   ],
+   "triangulos": 5710,
+   "kb": 415.6
+  },
+  {
+   "id": "paralama_d",
+   "nome": "Para-lama dianteiro direito",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 5,
+   "empilha": 1,
+   "padrao": "familia_rumo",
+   "efeito": "protege a roda e o farol de lado",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    4,
+    2
+   ],
+   "arquivo": "pecas/paralama_d.glb",
+   "tamanho_m": [
+    0.643,
+    0.189,
+    1.454
+   ],
+   "triangulos": 5694,
+   "kb": 415.0
+  },
+  {
+   "id": "para_brisa",
+   "nome": "Para-brisa",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 12,
+   "empilha": 1,
+   "padrao": "familia_rumo",
+   "efeito": "protege a frente da cabine (30% de quebrar ao tirar)",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/para_brisa.glb",
+   "tamanho_m": [
+    1.463,
+    0.537,
+    0.76
+   ],
+   "triangulos": 2476,
+   "kb": 117.0
+  },
+  {
+   "id": "vidro_traseiro_hatch",
+   "nome": "Vidro da tampa do hatch",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 6,
+   "empilha": 1,
+   "padrao": "hatch_brisa",
+   "efeito": "protege a traseira da cabine",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/vidro_traseiro_hatch.glb",
+   "tamanho_m": [
+    1.216,
+    0.178,
+    0.467
+   ],
+   "triangulos": 1272,
+   "kb": 60.6
+  },
+  {
+   "id": "para_choque_dianteiro",
+   "nome": "Para-choque dianteiro",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 7,
+   "empilha": 1,
+   "padrao": "familia_rumo",
+   "efeito": "absorve a primeira parte das batidas de frente",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    7,
+    1
+   ],
+   "arquivo": "pecas/para_choque_dianteiro.glb",
+   "tamanho_m": [
+    1.73,
+    0.213,
+    0.44
+   ],
+   "triangulos": 7864,
+   "kb": 373.8
+  },
+  {
+   "id": "para_choque_traseiro_hatch",
+   "nome": "Para-choque traseiro do hatch",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 6,
+   "empilha": 1,
+   "padrao": "hatch_brisa",
+   "efeito": "absorve a primeira parte das batidas de trás",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    6,
+    1
+   ],
+   "arquivo": "pecas/para_choque_traseiro_hatch.glb",
+   "tamanho_m": [
+    1.732,
+    0.185,
+    0.368
    ],
    "triangulos": 7688,
    "kb": 370.0
@@ -1739,8 +3285,8 @@
    "kb": 82.8
   },
   {
-   "id": "lanterna_traseira",
-   "nome": "Lanterna traseira",
+   "id": "lanterna_vertical",
+   "nome": "Lanterna traseira em pé",
    "grupo": "loot",
    "categoria": "veiculo",
    "montagem": "floor",
@@ -1748,7 +3294,7 @@
    "valor": 1,
    "peso_kg": 1,
    "empilha": 1,
-   "padrao": "universal",
+   "padrao": "hatch_brisa",
    "efeito": "luz de freio, de ré e pisca",
    "onde": [
     "ferro_velho",
@@ -1757,17 +3303,17 @@
     "garagem"
    ],
    "celulas": [
-    2,
-    1
+    1,
+    2
    ],
-   "arquivo": "pecas/lanterna_traseira.glb",
+   "arquivo": "pecas/lanterna_vertical.glb",
    "tamanho_m": [
-    0.304,
-    0.177,
-    0.373
+    0.15,
+    0.333,
+    0.148
    ],
-   "triangulos": 504,
-   "kb": 34.8
+   "triangulos": 788,
+   "kb": 54.6
   },
   {
    "id": "retrovisor",
@@ -1958,16 +3504,16 @@
    "kb": 37.8
   },
   {
-   "id": "escapamento",
-   "nome": "Escapamento com silencioso",
+   "id": "escapamento_curto",
+   "nome": "Escapamento curto com silencioso",
    "grupo": "loot",
    "categoria": "veiculo",
    "montagem": "floor",
    "recurso": "peca_veiculo",
    "valor": 1,
-   "peso_kg": 8,
+   "peso_kg": 7,
    "empilha": 1,
-   "padrao": "compacto_1_6",
+   "padrao": "hatch_brisa",
    "efeito": "sem ele o motor faz o dobro de barulho",
    "onde": [
     "ferro_velho",
@@ -1976,14 +3522,14 @@
     "garagem"
    ],
    "celulas": [
-    6,
+    5,
     1
    ],
-   "arquivo": "pecas/escapamento.glb",
+   "arquivo": "pecas/escapamento_curto.glb",
    "tamanho_m": [
     0.524,
     0.317,
-    3.89
+    3.66
    ],
    "triangulos": 2092,
    "kb": 159.5
@@ -1998,7 +3544,7 @@
    "valor": 1,
    "peso_kg": 9,
    "empilha": 1,
-   "padrao": "sedan_rumo",
+   "padrao": "familia_rumo",
    "efeito": "guarda 45 L de combustível",
    "onde": [
     "ferro_velho",

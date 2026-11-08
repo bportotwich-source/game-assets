@@ -610,9 +610,11 @@ def empunhadura_cilindrica(A):
             descricao='Gancho vazado na frente do guarda-mão: a mão encosta nele e não escorrega para o cano quente.')
 def batente_mao(A):
     q = A.base; _base_mlok(q, 0.06)
-    fora = suave([(-0.036, -0.004), (0.036, -0.004), (0.042, -0.012), (0.042, -0.03), (0.034, -0.044), (0.022, -0.046), (0.012, -0.036), (-0.02, -0.012),
-                  (-0.036, -0.008)], 3)
-    furo = suave([(0.012, -0.0115), (0.031, -0.0115), (0.035, -0.02), (0.033, -0.033), (0.025, -0.037), (0.018, -0.03)], 3)
+    # gancho atras (lado da mao) e rampa subindo para a frente: a mao empurra contra o gancho
+    esp = lambda pts: [(-x, y) for x, y in pts]
+    fora = suave(esp([(-0.036, -0.004), (0.036, -0.004), (0.042, -0.012), (0.042, -0.03), (0.034, -0.044), (0.022, -0.046), (0.012, -0.036), (-0.02, -0.012),
+                      (-0.036, -0.008)]), 3)
+    furo = suave(esp([(0.012, -0.0115), (0.031, -0.0115), (0.035, -0.02), (0.033, -0.033), (0.025, -0.037), (0.018, -0.03)]), 3)
     q.add('polimero', solido(Polygon(fora).difference(Polygon(furo)), -0.0075, 0.0075, 0.0018))
     q.add('polimero', solido(LineString([(-0.032, -0.0055), (0.034, -0.0055)]).buffer(0.0008), -0.0085, 0.0085))   # aba fina de cima
     A.pivo = (0, 0, 0)

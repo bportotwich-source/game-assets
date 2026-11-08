@@ -37,6 +37,8 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Facão de mato (`facao`) | lâmina | - | 60 | 0,85 m | 1,3/s | 2 m | 2600 | 0,62 kg | cinto | golpear, golpe_forte, cortar_mato, sacar, guardar, inspecionar, ocioso |
 | Machadinha tática (`machadinha_tatica`) | lâmina | - | 70 | 0,7 m | 1,1/s | 3 m | 3500 | 0,75 kg | capa | golpear, golpe_forte, golpe_ponta, arrombar, tirar_capa, inspecionar, ocioso |
 | Lança improvisada (`lanca_improvisada`) | lâmina | - | 48 | 1,6 m | 1,4/s | 2 m | 900 | 0,95 kg | mao_frente | estocar, estocar_forte, golpe_lateral, empurrar, firmar, refazer_fita, inspecionar, ocioso |
+| Bastão com pregos (`bastao_pregos`) | impacto | - | 52 | 0,95 m | 1,2/s | 4 m | 1400 | 1,05 kg | mao_cima | golpear, golpe_forte, estocar, puxar, inspecionar, ocioso |
+| Bastão com arame farpado (`bastao_arame`) | impacto | - | 58 | 0,95 m | 1,2/s | 4 m | 1100 | 1,15 kg | mao_cima | golpear, golpe_forte, estocar, puxar, inspecionar, ocioso |
 
 ## Acessórios
 

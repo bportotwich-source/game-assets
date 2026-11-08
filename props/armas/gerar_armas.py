@@ -46,16 +46,16 @@ METAL = {'aco_oxidado': (0.75, 0.32), 'aco_fosfatado': (0.55, 0.62), 'aco_inox':
          'aluminio_preto': (0.55, 0.38), 'latao': (0.95, 0.28), 'cobre_bala': (0.95, 0.3), 'chumbo': (0.7, 0.5), 'mola': (0.9, 0.35),
          'polimero': (0.0, 0.55), 'polimero_tan': (0.0, 0.6), 'tinta_branca': (0.0, 0.4), 'tinta_laranja': (0.0, 0.45),
          'borracha_grip': (0.0, 0.9), 'fita_cinza': (0.3, 0.5), 'borracha': (0.0, 0.85), 'plastico_branco': (0.0, 0.5)}
-TRANSP = {'lente': ((120, 160, 150), 0.35, 0.03), 'lente_laser': ((200, 30, 20), 0.6, 0.05), 'pet_garrafa': ((150, 190, 215), 0.22, 0.06)}
+TRANSP = {'lente': ((120, 160, 150), 0.35, 0.03), 'lente_clara': ((170, 205, 195), 0.1, 0.02), 'lente_laser': ((200, 30, 20), 0.6, 0.05), 'pet_garrafa': ((150, 190, 215), 0.22, 0.06)}
 EMISSIVOS = {'ponto_vermelho': (1.0, 0.05, 0.02), 'led_lanterna': (1.0, 0.97, 0.88), 'led_laser': (1.0, 0.08, 0.04),
              'clarao': (1.0, 0.62, 0.22), 'clarao_nucleo': (1.0, 0.92, 0.7)}
 
 
-def _tex_grip(seed, px=1024, tile=0.05):
+def _tex_grip(seed, px=1024, tile=0.05, cor='polimero_grip'):
     """Pontilhado do punho de polimero: picotes pequenos e irregulares (normal + rugosidade)."""
     n = int(tile * px); g = GT.noise(n, n, 0.0006 * px, 0.0006 * px, seed); f = GT.fbm(n, n, 0.003 * px, 3, seed + 3)
     pic = GT.smooth(0.3, 1.4, g)
-    c = GT.rgb(CORES['polimero_grip'])[None, None]
+    c = GT.rgb(CORES[cor])[None, None]
     alb = c * (0.72 + 0.1 * pic[..., None] + 0.03 * f[..., None]); hm = 0.00025 * pic + 0.00005 * f
     return alb, hm, 0.75 + 0.15 * pic, 1.2, 0.0004, tile, px
 
@@ -75,12 +75,13 @@ def materiais():
     lin = lambda c: ((c / 255) / 12.92) if c <= 10 else (((c / 255) + 0.055) / 1.055) ** 2.4      # cores em sRGB -> fator linear do glTF
     for k, c in CORES.items(): MATS[k].baseColorFactor = [lin(x) for x in c] + [1.0]
     for k, (met, rough) in METAL.items(): MATS[k].metallicFactor = met; MATS[k].roughnessFactor = rough
-    for i, (k, fn) in enumerate((('polimero_grip', _tex_grip), ('recartilhado', _tex_serrilha))):
+    for i, (k, fn) in enumerate((('polimero_grip', _tex_grip), ('recartilhado', _tex_serrilha),
+                                  ('polimero_grip_tan', lambda s: _tex_grip(s, cor='polimero_tan')))):
         alb, hm, rough, nstr, aod, tile, px = fn(301 + i)
         a, nm, o = tex_set(alb, hm, rough, nstr, aod, px)
         TEX[k] = (a, nm, o); gp.UV_ESCALA[k] = tile
         MATS[k] = PBRMaterial(name=k, baseColorTexture=a, normalTexture=nm, occlusionTexture=o, metallicRoughnessTexture=o,
-                              baseColorFactor=[255, 255, 255, 255], metallicFactor=0.0 if k == 'polimero_grip' else 0.7, roughnessFactor=1.0)
+                              baseColorFactor=[255, 255, 255, 255], metallicFactor=0.0 if k.startswith('polimero_grip') else 0.7, roughnessFactor=1.0)
     for k, (c, alpha, rough) in TRANSP.items():
         MATS[k] = PBRMaterial(name=k, baseColorFactor=[c[0] / 255, c[1] / 255, c[2] / 255, alpha], alphaMode='BLEND',
                               metallicFactor=0.0, roughnessFactor=rough)
@@ -864,7 +865,7 @@ def _arte_caixa(CX, cal, linha2, linha3, cor=(150, 30, 20), marca='GUARDIÃO', t
     tp = int(tampa * PXM); vis = (tp + H) // 2                            # centro da parte do lado que a tampa nao cobre
     x, y = ATLAS['topo']
     d.rectangle([x, y, x + 120, y + P_], fill=cor)
-    texto_c(d, (x + 60, y + P_ // 2), cal.split()[0][:3], 64, (250, 240, 220), larg=110)
+    texto_c(d, (x + 60, y + P_ // 2), cal.split()[0], 64, (250, 240, 220), larg=104)
     cx = x + 120 + (L - 120) // 2
     texto_c(d, (cx, y + 80), marca, 58, cor, larg=L - 150); texto_c(d, (cx, y + 160), cal, 80, (40, 30, 26), larg=L - 150)
     texto_c(d, (cx, y + 240), linha2, 36, (40, 30, 26), larg=L - 150); texto_c(d, (cx, y + 290), linha3, 24, (90, 70, 60), False, larg=L - 150)
@@ -967,7 +968,7 @@ CAB = {
                     'ruido_m': 'raio em que os zumbis ouvem o tiro', 'durabilidade': 'tiros até precisar de reparo',
                     'modificadores': 'multiplicadores aplicados à arma pelo acessório', 'valor_troca': 'preço na troca entre comunidades'},
 }
-NOMES = {'carabina': 'Carabinas', 'bipe': 'Bipés', 'espingarda': 'Espingardas', 'coronha': 'Coronhas', 'tubo': 'Tubo do carregador', 'lanterna': 'Lanternas', 'porta_cartuchos': 'Porta-cartuchos', 'bandoleira': 'Bandoleiras', 'revolver': 'Revólveres', 'recarga': 'Recarga rápida', 'empunhadura': 'Empunhaduras', 'coldre': 'Coldres', 'pistola': 'Pistolas', 'boca': 'Boca do cano', 'trilho': 'Trilho', 'mira': 'Miras', 'carregador': 'Carregadores',
+NOMES = {'fuzil': 'Fuzis', 'laser': 'Lasers', 'carabina': 'Carabinas', 'bipe': 'Bipés', 'espingarda': 'Espingardas', 'coronha': 'Coronhas', 'tubo': 'Tubo do carregador', 'lanterna': 'Lanternas', 'porta_cartuchos': 'Porta-cartuchos', 'bandoleira': 'Bandoleiras', 'revolver': 'Revólveres', 'recarga': 'Recarga rápida', 'empunhadura': 'Empunhaduras', 'coldre': 'Coldres', 'pistola': 'Pistolas', 'boca': 'Boca do cano', 'trilho': 'Trilho', 'mira': 'Miras', 'carregador': 'Carregadores',
          'municao': 'Munição', 'estojo': 'Estojos', 'caixa': 'Caixas de munição', 'efeito': 'Efeitos'}
 
 

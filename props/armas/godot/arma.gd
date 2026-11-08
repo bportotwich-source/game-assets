@@ -71,11 +71,42 @@ func por_acessorio(no: String, acessorio_id: String) -> bool:
 				c.visible = acessorio_id == ""
 	instalados.erase(no)
 	if acessorio_id == "":
+		_rebater_miras()
 		return true
 	instalados[no] = acessorio_id
 	var a := item(acessorio_id)
 	alvo.add_child(load(RAIZ + a["arquivo"]).instantiate())
+	_rebater_miras()
 	return true
+
+
+## Miras de ferro rebatíveis (encaixes com "rebate_com"): deitam quando há mira/luneta naquele encaixe e levantam quando sai.
+func _rebater_miras() -> void:
+	for e in dados.get("encaixes", []):
+		if not e.has("rebate_com") or not instalados.has(e["no"]):
+			continue
+		var deitar := instalados.has(e["rebate_com"])
+		var alvo: Node3D = modelo.find_child(e["no"], true, false)
+		if alvo.get_child_count() == 0:
+			continue
+		var ap: AnimationPlayer = alvo.get_child(alvo.get_child_count() - 1).find_child("AnimationPlayer", true, false)
+		if ap == null or not ap.has_animation("dobrar") or alvo.get_meta("deitada", false) == deitar:
+			continue
+		alvo.set_meta("deitada", deitar)
+		if deitar:
+			ap.play("dobrar")
+		else:
+			ap.play_backwards("dobrar")
+
+
+## Ponto de onde a câmera de 1ª pessoa mira: o "olho" da mira/luneta acoplada ou, sem ela, o furo da alça ("mira_ferro").
+func linha_de_visada() -> Node3D:
+	for e in dados.get("encaixes", []):
+		if e["no"] == "encaixe_mira" and instalados.has(e["no"]):
+			var olho := modelo.find_child(e["no"], true, false).find_child("olho", true, false)
+			if olho:
+				return olho
+	return modelo.find_child("mira_ferro", true, false)
 
 
 ## Valor final de um atributo com os modificadores dos acessórios (ex.: atributo("ruido_m")).

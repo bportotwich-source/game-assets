@@ -174,21 +174,20 @@ def _apoio_face(q):
 
 def _coronha_caca(p):
     """Coronha inteirica de nogueira: pente, punho de pistola, quadriculados no punho e na telha, soleira, ponteira escura, pinos de bandoleira."""
-    perfil = suave([(0.43, -0.006), (0.15, -0.002), (0.0, -0.002), (-0.075, 0.002), (-0.12, 0.008), (-0.2, 0.012), (-0.33, 0.016), (-0.352, 0.016),
-                    (-0.362, -0.112), (-0.352, -0.12), (-0.3, -0.112), (-0.16, -0.084), (-0.095, -0.089), (-0.077, -0.083), (-0.062, -0.06),
+    perfil = suave([(0.43, -0.006), (0.15, -0.002), (0.0, -0.002), (-0.075, 0.002), (-0.12, 0.008), (-0.2, 0.012), (-0.33, 0.016), (-0.356, 0.017),
+                    (-0.37, 0.013), (-0.37, -0.114), (-0.356, -0.121), (-0.3, -0.112), (-0.16, -0.084), (-0.095, -0.089), (-0.077, -0.083), (-0.062, -0.06),
                     (-0.05, -0.038), (0.1, -0.038), (0.25, -0.034), (0.4, -0.028), (0.428, -0.022)], 3)
     larg = lambda x: (0.0185 + 0.001 * GT.smooth(0.18, 0.1, x) - 0.0042 * math.exp(-((x + 0.1) / 0.045) ** 2) + 0.0028 * GT.smooth(-0.15, -0.26, x)
                       - 0.002 * GT.smooth(0.3, 0.43, x))
-    co = corpo_x(perfil, 0.432, -0.366, larg, n=2.4, fatias=220, voltas=60, raio_tras=0.006, raio_frente=0.006)
+    co = corpo_x(perfil, 0.432, -0.372, larg, n=2.4, fatias=220, voltas=60, raio_tras=0.006, raio_frente=0.006)
     cortes = [cil_x(RR + 0.0004, KX0 - 0.012, KX1 + 0.002, sec=64), cil_x(0.0128, KX1, 0.45, sec=48), solido(_perfil_car308(0.0008), -0.0118, 0.0118),
               caixa(-0.04, -0.01, -0.06, -0.01, -0.006, 0.006), caixa(-0.066, -0.03, -0.03, 0.01, 0.012, 0.04)]
     co = menos(co, *cortes)
-    p.add('nogueira', inter([co, caixa(-0.352, 0.41, -1, 1, -1, 1)]))
+    p.add('nogueira', inter([co, caixa(-0.3562, 0.41, -1, 1, -1, 1)]))
     p.add('polimero', inter([co, caixa(0.41, 0.5, -1, 1, -1, 1)]))                                                      # ponteira
-    p.add('borracha', inter([co, caixa(-0.4, -0.352, -1, 1, -1, 1)]))
-    p.add('tinta_branca', inter([co, caixa(-0.3535, -0.352, -1, 1, -1, 1)]).apply_transform(np.eye(4)))                # filete da soleira
+    p.add('borracha', inter([co, caixa(-0.4, -0.356, -1, 1, -1, 1)]))
     lx = lambda x: larg(x) + 0.0004
-    xz = corpo_x(perfil, 0.432, -0.366, lx, n=2.4, fatias=220, voltas=60, raio_tras=0.006, raio_frente=0.006)
+    xz = corpo_x(perfil, 0.432, -0.372, lx, n=2.4, fatias=220, voltas=60, raio_tras=0.006, raio_frente=0.006)
     areas = [arred([(-0.056, -0.03), (-0.074, -0.026), (-0.108, -0.072), (-0.092, -0.082), (-0.07, -0.064)], 0.004),
              arred([(0.17, -0.01), (0.31, -0.012), (0.31, -0.03), (0.17, -0.033)], 0.006)]
     for a in areas: p.add('madeira_punho', inter([xz, solido(a, -0.05, 0.05)]))

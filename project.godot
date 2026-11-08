@@ -5,8 +5,8 @@ config_version=5
 
 [application]
 
-config/name="Game Assets - Visitar"
-run/main_scene="res://visitar/main.tscn"
+config/name="Game Assets"
+run/main_scene="res://menu/menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 
 [display]
@@ -17,3 +17,15 @@ window/size/viewport_height=900
 [rendering]
 
 anti_aliasing/quality/msaa_3d=2
+
+[editor]
+
+import/use_multiple_threads=false
+
+[importer_defaults]
+
+texture={
+"compress/mode": 1,
+"compress/lossy_quality": 0.8,
+"detect_3d/compress_to": 0
+}

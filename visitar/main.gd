@@ -8,7 +8,7 @@ const PlayerScript = preload("res://visitar/player.gd")
 const KITS := [
 	"predio-tijolos", "predio-mansarda", "padaria", "casa-enxaimel",
 	"torre-escalonada", "casa-de-campo", "bangalo", "supermercado", "galeria",
-	"casa-americana", "duplex", "diner", "brownstones", "quartel-bombeiros", "posto-gasolina", "casas-shotgun", "igreja", "motel", "biblioteca", "escolinha", "three-flats", "correios", "estacao", "armazem", "patio-missoes", "vila-urbana", "casa-modernista", "delegacia",
+	"casa-americana", "duplex", "diner", "brownstones", "quartel-bombeiros", "posto-gasolina", "casas-shotgun", "igreja", "motel", "biblioteca", "escolinha", "three-flats", "correios", "estacao", "armazem", "patio-missoes", "vila-urbana", "casa-modernista", "delegacia", "fabrica",
 ]
 
 @export var kit: String = "galeria"

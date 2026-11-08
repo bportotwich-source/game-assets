@@ -106,7 +106,7 @@ def _carroceria(Vc, recortes=()):
             a, b = (0.49, 0.86) if s > 0 else (-0.86, -0.49)
             a2, b2 = (0.51, 1.2) if s > 0 else (-1.2, -0.51)
             tb = menos(cil_x(SF.R_CAIXA + 0.018, a, b, SF.Y_CAIXA, zc, 64), cil_x(SF.R_CAIXA, a2, b2, SF.Y_CAIXA, zc, 64))
-            Vc.base.add('chassi', inter(tb, fora))
+            Vc.base.add('chassi', inter(tb, dentro))   # so dentro da chapa: nao briga com a pintura na borda do arco
     return fora, dentro
 
 

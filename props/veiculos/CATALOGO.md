@@ -6,7 +6,7 @@ Gerado por `props/veiculos/gerar_veiculos.py`. Design completo em [`docs/veiculo
 
 Sedã compacto de 4 portas dos anos 80/90, desenho próprio e sem marca. Todas as peças da tabela 3,1 do design são nós separados; portas, capô, porta-malas, porta-luvas, assoalho do porta-malas, portinhola do tanque e quebra-sóis abrem.
 
-Medidas 2,08 × 1,55 × 4,50 m · 224488 triângulos · 11,1 MB
+Medidas 2,08 × 1,55 × 4,50 m · 224550 triângulos · 11,1 MB
 
 | Nó | Tipo | Vira o item | Precisa para andar | Abre | Ferramentas | Tempo (tirar / pôr) |
 |---|---|---|---|---|---|---|

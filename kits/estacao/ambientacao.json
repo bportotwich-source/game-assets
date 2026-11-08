@@ -1,0 +1,357 @@
+{
+ "kit": "estacao",
+ "gerado_por": "scripts/ambientacao/ambientar.py",
+ "convencao": "pos em metros no espaço do prédio (mesmo do building_layout.json); rotY em graus; itens de parede (montagem wall) têm o pivô na face de trás, já na altura sugerida",
+ "niveis": {
+  "0": 0
+ },
+ "comodos": [
+  {
+   "andar": 0,
+   "comodo": 0,
+   "tipo": "saguao_estacao",
+   "area_m2": 98.0,
+   "centro": [
+    -1.93,
+    -11.85
+   ],
+   "itens": 22
+  },
+  {
+   "andar": 0,
+   "comodo": 1,
+   "tipo": "vazio",
+   "area_m2": 1.9,
+   "centro": [
+    -6.93,
+    5.53
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 2,
+   "tipo": "lavabo",
+   "area_m2": 3.9,
+   "centro": [
+    6.94,
+    5.78
+   ],
+   "itens": 2
+  }
+ ],
+ "itens": [
+  {
+   "item": "balcao_recepcao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/balcao_recepcao.glb",
+   "pos": [
+    1.692,
+    0,
+    -12.97
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    10.692,
+    0,
+    -11.475
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "banco_espera",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_espera.glb",
+   "pos": [
+    -2.558,
+    0,
+    -11.975
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "banco_espera",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_espera.glb",
+   "pos": [
+    -0.808,
+    0,
+    -11.725
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "banco_espera",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_espera.glb",
+   "pos": [
+    -4.308,
+    0,
+    -11.725
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "banco_espera",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_espera.glb",
+   "pos": [
+    -6.058,
+    0,
+    -11.725
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "banco_espera",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_espera.glb",
+   "pos": [
+    3.692,
+    0,
+    -11.725
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "banco_espera",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_espera.glb",
+   "pos": [
+    -7.808,
+    0,
+    -11.725
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "banco_espera",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_espera.glb",
+   "pos": [
+    5.442,
+    0,
+    -11.725
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "banco_espera",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_espera.glb",
+   "pos": [
+    -9.558,
+    0,
+    -11.725
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "banco_espera",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_espera.glb",
+   "pos": [
+    7.192,
+    0,
+    -11.975
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "banco_espera",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_espera.glb",
+   "pos": [
+    -11.308,
+    0,
+    -11.975
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "banco_espera",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_espera.glb",
+   "pos": [
+    8.942,
+    0,
+    -11.975
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "banco_espera",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_espera.glb",
+   "pos": [
+    -13.058,
+    0,
+    -11.975
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "maquina_lanches",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/maquina_lanches.glb",
+   "pos": [
+    11.627,
+    0,
+    -12.975
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "orelhao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/orelhao.glb",
+   "pos": [
+    -14.808,
+    0,
+    -10.38
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "relogio_estacao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/relogio_estacao.glb",
+   "pos": [
+    -9.308,
+    2.6,
+    -10.1
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "mala_viagem",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mala_viagem.glb",
+   "pos": [
+    1.692,
+    0,
+    -10.725
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "mala_viagem",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mala_viagem.glb",
+   "pos": [
+    0.442,
+    0,
+    -11.225
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "mala_viagem",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mala_viagem.glb",
+   "pos": [
+    -15.058,
+    0,
+    -12.725
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "quadro_horarios",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/quadro_horarios.glb",
+   "pos": [
+    4.692,
+    2.0,
+    -13.6
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "mural_desaparecidos",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mural_desaparecidos.glb",
+   "pos": [
+    -15.933,
+    1.0,
+    -12.225
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "saguao_estacao"
+  },
+  {
+   "item": "vaso_sanitario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_sanitario.glb",
+   "pos": [
+    6.162,
+    0,
+    6.025
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pia_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_banheiro.glb",
+   "pos": [
+    6.692,
+    0,
+    5.155
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "lavabo"
+  }
+ ]
+}

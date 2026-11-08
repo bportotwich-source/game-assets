@@ -1,0 +1,549 @@
+{
+ "kit": "casa-barcos",
+ "gerado_por": "scripts/ambientacao/ambientar.py",
+ "convencao": "pos em metros no espaço do prédio (mesmo do building_layout.json); rotY em graus; itens de parede (montagem wall) têm o pivô na face de trás, já na altura sugerida",
+ "niveis": {
+  "0": 0.45
+ },
+ "comodos": [
+  {
+   "andar": 0,
+   "comodo": 7,
+   "tipo": "vazio",
+   "area_m2": 1.5,
+   "centro": [
+    -15.25,
+    5.51
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 13,
+   "tipo": "vazio",
+   "area_m2": 1.0,
+   "centro": [
+    -12.0,
+    -11.24
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 14,
+   "tipo": "vazio",
+   "area_m2": 1.5,
+   "centro": [
+    -11.75,
+    5.51
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 20,
+   "tipo": "deposito",
+   "area_m2": 32.1,
+   "centro": [
+    -6.15,
+    -0.16
+   ],
+   "itens": 11
+  },
+  {
+   "andar": 0,
+   "comodo": 42,
+   "tipo": "corredor",
+   "area_m2": 5.8,
+   "centro": [
+    -1.37,
+    -3.46
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 0,
+   "comodo": 43,
+   "tipo": "casa_barcos",
+   "area_m2": 47.1,
+   "centro": [
+    -0.11,
+    1.08
+   ],
+   "itens": 15
+  },
+  {
+   "andar": 0,
+   "comodo": 47,
+   "tipo": "escritorio",
+   "area_m2": 13.2,
+   "centro": [
+    0.0,
+    10.51
+   ],
+   "itens": 5
+  },
+  {
+   "andar": 0,
+   "comodo": 53,
+   "tipo": "vazio",
+   "area_m2": 1.9,
+   "centro": [
+    0.0,
+    5.64
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 55,
+   "tipo": "lavabo",
+   "area_m2": 3.1,
+   "centro": [
+    2.43,
+    -3.96
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 64,
+   "tipo": "vazio",
+   "area_m2": 1.0,
+   "centro": [
+    3.75,
+    10.51
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 72,
+   "tipo": "vazio",
+   "area_m2": 1.0,
+   "centro": [
+    8.25,
+    5.01
+   ],
+   "itens": 0
+  }
+ ],
+ "itens": [
+  {
+   "item": "mancha_sangue",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mancha_sangue.glb",
+   "pos": [
+    -6.62,
+    0.45,
+    1.135
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "caixa_madeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_madeira.glb",
+   "pos": [
+    -5.643,
+    0.45,
+    -0.115
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "caixa_madeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_madeira.glb",
+   "pos": [
+    -5.37,
+    0.45,
+    -4.388
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "caixa_madeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_madeira.glb",
+   "pos": [
+    -6.37,
+    0.45,
+    -3.092
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "estante_metal",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_metal.glb",
+   "pos": [
+    -4.485,
+    0.45,
+    -4.115
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "estante_metal",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_metal.glb",
+   "pos": [
+    -6.005,
+    0.45,
+    3.135
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "estante_metal",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_metal.glb",
+   "pos": [
+    -7.255,
+    0.45,
+    -1.115
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "caixa_papelao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_papelao.glb",
+   "pos": [
+    -9.015,
+    0.45,
+    0.635
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "caixa_papelao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_papelao.glb",
+   "pos": [
+    -5.37,
+    0.45,
+    3.03
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "caixa_papelao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_papelao.glb",
+   "pos": [
+    -5.37,
+    0.45,
+    3.741
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "caixa_papelao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_papelao.glb",
+   "pos": [
+    -4.476,
+    0.45,
+    -3.115
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "vaso_planta_morta",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_planta_morta.glb",
+   "pos": [
+    -3.37,
+    0.45,
+    -3.104
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "corredor"
+  },
+  {
+   "item": "canoa",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/canoa.glb",
+   "pos": [
+    0.79,
+    0.45,
+    1.135
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "casa_barcos"
+  },
+  {
+   "item": "painel_ferramentas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/painel_ferramentas.glb",
+   "pos": [
+    1.63,
+    1.55,
+    -0.49
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "casa_barcos"
+  },
+  {
+   "item": "colete_salva_vidas",
+   "grupo": "loot",
+   "arquivo": "props/loot/colete_salva_vidas.glb",
+   "pos": [
+    -1.37,
+    0.45,
+    -0.615
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "casa_barcos"
+  },
+  {
+   "item": "colete_salva_vidas",
+   "grupo": "loot",
+   "arquivo": "props/loot/colete_salva_vidas.glb",
+   "pos": [
+    1.88,
+    0.45,
+    -1.865
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "casa_barcos"
+  },
+  {
+   "item": "colete_salva_vidas",
+   "grupo": "loot",
+   "arquivo": "props/loot/colete_salva_vidas.glb",
+   "pos": [
+    -1.37,
+    0.45,
+    2.385
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "casa_barcos"
+  },
+  {
+   "item": "colete_salva_vidas",
+   "grupo": "loot",
+   "arquivo": "props/loot/colete_salva_vidas.glb",
+   "pos": [
+    -1.12,
+    0.45,
+    3.135
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "casa_barcos"
+  },
+  {
+   "item": "remo",
+   "grupo": "loot",
+   "arquivo": "props/loot/remo.glb",
+   "pos": [
+    -1.62,
+    0.45,
+    0.385
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "casa_barcos"
+  },
+  {
+   "item": "remo",
+   "grupo": "loot",
+   "arquivo": "props/loot/remo.glb",
+   "pos": [
+    -0.12,
+    0.45,
+    2.385
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "casa_barcos"
+  },
+  {
+   "item": "remo",
+   "grupo": "loot",
+   "arquivo": "props/loot/remo.glb",
+   "pos": [
+    -0.62,
+    0.45,
+    1.635
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "casa_barcos"
+  },
+  {
+   "item": "remo",
+   "grupo": "loot",
+   "arquivo": "props/loot/remo.glb",
+   "pos": [
+    -2.12,
+    0.45,
+    1.635
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "casa_barcos"
+  },
+  {
+   "item": "boia_salva_vidas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/boia_salva_vidas.glb",
+   "pos": [
+    1.88,
+    1.95,
+    -2.49
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "casa_barcos"
+  },
+  {
+   "item": "boia_salva_vidas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/boia_salva_vidas.glb",
+   "pos": [
+    3.755,
+    1.95,
+    0.135
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "casa_barcos"
+  },
+  {
+   "item": "boia_salva_vidas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/boia_salva_vidas.glb",
+   "pos": [
+    -2.62,
+    1.95,
+    4.76
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "casa_barcos"
+  },
+  {
+   "item": "boia_salva_vidas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/boia_salva_vidas.glb",
+   "pos": [
+    2.755,
+    1.95,
+    4.135
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "casa_barcos"
+  },
+  {
+   "item": "boia_salva_vidas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/boia_salva_vidas.glb",
+   "pos": [
+    3.755,
+    1.95,
+    3.135
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "casa_barcos"
+  },
+  {
+   "item": "mesa_escritorio",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_escritorio.glb",
+   "pos": [
+    -0.12,
+    0.45,
+    8.867
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "estante_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_livros.glb",
+   "pos": [
+    0.38,
+    0.45,
+    11.963
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "arquivo_aco",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/arquivo_aco.glb",
+   "pos": [
+    2.152,
+    0.45,
+    10.385
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "relogio_parede",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/relogio_parede.glb",
+   "pos": [
+    -2.245,
+    2.25,
+    9.635
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "calendario_parede",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/calendario_parede.glb",
+   "pos": [
+    2.255,
+    1.75,
+    9.635
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "escritorio"
+  }
+ ]
+}

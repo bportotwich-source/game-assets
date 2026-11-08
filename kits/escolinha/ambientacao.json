@@ -1,0 +1,307 @@
+{
+ "kit": "escolinha",
+ "gerado_por": "scripts/ambientacao/ambientar.py",
+ "convencao": "pos em metros no espaço do prédio (mesmo do building_layout.json); rotY em graus; itens de parede (montagem wall) têm o pivô na face de trás, já na altura sugerida",
+ "niveis": {
+  "0": 0.6
+ },
+ "comodos": [
+  {
+   "andar": 0,
+   "comodo": 0,
+   "tipo": "sala_aula",
+   "area_m2": 81.4,
+   "centro": [
+    0.02,
+    -0.01
+   ],
+   "itens": 21
+  },
+  {
+   "andar": 0,
+   "comodo": 1,
+   "tipo": "lavabo",
+   "area_m2": 3.9,
+   "centro": [
+    0.02,
+    6.98
+   ],
+   "itens": 0
+  }
+ ],
+ "itens": [
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    -1.725,
+    0.6,
+    -4.525
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala_aula"
+  },
+  {
+   "item": "mesa_professor",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_professor.glb",
+   "pos": [
+    -3.179,
+    0.6,
+    4.225
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "sala_aula"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -2.438,
+    0.6,
+    4.225
+   ],
+   "rotY": 265,
+   "andar": 0,
+   "comodo": "sala_aula"
+  },
+  {
+   "item": "carteira_escolar",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carteira_escolar.glb",
+   "pos": [
+    0.275,
+    0.6,
+    0.225
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "sala_aula"
+  },
+  {
+   "item": "carteira_escolar",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carteira_escolar.glb",
+   "pos": [
+    0.275,
+    0.6,
+    -2.025
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "sala_aula"
+  },
+  {
+   "item": "carteira_escolar",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carteira_escolar.glb",
+   "pos": [
+    -1.975,
+    0.6,
+    -0.025
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "sala_aula"
+  },
+  {
+   "item": "carteira_escolar",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carteira_escolar.glb",
+   "pos": [
+    2.525,
+    0.6,
+    0.225
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "sala_aula"
+  },
+  {
+   "item": "carteira_escolar",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carteira_escolar.glb",
+   "pos": [
+    -0.225,
+    0.6,
+    2.475
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "sala_aula"
+  },
+  {
+   "item": "carteira_escolar",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carteira_escolar.glb",
+   "pos": [
+    -1.975,
+    0.6,
+    -2.275
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "sala_aula"
+  },
+  {
+   "item": "carteira_escolar",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carteira_escolar.glb",
+   "pos": [
+    2.025,
+    0.6,
+    2.475
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "sala_aula"
+  },
+  {
+   "item": "carteira_escolar",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carteira_escolar.glb",
+   "pos": [
+    2.525,
+    0.6,
+    -2.025
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "sala_aula"
+  },
+  {
+   "item": "carteira_escolar",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carteira_escolar.glb",
+   "pos": [
+    -2.475,
+    0.6,
+    2.225
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "sala_aula"
+  },
+  {
+   "item": "carteira_escolar",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carteira_escolar.glb",
+   "pos": [
+    0.275,
+    0.6,
+    -4.275
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "sala_aula"
+  },
+  {
+   "item": "lousa_escola",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/lousa_escola.glb",
+   "pos": [
+    3.65,
+    1.4,
+    3.475
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala_aula"
+  },
+  {
+   "item": "cabide_lancheiras",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cabide_lancheiras.glb",
+   "pos": [
+    3.65,
+    1.8,
+    -2.025
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala_aula"
+  },
+  {
+   "item": "mochila",
+   "grupo": "loot",
+   "arquivo": "props/loot/mochila.glb",
+   "pos": [
+    2.275,
+    0.6,
+    5.225
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "sala_aula"
+  },
+  {
+   "item": "desenho_crianca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/desenho_crianca.glb",
+   "pos": [
+    -3.6,
+    1.7,
+    1.475
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "sala_aula"
+  },
+  {
+   "item": "desenho_crianca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/desenho_crianca.glb",
+   "pos": [
+    3.025,
+    1.7,
+    5.6
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "sala_aula"
+  },
+  {
+   "item": "desenho_crianca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/desenho_crianca.glb",
+   "pos": [
+    3.65,
+    1.7,
+    -0.525
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala_aula"
+  },
+  {
+   "item": "desenho_crianca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/desenho_crianca.glb",
+   "pos": [
+    3.65,
+    1.7,
+    1.225
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala_aula"
+  },
+  {
+   "item": "desenho_crianca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/desenho_crianca.glb",
+   "pos": [
+    3.65,
+    1.7,
+    -1.275
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala_aula"
+  }
+ ]
+}

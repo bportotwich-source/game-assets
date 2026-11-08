@@ -1,0 +1,1575 @@
+{
+ "kit": "casas-shotgun",
+ "gerado_por": "scripts/ambientacao/ambientar.py",
+ "convencao": "pos em metros no espaço do prédio (mesmo do building_layout.json); rotY em graus; itens de parede (montagem wall) têm o pivô na face de trás, já na altura sugerida",
+ "niveis": {
+  "0": 0.6,
+  "1": 3.6
+ },
+ "comodos": [
+  {
+   "andar": 0,
+   "comodo": 1,
+   "tipo": "cozinha",
+   "area_m2": 6.8,
+   "centro": [
+    -8.28,
+    -4.31
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 0,
+   "comodo": 2,
+   "tipo": "sala",
+   "area_m2": 11.9,
+   "centro": [
+    -7.87,
+    0.01
+   ],
+   "itens": 6
+  },
+  {
+   "andar": 0,
+   "comodo": 3,
+   "tipo": "quarto",
+   "area_m2": 11.4,
+   "centro": [
+    -7.9,
+    3.92
+   ],
+   "itens": 5
+  },
+  {
+   "andar": 0,
+   "comodo": 4,
+   "tipo": "varanda",
+   "area_m2": 6.1,
+   "centro": [
+    -8.01,
+    7.03
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 0,
+   "comodo": 8,
+   "tipo": "banheiro",
+   "area_m2": 2.4,
+   "centro": [
+    -6.95,
+    -2.95
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 11,
+   "tipo": "cozinha",
+   "area_m2": 7.6,
+   "centro": [
+    -4.44,
+    -4.26
+   ],
+   "itens": 4
+  },
+  {
+   "andar": 0,
+   "comodo": 12,
+   "tipo": "sala",
+   "area_m2": 12.8,
+   "centro": [
+    -4.0,
+    0.01
+   ],
+   "itens": 6
+  },
+  {
+   "andar": 0,
+   "comodo": 13,
+   "tipo": "quarto",
+   "area_m2": 12.2,
+   "centro": [
+    -4.03,
+    3.92
+   ],
+   "itens": 6
+  },
+  {
+   "andar": 0,
+   "comodo": 15,
+   "tipo": "varanda",
+   "area_m2": 6.1,
+   "centro": [
+    -4.01,
+    7.03
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 19,
+   "tipo": "banheiro",
+   "area_m2": 2.4,
+   "centro": [
+    -2.95,
+    -2.95
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 22,
+   "tipo": "cozinha",
+   "area_m2": 7.6,
+   "centro": [
+    -0.44,
+    -4.26
+   ],
+   "itens": 5
+  },
+  {
+   "andar": 0,
+   "comodo": 23,
+   "tipo": "sala",
+   "area_m2": 12.8,
+   "centro": [
+    -0.0,
+    0.01
+   ],
+   "itens": 4
+  },
+  {
+   "andar": 0,
+   "comodo": 24,
+   "tipo": "quarto",
+   "area_m2": 12.2,
+   "centro": [
+    -0.03,
+    3.92
+   ],
+   "itens": 6
+  },
+  {
+   "andar": 0,
+   "comodo": 26,
+   "tipo": "varanda",
+   "area_m2": 6.1,
+   "centro": [
+    -0.01,
+    7.03
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 30,
+   "tipo": "banheiro",
+   "area_m2": 2.4,
+   "centro": [
+    1.05,
+    -2.95
+   ],
+   "itens": 4
+  },
+  {
+   "andar": 0,
+   "comodo": 33,
+   "tipo": "cozinha",
+   "area_m2": 7.6,
+   "centro": [
+    3.56,
+    -4.26
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 34,
+   "tipo": "sala",
+   "area_m2": 12.8,
+   "centro": [
+    4.0,
+    0.01
+   ],
+   "itens": 5
+  },
+  {
+   "andar": 0,
+   "comodo": 35,
+   "tipo": "quarto",
+   "area_m2": 12.2,
+   "centro": [
+    3.97,
+    3.92
+   ],
+   "itens": 7
+  },
+  {
+   "andar": 0,
+   "comodo": 37,
+   "tipo": "varanda",
+   "area_m2": 6.1,
+   "centro": [
+    3.99,
+    7.03
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 41,
+   "tipo": "banheiro",
+   "area_m2": 2.4,
+   "centro": [
+    5.05,
+    -2.95
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 44,
+   "tipo": "cozinha",
+   "area_m2": 7.2,
+   "centro": [
+    7.47,
+    -4.23
+   ],
+   "itens": 4
+  },
+  {
+   "andar": 0,
+   "comodo": 45,
+   "tipo": "sala",
+   "area_m2": 11.9,
+   "centro": [
+    7.87,
+    0.01
+   ],
+   "itens": 5
+  },
+  {
+   "andar": 0,
+   "comodo": 46,
+   "tipo": "quarto",
+   "area_m2": 11.4,
+   "centro": [
+    7.85,
+    3.92
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 48,
+   "tipo": "varanda",
+   "area_m2": 6.1,
+   "centro": [
+    7.99,
+    7.03
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 52,
+   "tipo": "banheiro",
+   "area_m2": 2.0,
+   "centro": [
+    8.93,
+    -2.95
+   ],
+   "itens": 2
+  }
+ ],
+ "itens": [
+  {
+   "item": "balcao_pia",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/balcao_pia.glb",
+   "pos": [
+    -6.775,
+    0.6,
+    -4.543
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "armario_aereo",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_aereo.glb",
+   "pos": [
+    -6.775,
+    2.1,
+    -4.2
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "papeis_espalhados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/papeis_espalhados.glb",
+   "pos": [
+    -8.275,
+    0.6,
+    -0.075
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "sofa",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/sofa.glb",
+   "pos": [
+    -6.615,
+    0.6,
+    -0.325
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "rack_tv",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/rack_tv.glb",
+   "pos": [
+    -9.393,
+    0.6,
+    -0.075
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "estante_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_livros.glb",
+   "pos": [
+    -6.775,
+    0.6,
+    1.597
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "quadro_familia",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/quadro_familia.glb",
+   "pos": [
+    -6.15,
+    2.0,
+    -0.075
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "relogio_parede",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/relogio_parede.glb",
+   "pos": [
+    -6.15,
+    2.4,
+    0.925
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "cama_casal",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cama_casal.glb",
+   "pos": [
+    -7.172,
+    0.6,
+    3.925
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "guarda_roupa",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/guarda_roupa.glb",
+   "pos": [
+    -6.775,
+    0.6,
+    5.217
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "comoda",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/comoda.glb",
+   "pos": [
+    -9.384,
+    0.6,
+    3.925
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "criado_mudo",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/criado_mudo.glb",
+   "pos": [
+    -6.775,
+    0.6,
+    2.539
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "quadro_familia",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/quadro_familia.glb",
+   "pos": [
+    -9.65,
+    2.0,
+    4.425
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "lixeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/lixeira.glb",
+   "pos": [
+    -7.025,
+    0.6,
+    6.499
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "varanda"
+  },
+  {
+   "item": "vaso_sanitario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_sanitario.glb",
+   "pos": [
+    -6.525,
+    0.6,
+    -2.545
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "banheiro"
+  },
+  {
+   "item": "pia_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_banheiro.glb",
+   "pos": [
+    -6.525,
+    0.6,
+    -3.445
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "banheiro"
+  },
+  {
+   "item": "armario_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_banheiro.glb",
+   "pos": [
+    -6.15,
+    1.8,
+    -2.575
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "banheiro"
+  },
+  {
+   "item": "balcao_pia",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/balcao_pia.glb",
+   "pos": [
+    -3.025,
+    0.6,
+    -5.107
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "geladeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/geladeira.glb",
+   "pos": [
+    -5.515,
+    0.6,
+    -4.075
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "armario_aereo",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_aereo.glb",
+   "pos": [
+    -3.775,
+    2.1,
+    -4.2
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "calendario_parede",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/calendario_parede.glb",
+   "pos": [
+    -2.525,
+    1.9,
+    -4.2
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "papeis_espalhados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/papeis_espalhados.glb",
+   "pos": [
+    -4.275,
+    0.6,
+    -0.075
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "sofa",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/sofa.glb",
+   "pos": [
+    -2.615,
+    0.6,
+    0.175
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "rack_tv",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/rack_tv.glb",
+   "pos": [
+    -5.643,
+    0.6,
+    -0.075
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "vaso_planta_morta",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_planta_morta.glb",
+   "pos": [
+    -2.525,
+    0.6,
+    -1.336
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -3.275,
+    0.6,
+    -1.325
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "quadro_familia",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/quadro_familia.glb",
+   "pos": [
+    -2.15,
+    2.0,
+    -0.575
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "cama_casal",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cama_casal.glb",
+   "pos": [
+    -4.878,
+    0.6,
+    3.925
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "cadeira_quebrada",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_quebrada.glb",
+   "pos": [
+    -2.525,
+    0.6,
+    3.675
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "guarda_roupa",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/guarda_roupa.glb",
+   "pos": [
+    -3.025,
+    0.6,
+    5.217
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "criado_mudo",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/criado_mudo.glb",
+   "pos": [
+    -3.275,
+    0.6,
+    2.539
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "criado_mudo",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/criado_mudo.glb",
+   "pos": [
+    -2.525,
+    0.6,
+    2.539
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    -3.275,
+    0.6,
+    4.425
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "vaso_planta_morta",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_planta_morta.glb",
+   "pos": [
+    -3.025,
+    0.6,
+    6.414
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "varanda"
+  },
+  {
+   "item": "vaso_planta_morta",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_planta_morta.glb",
+   "pos": [
+    -3.025,
+    0.6,
+    7.185
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "varanda"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -5.381,
+    0.6,
+    7.175
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "varanda"
+  },
+  {
+   "item": "vaso_sanitario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_sanitario.glb",
+   "pos": [
+    -2.495,
+    0.6,
+    -3.075
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "banheiro"
+  },
+  {
+   "item": "pia_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_banheiro.glb",
+   "pos": [
+    -2.525,
+    0.6,
+    -2.455
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "banheiro"
+  },
+  {
+   "item": "armario_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_banheiro.glb",
+   "pos": [
+    -2.15,
+    1.8,
+    -3.075
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "banheiro"
+  },
+  {
+   "item": "balcao_pia",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/balcao_pia.glb",
+   "pos": [
+    0.975,
+    0.6,
+    -4.543
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "geladeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/geladeira.glb",
+   "pos": [
+    -1.515,
+    0.6,
+    -3.575
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "fogao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fogao.glb",
+   "pos": [
+    -1.552,
+    0.6,
+    -4.325
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "armario_aereo",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_aereo.glb",
+   "pos": [
+    -1.9,
+    2.1,
+    -3.825
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "calendario_parede",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/calendario_parede.glb",
+   "pos": [
+    0.975,
+    1.9,
+    -5.45
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "sofa",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/sofa.glb",
+   "pos": [
+    1.385,
+    0.6,
+    -0.325
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    -0.775,
+    0.6,
+    -0.075
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "poltrona",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/poltrona.glb",
+   "pos": [
+    1.225,
+    0.6,
+    1.345
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "quadro_familia",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/quadro_familia.glb",
+   "pos": [
+    1.85,
+    2.0,
+    1.425
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "cama_casal",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cama_casal.glb",
+   "pos": [
+    0.828,
+    0.6,
+    3.925
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "guarda_roupa",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/guarda_roupa.glb",
+   "pos": [
+    -1.567,
+    0.6,
+    3.925
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "comoda",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/comoda.glb",
+   "pos": [
+    1.225,
+    0.6,
+    2.566
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "abajur",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/abajur.glb",
+   "pos": [
+    0.725,
+    0.6,
+    5.209
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "criado_mudo",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/criado_mudo.glb",
+   "pos": [
+    1.611,
+    0.6,
+    5.175
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "porta_retrato",
+   "grupo": "loot",
+   "arquivo": "props/loot/porta_retrato.glb",
+   "pos": [
+    -0.775,
+    0.6,
+    4.175
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "lixeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/lixeira.glb",
+   "pos": [
+    1.401,
+    0.6,
+    6.925
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "varanda"
+  },
+  {
+   "item": "vaso_planta_morta",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_planta_morta.glb",
+   "pos": [
+    -0.775,
+    0.6,
+    7.685
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "varanda"
+  },
+  {
+   "item": "vaso_planta_morta",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_planta_morta.glb",
+   "pos": [
+    0.475,
+    0.6,
+    7.185
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "varanda"
+  },
+  {
+   "item": "vaso_sanitario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_sanitario.glb",
+   "pos": [
+    1.505,
+    0.6,
+    -2.575
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "banheiro"
+  },
+  {
+   "item": "pia_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_banheiro.glb",
+   "pos": [
+    1.475,
+    0.6,
+    -3.445
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "banheiro"
+  },
+  {
+   "item": "armario_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_banheiro.glb",
+   "pos": [
+    1.475,
+    1.8,
+    -2.2
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "banheiro"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    1.725,
+    0.6,
+    -3.075
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "banheiro"
+  },
+  {
+   "item": "balcao_pia",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/balcao_pia.glb",
+   "pos": [
+    2.443,
+    0.6,
+    -3.825
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "lixeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/lixeira.glb",
+   "pos": [
+    4.975,
+    0.6,
+    -4.649
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "armario_aereo",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_aereo.glb",
+   "pos": [
+    2.1,
+    2.1,
+    -3.825
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "sofa",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/sofa.glb",
+   "pos": [
+    5.385,
+    0.6,
+    0.425
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "poltrona",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/poltrona.glb",
+   "pos": [
+    2.555,
+    0.6,
+    0.175
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "vitrola",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vitrola.glb",
+   "pos": [
+    5.225,
+    0.6,
+    -1.416
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "quadro_familia",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/quadro_familia.glb",
+   "pos": [
+    5.85,
+    2.0,
+    0.675
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    5.85,
+    1.8,
+    -0.075
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "cama_casal",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cama_casal.glb",
+   "pos": [
+    4.828,
+    0.6,
+    3.925
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "guarda_roupa",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/guarda_roupa.glb",
+   "pos": [
+    2.433,
+    0.6,
+    3.675
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "comoda",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/comoda.glb",
+   "pos": [
+    5.225,
+    0.6,
+    2.566
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "mala_viagem",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mala_viagem.glb",
+   "pos": [
+    3.225,
+    0.6,
+    3.925
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "criado_mudo",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/criado_mudo.glb",
+   "pos": [
+    4.725,
+    0.6,
+    5.311
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "criado_mudo",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/criado_mudo.glb",
+   "pos": [
+    5.475,
+    0.6,
+    5.311
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "quadro_familia",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/quadro_familia.glb",
+   "pos": [
+    5.85,
+    2.0,
+    4.925
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "lixeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/lixeira.glb",
+   "pos": [
+    5.401,
+    0.6,
+    7.175
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "varanda"
+  },
+  {
+   "item": "vaso_planta_morta",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_planta_morta.glb",
+   "pos": [
+    3.485,
+    0.6,
+    7.675
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "varanda"
+  },
+  {
+   "item": "vaso_planta_morta",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_planta_morta.glb",
+   "pos": [
+    4.475,
+    0.6,
+    7.185
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "varanda"
+  },
+  {
+   "item": "vaso_sanitario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_sanitario.glb",
+   "pos": [
+    5.505,
+    0.6,
+    -3.075
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "banheiro"
+  },
+  {
+   "item": "pia_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_banheiro.glb",
+   "pos": [
+    5.475,
+    0.6,
+    -2.455
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "banheiro"
+  },
+  {
+   "item": "armario_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_banheiro.glb",
+   "pos": [
+    5.85,
+    1.8,
+    -3.325
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "banheiro"
+  },
+  {
+   "item": "balcao_pia",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/balcao_pia.glb",
+   "pos": [
+    8.975,
+    0.6,
+    -4.543
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "geladeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/geladeira.glb",
+   "pos": [
+    6.485,
+    0.6,
+    -3.575
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "fogao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fogao.glb",
+   "pos": [
+    6.448,
+    0.6,
+    -4.325
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "armario_aereo",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_aereo.glb",
+   "pos": [
+    7.975,
+    2.1,
+    -4.2
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "papeis_espalhados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/papeis_espalhados.glb",
+   "pos": [
+    7.225,
+    0.6,
+    -0.075
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "sofa",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/sofa.glb",
+   "pos": [
+    9.135,
+    0.6,
+    -0.325
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "aquecedor",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/aquecedor.glb",
+   "pos": [
+    9.225,
+    0.6,
+    1.625
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "quadro_familia",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/quadro_familia.glb",
+   "pos": [
+    9.6,
+    2.0,
+    0.925
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "relogio_parede",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/relogio_parede.glb",
+   "pos": [
+    8.975,
+    2.4,
+    -1.7
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "cama_casal",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cama_casal.glb",
+   "pos": [
+    7.122,
+    0.6,
+    3.925
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "cadeira_quebrada",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_quebrada.glb",
+   "pos": [
+    9.225,
+    0.6,
+    4.425
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "guarda_roupa",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/guarda_roupa.glb",
+   "pos": [
+    8.975,
+    0.6,
+    2.633
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "quarto"
+  },
+  {
+   "item": "vaso_planta_morta",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_planta_morta.glb",
+   "pos": [
+    9.475,
+    0.6,
+    6.664
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "varanda"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    6.619,
+    0.6,
+    7.675
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "varanda"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    8.225,
+    0.6,
+    7.281
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "varanda"
+  },
+  {
+   "item": "pia_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_banheiro.glb",
+   "pos": [
+    9.345,
+    0.6,
+    -2.825
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "banheiro"
+  },
+  {
+   "item": "armario_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_banheiro.glb",
+   "pos": [
+    9.6,
+    1.8,
+    -2.575
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "banheiro"
+  }
+ ]
+}

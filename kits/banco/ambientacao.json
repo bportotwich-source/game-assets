@@ -1,0 +1,429 @@
+{
+ "kit": "banco",
+ "gerado_por": "scripts/ambientacao/ambientar.py",
+ "convencao": "pos em metros no espaço do prédio (mesmo do building_layout.json); rotY em graus; itens de parede (montagem wall) têm o pivô na face de trás, já na altura sugerida",
+ "niveis": {
+  "0": 1.2
+ },
+ "comodos": [
+  {
+   "andar": 0,
+   "comodo": 1,
+   "tipo": "cofre",
+   "area_m2": 48.2,
+   "centro": [
+    0.0,
+    6.57
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 0,
+   "comodo": 3,
+   "tipo": "escritorio",
+   "area_m2": 21.5,
+   "centro": [
+    -2.8,
+    -4.94
+   ],
+   "itens": 5
+  },
+  {
+   "andar": 0,
+   "comodo": 5,
+   "tipo": "banco",
+   "area_m2": 56.9,
+   "centro": [
+    0.2,
+    1.04
+   ],
+   "itens": 13
+  },
+  {
+   "andar": 0,
+   "comodo": 9,
+   "tipo": "vazio",
+   "area_m2": 1.5,
+   "centro": [
+    1.0,
+    -8.25
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 10,
+   "tipo": "corredor",
+   "area_m2": 6.4,
+   "centro": [
+    1.0,
+    -4.88
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 13,
+   "tipo": "deposito",
+   "area_m2": 13.8,
+   "centro": [
+    3.88,
+    -4.88
+   ],
+   "itens": 7
+  }
+ ],
+ "itens": [
+  {
+   "item": "cofres_aluguel",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cofres_aluguel.glb",
+   "pos": [
+    7.0,
+    2.6,
+    6.625
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "cofre"
+  },
+  {
+   "item": "caixa_madeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_madeira.glb",
+   "pos": [
+    1.148,
+    1.2,
+    7.625
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "cofre"
+  },
+  {
+   "item": "mesa_escritorio",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_escritorio.glb",
+   "pos": [
+    -3.375,
+    1.2,
+    -6.607
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -3.375,
+    1.2,
+    -5.894
+   ],
+   "rotY": 175,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "estante_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_livros.glb",
+   "pos": [
+    -0.452,
+    1.2,
+    -6.375
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "arquivo_aco",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/arquivo_aco.glb",
+   "pos": [
+    -3.625,
+    1.2,
+    -3.602
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "calendario_parede",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/calendario_parede.glb",
+   "pos": [
+    -5.5,
+    2.5,
+    -3.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "papeis_espalhados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/papeis_espalhados.glb",
+   "pos": [
+    3.375,
+    1.2,
+    2.625
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "banco"
+  },
+  {
+   "item": "mesa_escritorio",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_escritorio.glb",
+   "pos": [
+    1.125,
+    1.2,
+    1.144
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "banco"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    1.125,
+    1.2,
+    1.858
+   ],
+   "rotY": 178,
+   "andar": 0,
+   "comodo": "banco"
+  },
+  {
+   "item": "mesa_escritorio",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_escritorio.glb",
+   "pos": [
+    5.107,
+    1.2,
+    2.625
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "banco"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    4.394,
+    1.2,
+    2.625
+   ],
+   "rotY": 92,
+   "andar": 0,
+   "comodo": "banco"
+  },
+  {
+   "item": "mesa_escritorio",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_escritorio.glb",
+   "pos": [
+    1.875,
+    1.2,
+    -0.894
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "banco"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    1.875,
+    1.2,
+    -1.608
+   ],
+   "rotY": 360,
+   "andar": 0,
+   "comodo": "banco"
+  },
+  {
+   "item": "mesa_escritorio",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_escritorio.glb",
+   "pos": [
+    5.107,
+    1.2,
+    -0.125
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "banco"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    4.394,
+    1.2,
+    -0.125
+   ],
+   "rotY": 84,
+   "andar": 0,
+   "comodo": "banco"
+  },
+  {
+   "item": "mesa_escritorio",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_escritorio.glb",
+   "pos": [
+    3.375,
+    1.2,
+    1.144
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "banco"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    3.375,
+    1.2,
+    1.858
+   ],
+   "rotY": 184,
+   "andar": 0,
+   "comodo": "banco"
+  },
+  {
+   "item": "mesa_escritorio",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_escritorio.glb",
+   "pos": [
+    -3.375,
+    1.2,
+    3.606
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "banco"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -3.375,
+    1.2,
+    2.892
+   ],
+   "rotY": 357,
+   "andar": 0,
+   "comodo": "banco"
+  },
+  {
+   "item": "pallet",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pallet.glb",
+   "pos": [
+    5.07,
+    1.2,
+    -6.125
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "caixa_madeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_madeira.glb",
+   "pos": [
+    2.602,
+    1.2,
+    -4.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "estante_metal",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_metal.glb",
+   "pos": [
+    2.49,
+    1.2,
+    -3.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "estante_metal",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_metal.glb",
+   "pos": [
+    3.375,
+    1.2,
+    -6.76
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "caixa_papelao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_papelao.glb",
+   "pos": [
+    2.48,
+    1.2,
+    -6.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "caixa_papelao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_papelao.glb",
+   "pos": [
+    5.27,
+    1.2,
+    -3.125
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "caixa_papelao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_papelao.glb",
+   "pos": [
+    5.27,
+    1.2,
+    -4.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "deposito"
+  }
+ ]
+}

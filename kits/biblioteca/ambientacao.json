@@ -1,0 +1,1600 @@
+{
+ "kit": "biblioteca",
+ "gerado_por": "scripts/ambientacao/ambientar.py",
+ "convencao": "pos em metros no espaço do prédio (mesmo do building_layout.json); rotY em graus; itens de parede (montagem wall) têm o pivô na face de trás, já na altura sugerida",
+ "niveis": {
+  "0": 1.2,
+  "1": 5.4
+ },
+ "comodos": [
+  {
+   "andar": 0,
+   "comodo": 0,
+   "tipo": "biblioteca",
+   "area_m2": 250.6,
+   "centro": [
+    -0.12,
+    0.66
+   ],
+   "itens": 48
+  },
+  {
+   "andar": 0,
+   "comodo": 1,
+   "tipo": "biblioteca",
+   "area_m2": 53.8,
+   "centro": [
+    0.02,
+    10.12
+   ],
+   "itens": 18
+  },
+  {
+   "andar": 0,
+   "comodo": 4,
+   "tipo": "biblioteca",
+   "area_m2": 12.2,
+   "centro": [
+    -1.99,
+    -5.88
+   ],
+   "itens": 8
+  },
+  {
+   "andar": 0,
+   "comodo": 7,
+   "tipo": "escritorio",
+   "area_m2": 12.2,
+   "centro": [
+    2.01,
+    -5.88
+   ],
+   "itens": 7
+  },
+  {
+   "andar": 0,
+   "comodo": 12,
+   "tipo": "vazio",
+   "area_m2": 1.9,
+   "centro": [
+    7.01,
+    -8.71
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 0,
+   "tipo": "biblioteca",
+   "area_m2": 199.9,
+   "centro": [
+    -0.66,
+    -0.01
+   ],
+   "itens": 36
+  }
+ ],
+ "itens": [
+  {
+   "item": "mesa_leitura",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_leitura.glb",
+   "pos": [
+    -0.235,
+    1.2,
+    0.875
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    0.513,
+    1.2,
+    1.475
+   ],
+   "rotY": 269,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    0.513,
+    1.2,
+    0.275
+   ],
+   "rotY": 275,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -0.983,
+    1.2,
+    1.475
+   ],
+   "rotY": 98,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -0.983,
+    1.2,
+    0.275
+   ],
+   "rotY": 94,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "mesa_leitura",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_leitura.glb",
+   "pos": [
+    2.015,
+    1.2,
+    0.875
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    2.763,
+    1.2,
+    1.475
+   ],
+   "rotY": 267,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    2.763,
+    1.2,
+    0.275
+   ],
+   "rotY": 276,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    1.267,
+    1.2,
+    1.475
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    1.267,
+    1.2,
+    0.275
+   ],
+   "rotY": 87,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "mesa_leitura",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_leitura.glb",
+   "pos": [
+    -2.485,
+    1.2,
+    0.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -1.737,
+    1.2,
+    1.225
+   ],
+   "rotY": 267,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -1.737,
+    1.2,
+    0.025
+   ],
+   "rotY": 276,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -3.233,
+    1.2,
+    1.225
+   ],
+   "rotY": 84,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -3.233,
+    1.2,
+    0.025
+   ],
+   "rotY": 84,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "mesa_leitura",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_leitura.glb",
+   "pos": [
+    0.015,
+    1.2,
+    4.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    0.763,
+    1.2,
+    5.225
+   ],
+   "rotY": 273,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    0.763,
+    1.2,
+    4.025
+   ],
+   "rotY": 269,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -0.733,
+    1.2,
+    5.225
+   ],
+   "rotY": 93,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -0.733,
+    1.2,
+    4.025
+   ],
+   "rotY": 91,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "mesa_leitura",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_leitura.glb",
+   "pos": [
+    -2.485,
+    1.2,
+    4.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -1.737,
+    1.2,
+    4.975
+   ],
+   "rotY": 266,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -1.737,
+    1.2,
+    3.775
+   ],
+   "rotY": 263,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -3.233,
+    1.2,
+    4.975
+   ],
+   "rotY": 98,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -3.233,
+    1.2,
+    3.775
+   ],
+   "rotY": 96,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "papeis_espalhados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/papeis_espalhados.glb",
+   "pos": [
+    -7.735,
+    1.2,
+    -5.375
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    8.265,
+    1.2,
+    4.125
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    3.54,
+    1.2,
+    2.125
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -9.26,
+    1.2,
+    -1.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -9.26,
+    1.2,
+    1.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -8.735,
+    1.2,
+    7.15
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    4.49,
+    1.2,
+    -6.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    8.04,
+    1.2,
+    1.375
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    9.29,
+    1.2,
+    6.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -9.26,
+    1.2,
+    5.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    8.04,
+    1.2,
+    -0.125
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    9.29,
+    1.2,
+    -6.375
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    9.29,
+    1.2,
+    -4.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    9.29,
+    1.2,
+    -2.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "fichario_catalogo",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fichario_catalogo.glb",
+   "pos": [
+    3.588,
+    1.2,
+    3.625
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "carrinho_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carrinho_livros.glb",
+   "pos": [
+    2.265,
+    1.2,
+    4.375
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    7.515,
+    1.2,
+    -3.875
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -4.735,
+    1.2,
+    -5.375
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -5.985,
+    1.2,
+    -1.625
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -4.485,
+    1.2,
+    4.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -8.235,
+    1.2,
+    5.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "globo_terrestre",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/globo_terrestre.glb",
+   "pos": [
+    3.71,
+    1.2,
+    -1.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "mapa_cidade",
+   "grupo": "loot",
+   "arquivo": "props/loot/mapa_cidade.glb",
+   "pos": [
+    -5.485,
+    1.2,
+    5.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira_quebrada",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_quebrada.glb",
+   "pos": [
+    1.265,
+    1.2,
+    9.625
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -4.985,
+    1.2,
+    8.6
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -6.485,
+    1.2,
+    10.65
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -2.485,
+    1.2,
+    8.6
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -2.76,
+    1.2,
+    11.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    4.765,
+    1.2,
+    8.6
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -3.985,
+    1.2,
+    10.65
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    6.515,
+    1.2,
+    8.6
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    3.765,
+    1.2,
+    10.65
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    1.015,
+    1.2,
+    10.65
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    3.265,
+    1.2,
+    8.6
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -4.985,
+    1.2,
+    11.9
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "fichario_catalogo",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fichario_catalogo.glb",
+   "pos": [
+    -7.058,
+    1.2,
+    9.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "carrinho_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carrinho_livros.glb",
+   "pos": [
+    -0.735,
+    1.2,
+    9.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    0.015,
+    1.2,
+    9.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -1.735,
+    1.2,
+    10.625
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -2.985,
+    1.2,
+    10.375
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "mapa_cidade",
+   "grupo": "loot",
+   "arquivo": "props/loot/mapa_cidade.glb",
+   "pos": [
+    5.265,
+    1.2,
+    9.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    -1.985,
+    1.2,
+    -6.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -0.46,
+    1.2,
+    -5.625
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -0.985,
+    1.2,
+    -4.6
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -3.51,
+    1.2,
+    -6.875
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -0.46,
+    1.2,
+    -6.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "fichario_catalogo",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fichario_catalogo.glb",
+   "pos": [
+    -3.558,
+    1.2,
+    -5.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "carrinho_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carrinho_livros.glb",
+   "pos": [
+    -1.735,
+    1.2,
+    -5.375
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -2.735,
+    1.2,
+    -5.375
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "papeis_espalhados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/papeis_espalhados.glb",
+   "pos": [
+    2.265,
+    1.2,
+    -6.375
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "mesa_escritorio",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_escritorio.glb",
+   "pos": [
+    0.533,
+    1.2,
+    -5.125
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    1.247,
+    1.2,
+    -5.125
+   ],
+   "rotY": 266,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "escrivaninha",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/escrivaninha.glb",
+   "pos": [
+    0.765,
+    1.2,
+    -7.158
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    0.765,
+    1.2,
+    -6.496
+   ],
+   "rotY": 176,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "arquivo_aco",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/arquivo_aco.glb",
+   "pos": [
+    3.537,
+    1.2,
+    -6.125
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "relogio_parede",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/relogio_parede.glb",
+   "pos": [
+    3.89,
+    3.0,
+    -7.125
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "mesa_leitura",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_leitura.glb",
+   "pos": [
+    -5.485,
+    5.4,
+    0.125
+   ],
+   "rotY": 90,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -4.737,
+    5.4,
+    0.725
+   ],
+   "rotY": 263,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -4.737,
+    5.4,
+    -0.475
+   ],
+   "rotY": 264,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -6.233,
+    5.4,
+    0.725
+   ],
+   "rotY": 86,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -6.233,
+    5.4,
+    -0.475
+   ],
+   "rotY": 83,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "mesa_leitura",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_leitura.glb",
+   "pos": [
+    5.265,
+    5.4,
+    -0.375
+   ],
+   "rotY": 90,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    6.013,
+    5.4,
+    0.225
+   ],
+   "rotY": 264,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    6.013,
+    5.4,
+    -0.975
+   ],
+   "rotY": 277,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    4.517,
+    5.4,
+    0.225
+   ],
+   "rotY": 83,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    4.517,
+    5.4,
+    -0.975
+   ],
+   "rotY": 82,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "mesa_leitura",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_leitura.glb",
+   "pos": [
+    -5.485,
+    5.4,
+    -3.625
+   ],
+   "rotY": 90,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -4.737,
+    5.4,
+    -3.025
+   ],
+   "rotY": 268,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -4.737,
+    5.4,
+    -4.225
+   ],
+   "rotY": 269,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -6.233,
+    5.4,
+    -3.025
+   ],
+   "rotY": 94,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -6.233,
+    5.4,
+    -4.225
+   ],
+   "rotY": 84,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "mancha_sangue",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mancha_sangue.glb",
+   "pos": [
+    -8.735,
+    5.4,
+    -6.625
+   ],
+   "rotY": 0,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -9.26,
+    5.4,
+    5.875
+   ],
+   "rotY": 90,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    5.015,
+    5.4,
+    -7.15
+   ],
+   "rotY": 0,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    4.515,
+    5.4,
+    7.15
+   ],
+   "rotY": 180,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -9.26,
+    5.4,
+    4.375
+   ],
+   "rotY": 90,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -0.985,
+    5.4,
+    4.6
+   ],
+   "rotY": 0,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -3.485,
+    5.4,
+    4.6
+   ],
+   "rotY": 0,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -4.71,
+    5.4,
+    3.125
+   ],
+   "rotY": -90,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    9.29,
+    5.4,
+    -5.125
+   ],
+   "rotY": -90,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -4.485,
+    5.4,
+    -7.15
+   ],
+   "rotY": 0,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -3.985,
+    5.4,
+    7.15
+   ],
+   "rotY": 180,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -0.985,
+    5.4,
+    7.15
+   ],
+   "rotY": 180,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "estante_biblioteca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_biblioteca.glb",
+   "pos": [
+    -5.735,
+    5.4,
+    -7.15
+   ],
+   "rotY": 0,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "carrinho_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carrinho_livros.glb",
+   "pos": [
+    5.265,
+    5.4,
+    4.375
+   ],
+   "rotY": 90,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -7.735,
+    5.4,
+    3.375
+   ],
+   "rotY": 180,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -3.485,
+    5.4,
+    5.625
+   ],
+   "rotY": -90,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    7.265,
+    5.4,
+    6.875
+   ],
+   "rotY": -90,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    4.515,
+    5.4,
+    2.625
+   ],
+   "rotY": 0,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    7.515,
+    5.4,
+    -4.875
+   ],
+   "rotY": -90,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "globo_terrestre",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/globo_terrestre.glb",
+   "pos": [
+    7.46,
+    5.4,
+    2.125
+   ],
+   "rotY": -90,
+   "andar": 1,
+   "comodo": "biblioteca"
+  },
+  {
+   "item": "livro",
+   "grupo": "loot",
+   "arquivo": "props/loot/livro.glb",
+   "pos": [
+    -1.985,
+    5.4,
+    -6.375
+   ],
+   "rotY": 180,
+   "andar": 1,
+   "comodo": "biblioteca"
+  }
+ ]
+}

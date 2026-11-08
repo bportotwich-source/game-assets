@@ -1,0 +1,704 @@
+{
+ "kit": "garagem-vertical",
+ "gerado_por": "scripts/ambientacao/ambientar.py",
+ "convencao": "pos em metros no espaço do prédio (mesmo do building_layout.json); rotY em graus; itens de parede (montagem wall) têm o pivô na face de trás, já na altura sugerida",
+ "niveis": {
+  "0": 0.15,
+  "1": 3.0,
+  "2": 5.85,
+  "3": 8.7
+ },
+ "comodos": [
+  {
+   "andar": 0,
+   "comodo": 0,
+   "tipo": "estacionamento",
+   "area_m2": 1006.9,
+   "centro": [
+    2.32,
+    0.07
+   ],
+   "itens": 11
+  },
+  {
+   "andar": 0,
+   "comodo": 1,
+   "tipo": "lavabo",
+   "area_m2": 4.8,
+   "centro": [
+    17.31,
+    5.51
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 0,
+   "comodo": 2,
+   "tipo": "corredor",
+   "area_m2": 7.7,
+   "centro": [
+    18.34,
+    8.7
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 1,
+   "comodo": 1,
+   "tipo": "patio",
+   "area_m2": 420.9,
+   "centro": [
+    0.05,
+    1.31
+   ],
+   "itens": 5
+  },
+  {
+   "andar": 1,
+   "comodo": 8,
+   "tipo": "corredor",
+   "area_m2": 4.0,
+   "centro": [
+    17.16,
+    5.22
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 0,
+   "tipo": "patio",
+   "area_m2": 430.4,
+   "centro": [
+    0.11,
+    1.44
+   ],
+   "itens": 4
+  },
+  {
+   "andar": 2,
+   "comodo": 1,
+   "tipo": "lavabo",
+   "area_m2": 5.0,
+   "centro": [
+    -10.22,
+    12.28
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 2,
+   "comodo": 2,
+   "tipo": "lavabo",
+   "area_m2": 4.8,
+   "centro": [
+    -8.27,
+    -12.29
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 2,
+   "comodo": 4,
+   "tipo": "lavabo",
+   "area_m2": 4.8,
+   "centro": [
+    1.73,
+    -12.29
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 2,
+   "comodo": 5,
+   "tipo": "lavabo",
+   "area_m2": 5.0,
+   "centro": [
+    8.78,
+    12.28
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 2,
+   "comodo": 6,
+   "tipo": "corredor",
+   "area_m2": 4.0,
+   "centro": [
+    17.16,
+    5.22
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 0,
+   "tipo": "patio",
+   "area_m2": 446.9,
+   "centro": [
+    0.61,
+    1.97
+   ],
+   "itens": 5
+  },
+  {
+   "andar": 3,
+   "comodo": 8,
+   "tipo": "corredor",
+   "area_m2": 3.2,
+   "centro": [
+    17.03,
+    5.4
+   ],
+   "itens": 1
+  }
+ ],
+ "itens": [
+  {
+   "item": "carro_abandonado",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carro_abandonado.glb",
+   "pos": [
+    20.625,
+    0.15,
+    -0.153
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "estacionamento"
+  },
+  {
+   "item": "carro_abandonado",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carro_abandonado.glb",
+   "pos": [
+    -9.375,
+    0.15,
+    0.347
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "estacionamento"
+  },
+  {
+   "item": "carro_abandonado",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carro_abandonado.glb",
+   "pos": [
+    20.375,
+    0.15,
+    -7.153
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "estacionamento"
+  },
+  {
+   "item": "carro_abandonado",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carro_abandonado.glb",
+   "pos": [
+    -12.625,
+    0.15,
+    -8.653
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "estacionamento"
+  },
+  {
+   "item": "carro_abandonado",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carro_abandonado.glb",
+   "pos": [
+    1.375,
+    0.15,
+    6.847
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "estacionamento"
+  },
+  {
+   "item": "carro_abandonado",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carro_abandonado.glb",
+   "pos": [
+    15.875,
+    0.15,
+    -5.653
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "estacionamento"
+  },
+  {
+   "item": "carro_abandonado",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carro_abandonado.glb",
+   "pos": [
+    18.125,
+    0.15,
+    -1.403
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "estacionamento"
+  },
+  {
+   "item": "carro_abandonado",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carro_abandonado.glb",
+   "pos": [
+    22.375,
+    0.15,
+    6.597
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "estacionamento"
+  },
+  {
+   "item": "carro_abandonado",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carro_abandonado.glb",
+   "pos": [
+    4.375,
+    0.15,
+    2.597
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "estacionamento"
+  },
+  {
+   "item": "cone_transito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cone_transito.glb",
+   "pos": [
+    -16.625,
+    0.15,
+    7.347
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "estacionamento"
+  },
+  {
+   "item": "cone_transito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cone_transito.glb",
+   "pos": [
+    -13.125,
+    0.15,
+    2.847
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "estacionamento"
+  },
+  {
+   "item": "pia_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_banheiro.glb",
+   "pos": [
+    17.625,
+    0.15,
+    4.967
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "armario_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_banheiro.glb",
+   "pos": [
+    18.125,
+    1.35,
+    5.472
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "papeis_espalhados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/papeis_espalhados.glb",
+   "pos": [
+    18.125,
+    0.15,
+    8.847
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "corredor"
+  },
+  {
+   "item": "quadro_familia",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/quadro_familia.glb",
+   "pos": [
+    18.125,
+    1.55,
+    7.722
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "corredor"
+  },
+  {
+   "item": "lixeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/lixeira.glb",
+   "pos": [
+    -8.875,
+    3.0,
+    9.523
+   ],
+   "rotY": 180,
+   "andar": 1,
+   "comodo": "patio"
+  },
+  {
+   "item": "cone_transito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cone_transito.glb",
+   "pos": [
+    11.625,
+    3.0,
+    -5.653
+   ],
+   "rotY": 0,
+   "andar": 1,
+   "comodo": "patio"
+  },
+  {
+   "item": "cone_transito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cone_transito.glb",
+   "pos": [
+    -8.875,
+    3.0,
+    7.347
+   ],
+   "rotY": -90,
+   "andar": 1,
+   "comodo": "patio"
+  },
+  {
+   "item": "cone_transito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cone_transito.glb",
+   "pos": [
+    -9.125,
+    3.0,
+    1.097
+   ],
+   "rotY": 180,
+   "andar": 1,
+   "comodo": "patio"
+  },
+  {
+   "item": "cone_transito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cone_transito.glb",
+   "pos": [
+    -0.125,
+    3.0,
+    7.597
+   ],
+   "rotY": 0,
+   "andar": 1,
+   "comodo": "patio"
+  },
+  {
+   "item": "carro_abandonado",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carro_abandonado.glb",
+   "pos": [
+    -11.125,
+    5.85,
+    2.597
+   ],
+   "rotY": -90,
+   "andar": 2,
+   "comodo": "patio"
+  },
+  {
+   "item": "lixeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/lixeira.glb",
+   "pos": [
+    11.375,
+    5.85,
+    1.171
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "patio"
+  },
+  {
+   "item": "cone_transito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cone_transito.glb",
+   "pos": [
+    -10.375,
+    5.85,
+    8.847
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "patio"
+  },
+  {
+   "item": "cone_transito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cone_transito.glb",
+   "pos": [
+    -3.125,
+    5.85,
+    4.847
+   ],
+   "rotY": -90,
+   "andar": 2,
+   "comodo": "patio"
+  },
+  {
+   "item": "vaso_sanitario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_sanitario.glb",
+   "pos": [
+    -10.125,
+    5.85,
+    11.567
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pia_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_banheiro.glb",
+   "pos": [
+    -11.125,
+    5.85,
+    11.977
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "armario_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_banheiro.glb",
+   "pos": [
+    -11.75,
+    7.05,
+    12.097
+   ],
+   "rotY": 90,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "vaso_sanitario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_sanitario.glb",
+   "pos": [
+    -8.875,
+    5.85,
+    -12.123
+   ],
+   "rotY": 180,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pia_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_banheiro.glb",
+   "pos": [
+    -7.255,
+    5.85,
+    -12.403
+   ],
+   "rotY": -90,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "armario_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_banheiro.glb",
+   "pos": [
+    -7.125,
+    7.05,
+    -11.528
+   ],
+   "rotY": 180,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "vaso_sanitario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_sanitario.glb",
+   "pos": [
+    2.655,
+    5.85,
+    -12.153
+   ],
+   "rotY": -90,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pia_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_banheiro.glb",
+   "pos": [
+    1.755,
+    5.85,
+    -11.403
+   ],
+   "rotY": 90,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "armario_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_banheiro.glb",
+   "pos": [
+    3.0,
+    7.05,
+    -12.153
+   ],
+   "rotY": -90,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "vaso_sanitario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_sanitario.glb",
+   "pos": [
+    7.595,
+    5.85,
+    12.097
+   ],
+   "rotY": 90,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pia_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_banheiro.glb",
+   "pos": [
+    8.875,
+    5.85,
+    11.477
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "armario_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_banheiro.glb",
+   "pos": [
+    7.875,
+    7.05,
+    11.722
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "lixeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/lixeira.glb",
+   "pos": [
+    -9.301,
+    8.7,
+    7.847
+   ],
+   "rotY": 90,
+   "andar": 3,
+   "comodo": "patio"
+  },
+  {
+   "item": "cone_transito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cone_transito.glb",
+   "pos": [
+    8.375,
+    8.7,
+    7.347
+   ],
+   "rotY": 0,
+   "andar": 3,
+   "comodo": "patio"
+  },
+  {
+   "item": "cone_transito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cone_transito.glb",
+   "pos": [
+    -15.125,
+    8.7,
+    -6.903
+   ],
+   "rotY": -90,
+   "andar": 3,
+   "comodo": "patio"
+  },
+  {
+   "item": "cone_transito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cone_transito.glb",
+   "pos": [
+    12.625,
+    8.7,
+    7.097
+   ],
+   "rotY": 180,
+   "andar": 3,
+   "comodo": "patio"
+  },
+  {
+   "item": "cone_transito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cone_transito.glb",
+   "pos": [
+    -11.375,
+    8.7,
+    1.097
+   ],
+   "rotY": 180,
+   "andar": 3,
+   "comodo": "patio"
+  },
+  {
+   "item": "quadro_familia",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/quadro_familia.glb",
+   "pos": [
+    16.5,
+    10.1,
+    4.847
+   ],
+   "rotY": 90,
+   "andar": 3,
+   "comodo": "corredor"
+  }
+ ]
+}

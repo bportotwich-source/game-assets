@@ -1,0 +1,294 @@
+{
+ "kit": "serraria",
+ "gerado_por": "scripts/ambientacao/ambientar.py",
+ "convencao": "pos em metros no espaço do prédio (mesmo do building_layout.json); rotY em graus; itens de parede (montagem wall) têm o pivô na face de trás, já na altura sugerida",
+ "niveis": {
+  "0": 0.0
+ },
+ "comodos": [
+  {
+   "andar": 0,
+   "comodo": 0,
+   "tipo": "serraria",
+   "area_m2": 1343.1,
+   "centro": [
+    0.08,
+    1.45
+   ],
+   "itens": 18
+  },
+  {
+   "andar": 0,
+   "comodo": 4,
+   "tipo": "escritorio",
+   "area_m2": 7.0,
+   "centro": [
+    14.32,
+    8.27
+   ],
+   "itens": 2
+  }
+ ],
+ "itens": [
+  {
+   "item": "pilha_toras",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_toras.glb",
+   "pos": [
+    -15.975,
+    0.0,
+    5.875
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "serraria"
+  },
+  {
+   "item": "pilha_tabuas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_tabuas.glb",
+   "pos": [
+    -19.561,
+    0.0,
+    13.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "serraria"
+  },
+  {
+   "item": "pilha_tabuas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_tabuas.glb",
+   "pos": [
+    8.025,
+    0.0,
+    -3.211
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "serraria"
+  },
+  {
+   "item": "pilha_tabuas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_tabuas.glb",
+   "pos": [
+    -22.811,
+    0.0,
+    -4.875
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "serraria"
+  },
+  {
+   "item": "pilha_tabuas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_tabuas.glb",
+   "pos": [
+    -1.475,
+    0.0,
+    5.539
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "serraria"
+  },
+  {
+   "item": "pilha_tabuas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_tabuas.glb",
+   "pos": [
+    -4.725,
+    0.0,
+    -15.538
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "serraria"
+  },
+  {
+   "item": "pilha_tabuas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_tabuas.glb",
+   "pos": [
+    17.025,
+    0.0,
+    -13.538
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "serraria"
+  },
+  {
+   "item": "papeis_espalhados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/papeis_espalhados.glb",
+   "pos": [
+    -0.225,
+    0.0,
+    16.125
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "serraria"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    20.275,
+    0.0,
+    15.125
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "serraria"
+  },
+  {
+   "item": "cavalete_serra",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cavalete_serra.glb",
+   "pos": [
+    0.275,
+    0.0,
+    1.125
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "serraria"
+  },
+  {
+   "item": "cavalete_serra",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cavalete_serra.glb",
+   "pos": [
+    11.775,
+    0.0,
+    -1.875
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "serraria"
+  },
+  {
+   "item": "cavalete_serra",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cavalete_serra.glb",
+   "pos": [
+    -6.475,
+    0.0,
+    13.375
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "serraria"
+  },
+  {
+   "item": "cavalete_serra",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cavalete_serra.glb",
+   "pos": [
+    6.025,
+    0.0,
+    -17.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "serraria"
+  },
+  {
+   "item": "cavalete_serra",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cavalete_serra.glb",
+   "pos": [
+    21.525,
+    0.0,
+    -11.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "serraria"
+  },
+  {
+   "item": "cavalete_serra",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cavalete_serra.glb",
+   "pos": [
+    3.525,
+    0.0,
+    -5.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "serraria"
+  },
+  {
+   "item": "bancada_trabalho",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/bancada_trabalho.glb",
+   "pos": [
+    -0.691,
+    0.0,
+    -15.875
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "serraria"
+  },
+  {
+   "item": "serra_fita",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/serra_fita.glb",
+   "pos": [
+    -1.725,
+    0.0,
+    0.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "serraria"
+  },
+  {
+   "item": "serrote",
+   "grupo": "loot",
+   "arquivo": "props/loot/serrote.glb",
+   "pos": [
+    -13.475,
+    0.0,
+    -13.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "serraria"
+  },
+  {
+   "item": "estante_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_livros.glb",
+   "pos": [
+    15.448,
+    0.0,
+    9.125
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "arquivo_aco",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/arquivo_aco.glb",
+   "pos": [
+    14.025,
+    0.0,
+    6.648
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "escritorio"
+  }
+ ]
+}

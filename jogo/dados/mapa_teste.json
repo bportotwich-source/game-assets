@@ -1,0 +1,16 @@
+{
+  "_sobre": "Mapa de teste do M0: um cruzamento com 5 kits. Os prédios são colocados a partir da esquina, um ao lado do outro, com a frente virada para a rua. ruina: 0 intacto a 1 bem destruído. semente: muda o jeito que estraga.",
+  "rua_largura": 9.0,
+  "calcada": 2.5,
+  "recuo": 0.4,
+  "vao_entre_predios": 3.0,
+  "comprimento_x": [-70, 70],
+  "comprimento_z": [-55, 55],
+  "quadras": {
+    "norte_oeste": [{"kit": "supermercado", "ruina": 0.7, "semente": 11}],
+    "norte_leste": [{"kit": "padaria", "ruina": 0.5, "semente": 23}, {"kit": "delegacia", "ruina": 0.8, "semente": 37}],
+    "sul_oeste": [{"kit": "posto-gasolina", "ruina": 0.6, "semente": 41}],
+    "sul_leste": [{"kit": "casa-americana", "ruina": 0.4, "semente": 53}]
+  },
+  "inicio": {"pos": [3.0, 0.1, 10.0], "olhando_graus": 0}
+}

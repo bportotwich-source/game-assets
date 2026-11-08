@@ -8,7 +8,7 @@ on:
   push:
     branches: [main, kit-galeria]
   pull_request:
-    paths: ["editor/**", "menu/**", "visitar/**", "scripts/godot/**", "project.godot", "export_presets.cfg", "scripts/ci/**", ".github/workflows/build-exe.yml"]
+    paths: ["jogo/**", "editor/**", "menu/**", "visitar/**", "scripts/godot/**", "project.godot", "export_presets.cfg", "scripts/ci/**", ".github/workflows/build-exe.yml"]
   workflow_dispatch:
 
 permissions:

@@ -29,6 +29,20 @@ Z_PC_TRAS = -1.86             # até onde o para-choque traseiro dobra para o la
 LANTERNA = (0.503, 0.815, 0.635, 0.818)   # buraco da lanterna: x de, x até, y de, y até
 TAMPA = (-1.75, 72)           # dobradiça da tampa (z) e quanto abre
 
+# frente (o que a picape e a van trocam para ter cara própria)
+FAROL = (0.395, 0.775, 0.535, 0.692)      # buraco do farol: x de, x até, y de, y até
+FAROL_PISCA = 0.075           # largura do pisca âmbar na ponta de fora do farol
+FAROL_N = 2                   # refletores por farol
+GRADE = (0.388, 0.540, 0.692) # grade: meia largura, y de, y até
+GRADE_ESTILO = 'frisos'
+Z_CAPO = 0.70                 # dobradiça do capô
+CAPO_Y0 = 0.55                # o capô pega a chapa acima disto (o resto da frente é da carroceria)
+Y_PARALAMA = 2.0              # até onde sobe o para-lama
+Z_TOPO_PARABRISA = -0.19      # borda de cima do para-brisa
+SUFIXO_FRENTE = ''            # peças da frente com outro desenho: capo<sufixo>, porta_dianteira_e<sufixo>...
+DY_CINTURA = 0.0              # quanto a linha de cintura sobe em relação ao sedã (retrovisor, maçaneta)
+DY_TETO = 0.0                 # quanto o teto da cabine sobe em relação ao sedã (quebra-sol, luz, retrovisor de dentro)
+
 
 def _i(z, tab):
     zs, ys = zip(*tab); return float(np.interp(z, zs, ys))
@@ -180,9 +194,9 @@ def _planta(z0, z1, rec, minfx=0.0, n=30):
 
 
 def regiao_capo(g=0.0):
-    pg = _planta(0.70, 2.035, 0.085)
+    pg = _planta(Z_CAPO, 2.035, 0.085)
     if g: pg = pg.buffer(g, join_style=2)
-    return prisma_xz(pg, 0.55, 2.0)
+    return prisma_xz(pg, CAPO_Y0, 2.0)
 
 
 def regiao_tampa(g=0.0):
@@ -194,7 +208,7 @@ def regiao_tampa(g=0.0):
 
 
 def regiao_paralama(lado=1, g=0.0):
-    pg = Polygon([(0.605 + 0.004, 0.305), (2.3, 0.305), (2.3, 2.0), (0.605 + 0.004, 2.0)])
+    pg = Polygon([(0.605 + 0.004, 0.305), (2.3, 0.305), (2.3, Y_PARALAMA), (0.605 + 0.004, Y_PARALAMA)])
     if g: pg = pg.buffer(g, join_style=2)
     m = prisma_zy(pg, 0.66 - g, 1.2)
     return m if lado > 0 else espelhar_x(m)

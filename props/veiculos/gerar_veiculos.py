@@ -323,12 +323,12 @@ def main(ids):
     materiais(); raiz = AQUI
     arq = os.path.join(raiz, 'catalogo.json')
     cat = json.load(open(arq, encoding='utf-8')) if (ids and os.path.exists(arq)) else {'modelos': [], 'pecas': [], 'ferramentas': []}
+    feitos = set()   # peça que mais de um modelo usa sai do primeiro (o sedã), para não mudar a cada modelo novo
     for id_, mod in MODELOS.items():
         if ids and id_ not in ids: continue
         reg, Vc = exportar_modelo(mod, raiz)
         print(f"{id_}: {reg['triangulos']} tris {reg['kb']:.0f} KB {reg['tamanho_m']}")
         cat['modelos'] = [m for m in cat['modelos'] if m['id'] != id_] + [reg]
-        feitos = set()
         for pt in Vc.partes:
             it = pt.get('item')
             if not it or it['id'] in feitos: continue

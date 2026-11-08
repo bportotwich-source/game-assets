@@ -78,6 +78,10 @@ Cada peça é um nó separado no modelo, com nome fixo (o **encaixe**). Quando o
 
 No hatch Brisa os encaixes têm os mesmos nomes. Muda o que é da traseira: `tampa_porta_malas` vira a tampa traseira (`tampa_traseira_hatch`, 12 kg, abre 80° com o vidro), o `vidro_traseiro` fica preso nela (`vidro_traseiro_hatch`, 6 kg), as lanternas são em pé (`lanterna_vertical`), o escapamento é curto (`escapamento_curto`) e o porta-malas tem 7 × 4 casas, com o estepe embaixo do assoalho.
 
+A picape Lida tem desenho próprio por fora: a frente, o capô, as portas dianteiras, os para-lamas, o para-brisa, o para-choque da frente e os faróis são dela (ids com `_picape`) e não servem no sedã nem no hatch. Por dentro e por baixo é igual aos outros: motor, rodas, tanque, escapamento, bancos, painel e volante trocam entre os três.
+
+Na picape Lida só há as portas dianteiras e os bancos da frente. `tampa_porta_malas` é a tampa da caçamba (`tampa_cacamba`, 14 kg): a dobradiça fica embaixo e ela cai 90° para trás, virando rampa. `vidro_traseiro` é o vidro de trás da cabine (`vidro_traseiro_cabine`). O estepe vai deitado na frente da caçamba, preso por cintas, e sai sem ferramenta. O escapamento e o tanque são os do sedã.
+
 Partes que abrem e fecham mas não saem como loot: `tampa_combustivel` (portinhola do tanque), `porta_luvas`, `assoalho_porta_malas` (tampa sobre o estepe), `quebra_sol_e` `quebra_sol_d` (onde às vezes está a chave).
 
 ### 3.2 Condição
@@ -121,13 +125,14 @@ Cada peça tem um `padrao`. Peças do mesmo padrão servem em qualquer modelo qu
 
 | Padrão | Peças | Serve em |
 |---|---|---|
-| `compacto_1_6` | motor, alternador, radiador, escapamentos | sedã Rumo, hatch Brisa e os próximos (picape, van) |
-| `aro14_4furos` | roda, estepe | sedã, hatch, picape, van |
+| `compacto_1_6` | motor, alternador, radiador, escapamentos, tanque de 45 L | sedã Rumo, hatch Brisa e picape Lida |
+| `aro14_4furos` | roda, estepe | sedã, hatch, picape |
 | `bateria_12v` | bateria | todos os carros e o gerador da base |
-| `familia_rumo` | capô, portas dianteiras, para-lamas, para-brisa, para-choque dianteiro, tanque | sedã Rumo e hatch Brisa (a mesma frente) |
+| `familia_rumo` | capô, portas dianteiras, para-lamas, para-brisa, para-choque dianteiro, faróis | sedã Rumo e hatch Brisa (a mesma frente) |
 | `sedan_rumo` | portas traseiras, tampa do porta-malas, para-choque traseiro, vidro traseiro | só o sedã Rumo |
-| `hatch_brisa` | portas traseiras, tampa traseira com vidro, para-choque traseiro, lanternas em pé, escapamento curto | só o hatch Brisa |
-| `universal` | faróis, lanternas, retrovisores, bancos, volante | qualquer carro |
+| `hatch_brisa` | portas traseiras, tampa traseira com vidro, para-choque traseiro, escapamento curto | só o hatch Brisa |
+| `picape_lida` | capô, portas dianteiras, para-lamas, para-brisa, faróis duplos, para-choques cromados, tampa da caçamba, vidro de trás da cabine | só a picape Lida |
+| `universal` | lanternas (as do sedã e as em pé do hatch e da picape), retrovisores, bancos, volante | qualquer carro |
 
 ## 4. Desmontar e montar
 
@@ -159,7 +164,7 @@ Com o capô aberto, ou mirando no carro e apertando **O**, abre a tela da oficin
 ### 4.4 Peças grandes
 
 - **Carga nas mãos** (portas, capô, tampa, vidros grandes, bancos): o jogador carrega com as duas mãos, sem arma, a 60% da velocidade, e pode largar a qualquer momento (tecla G). Essas peças não entram na mochila: vão no porta-malas, se couberem na grade, no banco de trás ou no chão.
-- **Motor**: não vai no inventário. Precisa de uma **talha** (a do ferro-velho e a da oficina da concessionária já existem nos kits; na base, a talha entra como estação da fase 2). Com a talha, o motor sai do carro, fica pendurado e pode ser baixado no carro de destino se os dois estiverem embaixo da talha, ou no carrinho de oficina, ou na caçamba de uma picape (próximo veículo).
+- **Motor**: não vai no inventário. Precisa de uma **talha** (a do ferro-velho e a da oficina da concessionária já existem nos kits; na base, a talha entra como estação da fase 2). Com a talha, o motor sai do carro, fica pendurado e pode ser baixado no carro de destino se os dois estiverem embaixo da talha, ou no carrinho de oficina, ou na caçamba da picape Lida.
 - Rodas e bateria podem ir na mochila (se couberem na grade), mas pesam: cada roda a mais deixa o passo mais lento.
 
 ## 5. Dirigir
@@ -337,7 +342,7 @@ Mudanças em código que já existe (combinar antes com a thread do jogo, porque
 | V2 | Peças: encaixes, montar e desmontar com ferramenta, condição, tela da oficina |
 | V3 | Carros abandonados com estados e semente, porta-malas e compartimentos com saque, sifão |
 | V4 | Dano por zona, atropelamento, zumbis nos vidros, reparos |
-| Depois | Próximos modelos: hatch, perua, picape (caçamba e guincho), van, moto; talha e carrinho de oficina na base |
+| Depois | Próximos modelos: perua, guincho, moto; talha e carrinho de oficina na base |
 
 ## 11. Convenções do modelo 3D
 

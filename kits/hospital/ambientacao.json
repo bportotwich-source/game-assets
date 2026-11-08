@@ -1,0 +1,6005 @@
+{
+ "kit": "hospital",
+ "gerado_por": "scripts/ambientacao/ambientar.py",
+ "convencao": "pos em metros no espaço do prédio (mesmo do building_layout.json); rotY em graus; itens de parede (montagem wall) têm o pivô na face de trás, já na altura sugerida",
+ "niveis": {
+  "0": 0.15,
+  "1": 3.75,
+  "2": 7.35,
+  "3": 10.95,
+  "4": 14.55,
+  "5": 18.15,
+  "6": 21.75,
+  "7": 25.35
+ },
+ "comodos": [
+  {
+   "andar": 0,
+   "comodo": 27,
+   "tipo": "vazio",
+   "area_m2": 1.3,
+   "centro": [
+    -14.62,
+    0.09
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 28,
+   "tipo": "corredor",
+   "area_m2": 3.5,
+   "centro": [
+    -12.75,
+    26.21
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 31,
+   "tipo": "clinica",
+   "area_m2": 5.9,
+   "centro": [
+    -12.33,
+    -3.15
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 0,
+   "comodo": 32,
+   "tipo": "espera",
+   "area_m2": 107.3,
+   "centro": [
+    -2.79,
+    2.11
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 35,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -11.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 38,
+   "tipo": "corredor",
+   "area_m2": 4.2,
+   "centro": [
+    -8.0,
+    6.68
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 0,
+   "comodo": 39,
+   "tipo": "clinica",
+   "area_m2": 6.4,
+   "centro": [
+    -8.49,
+    -3.17
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 0,
+   "comodo": 42,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -7.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 44,
+   "tipo": "clinica",
+   "area_m2": 6.4,
+   "centro": [
+    -4.49,
+    -3.17
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 0,
+   "comodo": 47,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -3.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 49,
+   "tipo": "clinica",
+   "area_m2": 6.2,
+   "centro": [
+    -0.31,
+    -2.36
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 51,
+   "tipo": "clinica",
+   "area_m2": 60.6,
+   "centro": [
+    4.95,
+    12.39
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 61,
+   "tipo": "clinica",
+   "area_m2": 7.0,
+   "centro": [
+    3.0,
+    21.36
+   ],
+   "itens": 4
+  },
+  {
+   "andar": 0,
+   "comodo": 63,
+   "tipo": "corredor",
+   "area_m2": 6.4,
+   "centro": [
+    3.0,
+    -3.41
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 64,
+   "tipo": "corredor",
+   "area_m2": 2.8,
+   "centro": [
+    5.08,
+    18.69
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 65,
+   "tipo": "corredor",
+   "area_m2": 6.4,
+   "centro": [
+    5.0,
+    -3.41
+   ],
+   "itens": 4
+  },
+  {
+   "andar": 0,
+   "comodo": 66,
+   "tipo": "clinica",
+   "area_m2": 5.9,
+   "centro": [
+    7.44,
+    -3.16
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 0,
+   "comodo": 67,
+   "tipo": "clinica",
+   "area_m2": 6.6,
+   "centro": [
+    7.89,
+    2.72
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 0,
+   "comodo": 69,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.16,
+    4.92
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 71,
+   "tipo": "clinica",
+   "area_m2": 7.2,
+   "centro": [
+    7.25,
+    21.83
+   ],
+   "itens": 4
+  },
+  {
+   "andar": 0,
+   "comodo": 79,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    8.73,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 87,
+   "tipo": "vazio",
+   "area_m2": 1.3,
+   "centro": [
+    10.62,
+    0.09
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 5,
+   "tipo": "lavabo",
+   "area_m2": 4.1,
+   "centro": [
+    -12.69,
+    -2.74
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 6,
+   "tipo": "espera",
+   "area_m2": 66.5,
+   "centro": [
+    1.2,
+    3.85
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 1,
+   "comodo": 8,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -12.73,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 9,
+   "tipo": "vazio",
+   "area_m2": 1.7,
+   "centro": [
+    -12.9,
+    4.6
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 12,
+   "tipo": "lavabo",
+   "area_m2": 3.7,
+   "centro": [
+    -11.07,
+    2.77
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 13,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -11.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 14,
+   "tipo": "vazio",
+   "area_m2": 1.9,
+   "centro": [
+    -10.87,
+    -4.55
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 16,
+   "tipo": "lavabo",
+   "area_m2": 4.6,
+   "centro": [
+    -8.84,
+    -2.81
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 1,
+   "comodo": 18,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -8.98,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 19,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    -9.03,
+    4.64
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 1,
+   "comodo": 22,
+   "tipo": "lavabo",
+   "area_m2": 4.2,
+   "centro": [
+    -7.17,
+    2.83
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 25,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    -6.98,
+    -4.6
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 1,
+   "comodo": 26,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -7.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 29,
+   "tipo": "lavabo",
+   "area_m2": 4.6,
+   "centro": [
+    -4.84,
+    -2.81
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 1,
+   "comodo": 31,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -4.98,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 32,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    -5.03,
+    4.64
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 34,
+   "tipo": "lavabo",
+   "area_m2": 4.2,
+   "centro": [
+    -3.17,
+    2.83
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 1,
+   "comodo": 37,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    -2.98,
+    -4.6
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 1,
+   "comodo": 38,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -3.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 42,
+   "tipo": "corredor",
+   "area_m2": 3.6,
+   "centro": [
+    0.1,
+    -1.88
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 44,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -0.98,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 45,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    -1.03,
+    4.64
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 1,
+   "comodo": 47,
+   "tipo": "lavabo",
+   "area_m2": 4.2,
+   "centro": [
+    0.83,
+    2.83
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 50,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    1.14,
+    6.97
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 51,
+   "tipo": "vazio",
+   "area_m2": 1.6,
+   "centro": [
+    1.14,
+    11.07
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 52,
+   "tipo": "vazio",
+   "area_m2": 1.2,
+   "centro": [
+    1.14,
+    14.94
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 56,
+   "tipo": "lavabo",
+   "area_m2": 2.7,
+   "centro": [
+    2.64,
+    8.76
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 57,
+   "tipo": "lavabo",
+   "area_m2": 2.3,
+   "centro": [
+    2.66,
+    12.88
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 58,
+   "tipo": "lavabo",
+   "area_m2": 2.1,
+   "centro": [
+    2.76,
+    16.7
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 60,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    2.86,
+    6.73
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 61,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    2.86,
+    10.98
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 62,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    2.86,
+    14.98
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 63,
+   "tipo": "corredor",
+   "area_m2": 6.4,
+   "centro": [
+    3.0,
+    -3.41
+   ],
+   "itens": 5
+  },
+  {
+   "andar": 1,
+   "comodo": 70,
+   "tipo": "corredor",
+   "area_m2": 6.4,
+   "centro": [
+    5.0,
+    -3.41
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 1,
+   "comodo": 72,
+   "tipo": "lavabo",
+   "area_m2": 4.1,
+   "centro": [
+    7.06,
+    -2.74
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 73,
+   "tipo": "clinica",
+   "area_m2": 6.7,
+   "centro": [
+    7.99,
+    3.32
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 1,
+   "comodo": 75,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.16,
+    4.92
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 78,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.16,
+    8.92
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 81,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.16,
+    12.92
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 83,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    7.21,
+    15.0
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 84,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.17,
+    16.7
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 86,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    7.3,
+    7.08
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 87,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    7.3,
+    11.08
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 89,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    8.73,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 90,
+   "tipo": "vazio",
+   "area_m2": 1.9,
+   "centro": [
+    8.88,
+    -4.55
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 91,
+   "tipo": "vazio",
+   "area_m2": 1.6,
+   "centro": [
+    8.86,
+    8.86
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 92,
+   "tipo": "vazio",
+   "area_m2": 1.6,
+   "centro": [
+    8.86,
+    12.86
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 93,
+   "tipo": "vazio",
+   "area_m2": 1.2,
+   "centro": [
+    8.86,
+    16.74
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 0,
+   "tipo": "clinica",
+   "area_m2": 9.6,
+   "centro": [
+    -14.37,
+    22.01
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 2,
+   "comodo": 1,
+   "tipo": "lavabo",
+   "area_m2": 4.1,
+   "centro": [
+    -12.69,
+    -2.74
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 2,
+   "tipo": "espera",
+   "area_m2": 66.5,
+   "centro": [
+    1.2,
+    3.85
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 4,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -12.73,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 5,
+   "tipo": "vazio",
+   "area_m2": 1.7,
+   "centro": [
+    -12.9,
+    4.6
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 7,
+   "tipo": "lavabo",
+   "area_m2": 3.7,
+   "centro": [
+    -11.07,
+    2.77
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 8,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -11.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 9,
+   "tipo": "vazio",
+   "area_m2": 1.9,
+   "centro": [
+    -10.87,
+    -4.55
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 10,
+   "tipo": "clinica",
+   "area_m2": 9.6,
+   "centro": [
+    -8.37,
+    -11.49
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 2,
+   "comodo": 12,
+   "tipo": "lavabo",
+   "area_m2": 4.6,
+   "centro": [
+    -8.84,
+    -2.81
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 2,
+   "comodo": 14,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -8.98,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 15,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    -9.03,
+    4.64
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 2,
+   "comodo": 17,
+   "tipo": "lavabo",
+   "area_m2": 4.2,
+   "centro": [
+    -7.17,
+    2.83
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 2,
+   "comodo": 20,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    -6.98,
+    -4.6
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 2,
+   "comodo": 21,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -7.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 23,
+   "tipo": "lavabo",
+   "area_m2": 4.6,
+   "centro": [
+    -4.84,
+    -2.81
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 2,
+   "comodo": 25,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -4.98,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 26,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    -5.03,
+    4.64
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 2,
+   "comodo": 28,
+   "tipo": "lavabo",
+   "area_m2": 4.2,
+   "centro": [
+    -3.17,
+    2.83
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 31,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    -2.98,
+    -4.6
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 32,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -3.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 34,
+   "tipo": "corredor",
+   "area_m2": 3.6,
+   "centro": [
+    0.1,
+    -1.88
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 36,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -0.98,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 37,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    -1.03,
+    4.64
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 2,
+   "comodo": 39,
+   "tipo": "lavabo",
+   "area_m2": 4.2,
+   "centro": [
+    0.83,
+    2.83
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 2,
+   "comodo": 42,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    1.14,
+    6.97
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 43,
+   "tipo": "vazio",
+   "area_m2": 1.6,
+   "centro": [
+    1.14,
+    11.07
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 44,
+   "tipo": "vazio",
+   "area_m2": 1.2,
+   "centro": [
+    1.14,
+    14.94
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 48,
+   "tipo": "lavabo",
+   "area_m2": 2.7,
+   "centro": [
+    2.64,
+    8.76
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 2,
+   "comodo": 49,
+   "tipo": "lavabo",
+   "area_m2": 2.3,
+   "centro": [
+    2.66,
+    12.88
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 50,
+   "tipo": "lavabo",
+   "area_m2": 2.1,
+   "centro": [
+    2.76,
+    16.7
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 52,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    2.86,
+    6.73
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 53,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    2.86,
+    10.98
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 54,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    2.86,
+    14.98
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 55,
+   "tipo": "corredor",
+   "area_m2": 6.4,
+   "centro": [
+    3.0,
+    -3.41
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 2,
+   "comodo": 60,
+   "tipo": "corredor",
+   "area_m2": 6.4,
+   "centro": [
+    5.0,
+    -3.41
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 2,
+   "comodo": 62,
+   "tipo": "lavabo",
+   "area_m2": 4.1,
+   "centro": [
+    7.06,
+    -2.74
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 2,
+   "comodo": 63,
+   "tipo": "clinica",
+   "area_m2": 6.7,
+   "centro": [
+    7.99,
+    3.32
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 2,
+   "comodo": 65,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.16,
+    4.92
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 68,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.16,
+    8.92
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 71,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.16,
+    12.92
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 73,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    7.21,
+    15.0
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 2,
+   "comodo": 74,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.17,
+    16.7
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 76,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    7.3,
+    7.08
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 77,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    7.3,
+    11.08
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 79,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    8.73,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 80,
+   "tipo": "vazio",
+   "area_m2": 1.9,
+   "centro": [
+    8.88,
+    -4.55
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 81,
+   "tipo": "vazio",
+   "area_m2": 1.6,
+   "centro": [
+    8.86,
+    8.86
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 82,
+   "tipo": "vazio",
+   "area_m2": 1.6,
+   "centro": [
+    8.86,
+    12.86
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 83,
+   "tipo": "vazio",
+   "area_m2": 1.2,
+   "centro": [
+    8.86,
+    16.74
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 96,
+   "tipo": "clinica",
+   "area_m2": 9.6,
+   "centro": [
+    14.63,
+    23.01
+   ],
+   "itens": 4
+  },
+  {
+   "andar": 2,
+   "comodo": 97,
+   "tipo": "clinica",
+   "area_m2": 9.6,
+   "centro": [
+    15.63,
+    -11.99
+   ],
+   "itens": 5
+  },
+  {
+   "andar": 2,
+   "comodo": 98,
+   "tipo": "clinica",
+   "area_m2": 9.6,
+   "centro": [
+    20.63,
+    -3.99
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 3,
+   "comodo": 0,
+   "tipo": "lavabo",
+   "area_m2": 4.1,
+   "centro": [
+    -12.69,
+    -2.74
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 1,
+   "tipo": "espera",
+   "area_m2": 66.5,
+   "centro": [
+    1.2,
+    3.85
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 3,
+   "comodo": 3,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -12.73,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 4,
+   "tipo": "vazio",
+   "area_m2": 1.7,
+   "centro": [
+    -12.9,
+    4.6
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 6,
+   "tipo": "lavabo",
+   "area_m2": 3.7,
+   "centro": [
+    -11.07,
+    2.77
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 7,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -11.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 8,
+   "tipo": "vazio",
+   "area_m2": 1.9,
+   "centro": [
+    -10.87,
+    -4.55
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 10,
+   "tipo": "lavabo",
+   "area_m2": 4.6,
+   "centro": [
+    -8.84,
+    -2.81
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 3,
+   "comodo": 12,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -8.98,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 13,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    -9.03,
+    4.64
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 15,
+   "tipo": "lavabo",
+   "area_m2": 4.2,
+   "centro": [
+    -7.17,
+    2.83
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 18,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    -6.98,
+    -4.6
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 3,
+   "comodo": 19,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -7.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 21,
+   "tipo": "lavabo",
+   "area_m2": 4.6,
+   "centro": [
+    -4.84,
+    -2.81
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 3,
+   "comodo": 23,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -4.98,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 24,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    -5.03,
+    4.64
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 26,
+   "tipo": "lavabo",
+   "area_m2": 4.2,
+   "centro": [
+    -3.17,
+    2.83
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 29,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    -2.98,
+    -4.6
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 3,
+   "comodo": 30,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -3.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 32,
+   "tipo": "corredor",
+   "area_m2": 3.6,
+   "centro": [
+    0.1,
+    -1.88
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 3,
+   "comodo": 34,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -0.98,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 35,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    -1.03,
+    4.64
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 3,
+   "comodo": 37,
+   "tipo": "lavabo",
+   "area_m2": 4.2,
+   "centro": [
+    0.83,
+    2.83
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 3,
+   "comodo": 40,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    1.14,
+    6.97
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 41,
+   "tipo": "vazio",
+   "area_m2": 1.6,
+   "centro": [
+    1.14,
+    11.07
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 42,
+   "tipo": "vazio",
+   "area_m2": 1.2,
+   "centro": [
+    1.14,
+    14.94
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 46,
+   "tipo": "lavabo",
+   "area_m2": 2.7,
+   "centro": [
+    2.64,
+    8.76
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 47,
+   "tipo": "lavabo",
+   "area_m2": 2.3,
+   "centro": [
+    2.66,
+    12.88
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 48,
+   "tipo": "lavabo",
+   "area_m2": 2.1,
+   "centro": [
+    2.76,
+    16.7
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 3,
+   "comodo": 50,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    2.86,
+    6.73
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 51,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    2.86,
+    10.98
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 52,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    2.86,
+    14.98
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 53,
+   "tipo": "corredor",
+   "area_m2": 6.4,
+   "centro": [
+    3.0,
+    -3.41
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 3,
+   "comodo": 58,
+   "tipo": "corredor",
+   "area_m2": 6.4,
+   "centro": [
+    5.0,
+    -3.41
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 3,
+   "comodo": 60,
+   "tipo": "lavabo",
+   "area_m2": 4.1,
+   "centro": [
+    7.06,
+    -2.74
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 61,
+   "tipo": "clinica",
+   "area_m2": 6.7,
+   "centro": [
+    7.99,
+    3.32
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 3,
+   "comodo": 63,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.16,
+    4.92
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 66,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.16,
+    8.92
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 69,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.16,
+    12.92
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 71,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    7.21,
+    15.0
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 72,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.17,
+    16.7
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 74,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    7.3,
+    7.08
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 75,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    7.3,
+    11.08
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 3,
+   "comodo": 77,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    8.73,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 78,
+   "tipo": "vazio",
+   "area_m2": 1.9,
+   "centro": [
+    8.88,
+    -4.55
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 79,
+   "tipo": "vazio",
+   "area_m2": 1.6,
+   "centro": [
+    8.86,
+    8.86
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 80,
+   "tipo": "vazio",
+   "area_m2": 1.6,
+   "centro": [
+    8.86,
+    12.86
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 3,
+   "comodo": 81,
+   "tipo": "vazio",
+   "area_m2": 1.2,
+   "centro": [
+    8.86,
+    16.74
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 0,
+   "tipo": "lavabo",
+   "area_m2": 4.1,
+   "centro": [
+    -12.69,
+    -2.74
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 4,
+   "comodo": 1,
+   "tipo": "espera",
+   "area_m2": 66.5,
+   "centro": [
+    1.2,
+    3.85
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 4,
+   "comodo": 3,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -12.73,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 4,
+   "tipo": "vazio",
+   "area_m2": 1.7,
+   "centro": [
+    -12.9,
+    4.6
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 6,
+   "tipo": "lavabo",
+   "area_m2": 3.7,
+   "centro": [
+    -11.07,
+    2.77
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 7,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -11.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 8,
+   "tipo": "vazio",
+   "area_m2": 1.9,
+   "centro": [
+    -10.87,
+    -4.55
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 10,
+   "tipo": "lavabo",
+   "area_m2": 4.6,
+   "centro": [
+    -8.84,
+    -2.81
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 4,
+   "comodo": 12,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -8.98,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 13,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    -9.03,
+    4.64
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 4,
+   "comodo": 15,
+   "tipo": "lavabo",
+   "area_m2": 4.2,
+   "centro": [
+    -7.17,
+    2.83
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 4,
+   "comodo": 18,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    -6.98,
+    -4.6
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 4,
+   "comodo": 19,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -7.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 21,
+   "tipo": "lavabo",
+   "area_m2": 4.6,
+   "centro": [
+    -4.84,
+    -2.81
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 4,
+   "comodo": 23,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -4.98,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 24,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    -5.03,
+    4.64
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 4,
+   "comodo": 26,
+   "tipo": "lavabo",
+   "area_m2": 4.2,
+   "centro": [
+    -3.17,
+    2.83
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 4,
+   "comodo": 29,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    -2.98,
+    -4.6
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 4,
+   "comodo": 30,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -3.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 32,
+   "tipo": "corredor",
+   "area_m2": 3.6,
+   "centro": [
+    0.1,
+    -1.88
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 4,
+   "comodo": 34,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -0.98,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 35,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    -1.03,
+    4.64
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 4,
+   "comodo": 37,
+   "tipo": "lavabo",
+   "area_m2": 4.2,
+   "centro": [
+    0.83,
+    2.83
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 4,
+   "comodo": 40,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    1.14,
+    6.97
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 41,
+   "tipo": "vazio",
+   "area_m2": 1.6,
+   "centro": [
+    1.14,
+    11.07
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 42,
+   "tipo": "vazio",
+   "area_m2": 1.2,
+   "centro": [
+    1.14,
+    14.94
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 46,
+   "tipo": "lavabo",
+   "area_m2": 2.7,
+   "centro": [
+    2.64,
+    8.76
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 4,
+   "comodo": 47,
+   "tipo": "lavabo",
+   "area_m2": 2.3,
+   "centro": [
+    2.66,
+    12.88
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 48,
+   "tipo": "lavabo",
+   "area_m2": 2.1,
+   "centro": [
+    2.76,
+    16.7
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 4,
+   "comodo": 50,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    2.86,
+    6.73
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 51,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    2.86,
+    10.98
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 52,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    2.86,
+    14.98
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 53,
+   "tipo": "corredor",
+   "area_m2": 6.4,
+   "centro": [
+    3.0,
+    -3.41
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 4,
+   "comodo": 58,
+   "tipo": "corredor",
+   "area_m2": 6.4,
+   "centro": [
+    5.0,
+    -3.41
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 4,
+   "comodo": 60,
+   "tipo": "lavabo",
+   "area_m2": 4.1,
+   "centro": [
+    7.06,
+    -2.74
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 61,
+   "tipo": "clinica",
+   "area_m2": 6.7,
+   "centro": [
+    7.99,
+    3.32
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 4,
+   "comodo": 63,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.16,
+    4.92
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 66,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.16,
+    8.92
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 69,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.16,
+    12.92
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 71,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    7.21,
+    15.0
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 72,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.17,
+    16.7
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 74,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    7.3,
+    7.08
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 75,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    7.3,
+    11.08
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 77,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    8.73,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 78,
+   "tipo": "vazio",
+   "area_m2": 1.9,
+   "centro": [
+    8.88,
+    -4.55
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 79,
+   "tipo": "vazio",
+   "area_m2": 1.6,
+   "centro": [
+    8.86,
+    8.86
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 80,
+   "tipo": "vazio",
+   "area_m2": 1.6,
+   "centro": [
+    8.86,
+    12.86
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 4,
+   "comodo": 81,
+   "tipo": "vazio",
+   "area_m2": 1.2,
+   "centro": [
+    8.86,
+    16.74
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 0,
+   "tipo": "lavabo",
+   "area_m2": 4.1,
+   "centro": [
+    -12.69,
+    -2.74
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 1,
+   "tipo": "espera",
+   "area_m2": 66.5,
+   "centro": [
+    1.2,
+    3.85
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 5,
+   "comodo": 3,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -12.73,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 4,
+   "tipo": "vazio",
+   "area_m2": 1.7,
+   "centro": [
+    -12.9,
+    4.6
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 6,
+   "tipo": "lavabo",
+   "area_m2": 3.7,
+   "centro": [
+    -11.07,
+    2.77
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 7,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -11.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 8,
+   "tipo": "vazio",
+   "area_m2": 1.9,
+   "centro": [
+    -10.87,
+    -4.55
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 10,
+   "tipo": "lavabo",
+   "area_m2": 4.6,
+   "centro": [
+    -8.84,
+    -2.81
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 5,
+   "comodo": 12,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -8.98,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 13,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    -9.03,
+    4.64
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 5,
+   "comodo": 15,
+   "tipo": "lavabo",
+   "area_m2": 4.2,
+   "centro": [
+    -7.17,
+    2.83
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 5,
+   "comodo": 18,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    -6.98,
+    -4.6
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 5,
+   "comodo": 19,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -7.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 21,
+   "tipo": "lavabo",
+   "area_m2": 4.6,
+   "centro": [
+    -4.84,
+    -2.81
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 5,
+   "comodo": 23,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -4.98,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 24,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    -5.03,
+    4.64
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 5,
+   "comodo": 26,
+   "tipo": "lavabo",
+   "area_m2": 4.2,
+   "centro": [
+    -3.17,
+    2.83
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 29,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    -2.98,
+    -4.6
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 30,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -3.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 32,
+   "tipo": "corredor",
+   "area_m2": 3.6,
+   "centro": [
+    0.1,
+    -1.88
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 5,
+   "comodo": 34,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -0.98,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 35,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    -1.03,
+    4.64
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 5,
+   "comodo": 37,
+   "tipo": "lavabo",
+   "area_m2": 4.2,
+   "centro": [
+    0.83,
+    2.83
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 5,
+   "comodo": 40,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    1.14,
+    6.97
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 41,
+   "tipo": "vazio",
+   "area_m2": 1.6,
+   "centro": [
+    1.14,
+    11.07
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 42,
+   "tipo": "vazio",
+   "area_m2": 1.2,
+   "centro": [
+    1.14,
+    14.94
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 46,
+   "tipo": "lavabo",
+   "area_m2": 2.7,
+   "centro": [
+    2.64,
+    8.76
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 5,
+   "comodo": 47,
+   "tipo": "lavabo",
+   "area_m2": 2.3,
+   "centro": [
+    2.66,
+    12.88
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 48,
+   "tipo": "lavabo",
+   "area_m2": 2.1,
+   "centro": [
+    2.76,
+    16.7
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 50,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    2.86,
+    6.73
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 51,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    2.86,
+    10.98
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 52,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    2.86,
+    14.98
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 53,
+   "tipo": "corredor",
+   "area_m2": 6.4,
+   "centro": [
+    3.0,
+    -3.41
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 58,
+   "tipo": "corredor",
+   "area_m2": 6.4,
+   "centro": [
+    5.0,
+    -3.41
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 5,
+   "comodo": 60,
+   "tipo": "lavabo",
+   "area_m2": 4.1,
+   "centro": [
+    7.06,
+    -2.74
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 61,
+   "tipo": "clinica",
+   "area_m2": 6.7,
+   "centro": [
+    7.99,
+    3.32
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 5,
+   "comodo": 63,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.16,
+    4.92
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 66,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.16,
+    8.92
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 69,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.16,
+    12.92
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 71,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    7.21,
+    15.0
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 72,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.17,
+    16.7
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 74,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    7.3,
+    7.08
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 5,
+   "comodo": 75,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    7.3,
+    11.08
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 5,
+   "comodo": 77,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    8.73,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 78,
+   "tipo": "vazio",
+   "area_m2": 1.9,
+   "centro": [
+    8.88,
+    -4.55
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 79,
+   "tipo": "vazio",
+   "area_m2": 1.6,
+   "centro": [
+    8.86,
+    8.86
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 80,
+   "tipo": "vazio",
+   "area_m2": 1.6,
+   "centro": [
+    8.86,
+    12.86
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 5,
+   "comodo": 81,
+   "tipo": "vazio",
+   "area_m2": 1.2,
+   "centro": [
+    8.86,
+    16.74
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 0,
+   "tipo": "lavabo",
+   "area_m2": 4.1,
+   "centro": [
+    -12.69,
+    -2.74
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 1,
+   "tipo": "espera",
+   "area_m2": 66.5,
+   "centro": [
+    1.2,
+    3.85
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 6,
+   "comodo": 3,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -12.73,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 4,
+   "tipo": "vazio",
+   "area_m2": 1.7,
+   "centro": [
+    -12.9,
+    4.6
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 6,
+   "tipo": "lavabo",
+   "area_m2": 3.7,
+   "centro": [
+    -11.07,
+    2.77
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 7,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -11.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 8,
+   "tipo": "vazio",
+   "area_m2": 1.9,
+   "centro": [
+    -10.87,
+    -4.55
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 10,
+   "tipo": "lavabo",
+   "area_m2": 4.6,
+   "centro": [
+    -8.84,
+    -2.81
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 6,
+   "comodo": 12,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -8.98,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 13,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    -9.03,
+    4.64
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 6,
+   "comodo": 15,
+   "tipo": "lavabo",
+   "area_m2": 4.2,
+   "centro": [
+    -7.17,
+    2.83
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 6,
+   "comodo": 18,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    -6.98,
+    -4.6
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 6,
+   "comodo": 19,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -7.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 21,
+   "tipo": "lavabo",
+   "area_m2": 4.6,
+   "centro": [
+    -4.84,
+    -2.81
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 23,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -4.98,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 24,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    -5.03,
+    4.64
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 6,
+   "comodo": 26,
+   "tipo": "lavabo",
+   "area_m2": 4.2,
+   "centro": [
+    -3.17,
+    2.83
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 6,
+   "comodo": 29,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    -2.98,
+    -4.6
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 6,
+   "comodo": 30,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -3.02,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 32,
+   "tipo": "corredor",
+   "area_m2": 3.6,
+   "centro": [
+    0.1,
+    -1.88
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 34,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    -0.98,
+    2.12
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 35,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    -1.03,
+    4.64
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 6,
+   "comodo": 37,
+   "tipo": "lavabo",
+   "area_m2": 4.2,
+   "centro": [
+    0.83,
+    2.83
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 40,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    1.14,
+    6.97
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 41,
+   "tipo": "vazio",
+   "area_m2": 1.6,
+   "centro": [
+    1.14,
+    11.07
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 42,
+   "tipo": "vazio",
+   "area_m2": 1.2,
+   "centro": [
+    1.14,
+    14.94
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 46,
+   "tipo": "lavabo",
+   "area_m2": 2.7,
+   "centro": [
+    2.64,
+    8.76
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 6,
+   "comodo": 47,
+   "tipo": "lavabo",
+   "area_m2": 2.3,
+   "centro": [
+    2.66,
+    12.88
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 48,
+   "tipo": "lavabo",
+   "area_m2": 2.1,
+   "centro": [
+    2.76,
+    16.7
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 6,
+   "comodo": 50,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    2.86,
+    6.73
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 51,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    2.86,
+    10.98
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 52,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    2.86,
+    14.98
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 53,
+   "tipo": "corredor",
+   "area_m2": 6.4,
+   "centro": [
+    3.0,
+    -3.41
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 6,
+   "comodo": 58,
+   "tipo": "corredor",
+   "area_m2": 6.4,
+   "centro": [
+    5.0,
+    -3.41
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 6,
+   "comodo": 60,
+   "tipo": "lavabo",
+   "area_m2": 4.1,
+   "centro": [
+    7.06,
+    -2.74
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 6,
+   "comodo": 61,
+   "tipo": "clinica",
+   "area_m2": 6.7,
+   "centro": [
+    7.99,
+    3.32
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 63,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.16,
+    4.92
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 66,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.16,
+    8.92
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 69,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.16,
+    12.92
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 71,
+   "tipo": "lavabo",
+   "area_m2": 2.0,
+   "centro": [
+    7.21,
+    15.0
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 72,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    7.17,
+    16.7
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 74,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    7.3,
+    7.08
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 75,
+   "tipo": "lavabo",
+   "area_m2": 2.2,
+   "centro": [
+    7.3,
+    11.08
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 77,
+   "tipo": "vazio",
+   "area_m2": 1.8,
+   "centro": [
+    8.73,
+    -2.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 78,
+   "tipo": "vazio",
+   "area_m2": 1.9,
+   "centro": [
+    8.88,
+    -4.55
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 79,
+   "tipo": "vazio",
+   "area_m2": 1.6,
+   "centro": [
+    8.86,
+    8.86
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 80,
+   "tipo": "vazio",
+   "area_m2": 1.6,
+   "centro": [
+    8.86,
+    12.86
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 6,
+   "comodo": 81,
+   "tipo": "vazio",
+   "area_m2": 1.2,
+   "centro": [
+    8.86,
+    16.74
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 7,
+   "comodo": 0,
+   "tipo": "vazio",
+   "area_m2": 2.8,
+   "centro": [
+    -12.71,
+    -4.73
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 7,
+   "comodo": 2,
+   "tipo": "vazio",
+   "area_m2": 2.7,
+   "centro": [
+    -12.75,
+    4.66
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 7,
+   "comodo": 3,
+   "tipo": "vazio",
+   "area_m2": 183.2,
+   "centro": [
+    4.31,
+    6.2
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 7,
+   "comodo": 4,
+   "tipo": "vazio",
+   "area_m2": 2.0,
+   "centro": [
+    2.0,
+    -6.16
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 7,
+   "comodo": 6,
+   "tipo": "corredor",
+   "area_m2": 2.6,
+   "centro": [
+    0.0,
+    -1.91
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 7,
+   "comodo": 8,
+   "tipo": "vazio",
+   "area_m2": 1.3,
+   "centro": [
+    3.38,
+    -1.16
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 7,
+   "comodo": 9,
+   "tipo": "espera",
+   "area_m2": 14.0,
+   "centro": [
+    4.0,
+    -3.54
+   ],
+   "itens": 1
+  }
+ ],
+ "itens": [
+  {
+   "item": "vela_fosforos",
+   "grupo": "loot",
+   "arquivo": "props/loot/vela_fosforos.glb",
+   "pos": [
+    -13.125,
+    0.15,
+    -2.661
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "papeis_espalhados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/papeis_espalhados.glb",
+   "pos": [
+    -8.875,
+    0.15,
+    3.589
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "espera"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    7.375,
+    0.15,
+    0.339
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "espera"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    2.375,
+    0.15,
+    -0.411
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "espera"
+  },
+  {
+   "item": "vela_fosforos",
+   "grupo": "loot",
+   "arquivo": "props/loot/vela_fosforos.glb",
+   "pos": [
+    -8.875,
+    0.15,
+    7.089
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "corredor"
+  },
+  {
+   "item": "salgadinho",
+   "grupo": "loot",
+   "arquivo": "props/loot/salgadinho.glb",
+   "pos": [
+    -9.375,
+    0.15,
+    -3.911
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    -9.625,
+    0.15,
+    -2.661
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "garrafa_agua",
+   "grupo": "loot",
+   "arquivo": "props/loot/garrafa_agua.glb",
+   "pos": [
+    -5.375,
+    0.15,
+    -2.911
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    -5.75,
+    1.35,
+    -3.911
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -0.375,
+    0.15,
+    -2.661
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "mochila",
+   "grupo": "loot",
+   "arquivo": "props/loot/mochila.glb",
+   "pos": [
+    -1.125,
+    0.15,
+    -2.911
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "lata_feijao",
+   "grupo": "loot",
+   "arquivo": "props/loot/lata_feijao.glb",
+   "pos": [
+    -0.375,
+    0.15,
+    -3.411
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    4.125,
+    0.15,
+    14.089
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "mancha_sangue",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mancha_sangue.glb",
+   "pos": [
+    8.125,
+    0.15,
+    15.339
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "louca_quebrada",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/louca_quebrada.glb",
+   "pos": [
+    5.125,
+    0.15,
+    7.839
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "papeis_espalhados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/papeis_espalhados.glb",
+   "pos": [
+    3.125,
+    0.15,
+    22.089
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    2.875,
+    0.15,
+    19.839
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "lata_feijao",
+   "grupo": "loot",
+   "arquivo": "props/loot/lata_feijao.glb",
+   "pos": [
+    2.875,
+    0.15,
+    20.589
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    2.875,
+    1.35,
+    23.214
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "salgadinho",
+   "grupo": "loot",
+   "arquivo": "props/loot/salgadinho.glb",
+   "pos": [
+    2.625,
+    0.15,
+    -2.661
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "corredor"
+  },
+  {
+   "item": "garrafa_agua",
+   "grupo": "loot",
+   "arquivo": "props/loot/garrafa_agua.glb",
+   "pos": [
+    3.125,
+    0.15,
+    -3.911
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "corredor"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    2.625,
+    0.15,
+    -3.161
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "corredor"
+  },
+  {
+   "item": "mochila",
+   "grupo": "loot",
+   "arquivo": "props/loot/mochila.glb",
+   "pos": [
+    5.375,
+    0.15,
+    -2.661
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "corredor"
+  },
+  {
+   "item": "salgadinho",
+   "grupo": "loot",
+   "arquivo": "props/loot/salgadinho.glb",
+   "pos": [
+    4.625,
+    0.15,
+    -3.911
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "corredor"
+  },
+  {
+   "item": "lata_feijao",
+   "grupo": "loot",
+   "arquivo": "props/loot/lata_feijao.glb",
+   "pos": [
+    4.625,
+    0.15,
+    -4.661
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "corredor"
+  },
+  {
+   "item": "vela_fosforos",
+   "grupo": "loot",
+   "arquivo": "props/loot/vela_fosforos.glb",
+   "pos": [
+    4.875,
+    0.15,
+    -3.161
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "corredor"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    6.875,
+    0.15,
+    -3.911
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "lata_feijao",
+   "grupo": "loot",
+   "arquivo": "props/loot/lata_feijao.glb",
+   "pos": [
+    7.625,
+    0.15,
+    2.339
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "papeis_espalhados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/papeis_espalhados.glb",
+   "pos": [
+    7.375,
+    0.15,
+    22.589
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    7.125,
+    0.15,
+    21.339
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    7.875,
+    0.15,
+    21.339
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "vela_fosforos",
+   "grupo": "loot",
+   "arquivo": "props/loot/vela_fosforos.glb",
+   "pos": [
+    7.125,
+    0.15,
+    20.339
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "clinica"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    5.125,
+    3.75,
+    4.589
+   ],
+   "rotY": -90,
+   "andar": 1,
+   "comodo": "espera"
+  },
+  {
+   "item": "pichacao_infectados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pichacao_infectados.glb",
+   "pos": [
+    4.25,
+    4.55,
+    5.339
+   ],
+   "rotY": 90,
+   "andar": 1,
+   "comodo": "espera"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    6.0,
+    4.95,
+    4.589
+   ],
+   "rotY": -90,
+   "andar": 1,
+   "comodo": "espera"
+  },
+  {
+   "item": "lata_feijao",
+   "grupo": "loot",
+   "arquivo": "props/loot/lata_feijao.glb",
+   "pos": [
+    -9.375,
+    3.75,
+    -3.161
+   ],
+   "rotY": 0,
+   "andar": 1,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "salgadinho",
+   "grupo": "loot",
+   "arquivo": "props/loot/salgadinho.glb",
+   "pos": [
+    -8.625,
+    3.75,
+    4.589
+   ],
+   "rotY": 90,
+   "andar": 1,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -7.375,
+    3.75,
+    -4.911
+   ],
+   "rotY": 90,
+   "andar": 1,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "bilhete",
+   "grupo": "loot",
+   "arquivo": "props/loot/bilhete.glb",
+   "pos": [
+    -5.375,
+    3.75,
+    -2.911
+   ],
+   "rotY": 180,
+   "andar": 1,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "lata_feijao",
+   "grupo": "loot",
+   "arquivo": "props/loot/lata_feijao.glb",
+   "pos": [
+    -5.375,
+    3.75,
+    -2.411
+   ],
+   "rotY": 180,
+   "andar": 1,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "salgadinho",
+   "grupo": "loot",
+   "arquivo": "props/loot/salgadinho.glb",
+   "pos": [
+    -2.625,
+    3.75,
+    2.839
+   ],
+   "rotY": 180,
+   "andar": 1,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "lata_feijao",
+   "grupo": "loot",
+   "arquivo": "props/loot/lata_feijao.glb",
+   "pos": [
+    -3.375,
+    3.75,
+    -4.911
+   ],
+   "rotY": 0,
+   "andar": 1,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    -3.375,
+    4.95,
+    -5.536
+   ],
+   "rotY": 0,
+   "andar": 1,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "lata_feijao",
+   "grupo": "loot",
+   "arquivo": "props/loot/lata_feijao.glb",
+   "pos": [
+    -0.625,
+    3.75,
+    4.589
+   ],
+   "rotY": 90,
+   "andar": 1,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    3.375,
+    3.75,
+    -1.911
+   ],
+   "rotY": 180,
+   "andar": 1,
+   "comodo": "corredor"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    3.375,
+    3.75,
+    -3.911
+   ],
+   "rotY": 90,
+   "andar": 1,
+   "comodo": "corredor"
+  },
+  {
+   "item": "bilhete",
+   "grupo": "loot",
+   "arquivo": "props/loot/bilhete.glb",
+   "pos": [
+    2.875,
+    3.75,
+    -5.161
+   ],
+   "rotY": 90,
+   "andar": 1,
+   "comodo": "corredor"
+  },
+  {
+   "item": "lata_feijao",
+   "grupo": "loot",
+   "arquivo": "props/loot/lata_feijao.glb",
+   "pos": [
+    3.125,
+    3.75,
+    -2.911
+   ],
+   "rotY": -90,
+   "andar": 1,
+   "comodo": "corredor"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    3.375,
+    3.75,
+    -5.411
+   ],
+   "rotY": 0,
+   "andar": 1,
+   "comodo": "corredor"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    4.875,
+    3.75,
+    -4.411
+   ],
+   "rotY": -90,
+   "andar": 1,
+   "comodo": "corredor"
+  },
+  {
+   "item": "bilhete",
+   "grupo": "loot",
+   "arquivo": "props/loot/bilhete.glb",
+   "pos": [
+    5.375,
+    3.75,
+    -1.911
+   ],
+   "rotY": 90,
+   "andar": 1,
+   "comodo": "corredor"
+  },
+  {
+   "item": "pichacao_infectados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pichacao_infectados.glb",
+   "pos": [
+    4.25,
+    4.55,
+    -3.661
+   ],
+   "rotY": 90,
+   "andar": 1,
+   "comodo": "corredor"
+  },
+  {
+   "item": "lanterna",
+   "grupo": "loot",
+   "arquivo": "props/loot/lanterna.glb",
+   "pos": [
+    7.875,
+    3.75,
+    2.339
+   ],
+   "rotY": 180,
+   "andar": 1,
+   "comodo": "clinica"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    8.375,
+    3.75,
+    5.339
+   ],
+   "rotY": -90,
+   "andar": 1,
+   "comodo": "clinica"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    8.25,
+    4.95,
+    2.589
+   ],
+   "rotY": -90,
+   "andar": 1,
+   "comodo": "clinica"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    -15.125,
+    7.35,
+    21.839
+   ],
+   "rotY": 180,
+   "andar": 2,
+   "comodo": "clinica"
+  },
+  {
+   "item": "lata_feijao",
+   "grupo": "loot",
+   "arquivo": "props/loot/lata_feijao.glb",
+   "pos": [
+    -12.875,
+    7.35,
+    22.089
+   ],
+   "rotY": 90,
+   "andar": 2,
+   "comodo": "clinica"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    -9.125,
+    7.35,
+    -11.661
+   ],
+   "rotY": -90,
+   "andar": 2,
+   "comodo": "clinica"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    -7.875,
+    7.35,
+    -10.661
+   ],
+   "rotY": -90,
+   "andar": 2,
+   "comodo": "clinica"
+  },
+  {
+   "item": "garrafa_agua",
+   "grupo": "loot",
+   "arquivo": "props/loot/garrafa_agua.glb",
+   "pos": [
+    -7.375,
+    7.35,
+    -11.911
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "clinica"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -9.375,
+    7.35,
+    -3.161
+   ],
+   "rotY": 180,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "garrafa_agua",
+   "grupo": "loot",
+   "arquivo": "props/loot/garrafa_agua.glb",
+   "pos": [
+    -9.375,
+    7.35,
+    -2.411
+   ],
+   "rotY": 90,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "lata_feijao",
+   "grupo": "loot",
+   "arquivo": "props/loot/lata_feijao.glb",
+   "pos": [
+    -8.625,
+    7.35,
+    4.589
+   ],
+   "rotY": 180,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    -9.625,
+    7.35,
+    3.839
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    -6.875,
+    7.35,
+    3.339
+   ],
+   "rotY": 180,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    -7.375,
+    7.35,
+    -4.911
+   ],
+   "rotY": 180,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    -6.375,
+    7.35,
+    -5.411
+   ],
+   "rotY": -90,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    -7.75,
+    8.55,
+    -4.661
+   ],
+   "rotY": 90,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -5.375,
+    7.35,
+    -2.911
+   ],
+   "rotY": -90,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "bilhete",
+   "grupo": "loot",
+   "arquivo": "props/loot/bilhete.glb",
+   "pos": [
+    -4.625,
+    7.35,
+    5.089
+   ],
+   "rotY": 90,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    -5.375,
+    7.35,
+    3.839
+   ],
+   "rotY": 180,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    -5.75,
+    8.55,
+    3.839
+   ],
+   "rotY": 90,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    -0.875,
+    7.35,
+    4.839
+   ],
+   "rotY": 90,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    -0.875,
+    7.35,
+    5.339
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    1.375,
+    7.35,
+    2.839
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    2.375,
+    7.35,
+    9.089
+   ],
+   "rotY": 90,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    2.875,
+    7.35,
+    -3.911
+   ],
+   "rotY": -90,
+   "andar": 2,
+   "comodo": "corredor"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    3.125,
+    7.35,
+    -4.661
+   ],
+   "rotY": 90,
+   "andar": 2,
+   "comodo": "corredor"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    5.375,
+    7.35,
+    -4.411
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "corredor"
+  },
+  {
+   "item": "garrafa_agua",
+   "grupo": "loot",
+   "arquivo": "props/loot/garrafa_agua.glb",
+   "pos": [
+    5.125,
+    7.35,
+    -1.661
+   ],
+   "rotY": 180,
+   "andar": 2,
+   "comodo": "corredor"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    6.875,
+    7.35,
+    -3.911
+   ],
+   "rotY": 180,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    7.875,
+    7.35,
+    2.589
+   ],
+   "rotY": -90,
+   "andar": 2,
+   "comodo": "clinica"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    7.375,
+    7.35,
+    2.339
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "clinica"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    7.375,
+    7.35,
+    14.589
+   ],
+   "rotY": 180,
+   "andar": 2,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    13.875,
+    7.35,
+    22.839
+   ],
+   "rotY": 180,
+   "andar": 2,
+   "comodo": "clinica"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    14.875,
+    7.35,
+    24.089
+   ],
+   "rotY": 90,
+   "andar": 2,
+   "comodo": "clinica"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    15.625,
+    7.35,
+    22.839
+   ],
+   "rotY": 90,
+   "andar": 2,
+   "comodo": "clinica"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    13.375,
+    7.35,
+    21.589
+   ],
+   "rotY": 90,
+   "andar": 2,
+   "comodo": "clinica"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    14.875,
+    7.35,
+    -12.161
+   ],
+   "rotY": 90,
+   "andar": 2,
+   "comodo": "clinica"
+  },
+  {
+   "item": "louca_quebrada",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/louca_quebrada.glb",
+   "pos": [
+    16.875,
+    7.35,
+    -11.661
+   ],
+   "rotY": -90,
+   "andar": 2,
+   "comodo": "clinica"
+  },
+  {
+   "item": "salgadinho",
+   "grupo": "loot",
+   "arquivo": "props/loot/salgadinho.glb",
+   "pos": [
+    15.875,
+    7.35,
+    -12.911
+   ],
+   "rotY": 90,
+   "andar": 2,
+   "comodo": "clinica"
+  },
+  {
+   "item": "garrafa_agua",
+   "grupo": "loot",
+   "arquivo": "props/loot/garrafa_agua.glb",
+   "pos": [
+    15.875,
+    7.35,
+    -11.411
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "clinica"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    16.375,
+    8.55,
+    -13.286
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "clinica"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    19.875,
+    7.35,
+    -4.161
+   ],
+   "rotY": 180,
+   "andar": 2,
+   "comodo": "clinica"
+  },
+  {
+   "item": "vela_fosforos",
+   "grupo": "loot",
+   "arquivo": "props/loot/vela_fosforos.glb",
+   "pos": [
+    21.375,
+    7.35,
+    -3.661
+   ],
+   "rotY": 180,
+   "andar": 2,
+   "comodo": "clinica"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    5.125,
+    10.95,
+    4.339
+   ],
+   "rotY": 0,
+   "andar": 3,
+   "comodo": "espera"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    4.625,
+    10.95,
+    1.089
+   ],
+   "rotY": 0,
+   "andar": 3,
+   "comodo": "espera"
+  },
+  {
+   "item": "lata_feijao",
+   "grupo": "loot",
+   "arquivo": "props/loot/lata_feijao.glb",
+   "pos": [
+    3.625,
+    10.95,
+    -0.161
+   ],
+   "rotY": -90,
+   "andar": 3,
+   "comodo": "espera"
+  },
+  {
+   "item": "salgadinho",
+   "grupo": "loot",
+   "arquivo": "props/loot/salgadinho.glb",
+   "pos": [
+    -9.375,
+    10.95,
+    -2.661
+   ],
+   "rotY": -90,
+   "andar": 3,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "garrafa_agua",
+   "grupo": "loot",
+   "arquivo": "props/loot/garrafa_agua.glb",
+   "pos": [
+    -9.375,
+    10.95,
+    -3.161
+   ],
+   "rotY": 0,
+   "andar": 3,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "lata_feijao",
+   "grupo": "loot",
+   "arquivo": "props/loot/lata_feijao.glb",
+   "pos": [
+    -7.375,
+    10.95,
+    -5.161
+   ],
+   "rotY": 0,
+   "andar": 3,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    -5.375,
+    10.95,
+    -2.411
+   ],
+   "rotY": 180,
+   "andar": 3,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -3.375,
+    10.95,
+    -5.161
+   ],
+   "rotY": 180,
+   "andar": 3,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "vela_fosforos",
+   "grupo": "loot",
+   "arquivo": "props/loot/vela_fosforos.glb",
+   "pos": [
+    1.375,
+    10.95,
+    -2.161
+   ],
+   "rotY": -90,
+   "andar": 3,
+   "comodo": "corredor"
+  },
+  {
+   "item": "bilhete",
+   "grupo": "loot",
+   "arquivo": "props/loot/bilhete.glb",
+   "pos": [
+    -0.875,
+    10.95,
+    5.089
+   ],
+   "rotY": 90,
+   "andar": 3,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "garrafa_agua",
+   "grupo": "loot",
+   "arquivo": "props/loot/garrafa_agua.glb",
+   "pos": [
+    -0.875,
+    10.95,
+    4.589
+   ],
+   "rotY": 0,
+   "andar": 3,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    1.375,
+    10.95,
+    2.589
+   ],
+   "rotY": 180,
+   "andar": 3,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    2.125,
+    10.95,
+    17.089
+   ],
+   "rotY": 0,
+   "andar": 3,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    2.875,
+    10.95,
+    -3.411
+   ],
+   "rotY": 90,
+   "andar": 3,
+   "comodo": "corredor"
+  },
+  {
+   "item": "garrafa_agua",
+   "grupo": "loot",
+   "arquivo": "props/loot/garrafa_agua.glb",
+   "pos": [
+    2.875,
+    10.95,
+    -2.161
+   ],
+   "rotY": 90,
+   "andar": 3,
+   "comodo": "corredor"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    5.125,
+    10.95,
+    -3.911
+   ],
+   "rotY": 180,
+   "andar": 3,
+   "comodo": "corredor"
+  },
+  {
+   "item": "pichacao_infectados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pichacao_infectados.glb",
+   "pos": [
+    9.5,
+    11.75,
+    4.589
+   ],
+   "rotY": -90,
+   "andar": 3,
+   "comodo": "clinica"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    7.5,
+    12.15,
+    10.589
+   ],
+   "rotY": -90,
+   "andar": 3,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    -13.375,
+    14.55,
+    -3.411
+   ],
+   "rotY": 180,
+   "andar": 4,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    -12.375,
+    15.75,
+    -4.286
+   ],
+   "rotY": 0,
+   "andar": 4,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    5.125,
+    14.55,
+    4.589
+   ],
+   "rotY": 0,
+   "andar": 4,
+   "comodo": "espera"
+  },
+  {
+   "item": "pichacao_infectados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pichacao_infectados.glb",
+   "pos": [
+    4.25,
+    15.35,
+    1.589
+   ],
+   "rotY": 90,
+   "andar": 4,
+   "comodo": "espera"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -9.375,
+    14.55,
+    -2.661
+   ],
+   "rotY": 180,
+   "andar": 4,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    -8.375,
+    15.75,
+    -4.286
+   ],
+   "rotY": 0,
+   "andar": 4,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    -8.625,
+    14.55,
+    4.839
+   ],
+   "rotY": 90,
+   "andar": 4,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    -9.75,
+    15.75,
+    3.839
+   ],
+   "rotY": 90,
+   "andar": 4,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "garrafa_agua",
+   "grupo": "loot",
+   "arquivo": "props/loot/garrafa_agua.glb",
+   "pos": [
+    -6.625,
+    14.55,
+    2.839
+   ],
+   "rotY": 90,
+   "andar": 4,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -7.375,
+    14.55,
+    -4.911
+   ],
+   "rotY": 180,
+   "andar": 4,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "lanterna",
+   "grupo": "loot",
+   "arquivo": "props/loot/lanterna.glb",
+   "pos": [
+    -5.375,
+    14.55,
+    -3.161
+   ],
+   "rotY": 90,
+   "andar": 4,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "lata_feijao",
+   "grupo": "loot",
+   "arquivo": "props/loot/lata_feijao.glb",
+   "pos": [
+    -5.375,
+    14.55,
+    -2.411
+   ],
+   "rotY": 0,
+   "andar": 4,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    -5.25,
+    15.75,
+    4.839
+   ],
+   "rotY": 90,
+   "andar": 4,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -2.625,
+    14.55,
+    2.589
+   ],
+   "rotY": 180,
+   "andar": 4,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "lata_feijao",
+   "grupo": "loot",
+   "arquivo": "props/loot/lata_feijao.glb",
+   "pos": [
+    -3.125,
+    14.55,
+    -4.911
+   ],
+   "rotY": 180,
+   "andar": 4,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "vela_fosforos",
+   "grupo": "loot",
+   "arquivo": "props/loot/vela_fosforos.glb",
+   "pos": [
+    1.375,
+    14.55,
+    -2.411
+   ],
+   "rotY": 180,
+   "andar": 4,
+   "comodo": "corredor"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    -0.875,
+    14.55,
+    4.839
+   ],
+   "rotY": 90,
+   "andar": 4,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    1.375,
+    14.55,
+    2.589
+   ],
+   "rotY": 0,
+   "andar": 4,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    0.125,
+    15.75,
+    4.214
+   ],
+   "rotY": 180,
+   "andar": 4,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    2.375,
+    14.55,
+    9.089
+   ],
+   "rotY": 180,
+   "andar": 4,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    2.625,
+    14.55,
+    17.089
+   ],
+   "rotY": 180,
+   "andar": 4,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    2.375,
+    15.75,
+    17.214
+   ],
+   "rotY": 180,
+   "andar": 4,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "louca_quebrada",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/louca_quebrada.glb",
+   "pos": [
+    3.125,
+    14.55,
+    -3.161
+   ],
+   "rotY": 90,
+   "andar": 4,
+   "comodo": "corredor"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    3.375,
+    14.55,
+    -4.411
+   ],
+   "rotY": 0,
+   "andar": 4,
+   "comodo": "corredor"
+  },
+  {
+   "item": "vela_fosforos",
+   "grupo": "loot",
+   "arquivo": "props/loot/vela_fosforos.glb",
+   "pos": [
+    2.625,
+    14.55,
+    -4.161
+   ],
+   "rotY": -90,
+   "andar": 4,
+   "comodo": "corredor"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    5.125,
+    14.55,
+    -3.161
+   ],
+   "rotY": 90,
+   "andar": 4,
+   "comodo": "corredor"
+  },
+  {
+   "item": "lata_feijao",
+   "grupo": "loot",
+   "arquivo": "props/loot/lata_feijao.glb",
+   "pos": [
+    9.125,
+    14.55,
+    4.589
+   ],
+   "rotY": 90,
+   "andar": 4,
+   "comodo": "clinica"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    8.25,
+    15.75,
+    5.089
+   ],
+   "rotY": 90,
+   "andar": 4,
+   "comodo": "clinica"
+  },
+  {
+   "item": "garrafa_agua",
+   "grupo": "loot",
+   "arquivo": "props/loot/garrafa_agua.glb",
+   "pos": [
+    4.125,
+    18.15,
+    4.839
+   ],
+   "rotY": -90,
+   "andar": 5,
+   "comodo": "espera"
+  },
+  {
+   "item": "pichacao_infectados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pichacao_infectados.glb",
+   "pos": [
+    4.375,
+    18.95,
+    -0.786
+   ],
+   "rotY": 0,
+   "andar": 5,
+   "comodo": "espera"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    6.0,
+    19.35,
+    3.589
+   ],
+   "rotY": -90,
+   "andar": 5,
+   "comodo": "espera"
+  },
+  {
+   "item": "mochila",
+   "grupo": "loot",
+   "arquivo": "props/loot/mochila.glb",
+   "pos": [
+    -9.375,
+    18.15,
+    -2.661
+   ],
+   "rotY": 0,
+   "andar": 5,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "garrafa_agua",
+   "grupo": "loot",
+   "arquivo": "props/loot/garrafa_agua.glb",
+   "pos": [
+    -8.625,
+    18.15,
+    5.089
+   ],
+   "rotY": -90,
+   "andar": 5,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    -6.625,
+    18.15,
+    2.839
+   ],
+   "rotY": -90,
+   "andar": 5,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "salgadinho",
+   "grupo": "loot",
+   "arquivo": "props/loot/salgadinho.glb",
+   "pos": [
+    -7.375,
+    18.15,
+    -5.161
+   ],
+   "rotY": 180,
+   "andar": 5,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    -7.125,
+    18.15,
+    -4.911
+   ],
+   "rotY": 90,
+   "andar": 5,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    -5.375,
+    18.15,
+    -2.911
+   ],
+   "rotY": 0,
+   "andar": 5,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -4.625,
+    18.15,
+    4.589
+   ],
+   "rotY": -90,
+   "andar": 5,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    1.375,
+    19.35,
+    -2.536
+   ],
+   "rotY": 0,
+   "andar": 5,
+   "comodo": "corredor"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    -0.625,
+    18.15,
+    4.839
+   ],
+   "rotY": 90,
+   "andar": 5,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    -0.875,
+    18.15,
+    5.339
+   ],
+   "rotY": 180,
+   "andar": 5,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "lanterna",
+   "grupo": "loot",
+   "arquivo": "props/loot/lanterna.glb",
+   "pos": [
+    1.375,
+    18.15,
+    2.839
+   ],
+   "rotY": 0,
+   "andar": 5,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "vela_fosforos",
+   "grupo": "loot",
+   "arquivo": "props/loot/vela_fosforos.glb",
+   "pos": [
+    0.875,
+    18.15,
+    3.839
+   ],
+   "rotY": 0,
+   "andar": 5,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    2.375,
+    19.35,
+    9.464
+   ],
+   "rotY": 180,
+   "andar": 5,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "louca_quebrada",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/louca_quebrada.glb",
+   "pos": [
+    5.125,
+    18.15,
+    -4.911
+   ],
+   "rotY": -90,
+   "andar": 5,
+   "comodo": "corredor"
+  },
+  {
+   "item": "garrafa_agua",
+   "grupo": "loot",
+   "arquivo": "props/loot/garrafa_agua.glb",
+   "pos": [
+    4.875,
+    18.15,
+    -3.661
+   ],
+   "rotY": -90,
+   "andar": 5,
+   "comodo": "corredor"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    4.25,
+    19.35,
+    -2.911
+   ],
+   "rotY": 90,
+   "andar": 5,
+   "comodo": "corredor"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    7.625,
+    18.15,
+    2.089
+   ],
+   "rotY": 0,
+   "andar": 5,
+   "comodo": "clinica"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    7.625,
+    18.15,
+    6.839
+   ],
+   "rotY": 90,
+   "andar": 5,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    7.375,
+    18.15,
+    10.589
+   ],
+   "rotY": 90,
+   "andar": 5,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "papeis_espalhados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/papeis_espalhados.glb",
+   "pos": [
+    5.125,
+    21.75,
+    4.339
+   ],
+   "rotY": 90,
+   "andar": 6,
+   "comodo": "espera"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    5.625,
+    21.75,
+    13.089
+   ],
+   "rotY": 180,
+   "andar": 6,
+   "comodo": "espera"
+  },
+  {
+   "item": "garrafa_agua",
+   "grupo": "loot",
+   "arquivo": "props/loot/garrafa_agua.glb",
+   "pos": [
+    2.125,
+    21.75,
+    -0.411
+   ],
+   "rotY": -90,
+   "andar": 6,
+   "comodo": "espera"
+  },
+  {
+   "item": "lata_feijao",
+   "grupo": "loot",
+   "arquivo": "props/loot/lata_feijao.glb",
+   "pos": [
+    -9.375,
+    21.75,
+    -3.161
+   ],
+   "rotY": 180,
+   "andar": 6,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    -9.125,
+    21.75,
+    -3.911
+   ],
+   "rotY": 180,
+   "andar": 6,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "mochila",
+   "grupo": "loot",
+   "arquivo": "props/loot/mochila.glb",
+   "pos": [
+    -8.625,
+    21.75,
+    5.089
+   ],
+   "rotY": 0,
+   "andar": 6,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    -9.125,
+    21.75,
+    4.839
+   ],
+   "rotY": 180,
+   "andar": 6,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "garrafa_agua",
+   "grupo": "loot",
+   "arquivo": "props/loot/garrafa_agua.glb",
+   "pos": [
+    -6.625,
+    21.75,
+    2.589
+   ],
+   "rotY": 90,
+   "andar": 6,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    -6.875,
+    21.75,
+    3.339
+   ],
+   "rotY": -90,
+   "andar": 6,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    -7.75,
+    22.95,
+    -4.911
+   ],
+   "rotY": 90,
+   "andar": 6,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -4.875,
+    21.75,
+    4.589
+   ],
+   "rotY": 90,
+   "andar": 6,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -2.625,
+    21.75,
+    3.089
+   ],
+   "rotY": 180,
+   "andar": 6,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    -2.25,
+    22.95,
+    2.839
+   ],
+   "rotY": -90,
+   "andar": 6,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    -3.125,
+    21.75,
+    -4.911
+   ],
+   "rotY": 0,
+   "andar": 6,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    -2.25,
+    22.95,
+    -4.161
+   ],
+   "rotY": -90,
+   "andar": 6,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    -0.625,
+    21.75,
+    4.839
+   ],
+   "rotY": -90,
+   "andar": 6,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "frasco_remedio",
+   "grupo": "loot",
+   "arquivo": "props/loot/frasco_remedio.glb",
+   "pos": [
+    2.375,
+    21.75,
+    9.089
+   ],
+   "rotY": -90,
+   "andar": 6,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    2.375,
+    22.95,
+    17.214
+   ],
+   "rotY": 180,
+   "andar": 6,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    2.625,
+    21.75,
+    -3.661
+   ],
+   "rotY": -90,
+   "andar": 6,
+   "comodo": "corredor"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    2.875,
+    21.75,
+    -4.411
+   ],
+   "rotY": 90,
+   "andar": 6,
+   "comodo": "corredor"
+  },
+  {
+   "item": "garrafa_agua",
+   "grupo": "loot",
+   "arquivo": "props/loot/garrafa_agua.glb",
+   "pos": [
+    3.125,
+    21.75,
+    -2.661
+   ],
+   "rotY": 180,
+   "andar": 6,
+   "comodo": "corredor"
+  },
+  {
+   "item": "cadeira_quebrada",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_quebrada.glb",
+   "pos": [
+    5.125,
+    21.75,
+    -3.411
+   ],
+   "rotY": 90,
+   "andar": 6,
+   "comodo": "corredor"
+  },
+  {
+   "item": "louca_quebrada",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/louca_quebrada.glb",
+   "pos": [
+    5.125,
+    21.75,
+    -4.911
+   ],
+   "rotY": 90,
+   "andar": 6,
+   "comodo": "corredor"
+  },
+  {
+   "item": "vela_fosforos",
+   "grupo": "loot",
+   "arquivo": "props/loot/vela_fosforos.glb",
+   "pos": [
+    6.375,
+    21.75,
+    -2.411
+   ],
+   "rotY": 90,
+   "andar": 6,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "mancha_sangue",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mancha_sangue.glb",
+   "pos": [
+    3.625,
+    25.35,
+    -3.411
+   ],
+   "rotY": 180,
+   "andar": 7,
+   "comodo": "espera"
+  }
+ ]
+}

@@ -1,0 +1,152 @@
+{
+ "kit": "diner",
+ "gerado_por": "scripts/iluminacao/luzes.py",
+ "convencao": "pos em metros no espaço do prédio (o mesmo do building_layout.json); alcance em metros; tipo 'luminaria' = luz de uma luminária do kit, 'gerada' = luz de teto num cômodo sem luminária (teto = altura do teto ali, onde o Godot põe um plafon), 'externa' = luminária fora dos cômodos (varanda, poste, fachada)",
+ "materiais": [],
+ "luzes": [
+  {
+   "pos": [
+    -7.095,
+    2.8,
+    0.155
+   ],
+   "alcance": 7.6,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.3,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -2.345,
+    2.8,
+    0.405
+   ],
+   "alcance": 7.6,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.3,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    2.405,
+    2.8,
+    0.155
+   ],
+   "alcance": 7.6,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.3,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    7.155,
+    2.8,
+    0.155
+   ],
+   "alcance": 7.6,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.3,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -4.845,
+    2.8,
+    -1.845
+   ],
+   "alcance": 4.2,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.3,
+   "andar": 0,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    -2.845,
+    2.8,
+    -1.845
+   ],
+   "alcance": 4.2,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.3,
+   "andar": 0,
+   "comodo": 5
+  },
+  {
+   "pos": [
+    -0.845,
+    2.8,
+    -1.845
+   ],
+   "alcance": 4.2,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.3,
+   "andar": 0,
+   "comodo": 8
+  },
+  {
+   "pos": [
+    1.155,
+    2.76,
+    4.905
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 2.98,
+   "andar": 0,
+   "comodo": 10
+  }
+ ]
+}

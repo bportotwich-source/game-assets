@@ -1,0 +1,2838 @@
+{
+ "kit": "parque-trailers",
+ "gerado_por": "scripts/iluminacao/luzes.py",
+ "convencao": "pos em metros no espaço do prédio (o mesmo do building_layout.json); alcance em metros; tipo 'luminaria' = luz de uma luminária do kit, 'gerada' = luz de teto num cômodo sem luminária (teto = altura do teto ali, onde o Godot põe um plafon), 'externa' = luminária fora dos cômodos (varanda, poste, fachada)",
+ "materiais": [
+  "lamp_glass"
+ ],
+ "luzes": [
+  {
+   "pos": [
+    -11.68,
+    2.66,
+    -7.897
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -13.8,
+    2.97,
+    -10.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -9.7,
+    2.97,
+    -10.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -7.5,
+    2.97,
+    -8.95
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -7.5,
+    2.97,
+    -10.85
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -5.3,
+    2.97,
+    -10.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -6.717,
+    2.56,
+    -10.623
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -6.717,
+    2.56,
+    -10.37
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -11.68,
+    2.66,
+    1.103
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -13.8,
+    2.97,
+    -1.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -9.7,
+    2.97,
+    -1.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -7.5,
+    2.97,
+    0.05
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -7.5,
+    2.97,
+    -1.85
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -5.3,
+    2.97,
+    -1.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -6.717,
+    2.56,
+    -1.623
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -6.717,
+    2.56,
+    -1.37
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -11.68,
+    2.66,
+    10.103
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -13.8,
+    2.97,
+    8.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -9.7,
+    2.97,
+    8.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -7.5,
+    2.97,
+    9.05
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -7.5,
+    2.97,
+    7.15
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -5.3,
+    2.97,
+    8.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -6.717,
+    2.56,
+    7.377
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -6.717,
+    2.56,
+    7.63
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    11.68,
+    2.66,
+    -10.103
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    13.8,
+    2.97,
+    -8.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    9.7,
+    2.97,
+    -8.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    7.5,
+    2.97,
+    -9.05
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    7.5,
+    2.97,
+    -7.15
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    5.3,
+    2.97,
+    -8.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    6.717,
+    2.56,
+    -7.377
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    6.717,
+    2.56,
+    -7.63
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    11.68,
+    2.66,
+    -1.103
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    13.8,
+    2.97,
+    1.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    9.7,
+    2.97,
+    1.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    7.5,
+    2.97,
+    -0.05
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    7.5,
+    2.97,
+    1.85
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    5.3,
+    2.97,
+    1.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    6.717,
+    2.56,
+    1.623
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    6.717,
+    2.56,
+    1.37
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    11.68,
+    2.66,
+    7.897
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    13.8,
+    2.97,
+    10.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    9.7,
+    2.97,
+    10.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    7.5,
+    2.97,
+    8.95
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    7.5,
+    2.97,
+    10.85
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    5.3,
+    2.97,
+    10.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    6.717,
+    2.56,
+    10.623
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    6.717,
+    2.56,
+    10.37
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -1.4,
+    6.507,
+    8.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    1.4,
+    6.507,
+    3.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -1.4,
+    6.507,
+    -1.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    1.4,
+    6.507,
+    -8.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -21.935,
+    2.8,
+    -13.39
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.888,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -21.935,
+    2.78,
+    -8.14
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -21.935,
+    2.78,
+    -2.64
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -21.935,
+    2.8,
+    2.61
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.634,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -21.935,
+    2.78,
+    7.86
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -21.935,
+    2.8,
+    13.36
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.705,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -14.685,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -21.935,
+    2.78,
+    -8.14
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -21.935,
+    2.78,
+    -2.64
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -21.935,
+    2.8,
+    2.61
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.634,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -21.935,
+    2.78,
+    7.86
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -21.935,
+    2.8,
+    13.36
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.705,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -9.935,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -9.935,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -21.935,
+    2.78,
+    -2.64
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -21.935,
+    2.8,
+    2.61
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.634,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -21.935,
+    2.78,
+    7.86
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -21.935,
+    2.8,
+    13.36
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.705,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -4.935,
+    2.8,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.902,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -4.935,
+    2.8,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.902,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -4.935,
+    2.8,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.902,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -21.935,
+    2.8,
+    2.61
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.634,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -21.935,
+    2.78,
+    7.86
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -21.935,
+    2.8,
+    13.36
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.705,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    0.065,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    0.065,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    0.065,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    0.065,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -21.935,
+    2.78,
+    7.86
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -21.935,
+    2.8,
+    13.36
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.705,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    4.815,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    4.815,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    4.815,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    4.815,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    4.815,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -21.935,
+    2.8,
+    13.36
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.705,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    9.815,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    9.815,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    9.815,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    9.815,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    9.815,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    9.815,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    14.565,
+    2.8,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 4.489,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    14.565,
+    2.8,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 4.489,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    14.565,
+    2.8,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 4.489,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    14.565,
+    2.8,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 4.489,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    14.565,
+    2.8,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 4.489,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    14.565,
+    2.8,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 4.489,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    19.565,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    19.565,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    19.565,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    19.565,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    19.565,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    19.565,
+    2.78,
+    -15.89
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -19.185,
+    2.55,
+    -12.89
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 5.269,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -19.185,
+    2.78,
+    -7.64
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -19.185,
+    2.78,
+    -2.39
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -19.185,
+    2.8,
+    2.86
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.688,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -19.185,
+    2.78,
+    8.11
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -19.185,
+    2.8,
+    13.36
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.751,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -14.435,
+    2.78,
+    -12.89
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -14.435,
+    2.783,
+    -7.64
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.003,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -14.185,
+    2.78,
+    -3.14
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -14.435,
+    2.78,
+    2.86
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -16.185,
+    2.78,
+    9.11
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -14.185,
+    2.8,
+    13.36
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.383,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -9.685,
+    2.78,
+    -12.89
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -9.685,
+    2.78,
+    -7.64
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -9.685,
+    2.78,
+    -3.14
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -9.685,
+    2.78,
+    2.86
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -9.685,
+    2.78,
+    5.86
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -9.685,
+    2.78,
+    13.36
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -4.935,
+    2.8,
+    -12.89
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 4.582,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -4.935,
+    2.783,
+    -7.64
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.003,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -4.935,
+    2.8,
+    -3.14
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.134,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -4.935,
+    2.346,
+    2.36
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 2.566,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -3.685,
+    2.78,
+    8.11
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -4.935,
+    2.271,
+    13.36
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 2.491,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    0.065,
+    2.78,
+    -12.89
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    0.065,
+    2.78,
+    -7.64
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    0.065,
+    2.78,
+    -2.39
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    0.065,
+    2.78,
+    2.86
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    0.065,
+    2.78,
+    8.11
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    0.065,
+    2.78,
+    13.36
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    4.815,
+    2.27,
+    -13.39
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 2.49,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    3.815,
+    2.78,
+    -7.64
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    4.815,
+    2.354,
+    -2.14
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 2.574,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    4.815,
+    2.783,
+    3.36
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.003,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    4.815,
+    2.8,
+    7.86
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.134,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    4.815,
+    2.8,
+    13.36
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.961,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    9.565,
+    2.78,
+    -12.89
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    9.565,
+    2.78,
+    -5.64
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    9.565,
+    2.78,
+    -2.39
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    9.565,
+    2.78,
+    3.36
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    9.565,
+    2.78,
+    7.86
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    9.565,
+    2.78,
+    13.36
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    14.315,
+    2.55,
+    -12.89
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 5.319,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    14.315,
+    2.78,
+    -5.64
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    14.315,
+    2.78,
+    -2.39
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    14.315,
+    2.78,
+    3.36
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    14.565,
+    2.8,
+    7.86
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.134,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    14.315,
+    2.78,
+    13.36
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    19.065,
+    2.78,
+    -12.89
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    19.065,
+    2.78,
+    -7.64
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    19.065,
+    2.8,
+    -2.39
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.406,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    19.065,
+    2.78,
+    2.86
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    19.065,
+    2.78,
+    8.11
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    19.065,
+    2.8,
+    13.36
+   ],
+   "alcance": 6.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.755,
+   "andar": 0,
+   "comodo": 1
+  }
+ ]
+}

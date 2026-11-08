@@ -9015,6 +9015,364 @@
      "descricao": "respiração leve parado"
     }
    }
+  },
+  {
+   "id": "arco_composto",
+   "nome": "Arco composto",
+   "grupo": "armas",
+   "categoria": "arco",
+   "classe": "arco",
+   "calibre": "flecha",
+   "municao": "flecha_carbono",
+   "capacidade": 1,
+   "dano": 95,
+   "alcance_m": 50,
+   "alcance_max_m": 90,
+   "modo": "um tiro (puxar, segurar e soltar)",
+   "tiros_por_s": 0.55,
+   "recarga_s": 1.3,
+   "recarga_vazia_s": 1.3,
+   "precisao": 0.85,
+   "recuo": 0.04,
+   "ruido_m": 5,
+   "durabilidade": 1200,
+   "peso_kg": 1.9,
+   "raridade": "raro",
+   "valor_troca": 90,
+   "flecha_volta": 0.75,
+   "forca_lb": 60,
+   "alivio": 0.8,
+   "requer_conserto": [
+    "corda_arco",
+    "cabo"
+   ],
+   "onde": [
+    "galeria",
+    "casa_de_campo",
+    "armazem",
+    "loja_caca"
+   ],
+   "descricao": "Arco de punho de alumínio usinado com polias excêntricas (60 lb, alívio de 80%): a flecha sai mais rápida e reta que no recurvo, e segurar puxado quase não cansa. Mira de pinos e visor na corda. Polias e cabos precisam de cuidado: corda gasta arrebenta.",
+   "arquivo": "armas/arco_composto.glb",
+   "tamanho_m": [
+    0.065,
+    0.864,
+    0.782
+   ],
+   "triangulos": 75930,
+   "kb": 3555.0,
+   "partes": [
+    {
+     "no": "braco_cima",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 7.0,
+     "descricao": "braço de cima (duas lâminas): flexiona para baixo na puxada",
+     "pai": "arco_composto",
+     "explodir_m": [
+      0.0,
+      0.1,
+      0.0
+     ]
+    },
+    {
+     "no": "braco_baixo",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -7.0,
+     "descricao": "braço de baixo: espelho do de cima",
+     "pai": "arco_composto",
+     "explodir_m": [
+      0.0,
+      -0.1,
+      0.0
+     ]
+    },
+    {
+     "no": "polia_cima",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 150.0,
+     "descricao": "polia excêntrica de cima: gira 150° na puxada (a corda desenrola, os cabos enrolam)",
+     "pai": "braco_cima",
+     "explodir_m": [
+      -0.0,
+      0.05,
+      0.04
+     ]
+    },
+    {
+     "no": "polia_baixo",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -150.0,
+     "descricao": "polia de baixo: espelho da de cima",
+     "pai": "braco_baixo",
+     "explodir_m": [
+      -0.0,
+      -0.05,
+      0.04
+     ]
+    },
+    {
+     "no": "corda_cima",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -58.06686546536719,
+     "descricao": "metade de cima da corda (gira no eixo da polia, sempre tangente a ela)",
+     "pai": "braco_cima",
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.06
+     ]
+    },
+    {
+     "no": "corda_baixo",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 53.705537525700265,
+     "descricao": "metade de baixo da corda",
+     "pai": "braco_baixo",
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.06
+     ]
+    },
+    {
+     "no": "cabo_cima",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -4.479569667565642,
+     "descricao": "cabos de cima: do módulo da polia até o deslizador do protetor",
+     "pai": "braco_cima",
+     "explodir_m": [
+      0.05,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "cabo_baixo",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 5.4437169785349795,
+     "descricao": "cabos de baixo",
+     "pai": "braco_baixo",
+     "explodir_m": [
+      0.05,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "laco_d",
+     "tipo": "desliza",
+     "eixo": "x",
+     "curso_m": -0.44,
+     "descricao": "laço D na corda (onde o soltador engata): vai até a âncora na puxada",
+     "pai": "arco_composto",
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.04
+     ]
+    },
+    {
+     "no": "visor_corda",
+     "tipo": "desliza",
+     "eixo": "x",
+     "curso_m": -0.44,
+     "descricao": "visor preso entre os fios da corda: com o arco puxado fica na frente do olho",
+     "pai": "arco_composto",
+     "explodir_m": [
+      -0.0,
+      0.03,
+      0.04
+     ]
+    },
+    {
+     "no": "apoio",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -45,
+     "descricao": "apoio de flecha que cai: segura a flecha na puxada e cai no disparo para as penas passarem livres",
+     "pai": "arco_composto",
+     "explodir_m": [
+      -0.04,
+      -0.03,
+      -0.0
+     ]
+    },
+    {
+     "no": "flecha",
+     "tipo": "remove",
+     "direcao": [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     "municao": "flecha_carbono",
+     "capacidade": 1,
+     "descricao": "flecha encaixada na corda (embaixo do laço D) e deitada no apoio",
+     "pai": "arco_composto",
+     "explodir_m": [
+      -0.05,
+      0.03,
+      -0.0
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_flecha",
+     "tipo": "flecha",
+     "pai": "flecha",
+     "posicao_m": [
+      -0.0,
+      0.06,
+      0.186
+     ],
+     "substitui": "flecha",
+     "aceita": [
+      "flecha_carbono",
+      "flecha_carbono_campo",
+      "flecha_caca",
+      "flecha_prego",
+      "flecha_campo"
+     ],
+     "descricao": "filho do nó flecha: a flecha escolhida troca a malha do nó flecha (anda na puxada)"
+    },
+    {
+     "no": "encaixe_soltador",
+     "tipo": "loop_d",
+     "pai": "laco_d",
+     "posicao_m": [
+      -0.0,
+      0.06,
+      0.1985
+     ],
+     "aceita": [
+      "soltador_pulso"
+     ],
+     "padrao": "soltador_pulso",
+     "descricao": "filho do laço D: o soltador engata atrás da corda e anda junto na puxada"
+    },
+    {
+     "no": "encaixe_mira",
+     "tipo": "rosca_mira_composto",
+     "pai": "arco_composto",
+     "posicao_m": [
+      0.0128,
+      0.157,
+      -0.072
+     ],
+     "aceita": [
+      "mira_pinos_luz"
+     ],
+     "padrao": "mira_pinos_luz",
+     "descricao": "duas buchas no lado direito, acima da janela",
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_estabilizador",
+     "tipo": "rosca_estabilizador",
+     "pai": "arco_composto",
+     "posicao_m": [
+      0.0,
+      -0.07,
+      -0.085
+     ],
+     "aceita": [
+      "estabilizador_arco",
+      "estabilizador_curto_arco"
+     ],
+     "descricao": "bucha na frente do punho, abaixo da mão (mesmos estabilizadores do arco recurvo)",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.08
+     ]
+    },
+    {
+     "no": "encaixe_aljava",
+     "tipo": "aljava_composto",
+     "pai": "arco_composto",
+     "posicao_m": [
+      0.0128,
+      -0.101,
+      -0.075
+     ],
+     "aceita": [
+      "aljava_composto"
+     ],
+     "descricao": "duas buchas do lado direito, abaixo da mão: aljava de 5 flechas",
+     "explodir_m": [
+      0.08,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "arco_composto",
+     "posicao_m": [
+      -0.0,
+      0.132,
+      0.5669
+     ],
+     "descricao": "olho do arqueiro com o arco puxado, atrás do visor da corda: alinhe o visor com o aro da mira"
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "arco_composto",
+     "posicao_m": [
+      0.0,
+      0.06,
+      -0.114
+     ],
+     "descricao": "de onde a flecha sai no \"soltar\" (projétil para -Z, quase sem ruído)"
+    }
+   ],
+   "animacoes": {
+    "puxar": {
+     "duracao_s": 1.0,
+     "laco": false,
+     "descricao": "puxa até a âncora (0,9 s): as polias giram, a força cai no fim (alívio de 80%) e o arco fica leve de segurar"
+    },
+    "segurar": {
+     "duracao_s": 1.5,
+     "laco": true,
+     "descricao": "segurando puxado: com o alívio das polias treme bem menos que o recurvo"
+    },
+    "soltar": {
+     "duracao_s": 0.45,
+     "laco": false,
+     "descricao": "solta: a corda volta, o apoio cai e o arco pula um pouco para a frente; esconda o nó flecha aos 0,025 s e lance o projétil em boca_fogo"
+    },
+    "encaixar": {
+     "duracao_s": 1.3,
+     "laco": false,
+     "descricao": "pega uma flecha da aljava, deita no apoio (0,75 s) e encaixa a nock na corda embaixo do laço D (1,2 s); mostre o nó flecha aos 0,35 s"
+    },
+    "inspecionar": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "gira o arco para conferir polias, cabos e corda"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
   }
  ],
  "acessorios": [
@@ -13892,6 +14250,104 @@
    ],
    "triangulos": 3316,
    "kb": 159.6
+  },
+  {
+   "id": "soltador_pulso",
+   "nome": "Soltador de pulso",
+   "grupo": "acessorios",
+   "categoria": "soltador",
+   "encaixe": "loop_d",
+   "peso_kg": 0.09,
+   "raridade": "incomum",
+   "valor_troca": 20,
+   "modificadores": {
+    "precisao": 1.1,
+    "tremor": 0.9
+   },
+   "onde": [
+    "galeria",
+    "casa_de_campo"
+   ],
+   "descricao": "Cabeça de garras com gatilho de dedo indicador e fita de pulso: engata no laço D, a puxada vem do braço e o disparo é limpo.",
+   "arquivo": "acessorios/soltador_pulso.glb",
+   "tamanho_m": [
+    0.048,
+    0.039,
+    0.164
+   ],
+   "triangulos": 2092,
+   "kb": 129.8
+  },
+  {
+   "id": "mira_pinos_luz",
+   "nome": "Mira de 5 pinos com luz",
+   "grupo": "acessorios",
+   "categoria": "mira",
+   "encaixe": "rosca_mira_composto",
+   "peso_kg": 0.16,
+   "raridade": "raro",
+   "valor_troca": 40,
+   "usa": "pilha_aa",
+   "modificadores": {
+    "precisao_mirando": 1.45
+   },
+   "onde": [
+    "galeria",
+    "casa_de_campo"
+   ],
+   "linha_de_visada": "encaixe \"olho\": olhe pelo visor da corda e ponha o pino da distância no alvo",
+   "liga_desliga": true,
+   "descricao": "Aro com 5 pinos de fibra (10, 20, 30, 40 e 50 m), luz que acende os pinos no escuro e nível de bolha embaixo para não entortar o arco.",
+   "arquivo": "acessorios/mira_pinos_luz.glb",
+   "tamanho_m": [
+    0.058,
+    0.088,
+    0.107
+   ],
+   "triangulos": 10148,
+   "kb": 483.9,
+   "encaixes": [
+    {
+     "no": "olho",
+     "tipo": "mira",
+     "pai": "mira_pinos_luz",
+     "posicao_m": [
+      -0.0128,
+      -0.025,
+      0.6389
+     ],
+     "descricao": "olho atrás do visor da corda: centralize o aro no visor; pino de cima 10 m ... de baixo 50 m"
+    }
+   ]
+  },
+  {
+   "id": "aljava_composto",
+   "nome": "Aljava de arco composto (5 flechas)",
+   "grupo": "acessorios",
+   "categoria": "aljava",
+   "encaixe": "aljava_composto",
+   "peso_kg": 0.3,
+   "raridade": "incomum",
+   "valor_troca": 20,
+   "leva": 5,
+   "municao": "flecha_carbono",
+   "modificadores": {
+    "recarga_s": 0.8
+   },
+   "onde": [
+    "galeria",
+    "casa_de_campo",
+    "armazem"
+   ],
+   "descricao": "Aljava de engate rápido no lado direito: capuz de espuma cobre as pontas em cima e a garra de borracha segura as hastes embaixo.",
+   "arquivo": "acessorios/aljava_composto.glb",
+   "tamanho_m": [
+    0.052,
+    0.801,
+    0.08
+   ],
+   "triangulos": 5766,
+   "kb": 276.4
   }
  ],
  "municao": [
@@ -14849,6 +15305,58 @@
    ],
    "triangulos": 638,
    "kb": 34.1
+  },
+  {
+   "id": "flecha_carbono",
+   "nome": "Flecha de carbono (caça)",
+   "grupo": "municao",
+   "categoria": "municao",
+   "calibre": "flecha",
+   "peso_kg": 0.028,
+   "empilha": 24,
+   "multiplicador_dano": 1.15,
+   "raridade": "incomum",
+   "onde": [
+    "galeria",
+    "casa_de_campo",
+    "armazem"
+   ],
+   "encaixe": "flecha",
+   "descricao": "Haste de carbono com ponta de 3 lâminas e nock luminoso (acende no disparo: fácil de achar no mato). Serve nos dois arcos. Pivô no entalhe (ponto que encosta na corda).",
+   "arquivo": "municao/flecha_carbono.glb",
+   "tamanho_m": [
+    0.022,
+    0.022,
+    0.766
+   ],
+   "triangulos": 866,
+   "kb": 46.4
+  },
+  {
+   "id": "flecha_carbono_campo",
+   "nome": "Flecha de carbono (treino)",
+   "grupo": "municao",
+   "categoria": "municao",
+   "calibre": "flecha",
+   "peso_kg": 0.028,
+   "empilha": 24,
+   "multiplicador_dano": 0.85,
+   "raridade": "comum",
+   "onde": [
+    "galeria",
+    "casa_de_campo",
+    "armazem"
+   ],
+   "encaixe": "flecha",
+   "descricao": "Ponta de campo simples: quase sempre volta inteira. Serve nos dois arcos. Pivô no entalhe (ponto que encosta na corda).",
+   "arquivo": "municao/flecha_carbono_campo.glb",
+   "tamanho_m": [
+    0.02,
+    0.018,
+    0.756
+   ],
+   "triangulos": 766,
+   "kb": 41.0
   }
  ],
  "efeitos": [

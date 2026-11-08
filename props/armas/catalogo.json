@@ -6518,6 +6518,203 @@
      "descricao": "respiração leve parado"
     }
    }
+  },
+  {
+   "id": "pistola_sinalizadora",
+   "nome": "Pistola sinalizadora",
+   "grupo": "armas",
+   "categoria": "pistola",
+   "classe": "fogo",
+   "calibre": "sinal 12",
+   "municao": "cartucho_sinal_vermelho",
+   "municoes": [
+    "cartucho_sinal_vermelho",
+    "cartucho_sinal_verde"
+   ],
+   "capacidade": 1,
+   "dano": 25,
+   "dano_fogo": 8,
+   "alcance_m": 15,
+   "alcance_max_m": 60,
+   "modo": "tiro único, cão externo",
+   "acao": "basculante",
+   "tiros_por_s": 0.3,
+   "recarga_s": 2.8,
+   "precisao": 0.4,
+   "recuo": 0.35,
+   "ruido_m": 90,
+   "durabilidade": 800,
+   "peso_kg": 0.45,
+   "raridade": "incomum",
+   "valor_troca": 45,
+   "onde": [
+    "posto",
+    "quartel_bombeiros",
+    "casa_de_campo",
+    "armazem",
+    "estacao"
+   ],
+   "estojo_s": 0.7,
+   "descricao": "Pistola de sinal de alumínio laranja, um tiro por vez. Não é arma: o sinal sobe uns 80 m e brilha 7 s. Vermelho pede socorro; verde chama sobreviventes para a sua posição, mas os zumbis também veem. De perto, o cartucho queima o alvo.",
+   "arquivo": "armas/pistola_sinalizadora.glb",
+   "tamanho_m": [
+    0.03,
+    0.152,
+    0.21
+   ],
+   "triangulos": 40260,
+   "kb": 2071.3,
+   "partes": [
+    {
+     "no": "cano",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -42,
+     "descricao": "bascula para baixo (a boca desce) e mostra a culatra para trocar o cartucho",
+     "pai": "pistola_sinalizadora",
+     "explodir_m": [
+      0.0,
+      0.02,
+      -0.04
+     ]
+    },
+    {
+     "no": "cartucho",
+     "tipo": "remove",
+     "direcao": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "municao": "cartucho_sinal_vermelho",
+     "capacidade": 1,
+     "descricao": "cartucho de sinal na câmara; sai para trás com o cano aberto",
+     "pai": "cano",
+     "explodir_m": [
+      -0.0,
+      0.02,
+      0.08
+     ]
+    },
+    {
+     "no": "cao",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 34,
+     "descricao": "cão externo: armar puxando para trás",
+     "pai": "pistola_sinalizadora",
+     "explodir_m": [
+      -0.0,
+      0.04,
+      0.02
+     ]
+    },
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -12,
+     "descricao": "gatilho",
+     "pai": "pistola_sinalizadora",
+     "explodir_m": [
+      0.0,
+      -0.04,
+      0.0
+     ]
+    },
+    {
+     "no": "trava",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 28,
+     "descricao": "alavanca da esquerda que solta o cano",
+     "pai": "pistola_sinalizadora",
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_cartucho",
+     "tipo": "cartucho_sinal",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.06,
+      -0.058
+     ],
+     "substitui": "cartucho",
+     "aceita": [
+      "cartucho_sinal_vermelho",
+      "cartucho_sinal_verde"
+     ],
+     "padrao": "cartucho_sinal_vermelho",
+     "descricao": "filho do cano; o cartucho escolhido troca o nó cartucho (vermelho = socorro, verde = chamar)"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "pistola_sinalizadora",
+     "posicao_m": [
+      0.0,
+      0.0785,
+      -0.022
+     ],
+     "descricao": "linha de visada pelas estrias do topo e o dente do cano (mira grossa, só para apontar)"
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.06,
+      -0.176
+     ],
+     "descricao": "origem do sinal (-Z): solta o efeito sinal_luz_* que sobe ~80 m"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "pistola_sinalizadora",
+     "posicao_m": [
+      0.0,
+      0.072,
+      -0.048
+     ],
+     "descricao": "o estojo vazio sai daqui na recarga (aos 0,7 s)"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.7,
+     "laco": false,
+     "descricao": "o cão cai (0,03 s) e o coice levanta bem a boca: o sinal sai em boca_fogo"
+    },
+    "armar": {
+     "duracao_s": 0.4,
+     "laco": false,
+     "descricao": "puxa o cão para trás com o polegar"
+    },
+    "recarregar": {
+     "duracao_s": 2.8,
+     "laco": false,
+     "descricao": "solta a trava, o cano bascula (0,45 s), o estojo sai (0,62 a 0,9 s), o cartucho novo entra (1,5 a 1,95 s; trocar o nó entre 0,9 e 1,3 s), fecha o cano (2,3 s) e arma o cão (2,7 s)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.4,
+     "laco": false,
+     "descricao": "abre o cano até ver a cor do cartucho, fecha e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
   }
  ],
  "acessorios": [
@@ -11582,6 +11779,180 @@
      "descricao": "fecha a tampa"
     }
    }
+  },
+  {
+   "id": "cartucho_sinal_vermelho",
+   "nome": "Cartucho de sinal vermelho",
+   "grupo": "municao",
+   "categoria": "municao",
+   "calibre": "sinal 12",
+   "peso_kg": 0.03,
+   "empilha": 12,
+   "raridade": "incomum",
+   "estojo": "estojo_sinal",
+   "efeito": "sinal_luz_vermelha",
+   "sobe_m": 80,
+   "brilha_s": 7,
+   "visto_m": 1500,
+   "atrai_zumbis_m": 250,
+   "uso": "socorro",
+   "descricao": "Sinal de socorro: quem está no rádio ou nas torres vê de longe. Zumbis num raio de 250 m vão para onde ele cai.",
+   "arquivo": "municao/cartucho_sinal_vermelho.glb",
+   "tamanho_m": [
+    0.024,
+    0.024,
+    0.067
+   ],
+   "triangulos": 1224,
+   "kb": 61.7
+  },
+  {
+   "id": "cartucho_sinal_verde",
+   "nome": "Cartucho de sinal verde",
+   "grupo": "municao",
+   "categoria": "municao",
+   "calibre": "sinal 12",
+   "peso_kg": 0.03,
+   "empilha": 12,
+   "raridade": "raro",
+   "estojo": "estojo_sinal",
+   "efeito": "sinal_luz_verde",
+   "sobe_m": 80,
+   "brilha_s": 7,
+   "visto_m": 1500,
+   "atrai_zumbis_m": 300,
+   "uso": "chamar_sobreviventes",
+   "descricao": "Chama sobreviventes para a sua posição (pode render um novo morador). Mas o brilho verde também atrai os zumbis num raio de 300 m.",
+   "arquivo": "municao/cartucho_sinal_verde.glb",
+   "tamanho_m": [
+    0.024,
+    0.024,
+    0.067
+   ],
+   "triangulos": 1224,
+   "kb": 61.6
+  },
+  {
+   "id": "estojo_sinal",
+   "nome": "Estojo de sinal (vazio)",
+   "grupo": "municao",
+   "categoria": "estojo",
+   "calibre": "sinal 12",
+   "peso_kg": 0.01,
+   "descricao": "Estojo vazio que sai na recarga (o jogo cria um em saida_estojo).",
+   "arquivo": "municao/estojo_sinal.glb",
+   "tamanho_m": [
+    0.024,
+    0.024,
+    0.066
+   ],
+   "triangulos": 880,
+   "kb": 44.6
+  },
+  {
+   "id": "caixa_sinal_vermelho",
+   "nome": "Caixa de sinais vermelhos (6)",
+   "grupo": "municao",
+   "categoria": "caixa",
+   "calibre": "sinal 12",
+   "municao": "cartucho_sinal_vermelho",
+   "quantidade": 6,
+   "peso_kg": 0.22,
+   "empilha": 4,
+   "raridade": "incomum",
+   "onde": [
+    "posto",
+    "quartel_bombeiros",
+    "armazem"
+   ],
+   "descricao": "Caixa de papelão com 6 cartuchos de sinal vermelho em pé. A tampa abre (nó \"tampa\", animação \"abrir\").",
+   "arquivo": "municao/caixa_sinal_vermelho.glb",
+   "tamanho_m": [
+    0.056,
+    0.074,
+    0.082
+   ],
+   "triangulos": 4988,
+   "kb": 311.4,
+   "partes": [
+    {
+     "no": "tampa",
+     "tipo": "tampa",
+     "eixo": "z",
+     "abre_graus": 115,
+     "descricao": "gira em torno da ponta de trás",
+     "pai": "caixa_sinal_vermelho",
+     "explodir_m": [
+      0.0,
+      0.05,
+      0.0
+     ]
+    }
+   ],
+   "animacoes": {
+    "abrir": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "abre a tampa"
+    },
+    "fechar": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "fecha a tampa"
+    }
+   }
+  },
+  {
+   "id": "caixa_sinal_verde",
+   "nome": "Caixa de sinais verdes (6)",
+   "grupo": "municao",
+   "categoria": "caixa",
+   "calibre": "sinal 12",
+   "municao": "cartucho_sinal_verde",
+   "quantidade": 6,
+   "peso_kg": 0.22,
+   "empilha": 4,
+   "raridade": "raro",
+   "onde": [
+    "quartel_bombeiros",
+    "estacao"
+   ],
+   "descricao": "Caixa de papelão com 6 cartuchos de sinal verde em pé. A tampa abre (nó \"tampa\", animação \"abrir\").",
+   "arquivo": "municao/caixa_sinal_verde.glb",
+   "tamanho_m": [
+    0.056,
+    0.074,
+    0.082
+   ],
+   "triangulos": 4172,
+   "kb": 270.9,
+   "partes": [
+    {
+     "no": "tampa",
+     "tipo": "tampa",
+     "eixo": "z",
+     "abre_graus": 115,
+     "descricao": "gira em torno da ponta de trás",
+     "pai": "caixa_sinal_verde",
+     "explodir_m": [
+      0.0,
+      0.05,
+      0.0
+     ]
+    }
+   ],
+   "animacoes": {
+    "abrir": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "abre a tampa"
+    },
+    "fechar": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "fecha a tampa"
+    }
+   }
   }
  ],
  "efeitos": [
@@ -11599,6 +11970,36 @@
    ],
    "triangulos": 372,
    "kb": 19.4
+  },
+  {
+   "id": "sinal_luz_vermelha",
+   "nome": "Luz do sinal vermelho",
+   "grupo": "efeitos",
+   "categoria": "efeito",
+   "descricao": "Bola de luz que sobe até ~80 m e desce devagar por 7 s. Pôr uma luz omnidirecional vermelha forte no centro e piscar a escala (0,9 a 1,1). Material emissivo com transparência no halo.",
+   "arquivo": "efeitos/sinal_luz_vermelha.glb",
+   "tamanho_m": [
+    0.15,
+    0.298,
+    0.15
+   ],
+   "triangulos": 1920,
+   "kb": 92.0
+  },
+  {
+   "id": "sinal_luz_verde",
+   "nome": "Luz do sinal verde",
+   "grupo": "efeitos",
+   "categoria": "efeito",
+   "descricao": "Igual ao vermelho, em verde. Pôr uma luz omnidirecional verde forte no centro.",
+   "arquivo": "efeitos/sinal_luz_verde.glb",
+   "tamanho_m": [
+    0.15,
+    0.298,
+    0.15
+   ],
+   "triangulos": 1920,
+   "kb": 92.0
   }
  ]
 }

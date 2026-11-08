@@ -109,6 +109,41 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Muro de sucata (`muro_sucata`) | 8 | Abrigo | 2,05 × 2,12 × 0,10 | - | - | - | 4668 |
 | Portão de sucata (`portao_sucata`) | 8 | Abrigo | 2,04 × 2,20 × 0,26 | - | folha_esq, folha_dir | - | 2084 |
 | Torre de vigia (`torre_vigia`) | 8 | Abrigo | 2,12 × 4,95 × 2,34 | - | - | - | 2802 |
+| Banco de igreja (`banco_igreja`) | 9 | Igreja | 2,97 × 0,94 × 0,87 | - | - | barricada, sentar | 648 |
+| Altar com toalha (`altar`) | 9 | Igreja | 2,08 × 1,63 × 0,97 | 3 espaços: velas, tecido | - | - | 2696 |
+| Castiçal alto (`castical`) | 9 | Igreja | 0,14 × 1,52 × 0,14 | - | - | - | 664 |
+| Púlpito de madeira (`pulpito`) | 9 | Igreja | 0,80 × 1,25 × 0,80 | - | - | - | 184 |
+| Harmônio de pedal (`harmonio`) | 9 | Igreja | 1,34 × 1,45 × 0,83 | - | - | - | 4008 |
+| Pia batismal de pedra (`pia_batismal`) | 9 | Igreja | 0,68 × 0,96 × 0,68 | - | - | - | 792 |
+| Quadro de hinos (`quadro_hinos`) | 9 | Igreja | 0,50 × 0,87 × 0,05 | - | - | - | 288 |
+| Estante alta de biblioteca (dupla face) (`estante_biblioteca`) | 9 | Biblioteca | 1,00 × 2,25 × 0,64 | 6 espaços: livros | - | barricada | 2748 |
+| Mesa de leitura com luminárias verdes (`mesa_leitura`) | 9 | Biblioteca | 2,40 × 1,16 × 1,00 | - | - | - | 1908 |
+| Fichário de catálogo (`fichario_catalogo`) | 9 | Biblioteca | 1,04 × 1,24 × 0,54 | 2 espaços: mapas, papel | gaveta_1_3, gaveta_3_1 | - | 4572 |
+| Carrinho de livros (`carrinho_livros`) | 9 | Biblioteca | 0,80 × 0,98 × 0,48 | 3 espaços: livros | - | - | 4384 |
+| Globo terrestre de mesa (`globo_terrestre`) | 9 | Biblioteca | 0,33 × 0,41 × 0,30 | - | - | - | 3740 |
+| Carteira escolar com banco (`carteira_escolar`) | 9 | Escola | 0,66 × 0,78 × 0,80 | 1 espaços: livros, papel | - | sentar | 632 |
+| Mesa do professor (`mesa_professor`) | 9 | Escola | 1,30 × 0,91 × 0,78 | 4 espaços: livros, remedios, papel | gaveta_esq_1, gaveta_dir_1 | - | 2520 |
+| Lousa com giz (`lousa_escola`) | 9 | Escola | 2,50 × 1,22 × 0,08 | - | - | - | 404 |
+| Estufa a lenha (`estufa_lenha`) | 9 | Escola | 0,80 × 2,41 × 0,90 | - | portinhola | - | 1196 |
+| Cabideiro com lancheiras (`cabide_lancheiras`) | 9 | Escola | 1,60 × 0,67 × 0,12 | 2 espaços: comida | - | - | 880 |
+| Caixa de correio de rua (`caixa_correio_rua`) | 9 | Correios | 0,50 × 1,30 × 0,54 | 3 espaços: papel, mapas, pistas | portinhola | - | 566 |
+| Carrinho de correspondência (`carrinho_correspondencia`) | 9 | Correios | 0,97 × 1,00 × 0,76 | 4 espaços: papel, roupas, pistas | - | - | 5668 |
+| Balança de balcão (`balanca_correio`) | 9 | Correios | 0,36 × 0,32 × 0,30 | - | - | - | 404 |
+| Escaninho de triagem de cartas (`estante_triagem`) | 9 | Correios | 1,84 × 1,63 × 0,66 | 3 espaços: papel, pistas, chaves | - | - | 1000 |
+| Mesa com máquina de escrever (`mesa_maquina_escrever`) | 9 | Delegacia | 1,40 × 1,06 × 0,78 | 3 espaços: papel, chaves, armas | gaveta_1 | - | 2308 |
+| Armário de armas (`armario_armas`) | 9 | Delegacia | 1,00 × 1,90 × 0,50 | 6 espaços: armas, municao | porta_esq, porta_dir | barricada | 1268 |
+| Quadro de procurados e avisos (`quadro_procurados`) | 9 | Delegacia | 1,20 × 0,90 × 0,04 | - | - | - | 488 |
+| Banco de espera (3 lugares) (`banco_espera`) | 9 | Delegacia | 1,90 × 0,86 × 0,53 | - | - | sentar | 352 |
+| Cadeira de rodas (`cadeira_rodas`) | 9 | Saúde | 0,67 × 1,00 × 0,90 | - | - | sentar | 2180 |
+| Suporte de soro (`suporte_soro`) | 9 | Saúde | 0,60 × 1,95 × 0,65 | - | - | - | 1424 |
+| Armário de remédios com vidro (`armario_remedios`) | 9 | Saúde | 0,90 × 1,80 × 0,42 | 6 espaços: remedios | porta_esq, porta_dir | - | 2396 |
+| Biombo hospitalar (`biombo`) | 9 | Saúde | 1,67 × 1,73 × 0,24 | - | - | - | 1320 |
+| Balança médica com régua (`balanca_medica`) | 9 | Saúde | 0,40 × 2,00 × 0,55 | - | - | - | 400 |
+| Carrinho de emergência (`carrinho_emergencia`) | 9 | Saúde | 0,90 × 1,09 × 0,59 | 5 espaços: remedios | gaveta_1 | - | 4180 |
+| Parede de cofres de aluguel (`cofres_aluguel`) | 9 | Banco | 1,60 × 2,00 × 0,47 | 8 espaços: moedas, joias, pistas, remedios | cofre_2_4, cofre_5_7, cofre_6_2 | - | 10356 |
+| Pedestais de fila com cordão (`pedestal_fila`) | 9 | Banco | 1,50 × 0,98 × 0,30 | - | - | - | 988 |
+| Armário de equipamento de bombeiro (`armario_bombeiro`) | 9 | Quartel de bombeiros | 0,96 × 2,14 × 0,60 | 4 espaços: roupas, ferramentas, remedios | - | - | 3540 |
+| Carretel de mangueira de incêndio (`carretel_mangueira`) | 9 | Quartel de bombeiros | 0,77 × 0,89 × 1,50 | - | - | - | 3284 |
 
 ## Loot
 
@@ -174,3 +209,5 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Bilhete de sobrevivente (`bilhete`) | 5 | Chaves e pistas | pista | 1 | 0,01 kg | 1 | pista do 1º sobrevivente: marca um encontro no mapa (fim da fase 1) | casas, igreja, posto, escolinha, supermercado |
 | Porta-retrato de família (`porta_retrato`) | 7 | Vida de antes | lembranca | 1 | 0,3 kg | 1 | ânimo +5 se guardado; pode identificar um sobrevivente procurado (mural) | casas, motel, escritorio |
 | Ursinho de pelúcia (`ursinho`) | 7 | Vida de antes | lembranca | 1 | 0,25 kg | 1 | acalma uma criança sobrevivente (moral +10) | casas, escolinha, clinica, motel |
+| Saco de correspondência (`saco_correio`) | 9 | Chaves e pistas | pista | 1 | 4,0 kg | 1 | cartas e pacotes: chance de remédios, pilhas ou uma pista de sobreviventes | correios, estacao, rodoviaria |
+| Extintor de incêndio (`extintor`) | 9 | Ferramentas | ferramenta | 1 | 6,0 kg | 1 | apaga fogo; jato atordoa zumbis (barulho baixo); arma pesada (dano 20) | quartel, galeria, hotel, escolinha, posto, fabrica, supermercado |

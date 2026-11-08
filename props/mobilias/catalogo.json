@@ -3606,6 +3606,1167 @@
    ],
    "triangulos": 2802,
    "kb": 386.5
+  },
+  {
+   "id": "banco_igreja",
+   "nome": "Banco de igreja",
+   "grupo": "mobilias",
+   "categoria": "igreja",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "igreja",
+    "patio_missoes"
+   ],
+   "sentar": true,
+   "barricada": true,
+   "colisao": "caixa",
+   "vagas": 5,
+   "modulo_m": 3.0,
+   "desmonta": {
+    "madeira": 4
+   },
+   "arquivo": "mobilias/banco_igreja.glb",
+   "tamanho_m": [
+    2.97,
+    0.94,
+    0.87
+   ],
+   "triangulos": 648,
+   "kb": 97.7
+  },
+  {
+   "id": "altar",
+   "nome": "Altar com toalha",
+   "grupo": "mobilias",
+   "categoria": "igreja",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "igreja",
+    "patio_missoes"
+   ],
+   "colisao": "caixa",
+   "conteiner": true,
+   "slots": 3,
+   "saque": [
+    "velas",
+    "tecido"
+   ],
+   "arquivo": "mobilias/altar.glb",
+   "tamanho_m": [
+    2.08,
+    1.631,
+    0.972
+   ],
+   "triangulos": 2696,
+   "kb": 245.6
+  },
+  {
+   "id": "castical",
+   "nome": "Castiçal alto",
+   "grupo": "mobilias",
+   "categoria": "igreja",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "igreja",
+    "mansao",
+    "patio_missoes"
+   ],
+   "portatil": true,
+   "peso_kg": 4.0,
+   "luz_m": 3,
+   "ambiente": true,
+   "saque_ao_desmontar": {
+    "velas": 1
+   },
+   "arquivo": "mobilias/castical.glb",
+   "tamanho_m": [
+    0.14,
+    1.525,
+    0.14
+   ],
+   "triangulos": 664,
+   "kb": 33.8
+  },
+  {
+   "id": "pulpito",
+   "nome": "Púlpito de madeira",
+   "grupo": "mobilias",
+   "categoria": "igreja",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "igreja",
+    "escolinha",
+    "concha"
+   ],
+   "colisao": "caixa",
+   "arquivo": "mobilias/pulpito.glb",
+   "tamanho_m": [
+    0.8,
+    1.25,
+    0.8
+   ],
+   "triangulos": 184,
+   "kb": 65.2
+  },
+  {
+   "id": "harmonio",
+   "nome": "Harmônio de pedal",
+   "grupo": "mobilias",
+   "categoria": "igreja",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "igreja",
+    "escolinha",
+    "mansao"
+   ],
+   "colisao": "caixa",
+   "interacao": "tocar (moral +10; muito barulho)",
+   "arquivo": "mobilias/harmonio.glb",
+   "tamanho_m": [
+    1.34,
+    1.45,
+    0.828
+   ],
+   "triangulos": 4008,
+   "kb": 278.9
+  },
+  {
+   "id": "pia_batismal",
+   "nome": "Pia batismal de pedra",
+   "grupo": "mobilias",
+   "categoria": "igreja",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "igreja",
+    "patio_missoes"
+   ],
+   "colisao": "caixa",
+   "coleta": {
+    "recurso": "agua",
+    "total": 1,
+    "ferramenta": "nenhuma",
+    "segundos_por_unidade": 3
+   },
+   "arquivo": "mobilias/pia_batismal.glb",
+   "tamanho_m": [
+    0.68,
+    0.96,
+    0.68
+   ],
+   "triangulos": 792,
+   "kb": 96.6
+  },
+  {
+   "id": "quadro_hinos",
+   "nome": "Quadro de hinos",
+   "grupo": "mobilias",
+   "categoria": "igreja",
+   "montagem": "wall",
+   "lote": 9,
+   "altura_sugerida_m": 1.6,
+   "comodos": [
+    "igreja"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "arquivo": "mobilias/quadro_hinos.glb",
+   "tamanho_m": [
+    0.5,
+    0.87,
+    0.05
+   ],
+   "triangulos": 288,
+   "kb": 84.9
+  },
+  {
+   "id": "estante_biblioteca",
+   "nome": "Estante alta de biblioteca (dupla face)",
+   "grupo": "mobilias",
+   "categoria": "biblioteca",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "biblioteca",
+    "escolinha",
+    "mansao"
+   ],
+   "conteiner": true,
+   "slots": 6,
+   "saque": [
+    "livros"
+   ],
+   "barricada": true,
+   "colisao": "caixa",
+   "modulo_m": 1.0,
+   "arquivo": "mobilias/estante_biblioteca.glb",
+   "tamanho_m": [
+    1.0,
+    2.25,
+    0.64
+   ],
+   "triangulos": 2748,
+   "kb": 186.4
+  },
+  {
+   "id": "mesa_leitura",
+   "nome": "Mesa de leitura com luminárias verdes",
+   "grupo": "mobilias",
+   "categoria": "biblioteca",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "biblioteca",
+    "escritorio",
+    "delegacia",
+    "mansao"
+   ],
+   "colisao": "caixa",
+   "vagas": 4,
+   "estacao": "pesquisa (lê livros técnicos: desbloqueia projetos)",
+   "luz_m": 2,
+   "arquivo": "mobilias/mesa_leitura.glb",
+   "tamanho_m": [
+    2.4,
+    1.16,
+    0.996
+   ],
+   "triangulos": 1908,
+   "kb": 180.2
+  },
+  {
+   "id": "fichario_catalogo",
+   "nome": "Fichário de catálogo",
+   "grupo": "mobilias",
+   "categoria": "biblioteca",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "biblioteca",
+    "correios",
+    "delegacia"
+   ],
+   "conteiner": true,
+   "slots": 2,
+   "saque": [
+    "mapas",
+    "papel"
+   ],
+   "colisao": "caixa",
+   "pista": "fichas apontam livros técnicos raros",
+   "arquivo": "mobilias/fichario_catalogo.glb",
+   "tamanho_m": [
+    1.04,
+    1.24,
+    0.544
+   ],
+   "triangulos": 4572,
+   "kb": 328.1,
+   "partes": [
+    {
+     "no": "gaveta_1_3",
+     "origem": [
+      0,
+      0,
+      0
+     ],
+     "tipo": "gaveta",
+     "desliza": [
+      0,
+      0,
+      0.3
+     ]
+    },
+    {
+     "no": "gaveta_3_1",
+     "origem": [
+      0,
+      0,
+      0
+     ],
+     "tipo": "gaveta",
+     "desliza": [
+      0,
+      0,
+      0.3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carrinho_livros",
+   "nome": "Carrinho de livros",
+   "grupo": "mobilias",
+   "categoria": "biblioteca",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "biblioteca",
+    "escolinha",
+    "clinica"
+   ],
+   "conteiner": true,
+   "slots": 3,
+   "saque": [
+    "livros"
+   ],
+   "portatil": true,
+   "peso_kg": 15.0,
+   "colisao": "caixa",
+   "arquivo": "mobilias/carrinho_livros.glb",
+   "tamanho_m": [
+    0.8,
+    0.982,
+    0.48
+   ],
+   "triangulos": 4384,
+   "kb": 269.1
+  },
+  {
+   "id": "globo_terrestre",
+   "nome": "Globo terrestre de mesa",
+   "grupo": "mobilias",
+   "categoria": "biblioteca",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "biblioteca",
+    "escolinha",
+    "escritorio",
+    "mansao"
+   ],
+   "portatil": true,
+   "peso_kg": 2.0,
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "arquivo": "mobilias/globo_terrestre.glb",
+   "tamanho_m": [
+    0.331,
+    0.406,
+    0.3
+   ],
+   "triangulos": 3740,
+   "kb": 330.2
+  },
+  {
+   "id": "carteira_escolar",
+   "nome": "Carteira escolar com banco",
+   "grupo": "mobilias",
+   "categoria": "escolinha",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "escolinha"
+   ],
+   "sentar": true,
+   "colisao": "caixa",
+   "conteiner": true,
+   "slots": 1,
+   "saque": [
+    "livros",
+    "papel"
+   ],
+   "desmonta": {
+    "madeira": 1,
+    "sucata": 1
+   },
+   "arquivo": "mobilias/carteira_escolar.glb",
+   "tamanho_m": [
+    0.66,
+    0.775,
+    0.8
+   ],
+   "triangulos": 632,
+   "kb": 94.5
+  },
+  {
+   "id": "mesa_professor",
+   "nome": "Mesa do professor",
+   "grupo": "mobilias",
+   "categoria": "escolinha",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "escolinha",
+    "escritorio",
+    "correios"
+   ],
+   "conteiner": true,
+   "slots": 4,
+   "saque": [
+    "livros",
+    "remedios",
+    "papel"
+   ],
+   "colisao": "caixa",
+   "arquivo": "mobilias/mesa_professor.glb",
+   "tamanho_m": [
+    1.3,
+    0.91,
+    0.782
+   ],
+   "triangulos": 2520,
+   "kb": 244.5,
+   "partes": [
+    {
+     "no": "gaveta_esq_1",
+     "origem": [
+      0,
+      0,
+      0
+     ],
+     "tipo": "gaveta",
+     "desliza": [
+      0,
+      0,
+      0.3
+     ]
+    },
+    {
+     "no": "gaveta_dir_1",
+     "origem": [
+      0,
+      0,
+      0
+     ],
+     "tipo": "gaveta",
+     "desliza": [
+      0,
+      0,
+      0.3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lousa_escola",
+   "nome": "Lousa com giz",
+   "grupo": "mobilias",
+   "categoria": "escolinha",
+   "montagem": "wall",
+   "lote": 9,
+   "altura_sugerida_m": 0.8,
+   "comodos": [
+    "escolinha",
+    "quartel",
+    "abrigo"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "arquivo": "mobilias/lousa_escola.glb",
+   "tamanho_m": [
+    2.5,
+    1.22,
+    0.08
+   ],
+   "triangulos": 404,
+   "kb": 148.5
+  },
+  {
+   "id": "estufa_lenha",
+   "nome": "Estufa a lenha",
+   "grupo": "mobilias",
+   "categoria": "escolinha",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "escolinha",
+    "igreja",
+    "fazenda",
+    "abrigo",
+    "casa_de_campo"
+   ],
+   "colisao": "caixa",
+   "usa": "lenha",
+   "estacao": "aquecer (frio da noite) e cozinhar",
+   "luz_m": 2,
+   "arquivo": "mobilias/estufa_lenha.glb",
+   "tamanho_m": [
+    0.8,
+    2.411,
+    0.9
+   ],
+   "triangulos": 1196,
+   "kb": 59.7,
+   "partes": [
+    {
+     "no": "portinhola",
+     "origem": [
+      0.12,
+      0.4,
+      0.24
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -100
+    }
+   ]
+  },
+  {
+   "id": "cabide_lancheiras",
+   "nome": "Cabideiro com lancheiras",
+   "grupo": "mobilias",
+   "categoria": "escolinha",
+   "montagem": "wall",
+   "lote": 9,
+   "altura_sugerida_m": 1.2,
+   "comodos": [
+    "escolinha"
+   ],
+   "ambiente": true,
+   "conteiner": true,
+   "slots": 2,
+   "saque": [
+    "comida"
+   ],
+   "colisao": "nenhuma",
+   "arquivo": "mobilias/cabide_lancheiras.glb",
+   "tamanho_m": [
+    1.6,
+    0.667,
+    0.12
+   ],
+   "triangulos": 880,
+   "kb": 160.9
+  },
+  {
+   "id": "caixa_correio_rua",
+   "nome": "Caixa de correio de rua",
+   "grupo": "mobilias",
+   "categoria": "correios",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "rua",
+    "correios",
+    "rodoviaria",
+    "estacao"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "conteiner": true,
+   "slots": 3,
+   "saque": [
+    "papel",
+    "mapas",
+    "pistas"
+   ],
+   "ferramenta": "pe_de_cabra",
+   "pista": "cartas nunca entregues contam histórias",
+   "arquivo": "mobilias/caixa_correio_rua.glb",
+   "tamanho_m": [
+    0.5,
+    1.3,
+    0.54
+   ],
+   "triangulos": 566,
+   "kb": 36.1,
+   "partes": [
+    {
+     "no": "portinhola",
+     "origem": [
+      0,
+      1.1,
+      0.25
+     ],
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -60
+    }
+   ]
+  },
+  {
+   "id": "carrinho_correspondencia",
+   "nome": "Carrinho de correspondência",
+   "grupo": "mobilias",
+   "categoria": "correios",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "correios",
+    "estacao",
+    "rodoviaria"
+   ],
+   "conteiner": true,
+   "slots": 4,
+   "saque": [
+    "papel",
+    "roupas",
+    "pistas"
+   ],
+   "portatil": true,
+   "peso_kg": 20.0,
+   "colisao": "caixa",
+   "arquivo": "mobilias/carrinho_correspondencia.glb",
+   "tamanho_m": [
+    0.97,
+    0.999,
+    0.76
+   ],
+   "triangulos": 5668,
+   "kb": 338.2
+  },
+  {
+   "id": "balanca_correio",
+   "nome": "Balança de balcão",
+   "grupo": "mobilias",
+   "categoria": "correios",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "correios",
+    "padaria",
+    "armazem",
+    "supermercado"
+   ],
+   "portatil": true,
+   "peso_kg": 6.0,
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "arquivo": "mobilias/balanca_correio.glb",
+   "tamanho_m": [
+    0.36,
+    0.32,
+    0.3
+   ],
+   "triangulos": 404,
+   "kb": 30.4
+  },
+  {
+   "id": "estante_triagem",
+   "nome": "Escaninho de triagem de cartas",
+   "grupo": "mobilias",
+   "categoria": "correios",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "correios",
+    "hotel",
+    "estacao"
+   ],
+   "conteiner": true,
+   "slots": 3,
+   "saque": [
+    "papel",
+    "pistas",
+    "chaves"
+   ],
+   "colisao": "caixa",
+   "arquivo": "mobilias/estante_triagem.glb",
+   "tamanho_m": [
+    1.84,
+    1.63,
+    0.66
+   ],
+   "triangulos": 1000,
+   "kb": 110.1
+  },
+  {
+   "id": "mesa_maquina_escrever",
+   "nome": "Mesa com máquina de escrever",
+   "grupo": "mobilias",
+   "categoria": "delegacia",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "delegacia",
+    "escritorio",
+    "correios",
+    "quartel"
+   ],
+   "conteiner": true,
+   "slots": 3,
+   "saque": [
+    "papel",
+    "chaves",
+    "armas"
+   ],
+   "colisao": "caixa",
+   "arquivo": "mobilias/mesa_maquina_escrever.glb",
+   "tamanho_m": [
+    1.4,
+    1.06,
+    0.775
+   ],
+   "triangulos": 2308,
+   "kb": 170.6,
+   "partes": [
+    {
+     "no": "gaveta_1",
+     "origem": [
+      0,
+      0,
+      0
+     ],
+     "tipo": "gaveta",
+     "desliza": [
+      0,
+      0,
+      0.32
+     ]
+    }
+   ]
+  },
+  {
+   "id": "armario_armas",
+   "nome": "Armário de armas",
+   "grupo": "mobilias",
+   "categoria": "delegacia",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "delegacia",
+    "quartel"
+   ],
+   "conteiner": true,
+   "slots": 6,
+   "saque": [
+    "armas",
+    "municao"
+   ],
+   "trancado": true,
+   "ferramenta": "pe_de_cabra ou chave",
+   "colisao": "caixa",
+   "barricada": true,
+   "arquivo": "mobilias/armario_armas.glb",
+   "tamanho_m": [
+    1.0,
+    1.9,
+    0.5
+   ],
+   "triangulos": 1268,
+   "kb": 120.4,
+   "partes": [
+    {
+     "no": "porta_esq",
+     "origem": [
+      -0.5,
+      0,
+      0.232
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -110
+    },
+    {
+     "no": "porta_dir",
+     "origem": [
+      0.5,
+      0,
+      0.232
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 110
+    }
+   ]
+  },
+  {
+   "id": "quadro_procurados",
+   "nome": "Quadro de procurados e avisos",
+   "grupo": "mobilias",
+   "categoria": "delegacia",
+   "montagem": "wall",
+   "lote": 9,
+   "altura_sugerida_m": 1.1,
+   "comodos": [
+    "delegacia",
+    "correios",
+    "estacao"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "arquivo": "mobilias/quadro_procurados.glb",
+   "tamanho_m": [
+    1.2,
+    0.9,
+    0.038
+   ],
+   "triangulos": 488,
+   "kb": 123.3
+  },
+  {
+   "id": "banco_espera",
+   "nome": "Banco de espera (3 lugares)",
+   "grupo": "mobilias",
+   "categoria": "delegacia",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "delegacia",
+    "clinica",
+    "rodoviaria",
+    "estacao",
+    "correios",
+    "banco"
+   ],
+   "sentar": true,
+   "colisao": "caixa",
+   "vagas": 3,
+   "arquivo": "mobilias/banco_espera.glb",
+   "tamanho_m": [
+    1.9,
+    0.858,
+    0.53
+   ],
+   "triangulos": 352,
+   "kb": 19.9
+  },
+  {
+   "id": "cadeira_rodas",
+   "nome": "Cadeira de rodas",
+   "grupo": "mobilias",
+   "categoria": "saude",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "clinica",
+    "enfermaria",
+    "casas",
+    "rodoviaria"
+   ],
+   "sentar": true,
+   "portatil": true,
+   "peso_kg": 15.0,
+   "colisao": "caixa",
+   "uso": "leva um sobrevivente ferido mais rápido",
+   "arquivo": "mobilias/cadeira_rodas.glb",
+   "tamanho_m": [
+    0.668,
+    1.0,
+    0.9
+   ],
+   "triangulos": 2180,
+   "kb": 105.5
+  },
+  {
+   "id": "suporte_soro",
+   "nome": "Suporte de soro",
+   "grupo": "mobilias",
+   "categoria": "saude",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "clinica",
+    "enfermaria",
+    "quartel"
+   ],
+   "portatil": true,
+   "peso_kg": 4.0,
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "saque_ao_desmontar": {
+    "remedios": 1
+   },
+   "arquivo": "mobilias/suporte_soro.glb",
+   "tamanho_m": [
+    0.603,
+    1.949,
+    0.647
+   ],
+   "triangulos": 1424,
+   "kb": 70.2
+  },
+  {
+   "id": "armario_remedios",
+   "nome": "Armário de remédios com vidro",
+   "grupo": "mobilias",
+   "categoria": "saude",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "clinica",
+    "enfermaria",
+    "escolinha",
+    "quartel"
+   ],
+   "conteiner": true,
+   "slots": 6,
+   "saque": [
+    "remedios"
+   ],
+   "trancado": true,
+   "ferramenta": "pe_de_cabra (quebra o vidro: barulho)",
+   "colisao": "caixa",
+   "arquivo": "mobilias/armario_remedios.glb",
+   "tamanho_m": [
+    0.9,
+    1.8,
+    0.42
+   ],
+   "triangulos": 2396,
+   "kb": 117.9,
+   "partes": [
+    {
+     "no": "porta_esq",
+     "origem": [
+      -0.45,
+      0,
+      0.21000000000000002
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -100
+    },
+    {
+     "no": "porta_dir",
+     "origem": [
+      0.45,
+      0,
+      0.21000000000000002
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 100
+    }
+   ]
+  },
+  {
+   "id": "biombo",
+   "nome": "Biombo hospitalar",
+   "grupo": "mobilias",
+   "categoria": "saude",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "clinica",
+    "enfermaria",
+    "quartel"
+   ],
+   "portatil": true,
+   "peso_kg": 8.0,
+   "ambiente": true,
+   "colisao": "caixa",
+   "arquivo": "mobilias/biombo.glb",
+   "tamanho_m": [
+    1.666,
+    1.73,
+    0.242
+   ],
+   "triangulos": 1320,
+   "kb": 97.8
+  },
+  {
+   "id": "balanca_medica",
+   "nome": "Balança médica com régua",
+   "grupo": "mobilias",
+   "categoria": "saude",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "clinica",
+    "escolinha",
+    "enfermaria"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "arquivo": "mobilias/balanca_medica.glb",
+   "tamanho_m": [
+    0.4,
+    2.0,
+    0.55
+   ],
+   "triangulos": 400,
+   "kb": 21.3
+  },
+  {
+   "id": "carrinho_emergencia",
+   "nome": "Carrinho de emergência",
+   "grupo": "mobilias",
+   "categoria": "saude",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "clinica",
+    "enfermaria"
+   ],
+   "conteiner": true,
+   "slots": 5,
+   "saque": [
+    "remedios"
+   ],
+   "portatil": true,
+   "peso_kg": 35.0,
+   "colisao": "caixa",
+   "arquivo": "mobilias/carrinho_emergencia.glb",
+   "tamanho_m": [
+    0.901,
+    1.091,
+    0.59
+   ],
+   "triangulos": 4180,
+   "kb": 199.7,
+   "partes": [
+    {
+     "no": "gaveta_1",
+     "origem": [
+      0,
+      0,
+      0
+     ],
+     "tipo": "gaveta",
+     "desliza": [
+      0,
+      0,
+      0.3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cofres_aluguel",
+   "nome": "Parede de cofres de aluguel",
+   "grupo": "mobilias",
+   "categoria": "banco",
+   "montagem": "wall",
+   "lote": 9,
+   "comodos": [
+    "banco",
+    "banco_googie"
+   ],
+   "conteiner": true,
+   "slots": 8,
+   "saque": [
+    "moedas",
+    "joias",
+    "pistas",
+    "remedios"
+   ],
+   "trancado": true,
+   "ferramenta": "pe_de_cabra (1 cofre por vez, barulho)",
+   "colisao": "caixa",
+   "arquivo": "mobilias/cofres_aluguel.glb",
+   "tamanho_m": [
+    1.6,
+    2.0,
+    0.471
+   ],
+   "triangulos": 10356,
+   "kb": 492.3,
+   "partes": [
+    {
+     "no": "cofre_2_4",
+     "origem": [
+      -0.394,
+      0,
+      0.458
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -95
+    },
+    {
+     "no": "cofre_5_7",
+     "origem": [
+      0.20599999999999996,
+      0,
+      0.458
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -95
+    },
+    {
+     "no": "cofre_6_2",
+     "origem": [
+      0.40600000000000014,
+      0,
+      0.458
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -95
+    }
+   ]
+  },
+  {
+   "id": "pedestal_fila",
+   "nome": "Pedestais de fila com cordão",
+   "grupo": "mobilias",
+   "categoria": "banco",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "banco",
+    "banco_googie",
+    "cinema",
+    "rodoviaria",
+    "correios",
+    "hotel"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "portatil": true,
+   "peso_kg": 8.0,
+   "arquivo": "mobilias/pedestal_fila.glb",
+   "tamanho_m": [
+    1.5,
+    0.98,
+    0.3
+   ],
+   "triangulos": 988,
+   "kb": 66.6
+  },
+  {
+   "id": "armario_bombeiro",
+   "nome": "Armário de equipamento de bombeiro",
+   "grupo": "mobilias",
+   "categoria": "quartel",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "quartel"
+   ],
+   "conteiner": true,
+   "slots": 4,
+   "saque": [
+    "roupas",
+    "ferramentas",
+    "remedios"
+   ],
+   "colisao": "caixa",
+   "modulo_m": 1.0,
+   "arquivo": "mobilias/armario_bombeiro.glb",
+   "tamanho_m": [
+    0.96,
+    2.14,
+    0.6
+   ],
+   "triangulos": 3540,
+   "kb": 225.2
+  },
+  {
+   "id": "carretel_mangueira",
+   "nome": "Carretel de mangueira de incêndio",
+   "grupo": "mobilias",
+   "categoria": "quartel",
+   "montagem": "floor",
+   "lote": 9,
+   "comodos": [
+    "quartel",
+    "galeria",
+    "hotel",
+    "fabrica"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "uso": "apaga incêndios; vira corda de escalada (receita)",
+   "desmonta": {
+    "material": 2
+   },
+   "arquivo": "mobilias/carretel_mangueira.glb",
+   "tamanho_m": [
+    0.77,
+    0.89,
+    1.5
+   ],
+   "triangulos": 3284,
+   "kb": 239.1
   }
  ]
 }

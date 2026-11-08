@@ -1733,6 +1733,69 @@
    ],
    "triangulos": 6732,
    "kb": 496.9
+  },
+  {
+   "id": "saco_correio",
+   "nome": "Saco de correspondência",
+   "grupo": "loot",
+   "categoria": "pistas",
+   "montagem": "floor",
+   "lote": 9,
+   "recurso": "pista",
+   "valor": 1,
+   "peso_kg": 4.0,
+   "empilha": 1,
+   "onde": [
+    "correios",
+    "estacao",
+    "rodoviaria"
+   ],
+   "efeito": "cartas e pacotes: chance de remédios, pilhas ou uma pista de sobreviventes",
+   "arquivo": "loot/saco_correio.glb",
+   "tamanho_m": [
+    0.928,
+    0.41,
+    0.41
+   ],
+   "triangulos": 1840,
+   "kb": 198.7
+  },
+  {
+   "id": "extintor",
+   "nome": "Extintor de incêndio",
+   "grupo": "loot",
+   "categoria": "ferramentas",
+   "montagem": "floor",
+   "lote": 9,
+   "recurso": "ferramenta",
+   "valor": 1,
+   "peso_kg": 6.0,
+   "empilha": 1,
+   "onde": [
+    "quartel",
+    "galeria",
+    "hotel",
+    "escolinha",
+    "posto",
+    "fabrica",
+    "supermercado"
+   ],
+   "efeito": "apaga fogo; jato atordoa zumbis (barulho baixo); arma pesada",
+   "arma": true,
+   "dano": 20,
+   "pega": [
+    0.12,
+    0.08,
+    0
+   ],
+   "arquivo": "loot/extintor.glb",
+   "tamanho_m": [
+    0.63,
+    0.18,
+    0.186
+   ],
+   "triangulos": 876,
+   "kb": 57.5
   }
  ]
 }

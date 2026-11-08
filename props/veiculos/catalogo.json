@@ -930,7 +930,7 @@
      "pai": "sedan_rumo",
      "origem_m": [
       0.38,
-      1.336,
+      1.335,
       -0.215
      ],
      "triangulos": 44
@@ -944,7 +944,7 @@
      "pai": "sedan_rumo",
      "origem_m": [
       -0.38,
-      1.336,
+      1.335,
       -0.215
      ],
      "triangulos": 56
@@ -2275,7 +2275,7 @@
      "pai": "hatch_brisa",
      "origem_m": [
       0.38,
-      1.336,
+      1.335,
       -0.215
      ],
      "triangulos": 44
@@ -2289,7 +2289,7 @@
      "pai": "hatch_brisa",
      "origem_m": [
       -0.38,
-      1.336,
+      1.335,
       -0.215
      ],
      "triangulos": 56
@@ -2704,7 +2704,7 @@
    "classe": "picape",
    "portas": 2,
    "lugares": 2,
-   "descricao": "Picape de cabine simples da família Rumo, desenho próprio e sem marca. A frente, as portas, o motor, as rodas, o tanque, o escapamento, os bancos e o volante são os mesmos do sedã Rumo. A caçamba é aberta, leva 600 kg e a tampa cai para trás.",
+   "descricao": "Picape de cabine simples, desenho próprio e sem marca: frente quadrada e alta, faróis duplos, capô reto, para-brisa mais em pé e alargadores nas rodas. O motor, as rodas, o tanque, o escapamento, os bancos e o volante são os mesmos do sedã Rumo. A caçamba é aberta, leva 600 kg e a tampa cai para trás.",
    "fisica": {
     "massa_kg": 1010,
     "centro_massa_m": [
@@ -2794,19 +2794,19 @@
    ],
    "arquivo": "picape_lida.glb",
    "tamanho_m": [
-    2.077,
-    1.547,
+    2.079,
+    1.623,
     4.677
    ],
-   "triangulos": 212008,
-   "kb": 10733.7,
+   "triangulos": 213868,
+   "kb": 10845.3,
    "partes": [
     {
      "no": "capo",
      "tipo": "tampa",
      "eixo": "x",
      "abre_graus": -68,
-     "peca": "capo",
+     "peca": "capo_picape",
      "obrigatoria": false,
      "ferramentas": [
       "jogo_de_chaves"
@@ -2821,10 +2821,10 @@
      "pai": "picape_lida",
      "origem_m": [
       0.0,
-      0.9075,
+      0.9858,
       0.7
      ],
-     "triangulos": 3254
+     "triangulos": 3162
     },
     {
      "no": "tampa_porta_malas",
@@ -2856,7 +2856,7 @@
      "tipo": "porta",
      "eixo": "y",
      "abre_graus": -66,
-     "peca": "porta_dianteira_e",
+     "peca": "porta_dianteira_e_picape",
      "obrigatoria": false,
      "ferramentas": [
       "jogo_de_chaves"
@@ -2872,14 +2872,14 @@
       0.6,
       0.605
      ],
-     "triangulos": 11334
+     "triangulos": 11254
     },
     {
      "no": "porta_dd",
      "tipo": "porta",
      "eixo": "y",
      "abre_graus": 66,
-     "peca": "porta_dianteira_d",
+     "peca": "porta_dianteira_d_picape",
      "obrigatoria": false,
      "ferramentas": [
       "jogo_de_chaves"
@@ -2895,12 +2895,12 @@
       0.6,
       0.605
      ],
-     "triangulos": 11278
+     "triangulos": 11222
     },
     {
      "no": "paralama_e",
      "tipo": "peca",
-     "peca": "paralama_e",
+     "peca": "paralama_e_picape",
      "obrigatoria": false,
      "ferramentas": [
       "jogo_de_chaves"
@@ -2918,12 +2918,12 @@
       0.55,
       1.27
      ],
-     "triangulos": 5538
+     "triangulos": 6774
     },
     {
      "no": "paralama_d",
      "tipo": "peca",
-     "peca": "paralama_d",
+     "peca": "paralama_d_picape",
      "obrigatoria": false,
      "ferramentas": [
       "jogo_de_chaves"
@@ -2941,7 +2941,7 @@
       0.55,
       1.27
      ],
-     "triangulos": 5476
+     "triangulos": 6726
     },
     {
      "no": "tampa_combustivel",
@@ -2955,12 +2955,12 @@
       0.8,
       -1.86
      ],
-     "triangulos": 304
+     "triangulos": 274
     },
     {
      "no": "para_brisa",
      "tipo": "peca",
-     "peca": "para_brisa",
+     "peca": "para_brisa_picape",
      "obrigatoria": false,
      "ferramentas": [
       "jogo_de_chaves"
@@ -2974,10 +2974,10 @@
      "pai": "picape_lida",
      "origem_m": [
       0.0,
-      1.0,
+      1.065,
       0.55
      ],
-     "triangulos": 3466
+     "triangulos": 2710
     },
     {
      "no": "vidro_traseiro",
@@ -2996,7 +2996,7 @@
      "pai": "picape_lida",
      "origem_m": [
       0.0,
-      1.14,
+      1.2,
       -0.79
      ],
      "triangulos": 44
@@ -3004,7 +3004,7 @@
     {
      "no": "para_choque_d",
      "tipo": "peca",
-     "peca": "para_choque_dianteiro",
+     "peca": "para_choque_dianteiro_picape",
      "obrigatoria": false,
      "ferramentas": [
       "jogo_de_chaves"
@@ -3046,7 +3046,7 @@
     {
      "no": "farol_e",
      "tipo": "peca",
-     "peca": "farol",
+     "peca": "farol_picape",
      "obrigatoria": false,
      "ferramentas": [
       "jogo_de_chaves"
@@ -3064,12 +3064,12 @@
       0.61,
       2.03
      ],
-     "triangulos": 1408
+     "triangulos": 1416
     },
     {
      "no": "farol_d",
      "tipo": "peca",
-     "peca": "farol",
+     "peca": "farol_picape",
      "obrigatoria": false,
      "ferramentas": [
       "jogo_de_chaves"
@@ -3087,7 +3087,7 @@
       0.61,
       2.03
      ],
-     "triangulos": 1408
+     "triangulos": 1416
     },
     {
      "no": "lanterna_e",
@@ -3148,8 +3148,8 @@
      "depende_de": [],
      "pai": "porta_de",
      "origem_m": [
-      0.7686,
-      0.955,
+      0.7695,
+      1.02,
       0.5
      ],
      "triangulos": 114
@@ -3167,8 +3167,8 @@
      "depende_de": [],
      "pai": "porta_dd",
      "origem_m": [
-      -0.7686,
-      0.955,
+      -0.7695,
+      1.02,
       0.5
      ],
      "triangulos": 114
@@ -3531,8 +3531,8 @@
      "pai": "picape_lida",
      "origem_m": [
       0.38,
-      1.336,
-      -0.215
+      1.417,
+      0.005
      ],
      "triangulos": 44
     },
@@ -3545,8 +3545,8 @@
      "pai": "picape_lida",
      "origem_m": [
       -0.38,
-      1.336,
-      -0.215
+      1.417,
+      0.005
      ],
      "triangulos": 56
     }
@@ -3920,7 +3920,7 @@
    "classe": "van",
    "portas": 4,
    "lugares": 2,
-   "descricao": "Van de carga da família Rumo, desenho próprio e sem marca. A frente, as portas dianteiras, o motor, as rodas, o tanque, o escapamento, os bancos e o volante são os mesmos do sedã Rumo. O baú tem teto alto, assoalho de compensado, leva 650 kg e abre por duas portas atrás; o estepe fica num poço debaixo do assoalho.",
+   "descricao": "Van de carga, desenho próprio e sem marca: bico curto e redondo, faróis largos, para-brisa grande e teto alto contínuo até atrás. O motor, as rodas, o tanque, o escapamento, os bancos e o volante são os mesmos do sedã Rumo. O baú tem assoalho de compensado, leva 650 kg e abre por duas portas atrás; o estepe fica num poço debaixo do assoalho.",
    "fisica": {
     "massa_kg": 1100,
     "centro_massa_m": [
@@ -4010,19 +4010,19 @@
    ],
    "arquivo": "van_jornada.glb",
    "tamanho_m": [
-    2.077,
-    1.807,
+    2.074,
+    1.812,
     4.677
    ],
-   "triangulos": 205192,
-   "kb": 10329.9,
+   "triangulos": 206772,
+   "kb": 10450.5,
    "partes": [
     {
      "no": "capo",
      "tipo": "tampa",
      "eixo": "x",
      "abre_graus": -68,
-     "peca": "capo",
+     "peca": "capo_van",
      "obrigatoria": false,
      "ferramentas": [
       "jogo_de_chaves"
@@ -4037,17 +4037,17 @@
      "pai": "van_jornada",
      "origem_m": [
       0.0,
-      0.9075,
-      0.7
+      0.9486,
+      0.78
      ],
-     "triangulos": 3254
+     "triangulos": 3180
     },
     {
      "no": "porta_de",
      "tipo": "porta",
      "eixo": "y",
      "abre_graus": -66,
-     "peca": "porta_dianteira_e",
+     "peca": "porta_dianteira_e_van",
      "obrigatoria": false,
      "ferramentas": [
       "jogo_de_chaves"
@@ -4063,14 +4063,14 @@
       0.6,
       0.605
      ],
-     "triangulos": 9206
+     "triangulos": 8924
     },
     {
      "no": "porta_dd",
      "tipo": "porta",
      "eixo": "y",
      "abre_graus": 66,
-     "peca": "porta_dianteira_d",
+     "peca": "porta_dianteira_d_van",
      "obrigatoria": false,
      "ferramentas": [
       "jogo_de_chaves"
@@ -4086,12 +4086,12 @@
       0.6,
       0.605
      ],
-     "triangulos": 9194
+     "triangulos": 8890
     },
     {
      "no": "paralama_e",
      "tipo": "peca",
-     "peca": "paralama_e",
+     "peca": "paralama_e_van",
      "obrigatoria": false,
      "ferramentas": [
       "jogo_de_chaves"
@@ -4109,12 +4109,12 @@
       0.55,
       1.27
      ],
-     "triangulos": 5508
+     "triangulos": 4918
     },
     {
      "no": "paralama_d",
      "tipo": "peca",
-     "peca": "paralama_d",
+     "peca": "paralama_d_van",
      "obrigatoria": false,
      "ferramentas": [
       "jogo_de_chaves"
@@ -4132,7 +4132,7 @@
       0.55,
       1.27
      ],
-     "triangulos": 5430
+     "triangulos": 4934
     },
     {
      "no": "tampa_combustivel",
@@ -4146,12 +4146,12 @@
       0.8,
       -1.86
      ],
-     "triangulos": 282
+     "triangulos": 272
     },
     {
      "no": "para_brisa",
      "tipo": "peca",
-     "peca": "para_brisa",
+     "peca": "para_brisa_van",
      "obrigatoria": false,
      "ferramentas": [
       "jogo_de_chaves"
@@ -4165,10 +4165,10 @@
      "pai": "van_jornada",
      "origem_m": [
       0.0,
-      1.0,
-      0.55
+      1.04,
+      0.63
      ],
-     "triangulos": 2192
+     "triangulos": 2138
     },
     {
      "no": "porta_te",
@@ -4191,7 +4191,7 @@
       1.14,
       -2.4
      ],
-     "triangulos": 962
+     "triangulos": 972
     },
     {
      "no": "porta_td",
@@ -4214,12 +4214,12 @@
       1.14,
       -2.4
      ],
-     "triangulos": 724
+     "triangulos": 728
     },
     {
      "no": "para_choque_d",
      "tipo": "peca",
-     "peca": "para_choque_dianteiro",
+     "peca": "para_choque_dianteiro_van",
      "obrigatoria": false,
      "ferramentas": [
       "jogo_de_chaves"
@@ -4261,7 +4261,7 @@
     {
      "no": "farol_e",
      "tipo": "peca",
-     "peca": "farol",
+     "peca": "farol_van",
      "obrigatoria": false,
      "ferramentas": [
       "jogo_de_chaves"
@@ -4279,12 +4279,12 @@
       0.61,
       2.03
      ],
-     "triangulos": 1408
+     "triangulos": 1420
     },
     {
      "no": "farol_d",
      "tipo": "peca",
-     "peca": "farol",
+     "peca": "farol_van",
      "obrigatoria": false,
      "ferramentas": [
       "jogo_de_chaves"
@@ -4302,7 +4302,7 @@
       0.61,
       2.03
      ],
-     "triangulos": 1408
+     "triangulos": 1420
     },
     {
      "no": "lanterna_e",
@@ -4363,8 +4363,8 @@
      "depende_de": [],
      "pai": "porta_de",
      "origem_m": [
-      0.7686,
-      0.955,
+      0.7671,
+      0.995,
       0.5
      ],
      "triangulos": 114
@@ -4382,8 +4382,8 @@
      "depende_de": [],
      "pai": "porta_dd",
      "origem_m": [
-      -0.7686,
-      0.955,
+      -0.7671,
+      0.995,
       0.5
      ],
      "triangulos": 114
@@ -4724,7 +4724,7 @@
       0.5,
       -0.8
      ],
-     "triangulos": 1116
+     "triangulos": 830
     },
     {
      "no": "volante",
@@ -4786,8 +4786,8 @@
      "pai": "van_jornada",
      "origem_m": [
       0.38,
-      1.336,
-      -0.215
+      1.718,
+      -0.125
      ],
      "triangulos": 44
     },
@@ -4800,8 +4800,8 @@
      "pai": "van_jornada",
      "origem_m": [
       -0.38,
-      1.336,
-      -0.215
+      1.718,
+      -0.125
      ],
      "triangulos": 56
     }
@@ -5542,7 +5542,7 @@
    "valor": 1,
    "peso_kg": 2,
    "empilha": 1,
-   "padrao": "universal",
+   "padrao": "familia_rumo",
    "efeito": "ilumina um lado da frente à noite",
    "onde": [
     "ferro_velho",
@@ -5823,7 +5823,7 @@
    "valor": 1,
    "peso_kg": 9,
    "empilha": 1,
-   "padrao": "familia_rumo",
+   "padrao": "compacto_1_6",
    "efeito": "guarda 45 L de combustível",
    "onde": [
     "ferro_velho",
@@ -6137,6 +6137,34 @@
    "kb": 159.5
   },
   {
+   "id": "capo_picape",
+   "nome": "Capô da picape",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 14,
+   "empilha": 1,
+   "padrao": "picape_lida",
+   "efeito": "protege o motor de batidas e da chuva",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/capo_picape.glb",
+   "tamanho_m": [
+    1.508,
+    0.096,
+    1.335
+   ],
+   "triangulos": 3162,
+   "kb": 246.0
+  },
+  {
    "id": "tampa_cacamba",
    "nome": "Tampa da caçamba",
    "grupo": "loot",
@@ -6158,11 +6186,157 @@
    "arquivo": "pecas/tampa_cacamba.glb",
    "tamanho_m": [
     1.24,
-    0.423,
+    0.483,
     0.118
    ],
    "triangulos": 1444,
    "kb": 121.4
+  },
+  {
+   "id": "porta_dianteira_e_picape",
+   "nome": "Porta dianteira esquerda da picape",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 22,
+   "empilha": 1,
+   "padrao": "picape_lida",
+   "efeito": "protege o motorista; vidro e bolsa da porta",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/porta_dianteira_e_picape.glb",
+   "tamanho_m": [
+    1.062,
+    0.395,
+    1.005
+   ],
+   "triangulos": 11368,
+   "kb": 760.8
+  },
+  {
+   "id": "porta_dianteira_d_picape",
+   "nome": "Porta dianteira direita da picape",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 22,
+   "empilha": 1,
+   "padrao": "picape_lida",
+   "efeito": "protege o passageiro; vidro e bolsa da porta",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/porta_dianteira_d_picape.glb",
+   "tamanho_m": [
+    1.062,
+    0.395,
+    1.005
+   ],
+   "triangulos": 11336,
+   "kb": 759.1
+  },
+  {
+   "id": "paralama_e_picape",
+   "nome": "Para-lama dianteiro esquerdo da picape",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 5,
+   "empilha": 1,
+   "padrao": "picape_lida",
+   "efeito": "protege a roda e o farol de lado",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    4,
+    2
+   ],
+   "arquivo": "pecas/paralama_e_picape.glb",
+   "tamanho_m": [
+    0.751,
+    0.209,
+    1.473
+   ],
+   "triangulos": 6774,
+   "kb": 476.7
+  },
+  {
+   "id": "paralama_d_picape",
+   "nome": "Para-lama dianteiro direito da picape",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 5,
+   "empilha": 1,
+   "padrao": "picape_lida",
+   "efeito": "protege a roda e o farol de lado",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    4,
+    2
+   ],
+   "arquivo": "pecas/paralama_d_picape.glb",
+   "tamanho_m": [
+    0.751,
+    0.209,
+    1.473
+   ],
+   "triangulos": 6726,
+   "kb": 473.9
+  },
+  {
+   "id": "para_brisa_picape",
+   "nome": "Para-brisa da picape",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 12,
+   "empilha": 1,
+   "padrao": "picape_lida",
+   "efeito": "protege a frente da cabine (30% de quebrar ao tirar)",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/para_brisa_picape.glb",
+   "tamanho_m": [
+    1.475,
+    0.335,
+    0.664
+   ],
+   "triangulos": 2710,
+   "kb": 128.0
   },
   {
    "id": "vidro_traseiro_cabine",
@@ -6193,6 +6367,37 @@
    "kb": 3.1
   },
   {
+   "id": "para_choque_dianteiro_picape",
+   "nome": "Para-choque dianteiro da picape",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 7,
+   "empilha": 1,
+   "padrao": "picape_lida",
+   "efeito": "absorve a primeira parte das batidas de frente",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    7,
+    1
+   ],
+   "arquivo": "pecas/para_choque_dianteiro_picape.glb",
+   "tamanho_m": [
+    1.782,
+    0.213,
+    0.437
+   ],
+   "triangulos": 7864,
+   "kb": 373.8
+  },
+  {
    "id": "para_choque_traseiro_picape",
    "nome": "Para-choque traseiro da picape",
    "grupo": "loot",
@@ -6221,7 +6426,212 @@
     0.753
    ],
    "triangulos": 7816,
-   "kb": 376.1
+   "kb": 375.3
+  },
+  {
+   "id": "farol_picape",
+   "nome": "Farol com pisca da picape",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 2,
+   "empilha": 1,
+   "padrao": "picape_lida",
+   "efeito": "ilumina um lado da frente à noite",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    2,
+    1
+   ],
+   "arquivo": "pecas/farol_picape.glb",
+   "tamanho_m": [
+    0.36,
+    0.154,
+    0.123
+   ],
+   "triangulos": 1416,
+   "kb": 84.0
+  },
+  {
+   "id": "capo_van",
+   "nome": "Capô da van",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 14,
+   "empilha": 1,
+   "padrao": "van_jornada",
+   "efeito": "protege o motor de batidas e da chuva",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/capo_van.glb",
+   "tamanho_m": [
+    1.496,
+    0.245,
+    1.255
+   ],
+   "triangulos": 3180,
+   "kb": 247.2
+  },
+  {
+   "id": "porta_dianteira_e_van",
+   "nome": "Porta dianteira esquerda da van",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 22,
+   "empilha": 1,
+   "padrao": "van_jornada",
+   "efeito": "protege o motorista; vidro e bolsa da porta",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/porta_dianteira_e_van.glb",
+   "tamanho_m": [
+    1.252,
+    0.392,
+    1.005
+   ],
+   "triangulos": 9038,
+   "kb": 611.5
+  },
+  {
+   "id": "porta_dianteira_d_van",
+   "nome": "Porta dianteira direita da van",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 22,
+   "empilha": 1,
+   "padrao": "van_jornada",
+   "efeito": "protege o passageiro; vidro e bolsa da porta",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/porta_dianteira_d_van.glb",
+   "tamanho_m": [
+    1.252,
+    0.392,
+    1.005
+   ],
+   "triangulos": 9004,
+   "kb": 610.0
+  },
+  {
+   "id": "paralama_e_van",
+   "nome": "Para-lama dianteiro esquerdo da van",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 5,
+   "empilha": 1,
+   "padrao": "van_jornada",
+   "efeito": "protege a roda e o farol de lado",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    4,
+    2
+   ],
+   "arquivo": "pecas/paralama_e_van.glb",
+   "tamanho_m": [
+    0.685,
+    0.187,
+    1.371
+   ],
+   "triangulos": 4918,
+   "kb": 361.7
+  },
+  {
+   "id": "paralama_d_van",
+   "nome": "Para-lama dianteiro direito da van",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 5,
+   "empilha": 1,
+   "padrao": "van_jornada",
+   "efeito": "protege a roda e o farol de lado",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    4,
+    2
+   ],
+   "arquivo": "pecas/paralama_d_van.glb",
+   "tamanho_m": [
+    0.685,
+    0.187,
+    1.371
+   ],
+   "triangulos": 4934,
+   "kb": 363.0
+  },
+  {
+   "id": "para_brisa_van",
+   "nome": "Para-brisa da van",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 12,
+   "empilha": 1,
+   "padrao": "van_jornada",
+   "efeito": "protege a frente da cabine (30% de quebrar ao tirar)",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/para_brisa_van.glb",
+   "tamanho_m": [
+    1.469,
+    0.376,
+    1.055
+   ],
+   "triangulos": 2138,
+   "kb": 101.2
   },
   {
    "id": "porta_traseira_e_van",
@@ -6248,8 +6658,8 @@
     0.074,
     1.18
    ],
-   "triangulos": 962,
-   "kb": 83.4
+   "triangulos": 972,
+   "kb": 84.1
   },
   {
    "id": "porta_traseira_d_van",
@@ -6276,8 +6686,39 @@
     0.063,
     1.18
    ],
-   "triangulos": 724,
-   "kb": 70.4
+   "triangulos": 728,
+   "kb": 70.7
+  },
+  {
+   "id": "para_choque_dianteiro_van",
+   "nome": "Para-choque dianteiro da van",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 7,
+   "empilha": 1,
+   "padrao": "van_jornada",
+   "efeito": "absorve a primeira parte das batidas de frente",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    7,
+    1
+   ],
+   "arquivo": "pecas/para_choque_dianteiro_van.glb",
+   "tamanho_m": [
+    1.628,
+    0.213,
+    0.444
+   ],
+   "triangulos": 7864,
+   "kb": 373.8
   },
   {
    "id": "para_choque_traseiro_van",
@@ -6311,6 +6752,37 @@
    "kb": 376.1
   },
   {
+   "id": "farol_van",
+   "nome": "Farol com pisca da van",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 2,
+   "empilha": 1,
+   "padrao": "van_jornada",
+   "efeito": "ilumina um lado da frente à noite",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    2,
+    1
+   ],
+   "arquivo": "pecas/farol_van.glb",
+   "tamanho_m": [
+    0.393,
+    0.094,
+    0.609
+   ],
+   "triangulos": 1420,
+   "kb": 84.2
+  },
+  {
    "id": "divisoria_van",
    "nome": "Divisória da cabine",
    "grupo": "loot",
@@ -6333,10 +6805,10 @@
    "tamanho_m": [
     1.637,
     0.015,
-    1.474
+    1.496
    ],
-   "triangulos": 1116,
-   "kb": 54.0
+   "triangulos": 830,
+   "kb": 40.6
   }
  ],
  "ferramentas": [

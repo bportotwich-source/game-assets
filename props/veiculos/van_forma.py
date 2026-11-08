@@ -1,4 +1,5 @@
-"""Forma da van Jornada: a frente, o entre-eixos e as portas dianteiras do sedã Rumo (família Rumo), com o baú de teto alto e duas portas atrás.
+"""Forma da van Jornada: desenho próprio (bico curto e redondo, para-brisa grande e deitado, teto alto contínuo desde o para-brisa),
+baú de carga e duas portas atrás. O entre-eixos, o motor, as rodas e o interior da cabine são os do sedã Rumo.
 
 Medidas (m): comprimento da carroceria 4,50 (4,62 com para-choques), largura 1,68, altura 1,80, entre-eixos 2,55.
 Baú de 1,60 m de comprimento por 1,40 m de largura entre as forrações, 1,28 m de altura do assoalho ao teto.
@@ -10,7 +11,7 @@ from forma import prisma_xy
 exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sedan_forma.py'), encoding='utf-8').read(), 'sedan_forma.py', 'exec'))
 
 TIPO = 'van'
-PORTAS = 'd'                  # portas dianteiras do sedã; as de trás são as duas do baú (regioes_extra)
+PORTAS = 'd'                  # portas dianteiras; as de trás são as duas do baú (regioes_extra)
 ZR = -2.40
 ZBL = ZR + 0.001              # o teto alto vai até a traseira
 TAMPA = None                  # sem tampa: o baú abre pelas portas de trás
@@ -31,32 +32,53 @@ LANTERNA_FUNDO = 0.045
 ESTEPE = (0.36, -1.93)        # deitado debaixo do assoalho, no poço
 JANELAS = None                # definido depois das funções
 
+# frente própria
+SUFIXO_FRENTE = '_van'
+ZWS = 0.72                    # base do para-brisa mais para a frente
+Z_CAPO = 0.78
+DY_CINTURA = 0.04             # cintura 4 cm mais alta que a do sedã
+CAPO_Y0 = 0.70
+Y_PARALAMA = 0.99             # o para-lama não sobe na coluna do para-brisa
+Y_TETO_CORTE = 1.56           # janelas das portas bem altas
+Z_TOPO_PARABRISA = -0.10
+FAROL = (0.40, 0.80, 0.600, 0.700)        # faróis largos e baixos
+FAROL_PISCA = 0.075
+GRADE = (0.36, 0.612, 0.688)
+GRADE_ESTILO = 'fenda'
 
-def fx(z):  # a frente igual à do sedã; atrás quase reta (quinas do baú)
+
+def fx(z):  # frente arredondada; atrás quase reta (quinas do baú)
     d = z / ZF if z > 0 else z / ZR
-    d = min(abs(d), 1.0); n = 9 if z > 0 else 20
+    d = min(abs(d), 1.0); n = 6 if z > 0 else 20     # bico redondo, traseira de baú
     return max((1 - d ** n) ** (1 / n), 0.02)
 
 
-def yt(z):  # linha de cintura reta até atrás (a mesma da picape)
-    return _i(z, [(-2.40, 0.935), (-2.392, 0.958), (-2.37, 0.971), (-2.30, 0.977), (-1.7, 0.978), (-1.2, 0.968), (-0.4, 0.952),
-                  (0.3, 0.935), (0.64, 0.925), (0.8, 0.905), (1.2, 0.86), (1.6, 0.81), (1.85, 0.78), (2.0, 0.755), (2.07, 0.73), (2.10, 0.70)])
+def yt(z):  # cintura reta até atrás; capô curto que cai continuando a linha do para-brisa
+    return _i(z, [(-2.40, 0.955), (-2.392, 0.978), (-2.37, 0.991), (-2.30, 0.997), (-1.7, 0.998), (-1.2, 0.992), (-0.4, 0.985),
+                  (0.3, 0.976), (0.72, 0.966), (0.85, 0.950), (1.0, 0.928), (1.4, 0.874), (1.75, 0.822), (1.95, 0.784), (2.05, 0.748), (2.10, 0.70)])
+
+
+def hw(z):  # a frente afina mais que a do sedã (bico redondo)
+    return HW - 0.05 * max(0.0, z / ZF) ** 2 - 0.012 * max(0.0, z / ZR) ** 2
 
 
 def yb(z):
     return _i(z, [(-2.40, 0.40), (-2.385, 0.33), (-2.34, 0.27), (-2.22, 0.235), (-1.6, 0.225), (1.65, 0.225), (1.85, 0.25), (2.0, 0.29), (2.10, 0.33)])
 
 
-def ytop(z):  # o teto da cabine é o do sedã até a coluna do meio; atrás sobe para o teto alto do baú
-    return _i(z, [(ZR, 1.772), (ZR + 0.008, 1.788), (ZR + 0.025, 1.798), (ZR + 0.06, 1.80), (-1.0, 1.805), (-0.88, 1.80), (-0.79, 1.782),
-                  (-0.70, 1.735), (-0.61, 1.64), (-0.53, 1.52), (-0.47, 1.43), (-0.42, 1.396), (-0.38, 1.388),
-                  (-0.32, 1.383), (-0.22, 1.365), (-0.08, 1.31), (0.12, 1.225), (0.34, 1.12), (0.52, 1.02), (0.64, 0.93)])
+def ytop(z):  # para-brisa grande e deitado que sobe direto para o teto alto, reto até atrás
+    return _i(z, [(ZR, 1.772), (ZR + 0.008, 1.788), (ZR + 0.025, 1.798), (ZR + 0.06, 1.80), (-1.0, 1.805), (-0.40, 1.80), (-0.24, 1.787),
+                  (-0.14, 1.756), (-0.06, 1.700), (0.03, 1.610), (0.15, 1.485), (0.30, 1.340), (0.45, 1.200), (0.60, 1.068), (0.72, 0.970)])
 
 
 def _tumble(z):
-    """Quanto a lateral da cabine entra até o teto: 0,13 como no sedã nas portas, 0,035 no baú (parede quase em pé)."""
-    t = min(max((-0.45 - z) / 0.40, 0.0), 1.0); t = t * t * (3 - 2 * t)
-    return 0.13 + (0.035 - 0.13) * t
+    """Lateral quase em pé em toda a cabine e no baú."""
+    return 0.05
+
+
+def janela_dianteira(borda=0.0, _orig=janela_dianteira):
+    """A da família, cortada na frente: a coluna do para-brisa fica na carroceria, não na porta."""
+    return _orig(borda).intersection(sbox(-3, 0, 0.565 + borda, 3))
 
 
 def meio_cabine(z, enc=0.0, desce=0.0):
@@ -65,8 +87,8 @@ def meio_cabine(z, enc=0.0, desce=0.0):
     h = yt_ - (yt(z) - 0.03)
     wb = larg_cintura(z) - enc
     wt = wb - _tumble(z) * min(h, 0.46) / 0.46
-    return [(0, yb_), (wb, yb_)] + ([(wb, yt(z) - 0.03)] if enc else []) + [(wb - 0.006, yt(z) + 0.02), (wt + 0.035, yt_ - 0.055), (wt + 0.012, yt_ - 0.02),
-            (wt - 0.03, yt_ - 0.004), (wt - 0.2, yt_), (0, yt_ + 0.004)]
+    return [(0, yb_), (wb, yb_)] + ([(wb, yt(z) - 0.03)] if enc else []) + [(wb - 0.006, yt(z) + 0.02), (wt + 0.045, yt_ - 0.075), (wt + 0.018, yt_ - 0.028),
+            (wt - 0.03, yt_ - 0.005), (wt - 0.2, yt_), (0, yt_ + 0.006)]
 
 
 def quina_cabine(z):

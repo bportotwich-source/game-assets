@@ -122,25 +122,25 @@ Medidas 2,08 × 1,55 × 4,28 m · 220916 triângulos · 11,0 MB
 
 ## Picape Lida (`picape_lida`)
 
-Picape de cabine simples da família Rumo, desenho próprio e sem marca. A frente, as portas, o motor, as rodas, o tanque, o escapamento, os bancos e o volante são os mesmos do sedã Rumo. A caçamba é aberta, leva 600 kg e a tampa cai para trás.
+Picape de cabine simples, desenho próprio e sem marca: frente quadrada e alta, faróis duplos, capô reto, para-brisa mais em pé e alargadores nas rodas. O motor, as rodas, o tanque, o escapamento, os bancos e o volante são os mesmos do sedã Rumo. A caçamba é aberta, leva 600 kg e a tampa cai para trás.
 
-Medidas 2,08 × 1,55 × 4,68 m · 212008 triângulos · 10,5 MB
+Medidas 2,08 × 1,62 × 4,68 m · 213868 triângulos · 10,6 MB
 
 | Nó | Tipo | Vira o item | Precisa para andar | Abre | Ferramentas | Tempo (tirar / pôr) |
 |---|---|---|---|---|---|---|
-| `capo` | tampa | `capo` | - | -68° em x | jogo_de_chaves | 30 s / 40 s |
+| `capo` | tampa | `capo_picape` | - | -68° em x | jogo_de_chaves | 30 s / 40 s |
 | `tampa_porta_malas` | tampa | `tampa_cacamba` | - | -90° em x | jogo_de_chaves | 30 s / 40 s |
-| `porta_de` | porta | `porta_dianteira_e` | - | -66° em y | jogo_de_chaves | 60 s / 75 s |
-| `porta_dd` | porta | `porta_dianteira_d` | - | 66° em y | jogo_de_chaves | 60 s / 75 s |
-| `paralama_e` | peca | `paralama_e` | - | - | jogo_de_chaves | 60 s / 70 s |
-| `paralama_d` | peca | `paralama_d` | - | - | jogo_de_chaves | 60 s / 70 s |
+| `porta_de` | porta | `porta_dianteira_e_picape` | - | -66° em y | jogo_de_chaves | 60 s / 75 s |
+| `porta_dd` | porta | `porta_dianteira_d_picape` | - | 66° em y | jogo_de_chaves | 60 s / 75 s |
+| `paralama_e` | peca | `paralama_e_picape` | - | - | jogo_de_chaves | 60 s / 70 s |
+| `paralama_d` | peca | `paralama_d_picape` | - | - | jogo_de_chaves | 60 s / 70 s |
 | `tampa_combustivel` | tampa | - | - | -80° em y | - | - |
-| `para_brisa` | peca | `para_brisa` | - | - | jogo_de_chaves | 90 s / 120 s |
+| `para_brisa` | peca | `para_brisa_picape` | - | - | jogo_de_chaves | 90 s / 120 s |
 | `vidro_traseiro` | peca | `vidro_traseiro_cabine` | - | - | jogo_de_chaves | 90 s / 120 s |
-| `para_choque_d` | peca | `para_choque_dianteiro` | - | - | jogo_de_chaves | 40 s / 50 s |
+| `para_choque_d` | peca | `para_choque_dianteiro_picape` | - | - | jogo_de_chaves | 40 s / 50 s |
 | `para_choque_t` | peca | `para_choque_traseiro_picape` | - | - | jogo_de_chaves | 40 s / 50 s |
-| `farol_e` | peca | `farol` | - | - | jogo_de_chaves | 20 s / 25 s |
-| `farol_d` | peca | `farol` | - | - | jogo_de_chaves | 20 s / 25 s |
+| `farol_e` | peca | `farol_picape` | - | - | jogo_de_chaves | 20 s / 25 s |
+| `farol_d` | peca | `farol_picape` | - | - | jogo_de_chaves | 20 s / 25 s |
 | `lanterna_e` | peca | `lanterna_vertical` | - | - | jogo_de_chaves | 15 s / 20 s |
 | `lanterna_d` | peca | `lanterna_vertical` | - | - | jogo_de_chaves | 15 s / 20 s |
 | `retrovisor_e` | peca | `retrovisor` | - | - | - | 5 s / 20 s |
@@ -176,25 +176,25 @@ Medidas 2,08 × 1,55 × 4,68 m · 212008 triângulos · 10,5 MB
 
 ## Van Jornada (`van_jornada`)
 
-Van de carga da família Rumo, desenho próprio e sem marca. A frente, as portas dianteiras, o motor, as rodas, o tanque, o escapamento, os bancos e o volante são os mesmos do sedã Rumo. O baú tem teto alto, assoalho de compensado, leva 650 kg e abre por duas portas atrás; o estepe fica num poço debaixo do assoalho.
+Van de carga, desenho próprio e sem marca: bico curto e redondo, faróis largos, para-brisa grande e teto alto contínuo até atrás. O motor, as rodas, o tanque, o escapamento, os bancos e o volante são os mesmos do sedã Rumo. O baú tem assoalho de compensado, leva 650 kg e abre por duas portas atrás; o estepe fica num poço debaixo do assoalho.
 
-Medidas 2,08 × 1,81 × 4,68 m · 205192 triângulos · 10,1 MB
+Medidas 2,07 × 1,81 × 4,68 m · 206772 triângulos · 10,2 MB
 
 | Nó | Tipo | Vira o item | Precisa para andar | Abre | Ferramentas | Tempo (tirar / pôr) |
 |---|---|---|---|---|---|---|
-| `capo` | tampa | `capo` | - | -68° em x | jogo_de_chaves | 30 s / 40 s |
-| `porta_de` | porta | `porta_dianteira_e` | - | -66° em y | jogo_de_chaves | 60 s / 75 s |
-| `porta_dd` | porta | `porta_dianteira_d` | - | 66° em y | jogo_de_chaves | 60 s / 75 s |
-| `paralama_e` | peca | `paralama_e` | - | - | jogo_de_chaves | 60 s / 70 s |
-| `paralama_d` | peca | `paralama_d` | - | - | jogo_de_chaves | 60 s / 70 s |
+| `capo` | tampa | `capo_van` | - | -68° em x | jogo_de_chaves | 30 s / 40 s |
+| `porta_de` | porta | `porta_dianteira_e_van` | - | -66° em y | jogo_de_chaves | 60 s / 75 s |
+| `porta_dd` | porta | `porta_dianteira_d_van` | - | 66° em y | jogo_de_chaves | 60 s / 75 s |
+| `paralama_e` | peca | `paralama_e_van` | - | - | jogo_de_chaves | 60 s / 70 s |
+| `paralama_d` | peca | `paralama_d_van` | - | - | jogo_de_chaves | 60 s / 70 s |
 | `tampa_combustivel` | tampa | - | - | -80° em y | - | - |
-| `para_brisa` | peca | `para_brisa` | - | - | jogo_de_chaves | 90 s / 120 s |
+| `para_brisa` | peca | `para_brisa_van` | - | - | jogo_de_chaves | 90 s / 120 s |
 | `porta_te` | porta | `porta_traseira_e_van` | - | -100° em y | jogo_de_chaves | 50 s / 60 s |
 | `porta_td` | porta | `porta_traseira_d_van` | - | 100° em y | jogo_de_chaves | 50 s / 60 s |
-| `para_choque_d` | peca | `para_choque_dianteiro` | - | - | jogo_de_chaves | 40 s / 50 s |
+| `para_choque_d` | peca | `para_choque_dianteiro_van` | - | - | jogo_de_chaves | 40 s / 50 s |
 | `para_choque_t` | peca | `para_choque_traseiro_van` | - | - | jogo_de_chaves | 40 s / 50 s |
-| `farol_e` | peca | `farol` | - | - | jogo_de_chaves | 20 s / 25 s |
-| `farol_d` | peca | `farol` | - | - | jogo_de_chaves | 20 s / 25 s |
+| `farol_e` | peca | `farol_van` | - | - | jogo_de_chaves | 20 s / 25 s |
+| `farol_d` | peca | `farol_van` | - | - | jogo_de_chaves | 20 s / 25 s |
 | `lanterna_e` | peca | `lanterna_vertical` | - | - | jogo_de_chaves | 15 s / 20 s |
 | `lanterna_d` | peca | `lanterna_vertical` | - | - | jogo_de_chaves | 15 s / 20 s |
 | `retrovisor_e` | peca | `retrovisor` | - | - | - | 5 s / 20 s |
@@ -246,7 +246,7 @@ Medidas 2,08 × 1,81 × 4,68 m · 205192 triângulos · 10,1 MB
 | Vidro traseiro (`vidro_traseiro`) | sedan_rumo | 8 kg | carga nas mãos | protege a traseira da cabine | 1856 |
 | Para-choque dianteiro (`para_choque_dianteiro`) | familia_rumo | 7 kg | 7 × 1 | absorve a primeira parte das batidas de frente | 7864 |
 | Para-choque traseiro (`para_choque_traseiro`) | sedan_rumo | 7 kg | 7 × 1 | absorve a primeira parte das batidas de trás | 7688 |
-| Farol com pisca (`farol`) | universal | 2 kg | 2 × 1 | ilumina um lado da frente à noite | 1408 |
+| Farol com pisca (`farol`) | familia_rumo | 2 kg | 2 × 1 | ilumina um lado da frente à noite | 1408 |
 | Lanterna traseira (`lanterna_traseira`) | universal | 1 kg | 2 × 1 | luz de freio, de ré e pisca | 504 |
 | Retrovisor (`retrovisor`) | universal | 0,8 kg | 1 × 1 | mostra o que vem atrás | 114 |
 | Roda aro 14 com pneu (`roda_aro14`) | aro14_4furos | 16 kg | 3 × 3 | roda de aço com pneu 185/70; também é o estepe | 9344 |
@@ -255,7 +255,7 @@ Medidas 2,08 × 1,81 × 4,68 m · 205192 triângulos · 10,1 MB
 | Radiador (`radiador`) | compacto_1_6 | 6 kg | 4 × 3 | esfria o motor; sem ele o motor ferve em 2 minutos | 992 |
 | Bateria 12 V (`bateria_12v`) | bateria_12v | 14 kg | 2 × 2 | dá partida e alimenta faróis, buzina e rádio; serve no gerador da base | 696 |
 | Escapamento com silencioso (`escapamento`) | compacto_1_6 | 8 kg | 6 × 1 | sem ele o motor faz o dobro de barulho | 2092 |
-| Tanque de combustível 45 L (`tanque_45l`) | familia_rumo | 9 kg | 5 × 3 | guarda 45 L de combustível | 172 |
+| Tanque de combustível 45 L (`tanque_45l`) | compacto_1_6 | 9 kg | 5 × 3 | guarda 45 L de combustível | 172 |
 | Banco dianteiro (`banco_dianteiro`) | universal | 15 kg | carga nas mãos | sem o banco do motorista não dá para dirigir | 6256 |
 | Banco traseiro (`banco_traseiro`) | universal | 20 kg | carga nas mãos | leva 3 passageiros; sem ele o espaço vira carga | 6028 |
 | Volante (`volante`) | universal | 2,5 kg | 2 × 2 | tirar o volante trava o carro contra roubo | 1208 |
@@ -266,13 +266,29 @@ Medidas 2,08 × 1,81 × 4,68 m · 205192 triângulos · 10,1 MB
 | Para-choque traseiro do hatch (`para_choque_traseiro_hatch`) | hatch_brisa | 6 kg | 6 × 1 | absorve a primeira parte das batidas de trás | 7688 |
 | Lanterna traseira em pé (`lanterna_vertical`) | universal | 1 kg | 1 × 2 | luz de freio, de ré e pisca | 668 |
 | Escapamento curto com silencioso (`escapamento_curto`) | hatch_brisa | 7 kg | 5 × 1 | sem ele o motor faz o dobro de barulho | 2092 |
+| Capô da picape (`capo_picape`) | picape_lida | 14 kg | carga nas mãos | protege o motor de batidas e da chuva | 3162 |
 | Tampa da caçamba (`tampa_cacamba`) | picape_lida | 14 kg | carga nas mãos | fecha a caçamba; aberta, vira rampa e aumenta a carga | 1444 |
+| Porta dianteira esquerda da picape (`porta_dianteira_e_picape`) | picape_lida | 22 kg | carga nas mãos | protege o motorista; vidro e bolsa da porta | 11368 |
+| Porta dianteira direita da picape (`porta_dianteira_d_picape`) | picape_lida | 22 kg | carga nas mãos | protege o passageiro; vidro e bolsa da porta | 11336 |
+| Para-lama dianteiro esquerdo da picape (`paralama_e_picape`) | picape_lida | 5 kg | 4 × 2 | protege a roda e o farol de lado | 6774 |
+| Para-lama dianteiro direito da picape (`paralama_d_picape`) | picape_lida | 5 kg | 4 × 2 | protege a roda e o farol de lado | 6726 |
+| Para-brisa da picape (`para_brisa_picape`) | picape_lida | 12 kg | carga nas mãos | protege a frente da cabine (30% de quebrar ao tirar) | 2710 |
 | Vidro de trás da cabine (`vidro_traseiro_cabine`) | picape_lida | 4 kg | carga nas mãos | protege a cabine por trás | 44 |
+| Para-choque dianteiro da picape (`para_choque_dianteiro_picape`) | picape_lida | 7 kg | 7 × 1 | absorve a primeira parte das batidas de frente | 7864 |
 | Para-choque traseiro da picape (`para_choque_traseiro_picape`) | picape_lida | 7 kg | 7 × 1 | absorve a primeira parte das batidas de trás; tem o degrau | 7816 |
-| Porta de trás esquerda da van (`porta_traseira_e_van`) | van_jornada | 16 kg | carga nas mãos | fecha o baú; tem a maçaneta e a fechadura | 962 |
-| Porta de trás direita da van (`porta_traseira_d_van`) | van_jornada | 16 kg | carga nas mãos | fecha o baú; abre depois da esquerda | 724 |
+| Farol com pisca da picape (`farol_picape`) | picape_lida | 2 kg | 2 × 1 | ilumina um lado da frente à noite | 1416 |
+| Capô da van (`capo_van`) | van_jornada | 14 kg | carga nas mãos | protege o motor de batidas e da chuva | 3180 |
+| Porta dianteira esquerda da van (`porta_dianteira_e_van`) | van_jornada | 22 kg | carga nas mãos | protege o motorista; vidro e bolsa da porta | 9038 |
+| Porta dianteira direita da van (`porta_dianteira_d_van`) | van_jornada | 22 kg | carga nas mãos | protege o passageiro; vidro e bolsa da porta | 9004 |
+| Para-lama dianteiro esquerdo da van (`paralama_e_van`) | van_jornada | 5 kg | 4 × 2 | protege a roda e o farol de lado | 4918 |
+| Para-lama dianteiro direito da van (`paralama_d_van`) | van_jornada | 5 kg | 4 × 2 | protege a roda e o farol de lado | 4934 |
+| Para-brisa da van (`para_brisa_van`) | van_jornada | 12 kg | carga nas mãos | protege a frente da cabine (30% de quebrar ao tirar) | 2138 |
+| Porta de trás esquerda da van (`porta_traseira_e_van`) | van_jornada | 16 kg | carga nas mãos | fecha o baú; tem a maçaneta e a fechadura | 972 |
+| Porta de trás direita da van (`porta_traseira_d_van`) | van_jornada | 16 kg | carga nas mãos | fecha o baú; abre depois da esquerda | 728 |
+| Para-choque dianteiro da van (`para_choque_dianteiro_van`) | van_jornada | 7 kg | 7 × 1 | absorve a primeira parte das batidas de frente | 7864 |
 | Para-choque traseiro da van (`para_choque_traseiro_van`) | van_jornada | 7 kg | 7 × 1 | absorve a primeira parte das batidas de trás; tem o degrau | 7816 |
-| Divisória da cabine (`divisoria_van`) | van_jornada | 9 kg | carga nas mãos | segura a carga numa freada e esconde o baú de quem olha pela janela | 1116 |
+| Farol com pisca da van (`farol_van`) | van_jornada | 2 kg | 2 × 1 | ilumina um lado da frente à noite | 1420 |
+| Divisória da cabine (`divisoria_van`) | van_jornada | 9 kg | carga nas mãos | segura a carga numa freada e esconde o baú de quem olha pela janela | 830 |
 
 ## Ferramentas e materiais de oficina (loot)
 

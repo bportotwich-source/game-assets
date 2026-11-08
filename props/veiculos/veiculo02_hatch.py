@@ -36,7 +36,7 @@ def hatch_brisa(Vc):
     for s, l in ((1, 'e'), (-1, 'd')):
         Vc.parte(f'lanterna_{l}', (s * 0.70, 0.79, SF.ZR + 0.06), 'peca', item=PECA['lanterna_vertical'], peca='lanterna_vertical', **REG['lanterna'])
     for s, l, pai in ((1, 'e', 'porta_de'), (-1, 'd', 'porta_dd')):
-        Vc.parte(f'retrovisor_{l}', (s * X0, 0.955, 0.50), 'peca', pai=pai, item=PECA['retrovisor'], peca='retrovisor', **REG['retrovisor'])
+        Vc.parte(f'retrovisor_{l}', (s * X0, 0.955 + SF.DY_CINTURA, 0.50), 'peca', pai=pai, item=PECA['retrovisor'], peca='retrovisor', **REG['retrovisor'])
     for no, s, zc in (('roda_de', 1, SF.EIXO_D), ('roda_dd', -1, SF.EIXO_D), ('roda_te', 1, SF.EIXO_T), ('roda_td', -1, SF.EIXO_T)):
         Vc.parte(no, (s * SF.X_RODA, SF.Y_RODA, zc), 'roda', repouso=(0, 0, 90), item=PECA['roda_aro14'], peca='roda_aro14',
                  tracao=zc > 0, direcao=zc > 0, **REG['roda'])
@@ -54,8 +54,8 @@ def hatch_brisa(Vc):
     Vc.parte('volante', (0.37, 0.82, 0.06), 'peca', repouso=(-68, 0, 0), item=PECA['volante'], peca='volante', **REG['volante'])
     Vc.parte('porta_luvas', (-0.375, 0.586, 0.215), 'tampa', eixo='x', abre_graus=-75, peca=None)
     Vc.parte('assoalho_porta_malas', (0, 0.478, -1.585), 'tampa', eixo='x', abre_graus=75, peca=None)
-    Vc.parte('quebra_sol_e', (0.38, 1.336, -0.215), 'tampa', eixo='x', abre_graus=-80, peca=None)
-    Vc.parte('quebra_sol_d', (-0.38, 1.336, -0.215), 'tampa', eixo='x', abre_graus=-80, peca=None)
+    Vc.parte('quebra_sol_e', (0.38, *_quebra_sol()), 'tampa', eixo='x', abre_graus=-80, peca=None)
+    Vc.parte('quebra_sol_d', (-0.38, *_quebra_sol()), 'tampa', eixo='x', abre_graus=-80, peca=None)
 
     fora, dentro = _carroceria(Vc, _recortes())
     _frisos(Vc, fora)

@@ -1,6 +1,6 @@
-# Veiculo 4: van Jornada (van de carga da família Rumo, desenho próprio e sem marca).
-# Mesma frente, portas dianteiras, motor, rodas, tanque, escapamento, bancos e painel do sedã Rumo; atrás da cabine, o baú de teto alto
-# com duas portas que abrem para os lados. Carregado por gerar_veiculos.py depois de veiculo01_sedan.py (a forma vem de van_forma.py).
+# Veiculo 4: van Jornada (van de carga, desenho próprio e sem marca).
+# Frente, portas e cabine com desenho próprio (bico curto, para-brisa grande, teto alto contínuo); motor, rodas, tanque, escapamento,
+# bancos e painel são os do sedã Rumo. Atrás, o baú com duas portas que abrem para os lados. Carregado por gerar_veiculos.py depois de veiculo01_sedan.py (a forma vem de van_forma.py).
 import van_forma as _VF
 
 PECA.update({
@@ -9,11 +9,13 @@ PECA.update({
     'para_choque_traseiro_van': _peca('para_choque_traseiro_van', 'Para-choque traseiro da van', 7, 'van_jornada', 'absorve a primeira parte das batidas de trás; tem o degrau', (7, 1)),
     'divisoria_van': _peca('divisoria_van', 'Divisória da cabine', 9, 'van_jornada', 'segura a carga numa freada e esconde o baú de quem olha pela janela', carga_maos=True),
 })
+_frente_propria('_van', 'van_jornada', 'da van')
 
 
 @modelo('van_jornada', 'Van Jornada', classe='van', portas=4, lugares=2,
-        descricao='Van de carga da família Rumo, desenho próprio e sem marca. A frente, as portas dianteiras, o motor, as rodas, o tanque, o '
-                  'escapamento, os bancos e o volante são os mesmos do sedã Rumo. O baú tem teto alto, assoalho de compensado, leva 650 kg '
+        descricao='Van de carga, desenho próprio e sem marca: bico curto e redondo, faróis largos, para-brisa grande e teto alto contínuo '
+                  'até atrás. O motor, as rodas, o tanque, o escapamento, os bancos e o volante são os mesmos do sedã Rumo. O baú tem '
+                  'assoalho de compensado, leva 650 kg '
                   'e abre por duas portas atrás; o estepe fica num poço debaixo do assoalho.',
         fisica=dict(massa_kg=1100, centro_massa_m=[0, 0.55, 0.15], tracao='dianteira', forca_motor_n=3300, freio=38, carga_kg=650,
                     direcao_graus=[32, 8], vel_max_kmh=130, roda_raio_m=_VF.R_RODA, roda_largura_m=0.185,
@@ -31,15 +33,15 @@ def van_jornada(Vc):
     for no, s, it, ab in (('porta_te', 1, 'porta_traseira_e_van', -100), ('porta_td', -1, 'porta_traseira_d_van', 100)):
         Vc.parte(no, (s * SF.X_PORTA, 1.14, SF.ZR), 'porta', eixo='y', abre_graus=ab, repouso=(90, 0, 0), item=PECA[it], peca=it,
                  obrigatoria=False, ferramentas=_JC, tempo_s=[50, 60], depende_de=[])
-    Vc.parte('para_choque_d', (0, 0.315, SF.ZF), 'peca', item=PECA['para_choque_dianteiro'], peca='para_choque_dianteiro', **REG['para_choque'])
+    Vc.parte('para_choque_d', (0, 0.315, SF.ZF), 'peca', item=PECA['para_choque_dianteiro_van'], peca='para_choque_dianteiro_van', **REG['para_choque'])
     Vc.parte('para_choque_t', (0, 0.315, SF.ZR), 'peca', item=PECA['para_choque_traseiro_van'], peca='para_choque_traseiro_van', **REG['para_choque'])
     for s, l in ((1, 'e'), (-1, 'd')):
-        Vc.parte(f'farol_{l}', (s * 0.58, 0.61, 2.03), 'peca', item=PECA['farol'], peca='farol', **REG['farol'])
+        Vc.parte(f'farol_{l}', (s * 0.58, 0.61, 2.03), 'peca', item=PECA['farol_van'], peca='farol_van', **REG['farol'])
     for s, l in ((1, 'e'), (-1, 'd')):
         Vc.parte(f'lanterna_{l}', (s * 0.70, 0.79, SF.ZR + 0.06), 'peca', item=PECA['lanterna_vertical'], peca='lanterna_vertical',
                  **dict(REG['lanterna'], depende_de=[abre_tras]))
     for s, l, pai in ((1, 'e', 'porta_de'), (-1, 'd', 'porta_dd')):
-        Vc.parte(f'retrovisor_{l}', (s * X0, 0.955, 0.50), 'peca', pai=pai, item=PECA['retrovisor'], peca='retrovisor', **REG['retrovisor'])
+        Vc.parte(f'retrovisor_{l}', (s * X0, 0.955 + SF.DY_CINTURA, 0.50), 'peca', pai=pai, item=PECA['retrovisor'], peca='retrovisor', **REG['retrovisor'])
     for no, s, zc in (('roda_de', 1, SF.EIXO_D), ('roda_dd', -1, SF.EIXO_D), ('roda_te', 1, SF.EIXO_T), ('roda_td', -1, SF.EIXO_T)):
         Vc.parte(no, (s * SF.X_RODA, SF.Y_RODA, zc), 'roda', repouso=(0, 0, 90), item=PECA['roda_aro14'], peca='roda_aro14',
                  tracao=zc > 0, direcao=zc > 0, **REG['roda'])
@@ -59,8 +61,8 @@ def van_jornada(Vc):
     Vc.parte('volante', (0.37, 0.82, 0.06), 'peca', repouso=(-68, 0, 0), item=PECA['volante'], peca='volante', **REG['volante'])
     Vc.parte('porta_luvas', (-0.375, 0.586, 0.215), 'tampa', eixo='x', abre_graus=-75, peca=None)
     Vc.parte('assoalho_porta_malas', (0, SF.Y_PISO, -1.60), 'tampa', eixo='x', abre_graus=75, peca=None)
-    Vc.parte('quebra_sol_e', (0.38, 1.336, -0.215), 'tampa', eixo='x', abre_graus=-80, peca=None)
-    Vc.parte('quebra_sol_d', (-0.38, 1.336, -0.215), 'tampa', eixo='x', abre_graus=-80, peca=None)
+    Vc.parte('quebra_sol_e', (0.38, *_quebra_sol()), 'tampa', eixo='x', abre_graus=-80, peca=None)
+    Vc.parte('quebra_sol_d', (-0.38, *_quebra_sol()), 'tampa', eixo='x', abre_graus=-80, peca=None)
 
     fora, dentro = _carroceria(Vc, _recortes())
     _frisos(Vc, fora)
@@ -89,7 +91,7 @@ def van_jornada(Vc):
     _bocal_picape(p)
     _banco_dianteiro(Vc.achar('banco_motorista')['geo'], 0.37); _banco_dianteiro(Vc.achar('banco_passageiro')['geo'], -0.37)
     _painel(Vc, dentro); _forro_e_cabine(Vc, dentro)
-    _portas_tras(Vc); _bau(Vc, dentro); _divisoria(Vc, dentro)
+    _portas_tras(Vc); _bau(Vc, dentro); _divisoria(Vc, dentro); _nervuras_teto(p)
     _fundo_preto(Vc)
     zb = SF.Z_BOCAL
     for no, pos in (('camera_1a_pessoa', (0.37, 1.13, -0.32)), ('assento_motorista', (0.37, 0.48, -0.30)), ('assento_passageiro', (-0.37, 0.48, -0.30)),
@@ -205,3 +207,22 @@ def _divisoria(Vc, dentro):
     for x in np.arange(-0.62, 0.63, 0.08):
         q.add('aco_escuro', inter(alto, _cx(x - 0.006, x + 0.006, 1.05, 2.0, -3, 3)))
     for y in (1.30, 1.50): q.add('aco_escuro', inter(alto, _cx(-0.9, 0.9, y - 0.006, y + 0.006, -3, 3)))
+
+
+def _nervuras_teto(p):
+    """Quatro nervuras estampadas no teto, da coluna do meio até perto da traseira, e as calhas de chuva nas laterais do teto."""
+    z0, z1 = -0.42, SF.ZR + 0.12
+    for x in (-0.45, -0.15, 0.15, 0.45):
+        zs = np.linspace(z0, z1, 24); an = []
+        for z in zs:
+            y = SF.ytop(z) - 0.004
+            an.append([(x - 0.045, y, z), (x - 0.02, y + 0.012, z), (x + 0.02, y + 0.012, z), (x + 0.045, y, z), (x, y - 0.01, z)])
+        p.add('pintura', loft(an))
+    for s in (1, -1):
+        zs = np.linspace(SF.Z_CALHA, SF.ZR + 0.03, 40); an = []
+        for z in zs:
+            x, y = SF.quina_cabine(z); x = x * s
+            an.append([(x - 0.006 * s, y + 0.012, z), (x + 0.008 * s, y + 0.010, z), (x + 0.010 * s, y, z), (x - 0.004 * s, y + 0.002, z)])
+        m = loft(an)
+        if s < 0: m.invert()
+        p.add('cromado', m)

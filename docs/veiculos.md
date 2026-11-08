@@ -78,7 +78,9 @@ Cada peça é um nó separado no modelo, com nome fixo (o **encaixe**). Quando o
 
 No hatch Brisa os encaixes têm os mesmos nomes. Muda o que é da traseira: `tampa_porta_malas` vira a tampa traseira (`tampa_traseira_hatch`, 12 kg, abre 80° com o vidro), o `vidro_traseiro` fica preso nela (`vidro_traseiro_hatch`, 6 kg), as lanternas são em pé (`lanterna_vertical`), o escapamento é curto (`escapamento_curto`) e o porta-malas tem 7 × 4 casas, com o estepe embaixo do assoalho.
 
-Na picape Lida só há as portas dianteiras (as mesmas do sedã) e os bancos da frente. `tampa_porta_malas` é a tampa da caçamba (`tampa_cacamba`, 14 kg): a dobradiça fica embaixo e ela cai 90° para trás, virando rampa. `vidro_traseiro` é o vidro de trás da cabine (`vidro_traseiro_cabine`). O estepe vai deitado na frente da caçamba, preso por cintas, e sai sem ferramenta. O escapamento e o tanque são os do sedã.
+A picape Lida e a van Jornada têm desenho próprio por fora: a frente, o capô, as portas dianteiras, os para-lamas, o para-brisa, o para-choque da frente e os faróis são delas (ids com `_picape` e `_van`) e não servem no sedã nem no hatch. Por dentro e por baixo são iguais aos outros: motor, rodas, tanque, escapamento, bancos, painel e volante trocam entre os quatro.
+
+Na picape Lida só há as portas dianteiras e os bancos da frente. `tampa_porta_malas` é a tampa da caçamba (`tampa_cacamba`, 14 kg): a dobradiça fica embaixo e ela cai 90° para trás, virando rampa. `vidro_traseiro` é o vidro de trás da cabine (`vidro_traseiro_cabine`). O estepe vai deitado na frente da caçamba, preso por cintas, e sai sem ferramenta. O escapamento e o tanque são os do sedã.
 
 Na van Jornada também só há as portas dianteiras e os bancos da frente. Não existe `tampa_porta_malas` nem `vidro_traseiro`: o baú abre por duas portas atrás, `porta_te` e `porta_td` (`porta_traseira_e_van` e `porta_traseira_d_van`, 16 kg cada), presas na quina e abrindo 100° para os lados. Os vidros de trás são parte delas, e a placa fica na porta esquerda. A esquerda tem a maçaneta e a fechadura; a direita só abre depois dela. Atrás dos bancos há a `divisoria` (`divisoria_van`, 9 kg), chapa até a cintura e grade até o teto, que sai por dentro do baú. O baú tem 10 × 8 casas e leva 650 kg, com assoalho de compensado, forração lateral, trilhos de amarrar e 1,28 m de altura. O estepe fica num poço debaixo do assoalho (`assoalho_porta_malas`), com o macaco e a chave de roda. As lanternas são as em pé do hatch, nas colunas das quinas.
 
@@ -125,15 +127,15 @@ Cada peça tem um `padrao`. Peças do mesmo padrão servem em qualquer modelo qu
 
 | Padrão | Peças | Serve em |
 |---|---|---|
-| `compacto_1_6` | motor, alternador, radiador, escapamentos | sedã Rumo, hatch Brisa, picape Lida e van Jornada |
+| `compacto_1_6` | motor, alternador, radiador, escapamentos, tanque de 45 L | sedã Rumo, hatch Brisa, picape Lida e van Jornada |
 | `aro14_4furos` | roda, estepe | sedã, hatch, picape, van |
 | `bateria_12v` | bateria | todos os carros e o gerador da base |
-| `familia_rumo` | capô, portas dianteiras, para-lamas, para-brisa, para-choque dianteiro, tanque | sedã Rumo, hatch Brisa, picape Lida e van Jornada (a mesma frente) |
+| `familia_rumo` | capô, portas dianteiras, para-lamas, para-brisa, para-choque dianteiro, faróis | sedã Rumo e hatch Brisa (a mesma frente) |
 | `sedan_rumo` | portas traseiras, tampa do porta-malas, para-choque traseiro, vidro traseiro | só o sedã Rumo |
 | `hatch_brisa` | portas traseiras, tampa traseira com vidro, para-choque traseiro, escapamento curto | só o hatch Brisa |
-| `picape_lida` | tampa da caçamba, vidro de trás da cabine, para-choque traseiro com degrau | só a picape Lida |
-| `van_jornada` | portas de trás com os vidros, divisória da cabine, para-choque traseiro com degrau | só a van Jornada |
-| `universal` | faróis, lanternas (as do sedã e as em pé do hatch, da picape e da van), retrovisores, bancos, volante | qualquer carro |
+| `picape_lida` | capô, portas dianteiras, para-lamas, para-brisa, faróis duplos, para-choques cromados, tampa da caçamba, vidro de trás da cabine | só a picape Lida |
+| `van_jornada` | capô, portas dianteiras, para-lamas, para-brisa, faróis largos, para-choques, portas de trás com os vidros, divisória da cabine | só a van Jornada |
+| `universal` | lanternas (as do sedã e as em pé do hatch, da picape e da van), retrovisores, bancos, volante | qualquer carro |
 
 ## 4. Desmontar e montar
 

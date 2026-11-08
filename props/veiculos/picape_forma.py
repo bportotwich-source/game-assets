@@ -1,7 +1,8 @@
-"""Forma da picape Lida: a frente, o entre-eixos e as portas dianteiras do sedã Rumo (família Rumo), cabine simples e caçamba aberta.
+"""Forma da picape Lida: desenho próprio (frente quadrada e alta, capô reto, para-brisa mais em pé, teto mais alto), cabine simples e
+caçamba aberta. O entre-eixos, o motor, as rodas e o interior são os do sedã Rumo.
 
-Medidas (m): comprimento da carroceria 4,50 (4,62 com para-choques), largura 1,68, altura 1,39, entre-eixos 2,55.
-Caçamba de 1,48 m de comprimento por 1,46 m de largura, 0,47 m de fundo. Carrega sedan_forma.py e troca o que muda.
+Medidas (m): comprimento da carroceria 4,50 (4,62 com para-choques), largura 1,68, altura 1,46, entre-eixos 2,55.
+Caçamba de 1,48 m de comprimento por 1,46 m de largura, 0,53 m de fundo. Carrega sedan_forma.py e troca o que muda.
 """
 import os
 from forma import prisma_xy
@@ -21,28 +22,70 @@ Z_FORRO_TRAS = -0.72
 Z_PISO_TRAS = -0.78
 Z_MIOLO = -0.79
 Z_PC_TRAS = -1.75
-LANTERNA = (0.632, 0.772, 0.640, 0.925)
+LANTERNA = (0.632, 0.772, 0.640, 0.945)   # a mesma lanterna em pé do hatch
 X_TAMPA = 0.62
 LANTERNA_FUNDO = 0.045                     # rasa, para não furar a parede da caçamba
 TAMPA = (ZR + 0.02, -90, Y_FUNDO + 0.06)  # tampa da caçamba: dobradiça embaixo, cai para trás
 ITEM_TAMPA = 'tampa_cacamba'
-VIDRO_TRAS = ((0, 1.14, -0.79), (90, 0, 0), 'vidro_traseiro_cabine', None)
+VIDRO_TRAS = ((0, 1.20, -0.79), (90, 0, 0), 'vidro_traseiro_cabine', None)
 ESTEPE = (Y_FUNDO + 0.095, -1.22)
 JANELAS = None                # definido depois das funções
 
+# frente própria
+SUFIXO_FRENTE = '_picape'
+DY_CINTURA = 0.065            # cintura 6,5 cm mais alta que a do sedã
+Y_TETO_CORTE = 1.37
+Z_TOPO_PARABRISA = 0.03
+FAROL = (0.42, 0.79, 0.645, 0.805)        # dois faróis quadrados de cada lado
+FAROL_PISCA = 0.06
+GRADE = (0.405, 0.630, 0.830)
+GRADE_ESTILO = 'barras'
+CAPO_Y0 = 0.885
+MAT_PARA_CHOQUE = 'cromado'   # para-choques de aço cromado
 
-def yt(z):  # borda da caçamba reta até atrás
-    return _i(z, [(-2.40, 0.935), (-2.392, 0.958), (-2.37, 0.971), (-2.30, 0.977), (-1.7, 0.978), (-1.2, 0.968), (-0.4, 0.952),
-                  (0.3, 0.935), (0.64, 0.925), (0.8, 0.905), (1.2, 0.86), (1.6, 0.81), (1.85, 0.78), (2.0, 0.755), (2.07, 0.73), (2.10, 0.70)])
+
+def fx(z):  # frente quase reta (quinas vivas), traseira como a da caçamba
+    d = z / ZF if z > 0 else z / ZR
+    d = min(abs(d), 1.0); n = 14 if z > 0 else 9
+    return max((1 - d ** n) ** (1 / n), 0.02)
+
+
+def hw(z):  # a frente tem a mesma largura do resto (caixote)
+    return HW - 0.008 * max(0.0, z / ZF) ** 2 - 0.012 * max(0.0, z / ZR) ** 2
+
+
+def _tumble(z):
+    return 0.09
+
+
+def meio_cabine(z, enc=0.0, desce=0.0):
+    yb_ = yt(z) - 0.03 - (0.06 if enc else 0.0) - desce
+    yt_ = max(ytop(z) - enc, yt(z) + 0.004)
+    h = yt_ - (yt(z) - 0.03)
+    wb = larg_cintura(z) - enc
+    wt = wb - _tumble(z) * min(h, 0.46) / 0.46
+    return [(0, yb_), (wb, yb_)] + ([(wb, yt(z) - 0.03)] if enc else []) + [(wb - 0.006, yt(z) + 0.02), (wt + 0.03, yt_ - 0.045), (wt + 0.01, yt_ - 0.015),
+            (wt - 0.025, yt_ - 0.003), (wt - 0.2, yt_), (0, yt_ + 0.002)]
+
+
+def quina_cabine(z):
+    h = ytop(z) - (yt(z) - 0.03); wb = larg_cintura(z); wt = wb - _tumble(z) * min(h, 0.46) / 0.46
+    return wt + 0.02, ytop(z) - 0.04
+
+
+def yt(z):  # cintura alta e reta até atrás; capô alto e reto que dobra em quina na frente
+    return _i(z, [(-2.40, 0.995), (-2.392, 1.018), (-2.37, 1.031), (-2.30, 1.037), (-1.7, 1.038), (-1.2, 1.030), (-0.4, 1.017),
+                  (0.3, 1.005), (0.64, 0.998), (0.8, 0.992), (1.2, 0.982), (1.6, 0.970), (1.9, 0.958), (2.0, 0.950), (2.05, 0.935),
+                  (2.08, 0.912), (2.10, 0.875)])
 
 
 def yb(z):
-    return _i(z, [(-2.40, 0.40), (-2.385, 0.33), (-2.34, 0.27), (-2.22, 0.235), (-1.6, 0.225), (1.65, 0.225), (1.85, 0.25), (2.0, 0.29), (2.10, 0.33)])
+    return _i(z, [(-2.40, 0.40), (-2.385, 0.33), (-2.34, 0.27), (-2.22, 0.235), (-1.6, 0.225), (1.65, 0.225), (1.85, 0.24), (2.0, 0.27), (2.10, 0.31)])
 
 
-def ytop(z):  # cabine simples: o teto vai até a parede de trás, quase em pé
-    return _i(z, [(-0.80, 0.96), (-0.797, 1.20), (-0.792, 1.29), (-0.775, 1.345), (-0.74, 1.372), (-0.66, 1.386),
-                  (-0.5, 1.39), (-0.32, 1.383), (-0.22, 1.365), (-0.08, 1.31), (0.12, 1.225), (0.34, 1.12), (0.52, 1.02), (0.64, 0.93)])
+def ytop(z):  # cabine simples mais alta: para-brisa mais em pé, teto reto até a parede de trás
+    return _i(z, [(-0.80, 1.02), (-0.797, 1.26), (-0.792, 1.36), (-0.775, 1.415), (-0.74, 1.442), (-0.66, 1.453),
+                  (-0.4, 1.457), (-0.1, 1.454), (0.0, 1.447), (0.06, 1.428), (0.20, 1.330), (0.40, 1.180), (0.56, 1.060), (0.64, 1.000)])
 
 
 def janela_terceira(borda=0.0):
@@ -57,7 +100,7 @@ JANELAS = (janela_dianteira, janela_terceira)
 
 
 def _vidro_tras_pg(borda=0.0):
-    return sbox(-0.50 - borda, 1.035 - borda, 0.50 + borda, 1.255 + borda).buffer(0.05, join_style=1).buffer(-0.05, join_style=1)
+    return sbox(-0.50 - borda, 1.10 - borda, 0.50 + borda, 1.32 + borda).buffer(0.05, join_style=1).buffer(-0.05, join_style=1)
 
 
 def vidro_tras_vao(borda=0.0):

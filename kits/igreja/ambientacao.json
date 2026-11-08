@@ -1,0 +1,648 @@
+{
+ "kit": "igreja",
+ "gerado_por": "scripts/ambientacao/ambientar.py",
+ "convencao": "pos em metros no espaço do prédio (mesmo do building_layout.json); rotY em graus; itens de parede (montagem wall) têm o pivô na face de trás, já na altura sugerida",
+ "niveis": {
+  "0": 0.45,
+  "1": 3.45,
+  "2": 5.45
+ },
+ "comodos": [
+  {
+   "andar": 0,
+   "comodo": 0,
+   "tipo": "igreja",
+   "area_m2": 139.1,
+   "centro": [
+    0.11,
+    2.48
+   ],
+   "itens": 15
+  },
+  {
+   "andar": 0,
+   "comodo": 1,
+   "tipo": "corredor",
+   "area_m2": 3.8,
+   "centro": [
+    0.1,
+    12.8
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 2,
+   "tipo": "vazio",
+   "area_m2": 1.5,
+   "centro": [
+    6.6,
+    -1.07
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 1,
+   "comodo": 0,
+   "tipo": "igreja",
+   "area_m2": 39.4,
+   "centro": [
+    -0.06,
+    5.91
+   ],
+   "itens": 9
+  },
+  {
+   "andar": 1,
+   "comodo": 1,
+   "tipo": "corredor",
+   "area_m2": 11.4,
+   "centro": [
+    -0.03,
+    9.93
+   ],
+   "itens": 1
+  },
+  {
+   "andar": 2,
+   "comodo": 0,
+   "tipo": "corredor",
+   "area_m2": 8.2,
+   "centro": [
+    -6.15,
+    -0.07
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 2,
+   "comodo": 1,
+   "tipo": "igreja",
+   "area_m2": 118.2,
+   "centro": [
+    -0.03,
+    0.05
+   ],
+   "itens": 17
+  },
+  {
+   "andar": 2,
+   "comodo": 2,
+   "tipo": "corredor",
+   "area_m2": 8.2,
+   "centro": [
+    6.1,
+    -0.07
+   ],
+   "itens": 0
+  }
+ ],
+ "itens": [
+  {
+   "item": "colchao_chao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/colchao_chao.glb",
+   "pos": [
+    -4.025,
+    0.45,
+    4.305
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "igreja"
+  },
+  {
+   "item": "banco_igreja",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_igreja.glb",
+   "pos": [
+    0.225,
+    0.45,
+    2.305
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "igreja"
+  },
+  {
+   "item": "banco_igreja",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_igreja.glb",
+   "pos": [
+    -0.025,
+    0.45,
+    0.055
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "igreja"
+  },
+  {
+   "item": "banco_igreja",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_igreja.glb",
+   "pos": [
+    0.225,
+    0.45,
+    5.555
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "igreja"
+  },
+  {
+   "item": "banco_igreja",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_igreja.glb",
+   "pos": [
+    0.225,
+    0.45,
+    -2.195
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "igreja"
+  },
+  {
+   "item": "altar",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/altar.glb",
+   "pos": [
+    5.084,
+    0.45,
+    5.305
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "igreja"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    3.225,
+    0.45,
+    1.055
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "igreja"
+  },
+  {
+   "item": "pulpito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pulpito.glb",
+   "pos": [
+    -4.525,
+    0.45,
+    6.305
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "igreja"
+  },
+  {
+   "item": "quadro_hinos",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/quadro_hinos.glb",
+   "pos": [
+    1.225,
+    2.05,
+    7.68
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "igreja"
+  },
+  {
+   "item": "castical",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/castical.glb",
+   "pos": [
+    0.225,
+    0.45,
+    9.805
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "igreja"
+  },
+  {
+   "item": "castical",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/castical.glb",
+   "pos": [
+    -2.525,
+    0.45,
+    2.055
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "igreja"
+  },
+  {
+   "item": "castical",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/castical.glb",
+   "pos": [
+    -4.025,
+    0.45,
+    -3.195
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "igreja"
+  },
+  {
+   "item": "castical",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/castical.glb",
+   "pos": [
+    1.225,
+    0.45,
+    7.305
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "igreja"
+  },
+  {
+   "item": "castical",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/castical.glb",
+   "pos": [
+    -2.275,
+    0.45,
+    -1.945
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "igreja"
+  },
+  {
+   "item": "castical",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/castical.glb",
+   "pos": [
+    3.725,
+    0.45,
+    -2.195
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "igreja"
+  },
+  {
+   "item": "colchao_chao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/colchao_chao.glb",
+   "pos": [
+    2.475,
+    3.45,
+    5.805
+   ],
+   "rotY": -90,
+   "andar": 1,
+   "comodo": "igreja"
+  },
+  {
+   "item": "colchao_chao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/colchao_chao.glb",
+   "pos": [
+    -4.775,
+    3.45,
+    6.055
+   ],
+   "rotY": 0,
+   "andar": 1,
+   "comodo": "igreja"
+  },
+  {
+   "item": "altar",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/altar.glb",
+   "pos": [
+    -0.525,
+    3.45,
+    4.696
+   ],
+   "rotY": 0,
+   "andar": 1,
+   "comodo": "igreja"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    -3.025,
+    3.45,
+    5.555
+   ],
+   "rotY": -90,
+   "andar": 1,
+   "comodo": "igreja"
+  },
+  {
+   "item": "pulpito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pulpito.glb",
+   "pos": [
+    4.475,
+    3.45,
+    7.055
+   ],
+   "rotY": 0,
+   "andar": 1,
+   "comodo": "igreja"
+  },
+  {
+   "item": "quadro_hinos",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/quadro_hinos.glb",
+   "pos": [
+    4.475,
+    5.05,
+    7.68
+   ],
+   "rotY": 180,
+   "andar": 1,
+   "comodo": "igreja"
+  },
+  {
+   "item": "castical",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/castical.glb",
+   "pos": [
+    -1.525,
+    3.45,
+    6.805
+   ],
+   "rotY": -90,
+   "andar": 1,
+   "comodo": "igreja"
+  },
+  {
+   "item": "castical",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/castical.glb",
+   "pos": [
+    -5.275,
+    3.45,
+    4.555
+   ],
+   "rotY": 0,
+   "andar": 1,
+   "comodo": "igreja"
+  },
+  {
+   "item": "castical",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/castical.glb",
+   "pos": [
+    -2.025,
+    3.45,
+    5.805
+   ],
+   "rotY": 180,
+   "andar": 1,
+   "comodo": "igreja"
+  },
+  {
+   "item": "quadro_familia",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/quadro_familia.glb",
+   "pos": [
+    -1.65,
+    4.85,
+    10.305
+   ],
+   "rotY": 90,
+   "andar": 1,
+   "comodo": "corredor"
+  },
+  {
+   "item": "colchao_chao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/colchao_chao.glb",
+   "pos": [
+    -0.775,
+    5.45,
+    -5.445
+   ],
+   "rotY": -90,
+   "andar": 2,
+   "comodo": "igreja"
+  },
+  {
+   "item": "colchao_chao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/colchao_chao.glb",
+   "pos": [
+    -2.525,
+    5.45,
+    -3.195
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "igreja"
+  },
+  {
+   "item": "banco_igreja",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_igreja.glb",
+   "pos": [
+    0.225,
+    5.45,
+    0.555
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "igreja"
+  },
+  {
+   "item": "banco_igreja",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_igreja.glb",
+   "pos": [
+    0.475,
+    5.45,
+    -1.695
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "igreja"
+  },
+  {
+   "item": "banco_igreja",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_igreja.glb",
+   "pos": [
+    -0.025,
+    5.45,
+    2.805
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "igreja"
+  },
+  {
+   "item": "papeis_espalhados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/papeis_espalhados.glb",
+   "pos": [
+    2.225,
+    5.45,
+    -4.445
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "igreja"
+  },
+  {
+   "item": "altar",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/altar.glb",
+   "pos": [
+    -3.384,
+    5.45,
+    4.305
+   ],
+   "rotY": 90,
+   "andar": 2,
+   "comodo": "igreja"
+  },
+  {
+   "item": "harmonio",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/harmonio.glb",
+   "pos": [
+    3.406,
+    5.45,
+    4.805
+   ],
+   "rotY": -90,
+   "andar": 2,
+   "comodo": "igreja"
+  },
+  {
+   "item": "pulpito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pulpito.glb",
+   "pos": [
+    -1.025,
+    5.45,
+    5.555
+   ],
+   "rotY": 180,
+   "andar": 2,
+   "comodo": "igreja"
+  },
+  {
+   "item": "pia_batismal",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_batismal.glb",
+   "pos": [
+    -3.025,
+    5.45,
+    0.055
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "igreja"
+  },
+  {
+   "item": "quadro_hinos",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/quadro_hinos.glb",
+   "pos": [
+    3.85,
+    7.05,
+    -2.945
+   ],
+   "rotY": -90,
+   "andar": 2,
+   "comodo": "igreja"
+  },
+  {
+   "item": "castical",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/castical.glb",
+   "pos": [
+    1.225,
+    5.45,
+    4.805
+   ],
+   "rotY": 180,
+   "andar": 2,
+   "comodo": "igreja"
+  },
+  {
+   "item": "castical",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/castical.glb",
+   "pos": [
+    -0.775,
+    5.45,
+    6.555
+   ],
+   "rotY": -90,
+   "andar": 2,
+   "comodo": "igreja"
+  },
+  {
+   "item": "castical",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/castical.glb",
+   "pos": [
+    0.225,
+    5.45,
+    7.305
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "igreja"
+  },
+  {
+   "item": "castical",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/castical.glb",
+   "pos": [
+    -2.525,
+    5.45,
+    -4.695
+   ],
+   "rotY": 180,
+   "andar": 2,
+   "comodo": "igreja"
+  },
+  {
+   "item": "castical",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/castical.glb",
+   "pos": [
+    3.475,
+    5.45,
+    -4.945
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "igreja"
+  },
+  {
+   "item": "castical",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/castical.glb",
+   "pos": [
+    3.225,
+    5.45,
+    0.055
+   ],
+   "rotY": 0,
+   "andar": 2,
+   "comodo": "igreja"
+  }
+ ]
+}

@@ -16,7 +16,10 @@ const KITS := [
 
 var _scenes := {}
 var _shapes := {}
+var _props := {}
 var _building: Node3D
+var _ambiente: Node3D
+var _mostrar_ambiente := true
 var _player
 var _hud: Label
 
@@ -34,6 +37,14 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo:
 		var cur := KITS.find(kit)
 		match event.physical_keycode:
+			KEY_M:
+				_mostrar_ambiente = not _mostrar_ambiente
+				if _ambiente:
+					_ambiente.visible = _mostrar_ambiente
+					for b in _ambiente.find_children("*", "StaticBody3D", true, false):
+						b.collision_layer = 1 if _mostrar_ambiente else 0
+				_update_hud()
+				return
 			KEY_BRACKETRIGHT, KEY_PAGEDOWN:
 				_load_kit(KITS[(cur + 1) % KITS.size()])
 				return
@@ -49,9 +60,13 @@ func _load_kit(k: String) -> void:
 	kit = k
 	if _building:
 		_building.queue_free()
+	if _ambiente:
+		_ambiente.queue_free()
+		_ambiente = null
 	_scenes.clear()
 	_shapes.clear()
 	var box := _build_kit(k)
+	_ambientar(k)
 	var spawn := Vector3(_front_door_x(box), 0.1, box.end.z + 6.0)
 	_player.respawn(spawn)
 	_update_hud()
@@ -141,6 +156,7 @@ func _update_hud() -> void:
 	var lines := "Prédio %d de %d: %s\n" % [KITS.find(kit) + 1, KITS.size(), kit]
 	lines += "Clique: prender o mouse | WASD: andar | Shift: correr | Espaço: pular\n"
 	lines += "E ou clique: abrir/fechar porta | F: voar (Espaço sobe, Q desce) | Esc: soltar o mouse\n"
+	lines += "M: mostrar/esconder os móveis e itens (%s)\n" % ("ligado" if _mostrar_ambiente else "desligado")
 	lines += "Trocar de prédio: [ anterior | ] próximo (ou Page Up / Page Down; 1 a 9 e 0 vão aos 10 primeiros)"
 	_hud.text = lines
 
@@ -217,3 +233,53 @@ func _add_shapes(inst: Node3D, body: CollisionObject3D) -> void:
 		cs.shape = shape
 		cs.transform = body.global_transform.affine_inverse() * mi.global_transform
 		body.add_child(cs)
+
+
+# Móveis e itens do prédio (kits/<kit>/ambientacao.json, gerado por scripts/ambientacao/ambientar.py).
+# Cada item vira uma cena de props/ com uma caixa de colisão; manchas, cacos e papéis no chão não colidem.
+func _ambientar(k: String) -> void:
+	var path := "res://kits/%s/ambientacao.json" % k
+	if not FileAccess.file_exists(path):
+		return
+	var data = JSON.parse_string(FileAccess.get_file_as_string(path))
+	if typeof(data) != TYPE_DICTIONARY or not data.has("itens"):
+		return
+	_ambiente = Node3D.new()
+	_ambiente.name = "Ambientacao"
+	_ambiente.visible = _mostrar_ambiente
+	add_child(_ambiente)
+	for it in data["itens"]:
+		var arq := "res://" + str(it["arquivo"])
+		var ps: PackedScene = _props.get(arq)
+		if ps == null:
+			if not ResourceLoader.exists(arq):
+				continue
+			ps = load(arq)
+			_props[arq] = ps
+		var inst: Node3D = ps.instantiate()
+		inst.name = str(it["item"])
+		inst.position = Vector3(it["pos"][0], it["pos"][1], it["pos"][2])
+		inst.rotation.y = deg_to_rad(float(it["rotY"]))
+		_ambiente.add_child(inst)
+		if it.get("grupo", "") == "loot":
+			continue
+		var box := AABB()
+		var first := true
+		for mi in inst.find_children("*", "MeshInstance3D", true, false):
+			if mi.mesh == null:
+				continue
+			var b: AABB = (inst.global_transform.affine_inverse() * mi.global_transform) * mi.get_aabb()
+			box = b if first else box.merge(b)
+			first = false
+		if first or box.size.y < 0.08:
+			continue
+		var sb := StaticBody3D.new()
+		sb.collision_layer = 1 if _mostrar_ambiente else 0
+		var cs := CollisionShape3D.new()
+		var shape := BoxShape3D.new()
+		shape.size = box.size
+		cs.shape = shape
+		cs.position = box.get_center()
+		sb.add_child(cs)
+		inst.add_child(sb)
+

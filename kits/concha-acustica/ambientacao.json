@@ -1,0 +1,502 @@
+{
+ "kit": "concha-acustica",
+ "gerado_por": "scripts/ambientacao/ambientar.py",
+ "convencao": "pos em metros no espaço do prédio (mesmo do building_layout.json); rotY em graus; itens de parede (montagem wall) têm o pivô na face de trás, já na altura sugerida",
+ "niveis": {
+  "0": 0.0
+ },
+ "comodos": [
+  {
+   "andar": 0,
+   "comodo": 0,
+   "tipo": "concha",
+   "area_m2": 2223.2,
+   "centro": [
+    -0.17,
+    1.79
+   ],
+   "itens": 30
+  },
+  {
+   "andar": 0,
+   "comodo": 1,
+   "tipo": "palco_bastidores",
+   "area_m2": 11.8,
+   "centro": [
+    16.04,
+    -15.18
+   ],
+   "itens": 6
+  }
+ ],
+ "itens": [
+  {
+   "item": "caixa_som",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_som.glb",
+   "pos": [
+    -3.625,
+    0.0,
+    23.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "caixa_som",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_som.glb",
+   "pos": [
+    -4.125,
+    0.0,
+    -15.625
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "caixa_som",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_som.glb",
+   "pos": [
+    11.625,
+    0.0,
+    23.875
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "caixa_som",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_som.glb",
+   "pos": [
+    -15.875,
+    0.0,
+    -0.875
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "caixa_som",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_som.glb",
+   "pos": [
+    -14.375,
+    0.0,
+    -3.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "caixa_som",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_som.glb",
+   "pos": [
+    -26.125,
+    0.0,
+    -13.375
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "microfone_pedestal",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/microfone_pedestal.glb",
+   "pos": [
+    8.375,
+    0.0,
+    8.125
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "estante_partitura",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_partitura.glb",
+   "pos": [
+    4.625,
+    0.0,
+    -14.625
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "estante_partitura",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_partitura.glb",
+   "pos": [
+    -13.375,
+    0.0,
+    -15.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "estante_partitura",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_partitura.glb",
+   "pos": [
+    -11.125,
+    0.0,
+    -20.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "estante_partitura",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_partitura.glb",
+   "pos": [
+    21.875,
+    0.0,
+    -9.125
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "estante_partitura",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_partitura.glb",
+   "pos": [
+    -16.125,
+    0.0,
+    24.875
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "estante_partitura",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_partitura.glb",
+   "pos": [
+    -17.625,
+    0.0,
+    5.125
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "estante_partitura",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_partitura.glb",
+   "pos": [
+    -15.125,
+    0.0,
+    -20.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "estante_partitura",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_partitura.glb",
+   "pos": [
+    -4.625,
+    0.0,
+    -22.875
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "cadeira_dobravel",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_dobravel.glb",
+   "pos": [
+    -2.375,
+    0.0,
+    5.125
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "cadeira_dobravel",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_dobravel.glb",
+   "pos": [
+    2.625,
+    0.0,
+    5.125
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "cadeira_dobravel",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_dobravel.glb",
+   "pos": [
+    -0.125,
+    0.0,
+    6.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "cadeira_dobravel",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_dobravel.glb",
+   "pos": [
+    -4.125,
+    0.0,
+    5.125
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "cadeira_dobravel",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_dobravel.glb",
+   "pos": [
+    4.375,
+    0.0,
+    5.125
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "cadeira_dobravel",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_dobravel.glb",
+   "pos": [
+    -3.625,
+    0.0,
+    6.875
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "cadeira_dobravel",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_dobravel.glb",
+   "pos": [
+    3.625,
+    0.0,
+    6.875
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "cadeira_dobravel",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_dobravel.glb",
+   "pos": [
+    -0.125,
+    0.0,
+    8.125
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "cadeira_dobravel",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_dobravel.glb",
+   "pos": [
+    -5.875,
+    0.0,
+    5.125
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "cadeira_dobravel",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_dobravel.glb",
+   "pos": [
+    6.125,
+    0.0,
+    5.125
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "cadeira_dobravel",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_dobravel.glb",
+   "pos": [
+    -5.375,
+    0.0,
+    6.875
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "cadeira_dobravel",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_dobravel.glb",
+   "pos": [
+    5.375,
+    0.0,
+    6.875
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "cadeira_dobravel",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_dobravel.glb",
+   "pos": [
+    -0.125,
+    0.0,
+    9.875
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "cadeira_dobravel",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_dobravel.glb",
+   "pos": [
+    -7.625,
+    0.0,
+    5.125
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "cadeira_dobravel",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_dobravel.glb",
+   "pos": [
+    7.875,
+    0.0,
+    5.125
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "concha"
+  },
+  {
+   "item": "caixa_som",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_som.glb",
+   "pos": [
+    14.625,
+    0.0,
+    -14.541
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "palco_bastidores"
+  },
+  {
+   "item": "caixa_som",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_som.glb",
+   "pos": [
+    17.709,
+    0.0,
+    -14.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "palco_bastidores"
+  },
+  {
+   "item": "caixa_papelao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_papelao.glb",
+   "pos": [
+    17.625,
+    0.0,
+    -16.02
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "palco_bastidores"
+  },
+  {
+   "item": "cadeira_dobravel",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_dobravel.glb",
+   "pos": [
+    16.125,
+    0.0,
+    -14.375
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "palco_bastidores"
+  },
+  {
+   "item": "cadeira_dobravel",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_dobravel.glb",
+   "pos": [
+    15.875,
+    0.0,
+    -15.125
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "palco_bastidores"
+  },
+  {
+   "item": "cadeira_dobravel",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_dobravel.glb",
+   "pos": [
+    16.625,
+    0.0,
+    -15.125
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "palco_bastidores"
+  }
+ ]
+}

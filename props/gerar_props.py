@@ -1052,7 +1052,7 @@ def pilhas(M):
 
 
 # ============================================================================ lotes seguintes (props/lote2.py, lote3.py, ...)
-for _n in (2, 3, 4, 5):
+for _n in range(2, 20):
     _f = os.path.join(AQUI, f'lote{_n}.py')
     if os.path.exists(_f): LOTE[0] = _n; exec(compile(open(_f, encoding='utf-8').read(), _f, 'exec'), globals())
 
@@ -1107,7 +1107,7 @@ NOMES = {'cozinha': 'Cozinha', 'quarto': 'Quarto', 'sala': 'Sala', 'banheiro': '
          'materiais': 'Materiais de construção', 'combustivel': 'Combustível', 'energia': 'Energia',
          'lavanderia': 'Lavanderia', 'escritorio': 'Escritório', 'loja': 'Loja', 'saude': 'Saúde', 'oficina': 'Oficina', 'abrigo': 'Abrigo',
          'roupas': 'Roupas e equipamento', 'utensilios': 'Utensílios', 'eletronicos': 'Luz e eletrônicos', 'higiene': 'Higiene',
-         'agricultura': 'Agricultura', 'barricadas': 'Barricadas e alarmes', 'rua': 'Rua e quintal', 'pistas': 'Chaves e pistas'}
+         'agricultura': 'Agricultura', 'barricadas': 'Barricadas e alarmes', 'rua': 'Rua e quintal', 'pistas': 'Chaves e pistas', 'sinais': 'Sinais do fim do mundo', 'lembrancas': 'Vida de antes', 'igreja': 'Igreja', 'biblioteca': 'Biblioteca', 'escolinha': 'Escola', 'correios': 'Correios', 'delegacia': 'Delegacia', 'banco': 'Banco', 'quartel': 'Quartel de bombeiros', 'diner': 'Diner e lanchonete', 'padaria': 'Padaria', 'posto': 'Posto', 'cinema': 'Cinema', 'hotel': 'Hotel e motel', 'estacao': 'Estação e rodoviária', 'fabrica': 'Fábrica', 'serraria': 'Serraria', 'fazenda': 'Fazenda', 'armazem': 'Armazém', 'ferrovelho': 'Ferro-velho', 'concessionaria': 'Concessionária', 'barcos': 'Casa de barcos', 'observatorio': 'Observatório', 'piscina': 'Piscina', 'skate': 'Pista de skate', 'minigolfe': 'Minigolfe', 'concha': 'Concha acústica', 'drivein': 'Drive-in'}
 
 
 def catalogo_md(regs):

@@ -475,7 +475,9 @@ def glb_jpeg(path, q=88):
     views = js['bufferViews']; blobs = []
     for i, v in enumerate(views): blobs.append(binb[v.get('byteOffset', 0):v.get('byteOffset', 0) + v['byteLength']])
     for ii, im in enumerate(js['images']):
-        bv = im['bufferView']; pim = Image.open(io.BytesIO(blobs[bv])).convert('RGB'); bio = io.BytesIO()
+        bv = im['bufferView']; pim = Image.open(io.BytesIO(blobs[bv]))
+        if pim.mode in ('RGBA', 'LA') and pim.getchannel('A').getextrema()[0] < 255: continue   # decalque com transparencia: fica PNG
+        pim = pim.convert('RGB'); bio = io.BytesIO()
         pim.save(bio, 'JPEG', quality=92 if ii in norm_imgs else q, optimize=True); blobs[bv] = bio.getvalue(); im['mimeType'] = 'image/jpeg'
     out = b''
     for i, v in enumerate(views):

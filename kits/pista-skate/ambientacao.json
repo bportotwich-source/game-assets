@@ -1,0 +1,364 @@
+{
+ "kit": "pista-skate",
+ "gerado_por": "scripts/ambientacao/ambientar.py",
+ "convencao": "pos em metros no espaço do prédio (mesmo do building_layout.json); rotY em graus; itens de parede (montagem wall) têm o pivô na face de trás, já na altura sugerida",
+ "niveis": {
+  "0": 0.0
+ },
+ "comodos": [
+  {
+   "andar": 0,
+   "comodo": 0,
+   "tipo": "skate",
+   "area_m2": 1028.8,
+   "centro": [
+    1.6,
+    0.92
+   ],
+   "itens": 16
+  },
+  {
+   "andar": 0,
+   "comodo": 1,
+   "tipo": "lavabo",
+   "area_m2": 7.1,
+   "centro": [
+    -16.31,
+    8.08
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 2,
+   "tipo": "patio",
+   "area_m2": 1.0,
+   "centro": [
+    -16.4,
+    -5.74
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 6,
+   "tipo": "patio",
+   "area_m2": 2.1,
+   "centro": [
+    -11.05,
+    -2.47
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 7,
+   "tipo": "lavabo",
+   "area_m2": 7.0,
+   "centro": [
+    -13.82,
+    8.1
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 8,
+   "tipo": "patio",
+   "area_m2": 5.1,
+   "centro": [
+    -9.26,
+    -7.73
+   ],
+   "itens": 0
+  }
+ ],
+ "itens": [
+  {
+   "item": "bicicleta",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/bicicleta.glb",
+   "pos": [
+    0.699,
+    0.0,
+    14.325
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "skate"
+  },
+  {
+   "item": "banco_praca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_praca.glb",
+   "pos": [
+    -9.551,
+    0.0,
+    -14.175
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "skate"
+  },
+  {
+   "item": "banco_praca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_praca.glb",
+   "pos": [
+    17.449,
+    0.0,
+    10.575
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "skate"
+  },
+  {
+   "item": "banco_praca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_praca.glb",
+   "pos": [
+    -9.801,
+    0.0,
+    7.575
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "skate"
+  },
+  {
+   "item": "banco_praca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_praca.glb",
+   "pos": [
+    -16.051,
+    0.0,
+    3.075
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "skate"
+  },
+  {
+   "item": "banco_praca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_praca.glb",
+   "pos": [
+    2.949,
+    0.0,
+    -10.925
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "skate"
+  },
+  {
+   "item": "banco_praca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_praca.glb",
+   "pos": [
+    -16.801,
+    0.0,
+    14.325
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "skate"
+  },
+  {
+   "item": "skate",
+   "grupo": "loot",
+   "arquivo": "props/loot/skate.glb",
+   "pos": [
+    -7.051,
+    0.0,
+    15.075
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "skate"
+  },
+  {
+   "item": "skate",
+   "grupo": "loot",
+   "arquivo": "props/loot/skate.glb",
+   "pos": [
+    -13.051,
+    0.0,
+    11.575
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "skate"
+  },
+  {
+   "item": "skate",
+   "grupo": "loot",
+   "arquivo": "props/loot/skate.glb",
+   "pos": [
+    -0.801,
+    0.0,
+    7.575
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "skate"
+  },
+  {
+   "item": "skate",
+   "grupo": "loot",
+   "arquivo": "props/loot/skate.glb",
+   "pos": [
+    6.949,
+    0.0,
+    -13.925
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "skate"
+  },
+  {
+   "item": "skate",
+   "grupo": "loot",
+   "arquivo": "props/loot/skate.glb",
+   "pos": [
+    -6.301,
+    0.0,
+    11.575
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "skate"
+  },
+  {
+   "item": "skate",
+   "grupo": "loot",
+   "arquivo": "props/loot/skate.glb",
+   "pos": [
+    -5.551,
+    0.0,
+    2.325
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "skate"
+  },
+  {
+   "item": "cone_transito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cone_transito.glb",
+   "pos": [
+    15.449,
+    0.0,
+    0.075
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "skate"
+  },
+  {
+   "item": "cone_transito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cone_transito.glb",
+   "pos": [
+    16.949,
+    0.0,
+    0.575
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "skate"
+  },
+  {
+   "item": "cone_transito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cone_transito.glb",
+   "pos": [
+    -19.551,
+    0.0,
+    2.075
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "skate"
+  },
+  {
+   "item": "vaso_sanitario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_sanitario.glb",
+   "pos": [
+    -15.521,
+    0.0,
+    8.075
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pia_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_banheiro.glb",
+   "pos": [
+    -17.051,
+    0.0,
+    7.205
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "armario_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_banheiro.glb",
+   "pos": [
+    -15.551,
+    1.2,
+    6.45
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "vaso_sanitario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_sanitario.glb",
+   "pos": [
+    -14.581,
+    0.0,
+    7.825
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pia_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_banheiro.glb",
+   "pos": [
+    -13.551,
+    0.0,
+    6.705
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "armario_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_banheiro.glb",
+   "pos": [
+    -12.926,
+    1.2,
+    8.075
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "lavabo"
+  }
+ ]
+}

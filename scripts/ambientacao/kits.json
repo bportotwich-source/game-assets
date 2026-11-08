@@ -1,0 +1,967 @@
+{
+ "_leia": "Perfil de cada kit para ambientar.py. 'perfil' casa usa a ordem sala/cozinha/jantar (térreo) e quarto/quarto de criança (andares de cima); comercial usa 'principal' para o maior cômodo e 'seq' para os outros, por tamanho. Cômodos pequenos viram banheiro/lavabo, estreitos viram corredor e os de fora viram 'externo'. 'andares' troca o perfil num andar, 'casas_x' separa casas lado a lado e 'comodos' força o tipo do cômodo que contém o ponto [x, z].",
+ "padaria": {
+  "padrao": "deposito",
+  "comodos": [
+   {
+    "andar": 0,
+    "ponto": [
+     0,
+     2.9
+    ],
+    "tipo": "padaria_loja"
+   },
+   {
+    "andar": 0,
+    "ponto": [
+     -0.7,
+     -1.5
+    ],
+    "tipo": "padaria_producao"
+   },
+   {
+    "andar": 0,
+    "ponto": [
+     -4.8,
+     -1.9
+    ],
+    "tipo": "deposito"
+   },
+   {
+    "andar": 0,
+    "ponto": [
+     4.9,
+     -2.3
+    ],
+    "tipo": "lavabo"
+   },
+   {
+    "andar": 0,
+    "ponto": [
+     3.1,
+     -0.1
+    ],
+    "tipo": "corredor"
+   },
+   {
+    "andar": 0,
+    "ponto": [
+     4.9,
+     -0.1
+    ],
+    "tipo": "corredor"
+   },
+   {
+    "andar": 1,
+    "ponto": [
+     0.2,
+     0
+    ],
+    "tipo": "corredor"
+   },
+   {
+    "andar": 1,
+    "ponto": [
+     -3.8,
+     2.9
+    ],
+    "tipo": "cozinha_comercial"
+   },
+   {
+    "andar": 1,
+    "ponto": [
+     0.1,
+     2.9
+    ],
+    "tipo": "escritorio"
+   },
+   {
+    "andar": 1,
+    "ponto": [
+     4,
+     2.9
+    ],
+    "tipo": "refeitorio"
+   },
+   {
+    "andar": 1,
+    "ponto": [
+     -3.9,
+     -2.9
+    ],
+    "tipo": "deposito"
+   },
+   {
+    "andar": 1,
+    "ponto": [
+     -0.9,
+     -2.9
+    ],
+    "tipo": "vestiario"
+   },
+   {
+    "andar": 1,
+    "ponto": [
+     1.1,
+     -3
+    ],
+    "tipo": "lavabo"
+   },
+   {
+    "andar": 2,
+    "ponto": [
+     0,
+     0.4
+    ],
+    "tipo": "sotao"
+   }
+  ]
+ },
+ "armazem": {
+  "principal": "galpao",
+  "seq": [
+   "loja",
+   "deposito",
+   "escritorio"
+  ],
+  "externo": "patio",
+  "andares": {
+   "1": {
+    "tipo": "celeiro"
+   }
+  }
+ },
+ "banco-googie": {
+  "principal": "banco",
+  "seq": [
+   "cofre",
+   "escritorio",
+   "deposito"
+  ],
+  "externo": "estacionamento"
+ },
+ "banco": {
+  "principal": "banco",
+  "seq": [
+   "cofre",
+   "escritorio",
+   "deposito",
+   "escritorio"
+  ],
+  "externo": "patio"
+ },
+ "bangalo": {
+  "perfil": "casa",
+  "seq": "casa_terrea",
+  "externo": "quintal"
+ },
+ "biblioteca": {
+  "principal": "biblioteca",
+  "seq": [
+   "biblioteca",
+   "biblioteca",
+   "escritorio",
+   "deposito"
+  ],
+  "externo": "patio",
+  "andares": {
+   "1": {
+    "principal": "biblioteca",
+    "seq": [
+     "biblioteca"
+    ]
+   }
+  }
+ },
+ "brownstones": {
+  "perfil": "casa",
+  "casas_x": [
+   [
+    -9,
+    -3
+   ],
+   [
+    -3,
+    3
+   ],
+   [
+    3,
+    9
+   ]
+  ],
+  "externo": "quintal",
+  "andares": {
+   "0": {
+    "seq": [
+     "cozinha",
+     "jantar",
+     "lavanderia",
+     "deposito"
+    ]
+   },
+   "1": {
+    "seq": [
+     "sala",
+     "jantar",
+     "escritorio"
+    ]
+   }
+  }
+ },
+ "caixa-dagua": {
+  "principal": "caixa_dagua",
+  "seq": [
+   "deposito"
+  ],
+  "externo": "patio"
+ },
+ "casa-americana": {
+  "perfil": "casa",
+  "externo": "quintal",
+  "andares": {
+   "0": {
+    "seq": [
+     "sala",
+     "cozinha",
+     "jantar",
+     "lavanderia",
+     "garagem",
+     "escritorio"
+    ]
+   }
+  }
+ },
+ "casa-barcos": {
+  "principal": "casa_barcos",
+  "seq": [
+   "deposito",
+   "escritorio"
+  ],
+  "externo": "praca"
+ },
+ "casa-de-campo": {
+  "perfil": "casa",
+  "externo": "quintal",
+  "andares": {
+   "0": {
+    "seq": [
+     "sala",
+     "cozinha",
+     "deposito"
+    ]
+   },
+   "1": {
+    "seq": [
+     "quarto",
+     "quarto_crianca",
+     "sotao"
+    ]
+   }
+  }
+ },
+ "casa-enxaimel": {
+  "perfil": "casa",
+  "sotao": true,
+  "externo": "quintal",
+  "andares": {
+   "0": {
+    "seq": [
+     "sala",
+     "garagem",
+     "cozinha",
+     "lavanderia"
+    ]
+   }
+  }
+ },
+ "casa-modernista": {
+  "perfil": "casa",
+  "seq": [
+   "sala",
+   "quarto",
+   "cozinha",
+   "quarto_crianca",
+   "escritorio"
+  ],
+  "externo": "quintal"
+ },
+ "casa-reboco": {
+  "perfil": "casa",
+  "externo": "quintal",
+  "andares": {
+   "0": {
+    "seq": [
+     "sala",
+     "cozinha",
+     "garagem",
+     "lavanderia"
+    ]
+   }
+  }
+ },
+ "casas-shotgun": {
+  "perfil": "casa",
+  "casas_x": [
+   [
+    -10,
+    -6
+   ],
+   [
+    -6,
+    -2
+   ],
+   [
+    -2,
+    2
+   ],
+   [
+    2,
+    6
+   ],
+   [
+    6,
+    10
+   ]
+  ],
+  "seq": [
+   "sala",
+   "quarto",
+   "cozinha"
+  ],
+  "externo": "quintal",
+  "ignorar_andares": [
+   1
+  ]
+ },
+ "casas-vitorianas": {
+  "perfil": "casa",
+  "casas_x": [
+   [
+    -15,
+    -9
+   ],
+   [
+    -9,
+    -3
+   ],
+   [
+    -3,
+    3
+   ],
+   [
+    3,
+    9
+   ],
+   [
+    9,
+    15
+   ]
+  ],
+  "externo": "quintal",
+  "andares": {
+   "0": {
+    "seq": [
+     "deposito",
+     "lavanderia",
+     "garagem"
+    ]
+   },
+   "1": {
+    "seq": [
+     "sala",
+     "cozinha",
+     "jantar"
+    ]
+   },
+   "2": {
+    "seq": [
+     "quarto",
+     "quarto_crianca",
+     "escritorio"
+    ]
+   }
+  }
+ },
+ "cinema-drive-in": {
+  "principal": "cinema_foyer",
+  "seq": [
+   "projecao",
+   "deposito"
+  ],
+  "externo": "drivein"
+ },
+ "cinema": {
+  "principal": "cinema_sala",
+  "seq": [
+   "cinema_foyer",
+   "escritorio",
+   "loja",
+   "deposito"
+  ],
+  "externo": "patio",
+  "andares": {
+   "1": {
+    "principal": "cinema_foyer",
+    "seq": [
+     "escritorio",
+     "deposito"
+    ]
+   },
+   "2": {
+    "principal": "projecao",
+    "seq": [
+     "escritorio",
+     "deposito"
+    ]
+   }
+  }
+ },
+ "clinica": {
+  "principal": "espera",
+  "seq": [
+   "clinica",
+   "clinica",
+   "escritorio",
+   "clinica",
+   "deposito"
+  ],
+  "externo": "patio",
+  "andares": {
+   "1": {
+    "principal": "clinica",
+    "seq": [
+     "clinica",
+     "escritorio",
+     "clinica",
+     "deposito"
+    ]
+   }
+  }
+ },
+ "concessionaria": {
+  "principal": "showroom",
+  "seq": [
+   "oficina",
+   "escritorio",
+   "refeitorio",
+   "escritorio"
+  ],
+  "externo": "estacionamento"
+ },
+ "concha-acustica": {
+  "principal": "concha",
+  "seq": [
+   "palco_bastidores",
+   "palco_bastidores",
+   "cozinha_comercial"
+  ],
+  "estreito": "corredor",
+  "externo": "concha"
+ },
+ "correios": {
+  "principal": "triagem",
+  "seq": [
+   "correios",
+   "escritorio",
+   "deposito"
+  ],
+  "externo": "patio"
+ },
+ "delegacia": {
+  "principal": "delegacia",
+  "seq": [
+   "espera",
+   "escritorio",
+   "cela",
+   "cela",
+   "cela",
+   "deposito"
+  ],
+  "pequeno": "cela",
+  "externo": "patio",
+  "andares": {
+   "1": {
+    "principal": "delegacia",
+    "seq": [
+     "escritorio",
+     "arquivo",
+     "escritorio"
+    ]
+   },
+   "2": {
+    "principal": "refeitorio",
+    "seq": [
+     "alojamento",
+     "escritorio",
+     "deposito"
+    ]
+   }
+  }
+ },
+ "diner": {
+  "principal": "diner",
+  "seq": [
+   "cozinha_comercial",
+   "deposito"
+  ],
+  "externo": "estacionamento"
+ },
+ "duplex": {
+  "perfil": "casa",
+  "casas_x": [
+   [
+    -8,
+    0
+   ],
+   [
+    0,
+    8
+   ]
+  ],
+  "externo": "quintal",
+  "andares": {
+   "0": {
+    "seq": [
+     "sala",
+     "garagem",
+     "cozinha",
+     "jantar"
+    ]
+   }
+  }
+ },
+ "escolinha": {
+  "principal": "sala_aula",
+  "seq": [
+   "corredor",
+   "deposito"
+  ],
+  "externo": "praca"
+ },
+ "estacao": {
+  "principal": "saguao_estacao",
+  "seq": [
+   "deposito",
+   "escritorio",
+   "escritorio"
+  ],
+  "externo": "patio"
+ },
+ "fabrica": {
+  "principal": "fabrica",
+  "seq": [
+   "escritorio",
+   "escritorio",
+   "deposito",
+   "refeitorio"
+  ],
+  "externo": "patio",
+  "andares": {
+   "1": {
+    "principal": "escritorio",
+    "seq": [
+     "escritorio",
+     "arquivo"
+    ]
+   },
+   "2": {
+    "principal": "escritorio",
+    "seq": [
+     "refeitorio",
+     "deposito"
+    ]
+   }
+  }
+ },
+ "fazenda": {
+  "perfil": "casa",
+  "externo": "fazenda_patio",
+  "andares": {
+   "0": {
+    "seq": [
+     "celeiro",
+     "sala",
+     "cozinha"
+    ]
+   }
+  }
+ },
+ "ferro-velho": {
+  "principal": "ferro_velho",
+  "seq": [
+   "escritorio"
+  ],
+  "externo": "ferro_velho"
+ },
+ "galeria": {
+  "principal": "galeria",
+  "seq": [
+   "loja",
+   "loja",
+   "loja",
+   "loja",
+   "loja",
+   "loja",
+   "loja",
+   "loja",
+   "loja",
+   "loja",
+   "escritorio",
+   "deposito"
+  ],
+  "externo": "patio"
+ },
+ "garagem-vertical": {
+  "principal": "estacionamento",
+  "seq": [
+   "corredor"
+  ],
+  "externo": "estacionamento"
+ },
+ "hotel": {
+  "principal": "recepcao",
+  "seq": [
+   "refeitorio",
+   "escritorio",
+   "deposito",
+   "cozinha_comercial"
+  ],
+  "externo": "patio",
+  "andares": {
+   "1": {
+    "principal": "refeitorio",
+    "seq": [
+     "escritorio",
+     "deposito"
+    ]
+   },
+   "2+": {
+    "principal": "quarto_hotel",
+    "seq": [
+     "quarto_hotel"
+    ],
+    "estreito": "corredor_hotel",
+    "pequeno": "lavabo"
+   }
+  }
+ },
+ "igreja": {
+  "principal": "igreja",
+  "seq": [
+   "corredor",
+   "deposito"
+  ],
+  "externo": "praca"
+ },
+ "lanchonete": {
+  "principal": "diner",
+  "seq": [
+   "cozinha_comercial",
+   "deposito",
+   "escritorio"
+  ],
+  "externo": "estacionamento"
+ },
+ "mansao": {
+  "perfil": "casa",
+  "sotao": true,
+  "externo": "quintal",
+  "andares": {
+   "0": {
+    "seq": [
+     "sala",
+     "jantar",
+     "biblioteca",
+     "cozinha",
+     "escritorio",
+     "lavanderia"
+    ]
+   },
+   "1": {
+    "seq": [
+     "quarto",
+     "quarto_crianca",
+     "quarto_solteiro",
+     "escritorio",
+     "quarto_solteiro"
+    ]
+   }
+  }
+ },
+ "minigolfe": {
+  "principal": "loja",
+  "seq": [
+   "deposito"
+  ],
+  "externo": "minigolfe"
+ },
+ "motel": {
+  "principal": "quarto_hotel",
+  "seq": [
+   "quarto_hotel"
+  ],
+  "pequeno": "lavabo",
+  "externo": "estacionamento",
+  "estreito": "corredor_hotel"
+ },
+ "observatorio": {
+  "principal": "observatorio",
+  "seq": [
+   "biblioteca",
+   "escritorio",
+   "observatorio",
+   "deposito"
+  ],
+  "externo": "patio"
+ },
+ "parque-trailers": {
+  "principal": "patio",
+  "seq": [
+   "trailer"
+  ],
+  "externo": "patio",
+  "extras": {
+   "patio": [
+    [
+     "barraca_camping",
+     1,
+     "livre",
+     0.6
+    ],
+    [
+     "cadeira_dobravel",
+     4,
+     "livre",
+     0.8
+    ],
+    [
+     "bicicleta",
+     1,
+     "livre",
+     0.5
+    ],
+    [
+     "carrinho_mao",
+     1,
+     "livre",
+     0.4
+    ],
+    [
+     "galao_gasolina",
+     1,
+     "livre",
+     0.5
+    ]
+   ]
+  }
+ },
+ "patio-missoes": {
+  "perfil": "casa",
+  "seq": [
+   "sala",
+   "quarto",
+   "cozinha",
+   "quarto_solteiro",
+   "quarto_solteiro",
+   "escritorio",
+   "quarto_solteiro"
+  ],
+  "externo": "praca"
+ },
+ "piscina-publica": {
+  "principal": "recepcao",
+  "seq": [
+   "vestiario",
+   "vestiario",
+   "deposito"
+  ],
+  "externo": "piscina"
+ },
+ "pista-skate": {
+  "principal": "skate",
+  "seq": [
+   "lavabo"
+  ],
+  "externo": "skate"
+ },
+ "posto-gasolina": {
+  "principal": "posto_loja",
+  "seq": [
+   "deposito",
+   "escritorio"
+  ],
+  "externo": "estacionamento"
+ },
+ "predio-mansarda": {
+  "perfil": "casa",
+  "casas_x": [
+   [
+    -9,
+    1
+   ],
+   [
+    1,
+    9
+   ]
+  ],
+  "seq": "apto",
+  "externo": "patio",
+  "andares": {
+   "0": {
+    "seq": [
+     "deposito",
+     "sala",
+     "quarto",
+     "cozinha",
+     "garagem"
+    ]
+   }
+  }
+ },
+ "predio-tijolos": {
+  "perfil": "casa",
+  "casas_x": [
+   [
+    -8,
+    0
+   ],
+   [
+    0,
+    8
+   ]
+  ],
+  "seq": "apto",
+  "externo": "patio",
+  "andares": {
+   "0": {
+    "seq": [
+     "recepcao",
+     "deposito",
+     "lavanderia"
+    ]
+   }
+  }
+ },
+ "quartel-bombeiros": {
+  "principal": "quartel",
+  "seq": [
+   "escritorio",
+   "refeitorio",
+   "oficina",
+   "deposito",
+   "escritorio"
+  ],
+  "externo": "patio",
+  "andares": {
+   "1": {
+    "principal": "alojamento",
+    "seq": [
+     "alojamento",
+     "deposito"
+    ]
+   }
+  }
+ },
+ "rodoviaria": {
+  "principal": "saguao_estacao",
+  "seq": [
+   "diner",
+   "escritorio",
+   "deposito",
+   "deposito"
+  ],
+  "externo": "patio"
+ },
+ "serraria": {
+  "principal": "serraria",
+  "seq": [
+   "escritorio",
+   "deposito"
+  ],
+  "externo": "serraria"
+ },
+ "supermercado": {
+  "principal": "mercado",
+  "seq": [
+   "galpao",
+   "escritorio",
+   "refeitorio",
+   "deposito"
+  ],
+  "externo": "estacionamento"
+ },
+ "three-flats": {
+  "perfil": "casa",
+  "casas_x": [
+   [
+    -8,
+    0
+   ],
+   [
+    0,
+    8
+   ]
+  ],
+  "seq": "apto",
+  "externo": "quintal",
+  "andares": {
+   "0": {
+    "seq": [
+     "deposito",
+     "lavanderia"
+    ]
+   }
+  }
+ },
+ "torre-art-deco": {
+  "perfil": "casa",
+  "seq": "apto",
+  "externo": "patio",
+  "andares": {
+   "0": {
+    "seq": [
+     "recepcao",
+     "correios",
+     "deposito"
+    ]
+   },
+   "1": {
+    "seq": [
+     "sala",
+     "biblioteca",
+     "lavanderia"
+    ]
+   }
+  }
+ },
+ "torre-escalonada": {
+  "perfil": "casa",
+  "casas_x": [
+   [
+    -12,
+    0
+   ],
+   [
+    0,
+    12
+   ]
+  ],
+  "seq": "apto",
+  "externo": "patio",
+  "andares": {
+   "0": {
+    "seq": [
+     "recepcao",
+     "loja",
+     "loja",
+     "garagem"
+    ]
+   }
+  }
+ },
+ "vila-urbana": {
+  "perfil": "casa",
+  "sotao": true,
+  "externo": "quintal"
+ }
+}

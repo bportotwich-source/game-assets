@@ -1,0 +1,613 @@
+{
+ "kit": "piscina-publica",
+ "gerado_por": "scripts/ambientacao/ambientar.py",
+ "convencao": "pos em metros no espaço do prédio (mesmo do building_layout.json); rotY em graus; itens de parede (montagem wall) têm o pivô na face de trás, já na altura sugerida",
+ "niveis": {
+  "0": 0.0
+ },
+ "comodos": [
+  {
+   "andar": 0,
+   "comodo": 0,
+   "tipo": "recepcao",
+   "area_m2": 1283.6,
+   "centro": [
+    -0.15,
+    -4.91
+   ],
+   "itens": 9
+  },
+  {
+   "andar": 0,
+   "comodo": 1,
+   "tipo": "patio",
+   "area_m2": 705.5,
+   "centro": [
+    0.58,
+    -13.76
+   ],
+   "itens": 7
+  },
+  {
+   "andar": 0,
+   "comodo": 8,
+   "tipo": "vestiario",
+   "area_m2": 27.2,
+   "centro": [
+    -6.73,
+    0.05
+   ],
+   "itens": 7
+  },
+  {
+   "andar": 0,
+   "comodo": 12,
+   "tipo": "vestiario",
+   "area_m2": 47.9,
+   "centro": [
+    0.03,
+    -0.13
+   ],
+   "itens": 10
+  },
+  {
+   "andar": 0,
+   "comodo": 15,
+   "tipo": "deposito",
+   "area_m2": 26.6,
+   "centro": [
+    6.68,
+    0.06
+   ],
+   "itens": 9
+  }
+ ],
+ "itens": [
+  {
+   "item": "balcao_recepcao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/balcao_recepcao.glb",
+   "pos": [
+    -4.418,
+    0.0,
+    6.12
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "recepcao"
+  },
+  {
+   "item": "papeis_espalhados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/papeis_espalhados.glb",
+   "pos": [
+    -22.918,
+    0.0,
+    -23.625
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "recepcao"
+  },
+  {
+   "item": "banco_espera",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_espera.glb",
+   "pos": [
+    -23.748,
+    0.0,
+    12.125
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "recepcao"
+  },
+  {
+   "item": "banco_espera",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_espera.glb",
+   "pos": [
+    -15.668,
+    0.0,
+    -35.705
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "recepcao"
+  },
+  {
+   "item": "banco_espera",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_espera.glb",
+   "pos": [
+    -5.668,
+    0.0,
+    4.545
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "recepcao"
+  },
+  {
+   "item": "banco_espera",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_espera.glb",
+   "pos": [
+    -23.748,
+    0.0,
+    16.875
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "recepcao"
+  },
+  {
+   "item": "banco_espera",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_espera.glb",
+   "pos": [
+    23.662,
+    0.0,
+    -13.375
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "recepcao"
+  },
+  {
+   "item": "banco_espera",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_espera.glb",
+   "pos": [
+    -5.918,
+    0.0,
+    7.205
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "recepcao"
+  },
+  {
+   "item": "vaso_planta_morta",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_planta_morta.glb",
+   "pos": [
+    -9.168,
+    0.0,
+    -35.636
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "recepcao"
+  },
+  {
+   "item": "carro_abandonado",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carro_abandonado.glb",
+   "pos": [
+    4.832,
+    0.0,
+    -7.375
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "patio"
+  },
+  {
+   "item": "lixo_espalhado",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/lixo_espalhado.glb",
+   "pos": [
+    2.582,
+    0.0,
+    -28.125
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "patio"
+  },
+  {
+   "item": "cone_transito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cone_transito.glb",
+   "pos": [
+    -14.668,
+    0.0,
+    -14.625
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "patio"
+  },
+  {
+   "item": "cone_transito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cone_transito.glb",
+   "pos": [
+    16.582,
+    0.0,
+    -9.375
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "patio"
+  },
+  {
+   "item": "cone_transito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cone_transito.glb",
+   "pos": [
+    -9.168,
+    0.0,
+    -11.625
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "patio"
+  },
+  {
+   "item": "cone_transito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cone_transito.glb",
+   "pos": [
+    13.582,
+    0.0,
+    -9.875
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "patio"
+  },
+  {
+   "item": "cone_transito",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cone_transito.glb",
+   "pos": [
+    -14.918,
+    0.0,
+    -4.125
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "patio"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    -6.168,
+    0.0,
+    -0.875
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "vestiario"
+  },
+  {
+   "item": "armario_vestiario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_vestiario.glb",
+   "pos": [
+    -5.253,
+    0.0,
+    2.125
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "vestiario"
+  },
+  {
+   "item": "armario_vestiario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_vestiario.glb",
+   "pos": [
+    -8.918,
+    0.0,
+    2.54
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "vestiario"
+  },
+  {
+   "item": "armario_vestiario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_vestiario.glb",
+   "pos": [
+    -6.668,
+    0.0,
+    0.21
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "vestiario"
+  },
+  {
+   "item": "armario_vestiario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_vestiario.glb",
+   "pos": [
+    -5.668,
+    0.0,
+    1.04
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "vestiario"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    -5.668,
+    0.0,
+    0.125
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "vestiario"
+  },
+  {
+   "item": "sabao",
+   "grupo": "loot",
+   "arquivo": "props/loot/sabao.glb",
+   "pos": [
+    -7.918,
+    0.0,
+    0.125
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "vestiario"
+  },
+  {
+   "item": "papeis_espalhados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/papeis_espalhados.glb",
+   "pos": [
+    0.082,
+    0.0,
+    -1.125
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "vestiario"
+  },
+  {
+   "item": "banco_praca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banco_praca.glb",
+   "pos": [
+    2.082,
+    0.0,
+    0.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "vestiario"
+  },
+  {
+   "item": "armario_vestiario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_vestiario.glb",
+   "pos": [
+    -3.503,
+    0.0,
+    -0.125
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "vestiario"
+  },
+  {
+   "item": "armario_vestiario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_vestiario.glb",
+   "pos": [
+    -1.503,
+    0.0,
+    1.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "vestiario"
+  },
+  {
+   "item": "armario_vestiario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_vestiario.glb",
+   "pos": [
+    1.332,
+    0.0,
+    2.46
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "vestiario"
+  },
+  {
+   "item": "armario_vestiario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_vestiario.glb",
+   "pos": [
+    3.417,
+    0.0,
+    2.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "vestiario"
+  },
+  {
+   "item": "armario_vestiario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_vestiario.glb",
+   "pos": [
+    -2.418,
+    0.0,
+    0.96
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "vestiario"
+  },
+  {
+   "item": "armario_vestiario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_vestiario.glb",
+   "pos": [
+    1.832,
+    0.0,
+    -3.21
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "vestiario"
+  },
+  {
+   "item": "armario_vestiario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_vestiario.glb",
+   "pos": [
+    -1.418,
+    0.0,
+    2.46
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "vestiario"
+  },
+  {
+   "item": "sabao",
+   "grupo": "loot",
+   "arquivo": "props/loot/sabao.glb",
+   "pos": [
+    -1.418,
+    0.0,
+    -1.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "vestiario"
+  },
+  {
+   "item": "cadeira_quebrada",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_quebrada.glb",
+   "pos": [
+    5.582,
+    0.0,
+    -0.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "caixa_madeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_madeira.glb",
+   "pos": [
+    7.355,
+    0.0,
+    -1.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "caixa_madeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_madeira.glb",
+   "pos": [
+    5.832,
+    0.0,
+    1.648
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "estante_metal",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_metal.glb",
+   "pos": [
+    8.832,
+    0.0,
+    2.49
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "estante_metal",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_metal.glb",
+   "pos": [
+    6.332,
+    0.0,
+    0.26
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "caixa_papelao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_papelao.glb",
+   "pos": [
+    8.832,
+    0.0,
+    -1.23
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "caixa_papelao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_papelao.glb",
+   "pos": [
+    7.332,
+    0.0,
+    2.48
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "caixa_papelao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/caixa_papelao.glb",
+   "pos": [
+    6.082,
+    0.0,
+    2.77
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "lata_feijao",
+   "grupo": "loot",
+   "arquivo": "props/loot/lata_feijao.glb",
+   "pos": [
+    6.832,
+    0.0,
+    -0.375
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "deposito"
+  }
+ ]
+}

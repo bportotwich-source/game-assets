@@ -1,0 +1,698 @@
+{
+ "kit": "concessionaria",
+ "gerado_por": "scripts/ambientacao/ambientar.py",
+ "convencao": "pos em metros no espaço do prédio (mesmo do building_layout.json); rotY em graus; itens de parede (montagem wall) têm o pivô na face de trás, já na altura sugerida",
+ "niveis": {
+  "0": 0.0
+ },
+ "comodos": [
+  {
+   "andar": 0,
+   "comodo": 0,
+   "tipo": "showroom",
+   "area_m2": 895.6,
+   "centro": [
+    0.45,
+    3.52
+   ],
+   "itens": 25
+  },
+  {
+   "andar": 0,
+   "comodo": 1,
+   "tipo": "oficina",
+   "area_m2": 54.7,
+   "centro": [
+    -9.37,
+    -4.45
+   ],
+   "itens": 9
+  },
+  {
+   "andar": 0,
+   "comodo": 2,
+   "tipo": "lavabo",
+   "area_m2": 5.4,
+   "centro": [
+    -14.24,
+    -9.31
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 3,
+   "tipo": "vazio",
+   "area_m2": 1.2,
+   "centro": [
+    -12.55,
+    -9.66
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 4,
+   "tipo": "lavabo",
+   "area_m2": 3.0,
+   "centro": [
+    -10.65,
+    -9.12
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 6,
+   "tipo": "lavabo",
+   "area_m2": 4.4,
+   "centro": [
+    -8.18,
+    -9.18
+   ],
+   "itens": 2
+  },
+  {
+   "andar": 0,
+   "comodo": 9,
+   "tipo": "lavabo",
+   "area_m2": 3.8,
+   "centro": [
+    -3.12,
+    -9.36
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 10,
+   "tipo": "lavabo",
+   "area_m2": 2.9,
+   "centro": [
+    8.15,
+    -9.74
+   ],
+   "itens": 1
+  }
+ ],
+ "itens": [
+  {
+   "item": "carro_abandonado",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carro_abandonado.glb",
+   "pos": [
+    0.5,
+    0.0,
+    3.77
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "papeis_espalhados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/papeis_espalhados.glb",
+   "pos": [
+    -7.0,
+    0.0,
+    2.52
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "mesa_escritorio",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_escritorio.glb",
+   "pos": [
+    -18.731,
+    0.0,
+    3.52
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -18.018,
+    0.0,
+    3.52
+   ],
+   "rotY": 264,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "mesa_escritorio",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_escritorio.glb",
+   "pos": [
+    2.5,
+    0.0,
+    -13.712
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    2.5,
+    0.0,
+    -12.998
+   ],
+   "rotY": 176,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "mesa_escritorio",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_escritorio.glb",
+   "pos": [
+    18.482,
+    0.0,
+    -12.73
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "mesa_escritorio",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_escritorio.glb",
+   "pos": [
+    14.0,
+    0.0,
+    11.288
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "mesa_escritorio",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_escritorio.glb",
+   "pos": [
+    -16.768,
+    0.0,
+    -10.98
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -17.482,
+    0.0,
+    -10.98
+   ],
+   "rotY": 93,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "mesa_escritorio",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_escritorio.glb",
+   "pos": [
+    -18.25,
+    0.0,
+    -13.712
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    -18.25,
+    0.0,
+    -12.998
+   ],
+   "rotY": 177,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "cadeira_quebrada",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_quebrada.glb",
+   "pos": [
+    -17.0,
+    0.0,
+    17.02
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "vaso_planta_morta",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_planta_morta.glb",
+   "pos": [
+    -17.25,
+    0.0,
+    -7.97
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "vaso_planta_morta",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_planta_morta.glb",
+   "pos": [
+    -6.25,
+    0.0,
+    -11.47
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "vaso_planta_morta",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_planta_morta.glb",
+   "pos": [
+    18.511,
+    0.0,
+    13.52
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "vaso_planta_morta",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_planta_morta.glb",
+   "pos": [
+    -11.26,
+    0.0,
+    -12.98
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "vaso_planta_morta",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_planta_morta.glb",
+   "pos": [
+    -6.26,
+    0.0,
+    -12.98
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "totem_ofertas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/totem_ofertas.glb",
+   "pos": [
+    -5.5,
+    0.0,
+    6.77
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "totem_ofertas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/totem_ofertas.glb",
+   "pos": [
+    8.0,
+    0.0,
+    0.77
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "totem_ofertas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/totem_ofertas.glb",
+   "pos": [
+    12.25,
+    0.0,
+    -1.48
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "totem_ofertas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/totem_ofertas.glb",
+   "pos": [
+    12.0,
+    0.0,
+    -8.98
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "totem_ofertas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/totem_ofertas.glb",
+   "pos": [
+    -17.25,
+    0.0,
+    4.02
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "totem_ofertas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/totem_ofertas.glb",
+   "pos": [
+    -6.75,
+    0.0,
+    11.77
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    11.875,
+    1.2,
+    6.27
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "showroom"
+  },
+  {
+   "item": "papeis_espalhados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/papeis_espalhados.glb",
+   "pos": [
+    -9.25,
+    0.0,
+    -3.73
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "oficina"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    -14.75,
+    0.0,
+    -3.23
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "oficina"
+  },
+  {
+   "item": "bancada_trabalho",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/bancada_trabalho.glb",
+   "pos": [
+    -7.033,
+    0.0,
+    -4.48
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "oficina"
+  },
+  {
+   "item": "compressor_ar",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/compressor_ar.glb",
+   "pos": [
+    -4.0,
+    0.0,
+    -3.438
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "oficina"
+  },
+  {
+   "item": "carrinho_ferramentas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carrinho_ferramentas.glb",
+   "pos": [
+    -14.25,
+    0.0,
+    -1.63
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "oficina"
+  },
+  {
+   "item": "macaco_jacare",
+   "grupo": "loot",
+   "arquivo": "props/loot/macaco_jacare.glb",
+   "pos": [
+    -9.5,
+    0.0,
+    -5.98
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "oficina"
+  },
+  {
+   "item": "painel_ferramentas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/painel_ferramentas.glb",
+   "pos": [
+    -4.625,
+    1.1,
+    -6.23
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "oficina"
+  },
+  {
+   "item": "calibrador_pneu",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/calibrador_pneu.glb",
+   "pos": [
+    -4.25,
+    0.0,
+    -1.585
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "oficina"
+  },
+  {
+   "item": "chave_inglesa",
+   "grupo": "loot",
+   "arquivo": "props/loot/chave_inglesa.glb",
+   "pos": [
+    -15.25,
+    0.0,
+    -5.48
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "oficina"
+  },
+  {
+   "item": "vaso_sanitario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_sanitario.glb",
+   "pos": [
+    -14.0,
+    0.0,
+    -10.26
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pia_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_banheiro.glb",
+   "pos": [
+    -14.87,
+    0.0,
+    -9.23
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "armario_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_banheiro.glb",
+   "pos": [
+    -13.125,
+    1.2,
+    -9.48
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "vaso_sanitario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_sanitario.glb",
+   "pos": [
+    -10.28,
+    0.0,
+    -10.23
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pia_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_banheiro.glb",
+   "pos": [
+    -10.37,
+    0.0,
+    -9.23
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "armario_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_banheiro.glb",
+   "pos": [
+    -10.625,
+    1.2,
+    -9.48
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "vaso_sanitario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_sanitario.glb",
+   "pos": [
+    -8.78,
+    0.0,
+    -10.23
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pia_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_banheiro.glb",
+   "pos": [
+    -7.0,
+    0.0,
+    -8.36
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "vaso_sanitario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_sanitario.glb",
+   "pos": [
+    -3.53,
+    0.0,
+    -9.23
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pia_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_banheiro.glb",
+   "pos": [
+    -2.63,
+    0.0,
+    -9.23
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "armario_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_banheiro.glb",
+   "pos": [
+    -2.375,
+    1.2,
+    -9.48
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "vaso_sanitario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_sanitario.glb",
+   "pos": [
+    8.75,
+    0.0,
+    -10.26
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "lavabo"
+  }
+ ]
+}

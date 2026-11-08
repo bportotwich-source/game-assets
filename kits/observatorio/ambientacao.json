@@ -1,0 +1,203 @@
+{
+ "kit": "observatorio",
+ "gerado_por": "scripts/ambientacao/ambientar.py",
+ "convencao": "pos em metros no espaço do prédio (mesmo do building_layout.json); rotY em graus; itens de parede (montagem wall) têm o pivô na face de trás, já na altura sugerida",
+ "niveis": {
+  "0": 1.95
+ },
+ "comodos": [
+  {
+   "andar": 0,
+   "comodo": 0,
+   "tipo": "observatorio",
+   "area_m2": 128.8,
+   "centro": [
+    0.08,
+    0.19
+   ],
+   "itens": 12
+  },
+  {
+   "andar": 0,
+   "comodo": 1,
+   "tipo": "corredor",
+   "area_m2": 13.9,
+   "centro": [
+    0.0,
+    7.3
+   ],
+   "itens": 1
+  }
+ ],
+ "itens": [
+  {
+   "item": "papeis_espalhados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/papeis_espalhados.glb",
+   "pos": [
+    -0.625,
+    1.95,
+    -3.625
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "observatorio"
+  },
+  {
+   "item": "telescopio",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/telescopio.glb",
+   "pos": [
+    -0.375,
+    1.95,
+    0.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "observatorio"
+  },
+  {
+   "item": "mesa_escritorio",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_escritorio.glb",
+   "pos": [
+    2.856,
+    1.95,
+    -2.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "observatorio"
+  },
+  {
+   "item": "cadeira_quebrada",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_quebrada.glb",
+   "pos": [
+    -3.125,
+    1.95,
+    0.125
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "observatorio"
+  },
+  {
+   "item": "estante_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_livros.glb",
+   "pos": [
+    -8.125,
+    1.95,
+    0.548
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "observatorio"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -1.125,
+    1.95,
+    2.125
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "observatorio"
+  },
+  {
+   "item": "mapa_estrelas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mapa_estrelas.glb",
+   "pos": [
+    -6.5,
+    3.25,
+    1.125
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "observatorio"
+  },
+  {
+   "item": "mapa_estrelas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mapa_estrelas.glb",
+   "pos": [
+    -6.5,
+    3.25,
+    -0.875
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "observatorio"
+  },
+  {
+   "item": "mapa_estrelas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mapa_estrelas.glb",
+   "pos": [
+    -2.875,
+    3.25,
+    5.5
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "observatorio"
+  },
+  {
+   "item": "mapa_estrelas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mapa_estrelas.glb",
+   "pos": [
+    -7.125,
+    3.25,
+    -2.75
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "observatorio"
+  },
+  {
+   "item": "mapa_estrelas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mapa_estrelas.glb",
+   "pos": [
+    6.75,
+    3.25,
+    1.625
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "observatorio"
+  },
+  {
+   "item": "mapa_estrelas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mapa_estrelas.glb",
+   "pos": [
+    5.5,
+    3.25,
+    -1.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "observatorio"
+  },
+  {
+   "item": "vaso_planta_morta",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_planta_morta.glb",
+   "pos": [
+    -0.375,
+    1.95,
+    8.136
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "corredor"
+  }
+ ]
+}

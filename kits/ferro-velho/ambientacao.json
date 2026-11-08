@@ -1,0 +1,632 @@
+{
+ "kit": "ferro-velho",
+ "gerado_por": "scripts/ambientacao/ambientar.py",
+ "convencao": "pos em metros no espaço do prédio (mesmo do building_layout.json); rotY em graus; itens de parede (montagem wall) têm o pivô na face de trás, já na altura sugerida",
+ "niveis": {
+  "0": 0.0
+ },
+ "comodos": [
+  {
+   "andar": 0,
+   "comodo": 0,
+   "tipo": "ferro_velho",
+   "area_m2": 992.6,
+   "centro": [
+    0.17,
+    -0.44
+   ],
+   "itens": 37
+  },
+  {
+   "andar": 0,
+   "comodo": 15,
+   "tipo": "escritorio",
+   "area_m2": 30.1,
+   "centro": [
+    12.9,
+    7.11
+   ],
+   "itens": 9
+  }
+ ],
+ "itens": [
+  {
+   "item": "carcaca_carro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carcaca_carro.glb",
+   "pos": [
+    -2.051,
+    0.0,
+    -3.475
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "carcaca_carro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carcaca_carro.glb",
+   "pos": [
+    -8.551,
+    0.0,
+    -4.975
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "carcaca_carro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carcaca_carro.glb",
+   "pos": [
+    4.449,
+    0.0,
+    -2.725
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "carcaca_carro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carcaca_carro.glb",
+   "pos": [
+    7.199,
+    0.0,
+    -9.475
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "carcaca_carro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carcaca_carro.glb",
+   "pos": [
+    1.699,
+    0.0,
+    3.275
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "carcaca_carro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carcaca_carro.glb",
+   "pos": [
+    19.449,
+    0.0,
+    -9.725
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "carcaca_carro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carcaca_carro.glb",
+   "pos": [
+    -0.051,
+    0.0,
+    -9.475
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "carcaca_carro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carcaca_carro.glb",
+   "pos": [
+    -3.551,
+    0.0,
+    9.775
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "carcaca_carro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carcaca_carro.glb",
+   "pos": [
+    -6.051,
+    0.0,
+    3.525
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_sucata",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_sucata.glb",
+   "pos": [
+    6.699,
+    0.0,
+    7.025
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_sucata",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_sucata.glb",
+   "pos": [
+    -8.801,
+    0.0,
+    -9.725
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_sucata",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_sucata.glb",
+   "pos": [
+    -1.801,
+    0.0,
+    7.525
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_sucata",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_sucata.glb",
+   "pos": [
+    -9.801,
+    0.0,
+    13.275
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_sucata",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_sucata.glb",
+   "pos": [
+    19.699,
+    0.0,
+    -0.975
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_sucata",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_sucata.glb",
+   "pos": [
+    15.699,
+    0.0,
+    -10.475
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_sucata",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_sucata.glb",
+   "pos": [
+    -3.051,
+    0.0,
+    0.275
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_sucata",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_sucata.glb",
+   "pos": [
+    10.699,
+    0.0,
+    1.275
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_sucata",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_sucata.glb",
+   "pos": [
+    -2.801,
+    0.0,
+    12.775
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_calotas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_calotas.glb",
+   "pos": [
+    -5.301,
+    0.0,
+    12.775
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_calotas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_calotas.glb",
+   "pos": [
+    -2.051,
+    0.0,
+    4.525
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_calotas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_calotas.glb",
+   "pos": [
+    6.699,
+    0.0,
+    1.275
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_calotas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_calotas.glb",
+   "pos": [
+    0.449,
+    0.0,
+    7.025
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_calotas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_calotas.glb",
+   "pos": [
+    -20.051,
+    0.0,
+    7.525
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_calotas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_calotas.glb",
+   "pos": [
+    -2.551,
+    0.0,
+    -12.975
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_pneus",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_pneus.glb",
+   "pos": [
+    -12.551,
+    0.0,
+    14.275
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_pneus",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_pneus.glb",
+   "pos": [
+    -9.051,
+    0.0,
+    -0.725
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_pneus",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_pneus.glb",
+   "pos": [
+    -7.801,
+    0.0,
+    -13.225
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_pneus",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_pneus.glb",
+   "pos": [
+    -19.051,
+    0.0,
+    12.525
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_pneus",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_pneus.glb",
+   "pos": [
+    18.699,
+    0.0,
+    -12.975
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "pilha_pneus",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_pneus.glb",
+   "pos": [
+    -19.301,
+    0.0,
+    -9.975
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "chapa_metal",
+   "grupo": "loot",
+   "arquivo": "props/loot/chapa_metal.glb",
+   "pos": [
+    18.449,
+    0.0,
+    13.775
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "tambor_200l",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/tambor_200l.glb",
+   "pos": [
+    3.199,
+    0.0,
+    14.025
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "tambor_200l",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/tambor_200l.glb",
+   "pos": [
+    8.449,
+    0.0,
+    11.025
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "tambor_200l",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/tambor_200l.glb",
+   "pos": [
+    20.449,
+    0.0,
+    12.275
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "tambor_200l",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/tambor_200l.glb",
+   "pos": [
+    10.449,
+    0.0,
+    -0.725
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "tambor_200l",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/tambor_200l.glb",
+   "pos": [
+    12.449,
+    0.0,
+    -10.725
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "peca_motor",
+   "grupo": "loot",
+   "arquivo": "props/loot/peca_motor.glb",
+   "pos": [
+    -9.051,
+    0.0,
+    6.025
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "ferro_velho"
+  },
+  {
+   "item": "papeis_espalhados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/papeis_espalhados.glb",
+   "pos": [
+    14.449,
+    0.0,
+    9.025
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "mancha_sangue",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mancha_sangue.glb",
+   "pos": [
+    12.199,
+    0.0,
+    5.275
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "mesa_escritorio",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_escritorio.glb",
+   "pos": [
+    10.717,
+    0.0,
+    8.025
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    11.43,
+    0.0,
+    8.025
+   ],
+   "rotY": 266,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "escrivaninha",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/escrivaninha.glb",
+   "pos": [
+    12.232,
+    0.0,
+    8.275
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "cadeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira.glb",
+   "pos": [
+    11.57,
+    0.0,
+    8.275
+   ],
+   "rotY": 92,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "estante_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/estante_livros.glb",
+   "pos": [
+    11.199,
+    0.0,
+    9.947
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "calendario_parede",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/calendario_parede.glb",
+   "pos": [
+    12.449,
+    1.3,
+    3.4
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "escritorio"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    12.449,
+    1.2,
+    4.4
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "escritorio"
+  }
+ ]
+}

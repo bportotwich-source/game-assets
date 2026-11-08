@@ -1,0 +1,496 @@
+{
+ "kit": "diner",
+ "gerado_por": "scripts/ambientacao/ambientar.py",
+ "convencao": "pos em metros no espaço do prédio (mesmo do building_layout.json); rotY em graus; itens de parede (montagem wall) têm o pivô na face de trás, já na altura sugerida",
+ "niveis": {
+  "0": 0
+ },
+ "comodos": [
+  {
+   "andar": 0,
+   "comodo": 0,
+   "tipo": "diner",
+   "area_m2": 94.7,
+   "centro": [
+    0.58,
+    0.47
+   ],
+   "itens": 24
+  },
+  {
+   "andar": 0,
+   "comodo": 2,
+   "tipo": "lavabo",
+   "area_m2": 4.6,
+   "centro": [
+    -4.97,
+    -1.93
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 5,
+   "tipo": "lavabo",
+   "area_m2": 4.6,
+   "centro": [
+    -2.97,
+    -1.93
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 8,
+   "tipo": "lavabo",
+   "area_m2": 4.6,
+   "centro": [
+    -1.0,
+    -1.78
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 10,
+   "tipo": "lavabo",
+   "area_m2": 2.4,
+   "centro": [
+    1.03,
+    4.81
+   ],
+   "itens": 0
+  }
+ ],
+ "itens": [
+  {
+   "item": "mesa_booth",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_booth.glb",
+   "pos": [
+    -3.095,
+    0,
+    2.55
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "mesa_booth",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_booth.glb",
+   "pos": [
+    5.405,
+    0,
+    2.55
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "mesa_booth",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_booth.glb",
+   "pos": [
+    -5.095,
+    0,
+    2.55
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "mesa_booth",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_booth.glb",
+   "pos": [
+    4.405,
+    0,
+    -1.2
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "mesa_booth",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_booth.glb",
+   "pos": [
+    -7.2,
+    0,
+    0.155
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "mesa_booth",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_booth.glb",
+   "pos": [
+    -1.345,
+    0,
+    2.55
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "mesa_booth",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_booth.glb",
+   "pos": [
+    3.655,
+    0,
+    2.55
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "mesa_booth",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_booth.glb",
+   "pos": [
+    7.26,
+    0,
+    -1.095
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "mesa_booth",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/mesa_booth.glb",
+   "pos": [
+    -7.2,
+    0,
+    -1.845
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    -6.845,
+    0,
+    2.155
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "balcao_caixa",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/balcao_caixa.glb",
+   "pos": [
+    2.63,
+    0,
+    -0.095
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "cadeira_quebrada",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cadeira_quebrada.glb",
+   "pos": [
+    7.905,
+    0,
+    1.405
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "jukebox",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/jukebox.glb",
+   "pos": [
+    9.177,
+    0,
+    -0.095
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "maquina_refrigerante",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/maquina_refrigerante.glb",
+   "pos": [
+    1.405,
+    0,
+    -3.065
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "vitrine_tortas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vitrine_tortas.glb",
+   "pos": [
+    -6.47,
+    0,
+    -3.095
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "banqueta_giratoria",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banqueta_giratoria.glb",
+   "pos": [
+    8.155,
+    0,
+    0.405
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "banqueta_giratoria",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banqueta_giratoria.glb",
+   "pos": [
+    7.155,
+    0,
+    2.905
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "banqueta_giratoria",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banqueta_giratoria.glb",
+   "pos": [
+    4.655,
+    0,
+    -2.845
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "banqueta_giratoria",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banqueta_giratoria.glb",
+   "pos": [
+    -1.345,
+    0,
+    1.155
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "banqueta_giratoria",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banqueta_giratoria.glb",
+   "pos": [
+    4.155,
+    0,
+    0.655
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "banqueta_giratoria",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banqueta_giratoria.glb",
+   "pos": [
+    3.155,
+    0,
+    -2.345
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "banqueta_giratoria",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banqueta_giratoria.glb",
+   "pos": [
+    6.905,
+    0,
+    -2.595
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "banqueta_giratoria",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banqueta_giratoria.glb",
+   "pos": [
+    6.155,
+    0,
+    0.655
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "banqueta_giratoria",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/banqueta_giratoria.glb",
+   "pos": [
+    -0.095,
+    0,
+    1.405
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "diner"
+  },
+  {
+   "item": "vaso_sanitario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_sanitario.glb",
+   "pos": [
+    -4.565,
+    0,
+    -2.595
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pia_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_banheiro.glb",
+   "pos": [
+    -5.465,
+    0,
+    -2.345
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "armario_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_banheiro.glb",
+   "pos": [
+    -4.22,
+    1.2,
+    -3.095
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "vaso_sanitario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_sanitario.glb",
+   "pos": [
+    -2.565,
+    0,
+    -2.845
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pia_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_banheiro.glb",
+   "pos": [
+    -3.465,
+    0,
+    -2.095
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "armario_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_banheiro.glb",
+   "pos": [
+    -3.72,
+    1.2,
+    -2.845
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "vaso_sanitario",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vaso_sanitario.glb",
+   "pos": [
+    -1.375,
+    0,
+    -1.095
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "pia_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pia_banheiro.glb",
+   "pos": [
+    -1.095,
+    0,
+    -0.475
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "lavabo"
+  },
+  {
+   "item": "armario_banheiro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_banheiro.glb",
+   "pos": [
+    -1.72,
+    1.2,
+    -1.095
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "lavabo"
+  }
+ ]
+}

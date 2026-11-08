@@ -1,0 +1,743 @@
+{
+ "kit": "fazenda",
+ "gerado_por": "scripts/ambientacao/ambientar.py",
+ "convencao": "pos em metros no espaço do prédio (mesmo do building_layout.json); rotY em graus; itens de parede (montagem wall) têm o pivô na face de trás, já na altura sugerida",
+ "niveis": {
+  "0": 0.0
+ },
+ "comodos": [
+  {
+   "andar": 0,
+   "comodo": 0,
+   "tipo": "celeiro",
+   "area_m2": 3270.6,
+   "centro": [
+    -1.41,
+    -2.57
+   ],
+   "itens": 28
+  },
+  {
+   "andar": 0,
+   "comodo": 1,
+   "tipo": "cozinha",
+   "area_m2": 89.8,
+   "centro": [
+    -14.88,
+    5.01
+   ],
+   "itens": 10
+  },
+  {
+   "andar": 0,
+   "comodo": 5,
+   "tipo": "vazio",
+   "area_m2": 1.0,
+   "centro": [
+    -21.5,
+    7.06
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 18,
+   "tipo": "cozinha",
+   "area_m2": 15.9,
+   "centro": [
+    -16.98,
+    -25.0
+   ],
+   "itens": 6
+  },
+  {
+   "andar": 0,
+   "comodo": 34,
+   "tipo": "sala",
+   "area_m2": 219.4,
+   "centro": [
+    -6.0,
+    -22.03
+   ],
+   "itens": 8
+  }
+ ],
+ "itens": [
+  {
+   "item": "cocho",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cocho.glb",
+   "pos": [
+    11.125,
+    0.0,
+    -35.63
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "carrinho_mao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/carrinho_mao.glb",
+   "pos": [
+    -25.625,
+    0.0,
+    23.125
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "fardo_feno",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fardo_feno.glb",
+   "pos": [
+    28.125,
+    0.0,
+    27.666
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "fardo_feno",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fardo_feno.glb",
+   "pos": [
+    -10.875,
+    0.0,
+    27.666
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "fardo_feno",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fardo_feno.glb",
+   "pos": [
+    -32.416,
+    0.0,
+    18.875
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "fardo_feno",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fardo_feno.glb",
+   "pos": [
+    21.375,
+    0.0,
+    27.666
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "fardo_feno",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fardo_feno.glb",
+   "pos": [
+    -32.416,
+    0.0,
+    -18.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "fardo_feno",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fardo_feno.glb",
+   "pos": [
+    23.375,
+    0.0,
+    20.584
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "fardo_feno",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fardo_feno.glb",
+   "pos": [
+    28.416,
+    0.0,
+    2.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "fardo_feno",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fardo_feno.glb",
+   "pos": [
+    -9.416,
+    0.0,
+    9.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "fardo_feno",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fardo_feno.glb",
+   "pos": [
+    -7.875,
+    0.0,
+    -34.416
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "fardo_feno",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fardo_feno.glb",
+   "pos": [
+    29.584,
+    0.0,
+    -29.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "fardo_feno",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fardo_feno.glb",
+   "pos": [
+    29.666,
+    0.0,
+    -19.375
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "fardo_feno",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fardo_feno.glb",
+   "pos": [
+    -2.875,
+    0.0,
+    20.584
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "fardo_feno",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fardo_feno.glb",
+   "pos": [
+    -5.375,
+    0.0,
+    -34.416
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "fardo_feno",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fardo_feno.glb",
+   "pos": [
+    29.666,
+    0.0,
+    -33.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "fardo_feno",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fardo_feno.glb",
+   "pos": [
+    -27.625,
+    0.0,
+    -35.584
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "painel_ferramentas",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/painel_ferramentas.glb",
+   "pos": [
+    28.125,
+    1.1,
+    20.25
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "saco_racao",
+   "grupo": "loot",
+   "arquivo": "props/loot/saco_racao.glb",
+   "pos": [
+    -3.625,
+    0.0,
+    -4.875
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "saco_racao",
+   "grupo": "loot",
+   "arquivo": "props/loot/saco_racao.glb",
+   "pos": [
+    -28.375,
+    0.0,
+    -22.125
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "saco_racao",
+   "grupo": "loot",
+   "arquivo": "props/loot/saco_racao.glb",
+   "pos": [
+    -24.875,
+    0.0,
+    -20.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "saco_racao",
+   "grupo": "loot",
+   "arquivo": "props/loot/saco_racao.glb",
+   "pos": [
+    -4.125,
+    0.0,
+    23.875
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "saco_racao",
+   "grupo": "loot",
+   "arquivo": "props/loot/saco_racao.glb",
+   "pos": [
+    18.625,
+    0.0,
+    2.125
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "saco_racao",
+   "grupo": "loot",
+   "arquivo": "props/loot/saco_racao.glb",
+   "pos": [
+    2.875,
+    0.0,
+    11.375
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "tarro_leite",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/tarro_leite.glb",
+   "pos": [
+    19.625,
+    0.0,
+    20.456
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "tarro_leite",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/tarro_leite.glb",
+   "pos": [
+    2.125,
+    0.0,
+    7.706
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "tarro_leite",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/tarro_leite.glb",
+   "pos": [
+    -32.544,
+    0.0,
+    -26.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "tarro_leite",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/tarro_leite.glb",
+   "pos": [
+    -8.956,
+    0.0,
+    -3.625
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "celeiro"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    -12.125,
+    0.0,
+    9.625
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "balcao_pia",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/balcao_pia.glb",
+   "pos": [
+    -12.907,
+    0.0,
+    1.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "louca_quebrada",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/louca_quebrada.glb",
+   "pos": [
+    -12.625,
+    0.0,
+    3.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "lixeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/lixeira.glb",
+   "pos": [
+    -14.801,
+    0.0,
+    2.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "geladeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/geladeira.glb",
+   "pos": [
+    -16.135,
+    0.0,
+    2.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "fogao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fogao.glb",
+   "pos": [
+    -16.099,
+    0.0,
+    8.125
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "armario_aereo",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_aereo.glb",
+   "pos": [
+    -15.75,
+    1.5,
+    4.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "fruteira_podre",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fruteira_podre.glb",
+   "pos": [
+    -11.375,
+    0.0,
+    8.375
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "garrafa_agua",
+   "grupo": "loot",
+   "arquivo": "props/loot/garrafa_agua.glb",
+   "pos": [
+    -10.625,
+    0.0,
+    9.625
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "calendario_parede",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/calendario_parede.glb",
+   "pos": [
+    -19.125,
+    1.3,
+    -0.75
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    -17.625,
+    0.0,
+    -25.625
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "balcao_pia",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/balcao_pia.glb",
+   "pos": [
+    -16.875,
+    0.0,
+    -26.907
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "lixeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/lixeira.glb",
+   "pos": [
+    -15.199,
+    0.0,
+    -24.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "geladeira",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/geladeira.glb",
+   "pos": [
+    -17.875,
+    0.0,
+    -23.385
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "fogao",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/fogao.glb",
+   "pos": [
+    -15.348,
+    0.0,
+    -24.125
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "armario_aereo",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/armario_aereo.glb",
+   "pos": [
+    -19.0,
+    1.5,
+    -24.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "cozinha"
+  },
+  {
+   "item": "tapete_sala",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/tapete_sala.glb",
+   "pos": [
+    -6.125,
+    0.0,
+    -22.125
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "sofa",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/sofa.glb",
+   "pos": [
+    1.035,
+    0.0,
+    -29.125
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "poltrona",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/poltrona.glb",
+   "pos": [
+    -9.705,
+    0.0,
+    -26.375
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "rack_tv",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/rack_tv.glb",
+   "pos": [
+    -4.243,
+    0.0,
+    -17.875
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "vitrola",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/vitrola.glb",
+   "pos": [
+    1.216,
+    0.0,
+    -20.125
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    -0.375,
+    0.0,
+    -15.125
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "quadro_familia",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/quadro_familia.glb",
+   "pos": [
+    -1.875,
+    1.4,
+    -21.75
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "sala"
+  },
+  {
+   "item": "relogio_parede",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/relogio_parede.glb",
+   "pos": [
+    -10.625,
+    1.8,
+    -21.75
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "sala"
+  }
+ ]
+}

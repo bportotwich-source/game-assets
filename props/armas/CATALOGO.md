@@ -56,8 +56,8 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Coronha fixa (fuzil) (`coronha_fixa_ar`) | Coronhas | `coronha_ar` | recuo ×0,6, precisao ×1,35 | 0,6 kg | comum | 20172 |
 | Mira holográfica (`mira_holografica`) | Miras | `trilho_mira` | precisao_mirando ×1,35, tempo_mirar ×0,7 | 0,32 kg | muito raro | 1160 |
 | Luneta 1-6× (`luneta_1_6`) | Miras | `trilho_mira` | precisao_mirando ×1,5, tempo_mirar ×1,1, alcance_m ×1,5 | 0,55 kg | muito raro | 6512 |
-| Alça de mira rebatível (`alca_rebativel`) | Miras | `alca_trilho` | - | 0,04 kg | comum | 692 |
-| Massa de mira rebatível (`massa_rebativel`) | Miras | `massa_trilho` | - | 0,03 kg | comum | 620 |
+| Alça de mira rebatível (`alca_rebativel`) | Miras | `alca_trilho` | - | 0,04 kg | comum | 862 |
+| Massa de mira rebatível (`massa_rebativel`) | Miras | `massa_trilho` | - | 0,03 kg | comum | 648 |
 | Empunhadura vertical (`empunhadura_vertical`) | Empunhaduras | `mlok_baixo` | recuo ×0,85, precisao_rajada ×1,25 | 0,09 kg | incomum | 12444 |
 | Empunhadura angulada (`empunhadura_angulada`) | Empunhaduras | `mlok_baixo` | recuo ×0,9, tempo_mirar ×0,9 | 0,06 kg | incomum | 7070 |
 | Lanterna de fuzil (`lanterna_fuzil`) | Lanternas | `mlok_lado` | - | 0,16 kg | incomum | 5576 |

@@ -1807,6 +1807,8 @@
       "alca_rebativel"
      ],
      "padrao": "alca_rebativel",
+     "rebate_com": "encaixe_mira",
+     "descricao": "deita (animação \"dobrar\" do acessório) quando há mira ou luneta no encaixe_mira",
      "explodir_m": [
       -0.0,
       0.05,
@@ -1826,6 +1828,8 @@
       "massa_rebativel"
      ],
      "padrao": "massa_rebativel",
+     "rebate_com": "encaixe_mira",
+     "descricao": "deita (animação \"dobrar\" do acessório) quando há mira ou luneta no encaixe_mira",
      "explodir_m": [
       0.0,
       0.05,
@@ -2019,10 +2023,10 @@
      "pai": "fuzil_556",
      "posicao_m": [
       0.0,
-      0.131,
+      0.136,
       -0.029
      ],
-     "descricao": "linha de visada das miras rebatíveis"
+     "descricao": "centro do furo da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z) sem mira acoplada"
     }
    ],
    "animacoes": {
@@ -2236,6 +2240,8 @@
       "alca_rebativel"
      ],
      "padrao": "alca_rebativel",
+     "rebate_com": "encaixe_mira",
+     "descricao": "deita (animação \"dobrar\" do acessório) quando há mira ou luneta no encaixe_mira",
      "explodir_m": [
       -0.0,
       0.05,
@@ -2255,6 +2261,8 @@
       "massa_rebativel"
      ],
      "padrao": "massa_rebativel",
+     "rebate_com": "encaixe_mira",
+     "descricao": "deita (animação \"dobrar\" do acessório) quando há mira ou luneta no encaixe_mira",
      "explodir_m": [
       0.0,
       0.05,
@@ -2450,10 +2458,10 @@
      "pai": "fuzil_556_bicolor",
      "posicao_m": [
       0.0,
-      0.131,
+      0.136,
       -0.029
      ],
-     "descricao": "linha de visada das miras rebatíveis"
+     "descricao": "centro do furo da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z) sem mira acoplada"
     }
    ],
    "animacoes": {
@@ -3896,8 +3904,8 @@
     0.03,
     0.024
    ],
-   "triangulos": 692,
-   "kb": 40.0,
+   "triangulos": 862,
+   "kb": 47.9,
    "partes": [
     {
      "no": "lamina",
@@ -3934,11 +3942,11 @@
    "arquivo": "acessorios/massa_rebativel.glb",
    "tamanho_m": [
     0.027,
-    0.036,
+    0.029,
     0.024
    ],
-   "triangulos": 620,
-   "kb": 33.0,
+   "triangulos": 648,
+   "kb": 34.3,
    "partes": [
     {
      "no": "lamina",

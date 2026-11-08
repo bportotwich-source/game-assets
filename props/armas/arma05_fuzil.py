@@ -194,8 +194,10 @@ def fuzil_556(A):
     _carregador_curvo(car, 30)
     A.encaixe('encaixe_mira', (0.08, FY1 + 0.0055, 0), 'trilho_mira', explodir=(0, 0.07, 0),
               aceita=['mira_holografica', 'mira_ponto_vermelho_tubo', 'luneta_1_6', 'luneta_4x'])
-    A.encaixe('encaixe_alca', (FX0 + 0.012, FY1 + 0.0055, 0), 'alca_trilho', explodir=(-0.02, 0.05, 0), aceita=['alca_rebativel'], padrao='alca_rebativel')
-    A.encaixe('encaixe_massa', (0.425, FY1 + 0.0055, 0), 'massa_trilho', explodir=(0.02, 0.05, 0), aceita=['massa_rebativel'], padrao='massa_rebativel')
+    A.encaixe('encaixe_alca', (FX0 + 0.012, FY1 + 0.0055, 0), 'alca_trilho', explodir=(-0.02, 0.05, 0), aceita=['alca_rebativel'], padrao='alca_rebativel',
+              rebate_com='encaixe_mira', descricao='deita (animação "dobrar" do acessório) quando há mira ou luneta no encaixe_mira')
+    A.encaixe('encaixe_massa', (0.425, FY1 + 0.0055, 0), 'massa_trilho', explodir=(0.02, 0.05, 0), aceita=['massa_rebativel'], padrao='massa_rebativel',
+              rebate_com='encaixe_mira', descricao='deita (animação "dobrar" do acessório) quando há mira ou luneta no encaixe_mira')
     A.encaixe('encaixe_boca', (F_XM - 0.014, 0, 0), 'boca_556', explodir=(0.08, 0, 0), aceita=['quebra_chamas_556', 'compensador_556', 'supressor_556'],
               padrao='quebra_chamas_556')
     A.encaixe('encaixe_carregador', (MAG_X, MAG_Y, 0), 'carregador_556', pai='carregador', substitui='carregador', aceita=['carregador_556_30', 'carregador_556_60', 'tambor_556_60'],
@@ -209,7 +211,7 @@ def fuzil_556(A):
     A.encaixe('encaixe_bandoleira', (0.425, -0.006, -0.0205), 'bandoleira', explodir=(0, 0, -0.04), aceita=['bandoleira'])
     A.encaixe('boca_fogo', (F_XM, 0, 0), 'efeito', descricao='clarão de boca e origem do disparo (-Z)')
     A.encaixe('saida_estojo', (0.09, 0.0, FW + 0.002), 'efeito', descricao='onde nasce o estojo (vai para a direita e um pouco para trás)')
-    A.encaixe('mira_ferro', (FX0 + 0.012, FY1 + 0.02, 0), 'mira', descricao='linha de visada das miras rebatíveis')
+    A.encaixe('mira_ferro', (FX0 + 0.012, FY1 + 0.0055 + 0.0195, 0), 'mira', descricao='centro do furo da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z) sem mira acoplada')
     aberta = ('tampa_janela', 'r', (1, 0, 0), pose([(0, 100), (0.1, 100)]))
     A.anim('atirar', 0.09, [('gatilho', 'r', (0, 0, 1), pose([(0, 0), (0.01, -12), (0.05, -12), (0.08, 0)])),
                             ('ferrolho', 't', pose([(0, (0, 0, 0)), (0.008, (0, 0, 0)), (0.035, (-CF, 0, 0)), (0.075, (0, 0, 0))])),
@@ -292,13 +294,16 @@ def _rebativel(A, frente):
     q.add('aco_oxidado', cil_z(0.002, -0.013, 0.014, 0, -0.003, 12))
     pa = A.parte('lamina', (0.0, 0.006, 0), explodir=(0, 0.03, 0), tipo='gira', eixo='z', curso_graus=-85 if frente else 85, descricao='rebate (animação dobrar)')
     if frente:
-        lam = arred([(-0.004, 0.005), (0.004, 0.005), (0.004, 0.026), (0.002, 0.03), (-0.002, 0.03), (-0.004, 0.026)], 0.0012)
-        pa.add('aluminio_preto', menos(solido(lam, -0.009, 0.009, 0.001), solido(arred([(-0.01, 0.012), (0.01, 0.012), (0.01, 0.026), (-0.01, 0.026)], 0.002), -0.0065, 0.0065)))
-        pa.add('aluminio_preto', caixa(-0.0012, 0.0012, 0.016, 0.03, -0.0011, 0.0011))
-        pa.add('tinta_branca', caixa(-0.0013, 0.0013, 0.0285, 0.0298, -0.0005, 0.0005))
+        # massa: orelhas de protecao e poste com a ponta na MESMA altura do centro do furo da alca (y = 0,0195): linha de visada reta
+        lam = arred([(-0.004, 0.005), (0.004, 0.005), (0.004, 0.0215), (0.003, 0.0235), (-0.003, 0.0235), (-0.004, 0.0215)], 0.0012)
+        pa.add('aluminio_preto', menos(solido(lam, -0.009, 0.009, 0.001), solido(arred([(-0.01, 0.0095), (0.01, 0.0095), (0.01, 0.026), (-0.01, 0.026)], 0.002), -0.0065, 0.0065)))
+        pa.add('aluminio_preto', caixa(-0.0012, 0.0012, 0.009, 0.0195, -0.0011, 0.0011))
+        pa.add('tinta_branca', caixa(-0.0013, 0.0013, 0.0185, 0.0196, -0.0005, 0.0005))
     else:
+        # alca: furo de 4,4 mm com o centro em y = 0,0195 e chanfro do lado do olho (o furo parece maior olhando de tras)
         lam = arred([(-0.004, 0.005), (0.004, 0.005), (0.004, 0.024), (-0.004, 0.024)], 0.0012)
-        pa.add('aluminio_preto', menos(solido(lam, -0.009, 0.009, 0.001), cil_x(0.0022, -0.01, 0.01, 0.0195, 0, 20)))
+        pa.add('aluminio_preto', menos(solido(lam, -0.009, 0.009, 0.001), cil_x(0.0022, -0.01, 0.01, 0.0195, 0, 20),
+                                       torno_x([(0.0, -0.0045), (0.0045, -0.0045), (0.0022, -0.0015), (0.0, -0.0015)], 24, 0.0195, 0.0)))
         pa.add('recartilhado', cil_z(0.004, 0.009, 0.013, 0.0, 0.009, 16))
     A.anim('dobrar', 0.25, [('lamina', 'r', (0, 0, 1), pose([(0, 0), (0.25, -85 if frente else 85)]))], desc='rebate a mira')
     A.pivo = (0, 0, 0)

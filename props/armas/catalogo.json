@@ -1786,7 +1786,8 @@
       "mira_holografica",
       "mira_ponto_vermelho_tubo",
       "luneta_1_6",
-      "luneta_4x"
+      "luneta_4x",
+      "mira_reflexa"
      ],
      "explodir_m": [
       0.0,
@@ -2228,7 +2229,8 @@
       "mira_holografica",
       "mira_ponto_vermelho_tubo",
       "luneta_1_6",
-      "luneta_4x"
+      "luneta_4x",
+      "mira_reflexa"
      ],
      "padrao": "luneta_1_6",
      "explodir_m": [
@@ -2564,7 +2566,7 @@
     0.666
    ],
    "triangulos": 42068,
-   "kb": 2204.9,
+   "kb": 2205.0,
    "partes": [
     {
      "no": "tampa",
@@ -2688,6 +2690,7 @@
      "substitui": "carregador",
      "aceita": [
       "carregador_762_30",
+      "carregador_762_30_grade",
       "carregador_762_40",
       "tambor_762_75"
      ],
@@ -2708,7 +2711,8 @@
       "coronha_rebativel_ak",
       "coronha_retratil_ak",
       "coronha_leve_ak",
-      "coronha_leve_ak_tan"
+      "coronha_leve_ak_tan",
+      "coronha_esqueleto_ak"
      ],
      "padrao": "coronha_madeira_ak",
      "explodir_m": [
@@ -2727,7 +2731,10 @@
       -0.318
      ],
      "requer": {
-      "encaixe_guarda_mao": "guarda_mao_trilhos_ak"
+      "encaixe_guarda_mao": [
+       "guarda_mao_trilhos_ak",
+       "guarda_mao_fendas_ak"
+      ]
      },
      "aceita": [
       "empunhadura_reta",
@@ -2756,7 +2763,10 @@
       -0.348
      ],
      "requer": {
-      "encaixe_guarda_mao": "guarda_mao_trilhos_ak"
+      "encaixe_guarda_mao": [
+       "guarda_mao_trilhos_ak",
+       "guarda_mao_fendas_ak"
+      ]
      },
      "aceita": [
       "lanterna_fuzil",
@@ -2781,12 +2791,39 @@
      "aceita": [
       "guarda_mao_madeira_ak",
       "guarda_mao_polimero_ak",
-      "guarda_mao_trilhos_ak"
+      "guarda_mao_trilhos_ak",
+      "guarda_mao_fendas_ak"
      ],
      "padrao": "guarda_mao_madeira_ak",
      "explodir_m": [
       0.05,
       -0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_enfeite",
+     "tipo": "guarda_mao_enfeite",
+     "pai": "fuzil_762",
+     "posicao_m": [
+      0.0,
+      0.0865,
+      -0.311
+     ],
+     "aceita": [
+      "elastico_ak"
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_madeira_ak",
+       "guarda_mao_polimero_ak",
+       "guarda_mao_fendas_ak"
+      ]
+     },
+     "descricao": "tiras de borracha em volta do guarda-mão",
+     "explodir_m": [
+      0.04,
+      0.06,
       0.0
      ]
     },
@@ -2824,6 +2861,7 @@
      },
      "aceita": [
       "mira_holografica",
+      "mira_reflexa",
       "mira_ponto_vermelho_tubo",
       "luneta_1_6",
       "luneta_4x"
@@ -2897,6 +2935,473 @@
      "no": "mira_ferro",
      "tipo": "mira",
      "pai": "fuzil_762",
+     "posicao_m": [
+      0.0,
+      0.1277,
+      -0.193
+     ],
+     "descricao": "fundo do entalhe da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z)"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.1,
+     "laco": false,
+     "descricao": "um tiro (repita a 10 por segundo): ferrolho recua 115 mm, coice forte que sobe o cano"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.1,
+     "laco": false,
+     "descricao": "último tiro: este fuzil não trava o ferrolho atrás, ele volta à frente com a câmara vazia"
+    },
+    "recarregar": {
+     "duracao_s": 2.5,
+     "laco": false,
+     "descricao": "aperta a pá, carregador gira para a frente e cai (0,7 s); o novo engancha na frente e gira para trás (1,95 s); troque o nó entre 0,7 e 1,4 s"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 3.0,
+     "laco": false,
+     "descricao": "igual à recarga e no fim puxa a alavanca de manejo para pôr um cartucho na câmara"
+    },
+    "trocar_modo": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "seletor: trava -> automático -> semi (no jogo, pare na posição escolhida)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.8,
+     "laco": false,
+     "descricao": "puxa a alavanca até ver o cartucho na câmara, solta e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "fuzil_762_tatico",
+   "nome": "Fuzil Brasa 7,62 tático",
+   "grupo": "armas",
+   "categoria": "fuzil",
+   "classe": "fogo",
+   "calibre": "7,62×39",
+   "municao": "municao_762",
+   "capacidade": 30,
+   "dano": 55,
+   "alcance_m": 70,
+   "alcance_max_m": 350,
+   "modo": "semiautomático e automático (seletor)",
+   "tiros_por_s": 10,
+   "recarga_s": 2.5,
+   "recarga_vazia_s": 3.0,
+   "precisao": 0.68,
+   "recuo": 0.5,
+   "ruido_m": 180,
+   "durabilidade": 6000,
+   "peso_kg": 3.6,
+   "raridade": "muito raro",
+   "valor_troca": 220,
+   "onde": [
+    "quartel"
+   ],
+   "estojo_s": 0.02,
+   "descricao": "O mesmo fuzil todo preto e bem usado (pintura gasta, riscos, ferrugem e um rabisco na chapa): punho e carregador de polímero, coronha vazada, guarda-mão de fendas com tiras de borracha, tampa com trilho e mira reflexa, supressor e lanterna.",
+   "arquivo": "armas/fuzil_762_tatico.glb",
+   "tamanho_m": [
+    0.043,
+    0.277,
+    0.666
+   ],
+   "triangulos": 47772,
+   "kb": 3378.0,
+   "partes": [
+    {
+     "no": "tampa",
+     "tipo": "remove",
+     "descricao": "tampa do receptor (sai para limpar)",
+     "pai": "fuzil_762_tatico",
+     "explodir_m": [
+      0.0,
+      0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": -12,
+     "descricao": "puxa para trás",
+     "pai": "fuzil_762_tatico",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "seletor",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -14,
+     "descricao": "alavanca: em cima trava (e fecha a fenda), meio automático (-7°), embaixo semi (-14°)",
+     "pai": "fuzil_762_tatico",
+     "explodir_m": [
+      0.04,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": -0.115,
+     "descricao": "transportador com a alavanca de manejo à direita: recua 115 mm",
+     "pai": "fuzil_762_tatico",
+     "explodir_m": [
+      0.04,
+      0.05,
+      0.06
+     ]
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      0.3,
+      -0.95,
+      0.0
+     ],
+     "municao": "municao_762",
+     "capacidade": 30,
+     "descricao": "carregador de aço de 30: entra pela frente (gancho) e gira para trás até travar",
+     "pai": "fuzil_762_tatico",
+     "explodir_m": [
+      0.0,
+      -0.12,
+      -0.02
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_mira",
+     "tipo": "trilho_lateral_ak",
+     "pai": "fuzil_762_tatico",
+     "posicao_m": [
+      -0.0163,
+      0.083,
+      -0.063
+     ],
+     "aceita": [
+      "mira_lateral_ak",
+      "luneta_lateral_ak"
+     ],
+     "descricao": "trilho de cauda de andorinha do lado esquerdo",
+     "explodir_m": [
+      -0.08,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_762",
+     "pai": "fuzil_762_tatico",
+     "posicao_m": [
+      0.0,
+      0.084,
+      -0.588
+     ],
+     "aceita": [
+      "freio_ak",
+      "compensador_ak",
+      "supressor_762",
+      "supressor_762_gasto"
+     ],
+     "padrao": "supressor_762_gasto",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.08
+     ]
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_762",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.06,
+      -0.11
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_762_30",
+      "carregador_762_30_grade",
+      "carregador_762_40",
+      "tambor_762_75",
+      "carregador_762_30_grade_gasto"
+     ],
+     "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda o original"
+    },
+    {
+     "no": "encaixe_coronha",
+     "tipo": "coronha_ak",
+     "pai": "fuzil_762_tatico",
+     "posicao_m": [
+      -0.0,
+      0.085,
+      0.063
+     ],
+     "aceita": [
+      "coronha_madeira_ak",
+      "coronha_polimero_ak",
+      "coronha_rebativel_ak",
+      "coronha_retratil_ak",
+      "coronha_leve_ak",
+      "coronha_leve_ak_tan",
+      "coronha_esqueleto_ak",
+      "coronha_esqueleto_ak_gasto"
+     ],
+     "padrao": "coronha_esqueleto_ak_gasto",
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.08
+     ]
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "fuzil_762_tatico",
+     "posicao_m": [
+      0.0,
+      0.0465,
+      -0.318
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_fendas_ak",
+       "guarda_mao_fendas_ak_gasto",
+       "guarda_mao_trilhos_ak"
+      ]
+     },
+     "aceita": [
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_quadrada",
+      "empunhadura_cilindrica",
+      "batente_mao"
+     ],
+     "descricao": "trilho de baixo do guarda-mão de quatro trilhos",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "fuzil_762_tatico",
+     "posicao_m": [
+      0.0245,
+      0.0855,
+      -0.348
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_fendas_ak",
+       "guarda_mao_fendas_ak_gasto",
+       "guarda_mao_trilhos_ak"
+      ]
+     },
+     "aceita": [
+      "lanterna_fuzil",
+      "lanterna_compacta",
+      "lanterna_compacta_gasto"
+     ],
+     "descricao": "trilho da direita do guarda-mão de quatro trilhos",
+     "padrao": "lanterna_compacta_gasto",
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_guarda_mao",
+     "tipo": "guarda_mao_ak",
+     "pai": "fuzil_762_tatico",
+     "posicao_m": [
+      0.0,
+      0.084,
+      -0.208
+     ],
+     "aceita": [
+      "guarda_mao_madeira_ak",
+      "guarda_mao_polimero_ak",
+      "guarda_mao_trilhos_ak",
+      "guarda_mao_fendas_ak",
+      "guarda_mao_fendas_ak_gasto"
+     ],
+     "padrao": "guarda_mao_fendas_ak_gasto",
+     "explodir_m": [
+      0.05,
+      -0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_enfeite",
+     "tipo": "guarda_mao_enfeite",
+     "pai": "fuzil_762_tatico",
+     "posicao_m": [
+      0.0,
+      0.0865,
+      -0.311
+     ],
+     "aceita": [
+      "elastico_ak"
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_fendas_ak",
+       "guarda_mao_fendas_ak_gasto",
+       "guarda_mao_madeira_ak",
+       "guarda_mao_polimero_ak"
+      ]
+     },
+     "descricao": "tiras de borracha em volta do guarda-mão",
+     "padrao": "elastico_ak",
+     "explodir_m": [
+      0.04,
+      0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_tampa",
+     "tipo": "tampa_ak",
+     "pai": "tampa",
+     "posicao_m": [
+      0.0,
+      0.096,
+      -0.161
+     ],
+     "substitui": "tampa",
+     "aceita": [
+      "tampa_trilho_ak",
+      "tampa_trilho_ak_gasto"
+     ],
+     "descricao": "filho do nó tampa; a tampa com trilho esconde a tampa original",
+     "padrao": "tampa_trilho_ak_gasto",
+     "explodir_m": [
+      0.0,
+      0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_mira_tampa",
+     "tipo": "trilho_mira",
+     "pai": "fuzil_762_tatico",
+     "posicao_m": [
+      0.0,
+      0.1215,
+      -0.048
+     ],
+     "requer": {
+      "encaixe_tampa": [
+       "tampa_trilho_ak",
+       "tampa_trilho_ak_gasto"
+      ]
+     },
+     "aceita": [
+      "mira_holografica",
+      "mira_reflexa",
+      "mira_ponto_vermelho_tubo",
+      "luneta_1_6",
+      "luneta_4x",
+      "mira_reflexa_gasto"
+     ],
+     "descricao": "só existe com a tampa com trilho",
+     "padrao": "mira_reflexa_gasto",
+     "explodir_m": [
+      0.0,
+      0.07,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_baioneta",
+     "tipo": "baioneta_ak",
+     "pai": "fuzil_762_tatico",
+     "posicao_m": [
+      0.0,
+      0.0745,
+      -0.527
+     ],
+     "aceita": [
+      "baioneta_ak"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_bandoleira",
+     "tipo": "bandoleira",
+     "pai": "fuzil_762_tatico",
+     "posicao_m": [
+      -0.0098,
+      0.0745,
+      -0.527
+     ],
+     "aceita": [
+      "bandoleira"
+     ],
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "fuzil_762_tatico",
+     "posicao_m": [
+      0.0,
+      0.084,
+      -0.603
+     ],
+     "descricao": "clarão de boca e origem do disparo (-Z)"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "fuzil_762_tatico",
+     "posicao_m": [
+      0.0138,
+      0.1,
+      -0.128
+     ],
+     "descricao": "onde nasce o estojo (sai para a direita, para a frente e para cima)"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "fuzil_762_tatico",
      "posicao_m": [
       0.0,
       0.1277,
@@ -5254,8 +5759,8 @@
     0.045,
     0.196
    ],
-   "triangulos": 4288,
-   "kb": 216.2
+   "triangulos": 2752,
+   "kb": 144.2
   },
   {
    "id": "mira_lateral_ak",
@@ -6162,6 +6667,384 @@
      "descricao": "fecha a coronha"
     }
    }
+  },
+  {
+   "id": "carregador_762_30_grade",
+   "nome": "Carregador 7,62 de polímero (30)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_762",
+   "capacidade": 30,
+   "municao": "municao_762",
+   "peso_kg": 0.25,
+   "raridade": "incomum",
+   "valor_troca": 14,
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Carregador preto de polímero com quadros em relevo dos lados: mais leve que o de aço.",
+   "arquivo": "acessorios/carregador_762_30_grade.glb",
+   "tamanho_m": [
+    0.026,
+    0.211,
+    0.135
+   ],
+   "triangulos": 12552,
+   "kb": 591.1
+  },
+  {
+   "id": "coronha_esqueleto_ak",
+   "nome": "Coronha vazada fixa (fuzil 7,62)",
+   "grupo": "acessorios",
+   "categoria": "coronha",
+   "encaixe": "coronha_ak",
+   "peso_kg": 0.42,
+   "raridade": "raro",
+   "valor_troca": 24,
+   "modificadores": {
+    "recuo": 0.68,
+    "precisao": 1.28
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Coronha fixa de polímero com o miolo vazado em triângulo, apoio de rosto reto, soleira de borracha e furo de bandoleira.",
+   "arquivo": "acessorios/coronha_esqueleto_ak.glb",
+   "tamanho_m": [
+    0.034,
+    0.145,
+    0.32
+   ],
+   "triangulos": 1932,
+   "kb": 109.0,
+   "encaixes": [
+    {
+     "no": "ombro",
+     "tipo": "efeito",
+     "pai": "coronha_esqueleto_ak",
+     "posicao_m": [
+      -0.0,
+      -0.06,
+      0.312
+     ],
+     "descricao": "ponto da soleira que encosta no ombro"
+    }
+   ]
+  },
+  {
+   "id": "guarda_mao_fendas_ak",
+   "nome": "Guarda-mão de fendas (fuzil 7,62)",
+   "grupo": "acessorios",
+   "categoria": "guarda_mao",
+   "encaixe": "guarda_mao_ak",
+   "peso_kg": 0.3,
+   "raridade": "raro",
+   "valor_troca": 26,
+   "modificadores": {
+    "recuo": 0.98
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Guarda-mão de polímero com fendas de encaixe, trilho curto embaixo e do lado direito (empunhadura e lanterna) e tampa do tubo de gás com janelas.",
+   "arquivo": "acessorios/guarda_mao_fendas_ak.glb",
+   "tamanho_m": [
+    0.042,
+    0.073,
+    0.192
+   ],
+   "triangulos": 9038,
+   "kb": 425.5
+  },
+  {
+   "id": "mira_reflexa",
+   "nome": "Mira reflexa de tubo inclinado",
+   "grupo": "acessorios",
+   "categoria": "mira",
+   "encaixe": "trilho_mira",
+   "peso_kg": 0.28,
+   "raridade": "muito raro",
+   "valor_troca": 75,
+   "modificadores": {
+    "precisao_mirando": 1.3,
+    "tempo_mirar": 0.72
+   },
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "linha_de_visada": "encaixe \"olho\"",
+   "descricao": "Mira de ponto com corpo baixo e janela redonda em capuz inclinado; o ponto acende sozinho (sem pilha).",
+   "arquivo": "acessorios/mira_reflexa.glb",
+   "tamanho_m": [
+    0.037,
+    0.059,
+    0.068
+   ],
+   "triangulos": 2072,
+   "kb": 101.5,
+   "encaixes": [
+    {
+     "no": "olho",
+     "tipo": "mira",
+     "pai": "mira_reflexa",
+     "posicao_m": [
+      -0.0,
+      0.033,
+      0.02
+     ],
+     "descricao": "linha de visada"
+    }
+   ]
+  },
+  {
+   "id": "elastico_ak",
+   "nome": "Tiras de borracha no guarda-mão",
+   "grupo": "acessorios",
+   "categoria": "enfeite",
+   "encaixe": "guarda_mao_enfeite",
+   "peso_kg": 0.01,
+   "raridade": "comum",
+   "valor_troca": 1,
+   "modificadores": {},
+   "onde": [
+    "casa",
+    "armazem"
+   ],
+   "descricao": "Duas tiras de câmara de pneu cruzadas no guarda-mão: seguram o fio da lanterna e marcam a arma de um sobrevivente.",
+   "arquivo": "acessorios/elastico_ak.glb",
+   "tamanho_m": [
+    0.043,
+    0.07,
+    0.025
+   ],
+   "triangulos": 640,
+   "kb": 31.0
+  },
+  {
+   "id": "tampa_trilho_ak_gasto",
+   "nome": "Tampa com trilho (fuzil 7,62) (gasto)",
+   "grupo": "acessorios",
+   "categoria": "tampa",
+   "encaixe": "tampa_ak",
+   "peso_kg": 0.22,
+   "raridade": "raro",
+   "valor_troca": 22,
+   "modificadores": {},
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Tampa do receptor reforçada, travada na frente e atrás, com trilho em cima para mira ou luneta (encaixe_mira_tampa). Peça usada, com a pintura gasta.",
+   "arquivo": "acessorios/tampa_trilho_ak_gasto.glb",
+   "tamanho_m": [
+    0.023,
+    0.028,
+    0.232
+   ],
+   "triangulos": 2620,
+   "kb": 198.6
+  },
+  {
+   "id": "mira_reflexa_gasto",
+   "nome": "Mira reflexa de tubo inclinado (gasto)",
+   "grupo": "acessorios",
+   "categoria": "mira",
+   "encaixe": "trilho_mira",
+   "peso_kg": 0.28,
+   "raridade": "muito raro",
+   "valor_troca": 60,
+   "modificadores": {
+    "precisao_mirando": 1.3,
+    "tempo_mirar": 0.72
+   },
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "linha_de_visada": "encaixe \"olho\"",
+   "descricao": "Mira de ponto com corpo baixo e janela redonda em capuz inclinado; o ponto acende sozinho (sem pilha). Peça usada, com a pintura gasta.",
+   "arquivo": "acessorios/mira_reflexa_gasto.glb",
+   "tamanho_m": [
+    0.037,
+    0.059,
+    0.068
+   ],
+   "triangulos": 2072,
+   "kb": 172.1,
+   "encaixes": [
+    {
+     "no": "olho",
+     "tipo": "mira",
+     "pai": "mira_reflexa_gasto",
+     "posicao_m": [
+      -0.0,
+      0.033,
+      0.02
+     ],
+     "descricao": "linha de visada"
+    }
+   ]
+  },
+  {
+   "id": "guarda_mao_fendas_ak_gasto",
+   "nome": "Guarda-mão de fendas (fuzil 7,62) (gasto)",
+   "grupo": "acessorios",
+   "categoria": "guarda_mao",
+   "encaixe": "guarda_mao_ak",
+   "peso_kg": 0.3,
+   "raridade": "raro",
+   "valor_troca": 20,
+   "modificadores": {
+    "recuo": 0.98
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Guarda-mão de polímero com fendas de encaixe, trilho curto embaixo e do lado direito (empunhadura e lanterna) e tampa do tubo de gás com janelas. Peça usada, com a pintura gasta.",
+   "arquivo": "acessorios/guarda_mao_fendas_ak_gasto.glb",
+   "tamanho_m": [
+    0.042,
+    0.073,
+    0.192
+   ],
+   "triangulos": 9038,
+   "kb": 661.8
+  },
+  {
+   "id": "coronha_esqueleto_ak_gasto",
+   "nome": "Coronha vazada fixa (fuzil 7,62) (gasto)",
+   "grupo": "acessorios",
+   "categoria": "coronha",
+   "encaixe": "coronha_ak",
+   "peso_kg": 0.42,
+   "raridade": "raro",
+   "valor_troca": 19,
+   "modificadores": {
+    "recuo": 0.68,
+    "precisao": 1.28
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Coronha fixa de polímero com o miolo vazado em triângulo, apoio de rosto reto, soleira de borracha e furo de bandoleira. Peça usada, com a pintura gasta.",
+   "arquivo": "acessorios/coronha_esqueleto_ak_gasto.glb",
+   "tamanho_m": [
+    0.034,
+    0.145,
+    0.32
+   ],
+   "triangulos": 1932,
+   "kb": 157.5,
+   "encaixes": [
+    {
+     "no": "ombro",
+     "tipo": "efeito",
+     "pai": "coronha_esqueleto_ak_gasto",
+     "posicao_m": [
+      -0.0,
+      -0.06,
+      0.312
+     ],
+     "descricao": "ponto da soleira que encosta no ombro"
+    }
+   ]
+  },
+  {
+   "id": "supressor_762_gasto",
+   "nome": "Supressor 7,62 (gasto)",
+   "grupo": "acessorios",
+   "categoria": "boca",
+   "encaixe": "boca_762",
+   "peso_kg": 0.55,
+   "raridade": "muito raro",
+   "valor_troca": 76,
+   "modificadores": {
+    "ruido_m": 0.35,
+    "clarao": 0.05,
+    "recuo": 0.8
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Supressor grosso de aço: o tiro é ouvido a 60 m em vez de 180. Esquenta rápido em rajada. Peça usada, com a pintura gasta.",
+   "arquivo": "acessorios/supressor_762_gasto.glb",
+   "tamanho_m": [
+    0.045,
+    0.045,
+    0.196
+   ],
+   "triangulos": 2752,
+   "kb": 210.8
+  },
+  {
+   "id": "lanterna_compacta_gasto",
+   "nome": "Lanterna compacta de trilho (gasto)",
+   "grupo": "acessorios",
+   "categoria": "lanterna",
+   "encaixe": "mlok_lado",
+   "peso_kg": 0.11,
+   "raridade": "incomum",
+   "valor_troca": 19,
+   "usa": "pilhas",
+   "autonomia_min": 60,
+   "luz": {
+    "alcance_m": 45,
+    "angulo_graus": 20,
+    "lumens": 600
+   },
+   "modificadores": {},
+   "onde": [
+    "quartel",
+    "delegacia",
+    "posto"
+   ],
+   "liga_desliga": "SpotLight3D no encaixe \"feixe\" (para -Z)",
+   "descricao": "Lanterna curta com garra de trilho, corpo recartilhado e coroa dentada na frente (serve para quebrar vidro). Peça usada, com a pintura gasta.",
+   "arquivo": "acessorios/lanterna_compacta_gasto.glb",
+   "tamanho_m": [
+    0.033,
+    0.026,
+    0.076
+   ],
+   "triangulos": 2104,
+   "kb": 168.5,
+   "encaixes": [
+    {
+     "no": "feixe",
+     "tipo": "efeito",
+     "pai": "lanterna_compacta_gasto",
+     "posicao_m": [
+      0.02,
+      0.0,
+      -0.031
+     ],
+     "descricao": "SpotLight3D aqui (-Z)"
+    }
+   ]
+  },
+  {
+   "id": "carregador_762_30_grade_gasto",
+   "nome": "Carregador 7,62 de polímero (30) (gasto)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_762",
+   "capacidade": 30,
+   "municao": "municao_762",
+   "peso_kg": 0.25,
+   "raridade": "incomum",
+   "valor_troca": 11,
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Carregador preto de polímero com quadros em relevo dos lados: mais leve que o de aço. Peça usada, com a pintura gasta.",
+   "arquivo": "acessorios/carregador_762_30_grade_gasto.glb",
+   "tamanho_m": [
+    0.026,
+    0.211,
+    0.135
+   ],
+   "triangulos": 12552,
+   "kb": 886.8
   }
  ],
  "municao": [

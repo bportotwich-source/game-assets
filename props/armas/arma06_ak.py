@@ -135,16 +135,25 @@ def _seletor_ak(q):
 def _gatilho_ak(q): _gatilho_em(q, 0.048, KY0 + 0.004)
 
 
-def _carregador_ak(q, cap=30, mat='laca_verde'):
-    """Carregador curvo de aco (bem curvo), nervuras estampadas, base com chapa e ressalto de tranca na frente."""
+def _carregador_ak(q, cap=30, mat='laca_verde', grade=False):
+    """Carregador curvo de aco (bem curvo), nervuras estampadas, base com chapa e ressalto de tranca na frente.
+    grade=True: corpo de polimero com quadros em relevo dos lados (grade) e base de polimero."""
     R = 0.24; cx, cy = KMAG_X + R, KMAG_Y; L = 0.2 if cap <= 30 else 0.255; fi = L / R
     th = np.linspace(math.pi, math.pi + fi, 50)
     fr = [(cx + (R - 0.031) * math.cos(t), cy + (R - 0.031) * math.sin(t)) for t in th]
     tr = [(cx + (R + 0.031) * math.cos(t), cy + (R + 0.031) * math.sin(t)) for t in th]
     perfil = Polygon(fr + tr[::-1]).buffer(0)
     q.add(mat, solido(arred(list(perfil.exterior.coords)[:-1], 0.0025), -0.0115, 0.0115, 0.0015))
-    for zs in (-1, 1):                                                                                     # nervura curva estampada
-        th2 = np.linspace(math.pi + 0.06, math.pi + fi - 0.05, 30)
+    for zs in (-1, 1):
+        if grade:                                                                                          # quadros em relevo (grade)
+            nl = 6 if cap <= 30 else 8; dt = (fi - 0.08) / nl
+            for i in range(nl):
+                for (ra, rb) in ((R - 0.026, R - 0.003), (R + 0.003, R + 0.026)):
+                    tt = np.linspace(math.pi + 0.05 + i * dt + 0.006, math.pi + 0.05 + (i + 1) * dt - 0.006, 8)
+                    pol = Polygon([(cx + ra * math.cos(t), cy + ra * math.sin(t)) for t in tt] + [(cx + rb * math.cos(t), cy + rb * math.sin(t)) for t in tt[::-1]])
+                    q.add(mat, solido(pol.buffer(-0.0012, join_style=2).buffer(0.001, join_style=1, resolution=2), min(zs * 0.0113, zs * 0.0122), max(zs * 0.0113, zs * 0.0122), 0.0004))
+            continue
+        th2 = np.linspace(math.pi + 0.06, math.pi + fi - 0.05, 30)                                        # nervura curva estampada
         pts = [(cx + (R + 0.012) * math.cos(t), cy + (R + 0.012) * math.sin(t)) for t in th2]
         q.add(mat, solido(LineString(pts).buffer(0.004, cap_style=1), min(zs * 0.0115, zs * 0.0122), max(zs * 0.0115, zs * 0.0122), 0.0004))
     q.add(mat, solido(arred([(KMAG_X + 0.026, KMAG_Y + 0.006), (KMAG_X + 0.036, KMAG_Y + 0.006), (KMAG_X + 0.036, KMAG_Y - 0.004), (KMAG_X + 0.026, KMAG_Y - 0.008)], 0.0015),
@@ -152,7 +161,7 @@ def _carregador_ak(q, cap=30, mat='laca_verde'):
     t = math.pi + fi; c, s_ = math.cos(t), math.sin(t)
     b0 = np.array([cx + R * c, cy + R * s_]); d = np.array([c, s_]); nn = np.array([s_, -c])
     base = [b0 + d * 0.034 - nn * 0.001, b0 - d * 0.034 - nn * 0.001, b0 - d * 0.035 + nn * 0.006, b0 + d * 0.035 + nn * 0.006]
-    q.add('aco_oxidado', solido(Polygon([tuple(x) for x in base]).buffer(0.0015, join_style=1), -0.0128, 0.0128, 0.0012))
+    q.add(mat if grade else 'aco_oxidado', solido(Polygon([tuple(x) for x in base]).buffer(0.0015, join_style=1), -0.0128, 0.0128, 0.0012))
     for zs in (-1, 1): q.add(mat, caixa(KMAG_X - 0.028, KMAG_X + 0.024, KMAG_Y - 0.002, KMAG_Y + 0.003, zs * 0.0065 - 0.0014, zs * 0.0065 + 0.0014))
     q.merge(_cartucho_762(14), TF.translation_matrix([KMAG_X - 0.028, KMAG_Y - 0.0035, 0.002]))
 
@@ -209,21 +218,23 @@ def fuzil_762(A):
               aceita=['mira_lateral_ak', 'luneta_lateral_ak'], descricao='trilho de cauda de andorinha do lado esquerdo')
     A.encaixe('encaixe_boca', (K_XM - 0.015, -0.006, 0), 'boca_762', explodir=(0.08, 0, 0), aceita=['freio_ak', 'compensador_ak', 'supressor_762'], padrao='freio_ak')
     A.encaixe('encaixe_carregador', (KMAG_X, KMAG_Y, 0), 'carregador_762', pai='carregador', substitui='carregador',
-              aceita=['carregador_762_30', 'carregador_762_40', 'tambor_762_75'], descricao='filho do nó carregador; ao pôr um carregador aqui, esconda o original')
+              aceita=['carregador_762_30', 'carregador_762_30_grade', 'carregador_762_40', 'tambor_762_75'], descricao='filho do nó carregador; ao pôr um carregador aqui, esconda o original')
     A.encaixe('encaixe_coronha', (KX0 - 0.006, -0.005, 0), 'coronha_ak', explodir=(-0.08, 0, 0),
-              aceita=['coronha_madeira_ak', 'coronha_polimero_ak', 'coronha_rebativel_ak', 'coronha_retratil_ak', 'coronha_leve_ak', 'coronha_leve_ak_tan'],
+              aceita=['coronha_madeira_ak', 'coronha_polimero_ak', 'coronha_rebativel_ak', 'coronha_retratil_ak', 'coronha_leve_ak', 'coronha_leve_ak_tan', 'coronha_esqueleto_ak'],
               padrao='coronha_madeira_ak')
-    A.encaixe('encaixe_empunhadura', (0.3, -0.0435, 0), 'mlok_baixo', explodir=(0, -0.06, 0), requer={'encaixe_guarda_mao': 'guarda_mao_trilhos_ak'},
+    A.encaixe('encaixe_empunhadura', (0.3, -0.0435, 0), 'mlok_baixo', explodir=(0, -0.06, 0), requer={'encaixe_guarda_mao': ['guarda_mao_trilhos_ak', 'guarda_mao_fendas_ak']},
               aceita=['empunhadura_reta', 'empunhadura_reta_tan', 'empunhadura_vertical', 'empunhadura_angulada', 'empunhadura_curta', 'empunhadura_quadrada',
                       'empunhadura_cilindrica', 'batente_mao'], descricao='trilho de baixo do guarda-mão de quatro trilhos')
-    A.encaixe('encaixe_lanterna', (0.33, -0.0045, 0.0245), 'mlok_lado', explodir=(0, 0, 0.06), requer={'encaixe_guarda_mao': 'guarda_mao_trilhos_ak'},
+    A.encaixe('encaixe_lanterna', (0.33, -0.0045, 0.0245), 'mlok_lado', explodir=(0, 0, 0.06), requer={'encaixe_guarda_mao': ['guarda_mao_trilhos_ak', 'guarda_mao_fendas_ak']},
               aceita=['lanterna_fuzil', 'lanterna_compacta'], descricao='trilho da direita do guarda-mão de quatro trilhos')
     A.encaixe('encaixe_guarda_mao', GM0, 'guarda_mao_ak', explodir=(0, -0.05, 0.05),
-              aceita=['guarda_mao_madeira_ak', 'guarda_mao_polimero_ak', 'guarda_mao_trilhos_ak'], padrao='guarda_mao_madeira_ak')
+              aceita=['guarda_mao_madeira_ak', 'guarda_mao_polimero_ak', 'guarda_mao_trilhos_ak', 'guarda_mao_fendas_ak'], padrao='guarda_mao_madeira_ak')
+    A.encaixe('encaixe_enfeite', (0.293, -0.0035, 0), 'guarda_mao_enfeite', explodir=(0, 0.06, 0.04), aceita=['elastico_ak'],
+              requer={'encaixe_guarda_mao': ['guarda_mao_madeira_ak', 'guarda_mao_polimero_ak', 'guarda_mao_fendas_ak']}, descricao='tiras de borracha em volta do guarda-mão')
     A.encaixe('encaixe_tampa', TAMPA0, 'tampa_ak', pai='tampa', substitui='tampa', explodir=(0, 0.06, 0), aceita=['tampa_trilho_ak'],
               descricao='filho do nó tampa; a tampa com trilho esconde a tampa original')
     A.encaixe('encaixe_mira_tampa', (0.03, KTAMPA + 0.0055, 0), 'trilho_mira', explodir=(0, 0.07, 0), requer={'encaixe_tampa': 'tampa_trilho_ak'},
-              aceita=['mira_holografica', 'mira_ponto_vermelho_tubo', 'luneta_1_6', 'luneta_4x'], descricao='só existe com a tampa com trilho')
+              aceita=['mira_holografica', 'mira_reflexa', 'mira_ponto_vermelho_tubo', 'luneta_1_6', 'luneta_4x'], descricao='só existe com a tampa com trilho')
     A.encaixe('encaixe_baioneta', (0.509, -0.0155, 0), 'baioneta_ak', explodir=(0, -0.05, 0), aceita=['baioneta_ak'])
     A.encaixe('encaixe_bandoleira', (0.509, -0.0155, -0.0098), 'bandoleira', explodir=(0, 0, -0.04), aceita=['bandoleira'])
     A.encaixe('boca_fogo', (K_XM, -0.006, 0), 'efeito', descricao='clarão de boca e origem do disparo (-Z)')
@@ -313,9 +324,13 @@ def freio_ak(A):
 def supressor_762(A):
     q = A.base; L = 0.19; R = 0.022
     tubo = torno_x([(0.0, -0.006), (R - 0.003, -0.006), (R, -0.003), (R, L - 0.004), (R - 0.004, L), (0.0, L)], 56)
-    q.add('aco_oxidado', menos(tubo, cil_x(0.0045, -0.02, L + 0.01, sec=24), cil_x(0.0114, -0.01, 0.05, sec=40)))
+    canais = []                                                                                         # 8 canais rasos na parte de tras
+    for i in range(8):
+        g = solido(arred([(0.028, -0.0022), (0.07, -0.0022), (0.07, 0.0022), (0.028, 0.0022)], 0.0021), R - 0.0012, R + 0.01)
+        g.apply_transform(TF.rotation_matrix(i * math.pi / 4, [1, 0, 0])); canais.append(g)
+    q.add('aco_oxidado', menos(tubo, cil_x(0.0045, -0.02, L + 0.01, sec=24), cil_x(0.0114, -0.01, 0.05, sec=40), *canais))
     q.add('recartilhado', tubo_x(R - 0.0002, R + 0.0006, 0.0, 0.018, sec=56))
-    for i in range(7): x = 0.035 + i * 0.02; q.add('aco_fosfatado', tubo_x(R - 0.0002, R + 0.0003, x, x + 0.0015, sec=56))
+    for x in (0.1, 0.104): q.add('aco_fosfatado', tubo_x(R - 0.0002, R + 0.0004, x, x + 0.0015, sec=56))   # emenda das duas partes
     A.pivo = (0, 0, 0)
 
 
@@ -671,3 +686,202 @@ NOVOS.setdefault('encaixe_coronha', []).extend(['coronha_leve_ar', 'coronha_leve
 NOVOS.setdefault('encaixe_empunhadura', []).extend(['empunhadura_reta', 'empunhadura_reta_tan'])
 NOVOS.setdefault('encaixe_alca', []).extend(['alca_polimero', 'alca_polimero_tan'])
 NOVOS.setdefault('encaixe_massa', []).extend(['massa_polimero', 'massa_polimero_tan'])
+NOVOS.setdefault('encaixe_mira', []).append('mira_reflexa')
+
+
+# ---------------------------------------------------------------------------- versao tatica (foto de referencia do Bruno, so inspiracao)
+@_acessorio('carregador_762_30_grade', 'Carregador 7,62 de polímero (30)', 'carregador', 'carregador_762', capacidade=30, municao='municao_762', peso_kg=0.25,
+            raridade='incomum', valor_troca=14, onde=['quartel'], descricao='Carregador preto de polímero com quadros em relevo dos lados: mais leve que o de aço.')
+def carregador_762_30_grade(A): _carregador_ak(A.base, 30, 'polimero', grade=True); A.pivo = (KMAG_X, KMAG_Y, 0)
+
+
+@_acessorio('coronha_esqueleto_ak', 'Coronha vazada fixa (fuzil 7,62)', 'coronha', 'coronha_ak', peso_kg=0.42, raridade='raro', valor_troca=24,
+            modificadores={'recuo': 0.68, 'precisao': 1.28}, onde=['quartel'],
+            descricao='Coronha fixa de polímero com o miolo vazado em triângulo, apoio de rosto reto, soleira de borracha e furo de bandoleira.')
+def coronha_esqueleto_ak(A):
+    q = A.base
+    fora = suave([(0.0, 0.013), (-0.04, 0.013), (-0.285, 0.006), (-0.296, 0.004), (-0.298, -0.122), (-0.29, -0.13), (-0.27, -0.128),
+                  (-0.05, -0.046), (-0.012, -0.037), (0.0, -0.036)], 2)
+    vao = arred([(-0.075, -0.006), (-0.262, -0.006), (-0.262, -0.098), (-0.085, -0.036)], 0.006)
+    q.add('polimero', solido(fora.difference(vao), -0.0155, 0.0155, 0.0045))
+    for zs in (-1, 1):                                                                                   # rebaixo comprido do apoio de rosto
+        q.add('polimero_grip', solido(arred([(-0.24, 0.0005), (-0.07, 0.003), (-0.07, 0.0065), (-0.24, 0.0045)], 0.0015),
+                                      min(zs * 0.0154, zs * 0.0162), max(zs * 0.0154, zs * 0.0162), 0.0003))
+    q.add('borracha', solido(arred([(-0.312, 0.006), (-0.296, 0.006), (-0.296, -0.132), (-0.312, -0.132)], 0.005), -0.017, 0.017, 0.004))   # soleira
+    for y in np.arange(-0.12, 0.0, 0.008): q.add('borracha', caixa(-0.3135, -0.311, y, y + 0.003, -0.015, 0.015))                      # ranhuras da soleira
+    q.add('polimero', menos(solido(arred([(-0.29, -0.06), (-0.27, -0.06), (-0.27, -0.035), (-0.29, -0.035)], 0.004), -0.017, 0.017, 0.002),
+                            solido(arred([(-0.286, -0.056), (-0.274, -0.056), (-0.274, -0.039), (-0.286, -0.039)], 0.003), -0.03, 0.03)))   # furo da bandoleira
+    q.add('aco_oxidado', caixa(-0.006, 0.006, -0.036, 0.013, -0.0125, 0.0125))                                                        # chapa que encaixa no receptor
+    A.encaixe('ombro', (-0.312, -0.06, 0), 'efeito', descricao='ponto da soleira que encosta no ombro')
+    A.pivo = (0, 0, 0)
+
+
+@_acessorio('guarda_mao_fendas_ak', 'Guarda-mão de fendas (fuzil 7,62)', 'guarda_mao', 'guarda_mao_ak', peso_kg=0.3, raridade='raro', valor_troca=26,
+            modificadores={'recuo': 0.98}, onde=['quartel'],
+            descricao='Guarda-mão de polímero com fendas de encaixe, trilho curto embaixo e do lado direito (empunhadura e lanterna) e tampa do tubo de gás com janelas.')
+def guarda_mao_fendas_ak(A):
+    q = A.base
+    baixo = menos(punho_x(GM_BAIXO, 0.0185, n=3.4), *GM_FURO())
+    fendas = []
+    for x0 in (0.215, 0.262, 0.309):                                                                    # fendas dos lados
+        fendas.append(solido(arred([(x0, -0.022), (x0 + 0.036, -0.022), (x0 + 0.036, -0.014), (x0, -0.014)], 0.0038), -0.03, 0.03))
+    for x0 in (0.215, 0.25): fendas.append(caixa(x0, x0 + 0.028, -0.05, -0.03, -0.004, 0.004))         # fendas de baixo
+    q.add('polimero', menos(baixo, *fendas))
+    trilho(q, 'aluminio_preto', 0.285, 0.386, -0.0362, True)
+    lado = P(); trilho(lado, 'aluminio_preto', 0.31, 0.386, 0.0, False)
+    R = TF.translation_matrix([0, -0.0045, 0.0182]) @ TF.rotation_matrix(math.pi / 2, [1, 0, 0])
+    for k, ms in lado.parts.items():
+        for m in ms: q.add(k, m.apply_transform(R))
+    sec = arred([(-0.0125, 0.0062), (0.0125, 0.0062), (0.0125, 0.03), (-0.0125, 0.03)], 0.0065)       # tampa do tubo de gas (z, y)
+    cima = menos(ext_x(sec, 0.205, 0.385), cil_x(0.0088, 0.19, 0.4, 0.018, 0, 36))
+    janelas = [solido(arred([(x0, 0.014), (x0 + 0.04, 0.014), (x0 + 0.04, 0.022), (x0, 0.022)], 0.0038), -0.03, 0.03) for x0 in (0.235, 0.29)]
+    q.add('polimero', menos(cima, *janelas))
+    q.add('aluminio_preto', menos(ext_x(sec.buffer(0.0008), 0.372, 0.385), cil_x(0.0088, 0.3, 0.4, 0.018, 0, 36)))   # capa de metal da ponta
+    _desloca(A, -np.array(GM0))
+
+
+@_acessorio('mira_reflexa', 'Mira reflexa de tubo inclinado', 'mira', 'trilho_mira', peso_kg=0.28, raridade='muito raro', valor_troca=75,
+            modificadores={'precisao_mirando': 1.3, 'tempo_mirar': 0.72}, onde=['quartel', 'delegacia'], linha_de_visada='encaixe "olho"',
+            descricao='Mira de ponto com corpo baixo e janela redonda em capuz inclinado; o ponto acende sozinho (sem pilha).')
+def mira_reflexa(A):
+    q = A.base; yc = 0.033
+    q.add('aluminio_preto', solido(arred([(-0.034, -0.0005), (0.03, -0.0005), (0.03, 0.009), (-0.034, 0.009)], 0.002), -0.0135, 0.0135, 0.001))   # base
+    for zs in (-1, 1): q.add('aluminio_preto', caixa(-0.028, 0.026, -0.0058, 0.0, min(zs * 0.0106, zs * 0.0135), max(zs * 0.0106, zs * 0.0135)))
+    for x in (-0.02, 0.014):                                                                            # porcas da braçadeira (esquerda)
+        q.add('aco_oxidado', cil_z(0.0055, -0.0175, -0.0135, x, 0.002, 20))
+        q.add('aco_oxidado', solido(arred([(x - 0.009, -0.003), (x + 0.009, -0.003), (x + 0.009, 0.004), (x - 0.009, 0.004)], 0.002), -0.0185, -0.0172, 0.0004))
+    corpo = arred([(-0.034, 0.008), (0.006, 0.008), (0.006, 0.024), (-0.034, 0.02)], 0.004)
+    q.add('aluminio_preto', solido(corpo, -0.0125, 0.0125, 0.002))                                    # corpo baixo (atras)
+    cap = menos(cil_x(0.0185, 0.0, 0.032, yc, 0, 48), cil_x(0.0145, -0.01, 0.04, yc, 0, 48))
+    cap = cap.apply_transform(TF.translation_matrix([0.016, yc, 0]) @ TF.rotation_matrix(math.radians(-8), [0, 0, 1]) @ TF.translation_matrix([-0.016, -yc, 0]))
+    q.add('aluminio_preto', cap)                                                                       # capuz redondo inclinado
+    q.add('aluminio_preto', solido(arred([(0.0, 0.008), (0.032, 0.008), (0.03, yc - 0.012), (0.002, yc - 0.012)], 0.003), -0.012, 0.012, 0.001))
+    q.add('lente_clara', cil_x(0.0145, 0.026, 0.0275, yc, 0, 48))
+    q.add('ponto_vermelho', caixa(0.0262, 0.0264, yc - 0.0004, yc + 0.0004, -0.0004, 0.0004))
+    q.add('aco_oxidado', cil_z(0.005, 0.0125, 0.0155, -0.012, 0.016, 24))                             # botão de ajuste (direita)
+    q.add('aco_oxidado', caixa(-0.0128, -0.0112, 0.0135, 0.0145, 0.0155, 0.0157))
+    q.add('tinta_branca', caixa(0.012, 0.018, yc + 0.0145, yc + 0.0175, -0.004, 0.004))                # janela de luz em cima
+    A.encaixe('olho', (-0.02, yc, 0), 'mira', descricao='linha de visada'); A.pivo = (0, 0, 0)
+
+
+@_acessorio('elastico_ak', 'Tiras de borracha no guarda-mão', 'enfeite', 'guarda_mao_enfeite', peso_kg=0.01, raridade='comum', valor_troca=1, modificadores={},
+            onde=['casa', 'armazem'], descricao='Duas tiras de câmara de pneu cruzadas no guarda-mão: seguram o fio da lanterna e marcam a arma de um sobrevivente.')
+def elastico_ak(A):
+    q = A.base
+    for ang in (14, -14):                                                                               # duas tiras cruzadas em X
+        anel = menos(cil_x(0.0215, -0.004, 0.004, 0.0, 0, 40), cil_x(0.0195, -0.01, 0.01, 0.0, 0, 40))
+        anel.apply_scale([1, 1.62, 1])
+        anel.apply_transform(TF.rotation_matrix(math.radians(ang), [0, 0, 1]))
+        q.add('borracha_marrom', anel)
+    A.pivo = (0, 0, 0)
+
+
+CORES.update({'borracha_marrom': (58, 40, 30)}); METAL.update({'borracha_marrom': (0.0, 0.75)})
+
+
+def fuzil_762_tatico(A):
+    fuzil_762(A)
+    _recolore(A.base, {'baquelite': 'polimero'})
+    for pt in A.partes:
+        if pt['no'] == 'carregador': pt['peca'].parts.clear(); _carregador_ak(pt['peca'], 30, 'polimero', grade=True)
+    padrao = {'encaixe_tampa': 'tampa_trilho_ak', 'encaixe_mira_tampa': 'mira_reflexa', 'encaixe_guarda_mao': 'guarda_mao_fendas_ak',
+              'encaixe_coronha': 'coronha_esqueleto_ak', 'encaixe_boca': 'supressor_762', 'encaixe_lanterna': 'lanterna_compacta',
+              'encaixe_enfeite': 'elastico_ak'}
+    for e in A.encaixes:
+        if e['no'] in padrao: e['padrao'] = padrao[e['no']] + ('_gasto' if padrao[e['no']] in GASTOS else '')
+        for i in list(e.get('aceita', [])):
+            if i in GASTOS and i + '_gasto' not in e['aceita']: e['aceita'].append(i + '_gasto')
+        if 'requer' in e:
+            e['requer'] = {k: sorted(set(v if isinstance(v, list) else [v]) | {x + '_gasto' for x in (v if isinstance(v, list) else [v]) if x in GASTOS})
+                           for k, v in e['requer'].items()}
+    _desgasta(A); _rabisco_receptor(A.base)
+
+
+REG['fuzil_762_tatico'] = dict(REG['fuzil_762'], id='fuzil_762_tatico', nome='Fuzil Brasa 7,62 tático', fn=fuzil_762_tatico, raridade='muito raro',
+                               valor_troca=220, onde=['quartel'],
+                               descricao='O mesmo fuzil todo preto e bem usado (pintura gasta, riscos, ferrugem e um rabisco na chapa): punho e '
+                                         'carregador de polímero, coronha vazada, guarda-mão de fendas com tiras de borracha, tampa com trilho e '
+                                         'mira reflexa, supressor e lanterna.')
+
+
+# ---------------------------------------------------------------------------- desgaste de sobrevivente (texturas por script)
+def _riscos(n, px, seed, qtd, comp, horiz=0.7):
+    """Mascara de riscos finos (repete nas bordas para ladrilhar)."""
+    rng = np.random.default_rng(seed); im = Image.new('L', (n, n), 0); d = ImageDraw.Draw(im)
+    for _ in range(qtd):
+        x, y = rng.uniform(0, n, 2); a = rng.normal(0, 0.35) if rng.random() < horiz else rng.uniform(0, math.pi)
+        L = rng.uniform(0.3, 1.0) * comp * px; dx, dy = math.cos(a) * L, math.sin(a) * L
+        cor = int(rng.uniform(90, 255)); w = 1 if rng.random() < 0.8 else 2
+        for ox in (-n, 0, n):
+            for oy in (-n, 0, n): d.line([(x + ox, y + oy), (x + dx + ox, y + dy + oy)], fill=cor, width=w)
+    return np.asarray(im, np.float64) / 255.0
+
+
+def _tex_gasto(seed, base, metal=True, px=1024, tile=0.16):
+    """Pintura/oxidacao gasta: manchas de metal claro onde a mao esfrega, riscos, pontos de ferrugem e sujeira escura."""
+    n = int(tile * px)
+    gasto = GT.smooth(0.66, 0.8, GT.fbm(n, n, 0.02 * px, 5, seed))                       # manchas de desgaste
+    risco = _riscos(n, px, seed + 1, 110, 0.03)
+    sujo = GT.smooth(0.45, 0.85, GT.fbm(n, n, 0.012 * px, 4, seed + 2))
+    poro = GT.smooth(0.25, 1.6, GT.noise(n, n, 0.0007 * px, 0.0007 * px, seed + 4))
+    c = GT.rgb(CORES[base])[None, None]
+    claro = GT.rgb((96, 95, 92) if metal else tuple(min(255, int(v * 1.5) + 12) for v in CORES[base]))[None, None]
+    alb = c * (0.92 + 0.08 * poro[..., None])
+    alb = GT.lerp(alb, claro, ((0.3 if metal else 0.15) * gasto + 0.45 * risco * (0.35 + 0.65 * gasto))[..., None].clip(0, 1))
+    if metal:
+        ferr = GT.smooth(0.8, 0.9, GT.fbm(n, n, 0.006 * px, 4, seed + 3)) * (1 - gasto)
+        alb = GT.lerp(alb, GT.rgb((74, 50, 36))[None, None], (0.45 * ferr)[..., None])
+    else: ferr = 0 * sujo
+    alb = GT.lerp(alb, GT.rgb((52, 46, 38))[None, None], (0.22 * sujo * (1 - gasto))[..., None])
+    hm = -0.00004 * risco + 0.00002 * poro + 0.00003 * ferr
+    rough = (0.42 if metal else 0.7) + 0.25 * sujo - 0.15 * risco - 0.1 * gasto + 0.3 * ferr
+    return alb, hm, rough, 1.0, 0.0002, tile, px
+
+
+TEX_EXTRA += [('aco_gasto', lambda: _tex_gasto(401, 'aco_oxidado'), 0.7), ('polimero_gasto', lambda: _tex_gasto(402, 'polimero', False), 0.0),
+              ('aluminio_gasto', lambda: _tex_gasto(403, 'aluminio_preto'), 0.6), ('cano_gasto', lambda: _tex_gasto(404, 'aco_cano', tile=0.1), 0.8)]
+GASTO = {'aco_oxidado': 'aco_gasto', 'aco_fosfatado': 'aco_gasto', 'polimero': 'polimero_gasto', 'aluminio_preto': 'aluminio_gasto',
+         'aco_cano': 'cano_gasto', 'baquelite': 'polimero_gasto'}
+
+
+def _desgasta(A):
+    _recolore(A.base, GASTO)
+    for pt in A.partes: _recolore(pt['peca'], GASTO)
+
+
+def _rabisco(txt, alt, seed=7):
+    """Texto riscado a ponta de faca: letras finas, tortas e de tamanhos diferentes (poligonos no plano x, y; base em y = 0)."""
+    rng = np.random.default_rng(seed); f = fonte(120, False); polys = []; x = 0.0; esc = alt / 120
+    for ch in txt:
+        if ch == ' ': x += 45 * esc; continue
+        w = int(f.getlength(ch)) + 20; im = Image.new('L', (w, 170), 0); ImageDraw.Draw(im).text((10, 10), ch, font=f, fill=255)
+        a = (np.asarray(im) > 128); rects = []
+        for r in range(a.shape[0]):
+            c = np.flatnonzero(np.diff(np.r_[0, a[r].astype(int), 0]))
+            for c0, c1 in zip(c[::2], c[1::2]): rects.append(sbox(c0, -r - 1, c1, -r))
+        g = unary_union(rects).simplify(1.2)
+        g = affinity.translate(g, 0, 150); g = affinity.skew(g, xs=rng.uniform(-12, 4), origin=(0, 0))
+        g = affinity.rotate(g, rng.uniform(-9, 9), origin='centroid'); s_ = rng.uniform(0.85, 1.12)
+        g = affinity.scale(g, s_ * esc, s_ * esc, origin=(0, 0)); g = affinity.translate(g, x, rng.uniform(-0.08, 0.08) * alt)
+        polys.append(g); x += (w - 14) * esc * s_
+    return unary_union(polys)
+
+
+def _rabisco_receptor(q, txt='NÃO DESISTA'):
+    """Rabisco claro riscado no lado esquerdo do receptor (fino, quase rente a chapa)."""
+    g = _rabisco(txt, 0.0075)
+    b = g.bounds; g = affinity.translate(g, -b[0], -b[1]); b = g.bounds
+    k = min(1.0, 0.046 / b[2]); g = affinity.scale(g, -k, k, origin=(0, 0))                             # lido de fora pelo lado esquerdo
+    g = affinity.translate(g, 0.111, -0.0262)                                                            # em cima do reforco do poco
+    q.add('risco_claro', solido(g, -KW - 0.00145, -KW - 0.00105))
+
+
+CORES.update({'risco_claro': (150, 146, 136)}); METAL.update({'risco_claro': (0.8, 0.35)})
+
+
+# versoes gastas (mesma peca com as texturas de desgaste) dos acessorios que vem no fuzil tatico
+GASTOS = ['tampa_trilho_ak', 'mira_reflexa', 'guarda_mao_fendas_ak', 'coronha_esqueleto_ak', 'supressor_762', 'lanterna_compacta', 'carregador_762_30_grade']
+for _i in GASTOS:
+    _r = REG[_i]
+    REG[_i + '_gasto'] = dict(_r, id=_i + '_gasto', nome=_r['nome'] + ' (gasto)', fn=(lambda f: (lambda A: (f(A), _desgasta(A))))(_r['fn']),
+                              valor_troca=max(1, int(_r.get('valor_troca', 10) * 0.8)), descricao=_r.get('descricao', '') + ' Peça usada, com a pintura gasta.')

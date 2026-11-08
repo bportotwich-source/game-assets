@@ -14,7 +14,8 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Carabina Paciência .308 de caça (`carabina_308_caca`) | .308 | 5 | 95 | 120 m | 0,8/s | 220 m | 2500 | 3,9 kg | mira, boca, carregador, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Fuzil Vigília 5,56 (`fuzil_556`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,3 kg | mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
 | Fuzil Vigília 5,56 bicolor (`fuzil_556_bicolor`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,3 kg | mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
-| Fuzil Brasa 7,62 (`fuzil_762`) | 7,62×39 | 30 | 55 | 70 m | 10/s | 180 m | 6000 | 3,6 kg | mira, boca, carregador, coronha, empunhadura, lanterna, guarda_mao, tampa, mira_tampa, baioneta, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
+| Fuzil Brasa 7,62 (`fuzil_762`) | 7,62×39 | 30 | 55 | 70 m | 10/s | 180 m | 6000 | 3,6 kg | mira, boca, carregador, coronha, empunhadura, lanterna, guarda_mao, enfeite, tampa, mira_tampa, baioneta, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
+| Fuzil Brasa 7,62 tático (`fuzil_762_tatico`) | 7,62×39 | 30 | 55 | 70 m | 10/s | 180 m | 6000 | 3,6 kg | mira, boca, carregador, coronha, empunhadura, lanterna, guarda_mao, enfeite, tampa, mira_tampa, baioneta, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
 
 ## Acessórios
 
@@ -83,7 +84,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Coronha de madeira (fuzil 7,62) (`coronha_madeira_ak`) | Coronhas | `coronha_ak` | recuo ×0,65, precisao ×1,3 | 0,6 kg | comum | 20280 |
 | Coronha rebatível de tubo (fuzil 7,62) (`coronha_rebativel_ak`) | Coronhas | `coronha_ak` | recuo ×0,75, precisao ×1,15, tempo_mirar ×0,9 | 0,45 kg | raro | 2772 |
 | Freio de boca inclinado (7,62) (`freio_ak`) | Boca do cano | `boca_762` | recuo ×0,85 | 0,03 kg | comum | 744 |
-| Supressor 7,62 (`supressor_762`) | Boca do cano | `boca_762` | ruido_m ×0,35, clarao ×0,05, recuo ×0,8 | 0,55 kg | muito raro | 4288 |
+| Supressor 7,62 (`supressor_762`) | Boca do cano | `boca_762` | ruido_m ×0,35, clarao ×0,05, recuo ×0,8 | 0,55 kg | muito raro | 2752 |
 | Mira de ponto com montagem lateral (`mira_lateral_ak`) | Miras | `trilho_lateral_ak` | precisao_mirando ×1,3, tempo_mirar ×0,8 | 0,3 kg | raro | 2172 |
 | Luneta 4× com montagem lateral (`luneta_lateral_ak`) | Miras | `trilho_lateral_ak` | precisao_mirando ×1,55, tempo_mirar ×1,15, alcance_m ×1,6 | 0,6 kg | muito raro | 2384 |
 | Baioneta (fuzil 7,62) (`baioneta_ak`) | Baionetas | `baioneta_ak` | tempo_mirar ×1,05 | 0,32 kg | incomum | 4836 |
@@ -107,6 +108,18 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Coronha leve vazada caramelo (fuzil 5,56) (`coronha_leve_ar_tan`) | Coronhas | `coronha_ar` | recuo ×0,66, precisao ×1,3 | 0,3 kg | raro | 14554 |
 | Coronha leve vazada com adaptador (fuzil 7,62) (`coronha_leve_ak`) | Coronhas | `coronha_ak` | recuo ×0,66, precisao ×1,3 | 0,3 kg | raro | 15038 |
 | Coronha leve vazada caramelo com adaptador (fuzil 7,62) (`coronha_leve_ak_tan`) | Coronhas | `coronha_ak` | recuo ×0,66, precisao ×1,3 | 0,3 kg | raro | 15038 |
+| Carregador 7,62 de polímero (30) (`carregador_762_30_grade`) | Carregadores | `carregador_762` | - | 0,25 kg | incomum | 12552 |
+| Coronha vazada fixa (fuzil 7,62) (`coronha_esqueleto_ak`) | Coronhas | `coronha_ak` | recuo ×0,68, precisao ×1,28 | 0,42 kg | raro | 1932 |
+| Guarda-mão de fendas (fuzil 7,62) (`guarda_mao_fendas_ak`) | Guarda-mãos | `guarda_mao_ak` | recuo ×0,98 | 0,3 kg | raro | 9038 |
+| Mira reflexa de tubo inclinado (`mira_reflexa`) | Miras | `trilho_mira` | precisao_mirando ×1,3, tempo_mirar ×0,72 | 0,28 kg | muito raro | 2072 |
+| Tiras de borracha no guarda-mão (`elastico_ak`) | Enfeites | `guarda_mao_enfeite` | - | 0,01 kg | comum | 640 |
+| Tampa com trilho (fuzil 7,62) (gasto) (`tampa_trilho_ak_gasto`) | Tampas | `tampa_ak` | - | 0,22 kg | raro | 2620 |
+| Mira reflexa de tubo inclinado (gasto) (`mira_reflexa_gasto`) | Miras | `trilho_mira` | precisao_mirando ×1,3, tempo_mirar ×0,72 | 0,28 kg | muito raro | 2072 |
+| Guarda-mão de fendas (fuzil 7,62) (gasto) (`guarda_mao_fendas_ak_gasto`) | Guarda-mãos | `guarda_mao_ak` | recuo ×0,98 | 0,3 kg | raro | 9038 |
+| Coronha vazada fixa (fuzil 7,62) (gasto) (`coronha_esqueleto_ak_gasto`) | Coronhas | `coronha_ak` | recuo ×0,68, precisao ×1,28 | 0,42 kg | raro | 1932 |
+| Supressor 7,62 (gasto) (`supressor_762_gasto`) | Boca do cano | `boca_762` | ruido_m ×0,35, clarao ×0,05, recuo ×0,8 | 0,55 kg | muito raro | 2752 |
+| Lanterna compacta de trilho (gasto) (`lanterna_compacta_gasto`) | Lanternas | `mlok_lado` | - | 0,11 kg | incomum | 2104 |
+| Carregador 7,62 de polímero (30) (gasto) (`carregador_762_30_grade_gasto`) | Carregadores | `carregador_762` | - | 0,25 kg | incomum | 12552 |
 
 ## Munição e efeitos
 
@@ -166,7 +179,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Carabina Paciência .308 de caça**, `encaixe_carregador`: carregador_308_5, carregador_308_10
 - **Carabina Paciência .308 de caça**, `encaixe_bipe`: bipe
 - **Carabina Paciência .308 de caça**, `encaixe_bandoleira`: bandoleira
-- **Fuzil Vigília 5,56**, `encaixe_mira`: mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x
+- **Fuzil Vigília 5,56**, `encaixe_mira`: mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa
 - **Fuzil Vigília 5,56**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
 - **Fuzil Vigília 5,56**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
 - **Fuzil Vigília 5,56**, `encaixe_boca`: quebra_chamas_556, compensador_556, supressor_556, supressor_556_tan
@@ -177,7 +190,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Fuzil Vigília 5,56**, `encaixe_laser`: laser_fuzil, modulo_laser
 - **Fuzil Vigília 5,56**, `encaixe_bipe`: bipe
 - **Fuzil Vigília 5,56**, `encaixe_bandoleira`: bandoleira
-- **Fuzil Vigília 5,56 bicolor**, `encaixe_mira`: mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_mira`: mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_boca`: quebra_chamas_556, compensador_556, supressor_556, supressor_556_tan
@@ -190,12 +203,25 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_bandoleira`: bandoleira
 - **Fuzil Brasa 7,62**, `encaixe_mira`: mira_lateral_ak, luneta_lateral_ak
 - **Fuzil Brasa 7,62**, `encaixe_boca`: freio_ak, compensador_ak, supressor_762
-- **Fuzil Brasa 7,62**, `encaixe_carregador`: carregador_762_30, carregador_762_40, tambor_762_75
-- **Fuzil Brasa 7,62**, `encaixe_coronha`: coronha_madeira_ak, coronha_polimero_ak, coronha_rebativel_ak, coronha_retratil_ak, coronha_leve_ak, coronha_leve_ak_tan
+- **Fuzil Brasa 7,62**, `encaixe_carregador`: carregador_762_30, carregador_762_30_grade, carregador_762_40, tambor_762_75
+- **Fuzil Brasa 7,62**, `encaixe_coronha`: coronha_madeira_ak, coronha_polimero_ak, coronha_rebativel_ak, coronha_retratil_ak, coronha_leve_ak, coronha_leve_ak_tan, coronha_esqueleto_ak
 - **Fuzil Brasa 7,62**, `encaixe_empunhadura`: empunhadura_reta, empunhadura_reta_tan, empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_quadrada, empunhadura_cilindrica, batente_mao
 - **Fuzil Brasa 7,62**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
-- **Fuzil Brasa 7,62**, `encaixe_guarda_mao`: guarda_mao_madeira_ak, guarda_mao_polimero_ak, guarda_mao_trilhos_ak
+- **Fuzil Brasa 7,62**, `encaixe_guarda_mao`: guarda_mao_madeira_ak, guarda_mao_polimero_ak, guarda_mao_trilhos_ak, guarda_mao_fendas_ak
+- **Fuzil Brasa 7,62**, `encaixe_enfeite`: elastico_ak
 - **Fuzil Brasa 7,62**, `encaixe_tampa`: tampa_trilho_ak
-- **Fuzil Brasa 7,62**, `encaixe_mira_tampa`: mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x
+- **Fuzil Brasa 7,62**, `encaixe_mira_tampa`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x
 - **Fuzil Brasa 7,62**, `encaixe_baioneta`: baioneta_ak
 - **Fuzil Brasa 7,62**, `encaixe_bandoleira`: bandoleira
+- **Fuzil Brasa 7,62 tático**, `encaixe_mira`: mira_lateral_ak, luneta_lateral_ak
+- **Fuzil Brasa 7,62 tático**, `encaixe_boca`: freio_ak, compensador_ak, supressor_762, supressor_762_gasto
+- **Fuzil Brasa 7,62 tático**, `encaixe_carregador`: carregador_762_30, carregador_762_30_grade, carregador_762_40, tambor_762_75, carregador_762_30_grade_gasto
+- **Fuzil Brasa 7,62 tático**, `encaixe_coronha`: coronha_madeira_ak, coronha_polimero_ak, coronha_rebativel_ak, coronha_retratil_ak, coronha_leve_ak, coronha_leve_ak_tan, coronha_esqueleto_ak, coronha_esqueleto_ak_gasto
+- **Fuzil Brasa 7,62 tático**, `encaixe_empunhadura`: empunhadura_reta, empunhadura_reta_tan, empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_quadrada, empunhadura_cilindrica, batente_mao
+- **Fuzil Brasa 7,62 tático**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta, lanterna_compacta_gasto
+- **Fuzil Brasa 7,62 tático**, `encaixe_guarda_mao`: guarda_mao_madeira_ak, guarda_mao_polimero_ak, guarda_mao_trilhos_ak, guarda_mao_fendas_ak, guarda_mao_fendas_ak_gasto
+- **Fuzil Brasa 7,62 tático**, `encaixe_enfeite`: elastico_ak
+- **Fuzil Brasa 7,62 tático**, `encaixe_tampa`: tampa_trilho_ak, tampa_trilho_ak_gasto
+- **Fuzil Brasa 7,62 tático**, `encaixe_mira_tampa`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa_gasto
+- **Fuzil Brasa 7,62 tático**, `encaixe_baioneta`: baioneta_ak
+- **Fuzil Brasa 7,62 tático**, `encaixe_bandoleira`: bandoleira

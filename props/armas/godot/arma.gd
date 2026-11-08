@@ -62,8 +62,10 @@ func por_acessorio(no: String, acessorio_id: String) -> bool:
 		return false
 	if acessorio_id != "" and not (acessorio_id in e.get("aceita", [])):
 		return false
-	for k in e.get("requer", {}):    # ex.: mira na tampa com trilho só existe com essa tampa instalada
-		if acessorio_id != "" and instalados.get(k, "") != e["requer"][k]:
+	for k in e.get("requer", {}):    # ex.: mira na tampa com trilho só existe com essa tampa instalada (valor: id ou lista de ids)
+		var r = e["requer"][k]
+		var ok: bool = (instalados.get(k, "") in r) if r is Array else (instalados.get(k, "") == r)
+		if acessorio_id != "" and not ok:
 			return false
 	var alvo: Node3D = modelo.find_child(no, true, false)
 	for c in alvo.get_children():

@@ -46,6 +46,7 @@ METAL = {'aco_oxidado': (0.75, 0.32), 'aco_fosfatado': (0.55, 0.62), 'aco_inox':
          'aluminio_preto': (0.55, 0.38), 'latao': (0.95, 0.28), 'cobre_bala': (0.95, 0.3), 'chumbo': (0.7, 0.5), 'mola': (0.9, 0.35),
          'polimero': (0.0, 0.55), 'polimero_tan': (0.0, 0.6), 'tinta_branca': (0.0, 0.4), 'tinta_laranja': (0.0, 0.45),
          'borracha_grip': (0.0, 0.9), 'fita_cinza': (0.3, 0.5), 'borracha': (0.0, 0.85), 'plastico_branco': (0.0, 0.5)}
+TEX_EXTRA = []   # (material, funcao de textura, metallic): texturas que os arquivos armaNN acrescentam (ex.: desgaste)
 TRANSP = {'lente': ((120, 160, 150), 0.35, 0.03), 'lente_clara': ((170, 205, 195), 0.1, 0.02), 'lente_laser': ((200, 30, 20), 0.6, 0.05), 'pet_garrafa': ((150, 190, 215), 0.22, 0.06)}
 EMISSIVOS = {'ponto_vermelho': (1.0, 0.05, 0.02), 'led_lanterna': (1.0, 0.97, 0.88), 'led_laser': (1.0, 0.08, 0.04),
              'clarao': (1.0, 0.62, 0.22), 'clarao_nucleo': (1.0, 0.92, 0.7)}
@@ -82,6 +83,11 @@ def materiais():
         TEX[k] = (a, nm, o); gp.UV_ESCALA[k] = tile
         MATS[k] = PBRMaterial(name=k, baseColorTexture=a, normalTexture=nm, occlusionTexture=o, metallicRoughnessTexture=o,
                               baseColorFactor=[255, 255, 255, 255], metallicFactor=0.0 if k.startswith('polimero_grip') else 0.7, roughnessFactor=1.0)
+    for k, fn, met in TEX_EXTRA:
+        alb, hm, rough, nstr, aod, tile, px = fn(); a, nm, o = tex_set(alb, hm, rough, nstr, aod, px)
+        TEX[k] = (a, nm, o); gp.UV_ESCALA[k] = tile
+        MATS[k] = PBRMaterial(name=k, baseColorTexture=a, normalTexture=nm, occlusionTexture=o, metallicRoughnessTexture=o,
+                              baseColorFactor=[255, 255, 255, 255], metallicFactor=met, roughnessFactor=1.0)
     for k, (c, alpha, rough) in TRANSP.items():
         MATS[k] = PBRMaterial(name=k, baseColorFactor=[c[0] / 255, c[1] / 255, c[2] / 255, alpha], alphaMode='BLEND',
                               metallicFactor=0.0, roughnessFactor=rough)
@@ -968,7 +974,7 @@ CAB = {
                     'ruido_m': 'raio em que os zumbis ouvem o tiro', 'durabilidade': 'tiros até precisar de reparo',
                     'modificadores': 'multiplicadores aplicados à arma pelo acessório', 'valor_troca': 'preço na troca entre comunidades'},
 }
-NOMES = {'guarda_mao': 'Guarda-mãos', 'tampa': 'Tampas', 'baioneta': 'Baionetas', 'fuzil': 'Fuzis', 'laser': 'Lasers', 'carabina': 'Carabinas', 'bipe': 'Bipés', 'espingarda': 'Espingardas', 'coronha': 'Coronhas', 'tubo': 'Tubo do carregador', 'lanterna': 'Lanternas', 'porta_cartuchos': 'Porta-cartuchos', 'bandoleira': 'Bandoleiras', 'revolver': 'Revólveres', 'recarga': 'Recarga rápida', 'empunhadura': 'Empunhaduras', 'coldre': 'Coldres', 'pistola': 'Pistolas', 'boca': 'Boca do cano', 'trilho': 'Trilho', 'mira': 'Miras', 'carregador': 'Carregadores',
+NOMES = {'enfeite': 'Enfeites', 'guarda_mao': 'Guarda-mãos', 'tampa': 'Tampas', 'baioneta': 'Baionetas', 'fuzil': 'Fuzis', 'laser': 'Lasers', 'carabina': 'Carabinas', 'bipe': 'Bipés', 'espingarda': 'Espingardas', 'coronha': 'Coronhas', 'tubo': 'Tubo do carregador', 'lanterna': 'Lanternas', 'porta_cartuchos': 'Porta-cartuchos', 'bandoleira': 'Bandoleiras', 'revolver': 'Revólveres', 'recarga': 'Recarga rápida', 'empunhadura': 'Empunhaduras', 'coldre': 'Coldres', 'pistola': 'Pistolas', 'boca': 'Boca do cano', 'trilho': 'Trilho', 'mira': 'Miras', 'carregador': 'Carregadores',
          'municao': 'Munição', 'estojo': 'Estojos', 'caixa': 'Caixas de munição', 'efeito': 'Efeitos'}
 
 

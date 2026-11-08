@@ -9753,6 +9753,465 @@
    ],
    "triangulos": 4436,
    "kb": 502.1
+  },
+  {
+   "id": "poste_luz",
+   "nome": "Poste de luz restaurado",
+   "grupo": "mobilias",
+   "categoria": "cidade",
+   "montagem": "floor",
+   "lote": 19,
+   "comodos": [
+    "rua",
+    "abrigo",
+    "praca"
+   ],
+   "constroi": {
+    "cano_metal": 2,
+    "fio_eletrico": 3,
+    "placa_circuito": 1
+   },
+   "ferramenta": "chave_inglesa",
+   "estacao_obra": "bancada_eletronica",
+   "fase": 4,
+   "luz_m": 15,
+   "consumo_w": 60,
+   "moral": 1,
+   "estacao": "iluminação (rua acesa à noite: zumbi é visto de longe e os moradores andam sem medo)",
+   "arquivo": "mobilias/poste_luz.glb",
+   "tamanho_m": [
+    0.52,
+    6.54,
+    1.96
+   ],
+   "triangulos": 948,
+   "kb": 341.9
+  },
+  {
+   "id": "subestacao",
+   "nome": "Subestação religada",
+   "grupo": "mobilias",
+   "categoria": "cidade",
+   "montagem": "floor",
+   "lote": 19,
+   "comodos": [
+    "rua",
+    "fabrica",
+    "cidade"
+   ],
+   "constroi": {
+    "fio_eletrico": 10,
+    "placa_circuito": 4,
+    "motor_eletrico": 2,
+    "cimento": 6,
+    "arame_farpado": 2
+   },
+   "ferramenta": "chave_inglesa",
+   "estacao_obra": "bancada_eletronica",
+   "fase": 4,
+   "marco": true,
+   "energia_w": 20000,
+   "trabalha": 2,
+   "ponto_uso": [
+    1.0,
+    0.0,
+    1.9
+   ],
+   "precisa_achar": "transformador (subestação do bairro industrial)",
+   "raio_m": 200,
+   "estacao": "marco da fase Vila → Cidade nova (devolve luz às casas num raio de 200 m: postes, geladeiras e o rádio da torre)",
+   "arquivo": "mobilias/subestacao.glb",
+   "tamanho_m": [
+    3.244,
+    2.907,
+    4.035
+   ],
+   "triangulos": 10168,
+   "kb": 615.7
+  },
+  {
+   "id": "turbina_eolica",
+   "nome": "Turbina eólica pequena no mastro",
+   "grupo": "mobilias",
+   "categoria": "energia",
+   "montagem": "floor",
+   "lote": 19,
+   "comodos": [
+    "abrigo",
+    "fazenda",
+    "cidade"
+   ],
+   "constroi": {
+    "cano_metal": 6,
+    "motor_eletrico": 1,
+    "chapa_metal": 3,
+    "fio_eletrico": 4,
+    "bateria_carro": 2
+   },
+   "ferramenta": "chave_inglesa",
+   "estacao_obra": "bancada_eletronica",
+   "fase": 4,
+   "energia_w": 1000,
+   "estacao": "energia (1 kW com vento: liga a cerca, o rádio e as geladeiras da vila)",
+   "arquivo": "mobilias/turbina_eolica.glb",
+   "tamanho_m": [
+    5.19,
+    9.84,
+    5.19
+   ],
+   "triangulos": 1428,
+   "kb": 178.7,
+   "partes": [
+    {
+     "no": "cabeca",
+     "origem": [
+      0.0,
+      8.0,
+      0.0
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 360,
+     "gira_livre": true
+    },
+    {
+     "no": "rotor",
+     "origem": [
+      0.0,
+      8.12,
+      0.6
+     ],
+     "tipo": "porta",
+     "eixo": "z",
+     "abre_graus": 360,
+     "gira_livre": true
+    }
+   ]
+  },
+  {
+   "id": "tratamento_agua",
+   "nome": "Estação de tratamento de água em tambores",
+   "grupo": "mobilias",
+   "categoria": "cidade",
+   "montagem": "floor",
+   "lote": 19,
+   "comodos": [
+    "abrigo",
+    "fazenda",
+    "cidade"
+   ],
+   "constroi": {
+    "tambor_200l": 3,
+    "tubo_pvc": 6,
+    "pedras": 6,
+    "carvao": 4,
+    "tabua": 6
+   },
+   "ferramenta": "chave_inglesa",
+   "estacao_obra": "bancada_carpintaria",
+   "fase": 4,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    1.1
+   ],
+   "produz": {
+    "item": "galao_agua",
+    "qtd": 10,
+    "a_cada_min": 60,
+    "consome": {
+     "alcool": 1
+    }
+   },
+   "estacao": "água tratada (decanta, filtra em areia e carvão e clora: 50 L por hora, sem doença; liga no poço ou no cata-vento)",
+   "arquivo": "mobilias/tratamento_agua.glb",
+   "tamanho_m": [
+    3.08,
+    1.975,
+    1.03
+   ],
+   "triangulos": 7308,
+   "kb": 514.7
+  },
+  {
+   "id": "muralha_concreto",
+   "nome": "Módulo de muralha de blocos com passarela",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "floor",
+   "lote": 19,
+   "comodos": [
+    "abrigo",
+    "cidade",
+    "rua"
+   ],
+   "constroi": {
+    "cimento": 4,
+    "tijolo": 20,
+    "cano_metal": 2,
+    "arame_farpado": 1,
+    "tabua": 4
+   },
+   "ferramenta": "pa",
+   "fase": 4,
+   "vida": 3000,
+   "modulo_m": 2,
+   "bloqueia": "passagem e visao",
+   "atirar_por_cima": true,
+   "vagas": 2,
+   "estacao": "muralha (aguenta horda grande; moradores andam e atiram da passarela)",
+   "arquivo": "mobilias/muralha_concreto.glb",
+   "tamanho_m": [
+    2.0,
+    3.156,
+    1.106
+   ],
+   "triangulos": 4500,
+   "kb": 552.4
+  },
+  {
+   "id": "portao_guarita",
+   "nome": "Portão principal de chapa com guarita",
+   "grupo": "mobilias",
+   "categoria": "defesa",
+   "montagem": "floor",
+   "lote": 19,
+   "comodos": [
+    "abrigo",
+    "cidade",
+    "rua"
+   ],
+   "constroi": {
+    "chapa_metal": 8,
+    "cano_metal": 6,
+    "cimento": 6,
+    "tijolo": 20,
+    "dobradicas": 4,
+    "corrente_cadeado": 1,
+    "tabua": 6
+   },
+   "ferramenta": "chave_inglesa",
+   "estacao_obra": "forja_tambor",
+   "fase": 4,
+   "vida": 2500,
+   "modulo_m": 4,
+   "bloqueia": "passagem e visao",
+   "trabalha": 1,
+   "ponto_uso": [
+    2.7,
+    2.0,
+    0.0
+   ],
+   "estacao": "portão (abre para carros e caravanas; o vigia da guarita vê a estrada e fecha o portão)",
+   "arquivo": "mobilias/portao_guarita.glb",
+   "tamanho_m": [
+    5.92,
+    4.129,
+    1.6
+   ],
+   "triangulos": 7804,
+   "kb": 684.4,
+   "partes": [
+    {
+     "no": "porta_esq",
+     "origem": [
+      -1.99,
+      0.05,
+      0.0
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -95
+    },
+    {
+     "no": "porta_dir",
+     "origem": [
+      1.99,
+      0.05,
+      0.0
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 95
+    }
+   ]
+  },
+  {
+   "id": "banca_feira",
+   "nome": "Banca de feira com toldo",
+   "grupo": "mobilias",
+   "categoria": "cidade",
+   "montagem": "floor",
+   "lote": 19,
+   "comodos": [
+    "praca",
+    "rua",
+    "cidade"
+   ],
+   "constroi": {
+    "tabua": 6,
+    "lona": 1,
+    "lenha": 4,
+    "caixa_pregos": 1
+   },
+   "ferramenta": "martelo",
+   "fase": 4,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    -0.8
+   ],
+   "troca": true,
+   "moral": 1,
+   "estacao": "feira (moradores e caravanas trocam excedente: comida por munição, remédio por ferramenta)",
+   "arquivo": "mobilias/banca_feira.glb",
+   "tamanho_m": [
+    3.05,
+    2.341,
+    1.514
+   ],
+   "triangulos": 4944,
+   "kb": 510.6
+  },
+  {
+   "id": "ponto_onibus",
+   "nome": "Ponto da caravana (abrigo de ônibus reformado)",
+   "grupo": "mobilias",
+   "categoria": "cidade",
+   "montagem": "floor",
+   "lote": 19,
+   "comodos": [
+    "rua",
+    "cidade"
+   ],
+   "constroi": {
+    "cano_metal": 4,
+    "chapa_metal": 2,
+    "tabua": 4
+   },
+   "ferramenta": "chave_inglesa",
+   "fase": 5,
+   "troca": true,
+   "sentar": 3,
+   "estacao": "ponto da caravana (a carroça e o ônibus da vila passam aqui: leva moradores e traz comércio de outras comunidades)",
+   "arquivo": "mobilias/ponto_onibus.glb",
+   "tamanho_m": [
+    3.23,
+    2.7,
+    1.45
+   ],
+   "triangulos": 3820,
+   "kb": 395.9
+  },
+  {
+   "id": "forno_comunitario",
+   "nome": "Forno de barro comunitário",
+   "grupo": "mobilias",
+   "categoria": "cidade",
+   "montagem": "floor",
+   "lote": 19,
+   "comodos": [
+    "praca",
+    "abrigo",
+    "fazenda",
+    "padaria"
+   ],
+   "constroi": {
+    "tijolo": 30,
+    "terra": 8,
+    "palha": 2,
+    "cano_metal": 1
+   },
+   "ferramenta": "pa",
+   "fase": 4,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    1.3
+   ],
+   "moral": 1,
+   "produz": {
+    "item": "pao_caseiro",
+    "qtd": 12,
+    "a_cada_min": 120,
+    "consome": {
+     "saco_farinha": 1,
+     "lenha": 2
+    }
+   },
+   "estacao": "padaria da vila (12 pães por fornada com 1 saco de farinha; dia de pão levanta o moral)",
+   "arquivo": "mobilias/forno_comunitario.glb",
+   "tamanho_m": [
+    2.235,
+    1.87,
+    1.76
+   ],
+   "triangulos": 18424,
+   "kb": 1590.0
+  },
+  {
+   "id": "placa_boas_vindas",
+   "nome": "Placa de boas-vindas da vila",
+   "grupo": "mobilias",
+   "categoria": "cidade",
+   "montagem": "floor",
+   "lote": 19,
+   "comodos": [
+    "rua",
+    "cidade"
+   ],
+   "constroi": {
+    "tabua": 8,
+    "lenha": 2,
+    "caixa_pregos": 1
+   },
+   "ferramenta": "martelo",
+   "fase": 4,
+   "moral": 1,
+   "estacao": "entrada da vila (sobreviventes que chegam sabem que ali tem gente; a população se atualiza sozinha)",
+   "arquivo": "mobilias/placa_boas_vindas.glb",
+   "tamanho_m": [
+    2.7,
+    2.359,
+    1.031
+   ],
+   "triangulos": 6544,
+   "kb": 710.2
+  },
+  {
+   "id": "memorial",
+   "nome": "Memorial aos que se foram",
+   "grupo": "mobilias",
+   "categoria": "cidade",
+   "montagem": "floor",
+   "lote": 19,
+   "comodos": [
+    "praca",
+    "igreja",
+    "abrigo",
+    "cidade"
+   ],
+   "constroi": {
+    "tabua": 6,
+    "pedras": 10,
+    "vela_fosforos": 2
+   },
+   "ferramenta": "martelo",
+   "fase": 4,
+   "moral": 3,
+   "raio_m": 30,
+   "estacao": "memorial (moradores visitam e o luto passa mais rápido; quem morre na vila ganha um nome aqui)",
+   "arquivo": "mobilias/memorial.glb",
+   "tamanho_m": [
+    3.04,
+    2.129,
+    0.927
+   ],
+   "triangulos": 4972,
+   "kb": 616.7
   }
  ]
 }

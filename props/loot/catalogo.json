@@ -3774,6 +3774,42 @@
    ],
    "triangulos": 1464,
    "kb": 118.9
+  },
+  {
+   "id": "pao_caseiro",
+   "nome": "Pão caseiro do forno da vila",
+   "grupo": "loot",
+   "categoria": "comida",
+   "montagem": "floor",
+   "lote": 19,
+   "recurso": "comida",
+   "valor": 3,
+   "peso_kg": 0.4,
+   "empilha": 6,
+   "celulas": [
+    1,
+    1
+   ],
+   "fase": 4,
+   "efeito": "mata a fome e dá +moral; dura 4 dias",
+   "onde": [
+    "padaria",
+    "fazenda"
+   ],
+   "obtem_de": [
+    {
+     "fazer": "forno_comunitario",
+     "qtd": 12
+    }
+   ],
+   "arquivo": "loot/pao_caseiro.glb",
+   "tamanho_m": [
+    0.109,
+    0.08,
+    0.18
+   ],
+   "triangulos": 420,
+   "kb": 21.5
   }
  ]
 }

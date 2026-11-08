@@ -30,6 +30,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Fuzil Atalaia .308 curto (`fuzil_308_precisao_curto`) | .308 | 20 | 92 | 150 m | 3/s | 250 m | 3500 | 4,9 kg | punho, mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
 | Pistola Guardiã 9 mm (`pistola_guardia_9mm`) | 9 mm | 17 | 34 | 28 m | 4,0/s | 60 m | 900 | 0,98 kg | empunhadura, boca, trilho, carregador, cinto | atirar_dupla, atirar, atirar_ultimo, vazia, desarmar, armar, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Pistola Guardiã 9 mm (preta) (`pistola_guardia_9mm_preta`) | 9 mm | 17 | 34 | 28 m | 4,0/s | 60 m | 900 | 0,98 kg | empunhadura, boca, trilho, carregador, cinto | atirar_dupla, atirar, atirar_ultimo, vazia, desarmar, armar, recarregar, recarregar_vazia, inspecionar, ocioso |
+| Arco recurvo de madeira (`arco_recurvo`) | flecha | 1 | 70 | 35 m | 0,6/s | 6 m | 1500 | 1,2 kg | flecha, mira, estabilizador, aljava | puxar, segurar, soltar, encaixar, inspecionar, ocioso |
 
 ## Acessórios
 
@@ -171,6 +172,10 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Carregador 9 mm da Guardiã (17) (`carregador_guardia_17`) | Carregadores | `carregador_guardia` | - | 0,1 kg | incomum | 1078 |
 | Carregador 9 mm estendido da Guardiã (20) (`carregador_guardia_20`) | Carregadores | `carregador_guardia` | recarga_s ×1,05 | 0,12 kg | raro | 1228 |
 | Coldre de náilon com trava (Guardiã) (`coldre_guardia`) | Coldres | `coldre_guardia` | tempo_sacar ×0,75 | 0,24 kg | incomum | 1828 |
+| Mira de pinos (arco) (`mira_pinos_arco`) | Miras | `rosca_mira_arco` | precisao_mirando ×1,35 | 0,12 kg | raro | 2916 |
+| Estabilizador longo (arco) (`estabilizador_arco`) | Estabilizadores | `rosca_estabilizador` | precisao ×1,12, tremor ×0,75 | 0,2 kg | raro | 1664 |
+| Estabilizador curto (arco) (`estabilizador_curto_arco`) | Estabilizadores | `rosca_estabilizador` | precisao ×1,05, tremor ×0,88 | 0,12 kg | incomum | 1664 |
+| Aljava de arco (4 flechas) (`aljava_arco`) | Aljavas | `aljava_arco` | recarga_s ×0,8 | 0,25 kg | incomum | 3316 |
 
 ## Munição e efeitos
 
@@ -203,6 +208,9 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Estojo de sinal (vazio) (`estojo_sinal`) | Estojos | Estojo vazio que sai na recarga (o jogo cria um em saida_estojo). | 880 |
 | Caixa de sinais vermelhos (6) (`caixa_sinal_vermelho`) | Caixas de munição | Caixa de papelão com 6 cartuchos de sinal vermelho em pé. A tampa abre (nó "tampa", animação "abrir"). | 4988 |
 | Caixa de sinais verdes (6) (`caixa_sinal_verde`) | Caixas de munição | Caixa de papelão com 6 cartuchos de sinal verde em pé. A tampa abre (nó "tampa", animação "abrir"). | 4172 |
+| Flecha de caça (`flecha_caca`) | Munição | Haste de fibra com ponta de 3 lâminas: corta fundo, mas a ponta pode quebrar ao recuperar. Pivô no entalhe (ponto que encosta na corda). | 662 |
+| Flecha improvisada (prego) (`flecha_prego`) | Munição | Prego amarrado na ponta com fita: fácil de fazer na bancada, erra mais e quebra fácil. Pivô no entalhe (ponto que encosta na corda). | 1610 |
+| Flecha de ponta de campo (`flecha_campo`) | Munição | Ponta de aço simples: entra menos, mas quase sempre dá para usar de novo. Pivô no entalhe (ponto que encosta na corda). | 638 |
 | Clarão de boca (`clarao_boca`) | Efeitos | Mostrar por 1 ou 2 quadros no encaixe boca_fogo a cada tiro; girar ao acaso em -Z e variar a escala (0,8 a 1,2). Material emissivo com transparência. | 372 |
 | Luz do sinal vermelho (`sinal_luz_vermelha`) | Efeitos | Bola de luz que sobe até ~80 m e desce devagar por 7 s. Pôr uma luz omnidirecional vermelha forte no centro e piscar a escala (0,9 a 1,1). Material emissivo com transparência no halo. | 1920 |
 | Luz do sinal verde (`sinal_luz_verde`) | Efeitos | Igual ao vermelho, em verde. Pôr uma luz omnidirecional verde forte no centro. | 1920 |
@@ -404,3 +412,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Pistola Guardiã 9 mm (preta)**, `encaixe_trilho`: lanterna_pistola, laser_pistola, combo_lanterna_laser
 - **Pistola Guardiã 9 mm (preta)**, `encaixe_carregador`: carregador_guardia_17, carregador_guardia_20
 - **Pistola Guardiã 9 mm (preta)**, `cinto`: coldre_guardia
+- **Arco recurvo de madeira**, `encaixe_flecha`: flecha_caca, flecha_prego, flecha_campo
+- **Arco recurvo de madeira**, `encaixe_mira`: mira_pinos_arco
+- **Arco recurvo de madeira**, `encaixe_estabilizador`: estabilizador_arco, estabilizador_curto_arco
+- **Arco recurvo de madeira**, `encaixe_aljava`: aljava_arco

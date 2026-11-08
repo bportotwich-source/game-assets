@@ -8771,6 +8771,250 @@
      "descricao": "respiração leve parado"
     }
    }
+  },
+  {
+   "id": "arco_recurvo",
+   "nome": "Arco recurvo de madeira",
+   "grupo": "armas",
+   "categoria": "arco",
+   "classe": "arco",
+   "calibre": "flecha",
+   "municao": "flecha_caca",
+   "capacidade": 1,
+   "dano": 70,
+   "alcance_m": 35,
+   "alcance_max_m": 70,
+   "modo": "um tiro (puxar, segurar e soltar)",
+   "tiros_por_s": 0.6,
+   "recarga_s": 1.3,
+   "recarga_vazia_s": 1.3,
+   "precisao": 0.7,
+   "recuo": 0.05,
+   "ruido_m": 6,
+   "durabilidade": 1500,
+   "peso_kg": 1.2,
+   "raridade": "incomum",
+   "valor_troca": 45,
+   "flecha_volta": 0.7,
+   "forca_lb": 40,
+   "onde": [
+    "casa_de_campo",
+    "parque",
+    "galeria",
+    "armazem"
+   ],
+   "descricao": "Arco desmontável de punho de nogueira laminada e braços recurvos (40 lb). Quase não faz barulho, a flecha pode ser recuperada (70%) e mata zumbi com um tiro na cabeça. Puxar e segurar cansa: não dá para manter mirado muito tempo.",
+   "arquivo": "armas/arco_recurvo.glb",
+   "tamanho_m": [
+    0.043,
+    1.463,
+    0.734
+   ],
+   "triangulos": 37072,
+   "kb": 2130.4,
+   "partes": [
+    {
+     "no": "braco_cima",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 11.0,
+     "descricao": "braço de cima: flexiona para trás na puxada (a ponta recurva)",
+     "pai": "arco_recurvo",
+     "explodir_m": [
+      0.0,
+      0.1,
+      0.0
+     ]
+    },
+    {
+     "no": "braco_baixo",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -11.0,
+     "descricao": "braço de baixo: espelho do de cima",
+     "pai": "arco_recurvo",
+     "explodir_m": [
+      0.0,
+      -0.1,
+      0.0
+     ]
+    },
+    {
+     "no": "corda_cima",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -36.72591641547223,
+     "descricao": "metade de cima da corda (filha do braço de cima)",
+     "pai": "braco_cima",
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.05
+     ]
+    },
+    {
+     "no": "corda_baixo",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 34.625000706135495,
+     "descricao": "metade de baixo da corda (filha do braço de baixo)",
+     "pai": "braco_baixo",
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.05
+     ]
+    },
+    {
+     "no": "flecha",
+     "tipo": "remove",
+     "direcao": [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     "municao": "flecha_caca",
+     "capacidade": 1,
+     "descricao": "flecha encaixada na corda e deitada no apoio",
+     "pai": "arco_recurvo",
+     "explodir_m": [
+      -0.05,
+      0.03,
+      -0.0
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_flecha",
+     "tipo": "flecha",
+     "pai": "flecha",
+     "posicao_m": [
+      -0.0,
+      0.052,
+      0.182
+     ],
+     "substitui": "flecha",
+     "aceita": [
+      "flecha_caca",
+      "flecha_prego",
+      "flecha_campo"
+     ],
+     "descricao": "filho do nó flecha: a flecha escolhida troca a malha do nó flecha (anda na puxada)"
+    },
+    {
+     "no": "encaixe_mira",
+     "tipo": "rosca_mira_arco",
+     "pai": "arco_recurvo",
+     "posicao_m": [
+      0.0136,
+      0.137,
+      -0.02
+     ],
+     "aceita": [
+      "mira_pinos_arco"
+     ],
+     "descricao": "buchas de latão do lado direito, acima da janela",
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_estabilizador",
+     "tipo": "rosca_estabilizador",
+     "pai": "arco_recurvo",
+     "posicao_m": [
+      0.0,
+      -0.068,
+      -0.052
+     ],
+     "aceita": [
+      "estabilizador_arco",
+      "estabilizador_curto_arco"
+     ],
+     "descricao": "bucha na frente do punho, abaixo da mão",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.08
+     ]
+    },
+    {
+     "no": "encaixe_aljava",
+     "tipo": "aljava_arco",
+     "pai": "arco_recurvo",
+     "posicao_m": [
+      0.0132,
+      0.047,
+      -0.02
+     ],
+     "aceita": [
+      "aljava_arco"
+     ],
+     "descricao": "buchas do lado direito (em cima e embaixo): aljava presa no arco com 4 flechas",
+     "explodir_m": [
+      0.08,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "arco_recurvo",
+     "posicao_m": [
+      -0.004,
+      0.124,
+      0.612
+     ],
+     "descricao": "olho do arqueiro com o arco puxado (âncora no canto da boca): mire pela ponta da flecha"
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "arco_recurvo",
+     "posicao_m": [
+      0.0,
+      0.052,
+      -0.178
+     ],
+     "descricao": "de onde a flecha sai no \"soltar\" (projétil para -Z, sem clarão e quase sem ruído)"
+    }
+   ],
+   "animacoes": {
+    "puxar": {
+     "duracao_s": 0.9,
+     "laco": false,
+     "descricao": "puxa a corda até a âncora (0,8 s): os braços flexionam e a flecha recua junto"
+    },
+    "segurar": {
+     "duracao_s": 1.0,
+     "laco": true,
+     "descricao": "segurando puxado (treme de leve; cansa o braço depois de alguns segundos)"
+    },
+    "soltar": {
+     "duracao_s": 0.45,
+     "laco": false,
+     "descricao": "solta: a corda volta e vibra; esconda o nó flecha aos 0,03 s e lance o projétil em boca_fogo"
+    },
+    "encaixar": {
+     "duracao_s": 1.3,
+     "laco": false,
+     "descricao": "pega uma flecha (da aljava ou das costas), deita no apoio (0,75 s) e encaixa na corda (1,2 s); mostre o nó flecha aos 0,35 s"
+    },
+    "inspecionar": {
+     "duracao_s": 2.4,
+     "laco": false,
+     "descricao": "gira o arco para conferir os braços e a corda"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
   }
  ],
  "acessorios": [
@@ -13524,6 +13768,130 @@
      "descricao": "ponha a arma aqui (pivô da arma) para guardá-la no coldre"
     }
    ]
+  },
+  {
+   "id": "mira_pinos_arco",
+   "nome": "Mira de pinos (arco)",
+   "grupo": "acessorios",
+   "categoria": "mira",
+   "encaixe": "rosca_mira_arco",
+   "peso_kg": 0.12,
+   "raridade": "raro",
+   "valor_troca": 35,
+   "usa": "nada",
+   "modificadores": {
+    "precisao_mirando": 1.35
+   },
+   "onde": [
+    "casa_de_campo",
+    "galeria"
+   ],
+   "linha_de_visada": "encaixe \"olho\": alinhe o pino da distância com o alvo",
+   "descricao": "Haste aparafusada no lado direito do punho com um aro e 3 pinos de fibra (verde 10 m, laranja 20 m, vermelho 30 m) que brilham com pouca luz.",
+   "arquivo": "acessorios/mira_pinos_arco.glb",
+   "tamanho_m": [
+    0.041,
+    0.053,
+    0.086
+   ],
+   "triangulos": 2916,
+   "kb": 133.4,
+   "encaixes": [
+    {
+     "no": "olho",
+     "tipo": "mira",
+     "pai": "mira_pinos_arco",
+     "posicao_m": [
+      -0.0176,
+      -0.01,
+      0.632
+     ],
+     "descricao": "olho na âncora: pino de cima (verde) = 10 m, do meio = 20 m, de baixo = 30 m"
+    }
+   ]
+  },
+  {
+   "id": "estabilizador_arco",
+   "nome": "Estabilizador longo (arco)",
+   "grupo": "acessorios",
+   "categoria": "estabilizador",
+   "encaixe": "rosca_estabilizador",
+   "peso_kg": 0.2,
+   "raridade": "raro",
+   "valor_troca": 25,
+   "modificadores": {
+    "precisao": 1.12,
+    "tremor": 0.75
+   },
+   "onde": [
+    "galeria",
+    "casa_de_campo"
+   ],
+   "descricao": "Haste de fibra de 30 cm com amortecedor e peso na ponta: o arco treme menos segurando puxado e a mão sente menos o tiro.",
+   "arquivo": "acessorios/estabilizador_arco.glb",
+   "tamanho_m": [
+    0.028,
+    0.028,
+    0.304
+   ],
+   "triangulos": 1664,
+   "kb": 81.5
+  },
+  {
+   "id": "estabilizador_curto_arco",
+   "nome": "Estabilizador curto (arco)",
+   "grupo": "acessorios",
+   "categoria": "estabilizador",
+   "encaixe": "rosca_estabilizador",
+   "peso_kg": 0.12,
+   "raridade": "incomum",
+   "valor_troca": 14,
+   "modificadores": {
+    "precisao": 1.05,
+    "tremor": 0.88
+   },
+   "onde": [
+    "galeria",
+    "casa_de_campo"
+   ],
+   "descricao": "Versão de 12 cm: ajuda menos, mas não enrosca nos galhos nem nas portas.",
+   "arquivo": "acessorios/estabilizador_curto_arco.glb",
+   "tamanho_m": [
+    0.028,
+    0.028,
+    0.124
+   ],
+   "triangulos": 1664,
+   "kb": 81.5
+  },
+  {
+   "id": "aljava_arco",
+   "nome": "Aljava de arco (4 flechas)",
+   "grupo": "acessorios",
+   "categoria": "aljava",
+   "encaixe": "aljava_arco",
+   "peso_kg": 0.25,
+   "raridade": "incomum",
+   "valor_troca": 18,
+   "leva": 4,
+   "municao": "flecha_caca",
+   "modificadores": {
+    "recarga_s": 0.8
+   },
+   "onde": [
+    "casa_de_campo",
+    "galeria",
+    "armazem"
+   ],
+   "descricao": "Aljava presa no lado direito do arco: capuz de espuma que cobre as pontas em cima e garra de borracha embaixo. 4 flechas à mão.",
+   "arquivo": "acessorios/aljava_arco.glb",
+   "tamanho_m": [
+    0.041,
+    0.744,
+    0.057
+   ],
+   "triangulos": 3316,
+   "kb": 159.6
   }
  ],
  "municao": [
@@ -14403,6 +14771,84 @@
      "descricao": "fecha a tampa"
     }
    }
+  },
+  {
+   "id": "flecha_caca",
+   "nome": "Flecha de caça",
+   "grupo": "municao",
+   "categoria": "municao",
+   "calibre": "flecha",
+   "peso_kg": 0.03,
+   "empilha": 24,
+   "multiplicador_dano": 1.0,
+   "raridade": "incomum",
+   "onde": [
+    "casa_de_campo",
+    "parque",
+    "armazem"
+   ],
+   "encaixe": "flecha",
+   "descricao": "Haste de fibra com ponta de 3 lâminas: corta fundo, mas a ponta pode quebrar ao recuperar. Pivô no entalhe (ponto que encosta na corda).",
+   "arquivo": "municao/flecha_caca.glb",
+   "tamanho_m": [
+    0.029,
+    0.027,
+    0.732
+   ],
+   "triangulos": 662,
+   "kb": 35.2
+  },
+  {
+   "id": "flecha_prego",
+   "nome": "Flecha improvisada (prego)",
+   "grupo": "municao",
+   "categoria": "municao",
+   "calibre": "flecha",
+   "peso_kg": 0.03,
+   "empilha": 24,
+   "multiplicador_dano": 0.7,
+   "raridade": "comum",
+   "onde": [
+    "casa_de_campo",
+    "parque",
+    "armazem"
+   ],
+   "encaixe": "flecha",
+   "descricao": "Prego amarrado na ponta com fita: fácil de fazer na bancada, erra mais e quebra fácil. Pivô no entalhe (ponto que encosta na corda).",
+   "arquivo": "municao/flecha_prego.glb",
+   "tamanho_m": [
+    0.029,
+    0.025,
+    0.758
+   ],
+   "triangulos": 1610,
+   "kb": 79.7
+  },
+  {
+   "id": "flecha_campo",
+   "nome": "Flecha de ponta de campo",
+   "grupo": "municao",
+   "categoria": "municao",
+   "calibre": "flecha",
+   "peso_kg": 0.03,
+   "empilha": 24,
+   "multiplicador_dano": 0.8,
+   "raridade": "comum",
+   "onde": [
+    "casa_de_campo",
+    "parque",
+    "armazem"
+   ],
+   "encaixe": "flecha",
+   "descricao": "Ponta de aço simples: entra menos, mas quase sempre dá para usar de novo. Pivô no entalhe (ponto que encosta na corda).",
+   "arquivo": "municao/flecha_campo.glb",
+   "tamanho_m": [
+    0.029,
+    0.025,
+    0.724
+   ],
+   "triangulos": 638,
+   "kb": 34.1
   }
  ],
  "efeitos": [

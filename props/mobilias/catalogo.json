@@ -3234,6 +3234,378 @@
    ],
    "triangulos": 448,
    "kb": 23.4
+  },
+  {
+   "id": "lampiao",
+   "nome": "Lampião a querosene",
+   "grupo": "mobilias",
+   "categoria": "abrigo",
+   "montagem": "floor",
+   "lote": 8,
+   "comodos": [
+    "abrigo",
+    "casas",
+    "fazenda",
+    "igreja"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "portatil": true,
+   "peso_kg": 1.2,
+   "luz_m": 6,
+   "usa": "combustivel",
+   "estacao": "luz da base (gasta 1 combustível a cada 2 dias)",
+   "arquivo": "mobilias/lampiao.glb",
+   "tamanho_m": [
+    0.187,
+    0.331,
+    0.15
+   ],
+   "triangulos": 1028,
+   "kb": 51.6
+  },
+  {
+   "id": "cordao_luzes",
+   "nome": "Cordão de luzes",
+   "grupo": "mobilias",
+   "categoria": "abrigo",
+   "montagem": "wall",
+   "lote": 8,
+   "altura_sugerida_m": 2.2,
+   "comodos": [
+    "abrigo",
+    "igreja",
+    "quartel",
+    "concha"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "usa": "energia",
+   "luz_m": 4,
+   "efeito": "moral +5 à noite; a luz atrai zumbis de longe",
+   "arquivo": "mobilias/cordao_luzes.glb",
+   "tamanho_m": [
+    3.006,
+    0.318,
+    0.096
+   ],
+   "triangulos": 2292,
+   "kb": 110.0
+  },
+  {
+   "id": "mapa_alfinetes",
+   "nome": "Mapa da cidade com alfinetes",
+   "grupo": "mobilias",
+   "categoria": "abrigo",
+   "montagem": "wall",
+   "lote": 8,
+   "altura_sugerida_m": 1.2,
+   "comodos": [
+    "abrigo",
+    "quartel",
+    "delegacia",
+    "correios"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "interacao": "abre o mapa do jogo (prédios saqueados ficam marcados)",
+   "arquivo": "mobilias/mapa_alfinetes.glb",
+   "tamanho_m": [
+    1.26,
+    0.91,
+    0.048
+   ],
+   "triangulos": 1548,
+   "kb": 202.6
+  },
+  {
+   "id": "quadro_tarefas",
+   "nome": "Quadro de tarefas da comunidade",
+   "grupo": "mobilias",
+   "categoria": "abrigo",
+   "montagem": "wall",
+   "lote": 8,
+   "altura_sugerida_m": 1.0,
+   "comodos": [
+    "abrigo",
+    "quartel",
+    "igreja"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "interacao": "abre a tela de tarefas dos sobreviventes",
+   "arquivo": "mobilias/quadro_tarefas.glb",
+   "tamanho_m": [
+    1.18,
+    0.85,
+    0.07
+   ],
+   "triangulos": 328,
+   "kb": 131.0
+  },
+  {
+   "id": "estoque_latas",
+   "nome": "Estoque de latas empilhadas",
+   "grupo": "mobilias",
+   "categoria": "abrigo",
+   "montagem": "floor",
+   "lote": 8,
+   "comodos": [
+    "abrigo",
+    "quartel",
+    "deposito"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "conteiner": true,
+   "slots": 8,
+   "saque": [
+    "comida"
+   ],
+   "mostra": "visual cresce com a comida guardada na base",
+   "arquivo": "mobilias/estoque_latas.glb",
+   "tamanho_m": [
+    0.389,
+    0.44,
+    0.155
+   ],
+   "triangulos": 7840,
+   "kb": 353.0
+  },
+  {
+   "id": "galoes_fila",
+   "nome": "Galões de água enfileirados",
+   "grupo": "mobilias",
+   "categoria": "abrigo",
+   "montagem": "floor",
+   "lote": 8,
+   "comodos": [
+    "abrigo",
+    "quartel"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "conteiner": true,
+   "slots": 4,
+   "saque": [
+    "agua"
+   ],
+   "mostra": "quantos estão cheios = água guardada na base",
+   "arquivo": "mobilias/galoes_fila.glb",
+   "tamanho_m": [
+    1.24,
+    0.348,
+    0.36
+   ],
+   "triangulos": 2124,
+   "kb": 160.1
+  },
+  {
+   "id": "canteiro_horta",
+   "nome": "Canteiro de horta",
+   "grupo": "mobilias",
+   "categoria": "abrigo",
+   "montagem": "floor",
+   "lote": 8,
+   "comodos": [
+    "quintal",
+    "abrigo",
+    "fazenda",
+    "igreja"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "modulo_m": 2.0,
+   "estacao": "horta (planta 1 saco de sementes; colhe 6 comida em 5 dias)",
+   "constroi": {
+    "tabua": 4,
+    "terra": 2
+   },
+   "estagios": [
+    "vazio",
+    "brotos",
+    "pronto"
+   ],
+   "arquivo": "mobilias/canteiro_horta.glb",
+   "tamanho_m": [
+    1.9,
+    0.75,
+    0.9
+   ],
+   "triangulos": 9820,
+   "kb": 569.3
+  },
+  {
+   "id": "vaso_tomate",
+   "nome": "Balde com pé de tomate",
+   "grupo": "mobilias",
+   "categoria": "abrigo",
+   "montagem": "floor",
+   "lote": 8,
+   "comodos": [
+    "abrigo",
+    "quintal",
+    "casas",
+    "igreja"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "portatil": true,
+   "peso_kg": 10.0,
+   "estacao": "horta pequena (2 comida a cada 4 dias)",
+   "arquivo": "mobilias/vaso_tomate.glb",
+   "tamanho_m": [
+    0.345,
+    1.0,
+    0.361
+   ],
+   "triangulos": 3948,
+   "kb": 269.4
+  },
+  {
+   "id": "coletor_chuva",
+   "nome": "Coletor de água da chuva",
+   "grupo": "mobilias",
+   "categoria": "abrigo",
+   "montagem": "floor",
+   "lote": 8,
+   "comodos": [
+    "abrigo",
+    "quintal",
+    "fazenda",
+    "quartel"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "estacao": "coletor (rende 3 água por dia de chuva; precisa ferver)",
+   "constroi": {
+    "tambor_200l": 1,
+    "lona": 1,
+    "tabua": 3
+   },
+   "arquivo": "mobilias/coletor_chuva.glb",
+   "tamanho_m": [
+    1.04,
+    1.55,
+    1.04
+   ],
+   "triangulos": 1540,
+   "kb": 165.9
+  },
+  {
+   "id": "muro_sucata",
+   "nome": "Muro de sucata",
+   "grupo": "mobilias",
+   "categoria": "abrigo",
+   "montagem": "floor",
+   "lote": 8,
+   "comodos": [
+    "abrigo",
+    "quintal",
+    "rua"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "modulo_m": 2.0,
+   "constroi": {
+    "chapa_metal": 3,
+    "tabua": 2,
+    "caixa_pregos": 1
+   },
+   "vida": 400,
+   "estacao": "defesa (zumbis batem antes de pular)",
+   "arquivo": "mobilias/muro_sucata.glb",
+   "tamanho_m": [
+    2.053,
+    2.119,
+    0.1
+   ],
+   "triangulos": 4668,
+   "kb": 383.3
+  },
+  {
+   "id": "portao_sucata",
+   "nome": "Portão de sucata",
+   "grupo": "mobilias",
+   "categoria": "abrigo",
+   "montagem": "floor",
+   "lote": 8,
+   "comodos": [
+    "abrigo",
+    "quintal",
+    "rua"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "modulo_m": 2.0,
+   "constroi": {
+    "chapa_metal": 2,
+    "tabua": 4,
+    "caixa_pregos": 1
+   },
+   "vida": 300,
+   "arquivo": "mobilias/portao_sucata.glb",
+   "tamanho_m": [
+    2.04,
+    2.2,
+    0.26
+   ],
+   "triangulos": 2084,
+   "kb": 282.8,
+   "partes": [
+    {
+     "no": "folha_esq",
+     "origem": [
+      -0.9,
+      0,
+      0.07
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -95
+    },
+    {
+     "no": "folha_dir",
+     "origem": [
+      0.9,
+      0,
+      0.07
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 95
+    }
+   ]
+  },
+  {
+   "id": "torre_vigia",
+   "nome": "Torre de vigia",
+   "grupo": "mobilias",
+   "categoria": "abrigo",
+   "montagem": "floor",
+   "lote": 8,
+   "comodos": [
+    "abrigo",
+    "quintal",
+    "fazenda"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "constroi": {
+    "tabua": 16,
+    "caixa_pregos": 2,
+    "lona": 1
+   },
+   "estacao": "vigia (avisa hordas mais cedo; 1 sobrevivente de vigia)",
+   "subir": true,
+   "arquivo": "mobilias/torre_vigia.glb",
+   "tamanho_m": [
+    2.124,
+    4.954,
+    2.337
+   ],
+   "triangulos": 2802,
+   "kb": 386.5
   }
  ]
 }

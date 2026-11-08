@@ -97,6 +97,18 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Fruteira com frutas podres (`fruteira_podre`) | 7 | Vida de antes | 0,44 × 0,29 × 0,34 | - | - | - | 2956 |
 | Desenho de criança na parede (`desenho_crianca`) | 7 | Vida de antes | 0,30 × 0,23 × 0,00 | - | - | - | 24 |
 | Pilha de livros no chão (`pilha_livros`) | 7 | Vida de antes | 0,51 × 0,26 × 0,39 | 2 espaços: livros | - | - | 448 |
+| Lampião a querosene (`lampiao`) | 8 | Abrigo | 0,19 × 0,33 × 0,15 | - | - | - | 1028 |
+| Cordão de luzes (`cordao_luzes`) | 8 | Abrigo | 3,01 × 0,32 × 0,10 | - | - | - | 2292 |
+| Mapa da cidade com alfinetes (`mapa_alfinetes`) | 8 | Abrigo | 1,26 × 0,91 × 0,05 | - | - | - | 1548 |
+| Quadro de tarefas da comunidade (`quadro_tarefas`) | 8 | Abrigo | 1,18 × 0,85 × 0,07 | - | - | - | 328 |
+| Estoque de latas empilhadas (`estoque_latas`) | 8 | Abrigo | 0,39 × 0,44 × 0,15 | 8 espaços: comida | - | - | 7840 |
+| Galões de água enfileirados (`galoes_fila`) | 8 | Abrigo | 1,24 × 0,35 × 0,36 | 4 espaços: agua | - | - | 2124 |
+| Canteiro de horta (`canteiro_horta`) | 8 | Abrigo | 1,90 × 0,75 × 0,90 | - | - | - | 9820 |
+| Balde com pé de tomate (`vaso_tomate`) | 8 | Abrigo | 0,34 × 1,00 × 0,36 | - | - | - | 3948 |
+| Coletor de água da chuva (`coletor_chuva`) | 8 | Abrigo | 1,04 × 1,55 × 1,04 | - | - | - | 1540 |
+| Muro de sucata (`muro_sucata`) | 8 | Abrigo | 2,05 × 2,12 × 0,10 | - | - | - | 4668 |
+| Portão de sucata (`portao_sucata`) | 8 | Abrigo | 2,04 × 2,20 × 0,26 | - | folha_esq, folha_dir | - | 2084 |
+| Torre de vigia (`torre_vigia`) | 8 | Abrigo | 2,12 × 4,95 × 2,34 | - | - | - | 2802 |
 
 ## Loot
 

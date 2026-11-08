@@ -1,0 +1,921 @@
+{
+ "escala": "1 unidade = 1 m, Y para cima, frente do equipamento para +Z. Capacetes em pé apoiados na borda; coletes deitados de costas (frente para cima, gola para -Z). Pivô no centro da base.",
+ "campos_jogo": {
+  "equipa": "espaço do inventário onde veste: capacete, colete ou colete_tatico",
+  "celulas": "[largura, altura] do item na grade do inventário",
+  "grade": "[largura, altura] da grade que o colete tático abre quando vestido",
+  "bolsos": "como a grade se divide nas bolsas do modelo (só informação; a soma bate com a grade)",
+  "protecao": "pontos de proteção contra mordida e golpe na parte do corpo (protege)",
+  "balistico": "até que tiro segura: nenhum, pistola ou fuzil",
+  "durabilidade": "golpes/mordidas até precisar de reparo na bancada de costura",
+  "penalidade": "multiplicadores enquanto vestido (cansaco_correr, ruido_passos, audicao, visao)",
+  "vestir": "como pôr no personagem: girar_graus e o ponto do corpo (cabeca_m ou peito_m) em metros no GLB",
+  "partes": "nós móveis (viseiras): tipo gira em torno de eixo a partir de origem_m, até abre_graus",
+  "onde": "prédios onde aparece no saque",
+  "raridade": "comum, incomum, raro",
+  "valor_troca": "preço na troca entre comunidades"
+ },
+ "itens": [
+  {
+   "id": "capacete_militar",
+   "nome": "Capacete balístico de corte alto",
+   "grupo": "equipamento",
+   "categoria": "capacete",
+   "equipa": "capacete",
+   "recurso": "equipamento",
+   "empilha": 1,
+   "valor": 4,
+   "peso_kg": 1.3,
+   "celulas": [
+    2,
+    2
+   ],
+   "raridade": "raro",
+   "fase": 2,
+   "onde": [
+    "delegacia",
+    "armazem",
+    "estacao",
+    "quartel"
+   ],
+   "protecao": 55,
+   "protege": [
+    "cabeca"
+   ],
+   "durabilidade": 240,
+   "balistico": "pistola",
+   "penalidade": {},
+   "efeito": "+55 de proteção na cabeça (segura mordida e tiro de pistola); orelhas livres: não atrapalha a audição",
+   "trilhos": [
+    "lanterna_capacete (trilho lateral)",
+    "oculos_visao_noturna (frente)"
+   ],
+   "valor_troca": 120,
+   "arquivo": "equipamento/capacete_militar.glb",
+   "tamanho_m": [
+    0.216,
+    0.228,
+    0.308
+   ],
+   "triangulos": 35504,
+   "kb": 3719.7,
+   "vestir": {
+    "girar_graus": [
+     0,
+     0,
+     0
+    ],
+    "cabeca_m": [
+     0.0,
+     0.1169,
+     0.0139
+    ],
+    "nota": "encaixe no osso da cabeca: ponha este ponto no centro da cabeca, sem girar"
+   }
+  },
+  {
+   "id": "capacete_obra",
+   "nome": "Capacete de obra",
+   "grupo": "equipamento",
+   "categoria": "capacete",
+   "equipa": "capacete",
+   "recurso": "equipamento",
+   "empilha": 1,
+   "valor": 1,
+   "peso_kg": 0.38,
+   "celulas": [
+    2,
+    2
+   ],
+   "raridade": "comum",
+   "fase": 1,
+   "onde": [
+    "fabrica",
+    "serraria",
+    "armazem",
+    "garagem",
+    "ferrovelho",
+    "estacao"
+   ],
+   "protecao": 22,
+   "protege": [
+    "cabeca"
+   ],
+   "durabilidade": 60,
+   "balistico": "nenhum",
+   "penalidade": {},
+   "valor_troca": 12,
+   "efeito": "+22 de proteção na cabeça contra golpe e mordida; leve e não atrapalha nada; racha depois de alguns golpes fortes",
+   "arquivo": "equipamento/capacete_obra.glb",
+   "tamanho_m": [
+    0.228,
+    0.15,
+    0.333
+   ],
+   "triangulos": 26680,
+   "kb": 2228.9,
+   "vestir": {
+    "girar_graus": [
+     0,
+     0,
+     0
+    ],
+    "cabeca_m": [
+     0.0,
+     -0.018,
+     -0.02
+    ],
+    "nota": "encaixe no osso da cabeca: ponha este ponto no centro da cabeca, sem girar"
+   }
+  },
+  {
+   "id": "capacete_ciclismo",
+   "nome": "Capacete de ciclismo",
+   "grupo": "equipamento",
+   "categoria": "capacete",
+   "equipa": "capacete",
+   "recurso": "equipamento",
+   "empilha": 1,
+   "valor": 1,
+   "peso_kg": 0.28,
+   "celulas": [
+    2,
+    2
+   ],
+   "raridade": "comum",
+   "fase": 1,
+   "onde": [
+    "casas",
+    "garagem",
+    "galeria",
+    "parque",
+    "pista_skate",
+    "escolinha"
+   ],
+   "protecao": 12,
+   "protege": [
+    "cabeca"
+   ],
+   "durabilidade": 30,
+   "balistico": "nenhum",
+   "penalidade": {},
+   "valor_troca": 6,
+   "efeito": "+12 de proteção na cabeça; muito leve e ventilado; a espuma amassa e perde a proteção depressa",
+   "arquivo": "equipamento/capacete_ciclismo.glb",
+   "tamanho_m": [
+    0.203,
+    0.213,
+    0.31
+   ],
+   "triangulos": 45249,
+   "kb": 3791.8,
+   "vestir": {
+    "girar_graus": [
+     0,
+     0,
+     0
+    ],
+    "cabeca_m": [
+     0.0,
+     0.071,
+     -0.0133
+    ],
+    "nota": "encaixe no osso da cabeca: ponha este ponto no centro da cabeca, sem girar"
+   }
+  },
+  {
+   "id": "capacete_moto",
+   "nome": "Capacete de moto fechado",
+   "grupo": "equipamento",
+   "categoria": "capacete",
+   "equipa": "capacete",
+   "recurso": "equipamento",
+   "empilha": 1,
+   "valor": 2,
+   "peso_kg": 1.45,
+   "celulas": [
+    2,
+    2
+   ],
+   "raridade": "incomum",
+   "fase": 1,
+   "onde": [
+    "garagem",
+    "posto",
+    "casas",
+    "concessionaria",
+    "estacionamento",
+    "rua"
+   ],
+   "protecao": 40,
+   "protege": [
+    "cabeca",
+    "rosto"
+   ],
+   "durabilidade": 120,
+   "balistico": "nenhum",
+   "penalidade": {
+    "audicao": 0.75,
+    "visao": 0.85
+   },
+   "valor_troca": 30,
+   "efeito": "+40 de proteção na cabeça e no rosto (mordida não pega com a viseira baixada); abafa a audição em 25 % e fecha a visão lateral",
+   "arquivo": "equipamento/capacete_moto.glb",
+   "tamanho_m": [
+    0.277,
+    0.268,
+    0.344
+   ],
+   "triangulos": 47994,
+   "kb": 4056.7,
+   "vestir": {
+    "girar_graus": [
+     0,
+     0,
+     0
+    ],
+    "cabeca_m": [
+     0.0,
+     0.1052,
+     0.0097
+    ],
+    "nota": "encaixe no osso da cabeca: ponha este ponto no centro da cabeca, sem girar"
+   },
+   "partes": [
+    {
+     "no": "viseira",
+     "tipo": "gira",
+     "eixo": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "abre_graus": 62,
+     "nota": "viseira fumê: baixada protege o rosto; levante para enxergar melhor à noite",
+     "origem_m": [
+      0.0,
+      0.1197,
+      0.0097
+     ]
+    }
+   ]
+  },
+  {
+   "id": "capacete_choque",
+   "nome": "Capacete de choque com viseira",
+   "grupo": "equipamento",
+   "categoria": "capacete",
+   "equipa": "capacete",
+   "recurso": "equipamento",
+   "empilha": 1,
+   "valor": 3,
+   "peso_kg": 1.6,
+   "celulas": [
+    2,
+    2
+   ],
+   "raridade": "incomum",
+   "fase": 2,
+   "onde": [
+    "delegacia",
+    "estacao",
+    "rodoviaria",
+    "banco"
+   ],
+   "protecao": 45,
+   "protege": [
+    "cabeca",
+    "rosto",
+    "pescoco"
+   ],
+   "durabilidade": 160,
+   "balistico": "nenhum",
+   "penalidade": {
+    "audicao": 0.85,
+    "visao": 0.9
+   },
+   "valor_troca": 55,
+   "efeito": "+45 de proteção na cabeça, rosto e nuca (viseira e protetor de nuca seguram mordida); abafa um pouco a audição",
+   "arquivo": "equipamento/capacete_choque.glb",
+   "tamanho_m": [
+    0.333,
+    0.359,
+    0.377
+   ],
+   "triangulos": 39104,
+   "kb": 3907.5,
+   "vestir": {
+    "girar_graus": [
+     0,
+     0,
+     0
+    ],
+    "cabeca_m": [
+     0.0,
+     0.2292,
+     -0.0169
+    ],
+    "nota": "encaixe no osso da cabeca: ponha este ponto no centro da cabeca, sem girar"
+   },
+   "partes": [
+    {
+     "no": "viseira",
+     "tipo": "gira",
+     "eixo": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "abre_graus": 75,
+     "nota": "viseira de policarbonato",
+     "origem_m": [
+      0.0,
+      0.2392,
+      -0.0169
+     ]
+    }
+   ]
+  },
+  {
+   "id": "colete_portaplacas",
+   "nome": "Colete porta-placas",
+   "grupo": "equipamento",
+   "categoria": "colete",
+   "equipa": "colete",
+   "recurso": "equipamento",
+   "empilha": 1,
+   "valor": 4,
+   "peso_kg": 6.8,
+   "celulas": [
+    3,
+    3
+   ],
+   "raridade": "raro",
+   "fase": 2,
+   "onde": [
+    "delegacia",
+    "armazem",
+    "estacao"
+   ],
+   "protecao": 60,
+   "protege": [
+    "tronco"
+   ],
+   "durabilidade": 300,
+   "balistico": "fuzil",
+   "penalidade": {
+    "cansaco_correr": 1.2
+   },
+   "valor_troca": 150,
+   "efeito": "+60 de proteção no tronco (placas seguram mordida e tiro de fuzil); pesado: correr cansa 20 % mais rápido",
+   "arquivo": "equipamento/colete_portaplacas.glb",
+   "tamanho_m": [
+    0.355,
+    0.348,
+    0.48
+   ],
+   "triangulos": 17232,
+   "kb": 1721.2,
+   "vestir": {
+    "girar_graus": [
+     90,
+     0,
+     0
+    ],
+    "peito_m": [
+     0.0,
+     0.1876,
+     -0.0234
+    ],
+    "nota": "para vestir: gire girar_graus (XYZ) e ponha peito_m no centro do peito do personagem"
+   }
+  },
+  {
+   "id": "colete_policial",
+   "nome": "Colete à prova de balas policial",
+   "grupo": "equipamento",
+   "categoria": "colete",
+   "equipa": "colete",
+   "recurso": "equipamento",
+   "empilha": 1,
+   "valor": 3,
+   "peso_kg": 2.9,
+   "celulas": [
+    3,
+    3
+   ],
+   "raridade": "incomum",
+   "fase": 1,
+   "onde": [
+    "delegacia",
+    "banco",
+    "estacao",
+    "rodoviaria",
+    "correios"
+   ],
+   "protecao": 38,
+   "protege": [
+    "tronco"
+   ],
+   "durabilidade": 180,
+   "balistico": "pistola",
+   "penalidade": {},
+   "valor_troca": 70,
+   "efeito": "+38 de proteção no tronco (mordida não atravessa; segura tiro de pistola); leve, dá para correr sem cansar mais",
+   "arquivo": "equipamento/colete_policial.glb",
+   "tamanho_m": [
+    0.369,
+    0.289,
+    0.474
+   ],
+   "triangulos": 21908,
+   "kb": 2244.1,
+   "vestir": {
+    "girar_graus": [
+     90,
+     0,
+     0
+    ],
+    "peito_m": [
+     -0.0,
+     0.1441,
+     -0.0366
+    ],
+    "nota": "para vestir: gire girar_graus (XYZ) e ponha peito_m no centro do peito do personagem"
+   }
+  },
+  {
+   "id": "colete_militar",
+   "nome": "Colete militar de cobertura total",
+   "grupo": "equipamento",
+   "categoria": "colete",
+   "equipa": "colete",
+   "recurso": "equipamento",
+   "empilha": 1,
+   "valor": 5,
+   "peso_kg": 11.5,
+   "celulas": [
+    3,
+    4
+   ],
+   "raridade": "raro",
+   "fase": 3,
+   "onde": [
+    "armazem",
+    "estacao",
+    "delegacia"
+   ],
+   "protecao": 80,
+   "protege": [
+    "tronco",
+    "pescoco",
+    "ombros",
+    "virilha"
+   ],
+   "durabilidade": 420,
+   "balistico": "fuzil",
+   "penalidade": {
+    "cansaco_correr": 1.45,
+    "ruido_passos": 1.2
+   },
+   "valor_troca": 240,
+   "efeito": "+80 de proteção no tronco, pescoço, ombros e virilha (fuzil não atravessa as placas); muito pesado: correr cansa 45 % mais e os passos fazem mais barulho",
+   "arquivo": "equipamento/colete_militar.glb",
+   "tamanho_m": [
+    0.542,
+    0.372,
+    0.692
+   ],
+   "triangulos": 29054,
+   "kb": 2893.9,
+   "vestir": {
+    "girar_graus": [
+     90,
+     0,
+     0
+    ],
+    "peito_m": [
+     0.0,
+     0.2025,
+     -0.104
+    ],
+    "nota": "para vestir: gire girar_graus (XYZ) e ponha peito_m no centro do peito do personagem"
+   }
+  },
+  {
+   "id": "peitoral_carregadores",
+   "nome": "Peitoral de carregadores",
+   "grupo": "equipamento",
+   "categoria": "colete_tatico",
+   "equipa": "colete_tatico",
+   "recurso": "equipamento",
+   "empilha": 1,
+   "valor": 2,
+   "peso_kg": 0.9,
+   "celulas": [
+    3,
+    2
+   ],
+   "raridade": "incomum",
+   "fase": 2,
+   "onde": [
+    "delegacia",
+    "armazem",
+    "casas",
+    "estacao"
+   ],
+   "grade": [
+    4,
+    2
+   ],
+   "bolsos": [
+    {
+     "nome": "porta-carregador 1",
+     "celulas": [
+      1,
+      2
+     ]
+    },
+    {
+     "nome": "porta-carregador 2",
+     "celulas": [
+      1,
+      2
+     ]
+    },
+    {
+     "nome": "porta-carregador 3",
+     "celulas": [
+      1,
+      2
+     ]
+    },
+    {
+     "nome": "porta-carregador 4",
+     "celulas": [
+      1,
+      2
+     ]
+    }
+   ],
+   "protecao": 0,
+   "penalidade": {},
+   "valor_troca": 35,
+   "efeito": "grade de 4 × 2 no peito (quatro porta-carregadores de 1 × 2); recarregar daqui é mais rápido que da mochila",
+   "arquivo": "equipamento/peitoral_carregadores.glb",
+   "tamanho_m": [
+    0.414,
+    0.364,
+    0.456
+   ],
+   "triangulos": 13536,
+   "kb": 1323.7,
+   "vestir": {
+    "girar_graus": [
+     90,
+     0,
+     0
+    ],
+    "peito_m": [
+     0.0015,
+     0.1717,
+     -0.0201
+    ],
+    "nota": "por cima do colete: gire girar_graus e ponha peito_m no centro do peito (já está afastado para caber o colete)"
+   }
+  },
+  {
+   "id": "colete_pesca",
+   "nome": "Colete de pesca multibolsos",
+   "grupo": "equipamento",
+   "categoria": "colete_tatico",
+   "equipa": "colete_tatico",
+   "recurso": "equipamento",
+   "empilha": 1,
+   "valor": 1,
+   "peso_kg": 0.6,
+   "celulas": [
+    3,
+    2
+   ],
+   "raridade": "comum",
+   "fase": 1,
+   "onde": [
+    "casas",
+    "casa_de_campo",
+    "casa_barcos",
+    "garagem",
+    "galeria",
+    "fazenda"
+   ],
+   "grade": [
+    5,
+    2
+   ],
+   "bolsos": [
+    {
+     "nome": "bolso 1",
+     "celulas": [
+      1,
+      1
+     ]
+    },
+    {
+     "nome": "bolso 2",
+     "celulas": [
+      1,
+      1
+     ]
+    },
+    {
+     "nome": "bolso 3",
+     "celulas": [
+      1,
+      1
+     ]
+    },
+    {
+     "nome": "bolso 4",
+     "celulas": [
+      1,
+      1
+     ]
+    },
+    {
+     "nome": "bolso 5",
+     "celulas": [
+      1,
+      1
+     ]
+    },
+    {
+     "nome": "bolso 6",
+     "celulas": [
+      1,
+      1
+     ]
+    },
+    {
+     "nome": "bolso 7",
+     "celulas": [
+      1,
+      1
+     ]
+    },
+    {
+     "nome": "bolso 8",
+     "celulas": [
+      1,
+      1
+     ]
+    },
+    {
+     "nome": "bolso 9",
+     "celulas": [
+      1,
+      1
+     ]
+    },
+    {
+     "nome": "bolso 10",
+     "celulas": [
+      1,
+      1
+     ]
+    }
+   ],
+   "protecao": 3,
+   "penalidade": {},
+   "valor_troca": 10,
+   "efeito": "grade de 5 × 2 de bolsinhos de 1 × 1 (bom para munição, remédio e ferramentas pequenas); quase não protege",
+   "arquivo": "equipamento/colete_pesca.glb",
+   "tamanho_m": [
+    0.415,
+    0.301,
+    0.507
+   ],
+   "triangulos": 30304,
+   "kb": 3085.2,
+   "vestir": {
+    "girar_graus": [
+     90,
+     0,
+     0
+    ],
+    "peito_m": [
+     0.0,
+     0.135,
+     -0.0491
+    ],
+    "nota": "vestido sem colete de proteção por baixo: gire girar_graus e ponha peito_m no centro do peito"
+   }
+  },
+  {
+   "id": "colete_carga",
+   "nome": "Colete de carga de tela",
+   "grupo": "equipamento",
+   "categoria": "colete_tatico",
+   "equipa": "colete_tatico",
+   "recurso": "equipamento",
+   "empilha": 1,
+   "valor": 2,
+   "peso_kg": 1.4,
+   "celulas": [
+    3,
+    3
+   ],
+   "raridade": "incomum",
+   "fase": 2,
+   "onde": [
+    "delegacia",
+    "armazem",
+    "estacao",
+    "quartel"
+   ],
+   "grade": [
+    4,
+    3
+   ],
+   "bolsos": [
+    {
+     "nome": "porta-carregador duplo esquerdo",
+     "celulas": [
+      2,
+      2
+     ]
+    },
+    {
+     "nome": "porta-carregador duplo direito",
+     "celulas": [
+      2,
+      2
+     ]
+    },
+    {
+     "nome": "rádio",
+     "celulas": [
+      1,
+      1
+     ]
+    },
+    {
+     "nome": "lanterna",
+     "celulas": [
+      1,
+      1
+     ]
+    },
+    {
+     "nome": "utilitária esquerda",
+     "celulas": [
+      1,
+      1
+     ]
+    },
+    {
+     "nome": "utilitária direita",
+     "celulas": [
+      1,
+      1
+     ]
+    }
+   ],
+   "protecao": 4,
+   "penalidade": {},
+   "valor_troca": 45,
+   "efeito": "grade de 4 × 3: dois porta-carregadores duplos (2 × 2), rádio, lanterna e duas utilitárias de 1 × 1",
+   "arquivo": "equipamento/colete_carga.glb",
+   "tamanho_m": [
+    0.433,
+    0.4,
+    0.534
+   ],
+   "triangulos": 31272,
+   "kb": 3087.7,
+   "vestir": {
+    "girar_graus": [
+     90,
+     0,
+     0
+    ],
+    "peito_m": [
+     -0.0007,
+     0.2051,
+     -0.0366
+    ],
+    "nota": "por cima do colete: gire girar_graus e ponha peito_m no centro do peito"
+   }
+  },
+  {
+   "id": "colete_assalto",
+   "nome": "Colete de assalto com bolsas",
+   "grupo": "equipamento",
+   "categoria": "colete_tatico",
+   "equipa": "colete_tatico",
+   "recurso": "equipamento",
+   "empilha": 1,
+   "valor": 3,
+   "peso_kg": 2.6,
+   "celulas": [
+    3,
+    3
+   ],
+   "raridade": "raro",
+   "fase": 3,
+   "onde": [
+    "armazem",
+    "delegacia",
+    "estacao"
+   ],
+   "grade": [
+    5,
+    3
+   ],
+   "bolsos": [
+    {
+     "nome": "carregadores (3 duplos)",
+     "celulas": [
+      3,
+      2
+     ]
+    },
+    {
+     "nome": "granada esquerda",
+     "celulas": [
+      1,
+      1
+     ]
+    },
+    {
+     "nome": "granada direita",
+     "celulas": [
+      1,
+      1
+     ]
+    },
+    {
+     "nome": "primeiros socorros",
+     "celulas": [
+      1,
+      2
+     ]
+    },
+    {
+     "nome": "administrativa (mapa e bloco)",
+     "celulas": [
+      2,
+      1
+     ]
+    },
+    {
+     "nome": "lanterna e faca",
+     "celulas": [
+      1,
+      1
+     ]
+    },
+    {
+     "nome": "bolsa de despejo",
+     "celulas": [
+      1,
+      1
+     ]
+    },
+    {
+     "nome": "hidratação (costas)",
+     "celulas": [
+      1,
+      1
+     ]
+    }
+   ],
+   "protecao": 8,
+   "penalidade": {
+    "cansaco_correr": 1.05
+   },
+   "valor_troca": 80,
+   "efeito": "grade de 5 × 3: três porta-carregadores duplos, duas de granada, primeiros socorros, administrativa, lanterna, despejo e bolsa de água nas costas",
+   "arquivo": "equipamento/colete_assalto.glb",
+   "tamanho_m": [
+    0.487,
+    0.421,
+    0.567
+   ],
+   "triangulos": 37096,
+   "kb": 3707.3,
+   "vestir": {
+    "girar_graus": [
+     90,
+     0,
+     0
+    ],
+    "peito_m": [
+     0.009,
+     0.2121,
+     -0.0199
+    ],
+    "nota": "por cima do colete: gire girar_graus e ponha peito_m no centro do peito"
+   }
+  }
+ ]
+}

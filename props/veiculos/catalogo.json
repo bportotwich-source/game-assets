@@ -1,0 +1,2457 @@
+{
+ "escala": "1 unidade = 1 m, Y para cima, frente do carro para +Z, lado esquerdo (motorista) em +X; pivô no chão, no meio dos eixos",
+ "design": "docs/veiculos.md",
+ "partes": "cada parte é um nó do GLB. tipo porta/tampa: gira abre_graus (com sinal) em torno do eixo local, a origem é a dobradiça. tipo roda: origem no centro do cubo (VehicleWheel3D). tipo peca: origem no ponto de fixação. peca = id do item de loot que a parte vira ao ser desmontada (null = não sai).",
+ "campos_jogo": {
+  "obrigatoria": "o carro não anda sem ela",
+  "ferramentas": "itens necessários para tirar e pôr",
+  "tempo_s": "[tirar, pôr] em segundos",
+  "depende_de": "partes que têm de estar abertas ou fora antes",
+  "padrao": "peças do mesmo padrão servem em outros modelos",
+  "carga_maos": "carregada com as duas mãos, não vai na mochila",
+  "celulas": "tamanho na grade [largura, altura]"
+ },
+ "modelos": [
+  {
+   "id": "sedan_rumo",
+   "nome": "Sedã Rumo",
+   "classe": "compacto",
+   "portas": 4,
+   "lugares": 5,
+   "descricao": "Sedã compacto de 4 portas dos anos 80/90, desenho próprio e sem marca. Todas as peças da tabela 3.1 do design são nós separados; portas, capô, porta-malas, porta-luvas, assoalho do porta-malas, portinhola do tanque e quebra-sóis abrem.",
+   "fisica": {
+    "massa_kg": 1080,
+    "centro_massa_m": [
+     0,
+     0.45,
+     0.05
+    ],
+    "tracao": "dianteira",
+    "forca_motor_n": 3200,
+    "freio": 40,
+    "direcao_graus": [
+     32,
+     8
+    ],
+    "vel_max_kmh": 140,
+    "roda_raio_m": 0.305,
+    "roda_largura_m": 0.185,
+    "suspensao": {
+     "curso_m": 0.15,
+     "rigidez": 40,
+     "compressao": 0.85,
+     "retorno": 0.9
+    },
+    "atrito_pneu": {
+     "asfalto": 2.6,
+     "terra": 1.8,
+     "grama": 1.4,
+     "lama": 0.9
+    }
+   },
+   "combustivel": {
+    "tanque_l": 45,
+    "consumo_l_100km": 8,
+    "marcha_lenta_l_h": 0.8,
+    "bocal": "tampa_combustivel"
+   },
+   "bateria": {
+    "capacidade_ah": 45
+   },
+   "cor_padrao": [
+    0.2195,
+    0.0066,
+    0.0037
+   ],
+   "cores_sorteio": [
+    [
+     0.2195,
+     0.0066,
+     0.0037
+    ],
+    [
+     0.017,
+     0.0446,
+     0.122
+    ],
+    [
+     0.6187,
+     0.586,
+     0.4878
+    ],
+    [
+     0.021,
+     0.0824,
+     0.0356
+    ],
+    [
+     0.5605,
+     0.5605,
+     0.5732
+    ],
+    [
+     0.0119,
+     0.0119,
+     0.0135
+    ],
+    [
+     0.7083,
+     0.6388,
+     0.4423
+    ],
+    [
+     0.1905,
+     0.2508,
+     0.3392
+    ]
+   ],
+   "arquivo": "sedan_rumo.glb",
+   "tamanho_m": [
+    2.077,
+    1.547,
+    4.505
+   ],
+   "triangulos": 224488,
+   "kb": 11384.1,
+   "partes": [
+    {
+     "no": "capo",
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -68,
+     "peca": "capo",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      30,
+      40
+     ],
+     "depende_de": [
+      "capo:aberto"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.0,
+      0.9075,
+      0.7
+     ],
+     "triangulos": 3334
+    },
+    {
+     "no": "tampa_porta_malas",
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": 72,
+     "peca": "tampa_porta_malas",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      30,
+      40
+     ],
+     "depende_de": [
+      "tampa_porta_malas:aberta"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.0,
+      0.9696,
+      -1.75
+     ],
+     "triangulos": 2162
+    },
+    {
+     "no": "porta_de",
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -66,
+     "peca": "porta_dianteira_e",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      75
+     ],
+     "depende_de": [],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.8,
+      0.6,
+      0.605
+     ],
+     "triangulos": 9796
+    },
+    {
+     "no": "porta_dd",
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 66,
+     "peca": "porta_dianteira_d",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      75
+     ],
+     "depende_de": [],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      -0.8,
+      0.6,
+      0.605
+     ],
+     "triangulos": 9766
+    },
+    {
+     "no": "porta_te",
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -66,
+     "peca": "porta_traseira_e",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      75
+     ],
+     "depende_de": [],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.8,
+      0.6,
+      -0.5
+     ],
+     "triangulos": 6576
+    },
+    {
+     "no": "porta_td",
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 66,
+     "peca": "porta_traseira_d",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      75
+     ],
+     "depende_de": [],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      -0.8,
+      0.6,
+      -0.5
+     ],
+     "triangulos": 6490
+    },
+    {
+     "no": "paralama_e",
+     "tipo": "peca",
+     "peca": "paralama_e",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      70
+     ],
+     "depende_de": [
+      "farol:fora"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.8,
+      0.55,
+      1.27
+     ],
+     "triangulos": 5560
+    },
+    {
+     "no": "paralama_d",
+     "tipo": "peca",
+     "peca": "paralama_d",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      70
+     ],
+     "depende_de": [
+      "farol:fora"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      -0.8,
+      0.55,
+      1.27
+     ],
+     "triangulos": 5534
+    },
+    {
+     "no": "tampa_combustivel",
+     "tipo": "tampa",
+     "eixo": "y",
+     "abre_graus": -80,
+     "peca": null,
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.81,
+      0.8,
+      -1.77
+     ],
+     "triangulos": 254
+    },
+    {
+     "no": "para_brisa",
+     "tipo": "peca",
+     "peca": "para_brisa",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      90,
+      120
+     ],
+     "depende_de": [],
+     "quebra_ao_tirar": 0.3,
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.0,
+      1.0,
+      0.55
+     ],
+     "triangulos": 2552
+    },
+    {
+     "no": "vidro_traseiro",
+     "tipo": "peca",
+     "peca": "vidro_traseiro",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      90,
+      120
+     ],
+     "depende_de": [],
+     "quebra_ao_tirar": 0.3,
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.0,
+      1.0,
+      -1.62
+     ],
+     "triangulos": 1856
+    },
+    {
+     "no": "para_choque_d",
+     "tipo": "peca",
+     "peca": "para_choque_dianteiro",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      40,
+      50
+     ],
+     "depende_de": [],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.0,
+      0.315,
+      2.1
+     ],
+     "triangulos": 7864
+    },
+    {
+     "no": "para_choque_t",
+     "tipo": "peca",
+     "peca": "para_choque_traseiro",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      40,
+      50
+     ],
+     "depende_de": [],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.0,
+      0.315,
+      -2.24
+     ],
+     "triangulos": 7688
+    },
+    {
+     "no": "farol_e",
+     "tipo": "peca",
+     "peca": "farol",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      20,
+      25
+     ],
+     "depende_de": [
+      "capo:aberto"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.58,
+      0.61,
+      2.03
+     ],
+     "triangulos": 1408
+    },
+    {
+     "no": "farol_d",
+     "tipo": "peca",
+     "peca": "farol",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      20,
+      25
+     ],
+     "depende_de": [
+      "capo:aberto"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      -0.58,
+      0.61,
+      2.03
+     ],
+     "triangulos": 1408
+    },
+    {
+     "no": "lanterna_e",
+     "tipo": "peca",
+     "peca": "lanterna_traseira",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      15,
+      20
+     ],
+     "depende_de": [
+      "tampa_porta_malas:aberta"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.66,
+      0.73,
+      -2.19
+     ],
+     "triangulos": 504
+    },
+    {
+     "no": "lanterna_d",
+     "tipo": "peca",
+     "peca": "lanterna_traseira",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      15,
+      20
+     ],
+     "depende_de": [
+      "tampa_porta_malas:aberta"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      -0.66,
+      0.73,
+      -2.19
+     ],
+     "triangulos": 504
+    },
+    {
+     "no": "retrovisor_e",
+     "tipo": "peca",
+     "peca": "retrovisor",
+     "obrigatoria": false,
+     "ferramentas": [],
+     "tempo_s": [
+      5,
+      20
+     ],
+     "depende_de": [],
+     "pai": "porta_de",
+     "origem_m": [
+      0.7686,
+      0.955,
+      0.5
+     ],
+     "triangulos": 114
+    },
+    {
+     "no": "retrovisor_d",
+     "tipo": "peca",
+     "peca": "retrovisor",
+     "obrigatoria": false,
+     "ferramentas": [],
+     "tempo_s": [
+      5,
+      20
+     ],
+     "depende_de": [],
+     "pai": "porta_dd",
+     "origem_m": [
+      -0.7686,
+      0.955,
+      0.5
+     ],
+     "triangulos": 114
+    },
+    {
+     "no": "roda_de",
+     "tipo": "roda",
+     "peca": "roda_aro14",
+     "tracao": true,
+     "direcao": true,
+     "obrigatoria": true,
+     "ferramentas": [
+      "chave_de_roda",
+      "macaco_sanfona|macaco_jacare"
+     ],
+     "tempo_s": [
+      40,
+      50
+     ],
+     "depende_de": [
+      "carro:no_macaco"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.71,
+      0.305,
+      1.27
+     ],
+     "triangulos": 9344
+    },
+    {
+     "no": "roda_dd",
+     "tipo": "roda",
+     "peca": "roda_aro14",
+     "tracao": true,
+     "direcao": true,
+     "obrigatoria": true,
+     "ferramentas": [
+      "chave_de_roda",
+      "macaco_sanfona|macaco_jacare"
+     ],
+     "tempo_s": [
+      40,
+      50
+     ],
+     "depende_de": [
+      "carro:no_macaco"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      -0.71,
+      0.305,
+      1.27
+     ],
+     "triangulos": 9344
+    },
+    {
+     "no": "roda_te",
+     "tipo": "roda",
+     "peca": "roda_aro14",
+     "tracao": false,
+     "direcao": false,
+     "obrigatoria": true,
+     "ferramentas": [
+      "chave_de_roda",
+      "macaco_sanfona|macaco_jacare"
+     ],
+     "tempo_s": [
+      40,
+      50
+     ],
+     "depende_de": [
+      "carro:no_macaco"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.71,
+      0.305,
+      -1.28
+     ],
+     "triangulos": 9344
+    },
+    {
+     "no": "roda_td",
+     "tipo": "roda",
+     "peca": "roda_aro14",
+     "tracao": false,
+     "direcao": false,
+     "obrigatoria": true,
+     "ferramentas": [
+      "chave_de_roda",
+      "macaco_sanfona|macaco_jacare"
+     ],
+     "tempo_s": [
+      40,
+      50
+     ],
+     "depende_de": [
+      "carro:no_macaco"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      -0.71,
+      0.305,
+      -1.28
+     ],
+     "triangulos": 9344
+    },
+    {
+     "no": "estepe",
+     "tipo": "peca",
+     "peca": "roda_aro14",
+     "obrigatoria": false,
+     "ferramentas": [],
+     "tempo_s": [
+      5,
+      5
+     ],
+     "depende_de": [
+      "tampa_porta_malas:aberta",
+      "assoalho_porta_malas:aberto"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.0,
+      0.36,
+      -1.9
+     ],
+     "triangulos": 9344
+    },
+    {
+     "no": "motor",
+     "tipo": "peca",
+     "peca": "motor_1_6",
+     "obrigatoria": true,
+     "ferramentas": [
+      "jogo_de_chaves",
+      "talha"
+     ],
+     "tempo_s": [
+      240,
+      300
+     ],
+     "depende_de": [
+      "capo:aberto",
+      "radiador:fora",
+      "bateria:fora"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.0,
+      0.26,
+      1.3
+     ],
+     "triangulos": 6624
+    },
+    {
+     "no": "alternador",
+     "tipo": "peca",
+     "peca": "alternador",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      45,
+      60
+     ],
+     "depende_de": [
+      "capo:aberto"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      -0.22,
+      0.5,
+      1.46
+     ],
+     "triangulos": 532
+    },
+    {
+     "no": "radiador",
+     "tipo": "peca",
+     "peca": "radiador",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      75
+     ],
+     "depende_de": [
+      "capo:aberto"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.0,
+      0.37,
+      1.905
+     ],
+     "triangulos": 992
+    },
+    {
+     "no": "bateria",
+     "tipo": "peca",
+     "peca": "bateria_12v",
+     "obrigatoria": true,
+     "ferramentas": [
+      "jogo_de_chaves|chave_inglesa"
+     ],
+     "tempo_s": [
+      15,
+      20
+     ],
+     "depende_de": [
+      "capo:aberto"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.3,
+      0.565,
+      0.93
+     ],
+     "triangulos": 696
+    },
+    {
+     "no": "escapamento",
+     "tipo": "peca",
+     "peca": "escapamento",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves",
+      "macaco_sanfona|macaco_jacare"
+     ],
+     "tempo_s": [
+      60,
+      75
+     ],
+     "depende_de": [
+      "carro:no_macaco"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.0,
+      0.165,
+      -0.5
+     ],
+     "triangulos": 2092
+    },
+    {
+     "no": "tanque",
+     "tipo": "peca",
+     "peca": "tanque_45l",
+     "obrigatoria": true,
+     "ferramentas": [
+      "jogo_de_chaves",
+      "macaco_sanfona|macaco_jacare"
+     ],
+     "tempo_s": [
+      90,
+      120
+     ],
+     "depende_de": [
+      "carro:no_macaco"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.0,
+      0.125,
+      -0.83
+     ],
+     "triangulos": 172
+    },
+    {
+     "no": "banco_motorista",
+     "tipo": "peca",
+     "peca": "banco_dianteiro",
+     "obrigatoria": true,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      70
+     ],
+     "depende_de": [
+      "porta_de:aberta"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.37,
+      0.29,
+      -0.28
+     ],
+     "triangulos": 6256
+    },
+    {
+     "no": "banco_passageiro",
+     "tipo": "peca",
+     "peca": "banco_dianteiro",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      70
+     ],
+     "depende_de": [
+      "porta_dd:aberta"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      -0.37,
+      0.29,
+      -0.28
+     ],
+     "triangulos": 6256
+    },
+    {
+     "no": "banco_traseiro",
+     "tipo": "peca",
+     "peca": "banco_traseiro",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      70
+     ],
+     "depende_de": [
+      "porta_te|porta_td:aberta"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.0,
+      0.3,
+      -1.13
+     ],
+     "triangulos": 6028
+    },
+    {
+     "no": "volante",
+     "tipo": "peca",
+     "peca": "volante",
+     "obrigatoria": true,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      30,
+      30
+     ],
+     "depende_de": [
+      "porta_de:aberta"
+     ],
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.37,
+      0.82,
+      0.06
+     ],
+     "triangulos": 1208
+    },
+    {
+     "no": "porta_luvas",
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -75,
+     "peca": null,
+     "pai": "sedan_rumo",
+     "origem_m": [
+      -0.375,
+      0.586,
+      0.215
+     ],
+     "triangulos": 56
+    },
+    {
+     "no": "assoalho_porta_malas",
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": 75,
+     "peca": null,
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.0,
+      0.478,
+      -1.748
+     ],
+     "triangulos": 362
+    },
+    {
+     "no": "quebra_sol_e",
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -80,
+     "peca": null,
+     "pai": "sedan_rumo",
+     "origem_m": [
+      0.38,
+      1.336,
+      -0.215
+     ],
+     "triangulos": 44
+    },
+    {
+     "no": "quebra_sol_d",
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -80,
+     "peca": null,
+     "pai": "sedan_rumo",
+     "origem_m": [
+      -0.38,
+      1.336,
+      -0.215
+     ],
+     "triangulos": 56
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "camera_1a_pessoa",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.37,
+      1.13,
+      -0.32
+     ]
+    },
+    {
+     "no": "assento_motorista",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.37,
+      0.48,
+      -0.3
+     ]
+    },
+    {
+     "no": "assento_passageiro",
+     "tipo": "ponto",
+     "posicao_m": [
+      -0.37,
+      0.48,
+      -0.3
+     ]
+    },
+    {
+     "no": "assento_traseiro_e",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.4,
+      0.5,
+      -1.12
+     ]
+    },
+    {
+     "no": "assento_traseiro_m",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.0,
+      0.5,
+      -1.12
+     ]
+    },
+    {
+     "no": "assento_traseiro_d",
+     "tipo": "ponto",
+     "posicao_m": [
+      -0.4,
+      0.5,
+      -1.12
+     ]
+    },
+    {
+     "no": "saida_motorista",
+     "tipo": "ponto",
+     "posicao_m": [
+      1.35,
+      0.0,
+      -0.05
+     ]
+    },
+    {
+     "no": "saida_passageiro",
+     "tipo": "ponto",
+     "posicao_m": [
+      -1.35,
+      0.0,
+      -0.05
+     ]
+    },
+    {
+     "no": "saida_traseira_e",
+     "tipo": "ponto",
+     "posicao_m": [
+      1.35,
+      0.0,
+      -0.95
+     ]
+    },
+    {
+     "no": "saida_traseira_d",
+     "tipo": "ponto",
+     "posicao_m": [
+      -1.35,
+      0.0,
+      -0.95
+     ]
+    },
+    {
+     "no": "bocal_tanque",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.79,
+      0.8,
+      -1.86
+     ]
+    },
+    {
+     "no": "saida_escape",
+     "tipo": "ponto",
+     "posicao_m": [
+      -0.43,
+      0.19,
+      -2.33
+     ]
+    },
+    {
+     "no": "luz_farol_e",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.58,
+      0.614,
+      2.09
+     ]
+    },
+    {
+     "no": "luz_farol_d",
+     "tipo": "ponto",
+     "posicao_m": [
+      -0.58,
+      0.614,
+      2.09
+     ]
+    },
+    {
+     "no": "luz_freio_e",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.66,
+      0.77,
+      -2.25
+     ]
+    },
+    {
+     "no": "luz_freio_d",
+     "tipo": "ponto",
+     "posicao_m": [
+      -0.66,
+      0.77,
+      -2.25
+     ]
+    },
+    {
+     "no": "macaco_e",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.7,
+      0.22,
+      -0.2
+     ]
+    },
+    {
+     "no": "macaco_d",
+     "tipo": "ponto",
+     "posicao_m": [
+      -0.7,
+      0.22,
+      -0.2
+     ]
+    },
+    {
+     "no": "talha_motor",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.0,
+      1.4,
+      1.3
+     ]
+    }
+   ],
+   "compartimentos": [
+    {
+     "id": "porta_malas",
+     "nome": "Porta-malas",
+     "grade": [
+      9,
+      5
+     ],
+     "abre_por": "tampa_porta_malas",
+     "saque": [
+      [
+       "mochila",
+       0.3
+      ],
+      [
+       "macaco_sanfona",
+       0.5
+      ],
+      [
+       "chave_de_roda",
+       0.5
+      ],
+      [
+       "garrafa_agua",
+       0.25
+      ],
+      [
+       "oleo_motor",
+       0.2
+      ],
+      [
+       "cabos_chupeta",
+       0.15
+      ],
+      [
+       "saco_dormir",
+       0.15
+      ],
+      [
+       "galao_gasolina",
+       0.1
+      ],
+      [
+       "jogo_de_chaves",
+       0.1
+      ],
+      [
+       "roupas",
+       0.3
+      ],
+      [
+       "lata_feijao",
+       0.2
+      ]
+     ],
+     "tranca": true
+    },
+    {
+     "id": "fundo_porta_malas",
+     "nome": "Fundo do porta-malas",
+     "grade": [
+      3,
+      3
+     ],
+     "abre_por": "assoalho_porta_malas",
+     "so_aceita": [
+      "roda_aro14"
+     ],
+     "parte": "estepe"
+    },
+    {
+     "id": "porta_luvas",
+     "nome": "Porta-luvas",
+     "grade": [
+      3,
+      2
+     ],
+     "abre_por": "porta_luvas",
+     "saque": [
+      [
+       "mapa_cidade",
+       0.4
+      ],
+      [
+       "lanterna",
+       0.3
+      ],
+      [
+       "pilhas",
+       0.3
+      ],
+      [
+       "isqueiro",
+       0.25
+      ],
+      [
+       "bilhete",
+       0.2
+      ],
+      [
+       "chave_casa",
+       0.1
+      ],
+      [
+       "frasco_remedio",
+       0.15
+      ]
+     ]
+    },
+    {
+     "id": "bolsa_porta_de",
+     "nome": "Bolsa da porta do motorista",
+     "grade": [
+      3,
+      1
+     ],
+     "abre_por": "porta_de",
+     "saque": [
+      [
+       "garrafa_agua",
+       0.2
+      ],
+      [
+       "salgadinho",
+       0.2
+      ],
+      [
+       "chave_carro",
+       0.02
+      ]
+     ]
+    },
+    {
+     "id": "bolsa_porta_dd",
+     "nome": "Bolsa da porta do passageiro",
+     "grade": [
+      3,
+      1
+     ],
+     "abre_por": "porta_dd",
+     "saque": [
+      [
+       "garrafa_agua",
+       0.2
+      ],
+      [
+       "salgadinho",
+       0.2
+      ],
+      [
+       "chave_carro",
+       0.02
+      ]
+     ]
+    },
+    {
+     "id": "console",
+     "nome": "Console",
+     "grade": [
+      2,
+      1
+     ],
+     "abre_por": null,
+     "saque": [
+      [
+       "isqueiro",
+       0.3
+      ],
+      [
+       "pilhas",
+       0.2
+      ]
+     ]
+    },
+    {
+     "id": "quebra_sol_e",
+     "nome": "Quebra-sol do motorista",
+     "grade": [
+      1,
+      1
+     ],
+     "abre_por": "quebra_sol_e",
+     "saque": [
+      [
+       "chave_carro",
+       0.1
+      ]
+     ]
+    },
+    {
+     "id": "quebra_sol_d",
+     "nome": "Quebra-sol do passageiro",
+     "grade": [
+      1,
+      1
+     ],
+     "abre_por": "quebra_sol_d",
+     "saque": [
+      [
+       "chave_carro",
+       0.1
+      ]
+     ]
+    },
+    {
+     "id": "banco_tras",
+     "nome": "Banco de trás",
+     "grade": [
+      8,
+      4
+     ],
+     "abre_por": null,
+     "saque": [
+      [
+       "mochila",
+       0.1
+      ],
+      [
+       "roupas",
+       0.2
+      ],
+      [
+       "caixa_papelao",
+       0.1
+      ]
+     ],
+     "vira_carga_sem": "banco_traseiro",
+     "carga_sem_banco": [
+      9,
+      4
+     ]
+    }
+   ]
+  }
+ ],
+ "pecas": [
+  {
+   "id": "capo",
+   "nome": "Capô",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 14,
+   "empilha": 1,
+   "padrao": "sedan_rumo",
+   "efeito": "protege o motor de batidas e da chuva",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/capo.glb",
+   "tamanho_m": [
+    1.504,
+    0.215,
+    1.335
+   ],
+   "triangulos": 3334,
+   "kb": 258.1
+  },
+  {
+   "id": "tampa_porta_malas",
+   "nome": "Tampa do porta-malas",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 10,
+   "empilha": 1,
+   "padrao": "sedan_rumo",
+   "efeito": "fecha e tranca o porta-malas",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/tampa_porta_malas.glb",
+   "tamanho_m": [
+    1.476,
+    0.339,
+    0.52
+   ],
+   "triangulos": 2162,
+   "kb": 174.5
+  },
+  {
+   "id": "porta_dianteira_e",
+   "nome": "Porta dianteira esquerda",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 22,
+   "empilha": 1,
+   "padrao": "sedan_rumo",
+   "efeito": "protege o motorista; vidro e bolsa da porta",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/porta_dianteira_e.glb",
+   "tamanho_m": [
+    0.997,
+    0.394,
+    1.005
+   ],
+   "triangulos": 9910,
+   "kb": 668.6
+  },
+  {
+   "id": "porta_dianteira_d",
+   "nome": "Porta dianteira direita",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 22,
+   "empilha": 1,
+   "padrao": "sedan_rumo",
+   "efeito": "protege o passageiro; vidro e bolsa da porta",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/porta_dianteira_d.glb",
+   "tamanho_m": [
+    0.997,
+    0.394,
+    1.005
+   ],
+   "triangulos": 9880,
+   "kb": 667.2
+  },
+  {
+   "id": "porta_traseira_e",
+   "nome": "Porta traseira esquerda",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 18,
+   "empilha": 1,
+   "padrao": "sedan_rumo",
+   "efeito": "protege quem vai atrás",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/porta_traseira_e.glb",
+   "tamanho_m": [
+    0.997,
+    0.45,
+    0.77
+   ],
+   "triangulos": 6576,
+   "kb": 446.9
+  },
+  {
+   "id": "porta_traseira_d",
+   "nome": "Porta traseira direita",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 18,
+   "empilha": 1,
+   "padrao": "sedan_rumo",
+   "efeito": "protege quem vai atrás",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/porta_traseira_d.glb",
+   "tamanho_m": [
+    0.997,
+    0.45,
+    0.77
+   ],
+   "triangulos": 6490,
+   "kb": 441.6
+  },
+  {
+   "id": "paralama_e",
+   "nome": "Para-lama dianteiro esquerdo",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 5,
+   "empilha": 1,
+   "padrao": "sedan_rumo",
+   "efeito": "protege a roda e o farol de lado",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    4,
+    2
+   ],
+   "arquivo": "pecas/paralama_e.glb",
+   "tamanho_m": [
+    0.643,
+    0.189,
+    1.454
+   ],
+   "triangulos": 5560,
+   "kb": 405.6
+  },
+  {
+   "id": "paralama_d",
+   "nome": "Para-lama dianteiro direito",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 5,
+   "empilha": 1,
+   "padrao": "sedan_rumo",
+   "efeito": "protege a roda e o farol de lado",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    4,
+    2
+   ],
+   "arquivo": "pecas/paralama_d.glb",
+   "tamanho_m": [
+    0.643,
+    0.189,
+    1.454
+   ],
+   "triangulos": 5534,
+   "kb": 404.3
+  },
+  {
+   "id": "para_brisa",
+   "nome": "Para-brisa",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 12,
+   "empilha": 1,
+   "padrao": "sedan_rumo",
+   "efeito": "protege a frente da cabine (30% de quebrar ao tirar)",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/para_brisa.glb",
+   "tamanho_m": [
+    1.463,
+    0.537,
+    0.76
+   ],
+   "triangulos": 2552,
+   "kb": 120.6
+  },
+  {
+   "id": "vidro_traseiro",
+   "nome": "Vidro traseiro",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 8,
+   "empilha": 1,
+   "padrao": "sedan_rumo",
+   "efeito": "protege a traseira da cabine",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/vidro_traseiro.glb",
+   "tamanho_m": [
+    1.43,
+    0.288,
+    0.621
+   ],
+   "triangulos": 1856,
+   "kb": 88.0
+  },
+  {
+   "id": "para_choque_dianteiro",
+   "nome": "Para-choque dianteiro",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 7,
+   "empilha": 1,
+   "padrao": "sedan_rumo",
+   "efeito": "absorve a primeira parte das batidas de frente",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    7,
+    1
+   ],
+   "arquivo": "pecas/para_choque_dianteiro.glb",
+   "tamanho_m": [
+    1.73,
+    0.213,
+    0.44
+   ],
+   "triangulos": 7864,
+   "kb": 373.8
+  },
+  {
+   "id": "para_choque_traseiro",
+   "nome": "Para-choque traseiro",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 7,
+   "empilha": 1,
+   "padrao": "sedan_rumo",
+   "efeito": "absorve a primeira parte das batidas de trás",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    7,
+    1
+   ],
+   "arquivo": "pecas/para_choque_traseiro.glb",
+   "tamanho_m": [
+    1.717,
+    0.185,
+    0.48
+   ],
+   "triangulos": 7688,
+   "kb": 370.0
+  },
+  {
+   "id": "farol",
+   "nome": "Farol com pisca",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 2,
+   "empilha": 1,
+   "padrao": "universal",
+   "efeito": "ilumina um lado da frente à noite",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    2,
+    1
+   ],
+   "arquivo": "pecas/farol.glb",
+   "tamanho_m": [
+    0.37,
+    0.151,
+    0.205
+   ],
+   "triangulos": 1408,
+   "kb": 82.8
+  },
+  {
+   "id": "lanterna_traseira",
+   "nome": "Lanterna traseira",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 1,
+   "empilha": 1,
+   "padrao": "universal",
+   "efeito": "luz de freio, de ré e pisca",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    2,
+    1
+   ],
+   "arquivo": "pecas/lanterna_traseira.glb",
+   "tamanho_m": [
+    0.304,
+    0.177,
+    0.373
+   ],
+   "triangulos": 504,
+   "kb": 34.8
+  },
+  {
+   "id": "retrovisor",
+   "nome": "Retrovisor",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 0.8,
+   "empilha": 1,
+   "padrao": "universal",
+   "efeito": "mostra o que vem atrás",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    1,
+    1
+   ],
+   "arquivo": "pecas/retrovisor.glb",
+   "tamanho_m": [
+    0.27,
+    0.115,
+    0.134
+   ],
+   "triangulos": 114,
+   "kb": 7.2
+  },
+  {
+   "id": "roda_aro14",
+   "nome": "Roda aro 14 com pneu",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 16,
+   "empilha": 1,
+   "padrao": "aro14_4furos",
+   "efeito": "roda de aço com pneu 185/70; também é o estepe",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem",
+    "porta_malas"
+   ],
+   "celulas": [
+    3,
+    3
+   ],
+   "arquivo": "pecas/roda_aro14.glb",
+   "tamanho_m": [
+    0.609,
+    0.19,
+    0.609
+   ],
+   "triangulos": 9344,
+   "kb": 442.2
+  },
+  {
+   "id": "motor_1_6",
+   "nome": "Motor 1.6",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 118,
+   "empilha": 1,
+   "padrao": "compacto_1_6",
+   "efeito": "dá força ao carro; condição baixa falha, perde força e gasta mais",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "talha": true,
+   "carga_maos": true,
+   "arquivo": "pecas/motor_1_6.glb",
+   "tamanho_m": [
+    1.145,
+    0.578,
+    0.975
+   ],
+   "triangulos": 6624,
+   "kb": 320.6
+  },
+  {
+   "id": "alternador",
+   "nome": "Alternador",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 5,
+   "empilha": 1,
+   "padrao": "compacto_1_6",
+   "efeito": "recarrega a bateria com o motor ligado",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    2,
+    2
+   ],
+   "arquivo": "pecas/alternador.glb",
+   "tamanho_m": [
+    0.16,
+    0.17,
+    0.132
+   ],
+   "triangulos": 532,
+   "kb": 26.9
+  },
+  {
+   "id": "radiador",
+   "nome": "Radiador",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 6,
+   "empilha": 1,
+   "padrao": "compacto_1_6",
+   "efeito": "esfria o motor; sem ele o motor ferve em 2 minutos",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    4,
+    3
+   ],
+   "arquivo": "pecas/radiador.glb",
+   "tamanho_m": [
+    1.06,
+    0.156,
+    0.385
+   ],
+   "triangulos": 992,
+   "kb": 68.4
+  },
+  {
+   "id": "bateria_12v",
+   "nome": "Bateria 12 V",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 14,
+   "empilha": 1,
+   "padrao": "bateria_12v",
+   "efeito": "dá partida e alimenta faróis, buzina e rádio; serve no gerador da base",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "aceita": [
+    "bateria_carro"
+   ],
+   "celulas": [
+    2,
+    2
+   ],
+   "arquivo": "pecas/bateria_12v.glb",
+   "tamanho_m": [
+    0.243,
+    0.25,
+    0.177
+   ],
+   "triangulos": 696,
+   "kb": 37.8
+  },
+  {
+   "id": "escapamento",
+   "nome": "Escapamento com silencioso",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 8,
+   "empilha": 1,
+   "padrao": "compacto_1_6",
+   "efeito": "sem ele o motor faz o dobro de barulho",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    6,
+    1
+   ],
+   "arquivo": "pecas/escapamento.glb",
+   "tamanho_m": [
+    0.524,
+    0.317,
+    3.89
+   ],
+   "triangulos": 2092,
+   "kb": 159.5
+  },
+  {
+   "id": "tanque_45l",
+   "nome": "Tanque de combustível 45 L",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 9,
+   "empilha": 1,
+   "padrao": "sedan_rumo",
+   "efeito": "guarda 45 L de combustível",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    5,
+    3
+   ],
+   "arquivo": "pecas/tanque_45l.glb",
+   "tamanho_m": [
+    0.8,
+    0.117,
+    0.36
+   ],
+   "triangulos": 172,
+   "kb": 9.9
+  },
+  {
+   "id": "banco_dianteiro",
+   "nome": "Banco dianteiro",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 15,
+   "empilha": 1,
+   "padrao": "universal",
+   "efeito": "sem o banco do motorista não dá para dirigir",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/banco_dianteiro.glb",
+   "tamanho_m": [
+    0.51,
+    0.989,
+    0.746
+   ],
+   "triangulos": 6256,
+   "kb": 395.4
+  },
+  {
+   "id": "banco_traseiro",
+   "nome": "Banco traseiro",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 20,
+   "empilha": 1,
+   "padrao": "universal",
+   "efeito": "leva 3 passageiros; sem ele o espaço vira carga",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/banco_traseiro.glb",
+   "tamanho_m": [
+    1.339,
+    0.748,
+    0.737
+   ],
+   "triangulos": 6028,
+   "kb": 442.4
+  },
+  {
+   "id": "volante",
+   "nome": "Volante",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 2.5,
+   "empilha": 1,
+   "padrao": "universal",
+   "efeito": "tirar o volante trava o carro contra roubo",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    2,
+    2
+   ],
+   "arquivo": "pecas/volante.glb",
+   "tamanho_m": [
+    0.402,
+    0.29,
+    0.296
+   ],
+   "triangulos": 1208,
+   "kb": 58.5
+  }
+ ],
+ "ferramentas": [
+  {
+   "id": "chave_de_roda",
+   "nome": "Chave de roda em cruz",
+   "grupo": "loot",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "peso_kg": 1.3,
+   "celulas": [
+    2,
+    2
+   ],
+   "empilha": 1,
+   "onde": [
+    "garagem",
+    "posto",
+    "concessionaria",
+    "ferro_velho",
+    "porta_malas"
+   ],
+   "efeito": "tira e põe as rodas (com o macaco)",
+   "recurso": "ferramenta",
+   "valor": 1,
+   "arma": true,
+   "dano": 14,
+   "arquivo": "ferramentas/chave_de_roda.glb",
+   "tamanho_m": [
+    0.381,
+    0.035,
+    0.391
+   ],
+   "triangulos": 784,
+   "kb": 39.3
+  },
+  {
+   "id": "macaco_sanfona",
+   "nome": "Macaco sanfona",
+   "grupo": "loot",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "peso_kg": 3.2,
+   "celulas": [
+    3,
+    1
+   ],
+   "empilha": 1,
+   "onde": [
+    "garagem",
+    "posto",
+    "concessionaria",
+    "ferro_velho",
+    "porta_malas"
+   ],
+   "efeito": "ergue o carro para trocar roda, tanque e escapamento",
+   "recurso": "ferramenta",
+   "valor": 1,
+   "ergue_m": 0.32,
+   "tempo_erguer_s": 20,
+   "arquivo": "ferramentas/macaco_sanfona.glb",
+   "tamanho_m": [
+    0.481,
+    0.124,
+    0.1
+   ],
+   "triangulos": 2408,
+   "kb": 112.0
+  },
+  {
+   "id": "jogo_de_chaves",
+   "nome": "Caixa com jogo de chaves",
+   "grupo": "loot",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "peso_kg": 6.5,
+   "celulas": [
+    3,
+    2
+   ],
+   "empilha": 1,
+   "onde": [
+    "garagem",
+    "posto",
+    "concessionaria",
+    "ferro_velho",
+    "porta_malas",
+    "oficina",
+    "fabrica"
+   ],
+   "efeito": "ferramenta geral da oficina: quase toda peça pede",
+   "recurso": "ferramenta",
+   "valor": 1,
+   "arquivo": "ferramentas/jogo_de_chaves.glb",
+   "tamanho_m": [
+    0.426,
+    0.225,
+    0.211
+   ],
+   "triangulos": 568,
+   "kb": 31.7
+  },
+  {
+   "id": "mangueira_sifao",
+   "nome": "Mangueira para sifão",
+   "grupo": "loot",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "peso_kg": 0.5,
+   "celulas": [
+    2,
+    2
+   ],
+   "empilha": 1,
+   "onde": [
+    "garagem",
+    "posto",
+    "ferro_velho",
+    "fazenda"
+   ],
+   "efeito": "puxa combustível de um tanque para um galão (1 L a cada 6 s)",
+   "recurso": "ferramenta",
+   "valor": 1,
+   "litros_por_s": 0.16666666666666666,
+   "arquivo": "ferramentas/mangueira_sifao.glb",
+   "tamanho_m": [
+    0.256,
+    0.044,
+    0.195
+   ],
+   "triangulos": 3016,
+   "kb": 143.2
+  },
+  {
+   "id": "cabos_chupeta",
+   "nome": "Cabos de chupeta",
+   "grupo": "loot",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "peso_kg": 1.6,
+   "celulas": [
+    2,
+    2
+   ],
+   "empilha": 1,
+   "onde": [
+    "garagem",
+    "posto",
+    "concessionaria",
+    "ferro_velho",
+    "porta_malas"
+   ],
+   "efeito": "dá partida com a bateria de outro carro ou do gerador",
+   "recurso": "ferramenta",
+   "valor": 1,
+   "arquivo": "ferramentas/cabos_chupeta.glb",
+   "tamanho_m": [
+    0.491,
+    0.042,
+    0.195
+   ],
+   "triangulos": 5056,
+   "kb": 213.3
+  },
+  {
+   "id": "bomba_ar",
+   "nome": "Bomba de ar manual",
+   "grupo": "loot",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "peso_kg": 1.4,
+   "celulas": [
+    3,
+    1
+   ],
+   "empilha": 1,
+   "onde": [
+    "garagem",
+    "posto",
+    "loja",
+    "porta_malas"
+   ],
+   "efeito": "enche pneu murcho (de 30 para 100% em 40 s)",
+   "recurso": "ferramenta",
+   "valor": 1,
+   "arquivo": "ferramentas/bomba_ar.glb",
+   "tamanho_m": [
+    0.435,
+    0.056,
+    0.14
+   ],
+   "triangulos": 952,
+   "kb": 49.0
+  },
+  {
+   "id": "kit_remendo_pneu",
+   "nome": "Kit de remendo de pneu",
+   "grupo": "loot",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "peso_kg": 0.3,
+   "celulas": [
+    1,
+    1
+   ],
+   "empilha": 1,
+   "usos": 5,
+   "onde": [
+    "garagem",
+    "posto",
+    "porta_malas",
+    "loja"
+   ],
+   "efeito": "conserta pneu furado: volta para 60% (5 usos)",
+   "recurso": "ferramenta",
+   "valor": 1,
+   "arquivo": "ferramentas/kit_remendo_pneu.glb",
+   "tamanho_m": [
+    0.191,
+    0.066,
+    0.102
+   ],
+   "triangulos": 212,
+   "kb": 13.4
+  },
+  {
+   "id": "oleo_motor",
+   "nome": "Óleo de motor 1 L",
+   "grupo": "loot",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "peso_kg": 0.95,
+   "celulas": [
+    1,
+    1
+   ],
+   "empilha": 2,
+   "onde": [
+    "garagem",
+    "posto",
+    "concessionaria",
+    "ferro_velho",
+    "porta_malas",
+    "supermercado"
+   ],
+   "efeito": "+15% de condição do motor (até 70%)",
+   "recurso": "manutencao",
+   "valor": 1,
+   "arquivo": "ferramentas/oleo_motor.glb",
+   "tamanho_m": [
+    0.232,
+    0.112,
+    0.069
+   ],
+   "triangulos": 2184,
+   "kb": 105.6
+  },
+  {
+   "id": "velas_ignicao",
+   "nome": "Velas de ignição (jogo de 4)",
+   "grupo": "loot",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "peso_kg": 0.3,
+   "celulas": [
+    1,
+    1
+   ],
+   "empilha": 2,
+   "onde": [
+    "garagem",
+    "posto",
+    "concessionaria",
+    "ferro_velho"
+   ],
+   "efeito": "+20% de condição do motor (até 80%) e menos falha na partida",
+   "recurso": "manutencao",
+   "valor": 1,
+   "arquivo": "ferramentas/velas_ignicao.glb",
+   "tamanho_m": [
+    0.122,
+    0.049,
+    0.101
+   ],
+   "triangulos": 728,
+   "kb": 63.0
+  },
+  {
+   "id": "chave_carro",
+   "nome": "Chave de carro",
+   "grupo": "loot",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "peso_kg": 0.03,
+   "celulas": [
+    1,
+    1
+   ],
+   "empilha": 1,
+   "unico": true,
+   "onde": [
+    "carro",
+    "quebra_sol",
+    "zumbi",
+    "casa"
+   ],
+   "efeito": "abre e liga um carro específico (o item guarda qual)",
+   "recurso": "chave",
+   "valor": 1,
+   "arquivo": "ferramentas/chave_carro.glb",
+   "tamanho_m": [
+    0.03,
+    0.008,
+    0.147
+   ],
+   "triangulos": 460,
+   "kb": 48.9
+  },
+  {
+   "id": "kit_ligacao_direta",
+   "nome": "Kit de ligação direta",
+   "grupo": "loot",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "peso_kg": 0.35,
+   "celulas": [
+    2,
+    1
+   ],
+   "empilha": 1,
+   "onde": [
+    "garagem",
+    "ferro_velho",
+    "delegacia",
+    "zumbi"
+   ],
+   "efeito": "liga o carro sem chave: 20 s, 70% de chance (falha queima um fusível)",
+   "recurso": "ferramenta",
+   "valor": 1,
+   "arquivo": "ferramentas/kit_ligacao_direta.glb",
+   "tamanho_m": [
+    0.25,
+    0.044,
+    0.096
+   ],
+   "triangulos": 1544,
+   "kb": 77.5
+  }
+ ]
+}

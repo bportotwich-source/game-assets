@@ -1,0 +1,2751 @@
+{
+ "grid": {
+  "module_width": 2.0,
+  "ground": 0.0,
+  "floor_height": 3.0,
+  "floor_levels": [
+   0.15,
+   3.15,
+   6.15,
+   9.15,
+   12.15,
+   15.15,
+   18.15
+  ],
+  "floors": 6,
+  "footprint": [
+   [
+    12.0,
+    -6.0
+   ],
+   [
+    12.0,
+    6.0
+   ],
+   [
+    -12.0,
+    6.0
+   ],
+   [
+    -12.0,
+    -6.0
+   ],
+   [
+    12.0,
+    -6.0
+   ]
+  ],
+  "wall_thickness": 0.3,
+  "partition_thickness": 0.12,
+  "stair": {
+   "risers": 16,
+   "rise": 0.1875,
+   "tread": 0.26,
+   "hall": [
+    -2.0,
+    2.0,
+    0.54,
+    6.0
+   ]
+  },
+  "fire_escape": {
+   "x": [
+    2.6,
+    7.4
+   ],
+   "depth": 1.45,
+   "platform_above_floor": 0.35,
+   "risers": 12,
+   "tread": 0.175
+  },
+  "site": {
+   "x": [
+    -22.0,
+    32.0
+   ],
+   "z": [
+    -16.0,
+    24.0
+   ]
+  },
+  "textures": "PBR (albedo + normal + ORM), 2 m tiles, UV in metres / 2"
+ },
+ "placements": [
+  {
+   "piece": "shell_g",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "ext"
+   ]
+  },
+  {
+   "piece": "slab_g",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "walls_g",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "stair",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "shop_grocery",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "mercearia"
+   ]
+  },
+  {
+   "piece": "shop_laundry",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "lavanderia"
+   ]
+  },
+  {
+   "piece": "boiler_room",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "shop_ceil",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "door_entry",
+   "pos": [
+    -0.49,
+    0.15,
+    5.85
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_shop",
+   "pos": [
+    6.73,
+    0.15,
+    5.89
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_shop",
+   "pos": [
+    -6.73,
+    0.15,
+    5.89
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    9.41,
+    0.15,
+    -2.45
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -9.41,
+    0.15,
+    -2.45
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    3.6,
+    0.15,
+    -3.61
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -3.6,
+    0.15,
+    -3.61
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_back",
+   "pos": [
+    6.06,
+    0.15,
+    -5.875
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "door_back",
+   "pos": [
+    -6.89,
+    0.15,
+    -5.875
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "door_back",
+   "pos": [
+    -0.39,
+    0.15,
+    -5.875
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "shell_t",
+   "pos": [
+    0.0,
+    3.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "ext"
+   ]
+  },
+  {
+   "piece": "slab_t1",
+   "pos": [
+    0.0,
+    3.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "walls_t",
+   "pos": [
+    0.0,
+    3.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "stair",
+   "pos": [
+    0.0,
+    3.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "apt_r",
+   "pos": [
+    0.0,
+    3.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "apt_l",
+   "pos": [
+    0.0,
+    3.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "door_unit",
+   "pos": [
+    2.0,
+    3.15,
+    5.39
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_unit",
+   "pos": [
+    -2.0,
+    3.15,
+    5.39
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    2.66,
+    3.15,
+    0.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -2.66,
+    3.15,
+    0.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    5.11,
+    3.15,
+    0.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -5.11,
+    3.15,
+    0.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    8.34,
+    3.15,
+    0.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -8.34,
+    3.15,
+    0.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    6.96,
+    3.15,
+    -4.31
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -6.96,
+    3.15,
+    -4.31
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "fe_1_r",
+   "pos": [
+    0.0,
+    3.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "ext",
+    "escada_incendio"
+   ]
+  },
+  {
+   "piece": "fe_1_l",
+   "pos": [
+    0.0,
+    3.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "ext",
+    "escada_incendio"
+   ]
+  },
+  {
+   "piece": "shell_t",
+   "pos": [
+    0.0,
+    6.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "ext"
+   ]
+  },
+  {
+   "piece": "slab_t",
+   "pos": [
+    0.0,
+    6.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "walls_t",
+   "pos": [
+    0.0,
+    6.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "stair",
+   "pos": [
+    0.0,
+    6.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "apt_r",
+   "pos": [
+    0.0,
+    6.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "apt_l",
+   "pos": [
+    0.0,
+    6.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "door_unit",
+   "pos": [
+    2.0,
+    6.15,
+    5.39
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_unit",
+   "pos": [
+    -2.0,
+    6.15,
+    5.39
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    2.66,
+    6.15,
+    0.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -2.66,
+    6.15,
+    0.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    5.11,
+    6.15,
+    0.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -5.11,
+    6.15,
+    0.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    8.34,
+    6.15,
+    0.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -8.34,
+    6.15,
+    0.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    6.96,
+    6.15,
+    -4.31
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -6.96,
+    6.15,
+    -4.31
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "fe_e_r",
+   "pos": [
+    0.0,
+    6.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "ext",
+    "escada_incendio"
+   ]
+  },
+  {
+   "piece": "fe_e_l",
+   "pos": [
+    0.0,
+    6.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "ext",
+    "escada_incendio"
+   ]
+  },
+  {
+   "piece": "shell_t",
+   "pos": [
+    0.0,
+    9.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "ext"
+   ]
+  },
+  {
+   "piece": "slab_t",
+   "pos": [
+    0.0,
+    9.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "walls_t",
+   "pos": [
+    0.0,
+    9.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "stair",
+   "pos": [
+    0.0,
+    9.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "apt_r",
+   "pos": [
+    0.0,
+    9.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "apt_l",
+   "pos": [
+    0.0,
+    9.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "door_unit",
+   "pos": [
+    2.0,
+    9.15,
+    5.39
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_unit",
+   "pos": [
+    -2.0,
+    9.15,
+    5.39
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    2.66,
+    9.15,
+    0.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -2.66,
+    9.15,
+    0.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    5.11,
+    9.15,
+    0.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -5.11,
+    9.15,
+    0.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    8.34,
+    9.15,
+    0.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -8.34,
+    9.15,
+    0.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    6.96,
+    9.15,
+    -4.31
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -6.96,
+    9.15,
+    -4.31
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "fe_o_r",
+   "pos": [
+    0.0,
+    9.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "ext",
+    "escada_incendio"
+   ]
+  },
+  {
+   "piece": "fe_o_l",
+   "pos": [
+    0.0,
+    9.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "ext",
+    "escada_incendio"
+   ]
+  },
+  {
+   "piece": "shell_t",
+   "pos": [
+    0.0,
+    12.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "ext"
+   ]
+  },
+  {
+   "piece": "slab_t",
+   "pos": [
+    0.0,
+    12.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "walls_t",
+   "pos": [
+    0.0,
+    12.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "stair",
+   "pos": [
+    0.0,
+    12.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "apt_r",
+   "pos": [
+    0.0,
+    12.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "apt_l",
+   "pos": [
+    0.0,
+    12.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "door_unit",
+   "pos": [
+    2.0,
+    12.15,
+    5.39
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_unit",
+   "pos": [
+    -2.0,
+    12.15,
+    5.39
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    2.66,
+    12.15,
+    0.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -2.66,
+    12.15,
+    0.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    5.11,
+    12.15,
+    0.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -5.11,
+    12.15,
+    0.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    8.34,
+    12.15,
+    0.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -8.34,
+    12.15,
+    0.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    6.96,
+    12.15,
+    -4.31
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -6.96,
+    12.15,
+    -4.31
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "fe_e_r",
+   "pos": [
+    0.0,
+    12.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "ext",
+    "escada_incendio"
+   ]
+  },
+  {
+   "piece": "fe_e_l",
+   "pos": [
+    0.0,
+    12.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "ext",
+    "escada_incendio"
+   ]
+  },
+  {
+   "piece": "shell_t",
+   "pos": [
+    0.0,
+    15.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "ext"
+   ]
+  },
+  {
+   "piece": "slab_t",
+   "pos": [
+    0.0,
+    15.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "walls_t",
+   "pos": [
+    0.0,
+    15.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "stair",
+   "pos": [
+    0.0,
+    15.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "apt_r",
+   "pos": [
+    0.0,
+    15.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "apt_l",
+   "pos": [
+    0.0,
+    15.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "door_unit",
+   "pos": [
+    2.0,
+    15.15,
+    5.39
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_unit",
+   "pos": [
+    -2.0,
+    15.15,
+    5.39
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    2.66,
+    15.15,
+    0.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -2.66,
+    15.15,
+    0.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    5.11,
+    15.15,
+    0.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -5.11,
+    15.15,
+    0.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    8.34,
+    15.15,
+    0.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -8.34,
+    15.15,
+    0.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    6.96,
+    15.15,
+    -4.31
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -6.96,
+    15.15,
+    -4.31
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "fe_top_r",
+   "pos": [
+    0.0,
+    15.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "ext",
+    "escada_incendio"
+   ]
+  },
+  {
+   "piece": "fe_top_l",
+   "pos": [
+    0.0,
+    15.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "ext",
+    "escada_incendio"
+   ]
+  },
+  {
+   "piece": "slab_r",
+   "pos": [
+    0.0,
+    18.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "roof",
+   "pos": [
+    0.0,
+    18.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "hall_rail",
+   "pos": [
+    0.0,
+    18.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "door_roof",
+   "pos": [
+    1.975,
+    18.2,
+    4.56
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "roof",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "ac_window",
+   "pos": [
+    8.2,
+    4.022,
+    6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "ext"
+   ]
+  },
+  {
+   "piece": "ac_window",
+   "pos": [
+    -10.5,
+    7.022,
+    6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "ext"
+   ]
+  },
+  {
+   "piece": "ac_window",
+   "pos": [
+    10.5,
+    10.022,
+    6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "ext"
+   ]
+  },
+  {
+   "piece": "ac_window",
+   "pos": [
+    -8.2,
+    13.022,
+    6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "ext"
+   ]
+  },
+  {
+   "piece": "ac_window",
+   "pos": [
+    8.2,
+    16.022,
+    6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "ext"
+   ]
+  },
+  {
+   "piece": "ac_window",
+   "pos": [
+    12.0,
+    7.022,
+    -2.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "ext"
+   ]
+  },
+  {
+   "piece": "ac_window",
+   "pos": [
+    12.0,
+    13.022,
+    4.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "ext"
+   ]
+  },
+  {
+   "piece": "ac_window",
+   "pos": [
+    -12.0,
+    10.022,
+    -2.8
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "ext"
+   ]
+  },
+  {
+   "piece": "ac_window",
+   "pos": [
+    -12.0,
+    4.022,
+    4.8
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "ext"
+   ]
+  },
+  {
+   "piece": "ac_window",
+   "pos": [
+    9.4,
+    7.022,
+    -6.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "ext"
+   ]
+  },
+  {
+   "piece": "ac_window",
+   "pos": [
+    -2.1,
+    13.022,
+    -6.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "ext"
+   ]
+  },
+  {
+   "piece": "ac_window",
+   "pos": [
+    -9.4,
+    16.022,
+    -6.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "ext"
+   ]
+  },
+  {
+   "piece": "site",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -17.0,
+    0.06,
+    9.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    -8.0,
+    0.06,
+    9.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    4.0,
+    0.06,
+    9.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    15.4,
+    0.06,
+    -3.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    15.4,
+    0.06,
+    -11.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    -12.0,
+    0.06,
+    22.7
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    0.0,
+    0.06,
+    22.7
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    12.0,
+    0.06,
+    22.7
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    28.7,
+    0.06,
+    4.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    28.7,
+    0.06,
+    -8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lamp_pole",
+   "pos": [
+    -15.0,
+    0.12,
+    10.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_pole",
+   "pos": [
+    -3.0,
+    0.12,
+    10.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_pole",
+   "pos": [
+    9.0,
+    0.12,
+    10.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_pole",
+   "pos": [
+    16.0,
+    0.12,
+    -7.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_pole",
+   "pos": [
+    16.0,
+    0.12,
+    -15.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_pole",
+   "pos": [
+    -6.0,
+    0.12,
+    21.95
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_pole",
+   "pos": [
+    6.0,
+    0.12,
+    21.95
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_pole",
+   "pos": [
+    27.95,
+    0.12,
+    -2.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "traffic_signal",
+   "pos": [
+    16.15,
+    0.12,
+    10.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "traffic_signal",
+   "pos": [
+    27.8,
+    0.12,
+    21.8
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "hydrant",
+   "pos": [
+    16.0,
+    0.12,
+    5.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "hydrant",
+   "pos": [
+    -9.6,
+    0.12,
+    10.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "mailbox_st",
+   "pos": [
+    11.0,
+    0.12,
+    9.95
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "news_box",
+   "pos": [
+    12.0,
+    0.12,
+    10.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    13.2,
+    0.12,
+    9.95
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    -5.6,
+    0.12,
+    9.95
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    15.95,
+    0.12,
+    -6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bike_rack",
+   "pos": [
+    -12.6,
+    0.12,
+    9.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_sedan_r",
+   "pos": [
+    -18.0,
+    0.0,
+    11.55
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_hatch_t",
+   "pos": [
+    -12.0,
+    0.0,
+    11.55
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_wagon_b",
+   "pos": [
+    -6.0,
+    0.0,
+    11.55
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_coupe_g",
+   "pos": [
+    1.5,
+    0.0,
+    11.55
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_sedan_w",
+   "pos": [
+    8.0,
+    0.0,
+    11.55
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_pickup_s",
+   "pos": [
+    17.55,
+    0.0,
+    -14.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_hatch_y",
+   "pos": [
+    17.55,
+    0.0,
+    -7.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_sedan_r",
+   "pos": [
+    17.55,
+    0.0,
+    -1.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_hatch_y",
+   "pos": [
+    -15.0,
+    0.0,
+    20.4
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_wagon_b",
+   "pos": [
+    -2.0,
+    0.0,
+    20.4
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "dumpster",
+   "pos": [
+    7.5,
+    0.1,
+    -12.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "trash_bin",
+   "pos": [
+    -6.2,
+    0.1,
+    -6.7
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "trash_bin",
+   "pos": [
+    -5.6,
+    0.1,
+    -6.7
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "trash_bin",
+   "pos": [
+    -5.0,
+    0.1,
+    -6.7
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "trash_bin",
+   "pos": [
+    -4.4,
+    0.1,
+    -6.7
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "fence",
+   "pos": [
+    -14.0,
+    0.1,
+    -14.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "fence",
+   "pos": [
+    -11.6,
+    0.1,
+    -14.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "fence",
+   "pos": [
+    -9.2,
+    0.1,
+    -14.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "fence",
+   "pos": [
+    -6.8,
+    0.1,
+    -14.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "fence",
+   "pos": [
+    -4.4,
+    0.1,
+    -14.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "fence",
+   "pos": [
+    -2.0,
+    0.1,
+    -14.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "fence",
+   "pos": [
+    0.4,
+    0.1,
+    -14.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "fence",
+   "pos": [
+    2.8,
+    0.1,
+    -14.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "fence",
+   "pos": [
+    5.2,
+    0.1,
+    -14.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "fence",
+   "pos": [
+    7.6,
+    0.1,
+    -14.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "fence",
+   "pos": [
+    -14.0,
+    0.1,
+    -14.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "fence",
+   "pos": [
+    -14.0,
+    0.1,
+    -11.6
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "fence",
+   "pos": [
+    -14.0,
+    0.1,
+    -9.2
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    5.0,
+    0.12,
+    8.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    6.0,
+    6.15,
+    3.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  }
+ ]
+}

@@ -23,6 +23,8 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Pistola Sentinela 9 mm (cinza) (`pistola_9mm_cinza`) | 9 mm | 15 | 34 | 25 m | 4,0/s | 60 m | 600 | 0,78 kg | mira, ponte, boca, trilho, carregador | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Submetralhadora Ciclone 9 mm (`smg_ciclone_9mm`) | 9 mm | 30 | 28 | 40 m | 18/s | 120 m | 6000 | 2,7 kg | mira, alca, massa, boca, carregador, empunhadura, lanterna, laser, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, dobrar_coronha, abrir_coronha, inspecionar, ocioso |
 | Submetralhadora Ciclone 9 mm (areia) (`smg_ciclone_9mm_tan`) | 9 mm | 30 | 28 | 40 m | 18/s | 120 m | 6000 | 2,7 kg | mira, alca, massa, boca, carregador, empunhadura, lanterna, laser, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, dobrar_coronha, abrir_coronha, inspecionar, ocioso |
+| Rifle Pardal .22 (`rifle_22`) | .22 | 10 | 34 | 70 m | 1,1/s | 70 m | 5000 | 2,7 kg | mira, alca, boca, carregador, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
+| Rifle Pardal .22 sintético (`rifle_22_sintetico`) | .22 | 10 | 34 | 70 m | 1,1/s | 70 m | 5000 | 2,5 kg | mira, alca, boca, carregador, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 
 ## Acessórios
 
@@ -146,6 +148,12 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Carregador da Ciclone (17) (`carregador_ciclone_17`) | Carregadores | `carregador_ciclone` | recarga_s ×0,95 | 0,09 kg | incomum | 1480 |
 | Carregador da Ciclone (30) (`carregador_ciclone_30`) | Carregadores | `carregador_ciclone` | - | 0,14 kg | incomum | 1672 |
 | Tambor da Ciclone (50) (`tambor_ciclone_50`) | Carregadores | `carregador_ciclone` | recarga_s ×1,25, tempo_mirar ×1,08 | 0,55 kg | muito raro | 2116 |
+| Luneta 4× pequena (`luneta_4x_22`) | Miras | `trilho_mira` | precisao_mirando ×1,35, tempo_mirar ×1,1, alcance_m ×1,4 | 0,26 kg | comum | 5172 |
+| Alça de lâmina do .22 (`alca_cano_22`) | Miras | `alca_cano_22` | - | 0,01 kg | comum | 412 |
+| Protetor de rosca .22 (`protetor_rosca_22`) | Boca do cano | `boca_22` | - | 0,01 kg | comum | 720 |
+| Supressor .22 (`supressor_22`) | Boca do cano | `boca_22` | ruido_m ×0,25, precisao ×1,04, alcance_m ×0,95 | 0,16 kg | raro | 1808 |
+| Carregador rotativo .22 (10) (`carregador_22_10`) | Carregadores | `carregador_22` | - | 0,05 kg | comum | 1228 |
+| Carregador .22 (25) (`carregador_22_25`) | Carregadores | `carregador_22` | recarga_s ×1,1 | 0,12 kg | incomum | 1096 |
 
 ## Munição e efeitos
 
@@ -170,6 +178,9 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Cartucho 7,62×39 (`municao_762`) | Munição | Cartucho de estojo de aço laqueado verde e ponta de cobre. | 672 |
 | Estojo 7,62×39 (vazio) (`estojo_762`) | Estojos | Estojo de aço deflagrado: cai do fuzil. Aço não vale recarregar, mas serve de sucata. | 548 |
 | Caixa de munição 7,62×39 (20) (`caixa_municao_762`) | Caixas de munição | Caixa de papelão com bandeja de 20 cartuchos 7,62 em pé. A tampa abre (nó "tampa", animação "abrir"). | 6284 |
+| Cartucho .22 (`municao_22`) | Munição | Cartucho pequeno de fogo circular: o mais fácil de achar em casas de campo e lojas. Fraco contra zumbi, ótimo para caça. | 384 |
+| Estojo .22 (vazio) (`estojo_22`) | Estojos | Estojo ejetado: o jogo cria um em saida_estojo a cada tiro (some depois de uns segundos). | 240 |
+| Caixa de munição .22 (50) (`caixa_municao_22`) | Caixas de munição | Caixinha de papelão com bandeja de 50 cartuchos .22 em pé. A tampa abre (nó "tampa", animação "abrir"). | 9308 |
 | Clarão de boca (`clarao_boca`) | Efeitos | Mostrar por 1 ou 2 quadros no encaixe boca_fogo a cada tiro; girar ao acaso em -Z e variar a escala (0,8 a 1,2). Material emissivo com transparência. | 372 |
 
 ## Compatibilidade
@@ -305,3 +316,13 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Submetralhadora Ciclone 9 mm (areia)**, `encaixe_lanterna`: lanterna_compacta, lanterna_fuzil
 - **Submetralhadora Ciclone 9 mm (areia)**, `encaixe_laser`: modulo_laser, modulo_laser_tan, laser_fuzil
 - **Submetralhadora Ciclone 9 mm (areia)**, `encaixe_bandoleira`: bandoleira
+- **Rifle Pardal .22**, `encaixe_mira`: luneta_4x_22, luneta_4x, luneta_3_9, mira_ponto_vermelho_tubo, mira_reflexa
+- **Rifle Pardal .22**, `encaixe_alca`: alca_cano_22
+- **Rifle Pardal .22**, `encaixe_boca`: protetor_rosca_22, supressor_22
+- **Rifle Pardal .22**, `encaixe_carregador`: carregador_22_10, carregador_22_25
+- **Rifle Pardal .22**, `encaixe_bandoleira`: bandoleira
+- **Rifle Pardal .22 sintético**, `encaixe_mira`: luneta_4x_22, luneta_4x, luneta_3_9, mira_ponto_vermelho_tubo, mira_reflexa
+- **Rifle Pardal .22 sintético**, `encaixe_alca`: alca_cano_22
+- **Rifle Pardal .22 sintético**, `encaixe_boca`: protetor_rosca_22, supressor_22
+- **Rifle Pardal .22 sintético**, `encaixe_carregador`: carregador_22_10, carregador_22_25
+- **Rifle Pardal .22 sintético**, `encaixe_bandoleira`: bandoleira

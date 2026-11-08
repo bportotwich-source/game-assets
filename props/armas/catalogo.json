@@ -6004,6 +6004,520 @@
      "descricao": "respiração leve parado"
     }
    }
+  },
+  {
+   "id": "rifle_22",
+   "nome": "Rifle Pardal .22",
+   "grupo": "armas",
+   "categoria": "rifle",
+   "precisao": 0.88,
+   "ruido_m": 70,
+   "peso_kg": 2.7,
+   "raridade": "comum",
+   "valor_troca": 55,
+   "onde": [
+    "casa_de_campo",
+    "armazem",
+    "casas",
+    "celeiro"
+   ],
+   "classe": "fogo",
+   "calibre": ".22",
+   "municao": "municao_22",
+   "modo": "ferrolho (ação manual)",
+   "acao": "ferrolho",
+   "estojo_s": 0.55,
+   "capacidade": 10,
+   "dano": 34,
+   "alcance_m": 70,
+   "alcance_max_m": 250,
+   "tiros_por_s": 1.1,
+   "recarga_s": 2.0,
+   "recarga_vazia_s": 2.6,
+   "recuo": 0.06,
+   "durabilidade": 5000,
+   "descricao": "Rifle leve de ferrolho na coronha de nogueira, com luneta 4× pequena. Para caça pequena (coelho, pombo): barulho baixo e munição barata e fácil de achar. Mata zumbi só com tiro na cabeça. Com o supressor quase não se ouve.",
+   "arquivo": "armas/rifle_22.glb",
+   "tamanho_m": [
+    0.069,
+    0.143,
+    0.929
+   ],
+   "triangulos": 41278,
+   "kb": 2796.5,
+   "partes": [
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -8,
+     "descricao": "gatilho leve",
+     "pai": "rifle_22",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "gira_e_desliza",
+     "curso_graus": -60,
+     "curso_m": -0.06,
+     "descricao": "levanta a alavanca 60° e corre 60 mm para trás (ejeta), volta e abaixa",
+     "pai": "rifle_22",
+     "explodir_m": [
+      -0.0,
+      0.05,
+      0.12
+     ]
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "municao": "municao_22",
+     "capacidade": 10,
+     "descricao": "carregador rotativo de 10, sai por baixo",
+     "pai": "rifle_22",
+     "explodir_m": [
+      0.0,
+      -0.07,
+      0.0
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_mira",
+     "tipo": "trilho_mira",
+     "pai": "rifle_22",
+     "posicao_m": [
+      0.0,
+      0.08,
+      -0.103
+     ],
+     "aceita": [
+      "luneta_4x_22",
+      "luneta_4x",
+      "luneta_3_9",
+      "mira_ponto_vermelho_tubo",
+      "mira_reflexa"
+     ],
+     "padrao": "luneta_4x_22",
+     "explodir_m": [
+      0.0,
+      0.07,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_alca",
+     "tipo": "alca_cano_22",
+     "pai": "rifle_22",
+     "posicao_m": [
+      0.0,
+      0.0724,
+      -0.258
+     ],
+     "aceita": [
+      "alca_cano_22"
+     ],
+     "padrao": "alca_cano_22",
+     "rebate_com": "encaixe_mira",
+     "descricao": "alça de lâmina no cano: deita (animação \"dobrar\") quando há mira no encaixe_mira",
+     "explodir_m": [
+      0.0,
+      0.04,
+      0.0
+     ]
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "rifle_22",
+     "posicao_m": [
+      0.0,
+      0.0835,
+      -0.258
+     ],
+     "descricao": "fundo do entalhe da alça: câmera de 1ª pessoa olha daqui pela conta da massa (-Z)"
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_22",
+     "pai": "rifle_22",
+     "posicao_m": [
+      0.0,
+      0.062,
+      -0.646
+     ],
+     "aceita": [
+      "protetor_rosca_22",
+      "supressor_22"
+     ],
+     "padrao": "protetor_rosca_22",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.08
+     ]
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_22",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.05,
+      -0.104
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_22_10",
+      "carregador_22_25"
+     ],
+     "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda as malhas do nó carregador"
+    },
+    {
+     "no": "encaixe_bandoleira",
+     "tipo": "bandoleira",
+     "pai": "rifle_22",
+     "posicao_m": [
+      0.0,
+      0.0255,
+      -0.368
+     ],
+     "aceita": [
+      "bandoleira"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "rifle_22",
+     "posicao_m": [
+      0.0,
+      0.062,
+      -0.658
+     ],
+     "descricao": "clarão de boca e origem do disparo (-Z)"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "rifle_22",
+     "posicao_m": [
+      0.0135,
+      0.07,
+      -0.133
+     ],
+     "descricao": "onde nasce o estojo (quando o ferrolho volta, aos 0,55 s do \"atirar\")"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 1.0,
+     "laco": false,
+     "descricao": "tiro (coice pequeno) e manejo do ferrolho: levanta (0,38 s), puxa (0,52 s: soltar o estojo), empurra e abaixa (0,82 s)"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.7,
+     "laco": false,
+     "descricao": "último tiro: o ferrolho fica aberto, atrás"
+    },
+    "vazia": {
+     "duracao_s": 0.1,
+     "laco": true,
+     "descricao": "pose parada: ferrolho aberto"
+    },
+    "recarregar": {
+     "duracao_s": 2.0,
+     "laco": false,
+     "descricao": "aperta o retém na frente do guarda-mato, o carregador cai (0,38 s), novo entra (1,56 s); trocar o nó entre 0,55 e 1,2 s"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "troca o carregador com o ferrolho aberto e fecha o ferrolho (1,95 s) e a alavanca (2,18 s)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "abre um pouco o ferrolho para ver o cartucho na câmara, fecha e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "rifle_22_sintetico",
+   "nome": "Rifle Pardal .22 sintético",
+   "grupo": "armas",
+   "categoria": "rifle",
+   "precisao": 0.86,
+   "ruido_m": 70,
+   "peso_kg": 2.5,
+   "raridade": "comum",
+   "valor_troca": 50,
+   "onde": [
+    "casa_de_campo",
+    "armazem",
+    "casas",
+    "delegacia"
+   ],
+   "classe": "fogo",
+   "calibre": ".22",
+   "municao": "municao_22",
+   "modo": "ferrolho (ação manual)",
+   "acao": "ferrolho",
+   "estojo_s": 0.55,
+   "capacidade": 10,
+   "dano": 34,
+   "alcance_m": 70,
+   "alcance_max_m": 250,
+   "tiros_por_s": 1.1,
+   "recarga_s": 2.0,
+   "recarga_vazia_s": 2.6,
+   "recuo": 0.06,
+   "durabilidade": 5000,
+   "descricao": "O mesmo rifle numa coronha preta de polímero que não liga para chuva. Vem só com as miras de ferro.",
+   "arquivo": "armas/rifle_22_sintetico.glb",
+   "tamanho_m": [
+    0.069,
+    0.143,
+    0.929
+   ],
+   "triangulos": 41278,
+   "kb": 2036.4,
+   "partes": [
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -8,
+     "descricao": "gatilho leve",
+     "pai": "rifle_22_sintetico",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "gira_e_desliza",
+     "curso_graus": -60,
+     "curso_m": -0.06,
+     "descricao": "levanta a alavanca 60° e corre 60 mm para trás (ejeta), volta e abaixa",
+     "pai": "rifle_22_sintetico",
+     "explodir_m": [
+      -0.0,
+      0.05,
+      0.12
+     ]
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "municao": "municao_22",
+     "capacidade": 10,
+     "descricao": "carregador rotativo de 10, sai por baixo",
+     "pai": "rifle_22_sintetico",
+     "explodir_m": [
+      0.0,
+      -0.07,
+      0.0
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_mira",
+     "tipo": "trilho_mira",
+     "pai": "rifle_22_sintetico",
+     "posicao_m": [
+      0.0,
+      0.08,
+      -0.103
+     ],
+     "aceita": [
+      "luneta_4x_22",
+      "luneta_4x",
+      "luneta_3_9",
+      "mira_ponto_vermelho_tubo",
+      "mira_reflexa"
+     ],
+     "padrao": null,
+     "explodir_m": [
+      0.0,
+      0.07,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_alca",
+     "tipo": "alca_cano_22",
+     "pai": "rifle_22_sintetico",
+     "posicao_m": [
+      0.0,
+      0.0724,
+      -0.258
+     ],
+     "aceita": [
+      "alca_cano_22"
+     ],
+     "padrao": "alca_cano_22",
+     "rebate_com": "encaixe_mira",
+     "descricao": "alça de lâmina no cano: deita (animação \"dobrar\") quando há mira no encaixe_mira",
+     "explodir_m": [
+      0.0,
+      0.04,
+      0.0
+     ]
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "rifle_22_sintetico",
+     "posicao_m": [
+      0.0,
+      0.0835,
+      -0.258
+     ],
+     "descricao": "fundo do entalhe da alça: câmera de 1ª pessoa olha daqui pela conta da massa (-Z)"
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_22",
+     "pai": "rifle_22_sintetico",
+     "posicao_m": [
+      0.0,
+      0.062,
+      -0.646
+     ],
+     "aceita": [
+      "protetor_rosca_22",
+      "supressor_22"
+     ],
+     "padrao": "protetor_rosca_22",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.08
+     ]
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_22",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.05,
+      -0.104
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_22_10",
+      "carregador_22_25"
+     ],
+     "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda as malhas do nó carregador"
+    },
+    {
+     "no": "encaixe_bandoleira",
+     "tipo": "bandoleira",
+     "pai": "rifle_22_sintetico",
+     "posicao_m": [
+      0.0,
+      0.0255,
+      -0.368
+     ],
+     "aceita": [
+      "bandoleira"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "rifle_22_sintetico",
+     "posicao_m": [
+      0.0,
+      0.062,
+      -0.658
+     ],
+     "descricao": "clarão de boca e origem do disparo (-Z)"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "rifle_22_sintetico",
+     "posicao_m": [
+      0.0135,
+      0.07,
+      -0.133
+     ],
+     "descricao": "onde nasce o estojo (quando o ferrolho volta, aos 0,55 s do \"atirar\")"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 1.0,
+     "laco": false,
+     "descricao": "tiro (coice pequeno) e manejo do ferrolho: levanta (0,38 s), puxa (0,52 s: soltar o estojo), empurra e abaixa (0,82 s)"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.7,
+     "laco": false,
+     "descricao": "último tiro: o ferrolho fica aberto, atrás"
+    },
+    "vazia": {
+     "duracao_s": 0.1,
+     "laco": true,
+     "descricao": "pose parada: ferrolho aberto"
+    },
+    "recarregar": {
+     "duracao_s": 2.0,
+     "laco": false,
+     "descricao": "aperta o retém na frente do guarda-mato, o carregador cai (0,38 s), novo entra (1,56 s); trocar o nó entre 0,55 e 1,2 s"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "troca o carregador com o ferrolho aberto e fecha o ferrolho (1,95 s) e a alavanca (2,18 s)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "abre um pouco o ferrolho para ver o cartucho na câmara, fecha e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
   }
  ],
  "acessorios": [
@@ -10183,6 +10697,186 @@
    ],
    "triangulos": 2116,
    "kb": 109.0
+  },
+  {
+   "id": "luneta_4x_22",
+   "nome": "Luneta 4× pequena",
+   "grupo": "acessorios",
+   "categoria": "mira",
+   "encaixe": "trilho_mira",
+   "peso_kg": 0.26,
+   "raridade": "comum",
+   "valor_troca": 30,
+   "aumento": [
+    4,
+    4
+   ],
+   "modificadores": {
+    "precisao_mirando": 1.35,
+    "tempo_mirar": 1.1,
+    "alcance_m": 1.4
+   },
+   "onde": [
+    "casa_de_campo",
+    "armazem",
+    "casas"
+   ],
+   "linha_de_visada": "encaixe \"olho\"",
+   "descricao": "Luneta fina e curta de rifle de caça pequena: 4× fixa, retículo de cruz fina.",
+   "arquivo": "acessorios/luneta_4x_22.glb",
+   "tamanho_m": [
+    0.045,
+    0.062,
+    0.236
+   ],
+   "triangulos": 5172,
+   "kb": 260.5,
+   "encaixes": [
+    {
+     "no": "olho",
+     "tipo": "mira",
+     "pai": "luneta_4x_22",
+     "posicao_m": [
+      -0.0,
+      0.028,
+      0.118
+     ],
+     "descricao": "ocular: linha de visada (afastar o olho uns 9 cm)"
+    }
+   ]
+  },
+  {
+   "id": "alca_cano_22",
+   "nome": "Alça de lâmina do .22",
+   "grupo": "acessorios",
+   "categoria": "mira",
+   "encaixe": "alca_cano_22",
+   "peso_kg": 0.01,
+   "raridade": "comum",
+   "modificadores": {},
+   "descricao": "Alça de lâmina com entalhe em U, presa no cano. Deita para trás quando há luneta. Vem no rifle .22.",
+   "arquivo": "acessorios/alca_cano_22.glb",
+   "tamanho_m": [
+    0.015,
+    0.016,
+    0.02
+   ],
+   "triangulos": 412,
+   "kb": 22.3,
+   "partes": [
+    {
+     "no": "lamina",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 85,
+     "descricao": "deita para trás (animação dobrar)",
+     "pai": "alca_cano_22",
+     "explodir_m": [
+      0.0,
+      0.02,
+      0.0
+     ]
+    }
+   ],
+   "animacoes": {
+    "dobrar": {
+     "duracao_s": 0.25,
+     "laco": false,
+     "descricao": "deita a alça"
+    }
+   }
+  },
+  {
+   "id": "protetor_rosca_22",
+   "nome": "Protetor de rosca .22",
+   "grupo": "acessorios",
+   "categoria": "boca",
+   "encaixe": "boca_22",
+   "peso_kg": 0.01,
+   "raridade": "comum",
+   "modificadores": {},
+   "descricao": "Capinha recartilhada que protege a rosca da boca. Vem no rifle.",
+   "arquivo": "acessorios/protetor_rosca_22.glb",
+   "tamanho_m": [
+    0.018,
+    0.018,
+    0.013
+   ],
+   "triangulos": 720,
+   "kb": 44.5
+  },
+  {
+   "id": "supressor_22",
+   "nome": "Supressor .22",
+   "grupo": "acessorios",
+   "categoria": "boca",
+   "encaixe": "boca_22",
+   "peso_kg": 0.16,
+   "raridade": "raro",
+   "valor_troca": 70,
+   "durabilidade": 8000,
+   "modificadores": {
+    "ruido_m": 0.25,
+    "precisao": 1.04,
+    "alcance_m": 0.95
+   },
+   "onde": [
+    "casa_de_campo",
+    "armazem"
+   ],
+   "descricao": "Tubo fino de alumínio que deixa o .22 quase mudo: o estalo vira um \"tec\" que zumbi não ouve a 20 m. Bom para caçar sem chamar a horda.",
+   "arquivo": "acessorios/supressor_22.glb",
+   "tamanho_m": [
+    0.025,
+    0.025,
+    0.156
+   ],
+   "triangulos": 1808,
+   "kb": 86.7
+  },
+  {
+   "id": "carregador_22_10",
+   "nome": "Carregador rotativo .22 (10)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_22",
+   "capacidade": 10,
+   "municao": "municao_22",
+   "peso_kg": 0.05,
+   "raridade": "comum",
+   "descricao": "Carregador rotativo curto, quase rente à coronha. A janela de trás mostra quantos cartuchos sobram.",
+   "arquivo": "acessorios/carregador_22_10.glb",
+   "tamanho_m": [
+    0.025,
+    0.035,
+    0.041
+   ],
+   "triangulos": 1228,
+   "kb": 62.5
+  },
+  {
+   "id": "carregador_22_25",
+   "nome": "Carregador .22 (25)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_22",
+   "capacidade": 25,
+   "municao": "municao_22",
+   "peso_kg": 0.12,
+   "raridade": "incomum",
+   "valor_troca": 15,
+   "modificadores": {
+    "recarga_s": 1.1
+   },
+   "descricao": "Caixa comprida de 25 tiros. Atrapalha deitar o rifle no chão, mas dá para limpar um quintal sem recarregar.",
+   "arquivo": "acessorios/carregador_22_25.glb",
+   "tamanho_m": [
+    0.024,
+    0.119,
+    0.045
+   ],
+   "triangulos": 1096,
+   "kb": 53.3
   }
  ],
  "municao": [
@@ -10778,6 +11472,97 @@
      "abre_graus": 115,
      "descricao": "gira em torno da ponta de trás",
      "pai": "caixa_municao_762",
+     "explodir_m": [
+      0.0,
+      0.05,
+      0.0
+     ]
+    }
+   ],
+   "animacoes": {
+    "abrir": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "abre a tampa"
+    },
+    "fechar": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "fecha a tampa"
+    }
+   }
+  },
+  {
+   "id": "municao_22",
+   "nome": "Cartucho .22",
+   "grupo": "municao",
+   "categoria": "municao",
+   "calibre": ".22",
+   "peso_kg": 0.0035,
+   "empilha": 100,
+   "raridade": "comum",
+   "estojo": "estojo_22",
+   "descricao": "Cartucho pequeno de fogo circular: o mais fácil de achar em casas de campo e lojas. Fraco contra zumbi, ótimo para caça.",
+   "arquivo": "municao/municao_22.glb",
+   "tamanho_m": [
+    0.007,
+    0.007,
+    0.025
+   ],
+   "triangulos": 384,
+   "kb": 17.4
+  },
+  {
+   "id": "estojo_22",
+   "nome": "Estojo .22 (vazio)",
+   "grupo": "municao",
+   "categoria": "estojo",
+   "calibre": ".22",
+   "peso_kg": 0.001,
+   "descricao": "Estojo ejetado: o jogo cria um em saida_estojo a cada tiro (some depois de uns segundos).",
+   "arquivo": "municao/estojo_22.glb",
+   "tamanho_m": [
+    0.007,
+    0.007,
+    0.015
+   ],
+   "triangulos": 240,
+   "kb": 12.2
+  },
+  {
+   "id": "caixa_municao_22",
+   "nome": "Caixa de munição .22 (50)",
+   "grupo": "municao",
+   "categoria": "caixa",
+   "calibre": ".22",
+   "municao": "municao_22",
+   "quantidade": 50,
+   "peso_kg": 0.18,
+   "empilha": 6,
+   "raridade": "comum",
+   "onde": [
+    "casa_de_campo",
+    "armazem",
+    "casas",
+    "galeria"
+   ],
+   "descricao": "Caixinha de papelão com bandeja de 50 cartuchos .22 em pé. A tampa abre (nó \"tampa\", animação \"abrir\").",
+   "arquivo": "municao/caixa_municao_22.glb",
+   "tamanho_m": [
+    0.046,
+    0.032,
+    0.086
+   ],
+   "triangulos": 9308,
+   "kb": 461.1,
+   "partes": [
+    {
+     "no": "tampa",
+     "tipo": "tampa",
+     "eixo": "z",
+     "abre_graus": 115,
+     "descricao": "gira em torno da ponta de trás",
+     "pai": "caixa_municao_22",
      "explodir_m": [
       0.0,
       0.05,

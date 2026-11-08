@@ -28,7 +28,7 @@ props/
 
 ## Lotes
 
-275 itens no total (206 mobílias e 69 itens de loot). O campo `lote` do catálogo diz de qual lote é cada um.
+315 itens no total (222 mobílias e 93 itens de loot). O campo `lote` do catálogo diz de qual lote é cada um.
 
 | Lote | Mobílias | Loot |
 |---|---|---|
@@ -44,11 +44,29 @@ props/
 | 10. Comida e comércio | banqueta giratória de balcão, mesa de booth com dois sofás, jukebox, chapa de lanchonete, vitrine giratória de tortas, máquina de refrigerante de balcão, fritadeira industrial, masseira de padaria, carrinho de assadeiras, expositor de óleo de motor, freezer de sorvete com tampa de vidro, calibrador de pneus, pilha de pneus, geladeira vertical de bebidas, cesta de compras, fileira de poltronas de cinema, carrinho de pipoca, projetor de filme com rolos, balcão de recepção com quadro de chaves, carrinho de bagagem de hotel, carrinho de camareira, frigobar, quadro de horários de partida, relógio de plataforma (dupla face), máquina de lanches, carrinho de carga de plataforma | saco de pão francês |
 | 11. Trabalho | elevador automotivo de duas colunas, carrinho de ferramentas com gavetas, compressor de ar com tanque, painel de ferramentas na parede, totem de ofertas da concessionária, torno mecânico, esteira de roletes, relógio de ponto com cartões, paleteira manual, pilha de tábuas da serraria, pilha de toras, cavalete de serrar lenha, serra de fita industrial, fardo de feno, cocho de água para animais, galinheiro de tela, carrinho de mão, tarro de leite, espantalho, estante porta-pallet, empilhadeira, carcaça de carro depenada, pilha de calotas e peças, bomba d'água manual | macaco jacaré, saco de ração |
 | 12. Lazer | canoa no cavalete, boia salva-vidas na parede, balanço de parquinho, barraca de camping abandonada, guarda-sol fechado com base, telescópio refrator no tripé, carta celeste na parede, espreguiçadeira, cadeira alta de salva-vidas, escada de piscina, boia de piscina murcha, placa de regras da piscina, bandeirinha de buraco do minigolfe, estante de partitura, caixa de som de palco, microfone no pedestal, cadeira dobrável de plateia, poste de alto-falante do drive-in | remo de madeira, colete salva-vidas, skate, taco de minigolfe |
+| 13. Materiais de craft | - | punhado de sucata, pote de parafusos e porcas, molas e engrenagens, placa de circuito, motor elétrico pequeno, rolo de fio elétrico, rolo de arame liso, corrente com cadeado, par de dobradiças, pacote de abraçadeiras de nylon, lata de cola de contato, garrafa PET vazia 2 L, lata vazia, cano de PVC, lona dobrada, trapos amarrados, retalho de couro, saco de carvão, punhado de pedras, tijolos, saco de cimento 25 kg, carretel de linha e anzóis, garrafa de álcool 70 %, pedra de amolar |
+| 14. Armazenamento do abrigo | armário de armas de madeira com tela, cofre de armas de aço, suporte de parede para armas, prateleira de tábuas e tijolos, estante de despensa com caixotes, estante aramada com rodinhas, baú de madeira com cadeado, caixote militar verde, caixa organizadora empilhável, caixa de ferramentas de metal, pallet de tábuas cintadas, pallet de tijolos, pallet de sacos de cimento, pallet de sucata separada, pilha de sacos de areia no pallet, lenheiro coberto | - |
 
 As versões completas das armas (fogo, arcos, facas, facão, lança), com partes, acessórios e animações, ficam em `props/armas/`; o arco, a lança e o facão daqui são o loot simples.
 
-O lote 1 fica em `gerar_props.py`; os outros em `lote2.py` a `lote12.py`, que o gerador carrega com as mesmas funções e materiais (o laço vai até o lote 19). Para um lote novo, crie `lote13.py`; categorias novas entram no dicionário `NOMES` de `gerar_props.py`.
+O lote 1 fica em `gerar_props.py`; os outros em `lote2.py` a `lote14.py`, que o gerador carrega com as mesmas funções e materiais (o laço vai até o lote 29). Para um lote novo, crie `lote15.py`; categorias novas entram no dicionário `NOMES` de `gerar_props.py`.
 
 Os lotes 6 a 12 trazem os itens únicos de cada tipo de prédio. Quem os põe dentro dos prédios é `scripts/ambientacao/` (ver `ROTEIRO_AMBIENTACAO.md`).
 
 Algumas mobílias trazem campos a mais para o jogo: `esconderijo` (vaso sanitário), `modulo_m` (gôndola, encaixa lado a lado), `empurrar` (carrinho), `vagas` (beliche), `desmontavel` (pallet), `usa` (rádio, gerador), `portatil` e `peso_kg` (fogareiro, gerador).
+
+## Craft e armazenamento (lotes 13 em diante)
+
+A linha do tempo do jogo (Sozinho → Abrigo → Assentamento → Vila → Cidade nova) vira lotes: 13 materiais, 14 armazenamento, e os próximos com itens feitos à mão, bancadas, defesa, comunidade e vila/cidade. `python props/craft.py` gera `CRAFT.md` (receitas por fase, de onde vem cada material e o que cada peça guarda) e confere que todo ingrediente existe no catálogo.
+
+Campos novos:
+
+- `fase`: fase do jogo em que o item passa a importar (1 a 5).
+- `celulas` [largura, altura]: tamanho na grade do inventário (o `grade.gd` do jogo lê direto; sem ele, calcula pela medida).
+- `obtem_de`: de onde sai o material quando não é achado pronto (`desmontar` uma mobília, `consumir` um item, `fazer` numa estação), com `qtd`.
+- `constroi` + `ferramenta` (mobílias) e `craft` {`ingredientes`, `estacao`, `ferramenta`, `tempo_s`} (itens): receitas, sempre com ids do catálogo.
+- `grade` [w, h]: inventário em grade do contêiner; `aceita`: categorias que ele guarda (vazio = tudo); `trancado`/`tranca`.
+- `vagas_armas` [{`tipo`, `pos`, `rot_y`}]: onde cada arma fica exposta no armário ou rack. `longa` (fuzil, espingarda, carabina, rifle, arco, besta) apoia a coronha em `pos` com o cano para cima (`deitada` no rack de parede), `curta` (pistola, revólver, SMG compacta) pendura no gancho e `branca` (faca, facão, machadinha, bastão) vai na barra.
+- `exibe` [{`y`, `x`, `z`}]: tampos das prateleiras onde o jogo põe os modelos do que está guardado.
+- `estoque` {`item`, `max`} + partes `camada_N` (tipo `camada`, `unidades`, `ordem`): paletes e o lenheiro guardam material de construção; o jogo esconde as camadas de cima conforme o estoque cai.
+- `empilhavel` + `altura_m`: caixas que encaixam uma sobre a outra.

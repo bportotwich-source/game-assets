@@ -212,6 +212,22 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Microfone no pedestal (`microfone_pedestal`) | 12 | Concha acústica | 0,75 × 1,51 × 0,53 | - | - | - | 556 |
 | Cadeira dobrável de plateia (`cadeira_dobravel`) | 12 | Concha acústica | 0,44 × 0,86 × 0,45 | - | - | sentar | 336 |
 | Poste de alto-falante do drive-in (`poste_som_drivein`) | 12 | Drive-in | 0,73 × 1,27 × 0,53 | - | - | - | 876 |
+| Armário de armas de madeira com tela (`armario_armas_abrigo`) | 14 | Armazenamento do abrigo | 1,15 × 2,10 × 0,86 | 12 espaços: armas, municao | porta_esq, porta_dir | barricada | 26644 |
+| Cofre de armas de aço (`cofre_armas`) | 14 | Armazenamento do abrigo | 0,76 × 1,55 × 0,60 | 14 espaços: armas, municao, moedas | porta | - | 4292 |
+| Suporte de parede para armas (`rack_armas_parede`) | 14 | Armazenamento do abrigo | 1,10 × 1,00 × 0,11 | - | - | - | 1952 |
+| Prateleira de tábuas e tijolos (`prateleira_improvisada`) | 14 | Armazenamento do abrigo | 1,49 × 0,86 × 0,30 | 9 espaços: comida, utensilios, materiais | - | - | 2364 |
+| Estante de despensa com caixotes (`despensa`) | 14 | Armazenamento do abrigo | 1,20 × 1,86 × 0,41 | 16 espaços: comida, agua | - | - | 20656 |
+| Estante aramada com rodinhas (`estante_aramada`) | 14 | Armazenamento do abrigo | 0,92 × 1,61 × 0,50 | 10 espaços: comida, limpeza, utensilios | - | barricada | 14240 |
+| Baú de madeira com cadeado (`bau_madeira`) | 14 | Armazenamento do abrigo | 1,05 × 0,51 × 0,57 | 15 espaços: roupas, ferramentas, moedas, lembrancas | tampa | barricada, sentar | 2416 |
+| Caixote militar verde (`caixa_militar`) | 14 | Armazenamento do abrigo | 1,01 × 0,40 × 0,51 | 10 espaços: municao, remedios, ferramentas, comida | tampa | barricada | 1616 |
+| Caixa organizadora empilhável (`caixa_organizadora`) | 14 | Armazenamento do abrigo | 0,63 × 0,32 × 0,45 | 6 espaços: utensilios, roupas, higiene, pilhas | tampa | - | 292 |
+| Caixa de ferramentas de metal (`caixa_ferramentas`) | 14 | Armazenamento do abrigo | 0,50 × 0,27 × 0,23 | 6 espaços: ferramentas, materiais | tampa | - | 776 |
+| Pallet de tábuas cintadas (`pallet_tabuas`) | 14 | Armazenamento do abrigo | 1,50 × 0,30 × 0,85 | - | camada_1, camada_2, camada_3, camada_4, camada_5, camada_6 | - | 7432 |
+| Pallet de tijolos (`pallet_tijolos`) | 14 | Armazenamento do abrigo | 1,20 × 0,43 × 0,80 | - | camada_1, camada_2, camada_3, camada_4, camada_5 | - | 6316 |
+| Pallet de sacos de cimento (`pallet_cimento`) | 14 | Armazenamento do abrigo | 1,20 × 0,68 × 0,80 | - | camada_1, camada_2, camada_3, camada_4, camada_5 | - | 17228 |
+| Pallet de sucata separada (`pallet_sucata`) | 14 | Armazenamento do abrigo | 1,20 × 0,45 × 0,80 | - | camada_1, camada_2, camada_3, camada_4 | - | 4624 |
+| Pilha de sacos de areia no pallet (`pallet_sacos_areia`) | 14 | Armazenamento do abrigo | 1,21 × 0,51 × 1,00 | - | camada_1, camada_2, camada_3 | - | 21388 |
+| Lenheiro coberto (`lenheiro`) | 14 | Armazenamento do abrigo | 1,80 × 1,53 × 0,89 | - | camada_1, camada_2, camada_3, camada_4 | - | 11164 |
 
 ## Loot
 
@@ -286,3 +302,27 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Colete salva-vidas (`colete_salva_vidas`) | 12 | Roupas e equipamento | equipamento | 1 | 0,8 kg | 1 | flutua (atravessa o lago); +5 de proteção leve | casa_de_barcos, piscina, parque |
 | Skate (`skate`) | 12 | Utensílios | equipamento | 2 | 2,2 kg | 1 | anda 40% mais rápido no asfalto (rodinhas fazem barulho); arma leve (dano 10) | pista_skate, casas, escolinha, rua |
 | Taco de minigolfe (`taco_golfe`) | 12 | Armas improvisadas | arma | 2 | 0,5 kg | 1 | arma corpo a corpo leve (quebra fácil) (dano 12) | minigolfe, mansao, casas |
+| Punhado de sucata (`sucata_metal`) | 13 | Materiais de construção | sucata | 1 | 1,2 kg | 10 | 1 sucata: base de quase toda receita de metal | ferrovelho, garagem, posto, fabrica, rua |
+| Pote de parafusos e porcas (`pote_parafusos`) | 13 | Materiais de construção | sucata | 2 | 0,9 kg | 4 | fixa peças: armas, bancadas, portas reforçadas | garagem, casas, fabrica, serraria |
+| Molas e engrenagens (`engrenagens`) | 13 | Materiais de construção | pecas | 1 | 0,6 kg | 6 | mecanismos: armadilhas, besta, bomba d'água, cata-vento | fabrica, garagem, relojoaria, casas |
+| Placa de circuito (`placa_circuito`) | 13 | Luz e eletrônicos | pecas | 1 | 0,2 kg | 6 | eletrônica: rádio, holofote, painel solar | casas, escritorio, cinema, delegacia, correios |
+| Motor elétrico pequeno (`motor_eletrico`) | 13 | Luz e eletrônicos | pecas | 2 | 1,6 kg | 1 | gera energia girando (cata-vento, bicicleta-gerador) ou move bomba d'água | casas, fabrica, garagem, lavanderia |
+| Rolo de fio elétrico (`fio_eletrico`) | 13 | Luz e eletrônicos | pecas | 1 | 0,8 kg | 3 | ligar luzes, alarmes, gerador e painel solar (10 m) | casas, fabrica, garagem, cinema, hotel |
+| Rolo de arame liso (`arame_liso`) | 13 | Materiais de construção | sucata | 1 | 1,0 kg | 3 | amarrar: armadilhas, cercas, lanças e reparos (20 m) | armazem, fazenda, serraria, garagem, casa_de_campo |
+| Corrente com cadeado (`corrente_cadeado`) | 13 | Materiais de construção | sucata | 2 | 2,2 kg | 1 | tranca portão ou armário (zumbi não abre, saqueador precisa de alicate) | garagem, armazem, delegacia, estacao, parque_trailers |
+| Par de dobradiças (`dobradicas`) | 13 | Materiais de construção | sucata | 1 | 0,4 kg | 6 | portões, alçapões, tampas de caixote e armários | casas, garagem, serraria, armazem |
+| Pacote de abraçadeiras de nylon (`abracadeiras`) | 13 | Materiais de construção | material | 1 | 0,1 kg | 10 | amarra rápido: armadilhas, lanternas na arma, reparos | garagem, casas, fabrica, cinema, supermercado |
+| Lata de cola de contato (`cola_contato`) | 13 | Materiais de construção | material | 1 | 0,3 kg | 4 | cola couro, borracha e madeira: proteções, reparo de botas e mochila | casas, garagem, serraria, escolinha |
+| Garrafa PET vazia 2 L (`garrafa_pet`) | 13 | Utensílios | material | 1 | 0,05 kg | 4 | filtro de água, coletor, armadilha de garrafa e isca | casas, rua, supermercado, diner, posto |
+| Lata vazia (`lata_vazia`) | 13 | Utensílios | sucata | 1 | 0,06 kg | 8 | alarme de latas, lamparina, fogareiro e caneca de ferver água | casas, rua, supermercado, diner, abrigo |
+| Cano de PVC (`tubo_pvc`) | 13 | Materiais de construção | material | 1 | 0,6 kg | 4 | calhas, coletor de chuva, irrigação da horta e filtros | casas, armazem, fabrica, piscina, fazenda |
+| Lona dobrada (`lona`) | 13 | Materiais de construção | material | 2 | 2,5 kg | 2 | cobre telhado quebrado, barraca, estufa e coletor de chuva (4 × 3 m) | armazem, fazenda, garagem, parque_trailers, posto |
+| Trapos amarrados (`trapos`) | 13 | Materiais de construção | material | 1 | 0,3 kg | 10 | curativo, tocha, filtro, remendo e pavio de molotov | casas, lavanderia, hotel, motel, garagem |
+| Retalho de couro (`couro`) | 13 | Materiais de construção | material | 1 | 0,5 kg | 6 | protetor de braço anti-mordida, coldre, alças e botas | casas, fazenda, mansao, concessionaria, cinema |
+| Saco de carvão (`carvao`) | 13 | Combustível | combustivel | 3 | 3,0 kg | 1 | combustível da forja e do defumador; carvão moído vai no filtro de água | supermercado, posto, casas, diner, armazem |
+| Punhado de pedras (`pedras`) | 13 | Materiais de construção | material | 1 | 2,0 kg | 10 | fogueira, forno de barro, peso de armadilha e muro de pedra | rua, parque, fazenda, casa_barcos, serraria |
+| Tijolos (`tijolo`) | 13 | Materiais de construção | material | 1 | 2,4 kg | 6 | fogão de tijolo, forno comunitário, forja e muros | fabrica, ruinas, casas, armazem |
+| Saco de cimento 25 kg (`cimento`) | 13 | Materiais de construção | material | 3 | 25,0 kg | 1 | muralha de concreto, cisterna, reforma de prédios (fase 4) | armazem, fabrica, garagem_vertical, ruinas |
+| Carretel de linha e anzóis (`linha_pesca`) | 13 | Utensílios | material | 1 | 0,1 kg | 6 | vara de pesca, armadilha de linha e costura de ferimento | casa_barcos, casas, supermercado, parque_trailers |
+| Garrafa de álcool 70 % (`alcool`) | 13 | Remédios | remedios | 1 | 1,0 kg | 2 | desinfeta ferimento, acende fogo, combustível da lamparina e do molotov | supermercado, clinica, casas, posto |
+| Pedra de amolar (`pedra_amolar`) | 13 | Ferramentas | ferramenta | 2 | 0,4 kg | 1 | recupera o fio de facas, facão, machado e lança (sem bancada) | casas, fazenda, serraria, casa_de_campo |

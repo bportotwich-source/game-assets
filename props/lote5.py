@@ -78,7 +78,7 @@ def barricada_janela(M):
 
 
 @item('alarme_latas', 'Alarme de latas', 'mobilias', 'barricadas', montagem='wall', comodos=['casas', 'abrigo', 'quartel'],
-      vao='porta 0,9 m', vao_m=[0.9, 2.1, 0.0], constroi={'corda': 1, 'latas vazias': 4}, ferramenta='nenhuma',
+      vao='porta 0,9 m', vao_m=[0.9, 2.1, 0.0], constroi={'corda': 1, 'lata_vazia': 4}, ferramenta='nenhuma',
       estacao='alarme (zumbi tropeça na linha, as latas batem e acordam o jogador)')
 def alarme_latas(M):
     p = M.base; X = 0.48

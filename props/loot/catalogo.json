@@ -2019,6 +2019,922 @@
    ],
    "triangulos": 1136,
    "kb": 56.0
+  },
+  {
+   "id": "sucata_metal",
+   "nome": "Punhado de sucata",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "sucata",
+   "valor": 1,
+   "peso_kg": 1.2,
+   "empilha": 10,
+   "celulas": [
+    2,
+    1
+   ],
+   "fase": 1,
+   "onde": [
+    "ferrovelho",
+    "garagem",
+    "posto",
+    "fabrica",
+    "rua"
+   ],
+   "efeito": "1 sucata: base de quase toda receita de metal",
+   "obtem_de": [
+    {
+     "desmontar": "carcaca_carro",
+     "qtd": 12
+    },
+    {
+     "desmontar": "pilha_sucata",
+     "qtd": 8
+    },
+    {
+     "desmontar": "carrinho_compras",
+     "qtd": 3
+    },
+    {
+     "desmontar": "arquivo_aco",
+     "qtd": 4
+    },
+    {
+     "desmontar": "estante_metal",
+     "qtd": 4
+    }
+   ],
+   "arquivo": "loot/sucata_metal.glb",
+   "tamanho_m": [
+    0.282,
+    0.04,
+    0.125
+   ],
+   "triangulos": 2704,
+   "kb": 190.7
+  },
+  {
+   "id": "pote_parafusos",
+   "nome": "Pote de parafusos e porcas",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "sucata",
+   "valor": 2,
+   "peso_kg": 0.9,
+   "empilha": 4,
+   "celulas": [
+    1,
+    1
+   ],
+   "fase": 1,
+   "onde": [
+    "garagem",
+    "casas",
+    "fabrica",
+    "serraria"
+   ],
+   "efeito": "fixa peças: armas, bancadas, portas reforçadas",
+   "arquivo": "loot/pote_parafusos.glb",
+   "tamanho_m": [
+    0.087,
+    0.112,
+    0.087
+   ],
+   "triangulos": 9064,
+   "kb": 443.8
+  },
+  {
+   "id": "engrenagens",
+   "nome": "Molas e engrenagens",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "pecas",
+   "valor": 1,
+   "peso_kg": 0.6,
+   "empilha": 6,
+   "celulas": [
+    1,
+    1
+   ],
+   "fase": 2,
+   "onde": [
+    "fabrica",
+    "garagem",
+    "relojoaria",
+    "casas"
+   ],
+   "efeito": "mecanismos: armadilhas, besta, bomba d'água, cata-vento",
+   "obtem_de": [
+    {
+     "desmontar": "relogio_parede",
+     "qtd": 2
+    },
+    {
+     "desmontar": "maquina_lavar",
+     "qtd": 3
+    },
+    {
+     "desmontar": "vitrola",
+     "qtd": 2
+    }
+   ],
+   "arquivo": "loot/engrenagens.glb",
+   "tamanho_m": [
+    0.133,
+    0.03,
+    0.136
+   ],
+   "triangulos": 5168,
+   "kb": 244.8
+  },
+  {
+   "id": "placa_circuito",
+   "nome": "Placa de circuito",
+   "grupo": "loot",
+   "categoria": "eletronicos",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "pecas",
+   "valor": 1,
+   "peso_kg": 0.2,
+   "empilha": 6,
+   "celulas": [
+    1,
+    1
+   ],
+   "fase": 3,
+   "onde": [
+    "casas",
+    "escritorio",
+    "cinema",
+    "delegacia",
+    "correios"
+   ],
+   "efeito": "eletrônica: rádio, holofote, painel solar",
+   "obtem_de": [
+    {
+     "desmontar": "rack_tv",
+     "qtd": 2
+    },
+    {
+     "desmontar": "tv_tubo",
+     "qtd": 2
+    },
+    {
+     "desmontar": "radio_portatil",
+     "qtd": 1
+    }
+   ],
+   "arquivo": "loot/placa_circuito.glb",
+   "tamanho_m": [
+    0.14,
+    0.022,
+    0.1
+   ],
+   "triangulos": 1448,
+   "kb": 154.6
+  },
+  {
+   "id": "motor_eletrico",
+   "nome": "Motor elétrico pequeno",
+   "grupo": "loot",
+   "categoria": "eletronicos",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "pecas",
+   "valor": 2,
+   "peso_kg": 1.6,
+   "empilha": 1,
+   "celulas": [
+    2,
+    1
+   ],
+   "fase": 3,
+   "onde": [
+    "casas",
+    "fabrica",
+    "garagem",
+    "lavanderia"
+   ],
+   "efeito": "gera energia girando (cata-vento, bicicleta-gerador) ou move bomba d'água",
+   "obtem_de": [
+    {
+     "desmontar": "maquina_lavar",
+     "qtd": 1
+    },
+    {
+     "desmontar": "aquecedor",
+     "qtd": 1
+    },
+    {
+     "desmontar": "compressor_ar",
+     "qtd": 1
+    }
+   ],
+   "arquivo": "loot/motor_eletrico.glb",
+   "tamanho_m": [
+    0.178,
+    0.116,
+    0.17
+   ],
+   "triangulos": 1528,
+   "kb": 75.2
+  },
+  {
+   "id": "fio_eletrico",
+   "nome": "Rolo de fio elétrico",
+   "grupo": "loot",
+   "categoria": "eletronicos",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "pecas",
+   "valor": 1,
+   "peso_kg": 0.8,
+   "empilha": 3,
+   "celulas": [
+    1,
+    1
+   ],
+   "fase": 2,
+   "onde": [
+    "casas",
+    "fabrica",
+    "garagem",
+    "cinema",
+    "hotel"
+   ],
+   "efeito": "ligar luzes, alarmes, gerador e painel solar (10 m)",
+   "obtem_de": [
+    {
+     "desmontar": "cordao_luzes",
+     "qtd": 1
+    },
+    {
+     "desmontar": "abajur",
+     "qtd": 1
+    }
+   ],
+   "arquivo": "loot/fio_eletrico.glb",
+   "tamanho_m": [
+    0.208,
+    0.039,
+    0.125
+   ],
+   "triangulos": 5500,
+   "kb": 260.4
+  },
+  {
+   "id": "arame_liso",
+   "nome": "Rolo de arame liso",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "sucata",
+   "valor": 1,
+   "peso_kg": 1.0,
+   "empilha": 3,
+   "celulas": [
+    1,
+    1
+   ],
+   "fase": 1,
+   "onde": [
+    "armazem",
+    "fazenda",
+    "serraria",
+    "garagem",
+    "casa_de_campo"
+   ],
+   "efeito": "amarrar: armadilhas, cercas, lanças e reparos (20 m)",
+   "arquivo": "loot/arame_liso.glb",
+   "tamanho_m": [
+    0.194,
+    0.033,
+    0.145
+   ],
+   "triangulos": 13108,
+   "kb": 615.4
+  },
+  {
+   "id": "corrente_cadeado",
+   "nome": "Corrente com cadeado",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "sucata",
+   "valor": 2,
+   "peso_kg": 2.2,
+   "empilha": 1,
+   "celulas": [
+    2,
+    1
+   ],
+   "fase": 2,
+   "onde": [
+    "garagem",
+    "armazem",
+    "delegacia",
+    "estacao",
+    "parque_trailers"
+   ],
+   "efeito": "tranca portão ou armário (zumbi não abre, saqueador precisa de alicate)",
+   "arquivo": "loot/corrente_cadeado.glb",
+   "tamanho_m": [
+    0.404,
+    0.03,
+    0.16
+   ],
+   "triangulos": 4844,
+   "kb": 231.3
+  },
+  {
+   "id": "dobradicas",
+   "nome": "Par de dobradiças",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "sucata",
+   "valor": 1,
+   "peso_kg": 0.4,
+   "empilha": 6,
+   "celulas": [
+    1,
+    1
+   ],
+   "fase": 2,
+   "onde": [
+    "casas",
+    "garagem",
+    "serraria",
+    "armazem"
+   ],
+   "efeito": "portões, alçapões, tampas de caixote e armários",
+   "obtem_de": [
+    {
+     "desmontar": "guarda_roupa",
+     "qtd": 2
+    },
+    {
+     "desmontar": "armario_aereo",
+     "qtd": 2
+    }
+   ],
+   "arquivo": "loot/dobradicas.glb",
+   "tamanho_m": [
+    0.158,
+    0.009,
+    0.105
+   ],
+   "triangulos": 1664,
+   "kb": 79.8
+  },
+  {
+   "id": "abracadeiras",
+   "nome": "Pacote de abraçadeiras de nylon",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "material",
+   "valor": 1,
+   "peso_kg": 0.1,
+   "empilha": 10,
+   "celulas": [
+    1,
+    1
+   ],
+   "fase": 1,
+   "onde": [
+    "garagem",
+    "casas",
+    "fabrica",
+    "cinema",
+    "supermercado"
+   ],
+   "efeito": "amarra rápido: armadilhas, lanternas na arma, reparos",
+   "arquivo": "loot/abracadeiras.glb",
+   "tamanho_m": [
+    0.21,
+    0.017,
+    0.224
+   ],
+   "triangulos": 1152,
+   "kb": 71.8
+  },
+  {
+   "id": "cola_contato",
+   "nome": "Lata de cola de contato",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "material",
+   "valor": 1,
+   "peso_kg": 0.3,
+   "empilha": 4,
+   "celulas": [
+    1,
+    1
+   ],
+   "fase": 2,
+   "onde": [
+    "casas",
+    "garagem",
+    "serraria",
+    "escolinha"
+   ],
+   "efeito": "cola couro, borracha e madeira: proteções, reparo de botas e mochila",
+   "arquivo": "loot/cola_contato.glb",
+   "tamanho_m": [
+    0.077,
+    0.103,
+    0.074
+   ],
+   "triangulos": 1724,
+   "kb": 127.0
+  },
+  {
+   "id": "garrafa_pet",
+   "nome": "Garrafa PET vazia 2 L",
+   "grupo": "loot",
+   "categoria": "utensilios",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "material",
+   "valor": 1,
+   "peso_kg": 0.05,
+   "empilha": 4,
+   "celulas": [
+    1,
+    2
+   ],
+   "fase": 1,
+   "onde": [
+    "casas",
+    "rua",
+    "supermercado",
+    "diner",
+    "posto"
+   ],
+   "efeito": "filtro de água, coletor, armadilha de garrafa e isca",
+   "arquivo": "loot/garrafa_pet.glb",
+   "tamanho_m": [
+    0.324,
+    0.11,
+    0.11
+   ],
+   "triangulos": 3024,
+   "kb": 143.6
+  },
+  {
+   "id": "lata_vazia",
+   "nome": "Lata vazia",
+   "grupo": "loot",
+   "categoria": "utensilios",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "sucata",
+   "valor": 1,
+   "peso_kg": 0.06,
+   "empilha": 8,
+   "celulas": [
+    1,
+    1
+   ],
+   "fase": 1,
+   "onde": [
+    "casas",
+    "rua",
+    "supermercado",
+    "diner",
+    "abrigo"
+   ],
+   "efeito": "alarme de latas, lamparina, fogareiro e caneca de ferver água",
+   "obtem_de": [
+    {
+     "consumir": "lata_feijao",
+     "qtd": 1
+    },
+    {
+     "consumir": "lata_milho",
+     "qtd": 1
+    }
+   ],
+   "arquivo": "loot/lata_vazia.glb",
+   "tamanho_m": [
+    0.098,
+    0.176,
+    0.078
+   ],
+   "triangulos": 4272,
+   "kb": 266.9
+  },
+  {
+   "id": "tubo_pvc",
+   "nome": "Cano de PVC",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "material",
+   "valor": 1,
+   "peso_kg": 0.6,
+   "empilha": 4,
+   "celulas": [
+    4,
+    1
+   ],
+   "fase": 2,
+   "onde": [
+    "casas",
+    "armazem",
+    "fabrica",
+    "piscina",
+    "fazenda"
+   ],
+   "efeito": "calhas, coletor de chuva, irrigação da horta e filtros",
+   "arquivo": "loot/tubo_pvc.glb",
+   "tamanho_m": [
+    1.0,
+    0.059,
+    0.238
+   ],
+   "triangulos": 1300,
+   "kb": 80.4
+  },
+  {
+   "id": "lona",
+   "nome": "Lona dobrada",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "material",
+   "valor": 2,
+   "peso_kg": 2.5,
+   "empilha": 2,
+   "celulas": [
+    2,
+    2
+   ],
+   "fase": 1,
+   "onde": [
+    "armazem",
+    "fazenda",
+    "garagem",
+    "parque_trailers",
+    "posto"
+   ],
+   "efeito": "cobre telhado quebrado, barraca, estufa e coletor de chuva (4 × 3 m)",
+   "arquivo": "loot/lona.glb",
+   "tamanho_m": [
+    0.45,
+    0.078,
+    0.32
+   ],
+   "triangulos": 13128,
+   "kb": 950.7
+  },
+  {
+   "id": "trapos",
+   "nome": "Trapos amarrados",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "material",
+   "valor": 1,
+   "peso_kg": 0.3,
+   "empilha": 10,
+   "celulas": [
+    1,
+    1
+   ],
+   "fase": 1,
+   "onde": [
+    "casas",
+    "lavanderia",
+    "hotel",
+    "motel",
+    "garagem"
+   ],
+   "efeito": "curativo, tocha, filtro, remendo e pavio de molotov",
+   "obtem_de": [
+    {
+     "desmontar": "roupas",
+     "qtd": 3
+    },
+    {
+     "desmontar": "cama_solteiro",
+     "qtd": 2
+    },
+    {
+     "desmontar": "cama_casal",
+     "qtd": 3
+    }
+   ],
+   "arquivo": "loot/trapos.glb",
+   "tamanho_m": [
+    0.26,
+    0.108,
+    0.161
+   ],
+   "triangulos": 16626,
+   "kb": 1216.1
+  },
+  {
+   "id": "couro",
+   "nome": "Retalho de couro",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "material",
+   "valor": 1,
+   "peso_kg": 0.5,
+   "empilha": 6,
+   "celulas": [
+    2,
+    1
+   ],
+   "fase": 2,
+   "onde": [
+    "casas",
+    "fazenda",
+    "mansao",
+    "concessionaria",
+    "cinema"
+   ],
+   "efeito": "protetor de braço anti-mordida, coldre, alças e botas",
+   "obtem_de": [
+    {
+     "desmontar": "poltrona",
+     "qtd": 2
+    },
+    {
+     "desmontar": "sofa",
+     "qtd": 3
+    },
+    {
+     "desmontar": "mesa_booth",
+     "qtd": 2
+    }
+   ],
+   "arquivo": "loot/couro.glb",
+   "tamanho_m": [
+    0.29,
+    0.069,
+    0.17
+   ],
+   "triangulos": 1220,
+   "kb": 118.3
+  },
+  {
+   "id": "carvao",
+   "nome": "Saco de carvão",
+   "grupo": "loot",
+   "categoria": "combustivel",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "combustivel",
+   "valor": 3,
+   "peso_kg": 3.0,
+   "empilha": 1,
+   "celulas": [
+    2,
+    2
+   ],
+   "fase": 2,
+   "onde": [
+    "supermercado",
+    "posto",
+    "casas",
+    "diner",
+    "armazem"
+   ],
+   "efeito": "combustível da forja e do defumador; carvão moído vai no filtro de água",
+   "obtem_de": [
+    {
+     "fazer": "fogueira",
+     "qtd": 1
+    }
+   ],
+   "arquivo": "loot/carvao.glb",
+   "tamanho_m": [
+    0.491,
+    0.122,
+    0.222
+   ],
+   "triangulos": 6434,
+   "kb": 513.4
+  },
+  {
+   "id": "pedras",
+   "nome": "Punhado de pedras",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "material",
+   "valor": 1,
+   "peso_kg": 2.0,
+   "empilha": 10,
+   "celulas": [
+    1,
+    1
+   ],
+   "fase": 1,
+   "onde": [
+    "rua",
+    "parque",
+    "fazenda",
+    "casa_barcos",
+    "serraria"
+   ],
+   "efeito": "fogueira, forno de barro, peso de armadilha e muro de pedra",
+   "arquivo": "loot/pedras.glb",
+   "tamanho_m": [
+    0.134,
+    0.052,
+    0.121
+   ],
+   "triangulos": 3200,
+   "kb": 309.2
+  },
+  {
+   "id": "tijolo",
+   "nome": "Tijolos",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "material",
+   "valor": 1,
+   "peso_kg": 2.4,
+   "empilha": 6,
+   "celulas": [
+    1,
+    1
+   ],
+   "fase": 2,
+   "onde": [
+    "fabrica",
+    "ruinas",
+    "casas",
+    "armazem"
+   ],
+   "efeito": "fogão de tijolo, forno comunitário, forja e muros",
+   "obtem_de": [
+    {
+     "desmontar": "ruina",
+     "qtd": 6
+    }
+   ],
+   "arquivo": "loot/tijolo.glb",
+   "tamanho_m": [
+    0.281,
+    0.114,
+    0.112
+   ],
+   "triangulos": 396,
+   "kb": 95.1
+  },
+  {
+   "id": "cimento",
+   "nome": "Saco de cimento 25 kg",
+   "grupo": "loot",
+   "categoria": "materiais",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "material",
+   "valor": 3,
+   "peso_kg": 25.0,
+   "empilha": 1,
+   "celulas": [
+    3,
+    2
+   ],
+   "fase": 4,
+   "onde": [
+    "armazem",
+    "fabrica",
+    "garagem_vertical",
+    "ruinas"
+   ],
+   "efeito": "muralha de concreto, cisterna, reforma de prédios (fase 4)",
+   "arquivo": "loot/cimento.glb",
+   "tamanho_m": [
+    0.6,
+    0.114,
+    0.403
+   ],
+   "triangulos": 6276,
+   "kb": 500.3
+  },
+  {
+   "id": "linha_pesca",
+   "nome": "Carretel de linha e anzóis",
+   "grupo": "loot",
+   "categoria": "utensilios",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "material",
+   "valor": 1,
+   "peso_kg": 0.1,
+   "empilha": 6,
+   "celulas": [
+    1,
+    1
+   ],
+   "fase": 1,
+   "onde": [
+    "casa_barcos",
+    "casas",
+    "supermercado",
+    "parque_trailers"
+   ],
+   "efeito": "vara de pesca, armadilha de linha e costura de ferimento",
+   "arquivo": "loot/linha_pesca.glb",
+   "tamanho_m": [
+    0.143,
+    0.023,
+    0.098
+   ],
+   "triangulos": 3120,
+   "kb": 175.0
+  },
+  {
+   "id": "alcool",
+   "nome": "Garrafa de álcool 70 %",
+   "grupo": "loot",
+   "categoria": "remedios",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "remedios",
+   "valor": 1,
+   "peso_kg": 1.0,
+   "empilha": 2,
+   "celulas": [
+    1,
+    2
+   ],
+   "fase": 1,
+   "onde": [
+    "supermercado",
+    "clinica",
+    "casas",
+    "posto"
+   ],
+   "efeito": "desinfeta ferimento, acende fogo, combustível da lamparina e do molotov",
+   "arquivo": "loot/alcool.glb",
+   "tamanho_m": [
+    0.09,
+    0.214,
+    0.06
+   ],
+   "triangulos": 312,
+   "kb": 49.0
+  },
+  {
+   "id": "pedra_amolar",
+   "nome": "Pedra de amolar",
+   "grupo": "loot",
+   "categoria": "ferramentas",
+   "montagem": "floor",
+   "lote": 13,
+   "recurso": "ferramenta",
+   "valor": 2,
+   "peso_kg": 0.4,
+   "empilha": 1,
+   "celulas": [
+    1,
+    1
+   ],
+   "fase": 1,
+   "onde": [
+    "casas",
+    "fazenda",
+    "serraria",
+    "casa_de_campo"
+   ],
+   "efeito": "recupera o fio de facas, facão, machado e lança (sem bancada)",
+   "arquivo": "loot/pedra_amolar.glb",
+   "tamanho_m": [
+    0.23,
+    0.044,
+    0.07
+   ],
+   "triangulos": 220,
+   "kb": 106.3
   }
  ]
 }

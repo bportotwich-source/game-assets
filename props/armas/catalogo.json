@@ -8107,6 +8107,670 @@
      "descricao": "respiração leve parado"
     }
    }
+  },
+  {
+   "id": "pistola_guardia_9mm",
+   "nome": "Pistola Guardiã 9 mm",
+   "grupo": "armas",
+   "categoria": "pistola",
+   "descricao": "Pistola de serviço de armação de alumínio cor de areia: ferrolho aberto em cima, cão externo, alavanca que desarma o cão, trilho para lanterna e cano com rosca. Mais pesada que a Sentinela, coice mais manso e 17 tiros.",
+   "classe": "fogo",
+   "calibre": "9 mm",
+   "municao": "municao_9mm",
+   "capacidade": 17,
+   "dano": 34,
+   "alcance_m": 28,
+   "alcance_max_m": 55,
+   "modo": "semiautomático (ação dupla e simples)",
+   "tiros_por_s": 4.0,
+   "recarga_s": 1.6,
+   "recarga_vazia_s": 2.1,
+   "precisao": 0.76,
+   "recuo": 0.26,
+   "ruido_m": 60,
+   "durabilidade": 900,
+   "peso_kg": 0.98,
+   "raridade": "raro",
+   "valor_troca": 55,
+   "onde": [
+    "quartel",
+    "delegacia",
+    "posto",
+    "banco"
+   ],
+   "arquivo": "armas/pistola_guardia_9mm.glb",
+   "tamanho_m": [
+    0.033,
+    0.158,
+    0.263
+   ],
+   "triangulos": 45324,
+   "kb": 2371.9,
+   "partes": [
+    {
+     "no": "talas",
+     "tipo": "fixa",
+     "descricao": "talas do cabo (trocáveis)",
+     "pai": "pistola_guardia_9mm",
+     "explodir_m": [
+      -0.0,
+      -0.02,
+      0.03
+     ]
+    },
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -16,
+     "descricao": "ação dupla: puxada longa arma e solta o cão; depois do 1º tiro a puxada é curta",
+     "pai": "pistola_guardia_9mm",
+     "explodir_m": [
+      0.0,
+      -0.03,
+      -0.05
+     ]
+    },
+    {
+     "no": "cao",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 48,
+     "descricao": "cão externo de anel: arma 48° para trás (o ferrolho arma no tiro)",
+     "pai": "pistola_guardia_9mm",
+     "explodir_m": [
+      -0.0,
+      0.04,
+      0.03
+     ]
+    },
+    {
+     "no": "cano",
+     "tipo": "desliza",
+     "curso_m": 0.0045,
+     "descricao": "recua 4,5 mm reto com o ferrolho (bloco de trava cai)",
+     "pai": "pistola_guardia_9mm",
+     "explodir_m": [
+      0.0,
+      0.07,
+      -0.06
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": 0.034,
+     "descricao": "recua 34 mm ao atirar; fica travado atrás com o carregador vazio",
+     "pai": "pistola_guardia_9mm",
+     "explodir_m": [
+      -0.0,
+      0.035,
+      0.04
+     ]
+    },
+    {
+     "no": "trava",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 55,
+     "descricao": "alavanca dos dois lados do ferrolho: para baixo trava e desarma o cão com segurança; volta sozinha para cima (fogo)",
+     "pai": "ferrolho",
+     "explodir_m": [
+      0.04,
+      0.02,
+      0.0
+     ]
+    },
+    {
+     "no": "retem",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 5,
+     "descricao": "retém do ferrolho: sobe quando o carregador esvazia, baixar solta o ferrolho",
+     "pai": "pistola_guardia_9mm",
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      -0.0,
+      -0.956,
+      0.292
+     ],
+     "municao": "municao_9mm",
+     "capacidade": 17,
+     "descricao": "sai pelo fundo do cabo ao apertar o retém (atrás do guarda-mato, esquerda)",
+     "pai": "pistola_guardia_9mm",
+     "explodir_m": [
+      -0.0,
+      -0.07,
+      0.02
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "talas_guardia",
+     "pai": "pistola_guardia_9mm",
+     "posicao_m": [
+      -0.0,
+      -0.007,
+      0.008
+     ],
+     "substitui": "talas",
+     "aceita": [
+      "talas_guardia",
+      "talas_guardia_preta",
+      "talas_guardia_madeira",
+      "talas_guardia_borracha"
+     ],
+     "descricao": "ao pôr talas aqui, esconda as malhas do nó talas",
+     "explodir_m": [
+      -0.0,
+      -0.02,
+      0.03
+     ]
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_rosca_9mm",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.217
+     ],
+     "aceita": [
+      "protetor_rosca_9mm",
+      "supressor_9mm",
+      "supressor_9mm_tan",
+      "supressor_9mm_verde",
+      "supressor_9mm_cinza",
+      "compensador_9mm",
+      "supressor_garrafa"
+     ],
+     "descricao": "rosca do cano (a mesma da Sentinela): sem nada fica a rosca à mostra",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.06
+     ]
+    },
+    {
+     "no": "encaixe_trilho",
+     "tipo": "trilho_curto",
+     "pai": "pistola_guardia_9mm",
+     "posicao_m": [
+      0.0,
+      0.032,
+      -0.162
+     ],
+     "aceita": [
+      "lanterna_pistola",
+      "laser_pistola",
+      "combo_lanterna_laser"
+     ],
+     "descricao": "trilho de 3 fendas embaixo do guarda-pó",
+     "explodir_m": [
+      0.0,
+      -0.05,
+      -0.02
+     ]
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_guardia",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.052,
+      -0.016
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_guardia_17",
+      "carregador_guardia_20"
+     ],
+     "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda as malhas do nó carregador"
+    },
+    {
+     "no": "cinto",
+     "tipo": "coldre_guardia",
+     "pai": "pistola_guardia_9mm",
+     "posicao_m": [
+      -0.025,
+      0.118,
+      -0.016
+     ],
+     "aceita": [
+      "coldre_guardia"
+     ],
+     "descricao": "a arma entra no coldre pelo pivô (o coldre tem o encaixe \"arma\")"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "pistola_guardia_9mm",
+     "posicao_m": [
+      0.0118,
+      0.077,
+      -0.071
+     ],
+     "descricao": "onde nasce o estojo ejetado (vai para +X e para cima, aos 0,04 s)"
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.218
+     ],
+     "descricao": "clarão de boca e origem do disparo (raycast para -Z)"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0,
+      0.0894,
+      -0.014
+     ],
+     "descricao": "centro do entalhe da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z)"
+    }
+   ],
+   "animacoes": {
+    "atirar_dupla": {
+     "duracao_s": 0.36,
+     "laco": false,
+     "descricao": "1º tiro com o cão abaixado (ação dupla): puxada longa, o cão sobe e cai (0,22 s), o ferrolho volta e deixa o cão armado; estojo aos 0,24 s"
+    },
+    "atirar": {
+     "duracao_s": 0.15,
+     "laco": false,
+     "descricao": "tiro com o cão armado (ação simples): puxada curta, recuo e o cão fica armado de novo; estojo aos 0,04 s"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.15,
+     "laco": false,
+     "descricao": "último tiro: o ferrolho fica travado atrás no retém"
+    },
+    "vazia": {
+     "duracao_s": 0.1,
+     "laco": true,
+     "descricao": "pose parada: ferrolho travado atrás, carregador vazio"
+    },
+    "desarmar": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "abaixa a alavanca do ferrolho: o cão cai sem disparar (0,16 s) e a alavanca volta para cima; o próximo tiro é de ação dupla"
+    },
+    "armar": {
+     "duracao_s": 0.35,
+     "laco": false,
+     "descricao": "arma o cão com o polegar (o próximo tiro é de ação simples)"
+    },
+    "recarregar": {
+     "duracao_s": 1.6,
+     "laco": false,
+     "descricao": "troca tática: solta o carregador (0,3 s), o novo entra (1,2 s); trocar o nó carregador entre 0,5 e 0,9 s"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 2.1,
+     "laco": false,
+     "descricao": "recarga vazia: troca o carregador e baixa o retém (1,5 s); o ferrolho fecha e deixa o cão armado"
+    },
+    "inspecionar": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "gira a arma, puxa o ferrolho até ver o cartucho na câmara (pela abertura de cima) e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "pistola_guardia_9mm_preta",
+   "nome": "Pistola Guardiã 9 mm (preta)",
+   "grupo": "armas",
+   "categoria": "pistola",
+   "descricao": "A mesma Guardiã toda preta (alumínio anodizado e talas pretas). Aceita os mesmos acessórios.",
+   "classe": "fogo",
+   "calibre": "9 mm",
+   "municao": "municao_9mm",
+   "capacidade": 17,
+   "dano": 34,
+   "alcance_m": 28,
+   "alcance_max_m": 55,
+   "modo": "semiautomático (ação dupla e simples)",
+   "tiros_por_s": 4.0,
+   "recarga_s": 1.6,
+   "recarga_vazia_s": 2.1,
+   "precisao": 0.76,
+   "recuo": 0.26,
+   "ruido_m": 60,
+   "durabilidade": 900,
+   "peso_kg": 0.98,
+   "raridade": "raro",
+   "valor_troca": 55,
+   "onde": [
+    "quartel",
+    "delegacia",
+    "posto",
+    "banco"
+   ],
+   "arquivo": "armas/pistola_guardia_9mm_preta.glb",
+   "tamanho_m": [
+    0.033,
+    0.158,
+    0.263
+   ],
+   "triangulos": 45324,
+   "kb": 2369.2,
+   "partes": [
+    {
+     "no": "talas",
+     "tipo": "fixa",
+     "descricao": "talas do cabo (trocáveis)",
+     "pai": "pistola_guardia_9mm_preta",
+     "explodir_m": [
+      -0.0,
+      -0.02,
+      0.03
+     ]
+    },
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -16,
+     "descricao": "ação dupla: puxada longa arma e solta o cão; depois do 1º tiro a puxada é curta",
+     "pai": "pistola_guardia_9mm_preta",
+     "explodir_m": [
+      0.0,
+      -0.03,
+      -0.05
+     ]
+    },
+    {
+     "no": "cao",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 48,
+     "descricao": "cão externo de anel: arma 48° para trás (o ferrolho arma no tiro)",
+     "pai": "pistola_guardia_9mm_preta",
+     "explodir_m": [
+      -0.0,
+      0.04,
+      0.03
+     ]
+    },
+    {
+     "no": "cano",
+     "tipo": "desliza",
+     "curso_m": 0.0045,
+     "descricao": "recua 4,5 mm reto com o ferrolho (bloco de trava cai)",
+     "pai": "pistola_guardia_9mm_preta",
+     "explodir_m": [
+      0.0,
+      0.07,
+      -0.06
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": 0.034,
+     "descricao": "recua 34 mm ao atirar; fica travado atrás com o carregador vazio",
+     "pai": "pistola_guardia_9mm_preta",
+     "explodir_m": [
+      -0.0,
+      0.035,
+      0.04
+     ]
+    },
+    {
+     "no": "trava",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 55,
+     "descricao": "alavanca dos dois lados do ferrolho: para baixo trava e desarma o cão com segurança; volta sozinha para cima (fogo)",
+     "pai": "ferrolho",
+     "explodir_m": [
+      0.04,
+      0.02,
+      0.0
+     ]
+    },
+    {
+     "no": "retem",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 5,
+     "descricao": "retém do ferrolho: sobe quando o carregador esvazia, baixar solta o ferrolho",
+     "pai": "pistola_guardia_9mm_preta",
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      -0.0,
+      -0.956,
+      0.292
+     ],
+     "municao": "municao_9mm",
+     "capacidade": 17,
+     "descricao": "sai pelo fundo do cabo ao apertar o retém (atrás do guarda-mato, esquerda)",
+     "pai": "pistola_guardia_9mm_preta",
+     "explodir_m": [
+      -0.0,
+      -0.07,
+      0.02
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "talas_guardia",
+     "pai": "pistola_guardia_9mm_preta",
+     "posicao_m": [
+      -0.0,
+      -0.007,
+      0.008
+     ],
+     "substitui": "talas",
+     "aceita": [
+      "talas_guardia_preta",
+      "talas_guardia",
+      "talas_guardia_madeira",
+      "talas_guardia_borracha"
+     ],
+     "descricao": "ao pôr talas aqui, esconda as malhas do nó talas",
+     "explodir_m": [
+      -0.0,
+      -0.02,
+      0.03
+     ]
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_rosca_9mm",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.217
+     ],
+     "aceita": [
+      "protetor_rosca_9mm",
+      "supressor_9mm",
+      "supressor_9mm_tan",
+      "supressor_9mm_verde",
+      "supressor_9mm_cinza",
+      "compensador_9mm",
+      "supressor_garrafa"
+     ],
+     "descricao": "rosca do cano (a mesma da Sentinela): sem nada fica a rosca à mostra",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.06
+     ]
+    },
+    {
+     "no": "encaixe_trilho",
+     "tipo": "trilho_curto",
+     "pai": "pistola_guardia_9mm_preta",
+     "posicao_m": [
+      0.0,
+      0.032,
+      -0.162
+     ],
+     "aceita": [
+      "lanterna_pistola",
+      "laser_pistola",
+      "combo_lanterna_laser"
+     ],
+     "descricao": "trilho de 3 fendas embaixo do guarda-pó",
+     "explodir_m": [
+      0.0,
+      -0.05,
+      -0.02
+     ]
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_guardia",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.052,
+      -0.016
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_guardia_17",
+      "carregador_guardia_20"
+     ],
+     "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda as malhas do nó carregador"
+    },
+    {
+     "no": "cinto",
+     "tipo": "coldre_guardia",
+     "pai": "pistola_guardia_9mm_preta",
+     "posicao_m": [
+      -0.025,
+      0.118,
+      -0.016
+     ],
+     "aceita": [
+      "coldre_guardia"
+     ],
+     "descricao": "a arma entra no coldre pelo pivô (o coldre tem o encaixe \"arma\")"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "pistola_guardia_9mm_preta",
+     "posicao_m": [
+      0.0118,
+      0.077,
+      -0.071
+     ],
+     "descricao": "onde nasce o estojo ejetado (vai para +X e para cima, aos 0,04 s)"
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.218
+     ],
+     "descricao": "clarão de boca e origem do disparo (raycast para -Z)"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0,
+      0.0894,
+      -0.014
+     ],
+     "descricao": "centro do entalhe da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z)"
+    }
+   ],
+   "animacoes": {
+    "atirar_dupla": {
+     "duracao_s": 0.36,
+     "laco": false,
+     "descricao": "1º tiro com o cão abaixado (ação dupla): puxada longa, o cão sobe e cai (0,22 s), o ferrolho volta e deixa o cão armado; estojo aos 0,24 s"
+    },
+    "atirar": {
+     "duracao_s": 0.15,
+     "laco": false,
+     "descricao": "tiro com o cão armado (ação simples): puxada curta, recuo e o cão fica armado de novo; estojo aos 0,04 s"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.15,
+     "laco": false,
+     "descricao": "último tiro: o ferrolho fica travado atrás no retém"
+    },
+    "vazia": {
+     "duracao_s": 0.1,
+     "laco": true,
+     "descricao": "pose parada: ferrolho travado atrás, carregador vazio"
+    },
+    "desarmar": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "abaixa a alavanca do ferrolho: o cão cai sem disparar (0,16 s) e a alavanca volta para cima; o próximo tiro é de ação dupla"
+    },
+    "armar": {
+     "duracao_s": 0.35,
+     "laco": false,
+     "descricao": "arma o cão com o polegar (o próximo tiro é de ação simples)"
+    },
+    "recarregar": {
+     "duracao_s": 1.6,
+     "laco": false,
+     "descricao": "troca tática: solta o carregador (0,3 s), o novo entra (1,2 s); trocar o nó carregador entre 0,5 e 0,9 s"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 2.1,
+     "laco": false,
+     "descricao": "recarga vazia: troca o carregador e baixa o retém (1,5 s); o ferrolho fecha e deixa o cão armado"
+    },
+    "inspecionar": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "gira a arma, puxa o ferrolho até ver o cartucho na câmara (pela abertura de cima) e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
   }
  ],
  "acessorios": [
@@ -12681,6 +13345,185 @@
    ],
    "triangulos": 4688,
    "kb": 225.7
+  },
+  {
+   "id": "talas_guardia",
+   "nome": "Talas pontilhadas (Guardiã)",
+   "grupo": "acessorios",
+   "categoria": "empunhadura",
+   "encaixe": "talas_guardia",
+   "peso_kg": 0.04,
+   "raridade": "comum",
+   "modificadores": {},
+   "descricao": "As talas cor de areia que vêm na Guardiã: borda lisa e pontilhado no meio.",
+   "arquivo": "acessorios/talas_guardia.glb",
+   "tamanho_m": [
+    0.033,
+    0.093,
+    0.068
+   ],
+   "triangulos": 15902,
+   "kb": 961.4
+  },
+  {
+   "id": "talas_guardia_preta",
+   "nome": "Talas pontilhadas pretas (Guardiã)",
+   "grupo": "acessorios",
+   "categoria": "empunhadura",
+   "encaixe": "talas_guardia",
+   "peso_kg": 0.04,
+   "raridade": "comum",
+   "modificadores": {},
+   "descricao": "As mesmas talas em polímero preto (vêm na Guardiã preta).",
+   "arquivo": "acessorios/talas_guardia_preta.glb",
+   "tamanho_m": [
+    0.033,
+    0.093,
+    0.068
+   ],
+   "triangulos": 15902,
+   "kb": 958.3
+  },
+  {
+   "id": "talas_guardia_madeira",
+   "nome": "Talas de nogueira (Guardiã)",
+   "grupo": "acessorios",
+   "categoria": "empunhadura",
+   "encaixe": "talas_guardia",
+   "peso_kg": 0.05,
+   "raridade": "incomum",
+   "valor_troca": 12,
+   "modificadores": {},
+   "onde": [
+    "casas",
+    "casa_de_campo"
+   ],
+   "descricao": "Talas de nogueira com quadriculado e medalhão liso: bonitas, mas escorregam um pouco com a mão suada.",
+   "arquivo": "acessorios/talas_guardia_madeira.glb",
+   "tamanho_m": [
+    0.035,
+    0.093,
+    0.068
+   ],
+   "triangulos": 15654,
+   "kb": 1360.3
+  },
+  {
+   "id": "talas_guardia_borracha",
+   "nome": "Empunhadura de borracha (Guardiã)",
+   "grupo": "acessorios",
+   "categoria": "empunhadura",
+   "encaixe": "talas_guardia",
+   "peso_kg": 0.07,
+   "raridade": "incomum",
+   "valor_troca": 14,
+   "modificadores": {
+    "recuo": 0.85,
+    "precisao": 1.04
+   },
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "Borracha que abraça o cabo inteiro, com apoio para os dedos na frente: segura melhor o coice e não escorrega.",
+   "arquivo": "acessorios/talas_guardia_borracha.glb",
+   "tamanho_m": [
+    0.034,
+    0.101,
+    0.08
+   ],
+   "triangulos": 12336,
+   "kb": 580.2
+  },
+  {
+   "id": "carregador_guardia_17",
+   "nome": "Carregador 9 mm da Guardiã (17)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_guardia",
+   "capacidade": 17,
+   "municao": "municao_9mm",
+   "peso_kg": 0.1,
+   "raridade": "incomum",
+   "valor_troca": 10,
+   "modificadores": {},
+   "descricao": "Carregador de aço de 17 tiros com base cor de areia (vem na Guardiã).",
+   "arquivo": "acessorios/carregador_guardia_17.glb",
+   "tamanho_m": [
+    0.025,
+    0.129,
+    0.073
+   ],
+   "triangulos": 1078,
+   "kb": 54.8
+  },
+  {
+   "id": "carregador_guardia_20",
+   "nome": "Carregador 9 mm estendido da Guardiã (20)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_guardia",
+   "capacidade": 20,
+   "municao": "municao_9mm",
+   "peso_kg": 0.12,
+   "raridade": "raro",
+   "valor_troca": 18,
+   "modificadores": {
+    "recarga_s": 1.05
+   },
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "Carregador de 20 com luva de polímero que continua o cabo (sobra embaixo e dá apoio ao dedinho).",
+   "arquivo": "acessorios/carregador_guardia_20.glb",
+   "tamanho_m": [
+    0.028,
+    0.146,
+    0.078
+   ],
+   "triangulos": 1228,
+   "kb": 61.8
+  },
+  {
+   "id": "coldre_guardia",
+   "nome": "Coldre de náilon com trava (Guardiã)",
+   "grupo": "acessorios",
+   "categoria": "coldre",
+   "encaixe": "coldre_guardia",
+   "peso_kg": 0.24,
+   "raridade": "incomum",
+   "valor_troca": 12,
+   "modificadores": {
+    "tempo_sacar": 0.75
+   },
+   "onde": [
+    "quartel",
+    "delegacia",
+    "posto"
+   ],
+   "descricao": "Coldre de cinto de náilon com fivela sobre o cão e reforço de polímero. Leva a Guardiã (até com lanterna curta) sem ocupar a mochila.",
+   "arquivo": "acessorios/coldre_guardia.glb",
+   "tamanho_m": [
+    0.053,
+    0.151,
+    0.244
+   ],
+   "triangulos": 1828,
+   "kb": 89.2,
+   "encaixes": [
+    {
+     "no": "arma",
+     "tipo": "efeito",
+     "pai": "coldre_guardia",
+     "posicao_m": [
+      0.025,
+      -0.118,
+      0.016
+     ],
+     "descricao": "ponha a arma aqui (pivô da arma) para guardá-la no coldre"
+    }
+   ]
   }
  ],
  "municao": [

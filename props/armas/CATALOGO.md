@@ -28,6 +28,8 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Pistola sinalizadora (`pistola_sinalizadora`) | sinal 12 | 1 | 25 | 15 m | 0,3/s | 90 m | 800 | 0,45 kg | cartucho | atirar, armar, recarregar, inspecionar, ocioso |
 | Fuzil Atalaia .308 de precisão (`fuzil_308_precisao`) | .308 | 20 | 92 | 200 m | 3/s | 240 m | 3500 | 5,6 kg | punho, mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
 | Fuzil Atalaia .308 curto (`fuzil_308_precisao_curto`) | .308 | 20 | 92 | 150 m | 3/s | 250 m | 3500 | 4,9 kg | punho, mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
+| Pistola Guardiã 9 mm (`pistola_guardia_9mm`) | 9 mm | 17 | 34 | 28 m | 4,0/s | 60 m | 900 | 0,98 kg | empunhadura, boca, trilho, carregador, cinto | atirar_dupla, atirar, atirar_ultimo, vazia, desarmar, armar, recarregar, recarregar_vazia, inspecionar, ocioso |
+| Pistola Guardiã 9 mm (preta) (`pistola_guardia_9mm_preta`) | 9 mm | 17 | 34 | 28 m | 4,0/s | 60 m | 900 | 0,98 kg | empunhadura, boca, trilho, carregador, cinto | atirar_dupla, atirar, atirar_ultimo, vazia, desarmar, armar, recarregar, recarregar_vazia, inspecionar, ocioso |
 
 ## Acessórios
 
@@ -162,6 +164,13 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Luneta 5-25× de precisão (`luneta_5_25`) | Miras | `trilho_mira` | precisao_mirando ×1,7, tempo_mirar ×1,3, alcance_m ×2,2 | 0,98 kg | muito raro | 6528 |
 | Carregador .308 de fuzil (20) (`carregador_ar10_20`) | Carregadores | `carregador_ar10` | - | 0,2 kg | raro | 5196 |
 | Carregador .308 de fuzil (10) (`carregador_ar10_10`) | Carregadores | `carregador_ar10` | recarga_s ×0,95 | 0,13 kg | incomum | 4688 |
+| Talas pontilhadas (Guardiã) (`talas_guardia`) | Empunhaduras | `talas_guardia` | - | 0,04 kg | comum | 15902 |
+| Talas pontilhadas pretas (Guardiã) (`talas_guardia_preta`) | Empunhaduras | `talas_guardia` | - | 0,04 kg | comum | 15902 |
+| Talas de nogueira (Guardiã) (`talas_guardia_madeira`) | Empunhaduras | `talas_guardia` | - | 0,05 kg | incomum | 15654 |
+| Empunhadura de borracha (Guardiã) (`talas_guardia_borracha`) | Empunhaduras | `talas_guardia` | recuo ×0,85, precisao ×1,04 | 0,07 kg | incomum | 12336 |
+| Carregador 9 mm da Guardiã (17) (`carregador_guardia_17`) | Carregadores | `carregador_guardia` | - | 0,1 kg | incomum | 1078 |
+| Carregador 9 mm estendido da Guardiã (20) (`carregador_guardia_20`) | Carregadores | `carregador_guardia` | recarga_s ×1,05 | 0,12 kg | raro | 1228 |
+| Coldre de náilon com trava (Guardiã) (`coldre_guardia`) | Coldres | `coldre_guardia` | tempo_sacar ×0,75 | 0,24 kg | incomum | 1828 |
 
 ## Munição e efeitos
 
@@ -385,3 +394,13 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Fuzil Atalaia .308 curto**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
 - **Fuzil Atalaia .308 curto**, `encaixe_bipe`: bipe
 - **Fuzil Atalaia .308 curto**, `encaixe_bandoleira`: bandoleira
+- **Pistola Guardiã 9 mm**, `encaixe_empunhadura`: talas_guardia, talas_guardia_preta, talas_guardia_madeira, talas_guardia_borracha
+- **Pistola Guardiã 9 mm**, `encaixe_boca`: protetor_rosca_9mm, supressor_9mm, supressor_9mm_tan, supressor_9mm_verde, supressor_9mm_cinza, compensador_9mm, supressor_garrafa
+- **Pistola Guardiã 9 mm**, `encaixe_trilho`: lanterna_pistola, laser_pistola, combo_lanterna_laser
+- **Pistola Guardiã 9 mm**, `encaixe_carregador`: carregador_guardia_17, carregador_guardia_20
+- **Pistola Guardiã 9 mm**, `cinto`: coldre_guardia
+- **Pistola Guardiã 9 mm (preta)**, `encaixe_empunhadura`: talas_guardia_preta, talas_guardia, talas_guardia_madeira, talas_guardia_borracha
+- **Pistola Guardiã 9 mm (preta)**, `encaixe_boca`: protetor_rosca_9mm, supressor_9mm, supressor_9mm_tan, supressor_9mm_verde, supressor_9mm_cinza, compensador_9mm, supressor_garrafa
+- **Pistola Guardiã 9 mm (preta)**, `encaixe_trilho`: lanterna_pistola, laser_pistola, combo_lanterna_laser
+- **Pistola Guardiã 9 mm (preta)**, `encaixe_carregador`: carregador_guardia_17, carregador_guardia_20
+- **Pistola Guardiã 9 mm (preta)**, `cinto`: coldre_guardia

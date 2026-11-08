@@ -161,7 +161,7 @@ def smg_9mm(A):
                       'empunhadura_angulada', 'batente_mao'], padrao='empunhadura_dobravel', descricao='trilho curto de baixo')
     A.encaixe('encaixe_lanterna', (0.17, -0.001, SW + 0.0055), 'mlok_lado', explodir=(0, 0, 0.06), aceita=['lanterna_compacta', 'lanterna_fuzil'],
               descricao='trilho curto da direita')
-    A.encaixe('encaixe_laser', (0.15, -0.001, -SW), 'mlok_esq', explodir=(0, 0, -0.06), aceita=['modulo_laser', 'laser_fuzil'], descricao='lado esquerdo da frente')
+    A.encaixe('encaixe_laser', (0.15, -0.001, -SW), 'mlok_esq', explodir=(0, 0, -0.06), aceita=['modulo_laser', 'modulo_laser_tan', 'laser_fuzil'], descricao='lado esquerdo da frente')
     A.encaixe('encaixe_bandoleira', (SX0 + 0.008, -0.012, -SW - 0.004), 'bandoleira', explodir=(0, 0, -0.04), aceita=['bandoleira'])
     A.encaixe('ombro', (SX0 - 0.024, -0.03, 0), 'efeito', pai='coronha', descricao='ponto da soleira que encosta no ombro')
     A.encaixe('boca_fogo', (S_XM, 0, 0), 'efeito', descricao='clarão de boca e origem do disparo (-Z)')

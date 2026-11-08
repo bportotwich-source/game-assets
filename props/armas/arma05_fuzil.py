@@ -547,47 +547,59 @@ def _garra_trilho(q, L=0.044, alavanca=True):
                                        0.0135, 0.0158, 0.0005))
 
 
-@_acessorio('modulo_laser', 'Módulo de mira laser', 'laser', 'mlok_esq', peso_kg=0.24, raridade='muito raro', valor_troca=80, usa='pilhas',
+@_acessorio('modulo_laser', 'Módulo de mira laser', 'laser', 'mlok_esq', peso_kg=0.2, raridade='muito raro', valor_troca=80, usa='pilhas',
             autonomia_min=360, luz={'alcance_m': 20, 'angulo_graus': 28, 'lumens': 250}, modificadores={'precisao_sem_mirar': 1.5},
             onde=['quartel'], liga_desliga='laser no encaixe "laser" e luz no encaixe "feixe" (para -Z)',
-            descricao='Caixa caramelo com laser e luz: botão de disparo quadriculado, seletor giratório, tampa da lente presa por cordão e '
-                      'tampa de pilha recartilhada atrás. Presa por garra num trilho curto de M-LOK no lado esquerdo do guarda-mão.')
-def modulo_laser(A):
+            descricao='Caixa baixa e comprida com laser e luz: dois emissores e farol com anel recartilhado na frente, botões de ajuste '
+                      'e de disparo por fora, seletor e tampa da pilha atrás. Presa por garra num trilho curto de M-LOK no lado do guarda-mão.')
+def modulo_laser(A, mat='aluminio_preto'):
+    _modulo_laser(A, mat)
+
+
+@_acessorio('modulo_laser_tan', 'Módulo de mira laser (caramelo)', 'laser', 'mlok_esq', peso_kg=0.2, raridade='muito raro', valor_troca=80,
+            usa='pilhas', autonomia_min=360, luz={'alcance_m': 20, 'angulo_graus': 28, 'lumens': 250}, modificadores={'precisao_sem_mirar': 1.5},
+            onde=['quartel'], liga_desliga='laser no encaixe "laser" e luz no encaixe "feixe" (para -Z)',
+            descricao='O mesmo módulo de laser fino, em caramelo.')
+def modulo_laser_tan(A):
+    _modulo_laser(A, 'chassi_tan')
+
+
+def _modulo_laser(A, mat):
+    """Caixa fina (18 mm de espessura para fora do guarda-mao): desenhada deitada (y = para fora), depois vai para o lado."""
     q = A.base; _garra_trilho(q, 0.05)
-    corpo = arred([(-0.036, 0.006), (0.034, 0.006), (0.034, 0.044), (0.029, 0.05), (-0.031, 0.05), (-0.036, 0.045)], 0.003)
-    q.add('chassi_tan', solido(corpo, -0.017, 0.017, 0.0022))
-    for zs in (-1, 1): q.add('chassi_tan', solido(arred([(-0.036, 0.006), (0.034, 0.006), (0.034, 0.011), (-0.036, 0.011)], 0.001),
-                                                  min(zs * 0.017, zs * 0.0176), max(zs * 0.017, zs * 0.0176), 0.0003))     # rodape
-    # frente: tampa recartilhada da luz e cone do laser com tampa presa
-    yl = 0.033
-    q.add('chassi_tan', tubo_x(0.0, 0.0105, 0.034, 0.037, yl, -0.0065, sec=48))
-    q.add('recartilhado', tubo_x(0.0, 0.0102, 0.037, 0.049, yl, -0.0065, sec=48)); q.add('chassi_tan', tubo_x(0.0, 0.0072, 0.049, 0.0515, yl, -0.0065, sec=40))
-    q.add('chassi_tan', torno_x([(0.0, 0.034), (0.0078, 0.034), (0.0078, 0.037), (0.0058, 0.047), (0.0, 0.047)], 40, yl, 0.0085))
-    q.add('aluminio_preto', tubo_x(0.0028, 0.0042, 0.0465, 0.0475, yl, 0.0085, sec=24)); q.add('lente_laser', cil_x(0.0028, 0.0462, 0.0468, yl, 0.0085, 20))
-    q.add('borracha', solido(LineString([(0.036, yl + 0.011), (0.042, yl + 0.0175), (0.048, yl + 0.016), (0.05, yl + 0.0105)]).buffer(0.0012, cap_style=1), -0.002, 0.004))   # cordao
-    # tras: tampa da pilha recartilhada (cone) e botao do ajuste de altura em cima
-    q.add('recartilhado', torno_x([(0.0, -0.036), (0.0085, -0.036), (0.0085, -0.039), (0.0068, -0.05), (0.0, -0.05)], 40, 0.02, 0.0))
-    q.add('chassi_tan', tubo_x(0.0, 0.0062, -0.052, -0.05, 0.02, 0.0, sec=32))
-    q.add('recartilhado', _cil_y(0.0075, 0.05, 0.056, -0.015, 0.0, 40)); q.add('chassi_tan', _cil_y(0.0058, 0.056, 0.058, -0.015, 0.0, 32))
-    q.add('aco_oxidado', caixa(-0.0185, -0.0115, 0.0575, 0.0588, -0.0007, 0.0007))                         # fenda do ajuste
-    # lado esquerdo: botao de disparo quadriculado e seletor giratorio
-    q.add('chassi_tan', solido(arred([(-0.028, 0.012), (-0.01, 0.012), (-0.01, 0.03), (-0.028, 0.03)], 0.003), -0.0185, -0.017, 0.0005))
-    q.add('borracha', solido(arred([(-0.0265, 0.0135), (-0.0115, 0.0135), (-0.0115, 0.0285), (-0.0265, 0.0285)], 0.002), -0.0195, -0.0183, 0.0004))
-    for i in range(4):
-        for j in range(4):
-            m = trimesh.creation.icosphere(1, radius=0.0011); m.apply_scale([1, 1, 0.6]); m.apply_translation([-0.0245 + i * 0.0037, 0.0155 + j * 0.0037, -0.0195]); q.add('borracha', m)
-    q.add('chassi_tan', cil_z(0.0085, -0.0188, -0.017, 0.016, 0.021, 40))
-    q.add('aluminio_preto', menos(cil_z(0.0065, -0.0212, -0.0185, 0.016, 0.021, 40),
-                                  caixa(0.009, 0.023, 0.0205, 0.0215, -0.023, -0.0205).apply_transform(TF.rotation_matrix(math.radians(-40), [0, 0, 1], point=[0.016, 0.021, 0]))))
-    for ang in (150, 30):                                                                           # setas L / R gravadas
-        a = math.radians(ang); q.add('aco_oxidado', caixa(-0.0006, 0.0006, -0.0018, 0.0018, -0.0001, 0.0001)
-                                    .apply_transform(TF.rotation_matrix(a, [0, 0, 1])).apply_translation([0.016 + 0.011 * math.cos(a), 0.021 - 0.011 * math.sin(a) - 0.002, -0.0171]))
-    q.add('chassi_tan', cil_z(0.0032, -0.0182, -0.017, 0.027, 0.043, 24))                                # parafuso de canto
-    # lado direito: placa de aviso
-    q.add('plastico_branco', caixa(-0.024, 0.012, 0.016, 0.042, 0.0172, 0.0176))
-    q.add('tinta_vermelha', caixa(-0.021, 0.009, 0.036, 0.039, 0.0176, 0.0178))
-    A.encaixe('laser', (0.0475, yl, 0.0085), 'efeito', descricao='origem do laser (-Z)')
-    A.encaixe('feixe', (0.0515, yl, -0.0065), 'efeito', descricao='SpotLight3D (-Z)')
+    X0, X1, W, Y0, Y1 = -0.043, 0.04, 0.0165, 0.006, 0.0225
+    corpo = inter([solido(arred([(X0, Y0), (X1, Y0), (X1, Y1 - 0.002), (X1 - 0.003, Y1), (X0 + 0.003, Y1), (X0, Y1 - 0.002)], 0.0012), -W, W),
+                   ext_x(arred([(-W, Y0), (W, Y0), (W, Y1 - 0.003), (W - 0.003, Y1), (-W + 0.003, Y1), (-W, Y1 - 0.003)], 0.001), X0 - 0.01, X1 + 0.01)])
+    junta = caixa(-0.0004, 0.0004, Y0 - 0.01, Y1 + 0.01, -W - 0.01, W + 0.01)          # emenda das duas metades da caixa
+    junta = menos(junta, ext_x(Polygon([(-W + 0.0006, Y0 + 0.0006), (W - 0.0006, Y0 + 0.0006), (W - 0.0006, Y1 - 0.0006), (-W + 0.0006, Y1 - 0.0006)]), -0.01, 0.01))
+    q.add(mat, menos(corpo, junta.apply_translation([0.004, 0, 0])))
+    # lombada da pilha ao longo de uma borda, com tampa recartilhada atras
+    lomb = arred([(-0.034, Y1 - 0.002), (0.022, Y1 - 0.002), (0.026, Y1 + 0.0025), (-0.034, Y1 + 0.0025)], 0.0015)
+    q.add(mat, solido(lomb, -W + 0.0015, -W + 0.0105, 0.0012))
+    q.add(mat, torno_x([(0.0, X0 - 0.0005), (0.0058, X0 - 0.0005), (0.0058, X0 - 0.003), (0.0, X0 - 0.003)], 32, Y1 - 0.0045, -W + 0.006))
+    q.add('recartilhado', tubo_x(0.0, 0.0062, X0 - 0.009, X0 - 0.003, Y1 - 0.0045, -W + 0.006, sec=40))
+    # face de fora: dois botoes de ajuste com fenda, botao de disparo, placa de aviso e escala gravada
+    for (x, z) in ((-0.022, 0.0075), (0.018, 0.0095)):
+        q.add(mat, _cil_y(0.0068, Y1 - 0.0005, Y1 + 0.0008, x, z, 40))
+        q.add('recartilhado', menos(_cil_y(0.0054, Y1 + 0.0008, Y1 + 0.0032, x, z, 40), caixa(x - 0.0042, x + 0.0042, Y1 + 0.0024, Y1 + 0.004, z - 0.0005, z + 0.0005)))
+    q.add(mat, _cil_y(0.0062, Y1 - 0.0005, Y1 + 0.0006, 0.0, -0.002, 40)); q.add('borracha', _cil_y(0.0048, Y1 + 0.0006, Y1 + 0.0022, 0.0, -0.002, 32))   # disparo
+    q.add('etiqueta_amarela', caixa(-0.013, -0.004, Y1 - 0.0001, Y1 + 0.0002, 0.003, 0.012))
+    for i in range(7): q.add('tinta_branca', caixa(0.026 + i * 0.0018, 0.0265 + i * 0.0018, Y1 - 0.0001, Y1 + 0.0002, W - 0.0032 - (0.0018 if i % 2 else 0), W - 0.0012))
+    # frente: farol com anel recartilhado e dois emissores de laser
+    yf, zf = 0.0145, 0.007
+    q.add(mat, tubo_x(0.0, 0.0072, X1, X1 + 0.004, yf, zf, sec=40))
+    q.add('recartilhado', tubo_x(0.0, 0.0078, X1 + 0.004, X1 + 0.011, yf, zf, sec=48))
+    q.add('aco_inox', tubo_x(0.0058, 0.0074, X1 + 0.011, X1 + 0.0122, yf, zf, sec=40))
+    q.add('lente', cil_x(0.0058, X1 + 0.0108, X1 + 0.0114, yf, zf, 32)); q.add('led_lanterna', cil_x(0.002, X1 + 0.0095, X1 + 0.01, yf, zf, 12))
+    for z in (-0.0045, -0.0115):
+        q.add(mat, tubo_x(0.0, 0.0042, X1, X1 + 0.0055, yf, z, sec=24))
+        q.add('aco_inox', tubo_x(0.0022, 0.0034, X1 + 0.0055, X1 + 0.0065, yf, z, sec=20)); q.add('lente_laser', cil_x(0.0022, X1 + 0.0055, X1 + 0.006, yf, z, 12))
+    # tras: seletor giratorio com alavanca e porta do controle remoto
+    q.add(mat, torno_x([(0.0, X0), (0.0055, X0), (0.0055, X0 - 0.003), (0.0, X0 - 0.003)], 32, 0.0145, 0.008))
+    q.add('aco_oxidado', caixa(X0 - 0.0045, X0 - 0.003, 0.0135, 0.0215, 0.0068, 0.0092))
+    q.add('borracha', torno_x([(0.0, X0), (0.0032, X0), (0.0032, X0 - 0.004), (0.0, X0 - 0.004)], 20, 0.0105, -0.004))
+    A.encaixe('laser', (X1 + 0.0065, yf, -0.0045), 'efeito', descricao='origem do laser (-Z)')
+    A.encaixe('feixe', (X1 + 0.0122, yf, zf), 'efeito', descricao='SpotLight3D (-Z)')
     _para_lado(A)
 
 
@@ -700,7 +712,7 @@ def carregador_556_30_tan(A): _carregador_curvo(A.base, 30); _em_tan(A); A.pivo 
 
 
 NOVOS = {'encaixe_mira': [], 'encaixe_boca': ['supressor_556_tan'], 'encaixe_carregador': ['carregador_556_30_tan', 'tambor_556_60_tatico'],
-         'encaixe_coronha': ['coronha_retratil_ar_tan'], 'encaixe_laser': ['modulo_laser'], 'encaixe_lanterna': ['lanterna_compacta'],
+         'encaixe_coronha': ['coronha_retratil_ar_tan'], 'encaixe_laser': ['modulo_laser', 'modulo_laser_tan'], 'encaixe_lanterna': ['lanterna_compacta'],
          'encaixe_empunhadura': ['empunhadura_curta', 'empunhadura_curta_tan', 'empunhadura_quadrada', 'empunhadura_cilindrica', 'batente_mao']}
 
 

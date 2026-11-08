@@ -7,6 +7,9 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Arma | Calibre | Tiros | Dano | Alcance | Cadência | Ruído | Durab. | Peso | Encaixes | Animações |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Pistola Sentinela 9 mm (`pistola_9mm`) | 9 mm | 15 | 34 | 25 m | 4,0/s | 60 m | 600 | 0,78 kg | mira, boca, trilho, carregador | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
+| Revólver Vigia .38 (`revolver_38`) | .38 | 6 | 45 | 25 m | 2,5/s | 70 m | 1500 | 0,95 kg | mira, empunhadura, recarga, cinto | atirar, engatilhar, atirar_armado, recarregar, inspecionar, ocioso |
+| Espingarda Mutirão 12 (`espingarda_12`) | 12 | 5 | 150 | 15 m | 1,3/s | 110 m | 900 | 3,4 kg | mira, coronha, boca, tubo, cano, lateral, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
+| Espingarda Mutirão 12 curta (`espingarda_12_curta`) | 12 | 4 | 150 | 12 m | 1,3/s | 120 m | 900 | 2,7 kg | mira, coronha, boca, cano, lateral, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 
 ## Acessórios
 
@@ -22,6 +25,21 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Mira de ponto vermelho compacta (`mira_ponto_vermelho_compacta`) | Miras | `mira_ferrolho` | precisao_mirando ×1,25, tempo_mirar ×0,85 | 0,03 kg | raro | 540 |
 | Carregador 9 mm (15) (`carregador_9mm`) | Carregadores | `carregador_9mm` | - | 0,09 kg | comum | 1192 |
 | Carregador 9 mm estendido (24) (`carregador_9mm_estendido`) | Carregadores | `carregador_9mm` | recarga_s ×1,1 | 0,13 kg | raro | 1386 |
+| Carregador rápido .38 (6) (`carregador_rapido_38`) | Recarga rápida | `recarga_38` | recarga_s ×0,55 | 0,1 kg | incomum | 4484 |
+| Mira de ponto vermelho para revólver (`mira_ponto_vermelho_revolver`) | Miras | `mira_revolver` | precisao_mirando ×1,3, tempo_mirar ×0,8, alcance_m ×1,2 | 0,12 kg | raro | 2300 |
+| Talas de madeira .38 (`empunhadura_madeira_38`) | Empunhaduras | `punho_38` | - | 0,08 kg | comum | 17598 |
+| Empunhadura de borracha .38 (`empunhadura_borracha_38`) | Empunhaduras | `punho_38` | recuo ×0,8, precisao ×1,05 | 0,1 kg | incomum | 12304 |
+| Coldre de couro (revólver) (`coldre_revolver`) | Coldres | `coldre` | tempo_sacar ×0,7 | 0,22 kg | comum | 1772 |
+| Coronha retrátil (espingarda) (`coronha_retratil_12`) | Coronhas | `coronha_12` | recuo ×0,6, precisao ×1,35 | 0,42 kg | incomum | 15612 |
+| Coronha fixa de polímero (espingarda) (`coronha_fixa_12`) | Coronhas | `coronha_12` | recuo ×0,55, precisao ×1,4 | 0,6 kg | comum | 20172 |
+| Tampa do tubo (espingarda) (`tampa_tubo_12`) | Tubo do carregador | `tubo_12` | - | 0,04 kg | comum | 1024 |
+| Prolongador do tubo (+1) (`prolongador_tubo_12`) | Tubo do carregador | `tubo_12` | - | 0,15 kg | raro | 2896 |
+| Choke estendido com portas (`choke_estendido_12`) | Boca do cano | `boca_12` | dispersao_graus ×0,6, alcance_m ×1,3, recuo ×0,9 | 0,07 kg | raro | 1492 |
+| Freio dentado de arrombamento (`freio_rompimento_12`) | Boca do cano | `boca_12` | recuo ×0,85, dano_coronhada ×1,6, ruido_m ×1,1 | 0,12 kg | raro | 1252 |
+| Lanterna de cano (espingarda) (`lanterna_cano_12`) | Lanternas | `cano_12` | - | 0,2 kg | incomum | 6200 |
+| Porta-cartuchos lateral (6) (`porta_cartuchos_lateral_12`) | Porta-cartuchos | `lateral_12` | recarga_s ×0,85 | 0,26 kg | incomum | 6224 |
+| Mira de ponto vermelho de tubo (`mira_ponto_vermelho_tubo`) | Miras | `trilho_mira` | precisao_mirando ×1,3, tempo_mirar ×0,8 | 0,16 kg | raro | 3592 |
+| Bandoleira de náilon (`bandoleira`) | Bandoleiras | `bandoleira` | tempo_sacar ×0,85 | 0,15 kg | comum | 5372 |
 
 ## Munição e efeitos
 
@@ -30,6 +48,13 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Cartucho 9 mm (`municao_9mm`) | Munição | Um cartucho (deitado, pivô no centro). No inventário conta por unidade. | 672 |
 | Estojo 9 mm (vazio) (`estojo_9mm`) | Estojos | Estojo ejetado: o jogo cria um em saida_estojo a cada tiro (corpo rígido pequeno, some depois de uns segundos). | 496 |
 | Caixa de munição 9 mm (50) (`caixa_municao_9mm`) | Caixas de munição | Caixa de papelão com bandeja de 50 cartuchos. A tampa abre (nó "tampa", animação "abrir"). | 14004 |
+| Cartucho .38 (`municao_38`) | Munição | Um cartucho .38 (deitado, pivô no centro). | 672 |
+| Estojo .38 (vazio) (`estojo_38`) | Estojos | Estojo vazio: no revólver saem os 6 juntos quando o extrator é empurrado (recarregar, 1,05 s). | 384 |
+| Caixa de munição .38 (50) (`caixa_municao_38`) | Caixas de munição | Caixa de papelão com bandeja de 50 cartuchos .38. A tampa abre (nó "tampa", animação "abrir"). | 14004 |
+| Cartucho 12 chumbo grosso (`municao_12_chumbo`) | Munição | Casca vermelha com 9 bagos: estrago enorme de perto, espalha com a distância. | 1092 |
+| Cartucho 12 balote (`municao_12_balote`) | Munição | Casca verde com um projétil só de chumbo: alcance de 50 m e atravessa portas. | 1120 |
+| Casca 12 (vazia) (`estojo_12`) | Estojos | Casca ejetada no bombeamento (aos 0,36 s do "atirar"). Na bancada vira casca para recarregar. | 892 |
+| Caixa de cartuchos 12 (25) (`caixa_municao_12`) | Caixas de munição | Caixa de papelão com 25 cartuchos de chumbo grosso em pé. A tampa abre (nó "tampa", animação "abrir"). | 14950 |
 | Clarão de boca (`clarao_boca`) | Efeitos | Mostrar por 1 ou 2 quadros no encaixe boca_fogo a cada tiro; girar ao acaso em -Z e variar a escala (0,8 a 1,2). Material emissivo com transparência. | 372 |
 
 ## Compatibilidade
@@ -38,3 +63,20 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Pistola Sentinela 9 mm**, `encaixe_boca`: protetor_rosca_9mm, supressor_9mm, compensador_9mm, supressor_garrafa
 - **Pistola Sentinela 9 mm**, `encaixe_trilho`: lanterna_pistola, laser_pistola, combo_lanterna_laser
 - **Pistola Sentinela 9 mm**, `encaixe_carregador`: carregador_9mm, carregador_9mm_estendido
+- **Revólver Vigia .38**, `encaixe_mira`: mira_ponto_vermelho_revolver
+- **Revólver Vigia .38**, `encaixe_empunhadura`: empunhadura_madeira_38, empunhadura_borracha_38
+- **Revólver Vigia .38**, `encaixe_recarga`: carregador_rapido_38
+- **Revólver Vigia .38**, `cinto`: coldre_revolver
+- **Espingarda Mutirão 12**, `encaixe_mira`: mira_ponto_vermelho_tubo
+- **Espingarda Mutirão 12**, `encaixe_coronha`: coronha_retratil_12, coronha_fixa_12
+- **Espingarda Mutirão 12**, `encaixe_boca`: choke_estendido_12, freio_rompimento_12
+- **Espingarda Mutirão 12**, `encaixe_tubo`: tampa_tubo_12, prolongador_tubo_12
+- **Espingarda Mutirão 12**, `encaixe_cano`: lanterna_cano_12
+- **Espingarda Mutirão 12**, `encaixe_lateral`: porta_cartuchos_lateral_12
+- **Espingarda Mutirão 12**, `encaixe_bandoleira`: bandoleira
+- **Espingarda Mutirão 12 curta**, `encaixe_mira`: mira_ponto_vermelho_tubo
+- **Espingarda Mutirão 12 curta**, `encaixe_coronha`: coronha_retratil_12, coronha_fixa_12
+- **Espingarda Mutirão 12 curta**, `encaixe_boca`: choke_estendido_12, freio_rompimento_12
+- **Espingarda Mutirão 12 curta**, `encaixe_cano`: lanterna_cano_12
+- **Espingarda Mutirão 12 curta**, `encaixe_lateral`: porta_cartuchos_lateral_12
+- **Espingarda Mutirão 12 curta**, `encaixe_bandoleira`: bandoleira

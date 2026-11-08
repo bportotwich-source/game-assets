@@ -49,12 +49,12 @@
    "descricao": "Pistola de polímero com ferrolho de aço, 15 tiros. Leve e confiável, mas o tiro chama zumbis num raio de 60 m.",
    "arquivo": "armas/pistola_9mm.glb",
    "tamanho_m": [
-    0.031,
+    0.032,
     0.154,
     0.233
    ],
-   "triangulos": 9332,
-   "kb": 486.4,
+   "triangulos": 32020,
+   "kb": 1777.2,
    "partes": [
     {
      "no": "gatilho",
@@ -62,21 +62,36 @@
      "eixo": "x",
      "curso_graus": -14,
      "descricao": "puxa para tras ao atirar",
-     "pai": "pistola_9mm"
+     "pai": "pistola_9mm",
+     "explodir_m": [
+      0.0,
+      -0.03,
+      -0.05
+     ]
     },
     {
      "no": "cano",
      "tipo": "desliza",
      "curso_m": 0.004,
      "descricao": "recua 4 mm com o ferrolho",
-     "pai": "pistola_9mm"
+     "pai": "pistola_9mm",
+     "explodir_m": [
+      0.0,
+      0.07,
+      -0.06
+     ]
     },
     {
      "no": "ferrolho",
      "tipo": "desliza",
      "curso_m": 0.032,
      "descricao": "recua 32 mm ao atirar; fica travado atrás com o carregador vazio",
-     "pai": "pistola_9mm"
+     "pai": "pistola_9mm",
+     "explodir_m": [
+      -0.0,
+      0.035,
+      0.04
+     ]
     },
     {
      "no": "carregador",
@@ -89,7 +104,12 @@
      "municao": "municao_9mm",
      "capacidade": 15,
      "descricao": "sai pelo fundo do punho ao recarregar",
-     "pai": "pistola_9mm"
+     "pai": "pistola_9mm",
+     "explodir_m": [
+      -0.0,
+      -0.07,
+      0.02
+     ]
     }
    ],
    "encaixes": [
@@ -104,6 +124,11 @@
      ],
      "aceita": [
       "mira_ponto_vermelho_compacta"
+     ],
+     "explodir_m": [
+      0.0,
+      0.04,
+      0.0
      ]
     },
     {
@@ -121,7 +146,12 @@
       "compensador_9mm",
       "supressor_garrafa"
      ],
-     "padrao": "protetor_rosca_9mm"
+     "padrao": "protetor_rosca_9mm",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.06
+     ]
     },
     {
      "no": "encaixe_trilho",
@@ -136,6 +166,11 @@
       "lanterna_pistola",
       "laser_pistola",
       "combo_lanterna_laser"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.05,
+      -0.02
      ]
     },
     {
@@ -218,6 +253,890 @@
      "duracao_s": 2.6,
      "laco": false,
      "descricao": "gira a arma, puxa o ferrolho até ver o cartucho na câmara e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "revolver_38",
+   "nome": "Revólver Vigia .38",
+   "grupo": "armas",
+   "categoria": "revolver",
+   "classe": "fogo",
+   "calibre": ".38",
+   "municao": "municao_38",
+   "capacidade": 6,
+   "dano": 45,
+   "alcance_m": 25,
+   "alcance_max_m": 50,
+   "modo": "ação dupla (ou simples com o cão armado)",
+   "tiros_por_s": 2.5,
+   "recarga_s": 3.4,
+   "recarga_vazia_s": 3.4,
+   "precisao": 0.75,
+   "recuo": 0.45,
+   "ruido_m": 70,
+   "durabilidade": 1500,
+   "peso_kg": 0.95,
+   "raridade": "comum",
+   "valor_troca": 35,
+   "onde": [
+    "casas",
+    "casa_de_campo",
+    "armazem",
+    "motel",
+    "quartel"
+   ],
+   "descricao": "Revólver de 6 tiros com tambor que abre de lado. Não engasga nunca e é fácil de achar em casas, mas recarrega devagar sem o carregador rápido.",
+   "arquivo": "armas/revolver_38.glb",
+   "tamanho_m": [
+    0.039,
+    0.133,
+    0.217
+   ],
+   "triangulos": 43964,
+   "kb": 2782.7,
+   "partes": [
+    {
+     "no": "punho",
+     "tipo": "fixa",
+     "descricao": "talas de madeira (troca pela empunhadura de borracha)",
+     "pai": "revolver_38",
+     "explodir_m": [
+      -0.0,
+      -0.03,
+      0.03
+     ]
+    },
+    {
+     "no": "cao",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": 38,
+     "descricao": "arma para trás (38°) e cai no tiro",
+     "pai": "revolver_38",
+     "explodir_m": [
+      -0.0,
+      0.04,
+      0.03
+     ]
+    },
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": -22,
+     "descricao": "puxa para trás",
+     "pai": "revolver_38",
+     "explodir_m": [
+      0.0,
+      -0.05,
+      -0.02
+     ]
+    },
+    {
+     "no": "trava",
+     "tipo": "desliza",
+     "curso_m": 0.004,
+     "descricao": "empurra para a frente para abrir o tambor",
+     "pai": "revolver_38",
+     "explodir_m": [
+      -0.03,
+      0.0,
+      0.01
+     ]
+    },
+    {
+     "no": "braco",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -82,
+     "descricao": "braço do tambor: gira para a esquerda e o tambor sai da armação",
+     "pai": "revolver_38",
+     "explodir_m": [
+      -0.06,
+      -0.02,
+      -0.0
+     ]
+    },
+    {
+     "no": "tambor",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 60,
+     "descricao": "gira 60° a cada tiro (eixo do tambor, paralelo ao cano)",
+     "pai": "braco",
+     "explodir_m": [
+      -0.06,
+      -0.01,
+      -0.0
+     ]
+    },
+    {
+     "no": "extrator",
+     "tipo": "desliza",
+     "curso_m": 0.022,
+     "descricao": "vareta empurrada para trás: a estrela tira os 6 estojos de uma vez",
+     "pai": "tambor",
+     "explodir_m": [
+      -0.07,
+      0.0,
+      0.05
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_mira",
+     "tipo": "mira_revolver",
+     "pai": "revolver_38",
+     "posicao_m": [
+      0.0,
+      0.0822,
+      -0.05
+     ],
+     "aceita": [
+      "mira_ponto_vermelho_revolver"
+     ],
+     "explodir_m": [
+      0.0,
+      0.04,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "punho_38",
+     "pai": "revolver_38",
+     "posicao_m": [
+      -0.0,
+      0.0,
+      0.004
+     ],
+     "substitui": "punho",
+     "aceita": [
+      "empunhadura_madeira_38",
+      "empunhadura_borracha_38"
+     ],
+     "descricao": "ao pôr uma empunhadura aqui, esconda as malhas do nó punho",
+     "explodir_m": [
+      -0.0,
+      -0.03,
+      0.03
+     ]
+    },
+    {
+     "no": "encaixe_recarga",
+     "tipo": "recarga_38",
+     "pai": "tambor",
+     "posicao_m": [
+      0.0,
+      0.0575,
+      -0.0348
+     ],
+     "aceita": [
+      "carregador_rapido_38"
+     ],
+     "descricao": "carregador rápido encosta aqui (atrás do tambor aberto) durante a recarga"
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "revolver_38",
+     "posicao_m": [
+      0.0,
+      0.07,
+      -0.1952
+     ],
+     "descricao": "clarão de boca e origem do disparo (-Z)"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "revolver_38",
+     "posicao_m": [
+      0.0,
+      0.0858,
+      -0.028
+     ],
+     "descricao": "linha de visada: entalhe -> rampa laranja"
+    },
+    {
+     "no": "cinto",
+     "tipo": "coldre",
+     "pai": "revolver_38",
+     "posicao_m": [
+      0.0,
+      0.07,
+      -0.036
+     ],
+     "aceita": [
+      "coldre_revolver"
+     ],
+     "descricao": "a arma entra no coldre pelo pivô (o coldre tem o encaixe \"arma\")"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.32,
+     "laco": false,
+     "descricao": "ação dupla: o gatilho arma o cão e gira o tambor 60°, o cão cai (0,145 s) e a arma dá o coice"
+    },
+    "engatilhar": {
+     "duracao_s": 0.35,
+     "laco": false,
+     "descricao": "polegar arma o cão (ação simples): tambor gira e o gatilho recua um pouco; depois use atirar_armado"
+    },
+    "atirar_armado": {
+     "duracao_s": 0.2,
+     "laco": false,
+     "descricao": "tiro com o cão já armado: gatilho leve, mais preciso"
+    },
+    "recarregar": {
+     "duracao_s": 3.4,
+     "laco": false,
+     "descricao": "abre o tambor (0,55 s), aponta para cima e empurra o extrator (1,05 s: soltar 6 estojos), aponta para baixo, carrega de 1,6 a 2,5 s (carregador rápido em encaixe_recarga, ou um a um) e fecha (3,0 s)"
+    },
+    "inspecionar": {
+     "duracao_s": 3.2,
+     "laco": false,
+     "descricao": "abre o tambor, gira as 6 câmaras com o dedo e fecha com um golpe de pulso"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "espingarda_12",
+   "nome": "Espingarda Mutirão 12",
+   "grupo": "armas",
+   "categoria": "espingarda",
+   "capacidade": 5,
+   "dano": 150,
+   "dispersao_graus": 4.5,
+   "alcance_m": 15,
+   "alcance_max_m": 40,
+   "tiros_por_s": 1.3,
+   "recarga_s": 0.55,
+   "recarga_vazia_s": 1.3,
+   "precisao": 0.45,
+   "recuo": 0.75,
+   "ruido_m": 110,
+   "durabilidade": 900,
+   "peso_kg": 3.4,
+   "raridade": "incomum",
+   "valor_troca": 70,
+   "onde": [
+    "quartel",
+    "casa_de_campo",
+    "armazem",
+    "posto",
+    "delegacia"
+   ],
+   "classe": "fogo",
+   "calibre": "12",
+   "municao": "municao_12_chumbo",
+   "municoes_aceitas": [
+    "municao_12_chumbo",
+    "municao_12_balote"
+   ],
+   "modo": "bombeamento (ação manual)",
+   "acao": "bombeamento",
+   "recarga_por_cartucho": true,
+   "estojo_s": 0.36,
+   "bagos": 9,
+   "descricao": "Espingarda de bombeamento com coronha retrátil, punho de pistola, protetor de calor e trilho. 5 no tubo; a curta distância derruba qualquer zumbi, mas o estrondo chama tudo num raio de 110 m. Recarrega um cartucho por vez.",
+   "arquivo": "armas/espingarda_12.glb",
+   "tamanho_m": [
+    0.043,
+    0.179,
+    0.787
+   ],
+   "triangulos": 70220,
+   "kb": 3560.1,
+   "partes": [
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": -12,
+     "descricao": "puxa para trás",
+     "pai": "espingarda_12",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      -0.02
+     ]
+    },
+    {
+     "no": "telha",
+     "tipo": "desliza",
+     "curso_m": -0.085,
+     "descricao": "bombeia: puxa 85 mm para trás (ejeta) e volta (põe outro cartucho na câmara)",
+     "pai": "espingarda_12",
+     "explodir_m": [
+      0.0,
+      -0.05,
+      -0.08
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": -0.085,
+     "descricao": "anda junto com a telha (barras de ação)",
+     "pai": "telha",
+     "explodir_m": [
+      0.03,
+      0.05,
+      0.05
+     ]
+    },
+    {
+     "no": "elevador",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": 12,
+     "descricao": "levanta o cartucho do tubo até a câmara durante o bombeamento",
+     "pai": "espingarda_12",
+     "explodir_m": [
+      0.0,
+      -0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "tampa_tubo",
+     "tipo": "fixa",
+     "descricao": "tampa do tubo (troca pelo prolongador)",
+     "pai": "espingarda_12",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.05
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_mira",
+     "tipo": "trilho_mira",
+     "pai": "espingarda_12",
+     "posicao_m": [
+      0.0,
+      0.1125,
+      -0.133
+     ],
+     "aceita": [
+      "mira_ponto_vermelho_tubo"
+     ],
+     "explodir_m": [
+      0.0,
+      0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_coronha",
+     "tipo": "coronha_12",
+     "pai": "espingarda_12",
+     "posicao_m": [
+      -0.0,
+      0.086,
+      0.002
+     ],
+     "aceita": [
+      "coronha_retratil_12",
+      "coronha_fixa_12"
+     ],
+     "padrao": "coronha_retratil_12",
+     "descricao": "sem coronha fica só o punho de pistola (mais curta e leve, mas recua muito)",
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.08
+     ]
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_12",
+     "pai": "espingarda_12",
+     "posicao_m": [
+      0.0,
+      0.09,
+      -0.746
+     ],
+     "aceita": [
+      "choke_estendido_12",
+      "freio_rompimento_12"
+     ],
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.06
+     ]
+    },
+    {
+     "no": "encaixe_tubo",
+     "tipo": "tubo_12",
+     "pai": "espingarda_12",
+     "posicao_m": [
+      0.0,
+      0.065,
+      -0.638
+     ],
+     "substitui": "tampa_tubo",
+     "aceita": [
+      "tampa_tubo_12",
+      "prolongador_tubo_12"
+     ],
+     "descricao": "ao pôr o prolongador aqui, esconda as malhas do nó tampa_tubo",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.05
+     ]
+    },
+    {
+     "no": "encaixe_cano",
+     "tipo": "cano_12",
+     "pai": "espingarda_12",
+     "posicao_m": [
+      0.0,
+      0.0775,
+      -0.598
+     ],
+     "aceita": [
+      "lanterna_cano_12"
+     ],
+     "explodir_m": [
+      0.05,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_lateral",
+     "tipo": "lateral_12",
+     "pai": "espingarda_12",
+     "posicao_m": [
+      -0.0145,
+      0.076,
+      -0.163
+     ],
+     "aceita": [
+      "porta_cartuchos_lateral_12"
+     ],
+     "explodir_m": [
+      -0.05,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_bandoleira",
+     "tipo": "bandoleira",
+     "pai": "espingarda_12",
+     "posicao_m": [
+      0.0,
+      0.042,
+      -0.629
+     ],
+     "aceita": [
+      "bandoleira"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.04,
+      0.0
+     ]
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "espingarda_12",
+     "posicao_m": [
+      0.0,
+      0.09,
+      -0.746
+     ],
+     "descricao": "clarão de boca e origem dos bagos (raycast em cone para -Z)"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "espingarda_12",
+     "posicao_m": [
+      0.0145,
+      0.09,
+      -0.198
+     ],
+     "descricao": "onde nasce a casca ejetada (aos 0,36 s do \"atirar\")"
+    },
+    {
+     "no": "entrada_cartucho",
+     "tipo": "efeito",
+     "pai": "espingarda_12",
+     "posicao_m": [
+      0.0,
+      0.043,
+      -0.173
+     ],
+     "descricao": "janela de carga: onde a mão empurra cada cartucho"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "espingarda_12",
+     "posicao_m": [
+      0.0,
+      0.1125,
+      -0.008
+     ],
+     "descricao": "linha de visada: topo do trilho -> conta de latão"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.8,
+     "laco": false,
+     "descricao": "tiro e bombeamento: coice, telha para trás (0,37 s: soltar a casca em saida_estojo aos 0,36 s) e para a frente"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "último tiro: bombeia, ejeta e deixa a telha atrás (ação aberta, tubo vazio)"
+    },
+    "vazia": {
+     "duracao_s": 0.1,
+     "laco": true,
+     "descricao": "pose parada: ação aberta"
+    },
+    "recarregar": {
+     "duracao_s": 0.55,
+     "laco": false,
+     "descricao": "põe UM cartucho pela janela de carga (0,3 s); repita por cartucho (a recarga pode ser interrompida para atirar)"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 1.3,
+     "laco": false,
+     "descricao": "ação aberta: põe um cartucho direto na janela de ejeção (0,45 s) e fecha a telha (0,9 s); depois carregue o tubo"
+    },
+    "inspecionar": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "mostra a janela de carga, depois a de ejeção e abre a ação até ver o cartucho na câmara"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "espingarda_12_curta",
+   "nome": "Espingarda Mutirão 12 curta",
+   "grupo": "armas",
+   "categoria": "espingarda",
+   "capacidade": 4,
+   "dano": 150,
+   "dispersao_graus": 6.0,
+   "alcance_m": 12,
+   "alcance_max_m": 30,
+   "tiros_por_s": 1.3,
+   "recarga_s": 0.55,
+   "recarga_vazia_s": 1.3,
+   "precisao": 0.38,
+   "recuo": 0.85,
+   "ruido_m": 120,
+   "durabilidade": 900,
+   "peso_kg": 2.7,
+   "raridade": "raro",
+   "valor_troca": 80,
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "classe": "fogo",
+   "calibre": "12",
+   "municao": "municao_12_chumbo",
+   "municoes_aceitas": [
+    "municao_12_chumbo",
+    "municao_12_balote"
+   ],
+   "modo": "bombeamento (ação manual)",
+   "acao": "bombeamento",
+   "recarga_por_cartucho": true,
+   "estojo_s": 0.36,
+   "bagos": 9,
+   "descricao": "Versão de cano curto e só punho, com freio dentado na boca: boa para arrombar portas e lutar dentro de casa. Espalha mais os bagos e coice forte; aceita coronha.",
+   "arquivo": "armas/espingarda_12_curta.glb",
+   "tamanho_m": [
+    0.043,
+    0.179,
+    0.635
+   ],
+   "triangulos": 64094,
+   "kb": 3273.1,
+   "partes": [
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": -12,
+     "descricao": "puxa para trás",
+     "pai": "espingarda_12_curta",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      -0.02
+     ]
+    },
+    {
+     "no": "telha",
+     "tipo": "desliza",
+     "curso_m": -0.085,
+     "descricao": "bombeia: puxa 85 mm para trás (ejeta) e volta (põe outro cartucho na câmara)",
+     "pai": "espingarda_12_curta",
+     "explodir_m": [
+      0.0,
+      -0.05,
+      -0.08
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": -0.085,
+     "descricao": "anda junto com a telha (barras de ação)",
+     "pai": "telha",
+     "explodir_m": [
+      0.03,
+      0.05,
+      0.05
+     ]
+    },
+    {
+     "no": "elevador",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": 12,
+     "descricao": "levanta o cartucho do tubo até a câmara durante o bombeamento",
+     "pai": "espingarda_12_curta",
+     "explodir_m": [
+      0.0,
+      -0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "tampa_tubo",
+     "tipo": "fixa",
+     "descricao": "tampa do tubo (troca pelo prolongador)",
+     "pai": "espingarda_12_curta",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.05
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_mira",
+     "tipo": "trilho_mira",
+     "pai": "espingarda_12_curta",
+     "posicao_m": [
+      0.0,
+      0.1125,
+      -0.133
+     ],
+     "aceita": [
+      "mira_ponto_vermelho_tubo"
+     ],
+     "explodir_m": [
+      0.0,
+      0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_coronha",
+     "tipo": "coronha_12",
+     "pai": "espingarda_12_curta",
+     "posicao_m": [
+      -0.0,
+      0.086,
+      0.002
+     ],
+     "aceita": [
+      "coronha_retratil_12",
+      "coronha_fixa_12"
+     ],
+     "descricao": "sem coronha fica só o punho de pistola (mais curta e leve, mas recua muito)",
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.08
+     ]
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_12",
+     "pai": "espingarda_12_curta",
+     "posicao_m": [
+      0.0,
+      0.09,
+      -0.594
+     ],
+     "aceita": [
+      "choke_estendido_12",
+      "freio_rompimento_12"
+     ],
+     "padrao": "freio_rompimento_12",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.06
+     ]
+    },
+    {
+     "no": "encaixe_cano",
+     "tipo": "cano_12",
+     "pai": "espingarda_12_curta",
+     "posicao_m": [
+      0.0,
+      0.0775,
+      -0.523
+     ],
+     "aceita": [
+      "lanterna_cano_12"
+     ],
+     "explodir_m": [
+      0.05,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_lateral",
+     "tipo": "lateral_12",
+     "pai": "espingarda_12_curta",
+     "posicao_m": [
+      -0.0145,
+      0.076,
+      -0.163
+     ],
+     "aceita": [
+      "porta_cartuchos_lateral_12"
+     ],
+     "explodir_m": [
+      -0.05,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_bandoleira",
+     "tipo": "bandoleira",
+     "pai": "espingarda_12_curta",
+     "posicao_m": [
+      0.0,
+      0.042,
+      -0.559
+     ],
+     "aceita": [
+      "bandoleira"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.04,
+      0.0
+     ]
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "espingarda_12_curta",
+     "posicao_m": [
+      0.0,
+      0.09,
+      -0.594
+     ],
+     "descricao": "clarão de boca e origem dos bagos (raycast em cone para -Z)"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "espingarda_12_curta",
+     "posicao_m": [
+      0.0145,
+      0.09,
+      -0.198
+     ],
+     "descricao": "onde nasce a casca ejetada (aos 0,36 s do \"atirar\")"
+    },
+    {
+     "no": "entrada_cartucho",
+     "tipo": "efeito",
+     "pai": "espingarda_12_curta",
+     "posicao_m": [
+      0.0,
+      0.043,
+      -0.173
+     ],
+     "descricao": "janela de carga: onde a mão empurra cada cartucho"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "espingarda_12_curta",
+     "posicao_m": [
+      0.0,
+      0.1125,
+      -0.008
+     ],
+     "descricao": "linha de visada: topo do trilho -> conta de latão"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.8,
+     "laco": false,
+     "descricao": "tiro e bombeamento: coice, telha para trás (0,37 s: soltar a casca em saida_estojo aos 0,36 s) e para a frente"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "último tiro: bombeia, ejeta e deixa a telha atrás (ação aberta, tubo vazio)"
+    },
+    "vazia": {
+     "duracao_s": 0.1,
+     "laco": true,
+     "descricao": "pose parada: ação aberta"
+    },
+    "recarregar": {
+     "duracao_s": 0.55,
+     "laco": false,
+     "descricao": "põe UM cartucho pela janela de carga (0,3 s); repita por cartucho (a recarga pode ser interrompida para atirar)"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 1.3,
+     "laco": false,
+     "descricao": "ação aberta: põe um cartucho direto na janela de ejeção (0,45 s) e fecha a telha (0,9 s); depois carregue o tubo"
+    },
+    "inspecionar": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "mostra a janela de carga, depois a de ejeção e abre a ação até ver o cartucho na câmara"
     },
     "ocioso": {
      "duracao_s": 3.0,
@@ -568,6 +1487,561 @@
    ],
    "triangulos": 1386,
    "kb": 70.1
+  },
+  {
+   "id": "carregador_rapido_38",
+   "nome": "Carregador rápido .38 (6)",
+   "grupo": "acessorios",
+   "categoria": "recarga",
+   "encaixe": "recarga_38",
+   "capacidade": 6,
+   "municao": "municao_38",
+   "peso_kg": 0.1,
+   "raridade": "incomum",
+   "valor_troca": 12,
+   "modificadores": {
+    "recarga_s": 0.55
+   },
+   "onde": [
+    "quartel",
+    "motel",
+    "casas"
+   ],
+   "descricao": "Segura 6 cartuchos na posição das câmaras: encosta, gira o botão e os 6 entram de uma vez.",
+   "arquivo": "acessorios/carregador_rapido_38.glb",
+   "tamanho_m": [
+    0.037,
+    0.037,
+    0.062
+   ],
+   "triangulos": 4484,
+   "kb": 222.6
+  },
+  {
+   "id": "mira_ponto_vermelho_revolver",
+   "nome": "Mira de ponto vermelho para revólver",
+   "grupo": "acessorios",
+   "categoria": "mira",
+   "encaixe": "mira_revolver",
+   "peso_kg": 0.12,
+   "raridade": "raro",
+   "valor_troca": 40,
+   "usa": "pilhas",
+   "autonomia_min": 3000,
+   "modificadores": {
+    "precisao_mirando": 1.3,
+    "tempo_mirar": 0.8,
+    "alcance_m": 1.2
+   },
+   "onde": [
+    "quartel",
+    "galeria",
+    "casa_de_campo"
+   ],
+   "linha_de_visada": "encaixe \"olho\"",
+   "descricao": "Tubo de ponto vermelho com base parafusada na ponte do revólver. Mira rápido e acerta mais longe.",
+   "arquivo": "acessorios/mira_ponto_vermelho_revolver.glb",
+   "tamanho_m": [
+    0.035,
+    0.041,
+    0.074
+   ],
+   "triangulos": 2300,
+   "kb": 116.9,
+   "encaixes": [
+    {
+     "no": "olho",
+     "tipo": "mira",
+     "pai": "mira_ponto_vermelho_revolver",
+     "posicao_m": [
+      -0.0,
+      0.0215,
+      0.03
+     ],
+     "descricao": "ocular: linha de visada"
+    }
+   ]
+  },
+  {
+   "id": "empunhadura_madeira_38",
+   "nome": "Talas de madeira .38",
+   "grupo": "acessorios",
+   "categoria": "empunhadura",
+   "encaixe": "punho_38",
+   "peso_kg": 0.08,
+   "raridade": "comum",
+   "modificadores": {},
+   "descricao": "As talas de nogueira quadriculada que vêm no revólver.",
+   "arquivo": "acessorios/empunhadura_madeira_38.glb",
+   "tamanho_m": [
+    0.034,
+    0.081,
+    0.037
+   ],
+   "triangulos": 17598,
+   "kb": 1523.1
+  },
+  {
+   "id": "empunhadura_borracha_38",
+   "nome": "Empunhadura de borracha .38",
+   "grupo": "acessorios",
+   "categoria": "empunhadura",
+   "encaixe": "punho_38",
+   "peso_kg": 0.1,
+   "raridade": "incomum",
+   "valor_troca": 10,
+   "modificadores": {
+    "recuo": 0.8,
+    "precisao": 1.05
+   },
+   "onde": [
+    "quartel",
+    "casas"
+   ],
+   "descricao": "Borracha com apoio para os dedos e costas fechadas: segura o coice e não escorrega com a mão suada.",
+   "arquivo": "acessorios/empunhadura_borracha_38.glb",
+   "tamanho_m": [
+    0.034,
+    0.091,
+    0.044
+   ],
+   "triangulos": 12304,
+   "kb": 578.7
+  },
+  {
+   "id": "coldre_revolver",
+   "nome": "Coldre de couro (revólver)",
+   "grupo": "acessorios",
+   "categoria": "coldre",
+   "encaixe": "coldre",
+   "peso_kg": 0.22,
+   "raridade": "comum",
+   "valor_troca": 8,
+   "modificadores": {
+    "tempo_sacar": 0.7
+   },
+   "onde": [
+    "casas",
+    "casa_de_campo",
+    "armazem"
+   ],
+   "descricao": "Coldre de cinto com presilha de pressão. Leva o revólver sem ocupar espaço na mochila e saca mais rápido.",
+   "arquivo": "acessorios/coldre_revolver.glb",
+   "tamanho_m": [
+    0.056,
+    0.137,
+    0.198
+   ],
+   "triangulos": 1772,
+   "kb": 132.3,
+   "encaixes": [
+    {
+     "no": "arma",
+     "tipo": "efeito",
+     "pai": "coldre_revolver",
+     "posicao_m": [
+      0.027,
+      -0.12,
+      0.046
+     ],
+     "descricao": "ponha a arma aqui (pivô da arma) para guardá-la no coldre"
+    }
+   ]
+  },
+  {
+   "id": "coronha_retratil_12",
+   "nome": "Coronha retrátil (espingarda)",
+   "grupo": "acessorios",
+   "categoria": "coronha",
+   "encaixe": "coronha_12",
+   "peso_kg": 0.42,
+   "raridade": "incomum",
+   "valor_troca": 20,
+   "modificadores": {
+    "recuo": 0.6,
+    "precisao": 1.35
+   },
+   "posicoes": 5,
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "Tubo com coronha de polímero que corre em 5 posições (nó \"soleira\", animações estender/recolher). Segura o coice no ombro.",
+   "arquivo": "acessorios/coronha_retratil_12.glb",
+   "tamanho_m": [
+    0.043,
+    0.148,
+    0.277
+   ],
+   "triangulos": 15612,
+   "kb": 736.4,
+   "partes": [
+    {
+     "no": "soleira",
+     "tipo": "desliza",
+     "curso_m": -0.064,
+     "descricao": "corre no tubo, 5 posições de 16 mm",
+     "pai": "coronha_retratil_12",
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.08
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "ombro",
+     "tipo": "efeito",
+     "pai": "soleira",
+     "posicao_m": [
+      -0.0,
+      -0.05,
+      0.276
+     ],
+     "descricao": "ponto da soleira que encosta no ombro"
+    }
+   ],
+   "animacoes": {
+    "estender": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "abre a coronha até a última posição"
+    },
+    "recolher": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "fecha a coronha"
+    }
+   }
+  },
+  {
+   "id": "coronha_fixa_12",
+   "nome": "Coronha fixa de polímero (espingarda)",
+   "grupo": "acessorios",
+   "categoria": "coronha",
+   "encaixe": "coronha_12",
+   "peso_kg": 0.6,
+   "raridade": "comum",
+   "valor_troca": 12,
+   "modificadores": {
+    "recuo": 0.55,
+    "precisao": 1.4
+   },
+   "onde": [
+    "casa_de_campo",
+    "armazem",
+    "casas"
+   ],
+   "descricao": "Coronha inteiriça com soleira de borracha e porta-bandoleira. Mais pesada e firme que a retrátil.",
+   "arquivo": "acessorios/coronha_fixa_12.glb",
+   "tamanho_m": [
+    0.041,
+    0.159,
+    0.335
+   ],
+   "triangulos": 20172,
+   "kb": 948.3,
+   "encaixes": [
+    {
+     "no": "ombro",
+     "tipo": "efeito",
+     "pai": "coronha_fixa_12",
+     "posicao_m": [
+      -0.0,
+      -0.05,
+      0.338
+     ],
+     "descricao": "ponto da soleira que encosta no ombro"
+    }
+   ]
+  },
+  {
+   "id": "tampa_tubo_12",
+   "nome": "Tampa do tubo (espingarda)",
+   "grupo": "acessorios",
+   "categoria": "tubo",
+   "encaixe": "tubo_12",
+   "peso_kg": 0.04,
+   "raridade": "comum",
+   "modificadores": {},
+   "descricao": "A tampa recartilhada que vem na espingarda.",
+   "arquivo": "acessorios/tampa_tubo_12.glb",
+   "tamanho_m": [
+    0.029,
+    0.029,
+    0.021
+   ],
+   "triangulos": 1024,
+   "kb": 61.8
+  },
+  {
+   "id": "prolongador_tubo_12",
+   "nome": "Prolongador do tubo (+1)",
+   "grupo": "acessorios",
+   "categoria": "tubo",
+   "encaixe": "tubo_12",
+   "peso_kg": 0.15,
+   "raridade": "raro",
+   "valor_troca": 18,
+   "capacidade_extra": 1,
+   "modificadores": {},
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "Estende o tubo do carregador até a boca: um cartucho a mais, preso ao cano por uma abraçadeira.",
+   "arquivo": "acessorios/prolongador_tubo_12.glb",
+   "tamanho_m": [
+    0.029,
+    0.053,
+    0.097
+   ],
+   "triangulos": 2896,
+   "kb": 150.4
+  },
+  {
+   "id": "choke_estendido_12",
+   "nome": "Choke estendido com portas",
+   "grupo": "acessorios",
+   "categoria": "boca",
+   "encaixe": "boca_12",
+   "peso_kg": 0.07,
+   "raridade": "raro",
+   "valor_troca": 22,
+   "modificadores": {
+    "dispersao_graus": 0.6,
+    "alcance_m": 1.3,
+    "recuo": 0.9
+   },
+   "onde": [
+    "quartel",
+    "casa_de_campo"
+   ],
+   "descricao": "Aperta o tiro: os bagos espalham menos e vão mais longe. As portas no topo seguram o cano.",
+   "arquivo": "acessorios/choke_estendido_12.glb",
+   "tamanho_m": [
+    0.025,
+    0.025,
+    0.062
+   ],
+   "triangulos": 1492,
+   "kb": 82.9
+  },
+  {
+   "id": "freio_rompimento_12",
+   "nome": "Freio dentado de arrombamento",
+   "grupo": "acessorios",
+   "categoria": "boca",
+   "encaixe": "boca_12",
+   "peso_kg": 0.12,
+   "raridade": "raro",
+   "valor_troca": 20,
+   "modificadores": {
+    "recuo": 0.85,
+    "dano_coronhada": 1.6,
+    "ruido_m": 1.1
+   },
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "Boca com dentes de aço e janelas laterais: segura o cano e serve para quebrar vidro e golpear zumbis de perto.",
+   "arquivo": "acessorios/freio_rompimento_12.glb",
+   "tamanho_m": [
+    0.03,
+    0.03,
+    0.061
+   ],
+   "triangulos": 1252,
+   "kb": 60.6
+  },
+  {
+   "id": "lanterna_cano_12",
+   "nome": "Lanterna de cano (espingarda)",
+   "grupo": "acessorios",
+   "categoria": "lanterna",
+   "encaixe": "cano_12",
+   "peso_kg": 0.2,
+   "raridade": "incomum",
+   "valor_troca": 28,
+   "usa": "pilhas",
+   "autonomia_min": 80,
+   "luz": {
+    "alcance_m": 45,
+    "angulo_graus": 18,
+    "lumens": 800
+   },
+   "modificadores": {},
+   "onde": [
+    "quartel",
+    "posto",
+    "delegacia"
+   ],
+   "liga_desliga": "SpotLight3D no encaixe \"feixe\" (para -Z)",
+   "descricao": "Abraçadeira no cano e no tubo com lanterna de 800 lm do lado direito e botão de pressão.",
+   "arquivo": "acessorios/lanterna_cano_12.glb",
+   "tamanho_m": [
+    0.061,
+    0.053,
+    0.099
+   ],
+   "triangulos": 6200,
+   "kb": 302.4,
+   "encaixes": [
+    {
+     "no": "feixe",
+     "tipo": "efeito",
+     "pai": "lanterna_cano_12",
+     "posicao_m": [
+      0.031,
+      -0.003,
+      -0.0305
+     ],
+     "descricao": "SpotLight3D aqui (-Z)"
+    }
+   ]
+  },
+  {
+   "id": "porta_cartuchos_lateral_12",
+   "nome": "Porta-cartuchos lateral (6)",
+   "grupo": "acessorios",
+   "categoria": "porta_cartuchos",
+   "encaixe": "lateral_12",
+   "peso_kg": 0.26,
+   "raridade": "incomum",
+   "valor_troca": 15,
+   "leva": 6,
+   "municao": "municao_12_chumbo",
+   "modificadores": {
+    "recarga_s": 0.85
+   },
+   "onde": [
+    "quartel",
+    "casa_de_campo",
+    "delegacia"
+   ],
+   "descricao": "Placa no lado esquerdo do receptor com 6 cartuchos à mão: recarrega mais rápido e leva 6 tiros a mais na arma.",
+   "arquivo": "acessorios/porta_cartuchos_lateral_12.glb",
+   "tamanho_m": [
+    0.025,
+    0.07,
+    0.139
+   ],
+   "triangulos": 6224,
+   "kb": 296.1
+  },
+  {
+   "id": "mira_ponto_vermelho_tubo",
+   "nome": "Mira de ponto vermelho de tubo",
+   "grupo": "acessorios",
+   "categoria": "mira",
+   "encaixe": "trilho_mira",
+   "peso_kg": 0.16,
+   "raridade": "raro",
+   "valor_troca": 45,
+   "usa": "pilhas",
+   "autonomia_min": 4000,
+   "modificadores": {
+    "precisao_mirando": 1.3,
+    "tempo_mirar": 0.8
+   },
+   "onde": [
+    "quartel",
+    "galeria",
+    "delegacia"
+   ],
+   "linha_de_visada": "encaixe \"olho\"",
+   "descricao": "Tubo de 30 mm com tampas basculantes (nós \"tampa_frente\" e \"tampa_tras\"), trava de alavanca no trilho e torres de ajuste. Serve em toda arma com trilho de cima.",
+   "arquivo": "acessorios/mira_ponto_vermelho_tubo.glb",
+   "tamanho_m": [
+    0.047,
+    0.089,
+    0.108
+   ],
+   "triangulos": 3592,
+   "kb": 182.8,
+   "partes": [
+    {
+     "no": "tampa_frente",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -150,
+     "descricao": "tampa basculante (aberta; animação fechar_tampas)",
+     "pai": "mira_ponto_vermelho_tubo",
+     "explodir_m": [
+      0.0,
+      0.03,
+      -0.03
+     ]
+    },
+    {
+     "no": "tampa_tras",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 150,
+     "descricao": "tampa basculante (aberta; animação fechar_tampas)",
+     "pai": "mira_ponto_vermelho_tubo",
+     "explodir_m": [
+      -0.0,
+      0.03,
+      0.03
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "olho",
+     "tipo": "mira",
+     "pai": "mira_ponto_vermelho_tubo",
+     "posicao_m": [
+      -0.0,
+      0.03,
+      0.034
+     ],
+     "descricao": "ocular: linha de visada"
+    }
+   ],
+   "animacoes": {
+    "fechar_tampas": {
+     "duracao_s": 0.3,
+     "laco": false,
+     "descricao": "fecha as duas tampas sobre as lentes"
+    },
+    "abrir_tampas": {
+     "duracao_s": 0.25,
+     "laco": false,
+     "descricao": "abre as tampas (mola)"
+    }
+   }
+  },
+  {
+   "id": "bandoleira",
+   "nome": "Bandoleira de náilon",
+   "grupo": "acessorios",
+   "categoria": "bandoleira",
+   "encaixe": "bandoleira",
+   "peso_kg": 0.15,
+   "raridade": "comum",
+   "valor_troca": 6,
+   "modificadores": {
+    "tempo_sacar": 0.85
+   },
+   "onde": [
+    "quartel",
+    "casas",
+    "armazem",
+    "galeria"
+   ],
+   "descricao": "Correia de náilon com mosquetão: a arma fica pendurada no ombro e libera as mãos para carregar coisas.",
+   "arquivo": "acessorios/bandoleira.glb",
+   "tamanho_m": [
+    0.029,
+    0.154,
+    0.842
+   ],
+   "triangulos": 5372,
+   "kb": 294.6
   }
  ],
  "municao": [
@@ -640,7 +2114,7 @@
     0.118
    ],
    "triangulos": 14004,
-   "kb": 745.8,
+   "kb": 743.0,
    "partes": [
     {
      "no": "tampa",
@@ -648,7 +2122,242 @@
      "eixo": "z",
      "abre_graus": 115,
      "descricao": "gira em torno da ponta de trás",
-     "pai": "caixa_municao_9mm"
+     "pai": "caixa_municao_9mm",
+     "explodir_m": [
+      0.0,
+      0.05,
+      0.0
+     ]
+    }
+   ],
+   "animacoes": {
+    "abrir": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "abre a tampa"
+    },
+    "fechar": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "fecha a tampa"
+    }
+   }
+  },
+  {
+   "id": "municao_38",
+   "nome": "Cartucho .38",
+   "grupo": "municao",
+   "categoria": "municao",
+   "calibre": ".38",
+   "peso_kg": 0.015,
+   "empilha": 60,
+   "raridade": "comum",
+   "onde": [
+    "casas",
+    "casa_de_campo",
+    "armazem",
+    "motel",
+    "quartel"
+   ],
+   "descricao": "Um cartucho .38 (deitado, pivô no centro).",
+   "arquivo": "municao/municao_38.glb",
+   "tamanho_m": [
+    0.011,
+    0.011,
+    0.039
+   ],
+   "triangulos": 672,
+   "kb": 34.0
+  },
+  {
+   "id": "estojo_38",
+   "nome": "Estojo .38 (vazio)",
+   "grupo": "municao",
+   "categoria": "estojo",
+   "calibre": ".38",
+   "peso_kg": 0.005,
+   "descricao": "Estojo vazio: no revólver saem os 6 juntos quando o extrator é empurrado (recarregar, 1,05 s).",
+   "arquivo": "municao/estojo_38.glb",
+   "tamanho_m": [
+    0.011,
+    0.011,
+    0.029
+   ],
+   "triangulos": 384,
+   "kb": 19.8
+  },
+  {
+   "id": "caixa_municao_38",
+   "nome": "Caixa de munição .38 (50)",
+   "grupo": "municao",
+   "categoria": "caixa",
+   "calibre": ".38",
+   "municao": "municao_38",
+   "quantidade": 50,
+   "peso_kg": 0.78,
+   "empilha": 4,
+   "raridade": "comum",
+   "onde": [
+    "casas",
+    "casa_de_campo",
+    "armazem",
+    "motel",
+    "quartel"
+   ],
+   "descricao": "Caixa de papelão com bandeja de 50 cartuchos .38. A tampa abre (nó \"tampa\", animação \"abrir\").",
+   "arquivo": "municao/caixa_municao_38.glb",
+   "tamanho_m": [
+    0.062,
+    0.046,
+    0.122
+   ],
+   "triangulos": 14004,
+   "kb": 738.8,
+   "partes": [
+    {
+     "no": "tampa",
+     "tipo": "tampa",
+     "eixo": "z",
+     "abre_graus": 115,
+     "descricao": "gira em torno da ponta de trás",
+     "pai": "caixa_municao_38",
+     "explodir_m": [
+      0.0,
+      0.05,
+      0.0
+     ]
+    }
+   ],
+   "animacoes": {
+    "abrir": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "abre a tampa"
+    },
+    "fechar": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "fecha a tampa"
+    }
+   }
+  },
+  {
+   "id": "municao_12_chumbo",
+   "nome": "Cartucho 12 chumbo grosso",
+   "grupo": "municao",
+   "categoria": "municao",
+   "calibre": "12",
+   "peso_kg": 0.04,
+   "empilha": 25,
+   "raridade": "comum",
+   "bagos": 9,
+   "estojo": "estojo_12",
+   "onde": [
+    "quartel",
+    "casa_de_campo",
+    "armazem",
+    "posto",
+    "delegacia"
+   ],
+   "descricao": "Casca vermelha com 9 bagos: estrago enorme de perto, espalha com a distância.",
+   "arquivo": "municao/municao_12_chumbo.glb",
+   "tamanho_m": [
+    0.022,
+    0.022,
+    0.07
+   ],
+   "triangulos": 1092,
+   "kb": 53.8
+  },
+  {
+   "id": "municao_12_balote",
+   "nome": "Cartucho 12 balote",
+   "grupo": "municao",
+   "categoria": "municao",
+   "calibre": "12",
+   "peso_kg": 0.042,
+   "empilha": 25,
+   "raridade": "incomum",
+   "bagos": 1,
+   "estojo": "estojo_12",
+   "muda": {
+    "dano": 120,
+    "alcance_m": 50,
+    "dispersao_graus": 0.8,
+    "precisao": 1.4
+   },
+   "onde": [
+    "quartel",
+    "casa_de_campo",
+    "delegacia"
+   ],
+   "descricao": "Casca verde com um projétil só de chumbo: alcance de 50 m e atravessa portas.",
+   "arquivo": "municao/municao_12_balote.glb",
+   "tamanho_m": [
+    0.022,
+    0.022,
+    0.069
+   ],
+   "triangulos": 1120,
+   "kb": 55.9
+  },
+  {
+   "id": "estojo_12",
+   "nome": "Casca 12 (vazia)",
+   "grupo": "municao",
+   "categoria": "estojo",
+   "calibre": "12",
+   "peso_kg": 0.008,
+   "descricao": "Casca ejetada no bombeamento (aos 0,36 s do \"atirar\"). Na bancada vira casca para recarregar.",
+   "arquivo": "municao/estojo_12.glb",
+   "tamanho_m": [
+    0.022,
+    0.022,
+    0.074
+   ],
+   "triangulos": 892,
+   "kb": 44.4
+  },
+  {
+   "id": "caixa_municao_12",
+   "nome": "Caixa de cartuchos 12 (25)",
+   "grupo": "municao",
+   "categoria": "caixa",
+   "calibre": "12",
+   "municao": "municao_12_chumbo",
+   "quantidade": 25,
+   "peso_kg": 1.1,
+   "empilha": 4,
+   "raridade": "incomum",
+   "onde": [
+    "quartel",
+    "casa_de_campo",
+    "armazem",
+    "posto",
+    "delegacia"
+   ],
+   "descricao": "Caixa de papelão com 25 cartuchos de chumbo grosso em pé. A tampa abre (nó \"tampa\", animação \"abrir\").",
+   "arquivo": "municao/caixa_municao_12.glb",
+   "tamanho_m": [
+    0.123,
+    0.075,
+    0.123
+   ],
+   "triangulos": 14950,
+   "kb": 785.9,
+   "partes": [
+    {
+     "no": "tampa",
+     "tipo": "tampa",
+     "eixo": "z",
+     "abre_graus": 115,
+     "descricao": "gira em torno da ponta de trás",
+     "pai": "caixa_municao_12",
+     "explodir_m": [
+      0.0,
+      0.05,
+      0.0
+     ]
     }
    ],
    "animacoes": {

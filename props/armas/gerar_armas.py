@@ -56,7 +56,7 @@ def _tex_grip(seed, px=1024, tile=0.05):
     n = int(tile * px); g = GT.noise(n, n, 0.0006 * px, 0.0006 * px, seed); f = GT.fbm(n, n, 0.003 * px, 3, seed + 3)
     pic = GT.smooth(0.3, 1.4, g)
     c = GT.rgb(CORES['polimero_grip'])[None, None]
-    alb = c * (0.95 + 0.12 * pic[..., None] + 0.03 * f[..., None]); hm = 0.00025 * pic + 0.00005 * f
+    alb = c * (0.72 + 0.1 * pic[..., None] + 0.03 * f[..., None]); hm = 0.00025 * pic + 0.00005 * f
     return alb, hm, 0.75 + 0.15 * pic, 1.2, 0.0004, tile, px
 
 
@@ -152,6 +152,88 @@ def inter(ms): return trimesh.boolean.intersection(ms, engine='manifold')
 def arred(pts, r=0.002, n=4):
     """Poligono com cantos arredondados (buffer para fora e para dentro)."""
     return Polygon(pts).buffer(-r, join_style=1, resolution=n).buffer(r, join_style=1, resolution=n)
+
+
+def punho_redondo(perfil, y_topo, y_base, meia_larg, n=2.6, fatias=70, voltas=40, raio_base=0.006, raio_topo=0.0):
+    """Cabo com secao ARREDONDADA (superelipse) seguindo o perfil lateral: em cada altura y pega a extensao do perfil em x
+    (frente e costas do cabo) e faz uma secao de largura 2 * meia_larg(y). n ~ 2 = oval, maior = mais quadrado.
+    raio_base arredonda a borda de baixo (e raio_topo a de cima). Devolve um solido estanque (serve para booleanos)."""
+    ys = np.linspace(y_topo, y_base, fatias)
+    ang = np.linspace(0, 2 * math.pi, voltas, endpoint=False); c, s_ = np.cos(ang), np.sin(ang)
+    ex = lambda w: np.sign(w) * np.abs(w) ** (2.0 / n)
+    aneis = []
+    for y in ys:
+        g = perfil.intersection(LineString([(-1, y), (1, y)]))
+        segs = [g] if g.geom_type == 'LineString' else [h for h in getattr(g, 'geoms', []) if h.geom_type == 'LineString']
+        if not segs or g.is_empty: continue
+        sg = min(segs, key=lambda h: h.bounds[0]); xa, xb = sg.bounds[0], sg.bounds[2]
+        a = (xb - xa) / 2; b = meia_larg(y); k = 0.0
+        if raio_base and y < y_base + raio_base:
+            t = (y_base + raio_base - y) / raio_base; k = raio_base * (1 - math.sqrt(max(0.0, 1 - t * t)))
+        if raio_topo and y > y_topo - raio_topo:
+            t = (y - (y_topo - raio_topo)) / raio_topo; k = max(k, raio_topo * (1 - math.sqrt(max(0.0, 1 - t * t))))
+        a = max(a - k, 0.0008); b = max(b - k, 0.0008)
+        aneis.append(np.stack([(xa + xb) / 2 + a * ex(c), np.full(voltas, y), b * ex(s_)], 1))
+    V = np.concatenate(aneis + [aneis[0].mean(0, keepdims=True), aneis[-1].mean(0, keepdims=True)]); N = len(aneis); F = []
+    for i in range(N - 1):
+        for j in range(voltas):
+            a0 = i * voltas + j; a1 = i * voltas + (j + 1) % voltas; b0 = a0 + voltas; b1 = a1 + voltas
+            F += [[a0, b0, a1], [a1, b0, b1]]
+    ct, cb = N * voltas, N * voltas + 1
+    for j in range(voltas):
+        F.append([ct, j, (j + 1) % voltas]); F.append([cb, (N - 1) * voltas + (j + 1) % voltas, (N - 1) * voltas + j])
+    m = trimesh.Trimesh(V, np.array(F), process=True); trimesh.repair.fix_normals(m)
+    return _fix(m)
+
+
+def suave(pts, it=4):
+    """Contorno fechado suavizado (Chaikin): cantos viram curvas, sem facetas."""
+    P_ = np.array(pts, float)
+    for _ in range(it):
+        Q = np.roll(P_, -1, 0); P_ = np.stack([0.75 * P_ + 0.25 * Q, 0.25 * P_ + 0.75 * Q], 1).reshape(-1, 2)
+    return Polygon(P_).buffer(0)
+
+
+def _fatia(contorno, y):
+    g = contorno.intersection(LineString([(-1, y), (1, y)]))
+    segs = [g] if g.geom_type == 'LineString' else [h for h in getattr(g, 'geoms', []) if h.geom_type == 'LineString']
+    sg = min(segs, key=lambda h: h.bounds[0]); return sg.bounds[0], sg.bounds[2]
+
+
+def z_superficie(contorno, x, y, meia_larg, n):
+    """Altura z da superficie do punho_redondo no ponto (x, y) do lado direito."""
+    xa, xb = _fatia(contorno, y); a = (xb - xa) / 2; u = min(abs(x - (xa + xb) / 2) / a, 0.999)
+    return meia_larg(y) * (1 - u ** n) ** (1 / n)
+
+
+def cabo_com_talas(q, contorno, y_topo, y_base, larg_nucleo, larg_tala, mat_nucleo, mat_tala, mat_xadrez=None, borda=0.0016,
+                   borda_xadrez=0.0035, n=2.3, raio_base=0.006, medalhao=None, parafuso=None, nucleo=True):
+    """Cabo de verdade: nucleo arredondado da armacao (aparece nas costas e na frente) + talas que seguem a curva do cabo,
+    com borda lisa e area quadriculada levantada, medalhao e parafuso da tala. contorno = Polygon suave do cabo (vista de lado)."""
+    if nucleo: q.add(mat_nucleo, punho_redondo(contorno, y_topo, y_base, larg_nucleo, n=n, fatias=110, voltas=56, raio_base=raio_base))
+    prisma = lambda pl: solido(pl, -0.05, 0.05)
+    tala = punho_redondo(contorno, y_topo, y_base, larg_tala, n=n, fatias=110, voltas=56, raio_base=raio_base)
+    q.add(mat_tala, inter([tala, prisma(contorno.buffer(-borda, join_style=1))]))
+    if mat_xadrez:
+        lx = lambda y: larg_tala(y) + 0.0005
+        xz = punho_redondo(contorno, y_topo, y_base, lx, n=n, fatias=110, voltas=56, raio_base=raio_base)
+        area = contorno.buffer(-borda - borda_xadrez, join_style=1).intersection(sbox(-1, y_base + raio_base + 0.002, 1, y_topo - 0.004))
+        q.add(mat_xadrez, inter([xz, prisma(area)]))
+        if medalhao:                                                  # medalhao liso no meio do quadriculado
+            mx, my, mr, mm = medalhao
+            for zs in (-1, 1):
+                zc = z_superficie(contorno, mx, my, lx, n)
+                d = torno_x([(0.0, -0.0006), (mr, -0.0006), (mr, 0.0002), (mr * 0.85, 0.0007), (0.0, 0.0008)], 32)
+                d.apply_transform(TF.rotation_matrix(-zs * math.pi / 2, [0, 1, 0])); d.apply_translation([mx, my, zs * zc]); q.add(mm, d)
+                sol = torno_x([(0.0, 0.0), (mr * 0.5, 0.0), (mr * 0.5, 0.0003), (0.0, 0.0003)], 24)       # sol nascente (marca do Recomeco)
+                sol.apply_transform(TF.rotation_matrix(-zs * math.pi / 2, [0, 1, 0])); sol.apply_translation([mx, my, zs * (zc + 0.0008)]); q.add('aco_oxidado', sol)
+    if parafuso:
+        px, py = parafuso; zc = z_superficie(contorno, px, py, larg_tala, n)
+        for zs in (-1, 1):
+            m = torno_x([(0.0, -0.0004), (0.0021, -0.0004), (0.0021, 0.0002), (0.0015, 0.0007), (0.0, 0.0008)], 20)
+            m.apply_transform(TF.rotation_matrix(-zs * math.pi / 2, [0, 1, 0])); m.apply_translation([px, py, zs * zc]); q.add('aco_inox', m)
+            f = caixa(px - 0.0016, px + 0.0016, py - 0.00025, py + 0.00025, zs * (zc + 0.0005) - 0.0003, zs * (zc + 0.0005) + 0.0003)
+            q.add('aco_oxidado', f)
 
 
 def torno_x(perfil, sec=32, y=0.0, z=0.0, x0=0.0):
@@ -261,10 +343,13 @@ def exportar(it, raiz):
     reg = {k: v for k, v in it.items() if k != 'fn'}
     reg.update(arquivo=f"{it['grupo']}/{nome}.glb", tamanho_m=[round(float(x), 3) for x in (b[1] - b[0])], triangulos=int(tris),
                kb=round(os.path.getsize(arq) / 1024, 1))
-    if A.partes: reg['partes'] = [{k: (v if k != 'origem' else None) for k, v in p.items() if k not in ('peca', 'origem', 'pai')} | {'pai': p['pai'] or nome} for p in A.partes]
+    if A.partes:
+        reg['partes'] = [{k: v for k, v in p.items() if k not in ('peca', 'origem', 'pai', 'explodir')} | {'pai': p['pai'] or nome}
+                         | ({'explodir_m': [round(float(c), 4) for c in rot(p['explodir'])]} if 'explodir' in p else {}) for p in A.partes]
     if A.encaixes:
         reg['encaixes'] = [{'no': e['no'], 'tipo': e['tipo'], 'pai': e['pai'] or nome, 'posicao_m': [round(float(c), 4) for c in pos_w[e['no']]],
-                            **{k: v for k, v in e.items() if k not in ('no', 'tipo', 'pai', 'pos')}} for e in A.encaixes]
+                            **{k: v for k, v in e.items() if k not in ('no', 'tipo', 'pai', 'pos', 'explodir')},
+                            **({'explodir_m': [round(float(c), 4) for c in rot(e['explodir'])]} if 'explodir' in e else {})} for e in A.encaixes]
     if anims: reg['animacoes'] = anims
     return reg
 
@@ -405,18 +490,24 @@ def _armacao_pistola(p):
     punho = perfil.intersection(sbox(-0.05, -0.13, 0.06, -0.029))
     alto = perfil.difference(sbox(-0.05, -0.13, 0.06, -0.0295)).union(perfil.intersection(sbox(0.045, -0.06, 0.2, 0)))
     m_alto = solido(alto, -0.0112, 0.0112, 0.0012)
-    m_punho = solido(punho.buffer(0), -0.0148, 0.0148, 0.0042)
-    corpo = uniao([m_alto, m_punho])
+    CABO9 = suave([(-0.0125, -0.0262), (-0.0168, -0.044), (-0.0235, -0.068), (-0.0305, -0.094), (-0.0345, -0.114), (-0.0338, -0.1225),
+                   (-0.0272, -0.1255), (0.0182, -0.1255), (0.0238, -0.1218), (0.0258, -0.112), (0.0306, -0.101), (0.0308, -0.093), (0.0352, -0.084),
+                   (0.0354, -0.076), (0.0398, -0.067), (0.0402, -0.059), (0.0452, -0.047), (0.0478, -0.031), (0.04, -0.0262)])
+    palma = lambda y: 0.0012 * math.exp(-((y + 0.075) / 0.02) ** 2)                 # apoio da palma (incha no meio)
+    larg = lambda y: 0.0105 + 0.0038 * GT.smooth(-0.0285, -0.05, y) + palma(y)
+    m_punho = punho_redondo(CABO9, -0.0285, -0.1255, larg, n=2.25, fatias=110, voltas=56, raio_base=0.0045)
+    corpo = m_alto
     # poco do carregador: prisma inclinado vazado por baixo (folga de 0,8 mm do carregador)
     poco = _perfil_carregador(0.0008)
     corpo = menos(corpo, solido(poco, -0.0096, 0.0096))
     corpo = menos(corpo, caixa(0.06, 0.082, -0.03, -0.012, -0.0045, 0.0045))   # fenda do gatilho
     p.add('polimero', corpo)
-    # paineis pontilhados (laterais, frente e costas do punho), 0,4 mm salientes
-    painel = arred([(-0.012, -0.04), (0.036, -0.054), (0.03, -0.074), (0.026, -0.1), (0.019, -0.114), (-0.026, -0.114),
-                    (-0.024, -0.092), (-0.017, -0.06)], 0.004)
-    for zs in (-1, 1):
-        z0 = zs * 0.0148; p.add('polimero_grip', solido(painel, min(z0, z0 + zs * 0.0005), max(z0, z0 + zs * 0.0005), 0.0002))
+    # cabo arredondado inteiro em polimero pontilhado, com o poco do carregador vazado
+    p.add('polimero', menos(m_punho, solido(poco, -0.0096, 0.0096), caixa(0.06, 0.082, -0.03, -0.012, -0.0045, 0.0045)))
+    lp = lambda y: larg(y) + 0.0004
+    pont = punho_redondo(CABO9, -0.0285, -0.1255, lp, n=2.25, fatias=110, voltas=56, raio_base=0.0045)
+    area = CABO9.buffer(-0.0022, join_style=1).intersection(sbox(-1, -0.117, 1, -0.038))
+    p.add('polimero_grip', menos(inter([pont, solido(area, -0.05, 0.05)]), solido(poco, -0.0096, 0.0096)))   # pontilhado com borda lisa
     # trilho padrao embaixo do guarda-po
     trilho(p, 'polimero', 0.105, 0.177, -0.03, True, 0.019)
     # alavanca do retem do ferrolho (esquerda), botao do retem do carregador, alavanca de desmontagem, pinos
@@ -481,12 +572,11 @@ def _cartucho_9mm_malha(sec=28):
 
 
 def _gatilho_pistola(q):
-    """Gatilho curvo com tecla de seguranca, origem no pino (0.071, -0.0215)."""
-    cam = [(0.071 + 0.004 * math.sin(a) - 0.006 * (1 - math.cos(a)) * 0, -0.0215 - 0.019 * a / 1.1, 0) for a in np.linspace(0, 1.1, 2)]
-    lam = arred([(0.0655, -0.022), (0.0705, -0.022), (0.0718, -0.028), (0.0705, -0.036), (0.068, -0.041), (0.0655, -0.0425),
-                 (0.0638, -0.041), (0.0652, -0.036), (0.066, -0.029)], 0.0007)
-    q.add('polimero', solido(lam, -0.0035, 0.0035, 0.0008))
-    q.add('aco_oxidado', solido(arred([(0.0668, -0.027), (0.0706, -0.027), (0.0695, -0.037), (0.0668, -0.0385), (0.0662, -0.033)], 0.0005), -0.0009, 0.0009))
+    """Gatilho curvo (ponta para a FRENTE) com tecla de seguranca no meio; origem no pino (0.071, -0.0215)."""
+    lam = LineString([(0.0712, -0.0235), (0.0692, -0.0295), (0.0686, -0.0355), (0.0698, -0.0398), (0.0728, -0.0425)]).buffer(0.0017, cap_style=1, join_style=1)
+    q.add('polimero', menos(solido(lam, -0.0035, 0.0035, 0.0008), caixa(0.06, 0.08, -0.04, -0.028, -0.0011, 0.0011)))
+    tec = LineString([(0.0688, -0.029), (0.0682, -0.0355), (0.0694, -0.0392)]).buffer(0.0011, cap_style=1, join_style=1)
+    q.add('aco_oxidado', solido(tec, -0.0009, 0.0009))
 
 
 @arma('pistola_9mm', 'Pistola Sentinela 9 mm', 'armas', 'pistola', classe='fogo', calibre='9 mm', municao='municao_9mm',
@@ -497,9 +587,9 @@ def _gatilho_pistola(q):
 def pistola_9mm(A):
     A.pivo = (0.006, -0.068, 0.0)            # centro do punho, na altura do dedo medio
     _armacao_pistola(A.base)
-    gat = A.parte('gatilho', (0.071, -0.0215, 0), tipo='gira', eixo='x', curso_graus=-14, descricao='puxa para tras ao atirar')
+    gat = A.parte('gatilho', (0.071, -0.0215, 0), explodir=(0.05, -0.03, 0), tipo='gira', eixo='x', curso_graus=-14, descricao='puxa para tras ao atirar')
     _gatilho_pistola(gat)
-    cano = A.parte('cano', (0.0, 0.0, 0.0), tipo='desliza', curso_m=0.004, descricao='recua 4 mm com o ferrolho')
+    cano = A.parte('cano', (0.0, 0.0, 0.0), explodir=(0.06, 0.07, 0), tipo='desliza', curso_m=0.004, descricao='recua 4 mm com o ferrolho')
     cano.add('aco_cano', menos(uniao([cil_x(0.0068, 0.04, SL_L + 0.0002, sec=32), caixa(0.07, 0.112, -0.0068, 0.0098, -0.0085, 0.0085)]),
                                 cil_x(0.0045, 0.03, SL_L + 0.01, sec=24)))
     rosca_x(cano, 'aco_cano', 0.0068, SL_L + 0.0002, SL_L + 0.0122, 0.001)
@@ -508,15 +598,15 @@ def pistola_9mm(A):
     for i, ch in enumerate('9MM'):
         cano.add('aco_inox', caixa(0.08 + i * 0.006, 0.084 + i * 0.006, 0.0099, 0.0104, 0.0086, 0.00875))
     cano.add('latao', torno_x([(0.0045, 0.06), (0.0045, 0.0715)], 24))      # culote do cartucho na camara (aparece pela janela)
-    fer = A.parte('ferrolho', (0.0, 0.0, 0.0), tipo='desliza', curso_m=0.032, descricao='recua 32 mm ao atirar; fica travado atrás com o carregador vazio')
+    fer = A.parte('ferrolho', (0.0, 0.0, 0.0), explodir=(-0.04, 0.035, 0), tipo='desliza', curso_m=0.032, descricao='recua 32 mm ao atirar; fica travado atrás com o carregador vazio')
     _ferrolho_pistola(fer)
-    car = A.parte('carregador', (0.0215, -0.016, 0.0), tipo='remove', direcao=[round(float(c), 3) for c in rot(MAG_D)],
+    car = A.parte('carregador', (0.0215, -0.016, 0.0), explodir=(-0.02, -0.07, 0), tipo='remove', direcao=[round(float(c), 3) for c in rot(MAG_D)],
                   municao='municao_9mm', capacidade=15, descricao='sai pelo fundo do punho ao recarregar')
     _carregador(car, 15)
-    A.encaixe('encaixe_mira', (0.042, SL_Y1 - 0.0004, 0), 'mira_ferrolho', pai='ferrolho', aceita=['mira_ponto_vermelho_compacta'])
-    A.encaixe('encaixe_boca', (SL_L + 0.0122, 0, 0), 'boca_rosca_9mm', pai='cano',
+    A.encaixe('encaixe_mira', (0.042, SL_Y1 - 0.0004, 0), 'mira_ferrolho', pai='ferrolho', explodir=(0, 0.04, 0), aceita=['mira_ponto_vermelho_compacta'])
+    A.encaixe('encaixe_boca', (SL_L + 0.0122, 0, 0), 'boca_rosca_9mm', pai='cano', explodir=(0.06, 0, 0),
               aceita=['protetor_rosca_9mm', 'supressor_9mm', 'compensador_9mm', 'supressor_garrafa'], padrao='protetor_rosca_9mm')
-    A.encaixe('encaixe_trilho', (0.141, -0.0355, 0), 'trilho_curto', aceita=['lanterna_pistola', 'laser_pistola', 'combo_lanterna_laser'])
+    A.encaixe('encaixe_trilho', (0.141, -0.0355, 0), 'trilho_curto', explodir=(0.02, -0.05, 0), aceita=['lanterna_pistola', 'laser_pistola', 'combo_lanterna_laser'])
     A.encaixe('encaixe_carregador', (0.0215, -0.016, 0), 'carregador_9mm', pai='carregador', substitui='carregador',
               aceita=['carregador_9mm', 'carregador_9mm_estendido'],
               descricao='filho do nó carregador (anda com a recarga); ao pôr um carregador aqui, esconda as malhas próprias do nó carregador')
@@ -762,69 +852,80 @@ def estojo_9mm(A):
     A.pivo = (0.0095, 0, 0)
 
 
-PXM = 4096                                     # atlas da caixa: 1024 px = 0,25 m
-CX = dict(x0=-0.058, x1=0.058, y0=0.0, y1=0.034, z0=-0.044, z1=0.044)
+PXM = 4096                                     # atlas das caixas: 1024 px = 0,25 m
 ATLAS = {'topo': (0, 0), 'lado+': (0, 380), 'lado-': (0, 520), 'ponta+': (500, 380), 'ponta-': (500, 520)}
 
 
-def _arte_caixa_9mm():
+def _arte_caixa(CX, cal, linha2, linha3, cor=(150, 30, 20), marca='GUARDIÃO', tampa=0.012, atlas=None):
+    """Arte original da caixa (marca inventada). Cada face tem o seu retangulo no atlas, na mesma densidade."""
+    ATLAS = atlas or globals()['ATLAS']
     im = Image.new('RGB', (1024, 1024), (236, 230, 212)); d = ImageDraw.Draw(im)
     L = int((CX['x1'] - CX['x0']) * PXM); P_ = int((CX['z1'] - CX['z0']) * PXM); H = int((CX['y1'] - CX['y0']) * PXM)
-    x, y = ATLAS['topo']                                                 # tampa: arte principal
-    d.rectangle([x, y, x + L, y + P_], fill=(236, 230, 212)); d.rectangle([x, y, x + 120, y + P_], fill=(150, 30, 20))
-    texto_c(d, (x + 60, y + P_ // 2), '9', 90, (250, 240, 220))
-    texto_c(d, (x + 120 + (L - 120) // 2, y + 80), 'GUARDIÃO', 58, (150, 30, 20), larg=L - 150)
-    texto_c(d, (x + 120 + (L - 120) // 2, y + 160), '9 mm', 86, (40, 30, 26))
-    texto_c(d, (x + 120 + (L - 120) // 2, y + 240), '50 CARTUCHOS', 36, (40, 30, 26), larg=L - 150)
-    texto_c(d, (x + 120 + (L - 120) // 2, y + 290), 'PONTA OGIVAL 124 gr', 24, (90, 70, 60), False, larg=L - 150)
+    tp = int(tampa * PXM); vis = (tp + H) // 2                            # centro da parte do lado que a tampa nao cobre
+    x, y = ATLAS['topo']
+    d.rectangle([x, y, x + 120, y + P_], fill=cor)
+    texto_c(d, (x + 60, y + P_ // 2), cal.split()[0][:3], 64, (250, 240, 220), larg=110)
+    cx = x + 120 + (L - 120) // 2
+    texto_c(d, (cx, y + 80), marca, 58, cor, larg=L - 150); texto_c(d, (cx, y + 160), cal, 80, (40, 30, 26), larg=L - 150)
+    texto_c(d, (cx, y + 240), linha2, 36, (40, 30, 26), larg=L - 150); texto_c(d, (cx, y + 290), linha3, 24, (90, 70, 60), False, larg=L - 150)
     d.rectangle([x + 130, y + P_ - 30, x + L - 10, y + P_ - 14], fill=(40, 40, 44))
     for k in ('lado+', 'lado-'):
-        x, y = ATLAS[k]; d.rectangle([x, y, x + L, y + H], fill=(150, 30, 20))
-        texto_c(d, (x + L // 2, y + 82), 'GUARDIÃO  9 mm', 34, (250, 240, 220), larg=L - 40)
-        texto_c(d, (x + L // 2, y + 116), 'MANTENHA LONGE DE CRIANÇAS' if k == 'lado+' else 'LOTE 0815 · 50 UN', 17, (240, 220, 200), False, larg=L - 40)
+        x, y = ATLAS[k]; d.rectangle([x, y, x + L, y + H], fill=cor)
+        texto_c(d, (x + L // 2, y + vis - 14), f'{marca}  {cal}', 34, (250, 240, 220), larg=L - 40)
+        texto_c(d, (x + L // 2, y + vis + 20), 'MANTENHA LONGE DE CRIANÇAS' if k == 'lado+' else 'LOTE 0815 · ' + linha2, 17, (240, 220, 200), False, larg=L - 40)
     for k in ('ponta+', 'ponta-'):
-        x, y = ATLAS[k]; d.rectangle([x, y, x + P_, y + H], fill=(236, 230, 212)); d.rectangle([x, y, x + P_, y + 22], fill=(150, 30, 20))
-        texto_c(d, (x + P_ // 2, y + 96), '9 mm · 50', 34, (40, 30, 26), larg=P_ - 30)
+        x, y = ATLAS[k]; d.rectangle([x, y, x + P_, y + H], fill=(236, 230, 212)); d.rectangle([x, y, x + P_, y + 22], fill=cor)
+        texto_c(d, (x + P_ // 2, y + vis), cal, 34, (40, 30, 26), larg=P_ - 30)
     return im
 
 
-def _uv_caixa_9mm(v, n):
-    """Cada face vai para o seu retangulo do atlas, na mesma densidade (texto nao estica)."""
-    uv = np.zeros((len(v), 2)); ax = np.argmax(np.abs(n), axis=1); sg = np.sign(n[np.arange(len(n)), ax])
-    X = v[:, 0] - CX['x0']; Y = CX['y1'] - v[:, 1]; Z = v[:, 2] - CX['z0']
-    def put(m, chave, a, b):
-        x, y = ATLAS[chave]; uv[m] = np.stack([(x + a[m] * PXM) / 1024, (y + b[m] * PXM) / 1024], 1)
-    put((ax == 1) & (sg > 0), 'topo', X, Z); put((ax == 1) & (sg < 0), 'topo', X, Z)
-    put((ax == 2) & (sg > 0), 'lado+', X, Y); put((ax == 2) & (sg < 0), 'lado-', (CX['x1'] - CX['x0']) - X, Y)
-    put((ax == 0) & (sg > 0), 'ponta+', (CX['z1'] - CX['z0']) - Z, Y); put((ax == 0) & (sg < 0), 'ponta-', Z, Y)
-    uv[:, 1] = 1 - uv[:, 1]
-    return uv
+def _uv_caixa(CX, atlas=None):
+    ATLAS = atlas or globals()['ATLAS']
+    def f(v, n):
+        uv = np.zeros((len(v), 2)); ax = np.argmax(np.abs(n), axis=1); sg = np.sign(n[np.arange(len(n)), ax])
+        X = v[:, 0] - CX['x0']; Y = CX['y1'] - v[:, 1]; Z = v[:, 2] - CX['z0']
+        def put(m, chave, a, b):
+            x, y = ATLAS[chave]; uv[m] = np.stack([(x + a[m] * PXM) / 1024, (y + b[m] * PXM) / 1024], 1)
+        put(ax == 1, 'topo', X, Z)
+        put((ax == 2) & (sg > 0), 'lado+', X, Y); put((ax == 2) & (sg < 0), 'lado-', (CX['x1'] - CX['x0']) - X, Y)
+        put((ax == 0) & (sg > 0), 'ponta+', (CX['z1'] - CX['z0']) - Z, Y); put((ax == 0) & (sg < 0), 'ponta-', Z, Y)
+        uv[:, 1] = 1 - uv[:, 1]
+        return uv
+    return f
+
+
+def caixa_municao(A, mat, CX, arte, cart, nx, nz, passo_x, passo_z, faltam=(7, 23, 24), bandeja=0.012, atlas=None):
+    """Caixa de papelao aberta em cima, bandeja com nx x nz cartuchos de pe (cart = Piece deitada em x, base em x=0) e tampa animada."""
+    mat_imagem(mat, arte, 0.7)
+    x0, x1, y0, y1, z0, z1 = (CX[k] for k in ('x0', 'x1', 'y0', 'y1', 'z0', 'z1')); t = 0.0012; yt = y1 - 0.006
+    q = A.base; uvf = _uv_caixa(CX, atlas)
+    q.add(mat, menos(caixa(x0, x1, y0, yt, z0, z1), caixa(x0 + t, x1 - t, y0 + t, yt + 0.01, z0 + t, z1 - t))); q.uv[mat] = uvf
+    q.add('papelao', caixa(x0 + t, x1 - t, y0 + t, y0 + t + 0.0008, z0 + t, z1 - t))
+    q.add('plastico_branco', caixa(x0 + t, x1 - t, yt - bandeja, yt - bandeja + 0.0015, z0 + t, z1 - t))       # bandeja
+    Rv = TF.rotation_matrix(math.pi / 2, [0, 0, 1])
+    ax0 = (x0 + x1) / 2 - (nx - 1) * passo_x / 2; az0 = (z0 + z1) / 2 - (nz - 1) * passo_z / 2
+    for i in range(nx):
+        for j in range(nz):
+            if (i * nz + j) in faltam: continue                                                         # alguns ja usados
+            q.merge(cart, TF.translation_matrix([ax0 + i * passo_x, y0 + t + 0.0013, az0 + j * passo_z]) @ Rv)
+    tampa = A.parte('tampa', (x0 - 0.0008, yt, 0), explodir=(0, 0.05, 0), tipo='tampa', eixo='z', abre_graus=115, descricao='gira em torno da ponta de trás')
+    e = 0.0008; hs = 0.012
+    tampa.add(mat, caixa(x0 - e, x1 + e, y1 - 0.0006, y1 + 0.0002, z0 - e, z1 + e)); tampa.uv[mat] = uvf
+    tampa.add('papelao', menos(caixa(x0 - e, x1 + e, y1 - hs, y1 - 0.0006, z0 - e, z1 + e), caixa(x0, x1, y1 - hs - 0.01, y1 - 0.0014, z0, z1)))
+    A.anim('abrir', 0.6, [('tampa', 'r', (0, 0, 1), pose([(0, 0), (0.6, 115)]))], desc='abre a tampa')
+    A.anim('fechar', 0.6, [('tampa', 'r', (0, 0, 1), pose([(0, 115), (0.6, 0)]))], desc='fecha a tampa')
+    A.pivo = (0, 0, 0)
+
+
+CX9 = dict(x0=-0.058, x1=0.058, y0=0.0, y1=0.034, z0=-0.044, z1=0.044)
 
 
 @arma('caixa_municao_9mm', 'Caixa de munição 9 mm (50)', 'municao', 'caixa', calibre='9 mm', municao='municao_9mm', quantidade=50,
       peso_kg=0.62, empilha=4, raridade='incomum', onde=['quartel', 'correios', 'motel', 'casas', 'posto'],
       descricao='Caixa de papelão com bandeja de 50 cartuchos. A tampa abre (nó "tampa", animação "abrir").')
 def caixa_municao_9mm(A):
-    mat_imagem('rotulo_9mm', _arte_caixa_9mm(), 0.7)
-    x0, x1, y0, y1, z0, z1 = (CX[k] for k in ('x0', 'x1', 'y0', 'y1', 'z0', 'z1')); t = 0.0012; yt = y1 - 0.006
-    q = A.base
-    q.add('rotulo_9mm', menos(caixa(x0, x1, y0, yt, z0, z1), caixa(x0 + t, x1 - t, y0 + t, yt + 0.01, z0 + t, z1 - t)))
-    q.uv['rotulo_9mm'] = _uv_caixa_9mm
-    q.add('papelao', caixa(x0 + t, x1 - t, y0 + t, y0 + t + 0.0008, z0 + t, z1 - t))
-    q.add('plastico_branco', caixa(x0 + t, x1 - t, yt - 0.012, yt - 0.0105, z0 + t, z1 - t))     # bandeja
-    cart = _cartucho_9mm_malha(12); Rv = TF.rotation_matrix(math.pi / 2, [0, 0, 1])
-    for i in range(10):
-        for j in range(5):
-            if (i * 5 + j) in (7, 23, 24): continue                                                # 3 ja usados
-            x = x0 + 0.0078 + i * 0.01116; z = z0 + 0.0098 + j * 0.0171
-            q.merge(cart, TF.translation_matrix([x, y0 + t + 0.0008 + 0.0005, z]) @ Rv)
-    tampa = A.parte('tampa', (x0 - 0.0008, yt, 0), tipo='tampa', eixo='z', abre_graus=115, descricao='gira em torno da ponta de trás')
-    e = 0.0008; hs = 0.012
-    tampa.add('rotulo_9mm', caixa(x0 - e, x1 + e, y1 - 0.0006, y1 + 0.0002, z0 - e, z1 + e)); tampa.uv['rotulo_9mm'] = _uv_caixa_9mm
-    tampa.add('papelao', menos(caixa(x0 - e, x1 + e, y1 - hs, y1 - 0.0006, z0 - e, z1 + e), caixa(x0, x1, y1 - hs - 0.01, y1 - 0.0014, z0, z1)))
-    A.anim('abrir', 0.6, [('tampa', 'r', (0, 0, 1), pose([(0, 0), (0.6, 115)]))], desc='abre a tampa')
-    A.anim('fechar', 0.6, [('tampa', 'r', (0, 0, 1), pose([(0, 115), (0.6, 0)]))], desc='fecha a tampa')
-    A.pivo = (0, 0, 0)
+    caixa_municao(A, 'rotulo_9mm', CX9, _arte_caixa(CX9, '9 mm', '50 CARTUCHOS', 'PONTA OGIVAL 124 gr'), _cartucho_9mm_malha(12),
+                  10, 5, 0.01116, 0.0171)
 
 
 @arma('clarao_boca', 'Clarão de boca', 'efeitos', 'efeito', descricao='Mostrar por 1 ou 2 quadros no encaixe boca_fogo a cada tiro; '
@@ -848,6 +949,12 @@ def clarao_boca(A):
     A.pivo = (0, 0, 0)
 
 
+# ============================================================================ armas seguintes (props/armas/arma02_*.py ...)
+import glob as _glob
+for _f in sorted(_glob.glob(os.path.join(AQUI, 'arma[0-9][0-9]_*.py'))):
+    exec(compile(open(_f, encoding='utf-8').read(), _f, 'exec'), globals())
+
+
 # ============================================================================ catalogo e main
 CAB = {
     'escala': '1 unidade = 1 m, Y para cima. Armas em posição de tiro: cano para -Z, lado direito +X, pivô na empunhadura.',
@@ -860,7 +967,7 @@ CAB = {
                     'ruido_m': 'raio em que os zumbis ouvem o tiro', 'durabilidade': 'tiros até precisar de reparo',
                     'modificadores': 'multiplicadores aplicados à arma pelo acessório', 'valor_troca': 'preço na troca entre comunidades'},
 }
-NOMES = {'pistola': 'Pistolas', 'boca': 'Boca do cano', 'trilho': 'Trilho', 'mira': 'Miras', 'carregador': 'Carregadores',
+NOMES = {'espingarda': 'Espingardas', 'coronha': 'Coronhas', 'tubo': 'Tubo do carregador', 'lanterna': 'Lanternas', 'porta_cartuchos': 'Porta-cartuchos', 'bandoleira': 'Bandoleiras', 'revolver': 'Revólveres', 'recarga': 'Recarga rápida', 'empunhadura': 'Empunhaduras', 'coldre': 'Coldres', 'pistola': 'Pistolas', 'boca': 'Boca do cano', 'trilho': 'Trilho', 'mira': 'Miras', 'carregador': 'Carregadores',
          'municao': 'Munição', 'estojo': 'Estojos', 'caixa': 'Caixas de munição', 'efeito': 'Efeitos'}
 
 

@@ -1680,6 +1680,59 @@
    ],
    "triangulos": 96,
    "kb": 36.1
+  },
+  {
+   "id": "porta_retrato",
+   "nome": "Porta-retrato de família",
+   "grupo": "loot",
+   "categoria": "lembrancas",
+   "montagem": "floor",
+   "lote": 7,
+   "recurso": "lembranca",
+   "valor": 1,
+   "peso_kg": 0.3,
+   "empilha": 1,
+   "onde": [
+    "casas",
+    "motel",
+    "escritorio"
+   ],
+   "efeito": "ânimo +5 se guardado; pode identificar um sobrevivente procurado (mural)",
+   "arquivo": "loot/porta_retrato.glb",
+   "tamanho_m": [
+    0.18,
+    0.022,
+    0.14
+   ],
+   "triangulos": 116,
+   "kb": 72.7
+  },
+  {
+   "id": "ursinho",
+   "nome": "Ursinho de pelúcia",
+   "grupo": "loot",
+   "categoria": "lembrancas",
+   "montagem": "floor",
+   "lote": 7,
+   "recurso": "lembranca",
+   "valor": 1,
+   "peso_kg": 0.25,
+   "empilha": 1,
+   "onde": [
+    "casas",
+    "escolinha",
+    "clinica",
+    "motel"
+   ],
+   "efeito": "acalma uma criança sobrevivente (moral +10)",
+   "arquivo": "loot/ursinho.glb",
+   "tamanho_m": [
+    0.199,
+    0.259,
+    0.185
+   ],
+   "triangulos": 6732,
+   "kb": 496.9
   }
  ]
 }

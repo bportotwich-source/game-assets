@@ -2876,6 +2876,364 @@
    ],
    "triangulos": 4324,
    "kb": 204.4
+  },
+  {
+   "id": "quadro_familia",
+   "nome": "Quadro de família na parede",
+   "grupo": "mobilias",
+   "categoria": "lembrancas",
+   "montagem": "wall",
+   "lote": 7,
+   "altura_sugerida_m": 1.4,
+   "comodos": [
+    "sala",
+    "quarto",
+    "casas"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "arquivo": "mobilias/quadro_familia.glb",
+   "tamanho_m": [
+    0.6,
+    0.45,
+    0.03
+   ],
+   "triangulos": 236,
+   "kb": 87.9
+  },
+  {
+   "id": "bola_futebol",
+   "nome": "Bola de futebol murcha",
+   "grupo": "mobilias",
+   "categoria": "lembrancas",
+   "montagem": "floor",
+   "lote": 7,
+   "comodos": [
+    "quintal",
+    "rua",
+    "escolinha",
+    "casas"
+   ],
+   "portatil": true,
+   "peso_kg": 0.4,
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "arquivo": "mobilias/bola_futebol.glb",
+   "tamanho_m": [
+    0.22,
+    0.189,
+    0.22
+   ],
+   "triangulos": 320,
+   "kb": 16.8
+  },
+  {
+   "id": "casinha_cachorro",
+   "nome": "Casinha de cachorro vazia",
+   "grupo": "mobilias",
+   "categoria": "lembrancas",
+   "montagem": "floor",
+   "lote": 7,
+   "comodos": [
+    "quintal",
+    "casas",
+    "fazenda"
+   ],
+   "colisao": "caixa",
+   "ambiente": true,
+   "abrigo_pequeno": "cabe 1 sobrevivente agachado (esconderijo)",
+   "arquivo": "mobilias/casinha_cachorro.glb",
+   "tamanho_m": [
+    1.34,
+    0.985,
+    1.26
+   ],
+   "triangulos": 3016,
+   "kb": 239.7
+  },
+  {
+   "id": "vaso_planta_morta",
+   "nome": "Vaso com planta morta",
+   "grupo": "mobilias",
+   "categoria": "lembrancas",
+   "montagem": "floor",
+   "lote": 7,
+   "comodos": [
+    "sala",
+    "casas",
+    "escritorio",
+    "galeria",
+    "hotel"
+   ],
+   "colisao": "caixa",
+   "ambiente": true,
+   "desmonta": {
+    "terra": 1
+   },
+   "arquivo": "mobilias/vaso_planta_morta.glb",
+   "tamanho_m": [
+    0.66,
+    0.769,
+    0.669
+   ],
+   "triangulos": 5680,
+   "kb": 353.9
+  },
+  {
+   "id": "relogio_parede",
+   "nome": "Relógio de parede parado",
+   "grupo": "mobilias",
+   "categoria": "lembrancas",
+   "montagem": "wall",
+   "lote": 7,
+   "altura_sugerida_m": 1.8,
+   "comodos": [
+    "cozinha",
+    "sala",
+    "escolinha",
+    "estacao",
+    "escritorio"
+   ],
+   "parado_em": "3:17 (hora do surto)",
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "arquivo": "mobilias/relogio_parede.glb",
+   "tamanho_m": [
+    0.32,
+    0.32,
+    0.045
+   ],
+   "triangulos": 1236,
+   "kb": 89.0
+  },
+  {
+   "id": "calendario_parede",
+   "nome": "Calendário na data do surto",
+   "grupo": "mobilias",
+   "categoria": "lembrancas",
+   "montagem": "wall",
+   "lote": 7,
+   "altura_sugerida_m": 1.3,
+   "comodos": [
+    "cozinha",
+    "escritorio",
+    "posto",
+    "quartel",
+    "casas"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "arquivo": "mobilias/calendario_parede.glb",
+   "tamanho_m": [
+    0.3,
+    0.453,
+    0.023
+   ],
+   "triangulos": 1004,
+   "kb": 74.4
+  },
+  {
+   "id": "tv_tubo",
+   "nome": "TV de tubo com tela rachada",
+   "grupo": "mobilias",
+   "categoria": "lembrancas",
+   "montagem": "floor",
+   "lote": 7,
+   "comodos": [
+    "sala",
+    "motel",
+    "casas",
+    "hotel"
+   ],
+   "colisao": "caixa",
+   "ambiente": true,
+   "desmonta": {
+    "sucata": 2,
+    "pecas": 1
+   },
+   "portatil": true,
+   "peso_kg": 18.0,
+   "arquivo": "mobilias/tv_tubo.glb",
+   "tamanho_m": [
+    0.66,
+    0.852,
+    0.644
+   ],
+   "triangulos": 492,
+   "kb": 27.3
+  },
+  {
+   "id": "abajur",
+   "nome": "Abajur",
+   "grupo": "mobilias",
+   "categoria": "lembrancas",
+   "montagem": "floor",
+   "lote": 7,
+   "comodos": [
+    "quarto",
+    "sala",
+    "motel",
+    "hotel"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "portatil": true,
+   "peso_kg": 1.5,
+   "luz_m": 3,
+   "usa": "energia",
+   "arquivo": "mobilias/abajur.glb",
+   "tamanho_m": [
+    0.34,
+    0.602,
+    0.621
+   ],
+   "triangulos": 828,
+   "kb": 60.6
+  },
+  {
+   "id": "tapete_sala",
+   "nome": "Tapete de sala",
+   "grupo": "mobilias",
+   "categoria": "lembrancas",
+   "montagem": "floor",
+   "lote": 7,
+   "comodos": [
+    "sala",
+    "quarto",
+    "hotel",
+    "igreja"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "esconde": "alçapão ou dinheiro por baixo (evento)",
+   "arquivo": "mobilias/tapete_sala.glb",
+   "tamanho_m": [
+    2.1,
+    0.008,
+    1.4
+   ],
+   "triangulos": 732,
+   "kb": 145.6
+  },
+  {
+   "id": "vitrola",
+   "nome": "Vitrola com discos",
+   "grupo": "mobilias",
+   "categoria": "lembrancas",
+   "montagem": "floor",
+   "lote": 7,
+   "comodos": [
+    "sala",
+    "casas",
+    "mansao",
+    "diner"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "interacao": "tocar um disco (moral +5 na base; faz barulho)",
+   "usa": "energia",
+   "arquivo": "mobilias/vitrola.glb",
+   "tamanho_m": [
+    1.044,
+    0.738,
+    0.508
+   ],
+   "triangulos": 824,
+   "kb": 208.6,
+   "partes": [
+    {
+     "no": "tampa",
+     "origem": [
+      0,
+      0.65,
+      -0.25
+     ],
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -80
+    }
+   ]
+  },
+  {
+   "id": "fruteira_podre",
+   "nome": "Fruteira com frutas podres",
+   "grupo": "mobilias",
+   "categoria": "lembrancas",
+   "montagem": "floor",
+   "lote": 7,
+   "comodos": [
+    "cozinha",
+    "sala",
+    "diner"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "cheiro": "moscas: atrai zumbis de perto",
+   "nao_comer": true,
+   "arquivo": "mobilias/fruteira_podre.glb",
+   "tamanho_m": [
+    0.438,
+    0.287,
+    0.344
+   ],
+   "triangulos": 2956,
+   "kb": 141.9
+  },
+  {
+   "id": "desenho_crianca",
+   "nome": "Desenho de criança na parede",
+   "grupo": "mobilias",
+   "categoria": "lembrancas",
+   "montagem": "wall",
+   "lote": 7,
+   "altura_sugerida_m": 1.1,
+   "comodos": [
+    "quarto",
+    "cozinha",
+    "escolinha",
+    "casas"
+   ],
+   "decalque": true,
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "arquivo": "mobilias/desenho_crianca.glb",
+   "tamanho_m": [
+    0.3,
+    0.23,
+    0.002
+   ],
+   "triangulos": 24,
+   "kb": 38.0
+  },
+  {
+   "id": "pilha_livros",
+   "nome": "Pilha de livros no chão",
+   "grupo": "mobilias",
+   "categoria": "lembrancas",
+   "montagem": "floor",
+   "lote": 7,
+   "comodos": [
+    "sala",
+    "biblioteca",
+    "escolinha",
+    "escritorio",
+    "casas"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "saque": [
+    "livros"
+   ],
+   "conteiner": true,
+   "slots": 2,
+   "arquivo": "mobilias/pilha_livros.glb",
+   "tamanho_m": [
+    0.508,
+    0.264,
+    0.39
+   ],
+   "triangulos": 448,
+   "kb": 23.4
   }
  ]
 }

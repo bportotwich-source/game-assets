@@ -1107,7 +1107,7 @@ NOMES = {'cozinha': 'Cozinha', 'quarto': 'Quarto', 'sala': 'Sala', 'banheiro': '
          'materiais': 'Materiais de construção', 'combustivel': 'Combustível', 'energia': 'Energia',
          'lavanderia': 'Lavanderia', 'escritorio': 'Escritório', 'loja': 'Loja', 'saude': 'Saúde', 'oficina': 'Oficina', 'abrigo': 'Abrigo',
          'roupas': 'Roupas e equipamento', 'utensilios': 'Utensílios', 'eletronicos': 'Luz e eletrônicos', 'higiene': 'Higiene',
-         'agricultura': 'Agricultura', 'barricadas': 'Barricadas e alarmes', 'rua': 'Rua e quintal', 'pistas': 'Chaves e pistas', 'sinais': 'Sinais do fim do mundo'}
+         'agricultura': 'Agricultura', 'barricadas': 'Barricadas e alarmes', 'rua': 'Rua e quintal', 'pistas': 'Chaves e pistas', 'sinais': 'Sinais do fim do mundo', 'lembrancas': 'Vida de antes'}
 
 
 def catalogo_md(regs):

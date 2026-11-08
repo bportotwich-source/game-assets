@@ -84,6 +84,19 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Churrasqueira de quintal (`churrasqueira`) | 6 | Rua e quintal | 0,60 × 1,06 × 0,63 | - | tampa | - | 2192 |
 | Cerca de madeira quebrada (`cerca_quebrada`) | 6 | Rua e quintal | 2,09 × 1,12 × 1,10 | - | - | - | 814 |
 | Mangueira de jardim enrolada (`mangueira_jardim`) | 6 | Rua e quintal | 0,80 × 0,04 × 0,82 | - | - | - | 4324 |
+| Quadro de família na parede (`quadro_familia`) | 7 | Vida de antes | 0,60 × 0,45 × 0,03 | - | - | - | 236 |
+| Bola de futebol murcha (`bola_futebol`) | 7 | Vida de antes | 0,22 × 0,19 × 0,22 | - | - | - | 320 |
+| Casinha de cachorro vazia (`casinha_cachorro`) | 7 | Vida de antes | 1,34 × 0,98 × 1,26 | - | - | - | 3016 |
+| Vaso com planta morta (`vaso_planta_morta`) | 7 | Vida de antes | 0,66 × 0,77 × 0,67 | - | - | - | 5680 |
+| Relógio de parede parado (`relogio_parede`) | 7 | Vida de antes | 0,32 × 0,32 × 0,04 | - | - | - | 1236 |
+| Calendário na data do surto (`calendario_parede`) | 7 | Vida de antes | 0,30 × 0,45 × 0,02 | - | - | - | 1004 |
+| TV de tubo com tela rachada (`tv_tubo`) | 7 | Vida de antes | 0,66 × 0,85 × 0,64 | - | - | - | 492 |
+| Abajur (`abajur`) | 7 | Vida de antes | 0,34 × 0,60 × 0,62 | - | - | - | 828 |
+| Tapete de sala (`tapete_sala`) | 7 | Vida de antes | 2,10 × 0,01 × 1,40 | - | - | - | 732 |
+| Vitrola com discos (`vitrola`) | 7 | Vida de antes | 1,04 × 0,74 × 0,51 | - | tampa | - | 824 |
+| Fruteira com frutas podres (`fruteira_podre`) | 7 | Vida de antes | 0,44 × 0,29 × 0,34 | - | - | - | 2956 |
+| Desenho de criança na parede (`desenho_crianca`) | 7 | Vida de antes | 0,30 × 0,23 × 0,00 | - | - | - | 24 |
+| Pilha de livros no chão (`pilha_livros`) | 7 | Vida de antes | 0,51 × 0,26 × 0,39 | 2 espaços: livros | - | - | 448 |
 
 ## Loot
 
@@ -147,3 +160,5 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Molho de chaves com etiqueta (`chave_casa`) | 5 | Chaves e pistas | chave | 1 | 0,05 kg | 1 | abre uma porta trancada (a casa escrita na etiqueta) | casas, motel, escritorio, quartel |
 | Mapa da cidade dobrado (`mapa_cidade`) | 5 | Chaves e pistas | mapa | 1 | 0,08 kg | 1 | revela os prédios do bairro no mapa do jogo | posto, correios, estacao, casas, biblioteca |
 | Bilhete de sobrevivente (`bilhete`) | 5 | Chaves e pistas | pista | 1 | 0,01 kg | 1 | pista do 1º sobrevivente: marca um encontro no mapa (fim da fase 1) | casas, igreja, posto, escolinha, supermercado |
+| Porta-retrato de família (`porta_retrato`) | 7 | Vida de antes | lembranca | 1 | 0,3 kg | 1 | ânimo +5 se guardado; pode identificar um sobrevivente procurado (mural) | casas, motel, escritorio |
+| Ursinho de pelúcia (`ursinho`) | 7 | Vida de antes | lembranca | 1 | 0,25 kg | 1 | acalma uma criança sobrevivente (moral +10) | casas, escolinha, clinica, motel |

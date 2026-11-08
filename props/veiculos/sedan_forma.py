@@ -19,6 +19,16 @@ FOLGA = 0.004                 # vão entre painéis
 Y_TETO_CORTE = 1.305          # onde a porta encontra o teto (calha)
 T = 0.02                      # espessura da chapa (visual)
 
+# traseira (o que muda de um modelo da família para outro; o hatch troca estes valores em hatch_forma.py)
+Z_BOCAL = -1.86               # centro da portinhola do tanque
+Z_VIDRO_TRAS = -1.05          # começo do vidro traseiro (lado do teto)
+REC_VIDRO_TRAS = 0.07         # recuo do vidro traseiro em relação à quina da cabine
+Z_CALHA = -1.25               # fim da calha cromada do teto
+Z_FORRO_TRAS = -1.25          # fim do forro do teto
+Z_PC_TRAS = -1.86             # até onde o para-choque traseiro dobra para o lado
+LANTERNA = (0.503, 0.815, 0.635, 0.818)   # buraco da lanterna: x de, x até, y de, y até
+TAMPA = (-1.75, 72)           # dobradiça da tampa (z) e quanto abre
+
 
 def _i(z, tab):
     zs, ys = zip(*tab); return float(np.interp(z, zs, ys))

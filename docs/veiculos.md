@@ -76,6 +76,8 @@ Cada peça é um nó separado no modelo, com nome fixo (o **encaixe**). Quando o
 | `banco_traseiro` | Banco traseiro (`banco_traseiro`) | Não | Leva 3 passageiros. Sem ele, o espaço vira carga | 20 kg | carga nas mãos | jogo de chaves | 60 s / 70 s |
 | `volante` | Volante (`volante`) | Sim | Tirar o volante é a trava antifurto do fim do mundo: ninguém leva o seu carro | 2,5 kg | 2 × 2 | jogo de chaves | 30 s / 30 s |
 
+No hatch Brisa os encaixes têm os mesmos nomes. Muda o que é da traseira: `tampa_porta_malas` vira a tampa traseira (`tampa_traseira_hatch`, 12 kg, abre 80° com o vidro), o `vidro_traseiro` fica preso nela (`vidro_traseiro_hatch`, 6 kg), as lanternas são em pé (`lanterna_vertical`), o escapamento é curto (`escapamento_curto`) e o porta-malas tem 7 × 4 casas, com o estepe embaixo do assoalho.
+
 Partes que abrem e fecham mas não saem como loot: `tampa_combustivel` (portinhola do tanque), `porta_luvas`, `assoalho_porta_malas` (tampa sobre o estepe), `quebra_sol_e` `quebra_sol_d` (onde às vezes está a chave).
 
 ### 3.2 Condição
@@ -119,10 +121,12 @@ Cada peça tem um `padrao`. Peças do mesmo padrão servem em qualquer modelo qu
 
 | Padrão | Peças | Serve em |
 |---|---|---|
-| `compacto_1_6` | motor, alternador, radiador, escapamento | sedã Rumo e os próximos compactos (hatch, perua) |
-| `aro14_4furos` | roda, estepe | sedã, hatch, perua |
+| `compacto_1_6` | motor, alternador, radiador, escapamentos | sedã Rumo, hatch Brisa e os próximos (picape, van) |
+| `aro14_4furos` | roda, estepe | sedã, hatch, picape, van |
 | `bateria_12v` | bateria | todos os carros e o gerador da base |
-| `sedan_rumo` | portas, capô, tampa, para-choques, para-lamas, vidros | só o sedã Rumo (carroceria é de cada modelo) |
+| `familia_rumo` | capô, portas dianteiras, para-lamas, para-brisa, para-choque dianteiro, tanque | sedã Rumo e hatch Brisa (a mesma frente) |
+| `sedan_rumo` | portas traseiras, tampa do porta-malas, para-choque traseiro, vidro traseiro | só o sedã Rumo |
+| `hatch_brisa` | portas traseiras, tampa traseira com vidro, para-choque traseiro, lanternas em pé, escapamento curto | só o hatch Brisa |
 | `universal` | faróis, lanternas, retrovisores, bancos, volante | qualquer carro |
 
 ## 4. Desmontar e montar

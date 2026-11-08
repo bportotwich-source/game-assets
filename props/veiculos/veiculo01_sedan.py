@@ -1,6 +1,7 @@
 # Veiculo 1: sedã Rumo (sedã compacto de 4 portas, anos 80/90, desenho próprio e sem marca).
 # Carregado por gerar_veiculos.py (exec nos globais: V, Veiculo, modelo, MATS, torno, anel, cyl_eixo, fofo...).
 import sedan_forma as SF
+_SF_SEDAN = SF
 from forma import (chaikin, loft, menos, uniao, inter, prisma_zy, prisma_xz, prisma_xy, caixa, cil_x, espelhar_x, tubo,
                    varrer_caminho, suavizar_caminho)
 from shapely.geometry import Polygon as _Pg, box as _sbox, Point as _Pt
@@ -51,7 +52,7 @@ def _janelas(borda=0.0):
         pg = _Pg(pts + [(-x, z) for (x, z) in pts[::-1]])
         return prisma_xz(pg, 0.80, 2.0)
     ps = topo(SF.ZWS + 0.05 - borda, -0.19 + borda, 0.065 - borda)
-    tr = topo(-1.05 - borda, SF.ZBL + 0.055 - borda, 0.07 - borda)
+    tr = topo(SF.Z_VIDRO_TRAS - borda, SF.ZBL + 0.055 - borda, SF.REC_VIDRO_TRAS - borda)
     return lat, ps, tr
 
 
@@ -66,7 +67,7 @@ def _carroceria(Vc, recortes=()):
     lat, ps, tr = _janelas()
     casca = menos(casca, *lat, ps, tr, *recortes)
     # portinhola do tanque (lado esquerdo, atras da porta traseira)
-    zt, yt_ = -1.86, 0.80
+    zt, yt_ = SF.Z_BOCAL, 0.80
     rec = prisma_zy(_Pg(_Pt(zt, yt_).buffer(0.075, 16).exterior.coords).intersection(_sbox(zt - 0.09, yt_ - 0.062, zt + 0.09, yt_ + 0.062)), 0.70, 1.2)
     rec_g = prisma_zy(_Pt(zt, yt_).buffer(0.075 + _G, 16).intersection(_sbox(zt - 0.09 - _G, yt_ - 0.062 - _G, zt + 0.09 + _G, yt_ + 0.062 + _G)), 0.70, 1.2)
     tampinha = inter(casca, rec); casca = menos(casca, rec_g)
@@ -112,7 +113,7 @@ def _carroceria(Vc, recortes=()):
 
 def _frisos(Vc, fora):
     """Friso lateral de borracha (y 0,50 a 0,535) dividido pelos paineis, e a calha cromada do teto."""
-    zs = np.linspace(-2.12, 2.0, 140)
+    zs = np.linspace(SF.ZR + 0.12, 2.0, 140)
     an = []
     for z in zs:
         w = SF.hw(z) * SF.fx(z)
@@ -124,7 +125,7 @@ def _frisos(Vc, fora):
     for mm in _ambos(m):
         Vc._div.dividir(menos(mm, *cx), 'borracha', Vc)
     # calha do teto
-    zs = np.linspace(0.40, -1.25, 60); an = []
+    zs = np.linspace(0.40, SF.Z_CALHA, 60); an = []
     for z in zs:
         x, y = SF.quina_cabine(z); y = min(y + 0.012, SF.ytop(z) - 0.01)
         an.append([(x - 0.006, y, z), (x + 0.008, y - 0.002, z), (x + 0.010, y - 0.012, z), (x - 0.004, y - 0.010, z)])
@@ -137,17 +138,23 @@ def _partes_carroceria(Vc):
     yb_ = SF.yt(0.70)
     Vc.parte('capo', (0, yb_ - 0.01, 0.70), 'tampa', eixo='x', abre_graus=-68, repouso=(0, 0, 0),
              item=PECA['capo'], peca='capo', **REG['capo'])
-    Vc.parte('tampa_porta_malas', (0, SF.yt(-1.75) - 0.01, -1.75), 'tampa', eixo='x', abre_graus=72,
-             item=PECA['tampa_porta_malas'], peca='tampa_porta_malas', **REG['tampa_porta_malas'])
+    zd, ab = SF.TAMPA; yd = SF.yt(zd) - 0.01 if zd < SF.ZBL else SF.ytop(zd) - 0.01
+    it = PECA[SF.ITEM_TAMPA] if hasattr(SF, 'ITEM_TAMPA') else PECA['tampa_porta_malas']
+    Vc.parte('tampa_porta_malas', (0, yd, zd), 'tampa', eixo='x', abre_graus=ab, item=it, peca=it['id'], **REG['tampa_porta_malas'])
+    sx = getattr(SF, 'SUFIXO_TRAS', '')
     for no, z, s, it in (('porta_de', 0.605, 1, 'porta_dianteira_e'), ('porta_dd', 0.605, -1, 'porta_dianteira_d'),
-                         ('porta_te', -0.50, 1, 'porta_traseira_e'), ('porta_td', -0.50, -1, 'porta_traseira_d')):
+                         ('porta_te', -0.50, 1, 'porta_traseira_e' + sx), ('porta_td', -0.50, -1, 'porta_traseira_d' + sx)):
         Vc.parte(no, (s * 0.80, 0.60, z), 'porta', eixo='y', abre_graus=-66 * s, repouso=(0, 0, 90 * s),
                  item=PECA[it], peca=it, **REG['porta_d' if no[-2] == 'd' else 'porta_t'])
     for no, s, it in (('paralama_e', 1, 'paralama_e'), ('paralama_d', -1, 'paralama_d')):
         Vc.parte(no, (s * 0.80, 0.55, 1.27), 'peca', repouso=(0, 0, 90 * s), item=PECA[it], peca=it, **REG['paralama'])
-    Vc.parte('tampa_combustivel', (0.81, 0.80, -1.86 + 0.09), 'tampa', eixo='y', abre_graus=-80, peca=None)
+    Vc.parte('tampa_combustivel', (SF.x_lado(SF.Z_BOCAL + 0.09, 1.0) - 0.03, 0.80, SF.Z_BOCAL + 0.09), 'tampa', eixo='y', abre_graus=-80, peca=None)
     Vc.parte('para_brisa', (0, 1.0, 0.55), 'peca', repouso=(-62, 0, 0), item=PECA['para_brisa'], peca='para_brisa', **REG['para_brisa'])
-    Vc.parte('vidro_traseiro', (0, 1.0, -1.62), 'peca', repouso=(55, 0, 0), item=PECA['vidro_traseiro'], peca='vidro_traseiro', **REG['vidro_traseiro'])
+    if hasattr(SF, 'VIDRO_TRAS'):     # vidro preso na tampa (hatch): é filho da tampa e abre junto
+        o, rep, iv = SF.VIDRO_TRAS
+        Vc.parte('vidro_traseiro', o, 'peca', pai='tampa_porta_malas', repouso=rep, item=PECA[iv], peca=iv, **REG['vidro_traseiro'])
+    else:
+        Vc.parte('vidro_traseiro', (0, 1.0, -1.62), 'peca', repouso=(55, 0, 0), item=PECA['vidro_traseiro'], peca='vidro_traseiro', **REG['vidro_traseiro'])
 
 
 # ============================================================================ dados de jogo das pecas
@@ -165,24 +172,24 @@ PECA = {
                          (2, 2), aceita=['bateria_carro']),
     'alternador': _peca('alternador', 'Alternador', 5, 'compacto_1_6', 'recarrega a bateria com o motor ligado', (2, 2)),
     'radiador': _peca('radiador', 'Radiador', 6, 'compacto_1_6', 'esfria o motor; sem ele o motor ferve em 2 minutos', (4, 3)),
-    'tanque_45l': _peca('tanque_45l', 'Tanque de combustível 45 L', 9, 'sedan_rumo', 'guarda 45 L de combustível', (5, 3)),
+    'tanque_45l': _peca('tanque_45l', 'Tanque de combustível 45 L', 9, 'familia_rumo', 'guarda 45 L de combustível', (5, 3)),
     'escapamento': _peca('escapamento', 'Escapamento com silencioso', 8, 'compacto_1_6', 'sem ele o motor faz o dobro de barulho', (6, 1)),
     'roda_aro14': _peca('roda_aro14', 'Roda aro 14 com pneu', 16, 'aro14_4furos', 'roda de aço com pneu 185/70; também é o estepe', (3, 3),
                         onde=['ferro_velho', 'concessionaria', 'posto', 'garagem', 'porta_malas']),
-    'porta_dianteira_e': _peca('porta_dianteira_e', 'Porta dianteira esquerda', 22, 'sedan_rumo', 'protege o motorista; vidro e bolsa da porta', carga_maos=True),
-    'porta_dianteira_d': _peca('porta_dianteira_d', 'Porta dianteira direita', 22, 'sedan_rumo', 'protege o passageiro; vidro e bolsa da porta', carga_maos=True),
+    'porta_dianteira_e': _peca('porta_dianteira_e', 'Porta dianteira esquerda', 22, 'familia_rumo', 'protege o motorista; vidro e bolsa da porta', carga_maos=True),
+    'porta_dianteira_d': _peca('porta_dianteira_d', 'Porta dianteira direita', 22, 'familia_rumo', 'protege o passageiro; vidro e bolsa da porta', carga_maos=True),
     'porta_traseira_e': _peca('porta_traseira_e', 'Porta traseira esquerda', 18, 'sedan_rumo', 'protege quem vai atrás', carga_maos=True),
     'porta_traseira_d': _peca('porta_traseira_d', 'Porta traseira direita', 18, 'sedan_rumo', 'protege quem vai atrás', carga_maos=True),
-    'capo': _peca('capo', 'Capô', 14, 'sedan_rumo', 'protege o motor de batidas e da chuva', carga_maos=True),
+    'capo': _peca('capo', 'Capô', 14, 'familia_rumo', 'protege o motor de batidas e da chuva', carga_maos=True),
     'tampa_porta_malas': _peca('tampa_porta_malas', 'Tampa do porta-malas', 10, 'sedan_rumo', 'fecha e tranca o porta-malas', carga_maos=True),
-    'para_choque_dianteiro': _peca('para_choque_dianteiro', 'Para-choque dianteiro', 7, 'sedan_rumo', 'absorve a primeira parte das batidas de frente', (7, 1)),
+    'para_choque_dianteiro': _peca('para_choque_dianteiro', 'Para-choque dianteiro', 7, 'familia_rumo', 'absorve a primeira parte das batidas de frente', (7, 1)),
     'para_choque_traseiro': _peca('para_choque_traseiro', 'Para-choque traseiro', 7, 'sedan_rumo', 'absorve a primeira parte das batidas de trás', (7, 1)),
-    'paralama_e': _peca('paralama_e', 'Para-lama dianteiro esquerdo', 5, 'sedan_rumo', 'protege a roda e o farol de lado', (4, 2)),
-    'paralama_d': _peca('paralama_d', 'Para-lama dianteiro direito', 5, 'sedan_rumo', 'protege a roda e o farol de lado', (4, 2)),
+    'paralama_e': _peca('paralama_e', 'Para-lama dianteiro esquerdo', 5, 'familia_rumo', 'protege a roda e o farol de lado', (4, 2)),
+    'paralama_d': _peca('paralama_d', 'Para-lama dianteiro direito', 5, 'familia_rumo', 'protege a roda e o farol de lado', (4, 2)),
     'farol': _peca('farol', 'Farol com pisca', 2, 'universal', 'ilumina um lado da frente à noite', (2, 1)),
     'lanterna_traseira': _peca('lanterna_traseira', 'Lanterna traseira', 1, 'universal', 'luz de freio, de ré e pisca', (2, 1)),
     'retrovisor': _peca('retrovisor', 'Retrovisor', 0.8, 'universal', 'mostra o que vem atrás', (1, 1)),
-    'para_brisa': _peca('para_brisa', 'Para-brisa', 12, 'sedan_rumo', 'protege a frente da cabine (30% de quebrar ao tirar)', carga_maos=True),
+    'para_brisa': _peca('para_brisa', 'Para-brisa', 12, 'familia_rumo', 'protege a frente da cabine (30% de quebrar ao tirar)', carga_maos=True),
     'vidro_traseiro': _peca('vidro_traseiro', 'Vidro traseiro', 8, 'sedan_rumo', 'protege a traseira da cabine', carga_maos=True),
     'banco_dianteiro': _peca('banco_dianteiro', 'Banco dianteiro', 15, 'universal', 'sem o banco do motorista não dá para dirigir', carga_maos=True),
     'banco_traseiro': _peca('banco_traseiro', 'Banco traseiro', 20, 'universal', 'leva 3 passageiros; sem ele o espaço vira carga', carga_maos=True),
@@ -231,6 +238,8 @@ def _fator(c): return [round(x, 4) for x in lin(c)]
         cores_sorteio=[_fator(c) for c in [COR_PINTURA, (40, 62, 98), (205, 200, 184), (44, 82, 56), (196, 196, 198), (34, 34, 36),
                                            (218, 208, 176), (120, 136, 156)]])
 def sedan_rumo(Vc):
+    global SF
+    SF = _SF_SEDAN
     _partes_carroceria(Vc)
     X0 = SF.x_lado(0.50, 1.0) - 0.07
     Vc.parte('para_choque_d', (0, 0.315, SF.ZF), 'peca', item=PECA['para_choque_dianteiro'], peca='para_choque_dianteiro', **REG['para_choque'])
@@ -381,7 +390,7 @@ def _recortes():
     r = []
     for s in (1, -1):
         h = _casca_contorno(0.395, 0.775, 0.535, 0.692, 0.06, -0.09); r.append(h if s > 0 else _mx(h))
-        t = _casca_contorno(0.503, 0.815, 0.635, 0.818, 0.06, -0.08, frente=False); r.append(t if s > 0 else _mx(t))
+        t = _casca_contorno(*SF.LANTERNA, 0.06, -0.08, frente=False); r.append(t if s > 0 else _mx(t))
     r.append(_cx(-0.388, 0.388, 0.540, 0.692, 1.98, 2.2))
     return r
 
@@ -452,7 +461,7 @@ def _caminho_ponta(frente, zlim, off, n=96):
 def _para_choque(q, frente):
     """Para-choque de plástico preto texturizado que envolve as quinas, com faixa de borracha, entradas de ar e suporte de placa."""
     y0 = 0.315
-    cam = _caminho_ponta(frente, 1.74 if frente else -1.86, 0.0)
+    cam = _caminho_ponta(frente, 1.74 if frente else SF.Z_PC_TRAS, 0.0)
     path = [(x, y0, z) for x, z in cam]
     perf = chaikin([(-0.035, 0.0), (0.035, 0.0), (0.058, 0.02), (0.062, 0.09), (0.058, 0.165), (0.035, 0.185), (-0.035, 0.185)], 2)
     q.add('plastico_preto', varrer_caminho(perf, path))
@@ -734,10 +743,14 @@ def _tanque(q):
 
 
 def _bocal(p):
-    p.add('chassi', menos(_cx(0.715, 0.778, 0.735, 0.865, -1.958, -1.762), _cx(0.725, 0.9, 0.745, 0.855, -1.948, -1.772)))
-    p.add('plastico_preto', cil_x(0.034, 0.725, 0.745, 0.80, -1.86, 24))
-    p.add('plastico_preto', _cx(0.742, 0.752, 0.79, 0.81, -1.89, -1.83))
-    p.add('borracha', tubo(suavizar_caminho([(0.36, 0.20, -0.95), (0.50, 0.30, -1.10), (0.62, 0.55, -1.55), (0.70, 0.74, -1.80), (0.74, 0.80, -1.86)], 3), 0.024, 14))
+    """Bocal do tanque atrás da portinhola: copo, tampa e a mangueira até o tanque (segue Z_BOCAL e a lateral do modelo)."""
+    dz = SF.Z_BOCAL + 1.86; dx = SF.x_lado(SF.Z_BOCAL, 1.0) - 0.8085
+    T = TF.translation_matrix([dx, 0, dz])
+    p.add('chassi', menos(_cx(0.715, 0.778, 0.735, 0.865, -1.958, -1.762), _cx(0.725, 0.9, 0.745, 0.855, -1.948, -1.772)).apply_transform(T))
+    p.add('plastico_preto', cil_x(0.034, 0.725, 0.745, 0.80, -1.86, 24).apply_transform(T))
+    p.add('plastico_preto', _cx(0.742, 0.752, 0.79, 0.81, -1.89, -1.83).apply_transform(T))
+    p.add('borracha', tubo(suavizar_caminho([(0.36, 0.20, -0.95), (0.50, 0.30, -1.10), (0.62 + dx, 0.55, -1.55 + dz * 0.5), (0.70 + dx, 0.74, -1.80 + dz),
+                                             (0.74 + dx, 0.80, -1.86 + dz)], 3), 0.024, 14))
 
 
 def _cofre(p):
@@ -857,7 +870,7 @@ def _banco_traseiro(q):
 def _forro_e_cabine(Vc, dentro):
     p = Vc.base
     teto = menos(SF.corpo_cabine(0.022, pontas=0.03), SF.corpo_cabine(0.034, desce=0.03, pontas=0.02))
-    p.add('forro_teto', inter(teto, _cx(-0.62, 0.62, 1.255, 2.0, -1.25, 0.25)))
+    p.add('forro_teto', inter(teto, _cx(-0.62, 0.62, 1.255, 2.0, SF.Z_FORRO_TRAS, 0.25)))
     p.add('plastico_translucido', _cham(-0.08, 0.08, 1.335, 1.355, -0.52, -0.42, 0.01))                     # luz de teto
     p.add('plastico_preto', _cham(-0.12, 0.12, 1.255, 1.315, -0.235, -0.20, 0.01))                           # retrovisor interno
     p.add('espelho_retrovisor', _cx(-0.115, 0.115, 1.26, 1.31, -0.2355, -0.2345))
@@ -866,12 +879,14 @@ def _forro_e_cabine(Vc, dentro):
         g = Vc.achar(no)['geo']
         g.add('forro_teto', _cham(xc - 0.18, xc + 0.18, 1.316, 1.336, -0.40, -0.215, 0.008))
         if xc < 0: g.add('espelho_retrovisor', _cx(xc - 0.07, xc + 0.07, 1.3155, 1.3165, -0.36, -0.27))
-    p.add('carpete', inter(dentro, _cx(-0.79, 0.79, 0.0, 0.29, -1.72, 0.735)))                             # carpete do piso
-    p.add('chassi', inter(dentro, _cx(-0.79, 0.79, 0.478, 0.955, -1.745, -1.72)))                          # parede atrás do banco
-    p.add('carpete', inter(dentro, _cx(-0.79, 0.79, 0.935, 0.955, -1.72, -1.46)))                          # tampão traseiro
-    for x in (-0.45, 0.45):
-        p.add('plastico_preto', _cil_y(0.06, 0.955, 0.962, x, -1.60, 28))
-        for k in range(4): p.add('chassi', _cx(x - 0.05, x + 0.05, 0.962, 0.964, -1.64 + k * 0.025, -1.632 + k * 0.025))
+    hatch = getattr(SF, 'HATCH', False)
+    p.add('carpete', inter(dentro, _cx(-0.79, 0.79, 0.0, 0.29, -1.40 if hatch else -1.72, 0.735)))       # carpete do piso
+    if not hatch:
+        p.add('chassi', inter(dentro, _cx(-0.79, 0.79, 0.478, 0.955, -1.745, -1.72)))                      # parede atrás do banco
+        p.add('carpete', inter(dentro, _cx(-0.79, 0.79, 0.935, 0.955, -1.72, -1.46)))                      # tampão traseiro
+        for x in (-0.45, 0.45):
+            p.add('plastico_preto', _cil_y(0.06, 0.955, 0.962, x, -1.60, 28))
+            for k in range(4): p.add('chassi', _cx(x - 0.05, x + 0.05, 0.962, 0.964, -1.64 + k * 0.025, -1.632 + k * 0.025))
     for s in (1, -1):                                                                                       # cintos
         def L(m): return m if s > 0 else _mx(m)
         p.add('plastico_preto', L(_cham(0.66, 0.70, 1.13, 1.19, -0.47, -0.43, 0.008)))

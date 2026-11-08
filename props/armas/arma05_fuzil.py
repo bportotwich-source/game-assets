@@ -21,6 +21,9 @@ def _cartucho_556(sec=20, vazio=False):
     return q
 
 
+PU_ORIG = (-0.02, -0.045, 0.0)        # ponto de encaixe do punho (topo, no meio)
+
+
 def _cabo_fuzil(p, dx, dy):
     """Punho de pistola arredondado (mesmo desenho da espingarda), deslocado."""
     cabo = affinity.translate(CABO12, dx, dy); lg = lambda y: LARG12(y - dy)
@@ -54,7 +57,6 @@ def _receptores(p):
     for (x, y) in ((0.018, -0.03), (0.04, -0.03), (0.14, -0.016), (-0.012, -0.016)):
         for zs in (-1, 1): p.add('aco_inox', cil_z(0.002, min(zs * 0.0117, zs * 0.0125), max(zs * 0.0117, zs * 0.0125), x, y, 16))
     p.add('aluminio_receptor', cil_x(0.0165, FX0 - 0.006, FX0, -0.003, 0, 40))                        # anel da coronha
-    _cabo_fuzil(p, -0.004, -0.0015)
     # guarda-mao M-LOK preto com trilho em cima, cano e bloco de gas por dentro
     X0, X1 = FX1 + 0.002, 0.45
     sec_f = arred([(-0.019, -0.03), (0.019, -0.03), (0.019, FY1), (-0.019, FY1)], 0.008)
@@ -176,6 +178,11 @@ def _seletor(q):
 def fuzil_556(A):
     A.pivo = (-0.037, -0.093, 0.0)
     _receptores(A.base)
+    pu = A.parte('punho', PU_ORIG, explodir=(-0.02, -0.06, 0), tipo='troca', descricao='punho de pistola (troca pelo encaixe_punho)')
+    _cabo_fuzil(pu, -0.004, -0.0015)
+    A.encaixe('encaixe_punho', PU_ORIG, 'punho_ar', pai='punho', substitui='punho', explodir=(-0.02, -0.08, 0),
+              aceita=['punho_ar', 'punho_ar_tan', 'punho_cavas', 'punho_cavas_tan', 'punho_reto', 'punho_reto_tan'],
+              descricao='filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho')
     gat = A.parte('gatilho', (0.037, -0.037, 0), explodir=(0.0, -0.06, 0), tipo='gira', eixo='x', curso_graus=-12, descricao='puxa para trás')
     _gatilho_em(gat, 0.037, -0.037)
     sel = A.parte('seletor', (0.02, -0.025, 0), explodir=(0, 0, -0.04), tipo='gira', eixo='z', curso_graus=90, descricao='trava / semi (90°) / auto (180°)')
@@ -727,6 +734,7 @@ def fuzil_556_bicolor(A):
     _recolore(A.base, TAN)
     for pt in A.partes:
         if pt['no'] == 'carregador': _recolore(pt['peca'], {'polimero': 'polimero_tan'})
+        if pt['no'] == 'punho': _recolore(pt['peca'], TAN)
     padrao = {'encaixe_mira': 'luneta_1_6', 'encaixe_boca': 'supressor_556_tan', 'encaixe_coronha': 'coronha_retratil_ar_tan',
               'encaixe_empunhadura': 'empunhadura_curta_tan', 'encaixe_lanterna': 'lanterna_compacta'}
     for e in A.encaixes:

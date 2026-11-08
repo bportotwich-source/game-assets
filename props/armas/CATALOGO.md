@@ -12,8 +12,8 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Espingarda Mutirão 12 curta (`espingarda_12_curta`) | 12 | 4 | 150 | 12 m | 1,3/s | 120 m | 900 | 2,7 kg | mira, coronha, boca, cano, lateral, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Carabina Paciência .308 (`carabina_308`) | .308 | 10 | 95 | 150 m | 0,8/s | 220 m | 2500 | 6,2 kg | mira, boca, carregador, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Carabina Paciência .308 de caça (`carabina_308_caca`) | .308 | 5 | 95 | 120 m | 0,8/s | 220 m | 2500 | 3,9 kg | mira, boca, carregador, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
-| Fuzil Vigília 5,56 (`fuzil_556`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,3 kg | mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
-| Fuzil Vigília 5,56 bicolor (`fuzil_556_bicolor`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,3 kg | mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
+| Fuzil Vigília 5,56 (`fuzil_556`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,3 kg | punho, mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
+| Fuzil Vigília 5,56 bicolor (`fuzil_556_bicolor`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,3 kg | punho, mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
 | Fuzil Brasa 7,62 (`fuzil_762`) | 7,62×39 | 30 | 55 | 70 m | 10/s | 180 m | 6000 | 3,6 kg | mira, boca, carregador, coronha, empunhadura, lanterna, guarda_mao, enfeite, tampa, mira_tampa, baioneta, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
 | Fuzil Brasa 7,62 tático (`fuzil_762_tatico`) | 7,62×39 | 30 | 55 | 70 m | 10/s | 180 m | 6000 | 3,6 kg | mira, boca, carregador, coronha, empunhadura, lanterna, guarda_mao, enfeite, tampa, mira_tampa, baioneta, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
 | Submetralhadora Faísca 9 mm (`smg_9mm`) | 9 mm | 30 | 28 | 40 m | 14/s | 120 m | 5000 | 1,9 kg | mira, alca, massa, boca, carregador, empunhadura, lanterna, laser, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, estender, recolher, inspecionar, ocioso |
@@ -135,6 +135,12 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Supressor 9 mm (cinza) (`supressor_9mm_cinza`) | Boca do cano | `boca_rosca_9mm` | ruido_m ×0,3, dano ×0,95, alcance_m ×1,05, recuo ×0,85 | 0,2 kg | raro | 5072 |
 | Ponte de mira com ponto vermelho (`ponte_mira_pistola`) | Miras | `ponte_pistola` | precisao_mirando ×1,3, tempo_mirar ×0,85 | 0,09 kg | muito raro | 3024 |
 | Ponte de mira com ponto vermelho (areia) (`ponte_mira_pistola_tan`) | Miras | `ponte_pistola` | precisao_mirando ×1,3, tempo_mirar ×0,85 | 0,09 kg | muito raro | 3024 |
+| Punho original do fuzil (`punho_ar`) | Punhos | `punho_ar` | - | 0,07 kg | comum | 20692 |
+| Punho original do fuzil (caramelo) (`punho_ar_tan`) | Punhos | `punho_ar` | - | 0,07 kg | comum | 20692 |
+| Punho emborrachado com cavas (`punho_cavas`) | Punhos | `punho_ar` | recuo ×0,95, estabilidade_mirando ×1,1 | 0,09 kg | incomum | 15960 |
+| Punho emborrachado com cavas (caramelo) (`punho_cavas_tan`) | Punhos | `punho_ar` | recuo ×0,95, estabilidade_mirando ×1,1 | 0,09 kg | incomum | 15960 |
+| Punho reto de polímero (`punho_reto`) | Punhos | `punho_ar` | tempo_mirar ×0,95 | 0,06 kg | incomum | 21556 |
+| Punho reto de polímero (caramelo) (`punho_reto_tan`) | Punhos | `punho_ar` | tempo_mirar ×0,95 | 0,06 kg | incomum | 21556 |
 
 ## Munição e efeitos
 
@@ -195,6 +201,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Carabina Paciência .308 de caça**, `encaixe_carregador`: carregador_308_5, carregador_308_10
 - **Carabina Paciência .308 de caça**, `encaixe_bipe`: bipe
 - **Carabina Paciência .308 de caça**, `encaixe_bandoleira`: bandoleira
+- **Fuzil Vigília 5,56**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan
 - **Fuzil Vigília 5,56**, `encaixe_mira`: mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa
 - **Fuzil Vigília 5,56**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
 - **Fuzil Vigília 5,56**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
@@ -206,6 +213,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Fuzil Vigília 5,56**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
 - **Fuzil Vigília 5,56**, `encaixe_bipe`: bipe
 - **Fuzil Vigília 5,56**, `encaixe_bandoleira`: bandoleira
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_mira`: mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan

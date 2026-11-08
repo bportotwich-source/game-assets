@@ -1705,8 +1705,19 @@
     0.616
    ],
    "triangulos": 43284,
-   "kb": 2260.1,
+   "kb": 2260.2,
    "partes": [
+    {
+     "no": "punho",
+     "tipo": "troca",
+     "descricao": "punho de pistola (troca pelo encaixe_punho)",
+     "pai": "fuzil_556",
+     "explodir_m": [
+      -0.0,
+      -0.06,
+      0.02
+     ]
+    },
     {
      "no": "gatilho",
      "tipo": "gira",
@@ -1803,6 +1814,31 @@
     }
    ],
    "encaixes": [
+    {
+     "no": "encaixe_punho",
+     "tipo": "punho_ar",
+     "pai": "punho",
+     "posicao_m": [
+      0.0,
+      0.048,
+      -0.017
+     ],
+     "substitui": "punho",
+     "aceita": [
+      "punho_ar",
+      "punho_ar_tan",
+      "punho_cavas",
+      "punho_cavas_tan",
+      "punho_reto",
+      "punho_reto_tan"
+     ],
+     "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
+     "explodir_m": [
+      -0.0,
+      -0.08,
+      0.02
+     ]
+    },
     {
      "no": "encaixe_mira",
      "tipo": "trilho_mira",
@@ -2150,8 +2186,19 @@
     0.616
    ],
    "triangulos": 43284,
-   "kb": 2260.9,
+   "kb": 2261.1,
    "partes": [
+    {
+     "no": "punho",
+     "tipo": "troca",
+     "descricao": "punho de pistola (troca pelo encaixe_punho)",
+     "pai": "fuzil_556_bicolor",
+     "explodir_m": [
+      -0.0,
+      -0.06,
+      0.02
+     ]
+    },
     {
      "no": "gatilho",
      "tipo": "gira",
@@ -2248,6 +2295,31 @@
     }
    ],
    "encaixes": [
+    {
+     "no": "encaixe_punho",
+     "tipo": "punho_ar",
+     "pai": "punho",
+     "posicao_m": [
+      0.0,
+      0.048,
+      -0.017
+     ],
+     "substitui": "punho",
+     "aceita": [
+      "punho_ar",
+      "punho_ar_tan",
+      "punho_cavas",
+      "punho_cavas_tan",
+      "punho_reto",
+      "punho_reto_tan"
+     ],
+     "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
+     "explodir_m": [
+      -0.0,
+      -0.08,
+      0.02
+     ]
+    },
     {
      "no": "encaixe_mira",
      "tipo": "trilho_mira",
@@ -9072,6 +9144,156 @@
      "descricao": "centro da lente: linha de visada"
     }
    ]
+  },
+  {
+   "id": "punho_ar",
+   "nome": "Punho original do fuzil",
+   "grupo": "acessorios",
+   "categoria": "punho",
+   "encaixe": "punho_ar",
+   "peso_kg": 0.07,
+   "modificadores": {},
+   "raridade": "comum",
+   "valor_troca": 5,
+   "descricao": "O punho que vem no fuzil: polímero com área pontilhada.",
+   "arquivo": "acessorios/punho_ar.glb",
+   "tamanho_m": [
+    0.033,
+    0.111,
+    0.078
+   ],
+   "triangulos": 20692,
+   "kb": 1174.4
+  },
+  {
+   "id": "punho_ar_tan",
+   "nome": "Punho original do fuzil (caramelo)",
+   "grupo": "acessorios",
+   "categoria": "punho",
+   "encaixe": "punho_ar",
+   "peso_kg": 0.07,
+   "modificadores": {},
+   "raridade": "comum",
+   "valor_troca": 5,
+   "descricao": "O punho original em caramelo.",
+   "arquivo": "acessorios/punho_ar_tan.glb",
+   "tamanho_m": [
+    0.033,
+    0.111,
+    0.078
+   ],
+   "triangulos": 20692,
+   "kb": 1174.7
+  },
+  {
+   "id": "punho_cavas",
+   "nome": "Punho emborrachado com cavas",
+   "grupo": "acessorios",
+   "categoria": "punho",
+   "encaixe": "punho_ar",
+   "peso_kg": 0.09,
+   "modificadores": {
+    "recuo": 0.95,
+    "estabilidade_mirando": 1.1
+   },
+   "descricao": "Borracha com textura de pedrinhas em toda a volta, ressalto para o dedo médio, cavas para os outros dedos e base larga que apoia a mão. Não escorrega com a mão suada ou molhada.",
+   "raridade": "incomum",
+   "valor_troca": 10,
+   "onde": [
+    "quartel",
+    "galeria",
+    "delegacia"
+   ],
+   "arquivo": "acessorios/punho_cavas.glb",
+   "tamanho_m": [
+    0.045,
+    0.117,
+    0.086
+   ],
+   "triangulos": 15960,
+   "kb": 1108.6
+  },
+  {
+   "id": "punho_cavas_tan",
+   "nome": "Punho emborrachado com cavas (caramelo)",
+   "grupo": "acessorios",
+   "categoria": "punho",
+   "encaixe": "punho_ar",
+   "peso_kg": 0.09,
+   "modificadores": {
+    "recuo": 0.95,
+    "estabilidade_mirando": 1.1
+   },
+   "descricao": "O punho emborrachado com cavas em caramelo.",
+   "raridade": "incomum",
+   "valor_troca": 10,
+   "onde": [
+    "quartel",
+    "galeria",
+    "delegacia"
+   ],
+   "arquivo": "acessorios/punho_cavas_tan.glb",
+   "tamanho_m": [
+    0.045,
+    0.117,
+    0.086
+   ],
+   "triangulos": 15960,
+   "kb": 1110.0
+  },
+  {
+   "id": "punho_reto",
+   "nome": "Punho reto de polímero",
+   "grupo": "acessorios",
+   "categoria": "punho",
+   "encaixe": "punho_ar",
+   "peso_kg": 0.06,
+   "modificadores": {
+    "tempo_mirar": 0.95
+   },
+   "descricao": "Punho mais em pé e liso, com rabo de castor que protege a mão, painel de textura fina dos lados e compartimento com tampa no fundo (cabe pilha ou bilhete).",
+   "raridade": "incomum",
+   "valor_troca": 10,
+   "onde": [
+    "quartel",
+    "galeria",
+    "delegacia"
+   ],
+   "arquivo": "acessorios/punho_reto.glb",
+   "tamanho_m": [
+    0.03,
+    0.115,
+    0.075
+   ],
+   "triangulos": 21556,
+   "kb": 1224.4
+  },
+  {
+   "id": "punho_reto_tan",
+   "nome": "Punho reto de polímero (caramelo)",
+   "grupo": "acessorios",
+   "categoria": "punho",
+   "encaixe": "punho_ar",
+   "peso_kg": 0.06,
+   "modificadores": {
+    "tempo_mirar": 0.95
+   },
+   "descricao": "O punho reto de polímero em caramelo.",
+   "raridade": "incomum",
+   "valor_troca": 10,
+   "onde": [
+    "quartel",
+    "galeria",
+    "delegacia"
+   ],
+   "arquivo": "acessorios/punho_reto_tan.glb",
+   "tamanho_m": [
+    0.03,
+    0.115,
+    0.075
+   ],
+   "triangulos": 21556,
+   "kb": 1227.7
   }
  ],
  "municao": [

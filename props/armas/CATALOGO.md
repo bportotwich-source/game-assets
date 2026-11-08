@@ -10,6 +10,8 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Revólver Vigia .38 (`revolver_38`) | .38 | 6 | 45 | 25 m | 2,5/s | 70 m | 1500 | 0,95 kg | mira, empunhadura, recarga, cinto | atirar, engatilhar, atirar_armado, recarregar, inspecionar, ocioso |
 | Espingarda Mutirão 12 (`espingarda_12`) | 12 | 5 | 150 | 15 m | 1,3/s | 110 m | 900 | 3,4 kg | mira, coronha, boca, tubo, cano, lateral, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Espingarda Mutirão 12 curta (`espingarda_12_curta`) | 12 | 4 | 150 | 12 m | 1,3/s | 120 m | 900 | 2,7 kg | mira, coronha, boca, cano, lateral, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
+| Carabina Paciência .308 (`carabina_308`) | .308 | 10 | 95 | 150 m | 0,8/s | 220 m | 2500 | 6,2 kg | mira, boca, carregador, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
+| Carabina Paciência .308 de caça (`carabina_308_caca`) | .308 | 5 | 95 | 120 m | 0,8/s | 220 m | 2500 | 3,9 kg | mira, boca, carregador, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 
 ## Acessórios
 
@@ -40,6 +42,14 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Porta-cartuchos lateral (6) (`porta_cartuchos_lateral_12`) | Porta-cartuchos | `lateral_12` | recarga_s ×0,85 | 0,26 kg | incomum | 6224 |
 | Mira de ponto vermelho de tubo (`mira_ponto_vermelho_tubo`) | Miras | `trilho_mira` | precisao_mirando ×1,3, tempo_mirar ×0,8 | 0,16 kg | raro | 3592 |
 | Bandoleira de náilon (`bandoleira`) | Bandoleiras | `bandoleira` | tempo_sacar ×0,85 | 0,15 kg | comum | 5372 |
+| Luneta 3-9× com retículo iluminado (`luneta_3_9`) | Miras | `trilho_mira` | precisao_mirando ×1,6, tempo_mirar ×1,35, alcance_m ×1,6 | 0,62 kg | raro | 6512 |
+| Luneta 4× fixa (`luneta_4x`) | Miras | `trilho_mira` | precisao_mirando ×1,45, tempo_mirar ×1,2, alcance_m ×1,4 | 0,38 kg | incomum | 5172 |
+| Bipé dobrável (`bipe`) | Bipés | `bipe` | precisao_deitado ×1,5, recuo_deitado ×0,6 | 0,36 kg | incomum | 2372 |
+| Protetor de rosca .308 (`protetor_rosca_308`) | Boca do cano | `boca_308` | - | 0,02 kg | comum | 832 |
+| Freio de boca .308 (`freio_boca_308`) | Boca do cano | `boca_308` | recuo ×0,55, ruido_m ×1,2 | 0,11 kg | incomum | 1360 |
+| Supressor de fuzil .308 (`supressor_308`) | Boca do cano | `boca_308` | ruido_m ×0,35, recuo ×0,8, precisao ×1,03 | 0,55 kg | muito raro | 4512 |
+| Carregador .308 (10) (`carregador_308_10`) | Carregadores | `carregador_308` | - | 0,2 kg | incomum | 1076 |
+| Carregador .308 (5) (`carregador_308_5`) | Carregadores | `carregador_308` | - | 0,13 kg | comum | 1004 |
 
 ## Munição e efeitos
 
@@ -55,6 +65,9 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Cartucho 12 balote (`municao_12_balote`) | Munição | Casca verde com um projétil só de chumbo: alcance de 50 m e atravessa portas. | 1120 |
 | Casca 12 (vazia) (`estojo_12`) | Estojos | Casca ejetada no bombeamento (aos 0,36 s do "atirar"). Na bancada vira casca para recarregar. | 892 |
 | Caixa de cartuchos 12 (25) (`caixa_municao_12`) | Caixas de munição | Caixa de papelão com 25 cartuchos de chumbo grosso em pé. A tampa abre (nó "tampa", animação "abrir"). | 14950 |
+| Cartucho .308 (`municao_308`) | Munição | Cartucho de fuzil .308 (deitado, pivô no centro). | 784 |
+| Estojo .308 (vazio) (`estojo_308`) | Estojos | Estojo ejetado ao puxar o ferrolho. Bom para recarregar na bancada. | 642 |
+| Caixa de munição .308 (20) (`caixa_municao_308`) | Caixas de munição | Caixa de papelão com bandeja de 20 cartuchos .308 em pé. A tampa abre (nó "tampa", animação "abrir"). | 6628 |
 | Clarão de boca (`clarao_boca`) | Efeitos | Mostrar por 1 ou 2 quadros no encaixe boca_fogo a cada tiro; girar ao acaso em -Z e variar a escala (0,8 a 1,2). Material emissivo com transparência. | 372 |
 
 ## Compatibilidade
@@ -80,3 +93,13 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Espingarda Mutirão 12 curta**, `encaixe_cano`: lanterna_cano_12
 - **Espingarda Mutirão 12 curta**, `encaixe_lateral`: porta_cartuchos_lateral_12
 - **Espingarda Mutirão 12 curta**, `encaixe_bandoleira`: bandoleira
+- **Carabina Paciência .308**, `encaixe_mira`: luneta_3_9, luneta_4x, mira_ponto_vermelho_tubo
+- **Carabina Paciência .308**, `encaixe_boca`: protetor_rosca_308, freio_boca_308, supressor_308
+- **Carabina Paciência .308**, `encaixe_carregador`: carregador_308_10, carregador_308_5
+- **Carabina Paciência .308**, `encaixe_bipe`: bipe
+- **Carabina Paciência .308**, `encaixe_bandoleira`: bandoleira
+- **Carabina Paciência .308 de caça**, `encaixe_mira`: luneta_3_9, luneta_4x, mira_ponto_vermelho_tubo
+- **Carabina Paciência .308 de caça**, `encaixe_boca`: protetor_rosca_308, freio_boca_308, supressor_308
+- **Carabina Paciência .308 de caça**, `encaixe_carregador`: carregador_308_5, carregador_308_10
+- **Carabina Paciência .308 de caça**, `encaixe_bipe`: bipe
+- **Carabina Paciência .308 de caça**, `encaixe_bandoleira`: bandoleira

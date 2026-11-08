@@ -735,7 +735,7 @@
     0.345
    ],
    "triangulos": 7000,
-   "kb": 389.6
+   "kb": 417.6
   },
   {
    "id": "rack_tv",
@@ -1143,7 +1143,7 @@
     0.52
    ],
    "triangulos": 12560,
-   "kb": 767.2
+   "kb": 1033.5
   },
   {
    "id": "mesa_escritorio",
@@ -4767,6 +4767,2083 @@
    ],
    "triangulos": 3284,
    "kb": 239.1
+  },
+  {
+   "id": "banqueta_giratoria",
+   "nome": "Banqueta giratória de balcão",
+   "grupo": "mobilias",
+   "categoria": "diner",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "diner",
+    "lanchonete",
+    "cinema_drive_in",
+    "padaria"
+   ],
+   "sentar": true,
+   "colisao": "caixa",
+   "arquivo": "mobilias/banqueta_giratoria.glb",
+   "tamanho_m": [
+    0.409,
+    0.79,
+    0.409
+   ],
+   "triangulos": 1172,
+   "kb": 56.8
+  },
+  {
+   "id": "mesa_booth",
+   "nome": "Mesa de booth com dois sofás",
+   "grupo": "mobilias",
+   "categoria": "diner",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "diner",
+    "lanchonete"
+   ],
+   "sentar": true,
+   "vagas": 4,
+   "colisao": "caixa",
+   "modulo_m": 2.0,
+   "arquivo": "mobilias/mesa_booth.glb",
+   "tamanho_m": [
+    1.3,
+    1.17,
+    1.9
+   ],
+   "triangulos": 1312,
+   "kb": 65.7
+  },
+  {
+   "id": "jukebox",
+   "nome": "Jukebox",
+   "grupo": "mobilias",
+   "categoria": "diner",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "diner",
+    "lanchonete",
+    "motel",
+    "galeria"
+   ],
+   "colisao": "caixa",
+   "usa": "energia",
+   "luz_m": 3,
+   "interacao": "toca música: moral +10 na base, mas atrai zumbis num raio grande",
+   "barulho": "muito alto",
+   "arquivo": "mobilias/jukebox.glb",
+   "tamanho_m": [
+    0.9,
+    1.569,
+    0.645
+   ],
+   "triangulos": 3084,
+   "kb": 228.8
+  },
+  {
+   "id": "chapa_lanchonete",
+   "nome": "Chapa de lanchonete",
+   "grupo": "mobilias",
+   "categoria": "diner",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "diner",
+    "lanchonete",
+    "cinema_drive_in"
+   ],
+   "colisao": "caixa",
+   "usa": "combustivel",
+   "estacao": "cozinha (cozinha 4 refeições de uma vez)",
+   "arquivo": "mobilias/chapa_lanchonete.glb",
+   "tamanho_m": [
+    1.2,
+    1.0,
+    0.76
+   ],
+   "triangulos": 1496,
+   "kb": 125.0
+  },
+  {
+   "id": "vitrine_tortas",
+   "nome": "Vitrine giratória de tortas",
+   "grupo": "mobilias",
+   "categoria": "diner",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "diner",
+    "padaria",
+    "lanchonete"
+   ],
+   "conteiner": true,
+   "slots": 2,
+   "saque": [
+    "comida"
+   ],
+   "colisao": "caixa",
+   "arquivo": "mobilias/vitrine_tortas.glb",
+   "tamanho_m": [
+    0.44,
+    0.88,
+    0.44
+   ],
+   "triangulos": 2152,
+   "kb": 105.0
+  },
+  {
+   "id": "maquina_refrigerante",
+   "nome": "Máquina de refrigerante de balcão",
+   "grupo": "mobilias",
+   "categoria": "diner",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "diner",
+    "lanchonete",
+    "cinema",
+    "posto"
+   ],
+   "colisao": "caixa",
+   "coleta": {
+    "recurso": "agua",
+    "total": 2,
+    "ferramenta": "nenhuma",
+    "segundos_por_unidade": 5
+   },
+   "observacao": "xarope adoçado: sede -20 e ânimo +5",
+   "arquivo": "mobilias/maquina_refrigerante.glb",
+   "tamanho_m": [
+    0.7,
+    0.7,
+    0.75
+   ],
+   "triangulos": 780,
+   "kb": 40.0
+  },
+  {
+   "id": "fritadeira",
+   "nome": "Fritadeira industrial",
+   "grupo": "mobilias",
+   "categoria": "diner",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "diner",
+    "lanchonete",
+    "cinema_drive_in"
+   ],
+   "colisao": "caixa",
+   "coleta": {
+    "recurso": "combustivel",
+    "total": 1,
+    "ferramenta": "galão",
+    "segundos_por_unidade": 20
+   },
+   "observacao": "óleo velho vira combustível de lampião",
+   "arquivo": "mobilias/fritadeira.glb",
+   "tamanho_m": [
+    0.5,
+    1.05,
+    0.773
+   ],
+   "triangulos": 344,
+   "kb": 20.0
+  },
+  {
+   "id": "masseira",
+   "nome": "Masseira de padaria",
+   "grupo": "mobilias",
+   "categoria": "padaria",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "padaria",
+    "diner"
+   ],
+   "colisao": "caixa",
+   "usa": "energia",
+   "estacao": "padaria da base (farinha + água + lenha = 20 pães)",
+   "arquivo": "mobilias/masseira.glb",
+   "tamanho_m": [
+    0.7,
+    1.25,
+    0.785
+   ],
+   "triangulos": 1664,
+   "kb": 82.0
+  },
+  {
+   "id": "carrinho_assadeiras",
+   "nome": "Carrinho de assadeiras",
+   "grupo": "mobilias",
+   "categoria": "padaria",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "padaria",
+    "diner",
+    "supermercado"
+   ],
+   "conteiner": true,
+   "slots": 4,
+   "saque": [
+    "comida"
+   ],
+   "portatil": true,
+   "peso_kg": 25.0,
+   "colisao": "caixa",
+   "arquivo": "mobilias/carrinho_assadeiras.glb",
+   "tamanho_m": [
+    0.555,
+    1.72,
+    0.78
+   ],
+   "triangulos": 21936,
+   "kb": 1031.7
+  },
+  {
+   "id": "expositor_oleo",
+   "nome": "Expositor de óleo de motor",
+   "grupo": "mobilias",
+   "categoria": "posto",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "posto",
+    "garagem",
+    "concessionaria"
+   ],
+   "conteiner": true,
+   "slots": 3,
+   "saque": [
+    "combustivel",
+    "materiais"
+   ],
+   "colisao": "caixa",
+   "arquivo": "mobilias/expositor_oleo.glb",
+   "tamanho_m": [
+    0.93,
+    1.5,
+    0.47
+   ],
+   "triangulos": 4580,
+   "kb": 218.9
+  },
+  {
+   "id": "freezer_sorvete",
+   "nome": "Freezer de sorvete com tampa de vidro",
+   "grupo": "mobilias",
+   "categoria": "posto",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "posto",
+    "supermercado",
+    "diner",
+    "galeria"
+   ],
+   "conteiner": true,
+   "slots": 3,
+   "saque": [
+    "comida"
+   ],
+   "colisao": "caixa",
+   "barricada": true,
+   "observacao": "sorvete derretido: só o picolé de água (sede -10)",
+   "arquivo": "mobilias/freezer_sorvete.glb",
+   "tamanho_m": [
+    1.2,
+    0.877,
+    0.662
+   ],
+   "triangulos": 224,
+   "kb": 36.1,
+   "partes": [
+    {
+     "no": "tampa_1",
+     "origem": [
+      0,
+      0,
+      0
+     ],
+     "tipo": "gaveta",
+     "desliza": [
+      0.5,
+      0,
+      0
+     ]
+    },
+    {
+     "no": "tampa_2",
+     "origem": [
+      0,
+      0,
+      0
+     ],
+     "tipo": "gaveta",
+     "desliza": [
+      -0.5,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "id": "calibrador_pneu",
+   "nome": "Calibrador de pneus",
+   "grupo": "mobilias",
+   "categoria": "posto",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "posto",
+    "garagem",
+    "concessionaria"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "arquivo": "mobilias/calibrador_pneu.glb",
+   "tamanho_m": [
+    0.538,
+    1.654,
+    0.4
+   ],
+   "triangulos": 1040,
+   "kb": 155.8
+  },
+  {
+   "id": "pilha_pneus",
+   "nome": "Pilha de pneus",
+   "grupo": "mobilias",
+   "categoria": "posto",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "posto",
+    "garagem",
+    "ferro_velho",
+    "concessionaria",
+    "rua"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "barricada": true,
+   "desmonta": {
+    "material": 2
+   },
+   "observacao": "pneus queimam por horas (sinal de fumaça)",
+   "arquivo": "mobilias/pilha_pneus.glb",
+   "tamanho_m": [
+    1.239,
+    0.973,
+    0.676
+   ],
+   "triangulos": 2688,
+   "kb": 127.0
+  },
+  {
+   "id": "geladeira_bebidas",
+   "nome": "Geladeira vertical de bebidas",
+   "grupo": "mobilias",
+   "categoria": "loja",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "supermercado",
+    "posto",
+    "diner",
+    "lanchonete",
+    "galeria"
+   ],
+   "conteiner": true,
+   "slots": 6,
+   "saque": [
+    "agua",
+    "comida"
+   ],
+   "colisao": "caixa",
+   "barricada": true,
+   "usa": "energia",
+   "arquivo": "mobilias/geladeira_bebidas.glb",
+   "tamanho_m": [
+    0.7,
+    2.0,
+    0.687
+   ],
+   "triangulos": 3324,
+   "kb": 162.3,
+   "partes": [
+    {
+     "no": "porta",
+     "origem": [
+      0.35,
+      0,
+      0.33
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 100
+    }
+   ]
+  },
+  {
+   "id": "cesta_compras",
+   "nome": "Cesta de compras",
+   "grupo": "mobilias",
+   "categoria": "loja",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "supermercado",
+    "posto",
+    "galeria"
+   ],
+   "conteiner": true,
+   "slots": 2,
+   "saque": [
+    "comida",
+    "higiene"
+   ],
+   "portatil": true,
+   "peso_kg": 0.6,
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "uso": "carrega +4 itens de comida (ocupa as duas mãos)",
+   "arquivo": "mobilias/cesta_compras.glb",
+   "tamanho_m": [
+    0.492,
+    0.346,
+    0.313
+   ],
+   "triangulos": 624,
+   "kb": 32.6
+  },
+  {
+   "id": "poltronas_cinema",
+   "nome": "Fileira de poltronas de cinema",
+   "grupo": "mobilias",
+   "categoria": "cinema",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "cinema",
+    "concha"
+   ],
+   "sentar": true,
+   "vagas": 4,
+   "colisao": "caixa",
+   "modulo_m": 2.0,
+   "arquivo": "mobilias/poltronas_cinema.glb",
+   "tamanho_m": [
+    2.28,
+    1.058,
+    0.927
+   ],
+   "triangulos": 892,
+   "kb": 122.5
+  },
+  {
+   "id": "carrinho_pipoca",
+   "nome": "Carrinho de pipoca",
+   "grupo": "mobilias",
+   "categoria": "cinema",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "cinema",
+    "cinema_drive_in",
+    "concha",
+    "casa_barcos",
+    "galeria"
+   ],
+   "colisao": "caixa",
+   "conteiner": true,
+   "slots": 2,
+   "saque": [
+    "comida",
+    "combustivel"
+   ],
+   "estacao": "estoura milho (lata de milho = 3 comida leve)",
+   "arquivo": "mobilias/carrinho_pipoca.glb",
+   "tamanho_m": [
+    0.9,
+    1.85,
+    0.68
+   ],
+   "triangulos": 2082,
+   "kb": 104.1
+  },
+  {
+   "id": "projetor_filme",
+   "nome": "Projetor de filme com rolos",
+   "grupo": "mobilias",
+   "categoria": "cinema",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "cinema",
+    "cinema_drive_in",
+    "escolinha"
+   ],
+   "colisao": "caixa",
+   "usa": "energia",
+   "desmonta": {
+    "pecas": 2,
+    "sucata": 2
+   },
+   "interacao": "projeta o último filme (evento: moral +20 numa noite de cinema)",
+   "arquivo": "mobilias/projetor_filme.glb",
+   "tamanho_m": [
+    0.6,
+    1.77,
+    1.102
+   ],
+   "triangulos": 1812,
+   "kb": 89.1
+  },
+  {
+   "id": "balcao_recepcao",
+   "nome": "Balcão de recepção com quadro de chaves",
+   "grupo": "mobilias",
+   "categoria": "hotel",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "hotel",
+    "motel",
+    "rodoviaria",
+    "clinica"
+   ],
+   "conteiner": true,
+   "slots": 4,
+   "saque": [
+    "chaves",
+    "moedas",
+    "papel"
+   ],
+   "colisao": "caixa",
+   "modulo_m": 2.0,
+   "arquivo": "mobilias/balcao_recepcao.glb",
+   "tamanho_m": [
+    2.06,
+    2.0,
+    1.2
+   ],
+   "triangulos": 3972,
+   "kb": 489.3
+  },
+  {
+   "id": "carrinho_bagagem",
+   "nome": "Carrinho de bagagem de hotel",
+   "grupo": "mobilias",
+   "categoria": "hotel",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "hotel",
+    "motel",
+    "estacao",
+    "rodoviaria"
+   ],
+   "conteiner": true,
+   "slots": 4,
+   "saque": [
+    "roupas",
+    "remedios"
+   ],
+   "portatil": true,
+   "peso_kg": 20.0,
+   "colisao": "caixa",
+   "uso": "carrega 3x mais saque (devagar e barulhento)",
+   "arquivo": "mobilias/carrinho_bagagem.glb",
+   "tamanho_m": [
+    1.0,
+    1.617,
+    0.6
+   ],
+   "triangulos": 6316,
+   "kb": 444.6
+  },
+  {
+   "id": "carrinho_camareira",
+   "nome": "Carrinho de camareira",
+   "grupo": "mobilias",
+   "categoria": "hotel",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "hotel",
+    "motel",
+    "clinica"
+   ],
+   "conteiner": true,
+   "slots": 4,
+   "saque": [
+    "higiene",
+    "roupas",
+    "tecido"
+   ],
+   "portatil": true,
+   "peso_kg": 30.0,
+   "colisao": "caixa",
+   "arquivo": "mobilias/carrinho_camareira.glb",
+   "tamanho_m": [
+    1.479,
+    1.25,
+    0.5
+   ],
+   "triangulos": 7212,
+   "kb": 496.5
+  },
+  {
+   "id": "frigobar",
+   "nome": "Frigobar",
+   "grupo": "mobilias",
+   "categoria": "hotel",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "hotel",
+    "motel",
+    "escritorio"
+   ],
+   "conteiner": true,
+   "slots": 2,
+   "saque": [
+    "comida",
+    "agua"
+   ],
+   "colisao": "caixa",
+   "portatil": true,
+   "peso_kg": 20.0,
+   "arquivo": "mobilias/frigobar.glb",
+   "tamanho_m": [
+    0.48,
+    0.55,
+    0.505
+   ],
+   "triangulos": 964,
+   "kb": 102.7,
+   "partes": [
+    {
+     "no": "porta",
+     "origem": [
+      -0.24,
+      0,
+      0.232
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -105
+    }
+   ]
+  },
+  {
+   "id": "quadro_horarios",
+   "nome": "Quadro de horários de partida",
+   "grupo": "mobilias",
+   "categoria": "estacao",
+   "montagem": "wall",
+   "lote": 10,
+   "altura_sugerida_m": 2.0,
+   "comodos": [
+    "estacao",
+    "rodoviaria"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "pista": "o último trem de resgate (pista da fase 4)",
+   "arquivo": "mobilias/quadro_horarios.glb",
+   "tamanho_m": [
+    1.9,
+    1.0,
+    0.082
+   ],
+   "triangulos": 56,
+   "kb": 86.2
+  },
+  {
+   "id": "relogio_estacao",
+   "nome": "Relógio de plataforma (dupla face)",
+   "grupo": "mobilias",
+   "categoria": "estacao",
+   "montagem": "wall",
+   "lote": 10,
+   "altura_sugerida_m": 2.6,
+   "comodos": [
+    "estacao",
+    "rodoviaria",
+    "rua"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "parado_em": "3:17",
+   "arquivo": "mobilias/relogio_estacao.glb",
+   "tamanho_m": [
+    0.5,
+    0.58,
+    0.82
+   ],
+   "triangulos": 1116,
+   "kb": 94.4
+  },
+  {
+   "id": "maquina_lanches",
+   "nome": "Máquina de lanches",
+   "grupo": "mobilias",
+   "categoria": "estacao",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "estacao",
+    "rodoviaria",
+    "escolinha",
+    "clinica",
+    "hotel",
+    "galeria",
+    "delegacia"
+   ],
+   "conteiner": true,
+   "slots": 4,
+   "saque": [
+    "comida",
+    "agua"
+   ],
+   "ferramenta": "pe_de_cabra (quebra o vidro: barulho)",
+   "colisao": "caixa",
+   "barricada": true,
+   "arquivo": "mobilias/maquina_lanches.glb",
+   "tamanho_m": [
+    0.9,
+    1.8,
+    0.82
+   ],
+   "triangulos": 8624,
+   "kb": 409.8
+  },
+  {
+   "id": "carrinho_plataforma",
+   "nome": "Carrinho de carga de plataforma",
+   "grupo": "mobilias",
+   "categoria": "estacao",
+   "montagem": "floor",
+   "lote": 10,
+   "comodos": [
+    "estacao",
+    "correios",
+    "armazem",
+    "fabrica"
+   ],
+   "conteiner": true,
+   "slots": 4,
+   "saque": [
+    "materiais",
+    "comida",
+    "roupas"
+   ],
+   "portatil": true,
+   "peso_kg": 60.0,
+   "colisao": "caixa",
+   "arquivo": "mobilias/carrinho_plataforma.glb",
+   "tamanho_m": [
+    2.44,
+    1.0,
+    1.34
+   ],
+   "triangulos": 5608,
+   "kb": 393.2
+  },
+  {
+   "id": "elevador_automotivo",
+   "nome": "Elevador automotivo de duas colunas",
+   "grupo": "mobilias",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "garagem",
+    "posto",
+    "concessionaria",
+    "ferro_velho"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "obstaculo": true,
+   "modulo_m": 4.0,
+   "usa": "energia",
+   "observacao": "sem energia fica travado no alto: bom esconderijo",
+   "arquivo": "mobilias/elevador_automotivo.glb",
+   "tamanho_m": [
+    3.71,
+    3.22,
+    1.817
+   ],
+   "triangulos": 1608,
+   "kb": 78.5
+  },
+  {
+   "id": "carrinho_ferramentas",
+   "nome": "Carrinho de ferramentas com gavetas",
+   "grupo": "mobilias",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "garagem",
+    "posto",
+    "concessionaria",
+    "fabrica",
+    "quartel"
+   ],
+   "conteiner": true,
+   "slots": 4,
+   "saque": [
+    "ferramentas",
+    "materiais"
+   ],
+   "colisao": "caixa",
+   "barricada": true,
+   "arquivo": "mobilias/carrinho_ferramentas.glb",
+   "tamanho_m": [
+    0.851,
+    1.022,
+    0.49
+   ],
+   "triangulos": 4356,
+   "kb": 212.0,
+   "partes": [
+    {
+     "no": "gaveta_1",
+     "origem": [
+      0,
+      0,
+      0
+     ],
+     "tipo": "gaveta",
+     "desliza": [
+      0,
+      0,
+      0.32
+     ]
+    },
+    {
+     "no": "gaveta_3",
+     "origem": [
+      0,
+      0,
+      0
+     ],
+     "tipo": "gaveta",
+     "desliza": [
+      0,
+      0,
+      0.32
+     ]
+    },
+    {
+     "no": "gaveta_5",
+     "origem": [
+      0,
+      0,
+      0
+     ],
+     "tipo": "gaveta",
+     "desliza": [
+      0,
+      0,
+      0.32
+     ]
+    }
+   ]
+  },
+  {
+   "id": "compressor_ar",
+   "nome": "Compressor de ar com tanque",
+   "grupo": "mobilias",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "garagem",
+    "posto",
+    "fabrica",
+    "ferro_velho"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "usa": "energia",
+   "barulho": "alto",
+   "desmonta": {
+    "sucata": 4,
+    "peca_motor": 1
+   },
+   "arquivo": "mobilias/compressor_ar.glb",
+   "tamanho_m": [
+    1.209,
+    0.81,
+    0.774
+   ],
+   "triangulos": 3408,
+   "kb": 166.9
+  },
+  {
+   "id": "painel_ferramentas",
+   "nome": "Painel de ferramentas na parede",
+   "grupo": "mobilias",
+   "categoria": "oficina",
+   "montagem": "wall",
+   "lote": 11,
+   "altura_sugerida_m": 1.1,
+   "comodos": [
+    "garagem",
+    "oficina",
+    "fabrica",
+    "serraria",
+    "armazem",
+    "fazenda"
+   ],
+   "conteiner": true,
+   "slots": 3,
+   "saque": [
+    "ferramentas"
+   ],
+   "colisao": "nenhuma",
+   "arquivo": "mobilias/painel_ferramentas.glb",
+   "tamanho_m": [
+    1.8,
+    0.9,
+    0.2
+   ],
+   "triangulos": 6980,
+   "kb": 445.7
+  },
+  {
+   "id": "totem_ofertas",
+   "nome": "Totem de ofertas da concessionária",
+   "grupo": "mobilias",
+   "categoria": "concessionaria",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "concessionaria",
+    "posto",
+    "rua"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "pista": "\"0 km, sai hoje!\"; anúncio da última semana antes do fim",
+   "arquivo": "mobilias/totem_ofertas.glb",
+   "tamanho_m": [
+    0.72,
+    1.853,
+    0.5
+   ],
+   "triangulos": 196,
+   "kb": 84.4
+  },
+  {
+   "id": "torno_mecanico",
+   "nome": "Torno mecânico",
+   "grupo": "mobilias",
+   "categoria": "fabrica",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "fabrica",
+    "garagem",
+    "serraria"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "obstaculo": true,
+   "usa": "energia",
+   "estacao": "oficina avançada (peças de motor e armas melhores)",
+   "desmonta": {
+    "sucata": 10,
+    "peca_motor": 2
+   },
+   "arquivo": "mobilias/torno_mecanico.glb",
+   "tamanho_m": [
+    1.95,
+    1.82,
+    0.64
+   ],
+   "triangulos": 2004,
+   "kb": 98.9
+  },
+  {
+   "id": "esteira_rolante",
+   "nome": "Esteira de roletes",
+   "grupo": "mobilias",
+   "categoria": "fabrica",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "fabrica",
+    "armazem",
+    "correios",
+    "supermercado"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "modulo_m": 2.0,
+   "desmonta": {
+    "sucata": 6
+   },
+   "arquivo": "mobilias/esteira_rolante.glb",
+   "tamanho_m": [
+    2.0,
+    1.076,
+    0.64
+   ],
+   "triangulos": 1776,
+   "kb": 112.7
+  },
+  {
+   "id": "relogio_ponto",
+   "nome": "Relógio de ponto com cartões",
+   "grupo": "mobilias",
+   "categoria": "fabrica",
+   "montagem": "wall",
+   "lote": 11,
+   "altura_sugerida_m": 1.2,
+   "comodos": [
+    "fabrica",
+    "armazem",
+    "serraria",
+    "correios",
+    "quartel"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "pista": "os cartões mostram quem bateu o ponto no último dia (nomes de sobreviventes)",
+   "arquivo": "mobilias/relogio_ponto.glb",
+   "tamanho_m": [
+    0.96,
+    0.8,
+    0.22
+   ],
+   "triangulos": 1328,
+   "kb": 74.6
+  },
+  {
+   "id": "paleteira",
+   "nome": "Paleteira manual",
+   "grupo": "mobilias",
+   "categoria": "armazem",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "armazem",
+    "fabrica",
+    "supermercado",
+    "correios",
+    "serraria"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "interacao": "arrasta pallets e móveis pesados (monta barricadas mais rápido)",
+   "desmonta": {
+    "sucata": 5
+   },
+   "arquivo": "mobilias/paleteira.glb",
+   "tamanho_m": [
+    0.54,
+    1.35,
+    1.64
+   ],
+   "triangulos": 2142,
+   "kb": 103.9
+  },
+  {
+   "id": "pilha_tabuas",
+   "nome": "Pilha de tábuas da serraria",
+   "grupo": "mobilias",
+   "categoria": "serraria",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "serraria",
+    "armazem",
+    "fazenda",
+    "deposito"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "coleta": {
+    "recurso": "tabua",
+    "total": 12,
+    "ferramenta": "nenhuma",
+    "segundos_por_unidade": 3
+   },
+   "barricada": true,
+   "arquivo": "mobilias/pilha_tabuas.glb",
+   "tamanho_m": [
+    1.1,
+    0.447,
+    2.517
+   ],
+   "triangulos": 1564,
+   "kb": 219.2
+  },
+  {
+   "id": "pilha_toras",
+   "nome": "Pilha de toras",
+   "grupo": "mobilias",
+   "categoria": "serraria",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "serraria",
+    "fazenda",
+    "casa_de_campo",
+    "rua"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "obstaculo": true,
+   "coleta": {
+    "recurso": "lenha",
+    "total": 10,
+    "ferramenta": "machado",
+    "segundos_por_unidade": 8
+   },
+   "barulho": "médio (machado)",
+   "arquivo": "mobilias/pilha_toras.glb",
+   "tamanho_m": [
+    1.976,
+    0.88,
+    3.036
+   ],
+   "triangulos": 2064,
+   "kb": 303.8
+  },
+  {
+   "id": "cavalete_serra",
+   "nome": "Cavalete de serrar lenha",
+   "grupo": "mobilias",
+   "categoria": "serraria",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "serraria",
+    "fazenda",
+    "casa_de_campo",
+    "abrigo",
+    "quintal"
+   ],
+   "colisao": "caixa",
+   "estacao": "lenha (corta toras em lenha mais rápido)",
+   "constroi": {
+    "tabua": 3,
+    "caixa_pregos": 1
+   },
+   "arquivo": "mobilias/cavalete_serra.glb",
+   "tamanho_m": [
+    1.032,
+    1.175,
+    1.356
+   ],
+   "triangulos": 524,
+   "kb": 198.7
+  },
+  {
+   "id": "serra_fita",
+   "nome": "Serra de fita industrial",
+   "grupo": "mobilias",
+   "categoria": "serraria",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "serraria",
+    "fabrica"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "obstaculo": true,
+   "usa": "energia",
+   "barulho": "muito alto",
+   "estacao": "serraria (toras viram tábuas)",
+   "desmonta": {
+    "sucata": 12,
+    "peca_motor": 1
+   },
+   "arquivo": "mobilias/serra_fita.glb",
+   "tamanho_m": [
+    1.0,
+    2.11,
+    0.97
+   ],
+   "triangulos": 1532,
+   "kb": 139.0
+  },
+  {
+   "id": "fardo_feno",
+   "nome": "Fardo de feno",
+   "grupo": "mobilias",
+   "categoria": "fazenda",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "fazenda",
+    "armazem",
+    "celeiro",
+    "rua"
+   ],
+   "colisao": "caixa",
+   "barricada": true,
+   "sentar": true,
+   "coleta": {
+    "recurso": "palha",
+    "total": 4,
+    "ferramenta": "nenhuma",
+    "segundos_por_unidade": 3
+   },
+   "observacao": "queima rápido: bom para fogueira de sinal",
+   "arquivo": "mobilias/fardo_feno.glb",
+   "tamanho_m": [
+    0.899,
+    0.412,
+    0.609
+   ],
+   "triangulos": 2568,
+   "kb": 207.1
+  },
+  {
+   "id": "cocho",
+   "nome": "Cocho de água para animais",
+   "grupo": "mobilias",
+   "categoria": "fazenda",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "fazenda",
+    "celeiro",
+    "quintal"
+   ],
+   "colisao": "caixa",
+   "barricada": true,
+   "coleta": {
+    "recurso": "agua",
+    "total": 8,
+    "ferramenta": "balde ou garrafa (ferver antes!)",
+    "segundos_por_unidade": 4
+   },
+   "observacao": "água parada: suja, só fervida",
+   "arquivo": "mobilias/cocho.glb",
+   "tamanho_m": [
+    1.8,
+    0.55,
+    0.7
+   ],
+   "triangulos": 260,
+   "kb": 15.5
+  },
+  {
+   "id": "galinheiro",
+   "nome": "Galinheiro de tela",
+   "grupo": "mobilias",
+   "categoria": "fazenda",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "fazenda",
+    "quintal",
+    "abrigo"
+   ],
+   "colisao": "caixa",
+   "modulo_m": 2.0,
+   "constroi": {
+    "tabua": 6,
+    "arame_farpado": 0,
+    "chapa_metal": 2,
+    "caixa_pregos": 1
+   },
+   "estacao": "criação (ovos: 1 comida por dia se tiver ração)",
+   "partes_obs": "portinhola abre",
+   "arquivo": "mobilias/galinheiro.glb",
+   "tamanho_m": [
+    2.14,
+    1.543,
+    1.719
+   ],
+   "triangulos": 4128,
+   "kb": 384.4,
+   "partes": [
+    {
+     "no": "portinhola",
+     "origem": [
+      0.95,
+      0,
+      0.0
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -100
+    }
+   ]
+  },
+  {
+   "id": "carrinho_mao",
+   "nome": "Carrinho de mão",
+   "grupo": "mobilias",
+   "categoria": "fazenda",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "fazenda",
+    "quintal",
+    "serraria",
+    "armazem",
+    "abrigo",
+    "rua"
+   ],
+   "colisao": "caixa",
+   "conteiner": true,
+   "slots": 4,
+   "saque": [
+    "materiais",
+    "ferramentas"
+   ],
+   "interacao": "leva 4 espaços extras de recursos (anda devagar)",
+   "desmonta": {
+    "sucata": 3
+   },
+   "arquivo": "mobilias/carrinho_mao.glb",
+   "tamanho_m": [
+    1.678,
+    0.706,
+    0.647
+   ],
+   "triangulos": 1104,
+   "kb": 77.1
+  },
+  {
+   "id": "tarro_leite",
+   "nome": "Tarro de leite",
+   "grupo": "mobilias",
+   "categoria": "fazenda",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "fazenda",
+    "celeiro",
+    "armazem",
+    "padaria"
+   ],
+   "colisao": "caixa",
+   "conteiner": true,
+   "slots": 1,
+   "saque": [
+    "agua"
+   ],
+   "interacao": "guarda 20 L de água (reservatório portátil)",
+   "pega": [
+    0,
+    0.75,
+    0
+   ],
+   "arquivo": "mobilias/tarro_leite.glb",
+   "tamanho_m": [
+    0.352,
+    0.76,
+    0.352
+   ],
+   "triangulos": 1200,
+   "kb": 57.3
+  },
+  {
+   "id": "espantalho",
+   "nome": "Espantalho",
+   "grupo": "mobilias",
+   "categoria": "fazenda",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "fazenda",
+    "quintal",
+    "abrigo"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "observacao": "de longe parece um zumbi parado: sobreviventes novos levam susto",
+   "constroi": {
+    "roupas": 1,
+    "palha": 2,
+    "tabua": 1
+   },
+   "arquivo": "mobilias/espantalho.glb",
+   "tamanho_m": [
+    1.365,
+    1.85,
+    0.601
+   ],
+   "triangulos": 14884,
+   "kb": 1061.4
+  },
+  {
+   "id": "porta_pallet",
+   "nome": "Estante porta-pallet",
+   "grupo": "mobilias",
+   "categoria": "armazem",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "armazem",
+    "supermercado",
+    "fabrica",
+    "correios"
+   ],
+   "conteiner": true,
+   "slots": 8,
+   "saque": [
+    "materiais",
+    "comida",
+    "ferramentas"
+   ],
+   "colisao": "caixa",
+   "modulo_m": 2.0,
+   "interacao": "dá para escalar (2 níveis): vigia dentro do armazém",
+   "arquivo": "mobilias/porta_pallet.glb",
+   "tamanho_m": [
+    2.74,
+    3.6,
+    1.24
+   ],
+   "triangulos": 28240,
+   "kb": 1946.3
+  },
+  {
+   "id": "empilhadeira",
+   "nome": "Empilhadeira",
+   "grupo": "mobilias",
+   "categoria": "armazem",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "armazem",
+    "fabrica",
+    "serraria",
+    "supermercado"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "obstaculo": true,
+   "conteiner": true,
+   "slots": 2,
+   "saque": [
+    "combustivel"
+   ],
+   "coleta": {
+    "recurso": "combustivel",
+    "total": 2,
+    "ferramenta": "mangueira e galão",
+    "segundos_por_unidade": 10
+   },
+   "desmonta": {
+    "sucata": 15,
+    "bateria_carro": 1,
+    "peca_motor": 2
+   },
+   "observacao": "com bateria e gás, ergue escombros pesados",
+   "arquivo": "mobilias/empilhadeira.glb",
+   "tamanho_m": [
+    1.2,
+    2.5,
+    3.0
+   ],
+   "triangulos": 6448,
+   "kb": 310.3
+  },
+  {
+   "id": "carcaca_carro",
+   "nome": "Carcaça de carro depenada",
+   "grupo": "mobilias",
+   "categoria": "ferrovelho",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "ferro_velho",
+    "rua",
+    "garagem",
+    "fazenda"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "obstaculo": true,
+   "coleta": {
+    "recurso": "sucata",
+    "total": 10,
+    "ferramenta": "chave_inglesa",
+    "segundos_por_unidade": 6
+   },
+   "barulho": "médio ao desmontar",
+   "interacao": "empilhada vira muro (3 carcaças = 1 muro forte)",
+   "arquivo": "mobilias/carcaca_carro.glb",
+   "tamanho_m": [
+    4.46,
+    1.3,
+    1.76
+   ],
+   "triangulos": 1152,
+   "kb": 175.5
+  },
+  {
+   "id": "pilha_calotas",
+   "nome": "Pilha de calotas e peças",
+   "grupo": "mobilias",
+   "categoria": "ferrovelho",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "ferro_velho",
+    "garagem",
+    "posto"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "coleta": {
+    "recurso": "sucata",
+    "total": 4,
+    "ferramenta": "nenhuma",
+    "segundos_por_unidade": 3
+   },
+   "barulho": "alto (lata batendo)",
+   "interacao": "pendurada num fio vira alarme barulhento",
+   "arquivo": "mobilias/pilha_calotas.glb",
+   "tamanho_m": [
+    1.32,
+    0.42,
+    0.892
+   ],
+   "triangulos": 3788,
+   "kb": 249.9
+  },
+  {
+   "id": "bomba_agua_manual",
+   "nome": "Bomba d'água manual",
+   "grupo": "mobilias",
+   "categoria": "fazenda",
+   "montagem": "floor",
+   "lote": 11,
+   "comodos": [
+    "fazenda",
+    "quintal",
+    "caixa_dagua",
+    "patio_missoes",
+    "rua"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "coleta": {
+    "recurso": "agua",
+    "total": 99,
+    "ferramenta": "nenhuma",
+    "segundos_por_unidade": 6
+   },
+   "barulho": "baixo (rangido)",
+   "estacao": "água sem fim (poço): o lugar mais disputado da cidade",
+   "observacao": "água de poço: ferver antes de beber",
+   "arquivo": "mobilias/bomba_agua_manual.glb",
+   "tamanho_m": [
+    0.9,
+    1.254,
+    1.294
+   ],
+   "triangulos": 1124,
+   "kb": 99.6
+  },
+  {
+   "id": "canoa",
+   "nome": "Canoa no cavalete",
+   "grupo": "mobilias",
+   "categoria": "barcos",
+   "montagem": "floor",
+   "lote": 12,
+   "comodos": [
+    "casa_de_barcos",
+    "parque",
+    "quintal",
+    "garagem"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "interacao": "atravessa o lago em silêncio (rota de fuga do parque)",
+   "desmonta": {
+    "madeira": 3
+   },
+   "arquivo": "mobilias/canoa.glb",
+   "tamanho_m": [
+    4.8,
+    1.065,
+    0.87
+   ],
+   "triangulos": 1920,
+   "kb": 279.1
+  },
+  {
+   "id": "boia_salva_vidas",
+   "nome": "Boia salva-vidas na parede",
+   "grupo": "mobilias",
+   "categoria": "barcos",
+   "montagem": "wall",
+   "lote": 12,
+   "altura_sugerida_m": 1.5,
+   "comodos": [
+    "casa_de_barcos",
+    "piscina",
+    "parque"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "coleta": {
+    "recurso": "material",
+    "total": 1,
+    "ferramenta": "nenhuma",
+    "segundos_por_unidade": 2
+   },
+   "observacao": "corda: 10 m",
+   "arquivo": "mobilias/boia_salva_vidas.glb",
+   "tamanho_m": [
+    0.764,
+    0.764,
+    0.16
+   ],
+   "triangulos": 1214,
+   "kb": 89.9
+  },
+  {
+   "id": "balanco",
+   "nome": "Balanço de parquinho",
+   "grupo": "mobilias",
+   "categoria": "barcos",
+   "montagem": "floor",
+   "lote": 12,
+   "comodos": [
+    "parque",
+    "escolinha",
+    "quintal"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "modulo_m": 2.0,
+   "observacao": "range com o vento à noite (som de ambiente)",
+   "desmonta": {
+    "sucata": 3,
+    "corda": 1
+   },
+   "arquivo": "mobilias/balanco.glb",
+   "tamanho_m": [
+    2.7,
+    2.248,
+    1.457
+   ],
+   "triangulos": 1536,
+   "kb": 99.8
+  },
+  {
+   "id": "barraca_camping",
+   "nome": "Barraca de camping abandonada",
+   "grupo": "mobilias",
+   "categoria": "barcos",
+   "montagem": "floor",
+   "lote": 12,
+   "comodos": [
+    "parque",
+    "quintal",
+    "rua",
+    "abrigo"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "conteiner": true,
+   "slots": 3,
+   "saque": [
+    "roupas",
+    "comida",
+    "remedios"
+   ],
+   "deitar": true,
+   "observacao": "alguém acampou aqui fugindo da cidade",
+   "arquivo": "mobilias/barraca_camping.glb",
+   "tamanho_m": [
+    2.749,
+    1.182,
+    1.5
+   ],
+   "triangulos": 4440,
+   "kb": 373.5
+  },
+  {
+   "id": "guarda_sol",
+   "nome": "Guarda-sol fechado com base",
+   "grupo": "mobilias",
+   "categoria": "piscina",
+   "montagem": "floor",
+   "lote": 12,
+   "comodos": [
+    "piscina",
+    "parque",
+    "quintal",
+    "diner"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "desmonta": {
+    "tecido": 2,
+    "sucata": 1
+   },
+   "arquivo": "mobilias/guarda_sol.glb",
+   "tamanho_m": [
+    0.5,
+    2.34,
+    0.5
+   ],
+   "triangulos": 620,
+   "kb": 72.8
+  },
+  {
+   "id": "telescopio",
+   "nome": "Telescópio refrator no tripé",
+   "grupo": "mobilias",
+   "categoria": "observatorio",
+   "montagem": "floor",
+   "lote": 12,
+   "comodos": [
+    "observatorio",
+    "mansao",
+    "torre_vigia",
+    "abrigo"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "estacao": "vigia de longe (vê hordas e fumaça de outros sobreviventes a 1 km)",
+   "interacao": "olhar pela ocular (zoom 8x)",
+   "arquivo": "mobilias/telescopio.glb",
+   "tamanho_m": [
+    1.326,
+    1.673,
+    1.013
+   ],
+   "triangulos": 1384,
+   "kb": 125.4
+  },
+  {
+   "id": "mapa_estrelas",
+   "nome": "Carta celeste na parede",
+   "grupo": "mobilias",
+   "categoria": "observatorio",
+   "montagem": "wall",
+   "lote": 12,
+   "altura_sugerida_m": 1.3,
+   "comodos": [
+    "observatorio",
+    "escolinha",
+    "biblioteca"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "observacao": "as constelações servem de bússola à noite (sem GPS)",
+   "arquivo": "mobilias/mapa_estrelas.glb",
+   "tamanho_m": [
+    1.26,
+    0.91,
+    0.027
+   ],
+   "triangulos": 56,
+   "kb": 152.9
+  },
+  {
+   "id": "espreguicadeira",
+   "nome": "Espreguiçadeira",
+   "grupo": "mobilias",
+   "categoria": "piscina",
+   "montagem": "floor",
+   "lote": 12,
+   "comodos": [
+    "piscina",
+    "quintal",
+    "hotel",
+    "motel"
+   ],
+   "deitar": true,
+   "colisao": "caixa",
+   "barricada": true,
+   "desmonta": {
+    "sucata": 2
+   },
+   "arquivo": "mobilias/espreguicadeira.glb",
+   "tamanho_m": [
+    0.672,
+    0.879,
+    1.808
+   ],
+   "triangulos": 1048,
+   "kb": 52.6
+  },
+  {
+   "id": "cadeira_salva_vidas",
+   "nome": "Cadeira alta de salva-vidas",
+   "grupo": "mobilias",
+   "categoria": "piscina",
+   "montagem": "floor",
+   "lote": 12,
+   "comodos": [
+    "piscina",
+    "parque"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "sentar": true,
+   "estacao": "vigia (vê 30 m em volta da piscina)",
+   "desmonta": {
+    "madeira": 4
+   },
+   "arquivo": "mobilias/cadeira_salva_vidas.glb",
+   "tamanho_m": [
+    1.318,
+    2.918,
+    1.317
+   ],
+   "triangulos": 800,
+   "kb": 48.9
+  },
+  {
+   "id": "escada_piscina",
+   "nome": "Escada de piscina",
+   "grupo": "mobilias",
+   "categoria": "piscina",
+   "montagem": "floor",
+   "lote": 12,
+   "comodos": [
+    "piscina"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "pivo": "borda da piscina (y=0 no chão)",
+   "desmonta": {
+    "sucata": 2
+   },
+   "arquivo": "mobilias/escada_piscina.glb",
+   "tamanho_m": [
+    0.59,
+    1.989,
+    0.555
+   ],
+   "triangulos": 640,
+   "kb": 31.9
+  },
+  {
+   "id": "boia_piscina",
+   "nome": "Boia de piscina murcha",
+   "grupo": "mobilias",
+   "categoria": "piscina",
+   "montagem": "floor",
+   "lote": 12,
+   "comodos": [
+    "piscina",
+    "quintal",
+    "casas"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "observacao": "lembrança do último verão",
+   "arquivo": "mobilias/boia_piscina.glb",
+   "tamanho_m": [
+    0.94,
+    0.234,
+    0.94
+   ],
+   "triangulos": 1008,
+   "kb": 49.0
+  },
+  {
+   "id": "placa_regras_piscina",
+   "nome": "Placa de regras da piscina",
+   "grupo": "mobilias",
+   "categoria": "piscina",
+   "montagem": "wall",
+   "lote": 12,
+   "altura_sugerida_m": 1.6,
+   "comodos": [
+    "piscina"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "pista": "alguém riscou e escreveu: \"água limpa no reservatório do subsolo\"",
+   "arquivo": "mobilias/placa_regras_piscina.glb",
+   "tamanho_m": [
+    0.54,
+    0.71,
+    0.026
+   ],
+   "triangulos": 184,
+   "kb": 59.2
+  },
+  {
+   "id": "bandeira_buraco",
+   "nome": "Bandeirinha de buraco do minigolfe",
+   "grupo": "mobilias",
+   "categoria": "minigolfe",
+   "montagem": "floor",
+   "lote": 12,
+   "comodos": [
+    "minigolfe",
+    "quintal",
+    "parque"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "observacao": "bom marcador de caminho (vermelho se vê de longe)",
+   "arquivo": "mobilias/bandeira_buraco.glb",
+   "tamanho_m": [
+    0.6,
+    0.75,
+    0.6
+   ],
+   "triangulos": 536,
+   "kb": 27.7
+  },
+  {
+   "id": "estante_partitura",
+   "nome": "Estante de partitura",
+   "grupo": "mobilias",
+   "categoria": "concha",
+   "montagem": "floor",
+   "lote": 12,
+   "comodos": [
+    "concha_acustica",
+    "igreja",
+    "escolinha"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "arquivo": "mobilias/estante_partitura.glb",
+   "tamanho_m": [
+    0.536,
+    1.472,
+    0.497
+   ],
+   "triangulos": 208,
+   "kb": 43.4
+  },
+  {
+   "id": "caixa_som",
+   "nome": "Caixa de som de palco",
+   "grupo": "mobilias",
+   "categoria": "concha",
+   "montagem": "floor",
+   "lote": 12,
+   "comodos": [
+    "concha_acustica",
+    "igreja",
+    "cinema",
+    "escolinha",
+    "drive_in"
+   ],
+   "colisao": "caixa",
+   "barricada": true,
+   "usa": "energia",
+   "barulho": "muito alto",
+   "interacao": "isca: ligada no gerador, atrai a horda para longe da base",
+   "desmonta": {
+    "sucata": 2,
+    "pecas": 1
+   },
+   "arquivo": "mobilias/caixa_som.glb",
+   "tamanho_m": [
+    1.336,
+    0.955,
+    1.022
+   ],
+   "triangulos": 1032,
+   "kb": 56.9
+  },
+  {
+   "id": "microfone_pedestal",
+   "nome": "Microfone no pedestal",
+   "grupo": "mobilias",
+   "categoria": "concha",
+   "montagem": "floor",
+   "lote": 12,
+   "comodos": [
+    "concha_acustica",
+    "igreja",
+    "escolinha",
+    "delegacia"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "observacao": "com caixa de som e gerador: chamar sobreviventes (atrai zumbis também)",
+   "arquivo": "mobilias/microfone_pedestal.glb",
+   "tamanho_m": [
+    0.752,
+    1.512,
+    0.528
+   ],
+   "triangulos": 556,
+   "kb": 35.2
+  },
+  {
+   "id": "cadeira_dobravel",
+   "nome": "Cadeira dobrável de plateia",
+   "grupo": "mobilias",
+   "categoria": "concha",
+   "montagem": "floor",
+   "lote": 12,
+   "comodos": [
+    "concha_acustica",
+    "igreja",
+    "escolinha",
+    "quartel",
+    "abrigo"
+   ],
+   "sentar": true,
+   "colisao": "caixa",
+   "desmonta": {
+    "sucata": 1
+   },
+   "arquivo": "mobilias/cadeira_dobravel.glb",
+   "tamanho_m": [
+    0.444,
+    0.859,
+    0.45
+   ],
+   "triangulos": 336,
+   "kb": 17.6
+  },
+  {
+   "id": "poste_som_drivein",
+   "nome": "Poste de alto-falante do drive-in",
+   "grupo": "mobilias",
+   "categoria": "drivein",
+   "montagem": "floor",
+   "lote": 12,
+   "comodos": [
+    "drive_in",
+    "cinema_drive_in",
+    "estacionamento"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "desmonta": {
+    "sucata": 1,
+    "pecas": 1
+   },
+   "observacao": "dois alto-falantes de janela: um caiu no chão",
+   "arquivo": "mobilias/poste_som_drivein.glb",
+   "tamanho_m": [
+    0.729,
+    1.266,
+    0.525
+   ],
+   "triangulos": 876,
+   "kb": 94.0
   }
  ]
 }

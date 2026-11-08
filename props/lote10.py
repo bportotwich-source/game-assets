@@ -391,15 +391,18 @@ def quadro_horarios(M):
       colisao='nenhuma', parado_em='3:17')
 def relogio_estacao(M):
     p = M.base; R = 0.25
+    img = Image.new('RGB', (512, 512), (246, 244, 236)); d = ImageDraw.Draw(img)
+    for k in range(60):
+        a = k / 60 * 2 * math.pi; r0 = 200 if k % 5 else 170
+        d.line([(256 + r0 * math.sin(a), 256 - r0 * math.cos(a)), (256 + 236 * math.sin(a), 256 - 236 * math.cos(a))], fill=(20, 20, 20), width=14 if k % 5 == 0 else 4)
+    mat_imagem('mostrador_estacao', img, 0.4)
     p.cham('verde_estacao', -0.04, 0.04, 0.3, 0.38, 0.0, 0.5, 0.01); p.seg('verde_estacao', (0, 0.1, 0.02), (0, 0.32, 0.35), 0.03)
-    for zs in (-1, 1):
-        zc = 0.5 + zs * 0.0
     anel(p, 'verde_estacao', R - 0.02, R, -0.07, 0.07, 48, 'z', (0, 0.05, 0.75), chanfro=0.008)
     for zs in (-1, 1):
-        torno(p, 'mostrador', [(R - 0.02, 0.0), (R - 0.02, 0.003)], 48, 'z', (0, 0.05, 0.75 + zs * 0.06))
+        torno(p, 'mostrador_estacao', [(R - 0.02, 0.0), (R - 0.02, 0.003)], 48, 'z', (0, 0.05, 0.75 + zs * 0.06))
         for ang, L, w in ((-(3 + 17 / 60) / 12 * 2 * math.pi, 0.11, 0.012), (-(17 / 60) * 2 * math.pi, 0.17, 0.008)):
             a = -ang * zs; p.seg('esmalte_escuro', (0, 0.05, 0.75 + zs * 0.064), (L * math.sin(a), 0.05 + L * math.cos(a), 0.75 + zs * 0.064), w, 0.003)
-    p.uv['mostrador'] = lambda v, n: np.stack([(v[:, 0] * np.sign(v[:, 2] - 0.75 + 1e-9) + R - 0.02) / (2 * (R - 0.02)), (v[:, 1] - 0.05 + R - 0.02) / (2 * (R - 0.02))], 1)
+    p.uv['mostrador_estacao'] = lambda v, n: np.stack([(v[:, 0] * np.sign(v[:, 2] - 0.75 + 1e-9) + R - 0.02) / (2 * (R - 0.02)), (v[:, 1] - 0.05 + R - 0.02) / (2 * (R - 0.02))], 1)
     p.seg('verde_estacao', (0, 0.32, 0.5), (0, 0.32, 0.75), 0.04); p.cyl('verde_estacao', 0.02, 0.28, 0.33, x=0, z=0.75, sec=10)
 
 

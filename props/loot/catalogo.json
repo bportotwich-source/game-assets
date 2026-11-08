@@ -1019,7 +1019,7 @@
     0.162
    ],
    "triangulos": 680,
-   "kb": 55.4
+   "kb": 83.8
   },
   {
    "id": "lata_milho",
@@ -1796,6 +1796,229 @@
    ],
    "triangulos": 876,
    "kb": 57.5
+  },
+  {
+   "id": "pao_velho",
+   "nome": "Saco de pão francês",
+   "grupo": "loot",
+   "categoria": "comida",
+   "montagem": "floor",
+   "lote": 10,
+   "recurso": "comida",
+   "valor": 1,
+   "peso_kg": 0.4,
+   "empilha": 4,
+   "onde": [
+    "padaria",
+    "supermercado",
+    "diner",
+    "casas"
+   ],
+   "efeito": "fome -15; endurece em 3 dias (ainda comível na sopa)",
+   "arquivo": "loot/pao_velho.glb",
+   "tamanho_m": [
+    0.239,
+    0.12,
+    0.49
+   ],
+   "triangulos": 1560,
+   "kb": 75.7
+  },
+  {
+   "id": "macaco_jacare",
+   "nome": "Macaco jacaré",
+   "grupo": "loot",
+   "categoria": "ferramentas",
+   "montagem": "floor",
+   "lote": 11,
+   "recurso": "ferramenta",
+   "valor": 4,
+   "peso_kg": 12,
+   "empilha": 1,
+   "onde": [
+    "garagem",
+    "posto",
+    "concessionaria",
+    "ferro_velho"
+   ],
+   "efeito": "ergue carro e escombros (passagem bloqueada) e serve de barricada pesada",
+   "pega": [
+    -0.45,
+    0.25,
+    0
+   ],
+   "arquivo": "loot/macaco_jacare.glb",
+   "tamanho_m": [
+    1.157,
+    0.354,
+    0.32
+   ],
+   "triangulos": 3684,
+   "kb": 176.2
+  },
+  {
+   "id": "saco_racao",
+   "nome": "Saco de ração",
+   "grupo": "loot",
+   "categoria": "agricultura",
+   "montagem": "floor",
+   "lote": 11,
+   "recurso": "racao",
+   "valor": 2,
+   "peso_kg": 10,
+   "empilha": 1,
+   "onde": [
+    "fazenda",
+    "armazem",
+    "celeiro",
+    "supermercado"
+   ],
+   "efeito": "alimenta galinhas (5 dias); em último caso, comida ruim (fome -10, enjoo)",
+   "pega": [
+    0,
+    0.3,
+    0
+   ],
+   "arquivo": "loot/saco_racao.glb",
+   "tamanho_m": [
+    0.6,
+    0.202,
+    0.4
+   ],
+   "triangulos": 2124,
+   "kb": 125.2
+  },
+  {
+   "id": "remo",
+   "nome": "Remo de madeira",
+   "grupo": "loot",
+   "categoria": "armas",
+   "montagem": "floor",
+   "lote": 12,
+   "recurso": "arma",
+   "valor": 2,
+   "peso_kg": 1.4,
+   "empilha": 1,
+   "arma": true,
+   "dano": 14,
+   "alcance_m": 1.6,
+   "onde": [
+    "casa_de_barcos",
+    "parque",
+    "garagem"
+   ],
+   "efeito": "arma corpo a corpo longa (empurra zumbis); rema a canoa",
+   "pega": [
+    -0.4,
+    0.02,
+    0
+   ],
+   "arquivo": "loot/remo.glb",
+   "tamanho_m": [
+    1.6,
+    0.04,
+    0.18
+   ],
+   "triangulos": 96,
+   "kb": 62.2
+  },
+  {
+   "id": "colete_salva_vidas",
+   "nome": "Colete salva-vidas",
+   "grupo": "loot",
+   "categoria": "roupas",
+   "montagem": "floor",
+   "lote": 12,
+   "recurso": "equipamento",
+   "valor": 1,
+   "peso_kg": 0.8,
+   "empilha": 1,
+   "onde": [
+    "casa_de_barcos",
+    "piscina",
+    "parque"
+   ],
+   "efeito": "flutua (atravessa o lago); +5 de proteção leve",
+   "pega": [
+    0,
+    0.08,
+    0
+   ],
+   "arquivo": "loot/colete_salva_vidas.glb",
+   "tamanho_m": [
+    0.48,
+    0.09,
+    0.67
+   ],
+   "triangulos": 6252,
+   "kb": 321.2
+  },
+  {
+   "id": "skate",
+   "nome": "Skate",
+   "grupo": "loot",
+   "categoria": "utensilios",
+   "montagem": "floor",
+   "lote": 12,
+   "recurso": "equipamento",
+   "valor": 2,
+   "peso_kg": 2.2,
+   "empilha": 1,
+   "arma": true,
+   "dano": 10,
+   "onde": [
+    "pista_skate",
+    "casas",
+    "escolinha",
+    "rua"
+   ],
+   "efeito": "anda 40% mais rápido no asfalto (rodinhas fazem barulho); arma leve",
+   "pega": [
+    0,
+    0.1,
+    0
+   ],
+   "arquivo": "loot/skate.glb",
+   "tamanho_m": [
+    0.8,
+    0.118,
+    0.24
+   ],
+   "triangulos": 968,
+   "kb": 108.0
+  },
+  {
+   "id": "taco_golfe",
+   "nome": "Taco de minigolfe",
+   "grupo": "loot",
+   "categoria": "armas",
+   "montagem": "floor",
+   "lote": 12,
+   "recurso": "arma",
+   "valor": 2,
+   "peso_kg": 0.5,
+   "empilha": 1,
+   "arma": true,
+   "dano": 12,
+   "onde": [
+    "minigolfe",
+    "mansao",
+    "casas"
+   ],
+   "efeito": "arma corpo a corpo leve (quebra fácil)",
+   "pega": [
+    -0.35,
+    0.012,
+    0
+   ],
+   "arquivo": "loot/taco_golfe.glb",
+   "tamanho_m": [
+    0.875,
+    0.032,
+    0.11
+   ],
+   "triangulos": 1136,
+   "kb": 56.0
   }
  ]
 }

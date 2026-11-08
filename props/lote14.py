@@ -300,12 +300,19 @@ def bau_madeira(M):
     _mover(q, (0, H, 0))
 
 
+def _caixa_oca(p, mat, X, Z, H, t=0.018, c=0.004, fundo=None):
+    """Corpo de caixa aberto em cima: 4 paredes com espessura t e o fundo (outro material, se dado), para a tampa abrir e mostrar o interior."""
+    for zs in (-1, 1): p.cham(mat, -X, X, 0.0, H, zs * Z - t * (zs > 0), zs * Z + t * (zs < 0), c)
+    for xs in (-1, 1): p.cham(mat, xs * X - t * (xs > 0), xs * X + t * (xs < 0), 0.0, H, -Z + t, Z - t, c)
+    p.box(fundo or mat, -X + t, X - t, 0.0, t, -Z + t, Z - t)
+
+
 @item('caixa_militar', 'Caixote militar verde', 'mobilias', 'armazenamento', comodos=['quartel', 'delegacia', 'abrigo', 'armazem', 'estacao'],
       conteiner=True, slots=10, grade=[6, 4], saque=['municao', 'remedios', 'ferramentas', 'comida'], aceita=[], empilhavel=True, altura_m=0.38,
       carregar=2, barricada=True, fase=2, estacao='caixa de suprimentos (2 moradores carregam; empilha em 3)')
 def caixa_militar(M):
     p = M.base; X, Z, H = 0.45, 0.24, 0.3
-    p.cham('verde_caixa', -X, X, 0.0, H, -Z, Z, 0.008)
+    _caixa_oca(p, 'verde_caixa', X, Z, H, 0.02, 0.006, 'madeira_escura')
     for xs in (-1, 1): p.cham('verde_caixa', xs * X - 0.03 * (xs > 0), xs * X + 0.03 * (xs < 0), 0.0, H, -Z - 0.012, Z + 0.012, 0.006)   # cabeceiras
     for zs in (-1, 1):
         for y in (0.06, H - 0.06): p.cham('verde_caixa', -X + 0.03, X - 0.03, y - 0.018, y + 0.018, zs * Z - 0.012 * (zs < 0), zs * Z + 0.012 * (zs > 0), 0.004)  # sarrafos
@@ -353,8 +360,14 @@ def caixa_organizadora(M):
       fase=1, estacao='caixa de ferramentas (leva junto as ferramentas para consertar barricadas fora da base)')
 def caixa_ferramentas(M):
     p = M.base; X, Z, H = 0.25, 0.11, 0.17
-    p.cham('tinta_vermelha', -X, X, 0.0, H, -Z, Z, 0.005)
-    p.box('aco', -X + 0.004, X - 0.004, 0.004, H + 0.0005, -Z + 0.004, Z - 0.004)
+    _caixa_oca(p, 'tinta_vermelha', X, Z, H, 0.004, 0.0015, 'aco')
+    b = P(); _caixa_oca(b, 'tinta_vermelha', X - 0.006, Z - 0.006, 0.04, 0.003, 0.001)             # bandeja de cima, apoiada nas bordas
+    b.cham('tinta_vermelha', -0.003, 0.003, 0.0, 0.07, -Z + 0.01, Z - 0.01, 0.001); b.cham('tinta_vermelha', -0.04, 0.04, 0.055, 0.07, -0.006, 0.006, 0.002)  # divisoria e pega
+    for k in range(5): torno(b, 'aco_polido', [(0.0, 0.0), (0.007 + 0.001 * k, 0.0), (0.007 + 0.001 * k, 0.02), (0.005, 0.02)], 12, 'y', (-X + 0.03 + k * 0.022, 0.003, -0.05))   # soquetes
+    b.cham('plastico_preto', 0.03, 0.13, 0.003, 0.02, 0.02, 0.045, 0.004)       # cabo de chave de fenda
+    b.add('aco', trimesh.creation.cylinder(radius=0.003, segment=[(0.13, 0.011, 0.033), (0.21, 0.011, 0.033)], sections=8))
+    p.merge(b, trimesh.transformations.translation_matrix([0, H - 0.045, 0]))
+    for x, z in ((-0.15, 0.03), (0.1, -0.04)): p.add('aco', trimesh.creation.cylinder(radius=0.006, segment=[(x, 0.01, z), (x + 0.16, 0.01, z + 0.02)], sections=8))   # chaves soltas no fundo
     for zs in (-1, 1): p.cham('tinta_vermelha', -X - 0.002, X + 0.002, H - 0.012, H, zs * Z - 0.002 * (zs < 0), zs * Z + 0.002 * (zs > 0), 0.002)
     for xs in (-1, 1): p.cham('aco_polido', xs * 0.15 - 0.02, xs * 0.15 + 0.02, H - 0.05, H - 0.01, Z, Z + 0.008, 0.002)   # fechos
     for x in np.linspace(-X + 0.05, X - 0.05, 5): p.cham('tinta_vermelha', x - 0.012, x + 0.012, 0.02, H - 0.03, -Z - 0.002, -Z, 0.001)

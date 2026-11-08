@@ -219,9 +219,9 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Estante de despensa com caixotes (`despensa`) | 14 | Armazenamento do abrigo | 1,20 × 1,86 × 0,41 | 16 espaços: comida, agua | - | - | 20656 |
 | Estante aramada com rodinhas (`estante_aramada`) | 14 | Armazenamento do abrigo | 0,92 × 1,61 × 0,50 | 10 espaços: comida, limpeza, utensilios | - | barricada | 14240 |
 | Baú de madeira com cadeado (`bau_madeira`) | 14 | Armazenamento do abrigo | 1,05 × 0,51 × 0,57 | 15 espaços: roupas, ferramentas, moedas, lembrancas | tampa | barricada, sentar | 2416 |
-| Caixote militar verde (`caixa_militar`) | 14 | Armazenamento do abrigo | 1,01 × 0,40 × 0,51 | 10 espaços: municao, remedios, ferramentas, comida | tampa | barricada | 1616 |
+| Caixote militar verde (`caixa_militar`) | 14 | Armazenamento do abrigo | 1,01 × 0,40 × 0,51 | 10 espaços: municao, remedios, ferramentas, comida | tampa | barricada | 1760 |
 | Caixa organizadora empilhável (`caixa_organizadora`) | 14 | Armazenamento do abrigo | 0,63 × 0,32 × 0,45 | 6 espaços: utensilios, roupas, higiene, pilhas | tampa | - | 292 |
-| Caixa de ferramentas de metal (`caixa_ferramentas`) | 14 | Armazenamento do abrigo | 0,50 × 0,27 × 0,23 | 6 espaços: ferramentas, materiais | tampa | - | 776 |
+| Caixa de ferramentas de metal (`caixa_ferramentas`) | 14 | Armazenamento do abrigo | 0,51 × 0,27 × 0,23 | 6 espaços: ferramentas, materiais | tampa | - | 1684 |
 | Pallet de tábuas cintadas (`pallet_tabuas`) | 14 | Armazenamento do abrigo | 1,50 × 0,30 × 0,85 | - | camada_1, camada_2, camada_3, camada_4, camada_5, camada_6 | - | 7432 |
 | Pallet de tijolos (`pallet_tijolos`) | 14 | Armazenamento do abrigo | 1,20 × 0,43 × 0,80 | - | camada_1, camada_2, camada_3, camada_4, camada_5 | - | 6316 |
 | Pallet de sacos de cimento (`pallet_cimento`) | 14 | Armazenamento do abrigo | 1,20 × 0,68 × 0,80 | - | camada_1, camada_2, camada_3, camada_4, camada_5 | - | 17228 |

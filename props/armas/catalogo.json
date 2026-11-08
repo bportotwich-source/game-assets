@@ -1923,7 +1923,8 @@
       "empunhadura_cilindrica",
       "batente_mao",
       "empunhadura_reta",
-      "empunhadura_reta_tan"
+      "empunhadura_reta_tan",
+      "empunhadura_dobravel"
      ],
      "explodir_m": [
       0.0,
@@ -2367,7 +2368,8 @@
       "empunhadura_cilindrica",
       "batente_mao",
       "empunhadura_reta",
-      "empunhadura_reta_tan"
+      "empunhadura_reta_tan",
+      "empunhadura_dobravel"
      ],
      "padrao": "empunhadura_curta_tan",
      "explodir_m": [
@@ -3483,8 +3485,8 @@
     0.212,
     0.33
    ],
-   "triangulos": 33900,
-   "kb": 1788.5,
+   "triangulos": 34146,
+   "kb": 1800.1,
    "partes": [
     {
      "no": "gatilho",
@@ -3684,6 +3686,7 @@
       -0.148
      ],
      "aceita": [
+      "empunhadura_dobravel",
       "empunhadura_reta",
       "empunhadura_reta_tan",
       "empunhadura_curta",
@@ -3692,6 +3695,7 @@
       "empunhadura_angulada",
       "batente_mao"
      ],
+     "padrao": "empunhadura_dobravel",
      "descricao": "trilho curto de baixo",
      "explodir_m": [
       0.0,
@@ -3885,8 +3889,8 @@
     0.212,
     0.33
    ],
-   "triangulos": 33900,
-   "kb": 1789.2,
+   "triangulos": 34146,
+   "kb": 1800.7,
    "partes": [
     {
      "no": "gatilho",
@@ -4086,6 +4090,7 @@
       -0.148
      ],
      "aceita": [
+      "empunhadura_dobravel",
       "empunhadura_reta",
       "empunhadura_reta_tan",
       "empunhadura_curta",
@@ -4094,6 +4099,7 @@
       "empunhadura_angulada",
       "batente_mao"
      ],
+     "padrao": "empunhadura_dobravel",
      "descricao": "trilho curto de baixo",
      "explodir_m": [
       0.0,
@@ -7921,6 +7927,60 @@
    ],
    "triangulos": 1768,
    "kb": 87.2
+  },
+  {
+   "id": "empunhadura_dobravel",
+   "nome": "Empunhadura frontal dobrável",
+   "grupo": "acessorios",
+   "categoria": "empunhadura",
+   "encaixe": "mlok_baixo",
+   "peso_kg": 0.08,
+   "raridade": "incomum",
+   "valor_troca": 14,
+   "modificadores": {
+    "recuo": 0.88,
+    "precisao_rajada": 1.2
+   },
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "Empunhadura que dobra para a frente, rente ao trilho, para guardar a arma (nó \"haste\", animações dobrar/abrir). Vem na submetralhadora.",
+   "arquivo": "acessorios/empunhadura_dobravel.glb",
+   "tamanho_m": [
+    0.026,
+    0.083,
+    0.042
+   ],
+   "triangulos": 8600,
+   "kb": 433.4,
+   "partes": [
+    {
+     "no": "haste",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 90,
+     "descricao": "dobra para a frente (animação dobrar)",
+     "pai": "empunhadura_dobravel",
+     "explodir_m": [
+      0.0,
+      -0.04,
+      0.0
+     ]
+    }
+   ],
+   "animacoes": {
+    "dobrar": {
+     "duracao_s": 0.3,
+     "laco": false,
+     "descricao": "dobra a empunhadura para a frente"
+    },
+    "abrir": {
+     "duracao_s": 0.3,
+     "laco": false,
+     "descricao": "abre a empunhadura"
+    }
+   }
   }
  ],
  "municao": [

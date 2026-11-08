@@ -125,6 +125,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Carregador da submetralhadora (20) (`carregador_smg_20`) | Carregadores | `carregador_smg` | recarga_s ×0,95 | 0,1 kg | incomum | 1624 |
 | Carregador da submetralhadora (30) (`carregador_smg_30`) | Carregadores | `carregador_smg` | - | 0,13 kg | incomum | 1672 |
 | Carregador da submetralhadora (40) (`carregador_smg_40`) | Carregadores | `carregador_smg` | recarga_s ×1,08 | 0,17 kg | raro | 1768 |
+| Empunhadura frontal dobrável (`empunhadura_dobravel`) | Empunhaduras | `mlok_baixo` | recuo ×0,88, precisao_rajada ×1,2 | 0,08 kg | incomum | 8600 |
 
 ## Munição e efeitos
 
@@ -190,7 +191,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Fuzil Vigília 5,56**, `encaixe_boca`: quebra_chamas_556, compensador_556, supressor_556, supressor_556_tan
 - **Fuzil Vigília 5,56**, `encaixe_carregador`: carregador_556_30, carregador_556_60, tambor_556_60, carregador_556_30_tan, tambor_556_60_tatico
 - **Fuzil Vigília 5,56**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan, coronha_leve_ar, coronha_leve_ar_tan
-- **Fuzil Vigília 5,56**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, batente_mao, empunhadura_reta, empunhadura_reta_tan
+- **Fuzil Vigília 5,56**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, batente_mao, empunhadura_reta, empunhadura_reta_tan, empunhadura_dobravel
 - **Fuzil Vigília 5,56**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
 - **Fuzil Vigília 5,56**, `encaixe_laser`: laser_fuzil, modulo_laser
 - **Fuzil Vigília 5,56**, `encaixe_bipe`: bipe
@@ -201,7 +202,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_boca`: quebra_chamas_556, compensador_556, supressor_556, supressor_556_tan
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_carregador`: carregador_556_30, carregador_556_60, tambor_556_60, carregador_556_30_tan, tambor_556_60_tatico
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan, coronha_leve_ar, coronha_leve_ar_tan
-- **Fuzil Vigília 5,56 bicolor**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, batente_mao, empunhadura_reta, empunhadura_reta_tan
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, batente_mao, empunhadura_reta, empunhadura_reta_tan, empunhadura_dobravel
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_laser`: laser_fuzil, modulo_laser
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_bipe`: bipe
@@ -235,7 +236,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Submetralhadora Faísca 9 mm**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
 - **Submetralhadora Faísca 9 mm**, `encaixe_boca`: protetor_rosca_9mm, supressor_9mm, compensador_9mm, supressor_garrafa
 - **Submetralhadora Faísca 9 mm**, `encaixe_carregador`: carregador_smg_20, carregador_smg_30, carregador_smg_40
-- **Submetralhadora Faísca 9 mm**, `encaixe_empunhadura`: empunhadura_reta, empunhadura_reta_tan, empunhadura_curta, empunhadura_curta_tan, empunhadura_vertical, empunhadura_angulada, batente_mao
+- **Submetralhadora Faísca 9 mm**, `encaixe_empunhadura`: empunhadura_dobravel, empunhadura_reta, empunhadura_reta_tan, empunhadura_curta, empunhadura_curta_tan, empunhadura_vertical, empunhadura_angulada, batente_mao
 - **Submetralhadora Faísca 9 mm**, `encaixe_lanterna`: lanterna_compacta, lanterna_fuzil
 - **Submetralhadora Faísca 9 mm**, `encaixe_laser`: modulo_laser, laser_fuzil
 - **Submetralhadora Faísca 9 mm**, `encaixe_bandoleira`: bandoleira
@@ -244,7 +245,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Submetralhadora Faísca 9 mm caramelo**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
 - **Submetralhadora Faísca 9 mm caramelo**, `encaixe_boca`: protetor_rosca_9mm, supressor_9mm, compensador_9mm, supressor_garrafa
 - **Submetralhadora Faísca 9 mm caramelo**, `encaixe_carregador`: carregador_smg_20, carregador_smg_30, carregador_smg_40
-- **Submetralhadora Faísca 9 mm caramelo**, `encaixe_empunhadura`: empunhadura_reta, empunhadura_reta_tan, empunhadura_curta, empunhadura_curta_tan, empunhadura_vertical, empunhadura_angulada, batente_mao
+- **Submetralhadora Faísca 9 mm caramelo**, `encaixe_empunhadura`: empunhadura_dobravel, empunhadura_reta, empunhadura_reta_tan, empunhadura_curta, empunhadura_curta_tan, empunhadura_vertical, empunhadura_angulada, batente_mao
 - **Submetralhadora Faísca 9 mm caramelo**, `encaixe_lanterna`: lanterna_compacta, lanterna_fuzil
 - **Submetralhadora Faísca 9 mm caramelo**, `encaixe_laser`: modulo_laser, laser_fuzil
 - **Submetralhadora Faísca 9 mm caramelo**, `encaixe_bandoleira`: bandoleira

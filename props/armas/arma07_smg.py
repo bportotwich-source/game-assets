@@ -10,6 +10,7 @@ SMAG = (0.031, -0.026)           # topo do carregador (centro)
 SANG = math.radians(8.0)         # inclinacao do punho e do carregador (embaixo vai para tras)
 SDIR = np.array([-math.sin(SANG), -math.cos(SANG)])   # direcao de saida do carregador
 SCOR = 0.13                      # curso da coronha (fechada -> aberta)
+SVY = -0.012                     # altura das varetas da coronha
 
 
 def _paralelo(c0, L, meia, d=SDIR):
@@ -49,14 +50,19 @@ def _corpo_smg(p):
     juntas = [solido(arred([(SX0 + 0.01, -0.0045), (SX1 - 0.014, -0.0045), (SX1 - 0.014, -0.0033), (SX0 + 0.01, -0.0033)], 0.0005),
                      min(zs * (SW - 0.0007), zs * (SW + 0.01)), max(zs * (SW - 0.0007), zs * (SW + 0.01))) for zs in (-1, 1)]       # emenda das duas metades
     corpo = menos(corpo, porta, solido(furo_c, -0.0112, 0.0112), *juntas,
-                  *[cil_x(0.0046, SX0 - 0.01, SX0 + 0.06, 0.0, zs * 0.0145, 20) for zs in (-1, 1)])                            # furos das varetas da coronha
+                  *[cil_x(0.0046, SX0 - 0.01, SX0 + 0.18, SVY, zs * 0.0145, 20) for zs in (-1, 1)],                         # furos das varetas da coronha
+                  *[solido(arred([(x0, 0.0135), (x0 + 0.02, 0.0135), (x0 + 0.02, 0.0185), (x0, 0.0185)], 0.0024),
+                           min(zs * (SW - 0.0015), zs * (SW + 0.01)), max(zs * (SW - 0.0015), zs * (SW + 0.01)))
+                    for x0 in (0.104, 0.132, 0.16) for zs in (-1, 1)])                                                          # fendas da frente
     p.add('polimero', corpo)
-    for zs in (-1, 1):                                                                                                          # paineis em relevo dos lados
-        s = (min(zs * SW, zs * (SW + 0.0007)), max(zs * SW, zs * (SW + 0.0007)))
-        p.add('polimero', solido(arred([(0.096, -0.016), (0.186, -0.016), (0.186, 0.015), (0.096, 0.015)], 0.005), *s, 0.0003))
-        p.add('polimero', solido(arred([(SX0 + 0.012, 0.004), (0.02, 0.004), (0.02, 0.018), (SX0 + 0.012, 0.018)], 0.004), *s, 0.0003))
-        for (x, y) in ((0.008, -0.016), (0.1, -0.026), (-0.052, -0.012), (0.17, -0.02)):                                       # pinos
-            p.add('aco_oxidado', cil_z(0.0021, min(zs * (SW - 0.001), zs * (SW + 0.0006)), max(zs * (SW - 0.001), zs * (SW + 0.0006)), x, y, 16))
+    # casca de tras, um pouco mais larga, com a borda da frente inclinada (o corpo fica em dois niveis)
+    casca = arred([(SX0 + 0.003, SY_T - 0.004), (0.06, SY_T - 0.004), (0.09, -0.008), (0.09, -0.031), (-0.012, -0.031), (-0.028, SY_B + 0.001),
+                   (SX0 + 0.003, SY_B + 0.004)], 0.004)
+    p.add('polimero', menos(solido(casca, -SW - 0.0018, SW + 0.0018, 0.0016), porta, solido(furo_c, -0.0112, 0.0112),
+                            *[cil_x(0.0046, SX0 - 0.01, SX0 + 0.18, SVY, zs * 0.0145, 20) for zs in (-1, 1)]))
+    for zs in (-1, 1):
+        for (x, y, z) in ((0.008, -0.018, SW + 0.0018), (-0.052, -0.012, SW + 0.0018), (0.1, -0.026, SW), (0.17, -0.02, SW), (0.12, 0.004, SW)):   # pinos
+            p.add('aco_oxidado', cil_z(0.0021, min(zs * (z - 0.001), zs * (z + 0.0006)), max(zs * (z - 0.001), zs * (z + 0.0006)), x, y, 16))
     trilho(p, 'aluminio_preto', SX0 + 0.004, SX1 - 0.008, SY_T, False)
     trilho(p, 'aluminio_preto', 0.13, SX1 - 0.006, SY_B, True)
     lado = P(); trilho(lado, 'aluminio_preto', 0.13, SX1 - 0.006, 0.0, False)                                                  # trilho curto da direita
@@ -103,13 +109,13 @@ def _seletor_smg(q):
     """Seletor ambidestro: alavanca curta com seta, eixo em (0.012, -0.012)."""
     for zs in (-1, 1):
         lev = arred([(0.003, -0.016), (0.016, -0.0155), (0.026, -0.0105), (0.024, -0.007), (0.012, -0.0085), (0.003, -0.009)], 0.0015)
-        q.add('aco_oxidado', solido(lev, min(zs * (SW + 0.0007), zs * (SW + 0.0025)), max(zs * (SW + 0.0007), zs * (SW + 0.0025)), 0.0004))
-        q.add('aco_oxidado', cil_z(0.0045, min(zs * (SW + 0.0004), zs * (SW + 0.002)), max(zs * (SW + 0.0004), zs * (SW + 0.002)), 0.012, -0.012, 20))
+        q.add('aco_oxidado', solido(lev, min(zs * (SW + 0.0025), zs * (SW + 0.0043)), max(zs * (SW + 0.0025), zs * (SW + 0.0043)), 0.0004))
+        q.add('aco_oxidado', cil_z(0.0045, min(zs * (SW + 0.0012), zs * (SW + 0.0038)), max(zs * (SW + 0.0012), zs * (SW + 0.0038)), 0.012, -0.012, 20))
 
 
 def _coronha_smg(q):
     """Coronha de duas varetas que corre por dentro do corpo; soleira de polimero com borracha."""
-    for zs in (-1, 1): q.add('aco_oxidado', cil_x(0.0042, SX0 - 0.016, SX0 + 0.05, 0.0, zs * 0.0145, 24))
+    for zs in (-1, 1): q.add('aco_oxidado', cil_x(0.0042, SX0 - 0.016, SX0 + 0.17, SVY, zs * 0.0145, 24))
     sol = arred([(SX0 - 0.018, 0.011), (SX0 - 0.004, 0.011), (SX0 - 0.004, -0.004), (SX0 - 0.01, -0.07), (SX0 - 0.018, -0.072)], 0.004)
     q.add('polimero', menos(solido(sol, -0.021, 0.021, 0.004), solido(arred([(SX0 - 0.03, -0.03), (SX0 + 0.01, -0.03), (SX0 + 0.01, -0.052), (SX0 - 0.03, -0.052)], 0.004),
                                                                         -0.0125, 0.0125)))
@@ -151,8 +157,8 @@ def smg_9mm(A):
     A.encaixe('encaixe_carregador', (SMAG[0], SMAG[1], 0), 'carregador_smg', pai='carregador', substitui='carregador',
               aceita=['carregador_smg_20', 'carregador_smg_30', 'carregador_smg_40'], descricao='filho do nó carregador; ao pôr um carregador aqui, esconda o original')
     A.encaixe('encaixe_empunhadura', (0.168, SY_B - 0.0055, 0), 'mlok_baixo', explodir=(0, -0.06, 0),
-              aceita=['empunhadura_reta', 'empunhadura_reta_tan', 'empunhadura_curta', 'empunhadura_curta_tan', 'empunhadura_vertical', 'empunhadura_angulada',
-                      'batente_mao'], descricao='trilho curto de baixo')
+              aceita=['empunhadura_dobravel', 'empunhadura_reta', 'empunhadura_reta_tan', 'empunhadura_curta', 'empunhadura_curta_tan', 'empunhadura_vertical',
+                      'empunhadura_angulada', 'batente_mao'], padrao='empunhadura_dobravel', descricao='trilho curto de baixo')
     A.encaixe('encaixe_lanterna', (0.17, -0.001, SW + 0.0055), 'mlok_lado', explodir=(0, 0, 0.06), aceita=['lanterna_compacta', 'lanterna_fuzil'],
               descricao='trilho curto da direita')
     A.encaixe('encaixe_laser', (0.15, -0.001, -SW), 'mlok_esq', explodir=(0, 0, -0.06), aceita=['modulo_laser', 'laser_fuzil'], descricao='lado esquerdo da frente')
@@ -216,3 +222,30 @@ def carregador_smg_30(A): _carregador_smg(A.base, 30); A.pivo = (SMAG[0], SMAG[1
 @_acessorio('carregador_smg_40', 'Carregador da submetralhadora (40)', 'carregador', 'carregador_smg', capacidade=40, municao='municao_9mm', peso_kg=0.17,
             raridade='raro', valor_troca=22, modificadores={'recarga_s': 1.08}, onde=['quartel'], descricao='Comprido: 40 tiros, mas atrapalha deitar no chão.')
 def carregador_smg_40(A): _carregador_smg(A.base, 40); A.pivo = (SMAG[0], SMAG[1], 0)
+
+
+@_acessorio('empunhadura_dobravel', 'Empunhadura frontal dobrável', 'empunhadura', 'mlok_baixo', peso_kg=0.08, raridade='incomum', valor_troca=14,
+            modificadores={'recuo': 0.88, 'precisao_rajada': 1.2}, onde=['quartel', 'delegacia'],
+            descricao='Empunhadura que dobra para a frente, rente ao trilho, para guardar a arma (nó "haste", animações dobrar/abrir). Vem na submetralhadora.')
+def empunhadura_dobravel(A):
+    q = A.base
+    q.add('polimero', solido(arred([(-0.022, -0.0095), (0.018, -0.0095), (0.018, 0.0), (-0.022, 0.0)], 0.002), -0.011, 0.011, 0.0012))   # base com a dobradica
+    for zs in (-1, 1): q.add('polimero', caixa(-0.018, 0.014, -0.0058, 0.0, min(zs * 0.0106, zs * 0.0125), max(zs * 0.0106, zs * 0.0125)))
+    q.add('aco_oxidado', cil_z(0.0026, -0.0118, 0.0118, -0.012, -0.0075, 16))                                                     # pino
+    q.add('aco_oxidado', cil_z(0.0045, 0.0105, 0.013, -0.012, -0.0075, 20))                                                       # botao da trava
+    h = A.parte('haste', (-0.012, -0.0075, 0), explodir=(0, -0.04, 0), tipo='gira', eixo='z', curso_graus=90, descricao='dobra para a frente (animação dobrar)')
+    perfil = suave([(-0.02, -0.006), (-0.004, -0.006), (-0.002, -0.03), (0.0, -0.05), (-0.001, -0.072), (-0.004, -0.083), (-0.02, -0.083),
+                    (-0.023, -0.072), (-0.024, -0.05), (-0.022, -0.03)], 2)
+    corpo = punho_redondo(perfil, -0.006, -0.083, lambda y: 0.0105, n=3.0, fatias=70, voltas=40, raio_base=0.003)
+    h.add('polimero', corpo)
+    for y in np.arange(-0.074, -0.04, 0.005):                                                                     # nervuras de baixo (frente)
+        h.add('polimero', solido(arred([(-0.0035, y), (0.0012, y), (0.0012, y + 0.0022), (-0.0035, y + 0.0022)], 0.0008), -0.008, 0.008, 0.0004))
+    for zs in (-1, 1):                                                                                              # canais verticais dos lados
+        for x in (-0.016, -0.009):
+            h.add('polimero_grip', solido(arred([(x - 0.0016, -0.07), (x + 0.0016, -0.07), (x + 0.0016, -0.02), (x - 0.0016, -0.02)], 0.0015),
+                                          min(zs * 0.0098, zs * 0.0109), max(zs * 0.0098, zs * 0.0109), 0.0003))
+    A.anim('dobrar', 0.3, [('haste', 'r', (0, 0, 1), pose([(0, 0), (0.3, 90)]))], desc='dobra a empunhadura para a frente')
+    A.anim('abrir', 0.3, [('haste', 'r', (0, 0, 1), pose([(0, 90), (0.3, 0)]))], desc='abre a empunhadura')
+    A.pivo = (0, 0, 0)
+
+NOVOS.setdefault('encaixe_empunhadura', []).append('empunhadura_dobravel')

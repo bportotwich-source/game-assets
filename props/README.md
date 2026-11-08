@@ -9,6 +9,7 @@ props/
   CATALOGO.md           tabelas em português (gerado)
   mobilias/<id>.glb     mobilias/catalogo.json
   loot/<id>.glb         loot/catalogo.json
+  veiculos/             carros em peças que viram loot, porta-malas e ferramentas de oficina (veiculos/README.md, design em docs/veiculos.md)
 ```
 
 ## Convenções

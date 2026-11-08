@@ -36,6 +36,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Faca de combate (`faca_combate`) | lâmina | - | 45 | 0,6 m | 1,8/s | 1 m | 3000 | 0,32 kg | cinto | golpear, estocar, golpe_baixo, sacar, guardar, inspecionar, ocioso |
 | Facão de mato (`facao`) | lâmina | - | 60 | 0,85 m | 1,3/s | 2 m | 2600 | 0,62 kg | cinto | golpear, golpe_forte, cortar_mato, sacar, guardar, inspecionar, ocioso |
 | Machadinha tática (`machadinha_tatica`) | lâmina | - | 70 | 0,7 m | 1,1/s | 3 m | 3500 | 0,75 kg | capa | golpear, golpe_forte, golpe_ponta, arrombar, tirar_capa, inspecionar, ocioso |
+| Lança improvisada (`lanca_improvisada`) | lâmina | - | 48 | 1,6 m | 1,4/s | 2 m | 900 | 0,95 kg | mao_frente | estocar, estocar_forte, golpe_lateral, empurrar, firmar, refazer_fita, inspecionar, ocioso |
 
 ## Acessórios
 

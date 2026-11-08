@@ -592,7 +592,7 @@ def empunhadura_quadrada(A):
             descricao='Cilindro de alumínio recartilhado preso num bloco inclinado: a mão fica um pouco mais à frente.')
 def empunhadura_cilindrica(A):
     q = A.base; _base_mlok(q, 0.044)
-    q.add('aluminio_preto', solido(arred([(-0.022, -0.004), (0.022, -0.004), (0.02, -0.012), (0.004, -0.03), (-0.016, -0.03), (-0.02, -0.014)], 0.002),
+    q.add('aluminio_preto', solido(arred([(0.022, -0.004), (-0.022, -0.004), (-0.02, -0.012), (-0.004, -0.03), (0.016, -0.03), (0.02, -0.014)], 0.002),
                                    -0.011, 0.011, 0.0015))                                                 # bloco inclinado
     L = 0.09; r = 0.0155
     perf = [(0.0, 0.0), (r - 0.002, 0.0), (r, 0.002), (r, L - 0.003), (r - 0.003, L), (0.0, L)]
@@ -600,7 +600,7 @@ def empunhadura_cilindrica(A):
     m.append(('aluminio_preto', torno_x(perf, 56)))
     for a, b in ((0.012, 0.038), (0.044, 0.078)): m.append(('recartilhado', tubo_x(0.0, r + 0.0005, a, b, sec=56)))
     for a in (0.0385, 0.0415): m.append(('aluminio_preto', tubo_x(0.0, r + 0.0008, a, a + 0.0015, sec=56)))
-    M = TF.translation_matrix([-0.006, -0.026, 0]) @ TF.rotation_matrix(math.radians(-80), [0, 0, 1])
+    M = TF.translation_matrix([0.006, -0.026, 0]) @ TF.rotation_matrix(math.radians(-100), [0, 0, 1])     # pe do cilindro inclinado para tras
     for mat, g in m: q.add(mat, g.apply_transform(M))
     A.pivo = (0, 0, 0)
 

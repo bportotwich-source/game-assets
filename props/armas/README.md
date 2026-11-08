@@ -89,15 +89,16 @@ A espingarda recarrega **um cartucho por vez** (`recarga_por_cartucho`, a anima�
 | 9 | **Submetralhadora Ciclone 9 mm** de cano alto (na linha do ombro), corpo de cima longo com fendas ovais e chassi em V (laço do guarda-mato inclinado, painel triangular, carregador na frente), preta e areia | ferrolho (visto pela janela), alavanca dobrável da esquerda, seletor ambidestro de 4 posições (trava, semi, rajada de 2, automático), coronha de esqueleto que dobra para a direita, carregador | carregadores de 17 e 30, tambor de 50 virado para a frente (eixo ao longo do cano) com botão de corda e janela de contagem; usa os supressores, compensador e protetor da pistola, miras, empunhaduras, lanternas e lasers dos fuzis | **feita** |
 | 10 | **Rifle Pardal .22** de ferrolho, coronha de nogueira com pente alto e punho curvo (e versão sintética preta) | ferrolho com bola, gatilho, carregador rotativo de 10 com janela do rotor, alça de lâmina no cano que deita com luneta, massa de rampa com capuz | luneta 4× pequena, supressor .22, protetor de rosca, carregador de caixa de 25, cartucho e estojo .22, caixa de 50 | **feita** |
 | 11 | **Pistola sinalizadora** de alumínio laranja, cabo curvo com talas pretas, guarda-mato redondo | cano basculante (bascula 42° para baixo), cão externo, gatilho, alavanca que solta o cano, cartucho na câmara | cartuchos de sinal vermelho (socorro) e verde (chama sobreviventes, atrai zumbis), estojo, luz do sinal vermelha e verde (efeito), caixas de 6 | **feita** |
-| 12 | Arco recurvo de madeira | corda e braços (flexionam) | flechas (ponta de caça, ponta improvisada de prego), aljava, mira de pinos, estabilizador | |
-| 13 | Arco composto | polias, cabos, corda | flechas de carbono, soltador, mira de pinos com luz | |
-| 14 | Besta | corda, braços, trava, gatilho | virotes, luneta pequena, estribo de armar | |
-| 15 | Faca de combate | - | bainha de cinto | |
-| 16 | Facão | - | bainha de lona | |
-| 17 | Machadinha tática | - | capa da lâmina | |
-| 18 | Lança improvisada (faca presa num cabo) | - | receita: cabo + faca + fita | |
-| 19 | Bastão com pregos / com arame farpado (melhoria do taco do loot) | - | receita na bancada | |
-| 20 | Coquetel molotov, bomba de pregos (lata), isca sonora (despertador) | pavio, ponteiro | - | |
+| 12 | **Fuzil Atalaia .308 de precisão** semiautomático, verde-oliva, longo e curto (receptor grande, guarda-mão octogonal com fendas grandes) | transportador, alavanca ambidestra, tampa da janela, retém, seletor, gatilho, carregador, punho trocável, miras rebatíveis | coronha de precisão (oliva e preta, apoio de rosto que sobe, monopé), luneta 5-25×, carregadores de 20 e 10; usa a munição, o freio e o supressor da carabina .308 | **feita** |
+| 13 | Arco recurvo de madeira | corda e braços (flexionam) | flechas (ponta de caça, ponta improvisada de prego), aljava, mira de pinos, estabilizador | |
+| 14 | Arco composto | polias, cabos, corda | flechas de carbono, soltador, mira de pinos com luz | |
+| 15 | Besta | corda, braços, trava, gatilho | virotes, luneta pequena, estribo de armar | |
+| 16 | Faca de combate | - | bainha de cinto | |
+| 17 | Facão | - | bainha de lona | |
+| 18 | Machadinha tática | - | capa da lâmina | |
+| 19 | Lança improvisada (faca presa num cabo) | - | receita: cabo + faca + fita | |
+| 20 | Bastão com pregos / com arame farpado (melhoria do taco do loot) | - | receita na bancada | |
+| 21 | Coquetel molotov, bomba de pregos (lata), isca sonora (despertador) | pavio, ponteiro | - | |
 
 O arco, a lança e o facão do lote 4 de `props/loot/` são itens de loot simples (uma peça só); aqui eles ganham a versão completa, com partes, acessórios e animações.
 

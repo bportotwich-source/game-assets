@@ -133,6 +133,7 @@ def _armacao_rev(p):
         cano = menos(cano, caixa(x, x + 0.0008, 0.0104, 0.012, -0.004, 0.004))
     p.add('aco_azulado', cano)
     p.add('aco_azulado', tubo_x(0.0046, 0.0082, 0.1578, 0.1592, sec=40, ch=0.0006))
+    trilho(p, 'aco_azulado', 0.09, 0.144, -0.0205, True, 0.016, 0.013)                                          # trilho curto embaixo do lug (lanterna/laser)
     rampa = arred([(0.138, 0.0105), (0.155, 0.0105), (0.155, 0.0182), (0.151, 0.0186)], 0.0005)
     p.add('aco_azulado', solido(rampa, -0.0015, 0.0015, 0.0003))
     p.add('tinta_laranja', solido(arred([(0.1505, 0.0148), (0.1545, 0.0148), (0.1545, 0.0181), (0.1505, 0.0181)], 0.0004), -0.00155, 0.00155))
@@ -206,6 +207,8 @@ def revolver_38(A):
               descricao='ao pôr uma empunhadura aqui, esconda as malhas do nó punho')
     A.encaixe('encaixe_recarga', (-0.0012, CY, 0), 'recarga_38', pai='tambor', aceita=['carregador_rapido_38'],
               descricao='carregador rápido encosta aqui (atrás do tambor aberto) durante a recarga')
+    A.encaixe('encaixe_trilho', (0.128, -0.026, 0), 'trilho_curto', explodir=(0.02, -0.05, 0), aceita=['lanterna_pistola', 'laser_pistola', 'combo_lanterna_laser'],
+              descricao='trilho curto embaixo da proteção da vareta')
     A.encaixe('boca_fogo', (0.1592, 0, 0), 'efeito', descricao='clarão de boca e origem do disparo (-Z)')
     A.encaixe('mira_ferro', (-0.008, 0.0158, 0), 'mira', descricao='linha de visada: entalhe -> rampa laranja')
     A.encaixe('cinto', (0, 0, 0), 'coldre', aceita=['coldre_revolver'], descricao='a arma entra no coldre pelo pivô (o coldre tem o encaixe "arma")')

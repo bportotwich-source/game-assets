@@ -193,6 +193,10 @@ def _telha(q, cfg):
     for zs in (-1, 1):                                                             # barras de acao
         q.add('aco_oxidado', caixa(RX1 - 0.03, f0 + 0.01, -0.0215, -0.0175, min(zs * 0.0114, zs * 0.0134), max(zs * 0.0114, zs * 0.0134)))
     q.add('aco_oxidado', tubo_x(TR + 0.0002, TR + 0.0012, f0 - 0.003, f0 + 0.004, TY, sec=40))   # bucha da telha
+    # placas de M-LOK na telha: laser no lado esquerdo e empunhadura embaixo (andam junto quando bombeia)
+    placa_mlok(q, 'aluminio_preto', f1 - 0.056, f1 - 0.008, -0.029, -0.0225, -1, esp=0.0042)
+    xc = (f0 + f1) / 2
+    placa_mlok_baixo(q, 'aluminio_preto', xc - 0.03, xc + 0.03, -0.05, esp=0.0048)
 
 
 def _ferrolho_12(q):
@@ -238,6 +242,11 @@ def _espingarda(A, cfg, curta):
         A.encaixe('encaixe_tubo', (xt, TY, 0), 'tubo_12', substitui='tampa_tubo', explodir=(0.05, 0, 0), aceita=['tampa_tubo_12', 'prolongador_tubo_12'],
                   descricao='ao pôr o prolongador aqui, esconda as malhas do nó tampa_tubo')
     A.encaixe('encaixe_cano', (xl, TY / 2, 0), 'cano_12', explodir=(0.0, 0.0, 0.05), aceita=['lanterna_cano_12'])
+    f1 = cfg['f0'] + cfg['fl']
+    A.encaixe('encaixe_laser', (f1 - 0.032, -0.029, -0.0225), 'mlok_esq', pai='telha', explodir=(0, 0, -0.06), aceita=ACEITA_LASER,
+              descricao='placa de M-LOK do lado esquerdo da telha (filho da telha: anda junto quando bombeia)')
+    A.encaixe('encaixe_empunhadura', ((cfg['f0'] + f1) / 2, -0.05, 0), 'mlok_baixo', pai='telha', explodir=(0, -0.06, 0), aceita=ACEITA_EMPUNHADURA,
+              descricao='placa de M-LOK embaixo da telha (filho da telha: a mão de apoio bombeia pela empunhadura)')
     A.encaixe('encaixe_lateral', (0.13, -0.014, -RW), 'lateral_12', explodir=(0.0, 0.0, -0.05), aceita=['porta_cartuchos_lateral_12'])
     A.encaixe('encaixe_bandoleira', (xt - 0.009, TY - TR - 0.0105, 0), 'bandoleira', explodir=(0, -0.04, 0), aceita=['bandoleira'])
     A.encaixe('boca_fogo', (xm, 0, 0), 'efeito', descricao='clarão de boca e origem dos bagos (raycast em cone para -Z)')

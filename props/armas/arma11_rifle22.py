@@ -120,6 +120,9 @@ def _coronha_22(p, mad='nogueira', quad='madeira_punho'):
     dentro = arred([(-0.047, -0.0365), (-0.005, -0.0365), (-0.007, -0.046), (-0.017, -0.0555), (-0.043, -0.057), (-0.051, -0.048)], 0.004)
     p.add('aco_oxidado', solido(fora.difference(dentro), -0.005, 0.005, 0.0012))
     p.add('aco_oxidado', solido(arred([(0.0005, -0.043), (0.0065, -0.043), (0.0065, -0.0345), (0.0005, -0.0345)], 0.001), -0.0035, 0.0035, 0.0005))
+    # placas de M-LOK pretas na telha: lanterna (direita), laser (esquerda) e empunhadura (embaixo)
+    for zs in (-1, 1): placa_mlok(p, 'polimero', 0.24, 0.30, -0.0155, zs * 0.0175, zs, alt=0.014, esp=0.0055)
+    placa_mlok_baixo(p, 'polimero', 0.17, 0.23, -0.0345, meia=0.007, esp=0.006)
     for x, y in ((0.29, -0.026), (-0.28, -0.101)):
         p.add('aco_inox', trimesh.creation.cylinder(radius=0.0024, segment=[[x, y + 0.002, 0], [x, y - 0.0055, 0]], sections=16))
         p.add('aco_inox', solido(Point(x, y - 0.0098).buffer(0.0056, 32).difference(Point(x, y - 0.0098).buffer(0.0037, 32)), -0.0012, 0.0012, 0.0004))
@@ -147,6 +150,9 @@ def _rifle22(A, sintetico):
     A.encaixe('encaixe_carregador', (M2X, M2Y, 0), 'carregador_22', pai='carregador', substitui='carregador', aceita=['carregador_22_10', 'carregador_22_25'],
               descricao='filho do nó carregador; ao pôr um carregador aqui, esconda as malhas do nó carregador')
     A.encaixe('encaixe_bandoleira', (0.29, -0.0365, 0), 'bandoleira', explodir=(0, -0.05, 0), aceita=['bandoleira'])
+    A.encaixe('encaixe_lanterna', (0.27, -0.0155, 0.0175), 'mlok_lado', explodir=(0, 0, 0.06), aceita=ACEITA_LANTERNA, descricao='placa de M-LOK do lado direito da telha')
+    A.encaixe('encaixe_laser', (0.27, -0.0155, -0.0175), 'mlok_esq', explodir=(0, 0, -0.06), aceita=ACEITA_LASER, descricao='placa de M-LOK do lado esquerdo da telha')
+    A.encaixe('encaixe_empunhadura', (0.2, -0.0345, 0), 'mlok_baixo', explodir=(0, -0.06, 0), aceita=ACEITA_EMPUNHADURA, descricao='placa de M-LOK embaixo da telha')
     A.encaixe('boca_fogo', (X2M, 0, 0), 'efeito', descricao='clarão de boca e origem do disparo (-Z)')
     A.encaixe('saida_estojo', (0.055, 0.008, R2), 'efeito', descricao='onde nasce o estojo (quando o ferrolho volta, aos 0,55 s do "atirar")')
     fr = lambda ks: ('ferrolho', 'r', (1, 0, 0), pose(ks))

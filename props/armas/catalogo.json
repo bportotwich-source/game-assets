@@ -328,8 +328,8 @@
     0.133,
     0.217
    ],
-   "triangulos": 43964,
-   "kb": 2782.7,
+   "triangulos": 44096,
+   "kb": 2789.0,
    "partes": [
     {
      "no": "punho",
@@ -474,6 +474,27 @@
      "descricao": "carregador rápido encosta aqui (atrás do tambor aberto) durante a recarga"
     },
     {
+     "no": "encaixe_trilho",
+     "tipo": "trilho_curto",
+     "pai": "revolver_38",
+     "posicao_m": [
+      0.0,
+      0.044,
+      -0.164
+     ],
+     "aceita": [
+      "lanterna_pistola",
+      "laser_pistola",
+      "combo_lanterna_laser"
+     ],
+     "descricao": "trilho curto embaixo da proteção da vareta",
+     "explodir_m": [
+      0.0,
+      -0.05,
+      -0.02
+     ]
+    },
+    {
      "no": "boca_fogo",
      "tipo": "efeito",
      "pai": "revolver_38",
@@ -585,12 +606,12 @@
    "descricao": "Espingarda de bombeamento com coronha retrátil, punho de pistola, protetor de calor e trilho. 5 no tubo; a curta distância derruba qualquer zumbi, mas o estrondo chama tudo num raio de 110 m. Recarrega um cartucho por vez.",
    "arquivo": "armas/espingarda_12.glb",
    "tamanho_m": [
-    0.043,
+    0.045,
     0.179,
     0.787
    ],
-   "triangulos": 70220,
-   "kb": 3560.1,
+   "triangulos": 71388,
+   "kb": 3616.5,
    "partes": [
     {
      "no": "gatilho",
@@ -753,6 +774,54 @@
      ]
     },
     {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "telha",
+     "posicao_m": [
+      -0.0225,
+      0.061,
+      -0.476
+     ],
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "placa de M-LOK do lado esquerdo da telha (filho da telha: anda junto quando bombeia)",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "telha",
+     "posicao_m": [
+      0.0,
+      0.04,
+      -0.418
+     ],
+     "aceita": [
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_quadrada",
+      "empunhadura_cilindrica",
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "batente_mao"
+     ],
+     "descricao": "placa de M-LOK embaixo da telha (filho da telha: a mão de apoio bombeia pela empunhadura)",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
      "no": "encaixe_lateral",
      "tipo": "lateral_12",
      "pai": "espingarda_12",
@@ -910,12 +979,12 @@
    "descricao": "Versão de cano curto e só punho, com freio dentado na boca: boa para arrombar portas e lutar dentro de casa. Espalha mais os bagos e coice forte; aceita coronha.",
    "arquivo": "armas/espingarda_12_curta.glb",
    "tamanho_m": [
-    0.043,
+    0.045,
     0.179,
     0.635
    ],
-   "triangulos": 64094,
-   "kb": 3273.1,
+   "triangulos": 65262,
+   "kb": 3329.5,
    "partes": [
     {
      "no": "gatilho",
@@ -1053,6 +1122,54 @@
      "explodir_m": [
       0.05,
       0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "telha",
+     "posicao_m": [
+      -0.0225,
+      0.061,
+      -0.448
+     ],
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "placa de M-LOK do lado esquerdo da telha (filho da telha: anda junto quando bombeia)",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "telha",
+     "posicao_m": [
+      0.0,
+      0.04,
+      -0.4025
+     ],
+     "aceita": [
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_quadrada",
+      "empunhadura_cilindrica",
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "batente_mao"
+     ],
+     "descricao": "placa de M-LOK embaixo da telha (filho da telha: a mão de apoio bombeia pela empunhadura)",
+     "explodir_m": [
+      0.0,
+      -0.06,
       0.0
      ]
     },
@@ -1211,8 +1328,8 @@
     0.171,
     1.058
    ],
-   "triangulos": 58958,
-   "kb": 2992.7,
+   "triangulos": 59026,
+   "kb": 2996.1,
    "partes": [
     {
      "no": "apoio_face",
@@ -1368,6 +1485,74 @@
      ]
     },
     {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "carabina_308",
+     "posicao_m": [
+      0.022,
+      0.0745,
+      -0.533
+     ],
+     "aceita": [
+      "lanterna_fuzil",
+      "lanterna_compacta"
+     ],
+     "descricao": "fendas da direita do guarda-mão",
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "carabina_308",
+     "posicao_m": [
+      -0.022,
+      0.0745,
+      -0.533
+     ],
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "fendas da esquerda do guarda-mão",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "carabina_308",
+     "posicao_m": [
+      0.0,
+      0.049,
+      -0.393
+     ],
+     "aceita": [
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_quadrada",
+      "empunhadura_cilindrica",
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "batente_mao"
+     ],
+     "descricao": "fendas de baixo do guarda-mão",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
      "no": "boca_fogo",
      "tipo": "efeito",
      "pai": "carabina_308",
@@ -1465,8 +1650,8 @@
     0.147,
     1.048
    ],
-   "triangulos": 44668,
-   "kb": 3017.8,
+   "triangulos": 46672,
+   "kb": 3110.5,
    "partes": [
     {
      "no": "gatilho",
@@ -1605,6 +1790,74 @@
      "explodir_m": [
       0.0,
       -0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "carabina_308_caca",
+     "posicao_m": [
+      0.0205,
+      0.0505,
+      -0.44
+     ],
+     "aceita": [
+      "lanterna_fuzil",
+      "lanterna_compacta"
+     ],
+     "descricao": "placa de M-LOK do lado direito da telha",
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "carabina_308_caca",
+     "posicao_m": [
+      -0.0205,
+      0.0505,
+      -0.44
+     ],
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "placa de M-LOK do lado esquerdo da telha",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "carabina_308_caca",
+     "posicao_m": [
+      0.0,
+      0.0315,
+      -0.355
+     ],
+     "aceita": [
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_quadrada",
+      "empunhadura_cilindrica",
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "batente_mao"
+     ],
+     "descricao": "placa de M-LOK embaixo da telha",
+     "explodir_m": [
+      0.0,
+      -0.06,
       0.0
      ]
     },
@@ -2672,7 +2925,7 @@
     0.666
    ],
    "triangulos": 42068,
-   "kb": 2205.0,
+   "kb": 2205.1,
    "partes": [
     {
      "no": "tampa",
@@ -2883,6 +3136,33 @@
       0.06,
       0.0,
       0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "fuzil_762",
+     "posicao_m": [
+      -0.0245,
+      0.0855,
+      -0.348
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_trilhos_ak",
+       "guarda_mao_fendas_ak"
+      ]
+     },
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "trilho da esquerda do guarda-mão de quatro trilhos (ou fendas da esquerda)",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
      ]
     },
     {
@@ -3122,7 +3402,7 @@
     0.666
    ],
    "triangulos": 47772,
-   "kb": 3378.0,
+   "kb": 3378.1,
    "partes": [
     {
      "no": "tampa",
@@ -3340,6 +3620,34 @@
       0.06,
       0.0,
       0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "fuzil_762_tatico",
+     "posicao_m": [
+      -0.0245,
+      0.0855,
+      -0.348
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_fendas_ak",
+       "guarda_mao_fendas_ak_gasto",
+       "guarda_mao_trilhos_ak"
+      ]
+     },
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "trilho da esquerda do guarda-mão de quatro trilhos (ou fendas da esquerda)",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
      ]
     },
     {
@@ -6043,8 +6351,8 @@
     0.143,
     0.929
    ],
-   "triangulos": 41278,
-   "kb": 2796.5,
+   "triangulos": 43282,
+   "kb": 2891.3,
    "partes": [
     {
      "no": "gatilho",
@@ -6202,6 +6510,74 @@
      ]
     },
     {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "rifle_22",
+     "posicao_m": [
+      0.0175,
+      0.0465,
+      -0.348
+     ],
+     "aceita": [
+      "lanterna_fuzil",
+      "lanterna_compacta"
+     ],
+     "descricao": "placa de M-LOK do lado direito da telha",
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "rifle_22",
+     "posicao_m": [
+      -0.0175,
+      0.0465,
+      -0.348
+     ],
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "placa de M-LOK do lado esquerdo da telha",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "rifle_22",
+     "posicao_m": [
+      0.0,
+      0.0275,
+      -0.278
+     ],
+     "aceita": [
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_quadrada",
+      "empunhadura_cilindrica",
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "batente_mao"
+     ],
+     "descricao": "placa de M-LOK embaixo da telha",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
      "no": "boca_fogo",
      "tipo": "efeito",
      "pai": "rifle_22",
@@ -6300,8 +6676,8 @@
     0.143,
     0.929
    ],
-   "triangulos": 41278,
-   "kb": 2036.4,
+   "triangulos": 43282,
+   "kb": 2130.6,
    "partes": [
     {
      "no": "gatilho",
@@ -6455,6 +6831,74 @@
      "explodir_m": [
       0.0,
       -0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "rifle_22_sintetico",
+     "posicao_m": [
+      0.0175,
+      0.0465,
+      -0.348
+     ],
+     "aceita": [
+      "lanterna_fuzil",
+      "lanterna_compacta"
+     ],
+     "descricao": "placa de M-LOK do lado direito da telha",
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "rifle_22_sintetico",
+     "posicao_m": [
+      -0.0175,
+      0.0465,
+      -0.348
+     ],
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "placa de M-LOK do lado esquerdo da telha",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "rifle_22_sintetico",
+     "posicao_m": [
+      0.0,
+      0.0275,
+      -0.278
+     ],
+     "aceita": [
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_quadrada",
+      "empunhadura_cilindrica",
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "batente_mao"
+     ],
+     "descricao": "placa de M-LOK embaixo da telha",
+     "explodir_m": [
+      0.0,
+      -0.06,
       0.0
      ]
     },
@@ -6708,6 +7152,954 @@
      "duracao_s": 2.4,
      "laco": false,
      "descricao": "abre o cano até ver a cor do cartucho, fecha e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "fuzil_308_precisao",
+   "nome": "Fuzil Atalaia .308 de precisão",
+   "grupo": "armas",
+   "categoria": "fuzil",
+   "alcance_m": 200,
+   "alcance_max_m": 800,
+   "precisao": 0.95,
+   "recuo": 0.55,
+   "ruido_m": 240,
+   "peso_kg": 5.6,
+   "raridade": "muito raro",
+   "valor_troca": 260,
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "classe": "fogo",
+   "calibre": ".308",
+   "municao": "municao_308",
+   "capacidade": 20,
+   "dano": 92,
+   "modo": "semiautomático",
+   "tiros_por_s": 3,
+   "recarga_s": 2.4,
+   "recarga_vazia_s": 2.8,
+   "durabilidade": 3500,
+   "estojo_s": 0.02,
+   "descricao": "Fuzil semiautomático .308 de cano longo, verde-oliva, com guarda-mão octogonal, coronha de precisão e luneta 5-25×. Acerta zumbi a 200 m e dá tiros seguidos sem mexer no ferrolho. Pesado e muito barulhento sem supressor.",
+   "arquivo": "armas/fuzil_308_precisao.glb",
+   "tamanho_m": [
+    0.05,
+    0.188,
+    0.78
+   ],
+   "triangulos": 44312,
+   "kb": 2105.8,
+   "partes": [
+    {
+     "no": "punho",
+     "tipo": "troca",
+     "descricao": "punho de pistola (troca pelo encaixe_punho)",
+     "pai": "fuzil_308_precisao",
+     "explodir_m": [
+      -0.0,
+      -0.06,
+      0.02
+     ]
+    },
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -10,
+     "descricao": "gatilho de duas etapas, leve",
+     "pai": "fuzil_308_precisao",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "seletor",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 90,
+     "descricao": "trava (0°) / semi (90°)",
+     "pai": "fuzil_308_precisao",
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": -0.095,
+     "descricao": "transportador: recua 95 mm a cada tiro; fica atrás com o carregador vazio",
+     "pai": "fuzil_308_precisao",
+     "explodir_m": [
+      0.04,
+      0.05,
+      0.05
+     ]
+    },
+    {
+     "no": "alavanca",
+     "tipo": "desliza",
+     "curso_m": -0.075,
+     "descricao": "alavanca de manejo ambidestra (puxa e solta)",
+     "pai": "fuzil_308_precisao",
+     "explodir_m": [
+      -0.0,
+      0.04,
+      0.06
+     ]
+    },
+    {
+     "no": "tampa_janela",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": 100,
+     "descricao": "abre no primeiro tiro e fica aberta",
+     "pai": "fuzil_308_precisao",
+     "explodir_m": [
+      0.04,
+      -0.01,
+      0.0
+     ]
+    },
+    {
+     "no": "retem_ferrolho",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -8,
+     "descricao": "retém do ferrolho (esquerda)",
+     "pai": "fuzil_308_precisao",
+     "explodir_m": [
+      -0.03,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      0.05,
+      -1.0,
+      0.0
+     ],
+     "municao": "municao_308",
+     "capacidade": 20,
+     "descricao": "carregador de caixa de 20",
+     "pai": "fuzil_308_precisao",
+     "explodir_m": [
+      0.0,
+      -0.1,
+      -0.02
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_punho",
+     "tipo": "punho_ar",
+     "pai": "punho",
+     "posicao_m": [
+      0.0,
+      0.049,
+      -0.018
+     ],
+     "substitui": "punho",
+     "aceita": [
+      "punho_ar",
+      "punho_ar_tan",
+      "punho_cavas",
+      "punho_cavas_tan",
+      "punho_reto",
+      "punho_reto_tan"
+     ],
+     "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
+     "explodir_m": [
+      -0.0,
+      -0.08,
+      0.02
+     ]
+    },
+    {
+     "no": "encaixe_mira",
+     "tipo": "trilho_mira",
+     "pai": "fuzil_308_precisao",
+     "posicao_m": [
+      0.0,
+      0.1265,
+      -0.13
+     ],
+     "aceita": [
+      "luneta_5_25",
+      "luneta_3_9",
+      "luneta_4x",
+      "luneta_1_6",
+      "mira_holografica",
+      "mira_ponto_vermelho_tubo",
+      "mira_reflexa"
+     ],
+     "padrao": "luneta_5_25",
+     "explodir_m": [
+      0.0,
+      0.08,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_alca",
+     "tipo": "alca_trilho",
+     "pai": "fuzil_308_precisao",
+     "posicao_m": [
+      0.0,
+      0.1265,
+      -0.028
+     ],
+     "aceita": [
+      "alca_rebativel",
+      "alca_polimero",
+      "alca_polimero_tan"
+     ],
+     "padrao": "alca_rebativel",
+     "rebate_com": "encaixe_mira",
+     "descricao": "deita (animação \"dobrar\" do acessório) quando há mira ou luneta no encaixe_mira",
+     "explodir_m": [
+      -0.0,
+      0.05,
+      0.02
+     ]
+    },
+    {
+     "no": "encaixe_massa",
+     "tipo": "massa_trilho",
+     "pai": "fuzil_308_precisao",
+     "posicao_m": [
+      0.0,
+      0.1265,
+      -0.584
+     ],
+     "aceita": [
+      "massa_rebativel",
+      "massa_polimero",
+      "massa_polimero_tan"
+     ],
+     "padrao": "massa_rebativel",
+     "rebate_com": "encaixe_mira",
+     "descricao": "deita (animação \"dobrar\" do acessório) quando há mira ou luneta no encaixe_mira",
+     "explodir_m": [
+      0.0,
+      0.05,
+      -0.02
+     ]
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "fuzil_308_precisao",
+     "posicao_m": [
+      0.0,
+      0.146,
+      -0.028
+     ],
+     "descricao": "centro do furo da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z) sem mira acoplada"
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_308",
+     "pai": "fuzil_308_precisao",
+     "posicao_m": [
+      0.0,
+      0.1,
+      -0.725
+     ],
+     "aceita": [
+      "protetor_rosca_308",
+      "freio_boca_308",
+      "supressor_308"
+     ],
+     "padrao": "freio_boca_308",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.08
+     ]
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_ar10",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.082,
+      -0.165
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_ar10_20",
+      "carregador_ar10_10"
+     ],
+     "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda as malhas do nó carregador"
+    },
+    {
+     "no": "encaixe_coronha",
+     "tipo": "coronha_ar",
+     "pai": "fuzil_308_precisao",
+     "posicao_m": [
+      0.0,
+      0.097,
+      -0.01
+     ],
+     "aceita": [
+      "coronha_precisao_ar",
+      "coronha_precisao_ar_preta",
+      "coronha_retratil_ar",
+      "coronha_fixa_ar"
+     ],
+     "padrao": "coronha_precisao_ar",
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.08
+     ]
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "fuzil_308_precisao",
+     "posicao_m": [
+      0.0,
+      0.066,
+      -0.36
+     ],
+     "aceita": [
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_quadrada"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "fuzil_308_precisao",
+     "posicao_m": [
+      0.022,
+      0.095,
+      -0.55
+     ],
+     "aceita": [
+      "lanterna_fuzil",
+      "lanterna_compacta"
+     ],
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "fuzil_308_precisao",
+     "posicao_m": [
+      -0.022,
+      0.095,
+      -0.55
+     ],
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "lado esquerdo do guarda-mão (a lanterna fica no direito)",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_bipe",
+     "tipo": "bipe",
+     "pai": "fuzil_308_precisao",
+     "posicao_m": [
+      0.0,
+      0.066,
+      -0.58
+     ],
+     "aceita": [
+      "bipe"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_bandoleira",
+     "tipo": "bandoleira",
+     "pai": "fuzil_308_precisao",
+     "posicao_m": [
+      -0.0235,
+      0.094,
+      -0.575
+     ],
+     "aceita": [
+      "bandoleira"
+     ],
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "fuzil_308_precisao",
+     "posicao_m": [
+      0.0,
+      0.1,
+      -0.74
+     ],
+     "descricao": "clarão de boca e origem do disparo (-Z)"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "fuzil_308_precisao",
+     "posicao_m": [
+      0.0165,
+      0.1,
+      -0.145
+     ],
+     "descricao": "onde nasce o estojo (vai para a direita e um pouco para trás)"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.25,
+     "laco": false,
+     "descricao": "um tiro semiautomático: transportador recua 95 mm, coice forte de .308; a tampa da janela abre"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.25,
+     "laco": false,
+     "descricao": "último tiro: o ferrolho fica preso atrás"
+    },
+    "vazia": {
+     "duracao_s": 0.1,
+     "laco": true,
+     "descricao": "pose parada: ferrolho atrás"
+    },
+    "recarregar": {
+     "duracao_s": 2.4,
+     "laco": false,
+     "descricao": "aperta o retém, carregador cai (0,35 s), novo entra (1,82 s); trocar o nó carregador entre 0,6 e 1,4 s"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 2.8,
+     "laco": false,
+     "descricao": "troca o carregador e bate no retém: o ferrolho fecha (2,1 s)"
+    },
+    "trocar_modo": {
+     "duracao_s": 0.3,
+     "laco": false,
+     "descricao": "seletor: trava -> semi"
+    },
+    "inspecionar": {
+     "duracao_s": 2.8,
+     "laco": false,
+     "descricao": "puxa a alavanca até ver o cartucho na câmara, solta e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "fuzil_308_precisao_curto",
+   "nome": "Fuzil Atalaia .308 curto",
+   "grupo": "armas",
+   "categoria": "fuzil",
+   "alcance_m": 150,
+   "alcance_max_m": 600,
+   "precisao": 0.9,
+   "recuo": 0.62,
+   "ruido_m": 250,
+   "peso_kg": 4.9,
+   "raridade": "muito raro",
+   "valor_troca": 230,
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "classe": "fogo",
+   "calibre": ".308",
+   "municao": "municao_308",
+   "capacidade": 20,
+   "dano": 92,
+   "modo": "semiautomático",
+   "tiros_por_s": 3,
+   "recarga_s": 2.4,
+   "recarga_vazia_s": 2.8,
+   "durabilidade": 3500,
+   "estojo_s": 0.02,
+   "descricao": "O mesmo fuzil com cano e guarda-mão curtos: mais fácil de virar dentro de casa, um pouco menos preciso de longe.",
+   "arquivo": "armas/fuzil_308_precisao_curto.glb",
+   "tamanho_m": [
+    0.05,
+    0.188,
+    0.61
+   ],
+   "triangulos": 40836,
+   "kb": 1943.1,
+   "partes": [
+    {
+     "no": "punho",
+     "tipo": "troca",
+     "descricao": "punho de pistola (troca pelo encaixe_punho)",
+     "pai": "fuzil_308_precisao_curto",
+     "explodir_m": [
+      -0.0,
+      -0.06,
+      0.02
+     ]
+    },
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -10,
+     "descricao": "gatilho de duas etapas, leve",
+     "pai": "fuzil_308_precisao_curto",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "seletor",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 90,
+     "descricao": "trava (0°) / semi (90°)",
+     "pai": "fuzil_308_precisao_curto",
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": -0.095,
+     "descricao": "transportador: recua 95 mm a cada tiro; fica atrás com o carregador vazio",
+     "pai": "fuzil_308_precisao_curto",
+     "explodir_m": [
+      0.04,
+      0.05,
+      0.05
+     ]
+    },
+    {
+     "no": "alavanca",
+     "tipo": "desliza",
+     "curso_m": -0.075,
+     "descricao": "alavanca de manejo ambidestra (puxa e solta)",
+     "pai": "fuzil_308_precisao_curto",
+     "explodir_m": [
+      -0.0,
+      0.04,
+      0.06
+     ]
+    },
+    {
+     "no": "tampa_janela",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": 100,
+     "descricao": "abre no primeiro tiro e fica aberta",
+     "pai": "fuzil_308_precisao_curto",
+     "explodir_m": [
+      0.04,
+      -0.01,
+      0.0
+     ]
+    },
+    {
+     "no": "retem_ferrolho",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -8,
+     "descricao": "retém do ferrolho (esquerda)",
+     "pai": "fuzil_308_precisao_curto",
+     "explodir_m": [
+      -0.03,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      0.05,
+      -1.0,
+      0.0
+     ],
+     "municao": "municao_308",
+     "capacidade": 20,
+     "descricao": "carregador de caixa de 20",
+     "pai": "fuzil_308_precisao_curto",
+     "explodir_m": [
+      0.0,
+      -0.1,
+      -0.02
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_punho",
+     "tipo": "punho_ar",
+     "pai": "punho",
+     "posicao_m": [
+      0.0,
+      0.049,
+      -0.018
+     ],
+     "substitui": "punho",
+     "aceita": [
+      "punho_ar",
+      "punho_ar_tan",
+      "punho_cavas",
+      "punho_cavas_tan",
+      "punho_reto",
+      "punho_reto_tan"
+     ],
+     "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
+     "explodir_m": [
+      -0.0,
+      -0.08,
+      0.02
+     ]
+    },
+    {
+     "no": "encaixe_mira",
+     "tipo": "trilho_mira",
+     "pai": "fuzil_308_precisao_curto",
+     "posicao_m": [
+      0.0,
+      0.1265,
+      -0.13
+     ],
+     "aceita": [
+      "luneta_5_25",
+      "luneta_3_9",
+      "luneta_4x",
+      "luneta_1_6",
+      "mira_holografica",
+      "mira_ponto_vermelho_tubo",
+      "mira_reflexa"
+     ],
+     "padrao": "luneta_5_25",
+     "explodir_m": [
+      0.0,
+      0.08,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_alca",
+     "tipo": "alca_trilho",
+     "pai": "fuzil_308_precisao_curto",
+     "posicao_m": [
+      0.0,
+      0.1265,
+      -0.028
+     ],
+     "aceita": [
+      "alca_rebativel",
+      "alca_polimero",
+      "alca_polimero_tan"
+     ],
+     "padrao": "alca_rebativel",
+     "rebate_com": "encaixe_mira",
+     "descricao": "deita (animação \"dobrar\" do acessório) quando há mira ou luneta no encaixe_mira",
+     "explodir_m": [
+      -0.0,
+      0.05,
+      0.02
+     ]
+    },
+    {
+     "no": "encaixe_massa",
+     "tipo": "massa_trilho",
+     "pai": "fuzil_308_precisao_curto",
+     "posicao_m": [
+      0.0,
+      0.1265,
+      -0.454
+     ],
+     "aceita": [
+      "massa_rebativel",
+      "massa_polimero",
+      "massa_polimero_tan"
+     ],
+     "padrao": "massa_rebativel",
+     "rebate_com": "encaixe_mira",
+     "descricao": "deita (animação \"dobrar\" do acessório) quando há mira ou luneta no encaixe_mira",
+     "explodir_m": [
+      0.0,
+      0.05,
+      -0.02
+     ]
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "fuzil_308_precisao_curto",
+     "posicao_m": [
+      0.0,
+      0.146,
+      -0.028
+     ],
+     "descricao": "centro do furo da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z) sem mira acoplada"
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_308",
+     "pai": "fuzil_308_precisao_curto",
+     "posicao_m": [
+      0.0,
+      0.1,
+      -0.555
+     ],
+     "aceita": [
+      "protetor_rosca_308",
+      "freio_boca_308",
+      "supressor_308"
+     ],
+     "padrao": "freio_boca_308",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.08
+     ]
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_ar10",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.082,
+      -0.165
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_ar10_20",
+      "carregador_ar10_10"
+     ],
+     "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda as malhas do nó carregador"
+    },
+    {
+     "no": "encaixe_coronha",
+     "tipo": "coronha_ar",
+     "pai": "fuzil_308_precisao_curto",
+     "posicao_m": [
+      0.0,
+      0.097,
+      -0.01
+     ],
+     "aceita": [
+      "coronha_precisao_ar",
+      "coronha_precisao_ar_preta",
+      "coronha_retratil_ar",
+      "coronha_fixa_ar"
+     ],
+     "padrao": "coronha_precisao_ar",
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.08
+     ]
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "fuzil_308_precisao_curto",
+     "posicao_m": [
+      0.0,
+      0.066,
+      -0.36
+     ],
+     "aceita": [
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_quadrada"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "fuzil_308_precisao_curto",
+     "posicao_m": [
+      0.022,
+      0.095,
+      -0.42
+     ],
+     "aceita": [
+      "lanterna_fuzil",
+      "lanterna_compacta"
+     ],
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "fuzil_308_precisao_curto",
+     "posicao_m": [
+      -0.022,
+      0.095,
+      -0.42
+     ],
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "lado esquerdo do guarda-mão (a lanterna fica no direito)",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_bipe",
+     "tipo": "bipe",
+     "pai": "fuzil_308_precisao_curto",
+     "posicao_m": [
+      0.0,
+      0.066,
+      -0.45
+     ],
+     "aceita": [
+      "bipe"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_bandoleira",
+     "tipo": "bandoleira",
+     "pai": "fuzil_308_precisao_curto",
+     "posicao_m": [
+      -0.0235,
+      0.094,
+      -0.445
+     ],
+     "aceita": [
+      "bandoleira"
+     ],
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "fuzil_308_precisao_curto",
+     "posicao_m": [
+      0.0,
+      0.1,
+      -0.57
+     ],
+     "descricao": "clarão de boca e origem do disparo (-Z)"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "fuzil_308_precisao_curto",
+     "posicao_m": [
+      0.0165,
+      0.1,
+      -0.145
+     ],
+     "descricao": "onde nasce o estojo (vai para a direita e um pouco para trás)"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.25,
+     "laco": false,
+     "descricao": "um tiro semiautomático: transportador recua 95 mm, coice forte de .308; a tampa da janela abre"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.25,
+     "laco": false,
+     "descricao": "último tiro: o ferrolho fica preso atrás"
+    },
+    "vazia": {
+     "duracao_s": 0.1,
+     "laco": true,
+     "descricao": "pose parada: ferrolho atrás"
+    },
+    "recarregar": {
+     "duracao_s": 2.4,
+     "laco": false,
+     "descricao": "aperta o retém, carregador cai (0,35 s), novo entra (1,82 s); trocar o nó carregador entre 0,6 e 1,4 s"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 2.8,
+     "laco": false,
+     "descricao": "troca o carregador e bate no retém: o ferrolho fecha (2,1 s)"
+    },
+    "trocar_modo": {
+     "duracao_s": 0.3,
+     "laco": false,
+     "descricao": "seletor: trava -> semi"
+    },
+    "inspecionar": {
+     "duracao_s": 2.8,
+     "laco": false,
+     "descricao": "puxa a alavanca até ver o cartucho na câmara, solta e mostra o outro lado"
     },
     "ocioso": {
      "duracao_s": 3.0,
@@ -11074,6 +12466,221 @@
    ],
    "triangulos": 1096,
    "kb": 53.3
+  },
+  {
+   "id": "coronha_precisao_ar",
+   "nome": "Coronha de precisão (fuzil)",
+   "grupo": "acessorios",
+   "categoria": "coronha",
+   "encaixe": "coronha_ar",
+   "peso_kg": 0.95,
+   "raridade": "raro",
+   "valor_troca": 45,
+   "modificadores": {
+    "recuo": 0.85,
+    "precisao_mirando": 1.15,
+    "tempo_mirar": 1.1
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Coronha fixa alta, verde-oliva, com apoio de rosto que sobe e monopé de rosca: deixa o fuzil quieto deitado. Serve no tubo de qualquer fuzil.",
+   "arquivo": "acessorios/coronha_precisao_ar.glb",
+   "tamanho_m": [
+    0.044,
+    0.151,
+    0.276
+   ],
+   "triangulos": 20888,
+   "kb": 989.1,
+   "partes": [
+    {
+     "no": "apoio_face",
+     "tipo": "desliza",
+     "curso_m": 0.015,
+     "eixo": "y",
+     "descricao": "apoio de rosto: sobe até 15 mm",
+     "pai": "coronha_precisao_ar",
+     "explodir_m": [
+      0.0,
+      0.05,
+      0.0
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "ombro",
+     "tipo": "efeito",
+     "pai": "coronha_precisao_ar",
+     "posicao_m": [
+      -0.0,
+      -0.05,
+      0.28
+     ],
+     "descricao": "ponto da soleira que encosta no ombro"
+    }
+   ],
+   "animacoes": {
+    "subir_apoio": {
+     "duracao_s": 0.4,
+     "laco": false,
+     "descricao": "sobe o apoio de rosto (para lunetas altas)"
+    }
+   }
+  },
+  {
+   "id": "coronha_precisao_ar_preta",
+   "nome": "Coronha de precisão preta (fuzil)",
+   "grupo": "acessorios",
+   "categoria": "coronha",
+   "encaixe": "coronha_ar",
+   "peso_kg": 0.95,
+   "raridade": "raro",
+   "valor_troca": 45,
+   "modificadores": {
+    "recuo": 0.85,
+    "precisao_mirando": 1.15,
+    "tempo_mirar": 1.1
+   },
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "A mesma coronha de precisão, em polímero preto.",
+   "arquivo": "acessorios/coronha_precisao_ar_preta.glb",
+   "tamanho_m": [
+    0.044,
+    0.151,
+    0.276
+   ],
+   "triangulos": 20888,
+   "kb": 989.2,
+   "partes": [
+    {
+     "no": "apoio_face",
+     "tipo": "desliza",
+     "curso_m": 0.015,
+     "eixo": "y",
+     "descricao": "apoio de rosto: sobe até 15 mm",
+     "pai": "coronha_precisao_ar_preta",
+     "explodir_m": [
+      0.0,
+      0.05,
+      0.0
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "ombro",
+     "tipo": "efeito",
+     "pai": "coronha_precisao_ar_preta",
+     "posicao_m": [
+      -0.0,
+      -0.05,
+      0.28
+     ],
+     "descricao": "ponto da soleira que encosta no ombro"
+    }
+   ],
+   "animacoes": {
+    "subir_apoio": {
+     "duracao_s": 0.4,
+     "laco": false,
+     "descricao": "sobe o apoio de rosto (para lunetas altas)"
+    }
+   }
+  },
+  {
+   "id": "luneta_5_25",
+   "nome": "Luneta 5-25× de precisão",
+   "grupo": "acessorios",
+   "categoria": "mira",
+   "encaixe": "trilho_mira",
+   "peso_kg": 0.98,
+   "raridade": "muito raro",
+   "valor_troca": 150,
+   "aumento": [
+    5,
+    25
+   ],
+   "modificadores": {
+    "precisao_mirando": 1.7,
+    "tempo_mirar": 1.3,
+    "alcance_m": 2.2
+   },
+   "onde": [
+    "quartel"
+   ],
+   "linha_de_visada": "encaixe \"olho\"; zoom de 5× a 25×",
+   "descricao": "Luneta comprida de objetiva grande, torres altas e regulagem lateral de foco. Ruim para perto: em 5× já não dá para ver dentro de uma sala.",
+   "arquivo": "acessorios/luneta_5_25.glb",
+   "tamanho_m": [
+    0.062,
+    0.074,
+    0.41
+   ],
+   "triangulos": 6528,
+   "kb": 348.9,
+   "encaixes": [
+    {
+     "no": "olho",
+     "tipo": "mira",
+     "pai": "luneta_5_25",
+     "posicao_m": [
+      -0.0,
+      0.034,
+      0.205
+     ],
+     "descricao": "ocular: linha de visada (afastar o olho uns 9 cm)"
+    }
+   ]
+  },
+  {
+   "id": "carregador_ar10_20",
+   "nome": "Carregador .308 de fuzil (20)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_ar10",
+   "capacidade": 20,
+   "municao": "municao_308",
+   "peso_kg": 0.2,
+   "raridade": "raro",
+   "valor_troca": 20,
+   "descricao": "Carregador de polímero de 20 tiros .308 com janelinhas de contagem. Não serve na carabina de ferrolho.",
+   "arquivo": "acessorios/carregador_ar10_20.glb",
+   "tamanho_m": [
+    0.027,
+    0.134,
+    0.079
+   ],
+   "triangulos": 5196,
+   "kb": 249.5
+  },
+  {
+   "id": "carregador_ar10_10",
+   "nome": "Carregador .308 de fuzil (10)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_ar10",
+   "capacidade": 10,
+   "municao": "municao_308",
+   "peso_kg": 0.13,
+   "raridade": "incomum",
+   "valor_troca": 12,
+   "modificadores": {
+    "recarga_s": 0.95
+   },
+   "descricao": "Carregador curto de 10: o fuzil fica mais baixo para atirar deitado.",
+   "arquivo": "acessorios/carregador_ar10_10.glb",
+   "tamanho_m": [
+    0.027,
+    0.08,
+    0.079
+   ],
+   "triangulos": 4688,
+   "kb": 225.7
   }
  ],
  "municao": [

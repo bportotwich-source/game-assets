@@ -2097,6 +2097,785 @@
    ],
    "triangulos": 1668,
    "kb": 299.8
+  },
+  {
+   "id": "pichacao_nao_entre",
+   "nome": "Pichação \"NÃO ENTRE\"",
+   "grupo": "mobilias",
+   "categoria": "sinais",
+   "montagem": "wall",
+   "lote": 6,
+   "altura_sugerida_m": 0.9,
+   "comodos": [
+    "casas",
+    "rua",
+    "galeria",
+    "supermercado",
+    "igreja",
+    "escolinha"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "decalque": true,
+   "arquivo": "mobilias/pichacao_nao_entre.glb",
+   "tamanho_m": [
+    1.8,
+    0.9,
+    0.002
+   ],
+   "triangulos": 12,
+   "kb": 121.2
+  },
+  {
+   "id": "pichacao_infectados",
+   "nome": "Pichação \"INFECTADOS LÁ DENTRO\"",
+   "grupo": "mobilias",
+   "categoria": "sinais",
+   "montagem": "wall",
+   "lote": 6,
+   "altura_sugerida_m": 0.8,
+   "comodos": [
+    "casas",
+    "rua",
+    "galeria",
+    "supermercado",
+    "igreja",
+    "escolinha"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "decalque": true,
+   "arquivo": "mobilias/pichacao_infectados.glb",
+   "tamanho_m": [
+    1.8,
+    0.9,
+    0.002
+   ],
+   "triangulos": 12,
+   "kb": 161.9
+  },
+  {
+   "id": "pichacao_igreja",
+   "nome": "Pichação \"FOMOS PARA A IGREJA\"",
+   "grupo": "mobilias",
+   "categoria": "sinais",
+   "montagem": "wall",
+   "lote": 6,
+   "altura_sugerida_m": 0.9,
+   "pista": "aponta para a igreja (sobreviventes)",
+   "comodos": [
+    "casas",
+    "rua",
+    "galeria",
+    "supermercado",
+    "igreja",
+    "escolinha"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "decalque": true,
+   "arquivo": "mobilias/pichacao_igreja.glb",
+   "tamanho_m": [
+    1.8,
+    0.9,
+    0.002
+   ],
+   "triangulos": 12,
+   "kb": 176.0
+  },
+  {
+   "id": "marca_busca",
+   "nome": "Marca de busca em X na porta",
+   "grupo": "mobilias",
+   "categoria": "sinais",
+   "montagem": "wall",
+   "lote": 6,
+   "altura_sugerida_m": 1.2,
+   "significado": "equipe de resgate já passou: data, grupo, mortos e perigo",
+   "comodos": [
+    "casas",
+    "rua",
+    "galeria",
+    "supermercado",
+    "igreja",
+    "escolinha"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "decalque": true,
+   "arquivo": "mobilias/marca_busca.glb",
+   "tamanho_m": [
+    0.7,
+    0.7,
+    0.002
+   ],
+   "triangulos": 12,
+   "kb": 43.1
+  },
+  {
+   "id": "contagem_dias",
+   "nome": "Riscos de contagem de dias",
+   "grupo": "mobilias",
+   "categoria": "sinais",
+   "montagem": "wall",
+   "lote": 6,
+   "altura_sugerida_m": 1.1,
+   "significado": "alguém se escondeu aqui por semanas",
+   "comodos": [
+    "casas",
+    "rua",
+    "galeria",
+    "supermercado",
+    "igreja",
+    "escolinha"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "decalque": true,
+   "arquivo": "mobilias/contagem_dias.glb",
+   "tamanho_m": [
+    1.0,
+    0.5,
+    0.002
+   ],
+   "triangulos": 12,
+   "kb": 7.8
+  },
+  {
+   "id": "mancha_sangue",
+   "nome": "Mancha de sangue seco",
+   "grupo": "mobilias",
+   "categoria": "sinais",
+   "montagem": "floor",
+   "lote": 6,
+   "comodos": [
+    "casas",
+    "rua",
+    "clinica",
+    "galeria"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "arquivo": "mobilias/mancha_sangue.glb",
+   "tamanho_m": [
+    1.2,
+    0.002,
+    1.2
+   ],
+   "triangulos": 12,
+   "kb": 12.0
+  },
+  {
+   "id": "cacos_vidro",
+   "nome": "Cacos de vidro no chão",
+   "grupo": "mobilias",
+   "categoria": "sinais",
+   "montagem": "floor",
+   "lote": 6,
+   "comodos": [
+    "casas",
+    "galeria",
+    "supermercado",
+    "rua",
+    "posto"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "barulho": "alto ao pisar (atrai zumbis); agachado não faz barulho",
+   "armadilha": true,
+   "arquivo": "mobilias/cacos_vidro.glb",
+   "tamanho_m": [
+    1.27,
+    0.03,
+    1.201
+   ],
+   "triangulos": 748,
+   "kb": 36.8
+  },
+  {
+   "id": "louca_quebrada",
+   "nome": "Louça quebrada",
+   "grupo": "mobilias",
+   "categoria": "sinais",
+   "montagem": "floor",
+   "lote": 6,
+   "comodos": [
+    "cozinha",
+    "diner",
+    "casas"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "barulho": "médio ao pisar",
+   "arquivo": "mobilias/louca_quebrada.glb",
+   "tamanho_m": [
+    0.864,
+    0.076,
+    0.761
+   ],
+   "triangulos": 844,
+   "kb": 41.3
+  },
+  {
+   "id": "papeis_espalhados",
+   "nome": "Papéis espalhados",
+   "grupo": "mobilias",
+   "categoria": "sinais",
+   "montagem": "floor",
+   "lote": 6,
+   "comodos": [
+    "escritorio",
+    "delegacia",
+    "correios",
+    "escolinha",
+    "casas"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "arquivo": "mobilias/papeis_espalhados.glb",
+   "tamanho_m": [
+    1.584,
+    0.015,
+    1.439
+   ],
+   "triangulos": 212,
+   "kb": 24.0
+  },
+  {
+   "id": "cadeira_quebrada",
+   "nome": "Cadeira quebrada",
+   "grupo": "mobilias",
+   "categoria": "sinais",
+   "montagem": "floor",
+   "lote": 6,
+   "comodos": [
+    "casas",
+    "escolinha",
+    "diner",
+    "escritorio"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "desmonta": {
+    "madeira": 1
+   },
+   "arquivo": "mobilias/cadeira_quebrada.glb",
+   "tamanho_m": [
+    1.66,
+    0.42,
+    0.44
+   ],
+   "triangulos": 490,
+   "kb": 89.4
+  },
+  {
+   "id": "barricada_arrombada",
+   "nome": "Barricada arrombada",
+   "grupo": "mobilias",
+   "categoria": "sinais",
+   "montagem": "wall",
+   "lote": 6,
+   "comodos": [
+    "casas",
+    "galeria",
+    "supermercado",
+    "motel"
+   ],
+   "vao_m": [
+    0.9,
+    2.1,
+    0.0
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "desmonta": {
+    "madeira": 2
+   },
+   "significado": "alguém tentou se proteger aqui e não deu certo",
+   "arquivo": "mobilias/barricada_arrombada.glb",
+   "tamanho_m": [
+    1.384,
+    2.18,
+    1.288
+   ],
+   "triangulos": 2760,
+   "kb": 270.1
+  },
+  {
+   "id": "mural_desaparecidos",
+   "nome": "Mural de desaparecidos",
+   "grupo": "mobilias",
+   "categoria": "sinais",
+   "montagem": "wall",
+   "lote": 6,
+   "altura_sugerida_m": 1.0,
+   "comodos": [
+    "igreja",
+    "correios",
+    "estacao",
+    "rodoviaria",
+    "galeria",
+    "delegacia"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "pista": "pode ter o rosto de um sobrevivente que ainda está vivo",
+   "arquivo": "mobilias/mural_desaparecidos.glb",
+   "tamanho_m": [
+    1.2,
+    0.9,
+    0.038
+   ],
+   "triangulos": 452,
+   "kb": 144.2
+  },
+  {
+   "id": "cartaz_evacuacao",
+   "nome": "Cartaz de evacuação",
+   "grupo": "mobilias",
+   "categoria": "sinais",
+   "montagem": "wall",
+   "lote": 6,
+   "altura_sugerida_m": 1.2,
+   "comodos": [
+    "rua",
+    "galeria",
+    "estacao",
+    "rodoviaria",
+    "escolinha",
+    "correios"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "pista": "marca o ponto de resgate abandonado (estação de trem)",
+   "arquivo": "mobilias/cartaz_evacuacao.glb",
+   "tamanho_m": [
+    0.5,
+    0.7,
+    0.005
+   ],
+   "triangulos": 132,
+   "kb": 62.6
+  },
+  {
+   "id": "carro_abandonado",
+   "nome": "Carro abandonado",
+   "grupo": "mobilias",
+   "categoria": "rua",
+   "montagem": "floor",
+   "lote": 6,
+   "conteiner": true,
+   "saque": [
+    "combustivel",
+    "comida",
+    "ferramentas",
+    "mapas"
+   ],
+   "slots": 6,
+   "comodos": [
+    "rua",
+    "posto",
+    "estacionamento",
+    "garagem"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "obstaculo": true,
+   "coleta": {
+    "recurso": "combustivel",
+    "total": 2,
+    "ferramenta": "mangueira e galão",
+    "segundos_por_unidade": 10
+   },
+   "barulho": "alarme pode disparar",
+   "arquivo": "mobilias/carro_abandonado.glb",
+   "tamanho_m": [
+    1.92,
+    1.41,
+    4.51
+   ],
+   "triangulos": 5540,
+   "kb": 353.9,
+   "partes": [
+    {
+     "no": "porta",
+     "origem": [
+      0.842,
+      0.6,
+      0.93
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -60
+    }
+   ]
+  },
+  {
+   "id": "carrinho_bebe",
+   "nome": "Carrinho de bebê virado",
+   "grupo": "mobilias",
+   "categoria": "rua",
+   "montagem": "floor",
+   "lote": 6,
+   "comodos": [
+    "rua",
+    "casas",
+    "galeria"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "saque": [
+    "roupas",
+    "comida"
+   ],
+   "conteiner": true,
+   "slots": 2,
+   "arquivo": "mobilias/carrinho_bebe.glb",
+   "tamanho_m": [
+    1.854,
+    0.6,
+    1.138
+   ],
+   "triangulos": 4436,
+   "kb": 314.8
+  },
+  {
+   "id": "bicicleta",
+   "nome": "Bicicleta caída",
+   "grupo": "mobilias",
+   "categoria": "rua",
+   "montagem": "floor",
+   "lote": 6,
+   "comodos": [
+    "rua",
+    "casas",
+    "escolinha",
+    "garagem"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "desmonta": {
+    "sucata": 2
+   },
+   "arquivo": "mobilias/bicicleta.glb",
+   "tamanho_m": [
+    1.032,
+    0.581,
+    1.7
+   ],
+   "triangulos": 2592,
+   "kb": 126.6
+  },
+  {
+   "id": "cone_transito",
+   "nome": "Cone de trânsito",
+   "grupo": "mobilias",
+   "categoria": "rua",
+   "montagem": "floor",
+   "lote": 6,
+   "comodos": [
+    "rua",
+    "posto",
+    "garagem",
+    "estacao"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "portatil": true,
+   "peso_kg": 1.0,
+   "arquivo": "mobilias/cone_transito.glb",
+   "tamanho_m": [
+    0.38,
+    0.72,
+    0.38
+   ],
+   "triangulos": 428,
+   "kb": 21.8
+  },
+  {
+   "id": "cavalete_bloqueio",
+   "nome": "Cavalete de bloqueio",
+   "grupo": "mobilias",
+   "categoria": "rua",
+   "montagem": "floor",
+   "lote": 6,
+   "comodos": [
+    "rua",
+    "estacao",
+    "delegacia",
+    "quartel"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "obstaculo": true,
+   "barricada": true,
+   "portatil": true,
+   "peso_kg": 9.0,
+   "arquivo": "mobilias/cavalete_bloqueio.glb",
+   "tamanho_m": [
+    1.2,
+    1.104,
+    0.629
+   ],
+   "triangulos": 312,
+   "kb": 47.0
+  },
+  {
+   "id": "fita_isolamento",
+   "nome": "Fita de isolamento com cones",
+   "grupo": "mobilias",
+   "categoria": "rua",
+   "montagem": "floor",
+   "lote": 6,
+   "comodos": [
+    "rua",
+    "delegacia",
+    "clinica",
+    "galeria"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "comprimento_m": 3.0,
+   "arquivo": "mobilias/fita_isolamento.glb",
+   "tamanho_m": [
+    3.38,
+    0.72,
+    0.393
+   ],
+   "triangulos": 1192,
+   "kb": 93.5
+  },
+  {
+   "id": "hidrante",
+   "nome": "Hidrante de calçada",
+   "grupo": "mobilias",
+   "categoria": "rua",
+   "montagem": "floor",
+   "lote": 6,
+   "comodos": [
+    "rua"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "coleta": {
+    "recurso": "agua",
+    "total": 6,
+    "ferramenta": "chave_inglesa",
+    "segundos_por_unidade": 4
+   },
+   "observacao": "água só enquanto a rede tiver pressão",
+   "arquivo": "mobilias/hidrante.glb",
+   "tamanho_m": [
+    0.38,
+    0.74,
+    0.315
+   ],
+   "triangulos": 1804,
+   "kb": 86.3
+  },
+  {
+   "id": "orelhao",
+   "nome": "Telefone público",
+   "grupo": "mobilias",
+   "categoria": "rua",
+   "montagem": "floor",
+   "lote": 6,
+   "comodos": [
+    "rua",
+    "posto",
+    "estacao",
+    "rodoviaria"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "interacao": "fone mudo; às vezes toca de madrugada (evento)",
+   "arquivo": "mobilias/orelhao.glb",
+   "tamanho_m": [
+    0.899,
+    2.021,
+    0.501
+   ],
+   "triangulos": 4024,
+   "kb": 295.9
+  },
+  {
+   "id": "banco_praca",
+   "nome": "Banco de praça",
+   "grupo": "mobilias",
+   "categoria": "rua",
+   "montagem": "floor",
+   "lote": 6,
+   "comodos": [
+    "rua",
+    "praca",
+    "estacao",
+    "rodoviaria",
+    "igreja"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "sentar": true,
+   "arquivo": "mobilias/banco_praca.glb",
+   "tamanho_m": [
+    1.8,
+    0.891,
+    0.629
+   ],
+   "triangulos": 472,
+   "kb": 86.1
+  },
+  {
+   "id": "lixo_espalhado",
+   "nome": "Lixo espalhado na calçada",
+   "grupo": "mobilias",
+   "categoria": "rua",
+   "montagem": "floor",
+   "lote": 6,
+   "comodos": [
+    "rua",
+    "diner",
+    "posto",
+    "galeria"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "saque": [
+    "comida"
+   ],
+   "conteiner": true,
+   "slots": 1,
+   "barulho": "latas fazem barulho ao chutar",
+   "arquivo": "mobilias/lixo_espalhado.glb",
+   "tamanho_m": [
+    1.643,
+    0.534,
+    1.479
+   ],
+   "triangulos": 2748,
+   "kb": 158.9
+  },
+  {
+   "id": "varal_roupas",
+   "nome": "Varal com roupas",
+   "grupo": "mobilias",
+   "categoria": "rua",
+   "montagem": "floor",
+   "lote": 6,
+   "comodos": [
+    "quintal",
+    "casas",
+    "abrigo",
+    "motel"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "saque": [
+    "roupas"
+   ],
+   "conteiner": true,
+   "slots": 3,
+   "arquivo": "mobilias/varal_roupas.glb",
+   "tamanho_m": [
+    2.87,
+    1.9,
+    0.6
+   ],
+   "triangulos": 1768,
+   "kb": 311.6
+  },
+  {
+   "id": "churrasqueira",
+   "nome": "Churrasqueira de quintal",
+   "grupo": "mobilias",
+   "categoria": "rua",
+   "montagem": "floor",
+   "lote": 6,
+   "comodos": [
+    "quintal",
+    "casas",
+    "abrigo"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "estacao": "cozinhar (como a fogueira, com menos fumaça)",
+   "usa": "lenha",
+   "portatil": true,
+   "peso_kg": 12.0,
+   "arquivo": "mobilias/churrasqueira.glb",
+   "tamanho_m": [
+    0.6,
+    1.058,
+    0.631
+   ],
+   "triangulos": 2192,
+   "kb": 160.7,
+   "partes": [
+    {
+     "no": "tampa",
+     "origem": [
+      0,
+      0.79,
+      -0.29
+     ],
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -100
+    }
+   ]
+  },
+  {
+   "id": "cerca_quebrada",
+   "nome": "Cerca de madeira quebrada",
+   "grupo": "mobilias",
+   "categoria": "rua",
+   "montagem": "floor",
+   "lote": 6,
+   "comodos": [
+    "quintal",
+    "rua",
+    "fazenda"
+   ],
+   "ambiente": true,
+   "colisao": "caixa",
+   "modulo_m": 2.0,
+   "desmonta": {
+    "madeira": 3
+   },
+   "passagem": "brecha de 0,6 m: zumbis e jogador passam agachados",
+   "arquivo": "mobilias/cerca_quebrada.glb",
+   "tamanho_m": [
+    2.09,
+    1.118,
+    1.1
+   ],
+   "triangulos": 814,
+   "kb": 65.3
+  },
+  {
+   "id": "mangueira_jardim",
+   "nome": "Mangueira de jardim enrolada",
+   "grupo": "mobilias",
+   "categoria": "rua",
+   "montagem": "floor",
+   "lote": 6,
+   "comodos": [
+    "quintal",
+    "casas",
+    "fazenda"
+   ],
+   "ambiente": true,
+   "colisao": "nenhuma",
+   "portatil": true,
+   "peso_kg": 3.0,
+   "uso": "tirar gasolina de carros (com galão) e regar a horta",
+   "arquivo": "mobilias/mangueira_jardim.glb",
+   "tamanho_m": [
+    0.801,
+    0.036,
+    0.825
+   ],
+   "triangulos": 4324,
+   "kb": 204.4
   }
  ]
 }

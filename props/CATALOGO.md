@@ -57,6 +57,33 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Mala de viagem (`mala_viagem`) | 5 | Quarto | 0,75 × 0,25 × 0,52 | 5 espaços: roupas, remedios, utensilios | tampa | - | 2696 |
 | Pilha de sucata (`pilha_sucata`) | 5 | Rua e quintal | 1,70 × 0,59 × 1,64 | - | - | - | 4040 |
 | Toco de rachar lenha (`toco_lenha`) | 5 | Rua e quintal | 1,09 × 0,50 × 0,74 | - | - | - | 1668 |
+| Pichação "NÃO ENTRE" (`pichacao_nao_entre`) | 6 | Sinais do fim do mundo | 1,80 × 0,90 × 0,00 | - | - | - | 12 |
+| Pichação "INFECTADOS LÁ DENTRO" (`pichacao_infectados`) | 6 | Sinais do fim do mundo | 1,80 × 0,90 × 0,00 | - | - | - | 12 |
+| Pichação "FOMOS PARA A IGREJA" (`pichacao_igreja`) | 6 | Sinais do fim do mundo | 1,80 × 0,90 × 0,00 | - | - | - | 12 |
+| Marca de busca em X na porta (`marca_busca`) | 6 | Sinais do fim do mundo | 0,70 × 0,70 × 0,00 | - | - | - | 12 |
+| Riscos de contagem de dias (`contagem_dias`) | 6 | Sinais do fim do mundo | 1,00 × 0,50 × 0,00 | - | - | - | 12 |
+| Mancha de sangue seco (`mancha_sangue`) | 6 | Sinais do fim do mundo | 1,20 × 0,00 × 1,20 | - | - | - | 12 |
+| Cacos de vidro no chão (`cacos_vidro`) | 6 | Sinais do fim do mundo | 1,27 × 0,03 × 1,20 | - | - | - | 748 |
+| Louça quebrada (`louca_quebrada`) | 6 | Sinais do fim do mundo | 0,86 × 0,08 × 0,76 | - | - | - | 844 |
+| Papéis espalhados (`papeis_espalhados`) | 6 | Sinais do fim do mundo | 1,58 × 0,01 × 1,44 | - | - | - | 212 |
+| Cadeira quebrada (`cadeira_quebrada`) | 6 | Sinais do fim do mundo | 1,66 × 0,42 × 0,44 | - | - | - | 490 |
+| Barricada arrombada (`barricada_arrombada`) | 6 | Sinais do fim do mundo | 1,38 × 2,18 × 1,29 | - | - | - | 2760 |
+| Mural de desaparecidos (`mural_desaparecidos`) | 6 | Sinais do fim do mundo | 1,20 × 0,90 × 0,04 | - | - | - | 452 |
+| Cartaz de evacuação (`cartaz_evacuacao`) | 6 | Sinais do fim do mundo | 0,50 × 0,70 × 0,01 | - | - | - | 132 |
+| Carro abandonado (`carro_abandonado`) | 6 | Rua e quintal | 1,92 × 1,41 × 4,51 | 6 espaços: combustivel, comida, ferramentas, mapas | porta | - | 5540 |
+| Carrinho de bebê virado (`carrinho_bebe`) | 6 | Rua e quintal | 1,85 × 0,60 × 1,14 | 2 espaços: roupas, comida | - | - | 4436 |
+| Bicicleta caída (`bicicleta`) | 6 | Rua e quintal | 1,03 × 0,58 × 1,70 | - | - | - | 2592 |
+| Cone de trânsito (`cone_transito`) | 6 | Rua e quintal | 0,38 × 0,72 × 0,38 | - | - | - | 428 |
+| Cavalete de bloqueio (`cavalete_bloqueio`) | 6 | Rua e quintal | 1,20 × 1,10 × 0,63 | - | - | barricada | 312 |
+| Fita de isolamento com cones (`fita_isolamento`) | 6 | Rua e quintal | 3,38 × 0,72 × 0,39 | - | - | - | 1192 |
+| Hidrante de calçada (`hidrante`) | 6 | Rua e quintal | 0,38 × 0,74 × 0,32 | - | - | - | 1804 |
+| Telefone público (`orelhao`) | 6 | Rua e quintal | 0,90 × 2,02 × 0,50 | - | - | - | 4024 |
+| Banco de praça (`banco_praca`) | 6 | Rua e quintal | 1,80 × 0,89 × 0,63 | - | - | sentar | 472 |
+| Lixo espalhado na calçada (`lixo_espalhado`) | 6 | Rua e quintal | 1,64 × 0,53 × 1,48 | 1 espaços: comida | - | - | 2748 |
+| Varal com roupas (`varal_roupas`) | 6 | Rua e quintal | 2,87 × 1,90 × 0,60 | 3 espaços: roupas | - | - | 1768 |
+| Churrasqueira de quintal (`churrasqueira`) | 6 | Rua e quintal | 0,60 × 1,06 × 0,63 | - | tampa | - | 2192 |
+| Cerca de madeira quebrada (`cerca_quebrada`) | 6 | Rua e quintal | 2,09 × 1,12 × 1,10 | - | - | - | 814 |
+| Mangueira de jardim enrolada (`mangueira_jardim`) | 6 | Rua e quintal | 0,80 × 0,04 × 0,82 | - | - | - | 4324 |
 
 ## Loot
 

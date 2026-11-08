@@ -1,0 +1,7077 @@
+{
+ "grid": {
+  "module_width": 2.0,
+  "ground": 0.0,
+  "floor_height": 3.6,
+  "floor_levels": [
+   0.15,
+   3.75,
+   7.3500000000000005,
+   10.950000000000001,
+   14.55,
+   18.15,
+   21.75,
+   25.349999999999998
+  ],
+  "floors": 7,
+  "footprint": [
+   [
+    -14.0,
+    -6.0
+   ],
+   [
+    10.0,
+    -6.0
+   ],
+   [
+    10.0,
+    18.0
+   ],
+   [
+    0.0,
+    18.0
+   ],
+   [
+    0.0,
+    6.0
+   ],
+   [
+    -14.0,
+    6.0
+   ],
+   [
+    -14.0,
+    -6.0
+   ]
+  ],
+  "wall_thickness": 0.3,
+  "partition_thickness": 0.12,
+  "stair": {
+   "risers": 18,
+   "rise": 0.2,
+   "tread": 0.28,
+   "shaft": [
+    -2.0,
+    2.0,
+    -6.0,
+    -1.0
+   ]
+  },
+  "helipad": {
+   "center": [
+    -8.0,
+    0.0
+   ],
+   "radius": 5.2
+  },
+  "site": {
+   "x": [
+    -34.0,
+    30.0
+   ],
+   "z": [
+    -16.0,
+    36.0
+   ]
+  },
+  "textures": "PBR (albedo + normal + ORM), 2 m tiles, UV in metres / 2"
+ },
+ "placements": [
+  {
+   "piece": "site",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "shell_g",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "ext"
+   ]
+  },
+  {
+   "piece": "slab_g",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "walls_g",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "stair",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "door_stair",
+   "pos": [
+    -0.54,
+    0.15,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_exam_364x458",
+   "pos": [
+    -11.88,
+    0.15,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -13.44,
+    0.15,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -11.86,
+    0.15,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_exam_388x458",
+   "pos": [
+    -8.0,
+    0.15,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -9.68,
+    0.15,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -7.86,
+    0.15,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_exam_388x458",
+   "pos": [
+    -4.0,
+    0.15,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -5.68,
+    0.15,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -3.86,
+    0.15,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_exam_364x458",
+   "pos": [
+    7.88,
+    0.15,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.32,
+    0.15,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.9,
+    0.15,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_exam_482x358",
+   "pos": [
+    6.12,
+    0.15,
+    3.53
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    0.15,
+    1.38
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    0.15,
+    4.14
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "lobby",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "er",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "door_double",
+   "pos": [
+    4.06,
+    0.15,
+    5.76
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "door_double",
+   "pos": [
+    5.94,
+    0.15,
+    5.76
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_glass",
+   "pos": [
+    -8.99,
+    0.15,
+    5.85
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "door_glass",
+   "pos": [
+    -7.01,
+    0.15,
+    5.85
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_glass",
+   "pos": [
+    4.01,
+    0.15,
+    17.85
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "door_glass",
+   "pos": [
+    5.99,
+    0.15,
+    17.85
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_glass_1",
+   "pos": [
+    -13.85,
+    0.15,
+    -0.54
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": -180.0
+   }
+  },
+  {
+   "piece": "door_service",
+   "pos": [
+    9.85,
+    0.15,
+    -0.54
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "shell_t",
+   "pos": [
+    0.0,
+    3.75,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "ext"
+   ]
+  },
+  {
+   "piece": "slab_1",
+   "pos": [
+    0.0,
+    3.75,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "walls_t",
+   "pos": [
+    0.0,
+    3.75,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "stair",
+   "pos": [
+    0.0,
+    3.75,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "door_stair",
+   "pos": [
+    -0.54,
+    3.75,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_364x458",
+   "pos": [
+    -11.88,
+    3.75,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -13.44,
+    3.75,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -11.86,
+    3.75,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -8.0,
+    3.75,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -9.68,
+    3.75,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -7.86,
+    3.75,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -4.0,
+    3.75,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -5.68,
+    3.75,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -3.86,
+    3.75,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_364x458",
+   "pos": [
+    7.88,
+    3.75,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.32,
+    3.75,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.9,
+    3.75,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_364x458",
+   "pos": [
+    -11.88,
+    3.75,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -10.32,
+    3.75,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -11.9,
+    3.75,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -8.0,
+    3.75,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -6.32,
+    3.75,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -8.14,
+    3.75,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -4.0,
+    3.75,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -2.32,
+    3.75,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -4.14,
+    3.75,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    0.0,
+    3.75,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    1.68,
+    3.75,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -0.14,
+    3.75,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_412x358",
+   "pos": [
+    3.88,
+    3.75,
+    7.88
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    3.94,
+    3.75,
+    9.68
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    2.04,
+    3.75,
+    7.62
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "room_ward_388x358",
+   "pos": [
+    3.88,
+    3.75,
+    12.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    3.94,
+    3.75,
+    13.68
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    2.04,
+    3.75,
+    11.86
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "room_ward_364x358",
+   "pos": [
+    3.88,
+    3.75,
+    15.88
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    3.94,
+    3.75,
+    17.44
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    2.04,
+    3.75,
+    15.86
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "room_ward_482x358",
+   "pos": [
+    6.12,
+    3.75,
+    3.53
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    3.75,
+    1.38
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    3.75,
+    4.14
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_388x358",
+   "pos": [
+    6.12,
+    3.75,
+    8.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    3.75,
+    6.32
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    3.75,
+    8.14
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_388x358",
+   "pos": [
+    6.12,
+    3.75,
+    12.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    3.75,
+    10.32
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    3.75,
+    12.14
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_364x358",
+   "pos": [
+    6.12,
+    3.75,
+    15.88
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    3.75,
+    14.32
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    3.75,
+    15.9
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "nurse_station",
+   "pos": [
+    0.0,
+    3.75,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "corridor_props",
+   "pos": [
+    0.0,
+    3.75,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "shell_t",
+   "pos": [
+    0.0,
+    7.35,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "ext"
+   ]
+  },
+  {
+   "piece": "slab_t",
+   "pos": [
+    0.0,
+    7.35,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "walls_t",
+   "pos": [
+    0.0,
+    7.35,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "stair",
+   "pos": [
+    0.0,
+    7.35,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "door_stair",
+   "pos": [
+    -0.54,
+    7.35,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_364x458",
+   "pos": [
+    -11.88,
+    7.35,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -13.44,
+    7.35,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -11.86,
+    7.35,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -8.0,
+    7.35,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -9.68,
+    7.35,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -7.86,
+    7.35,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -4.0,
+    7.35,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -5.68,
+    7.35,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -3.86,
+    7.35,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_364x458",
+   "pos": [
+    7.88,
+    7.35,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.32,
+    7.35,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.9,
+    7.35,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_364x458",
+   "pos": [
+    -11.88,
+    7.35,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -10.32,
+    7.35,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -11.9,
+    7.35,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -8.0,
+    7.35,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -6.32,
+    7.35,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -8.14,
+    7.35,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -4.0,
+    7.35,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -2.32,
+    7.35,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -4.14,
+    7.35,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    0.0,
+    7.35,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    1.68,
+    7.35,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -0.14,
+    7.35,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_412x358",
+   "pos": [
+    3.88,
+    7.35,
+    7.88
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    3.94,
+    7.35,
+    9.68
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    2.04,
+    7.35,
+    7.62
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "room_ward_388x358",
+   "pos": [
+    3.88,
+    7.35,
+    12.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    3.94,
+    7.35,
+    13.68
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    2.04,
+    7.35,
+    11.86
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "room_ward_364x358",
+   "pos": [
+    3.88,
+    7.35,
+    15.88
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    3.94,
+    7.35,
+    17.44
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    2.04,
+    7.35,
+    15.86
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "room_ward_482x358",
+   "pos": [
+    6.12,
+    7.35,
+    3.53
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    7.35,
+    1.38
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    7.35,
+    4.14
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_388x358",
+   "pos": [
+    6.12,
+    7.35,
+    8.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    7.35,
+    6.32
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    7.35,
+    8.14
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_388x358",
+   "pos": [
+    6.12,
+    7.35,
+    12.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    7.35,
+    10.32
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    7.35,
+    12.14
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_364x358",
+   "pos": [
+    6.12,
+    7.35,
+    15.88
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    7.35,
+    14.32
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    7.35,
+    15.9
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor2",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "nurse_station",
+   "pos": [
+    0.0,
+    7.35,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "corridor_props",
+   "pos": [
+    0.0,
+    7.35,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor2"
+   ]
+  },
+  {
+   "piece": "shell_t",
+   "pos": [
+    0.0,
+    10.95,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "ext"
+   ]
+  },
+  {
+   "piece": "slab_t",
+   "pos": [
+    0.0,
+    10.95,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "walls_t",
+   "pos": [
+    0.0,
+    10.95,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "stair",
+   "pos": [
+    0.0,
+    10.95,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "door_stair",
+   "pos": [
+    -0.54,
+    10.95,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_364x458",
+   "pos": [
+    -11.88,
+    10.95,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -13.44,
+    10.95,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -11.86,
+    10.95,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -8.0,
+    10.95,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -9.68,
+    10.95,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -7.86,
+    10.95,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -4.0,
+    10.95,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -5.68,
+    10.95,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -3.86,
+    10.95,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_364x458",
+   "pos": [
+    7.88,
+    10.95,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.32,
+    10.95,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.9,
+    10.95,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_364x458",
+   "pos": [
+    -11.88,
+    10.95,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -10.32,
+    10.95,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -11.9,
+    10.95,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -8.0,
+    10.95,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -6.32,
+    10.95,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -8.14,
+    10.95,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -4.0,
+    10.95,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -2.32,
+    10.95,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -4.14,
+    10.95,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    0.0,
+    10.95,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    1.68,
+    10.95,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -0.14,
+    10.95,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_412x358",
+   "pos": [
+    3.88,
+    10.95,
+    7.88
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    3.94,
+    10.95,
+    9.68
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    2.04,
+    10.95,
+    7.62
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "room_ward_388x358",
+   "pos": [
+    3.88,
+    10.95,
+    12.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    3.94,
+    10.95,
+    13.68
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    2.04,
+    10.95,
+    11.86
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "room_ward_364x358",
+   "pos": [
+    3.88,
+    10.95,
+    15.88
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    3.94,
+    10.95,
+    17.44
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    2.04,
+    10.95,
+    15.86
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "room_ward_482x358",
+   "pos": [
+    6.12,
+    10.95,
+    3.53
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    10.95,
+    1.38
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    10.95,
+    4.14
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_388x358",
+   "pos": [
+    6.12,
+    10.95,
+    8.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    10.95,
+    6.32
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    10.95,
+    8.14
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_388x358",
+   "pos": [
+    6.12,
+    10.95,
+    12.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    10.95,
+    10.32
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    10.95,
+    12.14
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_364x358",
+   "pos": [
+    6.12,
+    10.95,
+    15.88
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    10.95,
+    14.32
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    10.95,
+    15.9
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor3",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "nurse_station",
+   "pos": [
+    0.0,
+    10.95,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "corridor_props",
+   "pos": [
+    0.0,
+    10.95,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "shell_t",
+   "pos": [
+    0.0,
+    14.55,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "ext"
+   ]
+  },
+  {
+   "piece": "slab_t",
+   "pos": [
+    0.0,
+    14.55,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "walls_t",
+   "pos": [
+    0.0,
+    14.55,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "stair",
+   "pos": [
+    0.0,
+    14.55,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "door_stair",
+   "pos": [
+    -0.54,
+    14.55,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_364x458",
+   "pos": [
+    -11.88,
+    14.55,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -13.44,
+    14.55,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -11.86,
+    14.55,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -8.0,
+    14.55,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -9.68,
+    14.55,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -7.86,
+    14.55,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -4.0,
+    14.55,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -5.68,
+    14.55,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -3.86,
+    14.55,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_364x458",
+   "pos": [
+    7.88,
+    14.55,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.32,
+    14.55,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.9,
+    14.55,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_364x458",
+   "pos": [
+    -11.88,
+    14.55,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -10.32,
+    14.55,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -11.9,
+    14.55,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -8.0,
+    14.55,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -6.32,
+    14.55,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -8.14,
+    14.55,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -4.0,
+    14.55,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -2.32,
+    14.55,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -4.14,
+    14.55,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    0.0,
+    14.55,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    1.68,
+    14.55,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -0.14,
+    14.55,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_412x358",
+   "pos": [
+    3.88,
+    14.55,
+    7.88
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    3.94,
+    14.55,
+    9.68
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    2.04,
+    14.55,
+    7.62
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "room_ward_388x358",
+   "pos": [
+    3.88,
+    14.55,
+    12.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    3.94,
+    14.55,
+    13.68
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    2.04,
+    14.55,
+    11.86
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "room_ward_364x358",
+   "pos": [
+    3.88,
+    14.55,
+    15.88
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    3.94,
+    14.55,
+    17.44
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    2.04,
+    14.55,
+    15.86
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "room_ward_482x358",
+   "pos": [
+    6.12,
+    14.55,
+    3.53
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    14.55,
+    1.38
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    14.55,
+    4.14
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_388x358",
+   "pos": [
+    6.12,
+    14.55,
+    8.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    14.55,
+    6.32
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    14.55,
+    8.14
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_388x358",
+   "pos": [
+    6.12,
+    14.55,
+    12.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    14.55,
+    10.32
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    14.55,
+    12.14
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_364x358",
+   "pos": [
+    6.12,
+    14.55,
+    15.88
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    14.55,
+    14.32
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    14.55,
+    15.9
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor4",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "nurse_station",
+   "pos": [
+    0.0,
+    14.55,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "corridor_props",
+   "pos": [
+    0.0,
+    14.55,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor4"
+   ]
+  },
+  {
+   "piece": "shell_t",
+   "pos": [
+    0.0,
+    18.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "ext"
+   ]
+  },
+  {
+   "piece": "slab_t",
+   "pos": [
+    0.0,
+    18.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "walls_t",
+   "pos": [
+    0.0,
+    18.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "stair",
+   "pos": [
+    0.0,
+    18.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "door_stair",
+   "pos": [
+    -0.54,
+    18.15,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_364x458",
+   "pos": [
+    -11.88,
+    18.15,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -13.44,
+    18.15,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -11.86,
+    18.15,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -8.0,
+    18.15,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -9.68,
+    18.15,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -7.86,
+    18.15,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -4.0,
+    18.15,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -5.68,
+    18.15,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -3.86,
+    18.15,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_364x458",
+   "pos": [
+    7.88,
+    18.15,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.32,
+    18.15,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.9,
+    18.15,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_364x458",
+   "pos": [
+    -11.88,
+    18.15,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -10.32,
+    18.15,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -11.9,
+    18.15,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -8.0,
+    18.15,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -6.32,
+    18.15,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -8.14,
+    18.15,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -4.0,
+    18.15,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -2.32,
+    18.15,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -4.14,
+    18.15,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    0.0,
+    18.15,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    1.68,
+    18.15,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -0.14,
+    18.15,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_412x358",
+   "pos": [
+    3.88,
+    18.15,
+    7.88
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    3.94,
+    18.15,
+    9.68
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    2.04,
+    18.15,
+    7.62
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "room_ward_388x358",
+   "pos": [
+    3.88,
+    18.15,
+    12.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    3.94,
+    18.15,
+    13.68
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    2.04,
+    18.15,
+    11.86
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "room_ward_364x358",
+   "pos": [
+    3.88,
+    18.15,
+    15.88
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    3.94,
+    18.15,
+    17.44
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    2.04,
+    18.15,
+    15.86
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "room_ward_482x358",
+   "pos": [
+    6.12,
+    18.15,
+    3.53
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    18.15,
+    1.38
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    18.15,
+    4.14
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_388x358",
+   "pos": [
+    6.12,
+    18.15,
+    8.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    18.15,
+    6.32
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    18.15,
+    8.14
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_388x358",
+   "pos": [
+    6.12,
+    18.15,
+    12.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    18.15,
+    10.32
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    18.15,
+    12.14
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_364x358",
+   "pos": [
+    6.12,
+    18.15,
+    15.88
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    18.15,
+    14.32
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    18.15,
+    15.9
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor5",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "nurse_station",
+   "pos": [
+    0.0,
+    18.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "corridor_props",
+   "pos": [
+    0.0,
+    18.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor5"
+   ]
+  },
+  {
+   "piece": "shell_t",
+   "pos": [
+    0.0,
+    21.75,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "ext"
+   ]
+  },
+  {
+   "piece": "slab_t",
+   "pos": [
+    0.0,
+    21.75,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "walls_t",
+   "pos": [
+    0.0,
+    21.75,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "stair",
+   "pos": [
+    0.0,
+    21.75,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "door_stair",
+   "pos": [
+    -0.54,
+    21.75,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_364x458",
+   "pos": [
+    -11.88,
+    21.75,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -13.44,
+    21.75,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -11.86,
+    21.75,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -8.0,
+    21.75,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -9.68,
+    21.75,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -7.86,
+    21.75,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -4.0,
+    21.75,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -5.68,
+    21.75,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -3.86,
+    21.75,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_364x458",
+   "pos": [
+    7.88,
+    21.75,
+    -1.12
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.32,
+    21.75,
+    -1.06
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.9,
+    21.75,
+    -2.96
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 270.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "room_ward_364x458",
+   "pos": [
+    -11.88,
+    21.75,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -10.32,
+    21.75,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -11.9,
+    21.75,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -8.0,
+    21.75,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -6.32,
+    21.75,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -8.14,
+    21.75,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    -4.0,
+    21.75,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    -2.32,
+    21.75,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -4.14,
+    21.75,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_388x458",
+   "pos": [
+    0.0,
+    21.75,
+    1.12
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    1.68,
+    21.75,
+    1.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    -0.14,
+    21.75,
+    2.96
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "room_ward_412x358",
+   "pos": [
+    3.88,
+    21.75,
+    7.88
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    3.94,
+    21.75,
+    9.68
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    2.04,
+    21.75,
+    7.62
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "room_ward_388x358",
+   "pos": [
+    3.88,
+    21.75,
+    12.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    3.94,
+    21.75,
+    13.68
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    2.04,
+    21.75,
+    11.86
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "room_ward_364x358",
+   "pos": [
+    3.88,
+    21.75,
+    15.88
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    3.94,
+    21.75,
+    17.44
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    2.04,
+    21.75,
+    15.86
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "room_ward_482x358",
+   "pos": [
+    6.12,
+    21.75,
+    3.53
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    21.75,
+    1.38
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    21.75,
+    4.14
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_388x358",
+   "pos": [
+    6.12,
+    21.75,
+    8.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    21.75,
+    6.32
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    21.75,
+    8.14
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_388x358",
+   "pos": [
+    6.12,
+    21.75,
+    12.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    21.75,
+    10.32
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    21.75,
+    12.14
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "room_ward_364x358",
+   "pos": [
+    6.12,
+    21.75,
+    15.88
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "door_room",
+   "pos": [
+    6.06,
+    21.75,
+    14.32
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_bath",
+   "pos": [
+    7.96,
+    21.75,
+    15.9
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "predio",
+    "floor6",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "nurse_station",
+   "pos": [
+    0.0,
+    21.75,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "corridor_props",
+   "pos": [
+    0.0,
+    21.75,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor6"
+   ]
+  },
+  {
+   "piece": "slab_t",
+   "pos": [
+    0.0,
+    25.35,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor7"
+   ]
+  },
+  {
+   "piece": "roof",
+   "pos": [
+    0.0,
+    25.35,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "door_stair",
+   "pos": [
+    -0.54,
+    25.35,
+    -1.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "roof",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "helipad",
+   "pos": [
+    -8.0,
+    25.362,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "ac_unit",
+   "pos": [
+    3.2,
+    25.362,
+    9.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "ac_unit",
+   "pos": [
+    6.6,
+    25.362,
+    9.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "ac_unit",
+   "pos": [
+    6.6,
+    25.362,
+    3.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "ahu",
+   "pos": [
+    4.6,
+    25.362,
+    14.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "windsock",
+   "pos": [
+    9.0,
+    25.362,
+    16.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "cross_sign",
+   "pos": [
+    5.0,
+    26.43,
+    17.85
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "cross_sign",
+   "pos": [
+    9.85,
+    26.43,
+    11.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "predio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy_entr",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio"
+   ]
+  },
+  {
+   "piece": "canopy_amb",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio"
+   ]
+  },
+  {
+   "piece": "ambulance",
+   "pos": [
+    3.0,
+    -0.03,
+    22.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "ambulance",
+   "pos": [
+    7.2,
+    -0.03,
+    22.7
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "monument_sign",
+   "pos": [
+    -12.8,
+    0.0,
+    26.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_sedan_r",
+   "pos": [
+    -30.3,
+    -0.03,
+    -8.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_wagon_b",
+   "pos": [
+    -30.3,
+    -0.03,
+    -5.4
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_hatch_y",
+   "pos": [
+    -30.3,
+    -0.03,
+    2.4
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_sedan_w",
+   "pos": [
+    -30.3,
+    -0.03,
+    10.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_pickup_s",
+   "pos": [
+    -30.3,
+    -0.03,
+    18.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_coupe_g",
+   "pos": [
+    -19.7,
+    -0.03,
+    -10.6
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_sedan_w",
+   "pos": [
+    -19.7,
+    -0.03,
+    -2.8
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_hatch_y",
+   "pos": [
+    -19.7,
+    -0.03,
+    -0.2
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_sedan_r",
+   "pos": [
+    -19.7,
+    -0.03,
+    7.6
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_wagon_b",
+   "pos": [
+    -19.7,
+    -0.03,
+    12.8
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_pickup_s",
+   "pos": [
+    -19.7,
+    -0.03,
+    20.6
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -32.4,
+    -0.03,
+    -10.6
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -32.4,
+    -0.03,
+    -8.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -32.4,
+    -0.03,
+    -5.4
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -32.4,
+    -0.03,
+    -2.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -32.4,
+    -0.03,
+    -0.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -32.4,
+    -0.03,
+    2.4
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -32.4,
+    -0.03,
+    5.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -32.4,
+    -0.03,
+    7.6
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -32.4,
+    -0.03,
+    10.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -32.4,
+    -0.03,
+    12.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -32.4,
+    -0.03,
+    15.4
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -32.4,
+    -0.03,
+    18.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -32.4,
+    -0.03,
+    20.6
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -32.4,
+    -0.03,
+    23.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -32.4,
+    -0.03,
+    25.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -17.6,
+    -0.03,
+    -10.6
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -17.6,
+    -0.03,
+    -8.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -17.6,
+    -0.03,
+    -5.4
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -17.6,
+    -0.03,
+    -2.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -17.6,
+    -0.03,
+    -0.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -17.6,
+    -0.03,
+    2.4
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -17.6,
+    -0.03,
+    5.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -17.6,
+    -0.03,
+    7.6
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -17.6,
+    -0.03,
+    10.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -17.6,
+    -0.03,
+    12.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -17.6,
+    -0.03,
+    15.4
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -17.6,
+    -0.03,
+    18.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -17.6,
+    -0.03,
+    20.6
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -17.6,
+    -0.03,
+    23.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -17.6,
+    -0.03,
+    25.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_pole",
+   "pos": [
+    -33.4,
+    0.0,
+    -6.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_pole",
+   "pos": [
+    -33.4,
+    0.0,
+    8.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_pole",
+   "pos": [
+    -33.4,
+    0.0,
+    22.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_pole",
+   "pos": [
+    -16.6,
+    0.0,
+    -6.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_pole",
+   "pos": [
+    -16.6,
+    0.0,
+    8.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_pole",
+   "pos": [
+    -16.6,
+    0.0,
+    22.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_pole",
+   "pos": [
+    -2.0,
+    0.0,
+    27.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_pole",
+   "pos": [
+    12.0,
+    0.0,
+    27.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_pole",
+   "pos": [
+    -16.0,
+    0.0,
+    27.6
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_pole",
+   "pos": [
+    14.0,
+    0.0,
+    2.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_pole",
+   "pos": [
+    -16.0,
+    0.0,
+    12.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bollard",
+   "pos": [
+    -9.5,
+    0.0,
+    28.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bollard",
+   "pos": [
+    -8.0,
+    0.0,
+    28.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bollard",
+   "pos": [
+    -6.5,
+    0.0,
+    28.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "park_bench",
+   "pos": [
+    -14.4,
+    0.0,
+    9.5
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "park_bench",
+   "pos": [
+    -14.4,
+    0.0,
+    11.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "park_bench",
+   "pos": [
+    -1.0,
+    0.0,
+    9.6
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    -14.3,
+    0.0,
+    12.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    -0.6,
+    0.0,
+    12.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    12.6,
+    0.0,
+    -1.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    -6.0,
+    0.0,
+    27.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -14.0,
+    0.0,
+    22.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    -2.5,
+    0.0,
+    22.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    15.0,
+    0.0,
+    23.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    20.0,
+    0.0,
+    10.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    21.0,
+    0.0,
+    -4.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -8.0,
+    0.0,
+    -11.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    4.0,
+    0.0,
+    -12.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    16.0,
+    0.0,
+    -12.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    24.0,
+    0.0,
+    26.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    -20.0,
+    0.0,
+    -14.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    -14.0,
+    0.0,
+    16.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -13.4,
+    0.02,
+    6.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -12.2,
+    0.02,
+    6.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -11.0,
+    0.02,
+    6.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -5.2,
+    0.02,
+    6.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -4.0,
+    0.02,
+    6.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -2.8,
+    0.02,
+    6.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -1.6,
+    0.02,
+    6.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -0.6,
+    0.02,
+    6.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -0.65,
+    0.02,
+    8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -0.65,
+    0.02,
+    9.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -0.65,
+    0.02,
+    11.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -0.65,
+    0.02,
+    12.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -0.65,
+    0.02,
+    14.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -0.65,
+    0.02,
+    16.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -0.65,
+    0.02,
+    17.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -13.0,
+    0.02,
+    -6.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -10.6,
+    0.02,
+    -6.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -8.2,
+    0.02,
+    -6.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -5.8,
+    0.02,
+    -6.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -3.4,
+    0.02,
+    -6.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -1.0,
+    0.02,
+    -6.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    1.4,
+    0.02,
+    -6.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    3.8,
+    0.02,
+    -6.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    6.2,
+    0.02,
+    -6.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    8.6,
+    0.02,
+    -6.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -14.65,
+    0.02,
+    -5.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -14.65,
+    0.02,
+    -3.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -14.65,
+    0.02,
+    -2.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -14.65,
+    0.02,
+    2.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -14.65,
+    0.02,
+    3.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -14.65,
+    0.02,
+    5.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    -8.0,
+    0.15,
+    3.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    -4.0,
+    10.95,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "floor3"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    0.0,
+    25.362,
+    1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "roof"
+   ]
+  }
+ ]
+}

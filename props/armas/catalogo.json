@@ -1144,6 +1144,500 @@
      "descricao": "respiração leve parado"
     }
    }
+  },
+  {
+   "id": "carabina_308",
+   "nome": "Carabina Paciência .308",
+   "grupo": "armas",
+   "categoria": "carabina",
+   "capacidade": 10,
+   "dano": 95,
+   "alcance_m": 150,
+   "alcance_max_m": 600,
+   "tiros_por_s": 0.8,
+   "recarga_s": 2.3,
+   "recarga_vazia_s": 3.0,
+   "precisao": 0.93,
+   "recuo": 0.6,
+   "ruido_m": 220,
+   "durabilidade": 2500,
+   "peso_kg": 6.2,
+   "raridade": "raro",
+   "valor_troca": 150,
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "classe": "fogo",
+   "calibre": ".308",
+   "municao": "municao_308",
+   "modo": "ferrolho (ação manual)",
+   "acao": "ferrolho",
+   "estojo_s": 0.62,
+   "descricao": "Carabina de precisão em chassi de alumínio areia: cano pesado estriado, guarda-mão M-LOK, coronha com apoio de rosto. Derruba um zumbi a 150 m com um tiro na cabeça, mas o estampido se ouve a 220 m.",
+   "arquivo": "armas/carabina_308.glb",
+   "tamanho_m": [
+    0.09,
+    0.171,
+    1.058
+   ],
+   "triangulos": 58958,
+   "kb": 2992.7,
+   "partes": [
+    {
+     "no": "apoio_face",
+     "tipo": "desliza",
+     "curso_m": 0.012,
+     "eixo": "y",
+     "descricao": "apoio de rosto: sobe até 12 mm",
+     "pai": "carabina_308",
+     "explodir_m": [
+      0.0,
+      0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": -8,
+     "descricao": "gatilho leve de precisão",
+     "pai": "carabina_308",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "gira_e_desliza",
+     "curso_graus": -60,
+     "curso_m": -0.1,
+     "descricao": "levanta a alavanca 60° e corre 100 mm para trás (ejeta), volta e abaixa",
+     "pai": "carabina_308",
+     "explodir_m": [
+      -0.0,
+      0.05,
+      0.15
+     ]
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "municao": "municao_308",
+     "capacidade": 10,
+     "descricao": "carregador de caixa, sai por baixo",
+     "pai": "carabina_308",
+     "explodir_m": [
+      0.0,
+      -0.08,
+      0.0
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_mira",
+     "tipo": "trilho_mira",
+     "pai": "carabina_308",
+     "posicao_m": [
+      0.0,
+      0.101,
+      -0.128
+     ],
+     "aceita": [
+      "luneta_3_9",
+      "luneta_4x",
+      "mira_ponto_vermelho_tubo"
+     ],
+     "padrao": "luneta_3_9",
+     "explodir_m": [
+      0.0,
+      0.07,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_308",
+     "pai": "carabina_308",
+     "posicao_m": [
+      0.0,
+      0.08,
+      -0.788
+     ],
+     "aceita": [
+      "protetor_rosca_308",
+      "freio_boca_308",
+      "supressor_308"
+     ],
+     "padrao": "freio_boca_308",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.08
+     ]
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_308",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.064,
+      -0.138
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_308_10",
+      "carregador_308_5"
+     ],
+     "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda as malhas do nó carregador"
+    },
+    {
+     "no": "encaixe_bipe",
+     "tipo": "bipe",
+     "pai": "carabina_308",
+     "posicao_m": [
+      0.0,
+      0.049,
+      -0.533
+     ],
+     "aceita": [
+      "bipe"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_bandoleira",
+     "tipo": "bandoleira",
+     "pai": "carabina_308",
+     "posicao_m": [
+      0.0,
+      0.0385,
+      -0.493
+     ],
+     "aceita": [
+      "bandoleira"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "carabina_308",
+     "posicao_m": [
+      0.0,
+      0.08,
+      -0.803
+     ],
+     "descricao": "clarão de boca e origem do disparo (-Z)"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "carabina_308",
+     "posicao_m": [
+      0.0165,
+      0.09,
+      -0.163
+     ],
+     "descricao": "onde nasce o estojo (quando o ferrolho volta, aos 0,6 s do \"atirar\")"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 1.2,
+     "laco": false,
+     "descricao": "tiro e manejo do ferrolho: levanta (0,48 s), puxa (0,62 s: soltar o estojo), empurra e abaixa (0,98 s)"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.8,
+     "laco": false,
+     "descricao": "último tiro: o ferrolho fica aberto, atrás"
+    },
+    "vazia": {
+     "duracao_s": 0.1,
+     "laco": true,
+     "descricao": "pose parada: ferrolho aberto"
+    },
+    "recarregar": {
+     "duracao_s": 2.3,
+     "laco": false,
+     "descricao": "aperta o retém, carregador sai (0,4 s), novo entra (1,72 s); trocar o nó carregador entre 0,6 e 1,3 s"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 3.0,
+     "laco": false,
+     "descricao": "troca o carregador com o ferrolho aberto e fecha o ferrolho (2,2 s) e a alavanca (2,45 s)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.8,
+     "laco": false,
+     "descricao": "abre o ferrolho até ver o cartucho na câmara, fecha e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "carabina_308_caca",
+   "nome": "Carabina Paciência .308 de caça",
+   "grupo": "armas",
+   "categoria": "carabina",
+   "capacidade": 5,
+   "dano": 95,
+   "alcance_m": 120,
+   "alcance_max_m": 500,
+   "tiros_por_s": 0.8,
+   "recarga_s": 2.3,
+   "recarga_vazia_s": 3.0,
+   "precisao": 0.88,
+   "recuo": 0.7,
+   "ruido_m": 220,
+   "durabilidade": 2500,
+   "peso_kg": 3.9,
+   "raridade": "incomum",
+   "valor_troca": 110,
+   "onde": [
+    "casa_de_campo",
+    "armazem",
+    "casas"
+   ],
+   "classe": "fogo",
+   "calibre": ".308",
+   "municao": "municao_308",
+   "modo": "ferrolho (ação manual)",
+   "acao": "ferrolho",
+   "estojo_s": 0.62,
+   "descricao": "A mesma ação na coronha de nogueira quadriculada, com luneta 4×. Mais leve e fácil de achar em sítios e casas de campo.",
+   "arquivo": "armas/carabina_308_caca.glb",
+   "tamanho_m": [
+    0.083,
+    0.147,
+    1.048
+   ],
+   "triangulos": 44668,
+   "kb": 3017.8,
+   "partes": [
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": -8,
+     "descricao": "gatilho leve de precisão",
+     "pai": "carabina_308_caca",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "gira_e_desliza",
+     "curso_graus": -60,
+     "curso_m": -0.1,
+     "descricao": "levanta a alavanca 60° e corre 100 mm para trás (ejeta), volta e abaixa",
+     "pai": "carabina_308_caca",
+     "explodir_m": [
+      -0.0,
+      0.05,
+      0.15
+     ]
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "municao": "municao_308",
+     "capacidade": 5,
+     "descricao": "carregador de caixa, sai por baixo",
+     "pai": "carabina_308_caca",
+     "explodir_m": [
+      0.0,
+      -0.08,
+      0.0
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_mira",
+     "tipo": "trilho_mira",
+     "pai": "carabina_308_caca",
+     "posicao_m": [
+      0.0,
+      0.089,
+      -0.115
+     ],
+     "aceita": [
+      "luneta_3_9",
+      "luneta_4x",
+      "mira_ponto_vermelho_tubo"
+     ],
+     "padrao": "luneta_4x",
+     "explodir_m": [
+      0.0,
+      0.07,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_308",
+     "pai": "carabina_308_caca",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.745
+     ],
+     "aceita": [
+      "protetor_rosca_308",
+      "freio_boca_308",
+      "supressor_308"
+     ],
+     "padrao": "protetor_rosca_308",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.08
+     ]
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_308",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.052,
+      -0.125
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_308_5",
+      "carregador_308_10"
+     ],
+     "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda as malhas do nó carregador"
+    },
+    {
+     "no": "encaixe_bipe",
+     "tipo": "bipe",
+     "pai": "carabina_308_caca",
+     "posicao_m": [
+      0.0,
+      0.037,
+      -0.46
+     ],
+     "aceita": [
+      "bipe"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_bandoleira",
+     "tipo": "bandoleira",
+     "pai": "carabina_308_caca",
+     "posicao_m": [
+      0.0,
+      0.0265,
+      -0.43
+     ],
+     "aceita": [
+      "bandoleira"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "carabina_308_caca",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.76
+     ],
+     "descricao": "clarão de boca e origem do disparo (-Z)"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "carabina_308_caca",
+     "posicao_m": [
+      0.0165,
+      0.078,
+      -0.15
+     ],
+     "descricao": "onde nasce o estojo (quando o ferrolho volta, aos 0,6 s do \"atirar\")"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 1.2,
+     "laco": false,
+     "descricao": "tiro e manejo do ferrolho: levanta (0,48 s), puxa (0,62 s: soltar o estojo), empurra e abaixa (0,98 s)"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.8,
+     "laco": false,
+     "descricao": "último tiro: o ferrolho fica aberto, atrás"
+    },
+    "vazia": {
+     "duracao_s": 0.1,
+     "laco": true,
+     "descricao": "pose parada: ferrolho aberto"
+    },
+    "recarregar": {
+     "duracao_s": 2.3,
+     "laco": false,
+     "descricao": "aperta o retém, carregador sai (0,4 s), novo entra (1,72 s); trocar o nó carregador entre 0,6 e 1,3 s"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 3.0,
+     "laco": false,
+     "descricao": "troca o carregador com o ferrolho aberto e fecha o ferrolho (2,2 s) e a alavanca (2,45 s)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.8,
+     "laco": false,
+     "descricao": "abre o ferrolho até ver o cartucho na câmara, fecha e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
   }
  ],
  "acessorios": [
@@ -2042,6 +2536,294 @@
    ],
    "triangulos": 5372,
    "kb": 294.6
+  },
+  {
+   "id": "luneta_3_9",
+   "nome": "Luneta 3-9× com retículo iluminado",
+   "grupo": "acessorios",
+   "categoria": "mira",
+   "encaixe": "trilho_mira",
+   "peso_kg": 0.62,
+   "raridade": "raro",
+   "valor_troca": 90,
+   "aumento": [
+    3,
+    9
+   ],
+   "modificadores": {
+    "precisao_mirando": 1.6,
+    "tempo_mirar": 1.35,
+    "alcance_m": 1.6
+   },
+   "usa": "pilhas",
+   "autonomia_min": 6000,
+   "onde": [
+    "quartel",
+    "casa_de_campo"
+   ],
+   "linha_de_visada": "encaixe \"olho\"; zoom de 3× a 9× (FOV da câmera ÷ aumento)",
+   "descricao": "Luneta de 30 mm com objetiva de 44 mm, anel de aumento com alavanca, torres recartilhadas e ajuste lateral. Vê zumbis a 300 m, mas o campo de visão fechado deixa o resto cego.",
+   "arquivo": "acessorios/luneta_3_9.glb",
+   "tamanho_m": [
+    0.058,
+    0.072,
+    0.35
+   ],
+   "triangulos": 6512,
+   "kb": 348.1,
+   "encaixes": [
+    {
+     "no": "olho",
+     "tipo": "mira",
+     "pai": "luneta_3_9",
+     "posicao_m": [
+      -0.0,
+      0.034,
+      0.175
+     ],
+     "descricao": "ocular: linha de visada (afastar o olho uns 9 cm)"
+    }
+   ]
+  },
+  {
+   "id": "luneta_4x",
+   "nome": "Luneta 4× fixa",
+   "grupo": "acessorios",
+   "categoria": "mira",
+   "encaixe": "trilho_mira",
+   "peso_kg": 0.38,
+   "raridade": "incomum",
+   "valor_troca": 50,
+   "aumento": [
+    4,
+    4
+   ],
+   "modificadores": {
+    "precisao_mirando": 1.45,
+    "tempo_mirar": 1.2,
+    "alcance_m": 1.4
+   },
+   "onde": [
+    "casa_de_campo",
+    "armazem",
+    "casas"
+   ],
+   "linha_de_visada": "encaixe \"olho\"; zoom fixo 4×",
+   "descricao": "Luneta simples de caça de 1 polegada, com tampas nas torres. Robusta e leve.",
+   "arquivo": "acessorios/luneta_4x.glb",
+   "tamanho_m": [
+    0.048,
+    0.064,
+    0.28
+   ],
+   "triangulos": 5172,
+   "kb": 260.4,
+   "encaixes": [
+    {
+     "no": "olho",
+     "tipo": "mira",
+     "pai": "luneta_4x",
+     "posicao_m": [
+      -0.0,
+      0.028,
+      0.14
+     ],
+     "descricao": "ocular: linha de visada (afastar o olho uns 9 cm)"
+    }
+   ]
+  },
+  {
+   "id": "bipe",
+   "nome": "Bipé dobrável",
+   "grupo": "acessorios",
+   "categoria": "bipe",
+   "encaixe": "bipe",
+   "peso_kg": 0.36,
+   "raridade": "incomum",
+   "valor_troca": 30,
+   "modificadores": {
+    "precisao_deitado": 1.5,
+    "recuo_deitado": 0.6
+   },
+   "onde": [
+    "quartel",
+    "casa_de_campo"
+   ],
+   "descricao": "Bipé de pino de bandoleira com pernas de 3 alturas (nós \"perna_esq\" e \"perna_dir\"; animações dobrar/abrir). Deitado ou apoiado num muro, a arma quase não mexe.",
+   "arquivo": "acessorios/bipe.glb",
+   "tamanho_m": [
+    0.056,
+    0.185,
+    0.035
+   ],
+   "triangulos": 2372,
+   "kb": 96.6,
+   "partes": [
+    {
+     "no": "perna_esq",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 90,
+     "descricao": "perna: dobra para a frente",
+     "pai": "bipe",
+     "explodir_m": [
+      -0.04,
+      -0.03,
+      -0.0
+     ]
+    },
+    {
+     "no": "perna_dir",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 90,
+     "descricao": "perna: dobra para a frente",
+     "pai": "bipe",
+     "explodir_m": [
+      0.04,
+      -0.03,
+      0.0
+     ]
+    }
+   ],
+   "animacoes": {
+    "dobrar": {
+     "duracao_s": 0.4,
+     "laco": false,
+     "descricao": "dobra as pernas para a frente"
+    },
+    "abrir": {
+     "duracao_s": 0.3,
+     "laco": false,
+     "descricao": "abre as pernas (mola)"
+    }
+   }
+  },
+  {
+   "id": "protetor_rosca_308",
+   "nome": "Protetor de rosca .308",
+   "grupo": "acessorios",
+   "categoria": "boca",
+   "encaixe": "boca_308",
+   "peso_kg": 0.02,
+   "raridade": "comum",
+   "modificadores": {},
+   "descricao": "Capa que protege a rosca do cano. Vem na versão de caça.",
+   "arquivo": "acessorios/protetor_rosca_308.glb",
+   "tamanho_m": [
+    0.022,
+    0.022,
+    0.018
+   ],
+   "triangulos": 832,
+   "kb": 50.5
+  },
+  {
+   "id": "freio_boca_308",
+   "nome": "Freio de boca .308",
+   "grupo": "acessorios",
+   "categoria": "boca",
+   "encaixe": "boca_308",
+   "peso_kg": 0.11,
+   "raridade": "incomum",
+   "valor_troca": 25,
+   "modificadores": {
+    "recuo": 0.55,
+    "ruido_m": 1.2
+   },
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "Três câmaras laterais jogam o gás para os lados: o coice cai pela metade e a mira volta rápido. Mais barulho.",
+   "arquivo": "acessorios/freio_boca_308.glb",
+   "tamanho_m": [
+    0.026,
+    0.024,
+    0.08
+   ],
+   "triangulos": 1360,
+   "kb": 64.8
+  },
+  {
+   "id": "supressor_308",
+   "nome": "Supressor de fuzil .308",
+   "grupo": "acessorios",
+   "categoria": "boca",
+   "encaixe": "boca_308",
+   "peso_kg": 0.55,
+   "raridade": "muito raro",
+   "valor_troca": 120,
+   "durabilidade": 4000,
+   "modificadores": {
+    "ruido_m": 0.35,
+    "recuo": 0.8,
+    "precisao": 1.03
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Tubo de aço com defletores soldados: o estampido cai para 77 m. Esquenta rápido e alonga a arma em 19 cm.",
+   "arquivo": "acessorios/supressor_308.glb",
+   "tamanho_m": [
+    0.046,
+    0.046,
+    0.191
+   ],
+   "triangulos": 4512,
+   "kb": 226.8
+  },
+  {
+   "id": "carregador_308_10",
+   "nome": "Carregador .308 (10)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_308",
+   "capacidade": 10,
+   "municao": "municao_308",
+   "peso_kg": 0.2,
+   "raridade": "incomum",
+   "valor_troca": 15,
+   "modificadores": {},
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "Carregador de caixa de 10 tiros.",
+   "arquivo": "acessorios/carregador_308_10.glb",
+   "tamanho_m": [
+    0.026,
+    0.097,
+    0.085
+   ],
+   "triangulos": 1076,
+   "kb": 55.6
+  },
+  {
+   "id": "carregador_308_5",
+   "nome": "Carregador .308 (5)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_308",
+   "capacidade": 5,
+   "municao": "municao_308",
+   "peso_kg": 0.13,
+   "raridade": "comum",
+   "valor_troca": 10,
+   "modificadores": {},
+   "onde": [
+    "casa_de_campo",
+    "armazem"
+   ],
+   "descricao": "Carregador curto de 5 tiros (quase rente à coronha).",
+   "arquivo": "acessorios/carregador_308_5.glb",
+   "tamanho_m": [
+    0.026,
+    0.057,
+    0.085
+   ],
+   "triangulos": 1004,
+   "kb": 52.2
   }
  ],
  "municao": [
@@ -2353,6 +3135,101 @@
      "abre_graus": 115,
      "descricao": "gira em torno da ponta de trás",
      "pai": "caixa_municao_12",
+     "explodir_m": [
+      0.0,
+      0.05,
+      0.0
+     ]
+    }
+   ],
+   "animacoes": {
+    "abrir": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "abre a tampa"
+    },
+    "fechar": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "fecha a tampa"
+    }
+   }
+  },
+  {
+   "id": "municao_308",
+   "nome": "Cartucho .308",
+   "grupo": "municao",
+   "categoria": "municao",
+   "calibre": ".308",
+   "peso_kg": 0.025,
+   "empilha": 40,
+   "raridade": "incomum",
+   "estojo": "estojo_308",
+   "onde": [
+    "quartel",
+    "casa_de_campo",
+    "delegacia"
+   ],
+   "descricao": "Cartucho de fuzil .308 (deitado, pivô no centro).",
+   "arquivo": "municao/municao_308.glb",
+   "tamanho_m": [
+    0.012,
+    0.012,
+    0.071
+   ],
+   "triangulos": 784,
+   "kb": 39.3
+  },
+  {
+   "id": "estojo_308",
+   "nome": "Estojo .308 (vazio)",
+   "grupo": "municao",
+   "categoria": "estojo",
+   "calibre": ".308",
+   "peso_kg": 0.012,
+   "descricao": "Estojo ejetado ao puxar o ferrolho. Bom para recarregar na bancada.",
+   "arquivo": "municao/estojo_308.glb",
+   "tamanho_m": [
+    0.012,
+    0.012,
+    0.051
+   ],
+   "triangulos": 642,
+   "kb": 31.9
+  },
+  {
+   "id": "caixa_municao_308",
+   "nome": "Caixa de munição .308 (20)",
+   "grupo": "municao",
+   "categoria": "caixa",
+   "calibre": ".308",
+   "municao": "municao_308",
+   "quantidade": 20,
+   "peso_kg": 0.55,
+   "empilha": 4,
+   "raridade": "raro",
+   "onde": [
+    "quartel",
+    "casa_de_campo",
+    "delegacia"
+   ],
+   "descricao": "Caixa de papelão com bandeja de 20 cartuchos .308 em pé. A tampa abre (nó \"tampa\", animação \"abrir\").",
+   "arquivo": "municao/caixa_municao_308.glb",
+   "tamanho_m": [
+    0.068,
+    0.078,
+    0.102
+   ],
+   "triangulos": 6628,
+   "kb": 387.3,
+   "partes": [
+    {
+     "no": "tampa",
+     "tipo": "tampa",
+     "eixo": "z",
+     "abre_graus": 115,
+     "descricao": "gira em torno da ponta de trás",
+     "pai": "caixa_municao_308",
      "explodir_m": [
       0.0,
       0.05,

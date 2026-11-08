@@ -23,7 +23,6 @@ func _ready() -> void:
 	sub.text = "Peças modulares de prédios, todas na mesma grade"
 	sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	v.add_child(sub)
-	v.add_child(_big("Jogar Recomeço (teste do M0)", "res://jogo/jogo.tscn"))
 	v.add_child(_big("Montar um prédio com as peças", "res://editor/editor.tscn"))
 	v.add_child(_big("Visitar os prédios prontos", "res://visitar/main.tscn"))
 	var quit := _big("Sair", "")

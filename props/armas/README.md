@@ -84,18 +84,19 @@ A espingarda recarrega **um cartucho por vez** (`recarga_por_cartucho`, a anima�
 | 4 | Espingarda de cano duplo (e versão de cano serrado) | canos basculantes, cães, extrator | cinta de cartuchos, coronha encurtada | |
 | 5 | **Carabina Paciência .308** de ferrolho, de chassi e de caça (coronha de nogueira) | ferrolho (levanta 60° e corre), gatilho, carregador, apoio de rosto | luneta 3-9× e 4× com anéis de trilho, bipé dobrável, freio de boca, supressor de fuzil, protetor de rosca, carregadores de 10 e 5 (e a mira de tubo e a bandoleira da espingarda); cartucho, estojo e caixa de 20 .308 | **feita** |
 | 6 | Fuzil 5,56 (semi e automático) | ferrolho, alavanca de manejo, carregador, retém, seletor, tampa da janela | mira holográfica, ponto vermelho tubular, luneta 1-6×, miras de ferro rebatíveis, empunhadura vertical e angulada, lanterna de fuzil, laser, bipé, coronha retrátil e fixa, quebra-chamas, compensador, supressor, carregadores de 30 e 60 tambor 60, tambor tático 60 com janela, módulo laser caramelo, lanterna compacta, empunhaduras curta, quadrada e cilíndrica, batente de mão; versão bicolor preta e caramelo | **feita** |
-| 7 | Submetralhadora 9 mm compacta | ferrolho, alavanca, coronha dobrável, carregador | empunhadura frontal, supressor integral, carregador 30 (usa a munição 9 mm da pistola) | |
-| 8 | Rifle .22 de caça (silencioso, para caça pequena) | ferrolho, carregador rotativo | luneta 4× pequena, supressor .22, munição .22 | |
-| 9 | Pistola sinalizadora | cano basculante, cão | cartuchos de sinal (vermelho para socorro, verde para chamar sobreviventes, que também atrai zumbis) | |
-| 10 | Arco recurvo de madeira | corda e braços (flexionam) | flechas (ponta de caça, ponta improvisada de prego), aljava, mira de pinos, estabilizador | |
-| 11 | Arco composto | polias, cabos, corda | flechas de carbono, soltador, mira de pinos com luz | |
-| 12 | Besta | corda, braços, trava, gatilho | virotes, luneta pequena, estribo de armar | |
-| 13 | Faca de combate | - | bainha de cinto | |
-| 14 | Facão | - | bainha de lona | |
-| 15 | Machadinha tática | - | capa da lâmina | |
-| 16 | Lança improvisada (faca presa num cabo) | - | receita: cabo + faca + fita | |
-| 17 | Bastão com pregos / com arame farpado (melhoria do taco do loot) | - | receita na bancada | |
-| 18 | Coquetel molotov, bomba de pregos (lata), isca sonora (despertador) | pavio, ponteiro | - | |
+| 7 | **Fuzil Brasa 7,62** de receptor estampado (estilo AK) | tampa do receptor (sai), transportador com alavanca à direita, seletor de alavanca, gatilho, carregador (engancha na frente e gira) | coronhas de madeira, polímero, rebatível de tubo, retrátil com adaptador e leve vazada (preta e caramelo); guarda-mãos de madeira, polímero com nervuras e de quatro trilhos (libera empunhadura e lanterna); tampa com trilho (libera mira holográfica e lunetas); freio inclinado, freio de três câmaras, supressor 7,62; mira de ponto e luneta 4× de montagem lateral; baioneta; carregadores de 30 (aço) e 40 (polímero), tambor de 75; cartucho, estojo e caixa de 20 7,62×39. Novos para o 5,56 também: empunhadura vertical curta, coronha leve vazada e miras rebatíveis de polímero, em preto e caramelo . Versão tática toda preta e bem usada (desgaste por script: pintura gasta, riscos, ferrugem, sujeira e um rabisco riscado na chapa) com punho e carregador de polímero com grade, coronha vazada, guarda-mão de fendas com tiras de borracha, mira reflexa e versões gastas dos acessórios | **feita** |
+| 8 | Submetralhadora 9 mm compacta | ferrolho, alavanca, coronha dobrável, carregador | empunhadura frontal, supressor integral, carregador 30 (usa a munição 9 mm da pistola) | |
+| 9 | Rifle .22 de caça (silencioso, para caça pequena) | ferrolho, carregador rotativo | luneta 4× pequena, supressor .22, munição .22 | |
+| 10 | Pistola sinalizadora | cano basculante, cão | cartuchos de sinal (vermelho para socorro, verde para chamar sobreviventes, que também atrai zumbis) | |
+| 11 | Arco recurvo de madeira | corda e braços (flexionam) | flechas (ponta de caça, ponta improvisada de prego), aljava, mira de pinos, estabilizador | |
+| 12 | Arco composto | polias, cabos, corda | flechas de carbono, soltador, mira de pinos com luz | |
+| 13 | Besta | corda, braços, trava, gatilho | virotes, luneta pequena, estribo de armar | |
+| 14 | Faca de combate | - | bainha de cinto | |
+| 15 | Facão | - | bainha de lona | |
+| 16 | Machadinha tática | - | capa da lâmina | |
+| 17 | Lança improvisada (faca presa num cabo) | - | receita: cabo + faca + fita | |
+| 18 | Bastão com pregos / com arame farpado (melhoria do taco do loot) | - | receita na bancada | |
+| 19 | Coquetel molotov, bomba de pregos (lata), isca sonora (despertador) | pavio, ponteiro | - | |
 
 O arco, a lança e o facão do lote 4 de `props/loot/` são itens de loot simples (uma peça só); aqui eles ganham a versão completa, com partes, acessórios e animações.
 

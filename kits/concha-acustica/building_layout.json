@@ -1,0 +1,2908 @@
+{
+ "grid": {
+  "module_width": 2.0,
+  "wall_thickness": 0.25,
+  "walk_level": 0.15,
+  "lawn_level": 0.05,
+  "stage": {
+   "x": [
+    -11.0,
+    11.0
+   ],
+   "z": [
+    -8.0,
+    4.0
+   ],
+   "top": 1.2,
+   "front_corner_radius": 3.0
+  },
+  "shell": {
+   "rings": [
+    {
+     "a": 9.0,
+     "b": 8.2,
+     "z_front": -0.0,
+     "z_back": -1.6
+    },
+    {
+     "a": 8.1,
+     "b": 7.3999999999999995,
+     "z_front": -1.5,
+     "z_back": -3.1
+    },
+    {
+     "a": 7.2,
+     "b": 6.6,
+     "z_front": -3.0,
+     "z_back": -4.6
+    },
+    {
+     "a": 6.3,
+     "b": 5.799999999999999,
+     "z_front": -4.5,
+     "z_back": -6.1
+    },
+    {
+     "a": 5.4,
+     "b": 4.999999999999999,
+     "z_front": -6.0,
+     "z_back": -8.0
+    }
+   ],
+   "thickness": 0.28
+  },
+  "backstage": {
+   "x": [
+    -7.0,
+    7.0
+   ],
+   "z": [
+    -14.0,
+    -8.0
+   ],
+   "floor": 1.2,
+   "ceiling": 4.4,
+   "parapet_top": 6.6000000000000005,
+   "corridor_wall_z": -9.6
+  },
+  "kiosk": {
+   "x": [
+    13.0,
+    19.0
+   ],
+   "z": [
+    -17.0,
+    -13.0
+   ],
+   "floor": 0.15,
+   "wall_top": 2.9499999999999997
+  },
+  "park": {
+   "x": [
+    -26.0,
+    26.0
+   ],
+   "z": [
+    -22.0,
+    24.0
+   ],
+   "sidewalk_width": 2.5
+  },
+  "site": {
+   "x": [
+    -28.0,
+    28.0
+   ],
+   "z": [
+    -24.0,
+    26.0
+   ]
+  },
+  "textures": "PBR (albedo + normal + ORM), 2 m tiles, UV in metres / 2"
+ },
+ "placements": [
+  {
+   "piece": "stage",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "palco"
+   ]
+  },
+  {
+   "piece": "shell",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "palco",
+    "concha",
+    "front"
+   ]
+  },
+  {
+   "piece": "b_plain",
+   "pos": [
+    -6.0,
+    1.2,
+    -8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "bastidores",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "b_plain",
+   "pos": [
+    -4.0,
+    1.2,
+    -8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "bastidores",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "b_plain",
+   "pos": [
+    -2.0,
+    1.2,
+    -8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "bastidores",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "b_door_s",
+   "pos": [
+    0.0,
+    1.2,
+    -8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "bastidores",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "b_plain",
+   "pos": [
+    2.0,
+    1.2,
+    -8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "bastidores",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "b_plain",
+   "pos": [
+    4.0,
+    1.2,
+    -8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "bastidores",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "b_plain",
+   "pos": [
+    6.0,
+    1.2,
+    -8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "bastidores",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "b_win",
+   "pos": [
+    -6.0,
+    1.2,
+    -14.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "bastidores",
+    "ext"
+   ]
+  },
+  {
+   "piece": "b_plain",
+   "pos": [
+    -4.0,
+    1.2,
+    -14.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "bastidores",
+    "ext"
+   ]
+  },
+  {
+   "piece": "b_plain",
+   "pos": [
+    -2.0,
+    1.2,
+    -14.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "bastidores",
+    "ext"
+   ]
+  },
+  {
+   "piece": "b_win",
+   "pos": [
+    0.0,
+    1.2,
+    -14.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "bastidores",
+    "ext"
+   ]
+  },
+  {
+   "piece": "b_plain",
+   "pos": [
+    2.0,
+    1.2,
+    -14.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "bastidores",
+    "ext"
+   ]
+  },
+  {
+   "piece": "b_plain",
+   "pos": [
+    4.0,
+    1.2,
+    -14.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "bastidores",
+    "ext"
+   ]
+  },
+  {
+   "piece": "b_win",
+   "pos": [
+    6.0,
+    1.2,
+    -14.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "bastidores",
+    "ext"
+   ]
+  },
+  {
+   "piece": "b_plain_l",
+   "pos": [
+    -7.0,
+    1.2,
+    -13.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "bastidores",
+    "ext"
+   ]
+  },
+  {
+   "piece": "b_win",
+   "pos": [
+    -7.0,
+    1.2,
+    -11.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "bastidores",
+    "ext"
+   ]
+  },
+  {
+   "piece": "b_plain_r",
+   "pos": [
+    -7.0,
+    1.2,
+    -9.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "bastidores",
+    "ext"
+   ]
+  },
+  {
+   "piece": "b_plain_r",
+   "pos": [
+    7.0,
+    1.2,
+    -13.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "bastidores",
+    "ext"
+   ]
+  },
+  {
+   "piece": "b_win",
+   "pos": [
+    7.0,
+    1.2,
+    -11.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "bastidores",
+    "ext"
+   ]
+  },
+  {
+   "piece": "b_door_l",
+   "pos": [
+    7.0,
+    1.2,
+    -9.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "bastidores",
+    "ext"
+   ]
+  },
+  {
+   "piece": "bs_roof",
+   "pos": [
+    0.0,
+    1.2,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "bastidores",
+    "roof"
+   ]
+  },
+  {
+   "piece": "bs_floor",
+   "pos": [
+    0.0,
+    1.2,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "bastidores"
+   ]
+  },
+  {
+   "piece": "bs_plan",
+   "pos": [
+    0.0,
+    1.2,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "bastidores"
+   ]
+  },
+  {
+   "piece": "bs_stairs",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "bastidores"
+   ]
+  },
+  {
+   "piece": "door_back",
+   "pos": [
+    -0.47,
+    1.205,
+    -8.125
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "bastidores",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": -90.0
+   }
+  },
+  {
+   "piece": "door_back",
+   "pos": [
+    6.875,
+    1.205,
+    -8.53
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "bastidores",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -4.33,
+    1.205,
+    -9.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "bastidores",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -0.43,
+    1.205,
+    -9.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "bastidores",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    3.47,
+    1.205,
+    -9.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "bastidores",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "makeup_counter",
+   "pos": [
+    -3.9,
+    1.2,
+    -13.75
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "bastidores"
+   ]
+  },
+  {
+   "piece": "guest_chair",
+   "pos": [
+    -3.2,
+    1.2,
+    -12.7
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "bastidores"
+   ]
+  },
+  {
+   "piece": "guest_chair",
+   "pos": [
+    -4.6,
+    1.2,
+    -12.7
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "bastidores"
+   ]
+  },
+  {
+   "piece": "clothes_rack",
+   "pos": [
+    -5.9,
+    1.2,
+    -11.5
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "bastidores"
+   ]
+  },
+  {
+   "piece": "sofa",
+   "pos": [
+    -1.06,
+    1.2,
+    -11.2
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "bastidores"
+   ]
+  },
+  {
+   "piece": "trunk",
+   "pos": [
+    -6.0,
+    1.2,
+    -10.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "bastidores"
+   ]
+  },
+  {
+   "piece": "makeup_counter",
+   "pos": [
+    3.9,
+    1.2,
+    -13.75
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "bastidores"
+   ]
+  },
+  {
+   "piece": "guest_chair",
+   "pos": [
+    3.2,
+    1.2,
+    -12.7
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "bastidores"
+   ]
+  },
+  {
+   "piece": "guest_chair",
+   "pos": [
+    4.6,
+    1.2,
+    -12.7
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "bastidores"
+   ]
+  },
+  {
+   "piece": "clothes_rack",
+   "pos": [
+    5.9,
+    1.2,
+    -11.5
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "bastidores"
+   ]
+  },
+  {
+   "piece": "sofa",
+   "pos": [
+    1.06,
+    1.2,
+    -11.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "bastidores"
+   ]
+  },
+  {
+   "piece": "trunk",
+   "pos": [
+    6.0,
+    1.2,
+    -10.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "bastidores"
+   ]
+  },
+  {
+   "piece": "wc",
+   "pos": [
+    0.0,
+    1.2,
+    -13.75
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "bastidores"
+   ]
+  },
+  {
+   "piece": "sink_one",
+   "pos": [
+    -0.94,
+    1.2,
+    -11.6
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "bastidores"
+   ]
+  },
+  {
+   "piece": "q_svc",
+   "pos": [
+    14.0,
+    0.15,
+    -13.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "quiosque",
+    "ext"
+   ]
+  },
+  {
+   "piece": "q_svc",
+   "pos": [
+    16.0,
+    0.15,
+    -13.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "quiosque",
+    "ext"
+   ]
+  },
+  {
+   "piece": "q_sign",
+   "pos": [
+    18.0,
+    0.15,
+    -13.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "quiosque",
+    "ext"
+   ]
+  },
+  {
+   "piece": "q_plain",
+   "pos": [
+    14.0,
+    0.15,
+    -17.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "quiosque",
+    "ext"
+   ]
+  },
+  {
+   "piece": "q_door",
+   "pos": [
+    16.0,
+    0.15,
+    -17.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "quiosque",
+    "ext"
+   ]
+  },
+  {
+   "piece": "q_plain",
+   "pos": [
+    18.0,
+    0.15,
+    -17.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "quiosque",
+    "ext"
+   ]
+  },
+  {
+   "piece": "q_plain_l",
+   "pos": [
+    13.0,
+    0.15,
+    -16.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "quiosque",
+    "ext"
+   ]
+  },
+  {
+   "piece": "q_plain_r",
+   "pos": [
+    13.0,
+    0.15,
+    -14.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "quiosque",
+    "ext"
+   ]
+  },
+  {
+   "piece": "q_plain_r",
+   "pos": [
+    19.0,
+    0.15,
+    -16.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "quiosque",
+    "ext"
+   ]
+  },
+  {
+   "piece": "q_plain_l",
+   "pos": [
+    19.0,
+    0.15,
+    -14.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "quiosque",
+    "ext"
+   ]
+  },
+  {
+   "piece": "ki_roof",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "quiosque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "ki_floor",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "quiosque"
+   ]
+  },
+  {
+   "piece": "ki_plan",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "quiosque"
+   ]
+  },
+  {
+   "piece": "door_back",
+   "pos": [
+    16.47,
+    0.155,
+    -16.875
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "quiosque",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "counter_k",
+   "pos": [
+    16.0,
+    0.15,
+    -13.25
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "quiosque"
+   ]
+  },
+  {
+   "piece": "popcorn",
+   "pos": [
+    18.1,
+    1.07,
+    -13.6
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "quiosque"
+   ]
+  },
+  {
+   "piece": "soda",
+   "pos": [
+    17.2,
+    1.07,
+    -13.3
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "quiosque"
+   ]
+  },
+  {
+   "piece": "register",
+   "pos": [
+    15.0,
+    1.07,
+    -13.55
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "quiosque"
+   ]
+  },
+  {
+   "piece": "fridge",
+   "pos": [
+    13.75,
+    0.15,
+    -16.75
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "quiosque"
+   ]
+  },
+  {
+   "piece": "shelves",
+   "pos": [
+    18.0,
+    0.15,
+    -16.75
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "quiosque"
+   ]
+  },
+  {
+   "piece": "sink_one",
+   "pos": [
+    18.75,
+    0.15,
+    -15.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "quiosque"
+   ]
+  },
+  {
+   "piece": "drum_kit",
+   "pos": [
+    -3.5,
+    1.2,
+    -5.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "palco"
+   ]
+  },
+  {
+   "piece": "piano",
+   "pos": [
+    3.8,
+    1.2,
+    -6.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "palco"
+   ]
+  },
+  {
+   "piece": "folding_chair",
+   "pos": [
+    -5.6,
+    1.2,
+    -2.0
+   ],
+   "rotY": 18.0,
+   "tags": [
+    "palco"
+   ]
+  },
+  {
+   "piece": "music_stand",
+   "pos": [
+    -5.368,
+    1.2,
+    -1.287
+   ],
+   "rotY": 198.0,
+   "tags": [
+    "palco"
+   ]
+  },
+  {
+   "piece": "folding_chair",
+   "pos": [
+    -4.3,
+    1.2,
+    -1.2
+   ],
+   "rotY": 10.0,
+   "tags": [
+    "palco"
+   ]
+  },
+  {
+   "piece": "music_stand",
+   "pos": [
+    -4.17,
+    1.2,
+    -0.461
+   ],
+   "rotY": 190.0,
+   "tags": [
+    "palco"
+   ]
+  },
+  {
+   "piece": "folding_chair",
+   "pos": [
+    4.3,
+    1.2,
+    -1.2
+   ],
+   "rotY": -10.0,
+   "tags": [
+    "palco"
+   ]
+  },
+  {
+   "piece": "music_stand",
+   "pos": [
+    4.17,
+    1.2,
+    -0.461
+   ],
+   "rotY": 170.0,
+   "tags": [
+    "palco"
+   ]
+  },
+  {
+   "piece": "folding_chair",
+   "pos": [
+    5.6,
+    1.2,
+    -2.0
+   ],
+   "rotY": -18.0,
+   "tags": [
+    "palco"
+   ]
+  },
+  {
+   "piece": "music_stand",
+   "pos": [
+    5.368,
+    1.2,
+    -1.287
+   ],
+   "rotY": 162.0,
+   "tags": [
+    "palco"
+   ]
+  },
+  {
+   "piece": "folding_chair",
+   "pos": [
+    2.4,
+    1.2,
+    -3.6
+   ],
+   "rotY": -12.0,
+   "tags": [
+    "palco"
+   ]
+  },
+  {
+   "piece": "music_stand",
+   "pos": [
+    2.244,
+    1.2,
+    -2.866
+   ],
+   "rotY": 168.0,
+   "tags": [
+    "palco"
+   ]
+  },
+  {
+   "piece": "speaker",
+   "pos": [
+    -7.4,
+    1.2,
+    2.5
+   ],
+   "rotY": 12.0,
+   "tags": [
+    "palco"
+   ]
+  },
+  {
+   "piece": "mic_stand",
+   "pos": [
+    -1.8,
+    1.2,
+    2.3
+   ],
+   "rotY": 20.0,
+   "tags": [
+    "palco"
+   ]
+  },
+  {
+   "piece": "speaker",
+   "pos": [
+    7.4,
+    1.2,
+    2.5
+   ],
+   "rotY": -12.0,
+   "tags": [
+    "palco"
+   ]
+  },
+  {
+   "piece": "mic_stand",
+   "pos": [
+    1.8,
+    1.2,
+    2.3
+   ],
+   "rotY": -20.0,
+   "tags": [
+    "palco"
+   ]
+  },
+  {
+   "piece": "site",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "string_lights",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    -2.8,
+    0.05,
+    10.12
+   ],
+   "rotY": 164.534,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    2.8,
+    0.05,
+    10.12
+   ],
+   "rotY": -164.534,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    -5.195,
+    0.05,
+    9.125
+   ],
+   "rotY": 150.346,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    5.195,
+    0.05,
+    9.125
+   ],
+   "rotY": -150.346,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    -7.273,
+    0.05,
+    7.573
+   ],
+   "rotY": 136.159,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    7.273,
+    0.05,
+    7.573
+   ],
+   "rotY": -136.159,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    -2.8,
+    0.05,
+    13.717
+   ],
+   "rotY": 168.463,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    2.8,
+    0.05,
+    13.717
+   ],
+   "rotY": -168.463,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    -5.285,
+    0.05,
+    12.964
+   ],
+   "rotY": 157.822,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    5.285,
+    0.05,
+    12.964
+   ],
+   "rotY": -157.822,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    -7.588,
+    0.05,
+    11.766
+   ],
+   "rotY": 147.182,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    7.588,
+    0.05,
+    11.766
+   ],
+   "rotY": -147.182,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    -9.63,
+    0.05,
+    10.162
+   ],
+   "rotY": 136.541,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    9.63,
+    0.05,
+    10.162
+   ],
+   "rotY": -136.541,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    -11.341,
+    0.05,
+    8.209
+   ],
+   "rotY": 125.9,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    11.341,
+    0.05,
+    8.209
+   ],
+   "rotY": -125.9,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    -2.8,
+    0.05,
+    17.275
+   ],
+   "rotY": 170.793,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    2.8,
+    0.05,
+    17.275
+   ],
+   "rotY": -170.793,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    -5.326,
+    0.05,
+    16.67
+   ],
+   "rotY": 162.281,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    5.326,
+    0.05,
+    16.67
+   ],
+   "rotY": -162.281,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    -7.735,
+    0.05,
+    15.698
+   ],
+   "rotY": 153.768,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    7.735,
+    0.05,
+    15.698
+   ],
+   "rotY": -153.768,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    -9.974,
+    0.05,
+    14.38
+   ],
+   "rotY": 145.256,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    9.974,
+    0.05,
+    14.38
+   ],
+   "rotY": -145.256,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    -11.992,
+    0.05,
+    12.745
+   ],
+   "rotY": 136.743,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    11.992,
+    0.05,
+    12.745
+   ],
+   "rotY": -136.743,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    -13.747,
+    0.05,
+    10.829
+   ],
+   "rotY": 128.231,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bench",
+   "pos": [
+    13.747,
+    0.05,
+    10.829
+   ],
+   "rotY": -128.231,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    -22.2,
+    0.05,
+    20.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    -8.0,
+    0.05,
+    20.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    8.0,
+    0.05,
+    20.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    22.2,
+    0.05,
+    20.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    -22.2,
+    0.05,
+    5.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    -12.5,
+    0.05,
+    5.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    12.5,
+    0.05,
+    5.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    22.2,
+    0.05,
+    5.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "blanket_r",
+   "pos": [
+    -12.0,
+    0.05,
+    19.0
+   ],
+   "rotY": 12.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "blanket_b",
+   "pos": [
+    10.5,
+    0.05,
+    18.8
+   ],
+   "rotY": -20.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "blanket_b",
+   "pos": [
+    -19.0,
+    0.05,
+    8.0
+   ],
+   "rotY": 35.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "blanket_r",
+   "pos": [
+    19.0,
+    0.05,
+    9.0
+   ],
+   "rotY": -8.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "ice_cream_cart",
+   "pos": [
+    15.5,
+    0.05,
+    12.6
+   ],
+   "rotY": 30.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "fountain",
+   "pos": [
+    2.6,
+    0.05,
+    19.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "lawn_sign",
+   "pos": [
+    -3.0,
+    0.05,
+    19.9
+   ],
+   "rotY": 8.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    -2.3,
+    0.05,
+    7.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    2.3,
+    0.05,
+    7.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    -2.3,
+    0.05,
+    15.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    2.3,
+    0.05,
+    15.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    13.0,
+    0.1,
+    -10.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    21.0,
+    0.05,
+    -10.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    -13.4,
+    0.05,
+    -3.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -22.5,
+    0.05,
+    21.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -20.5,
+    0.05,
+    21.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -18.5,
+    0.05,
+    21.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -16.5,
+    0.05,
+    21.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -14.5,
+    0.05,
+    21.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -12.5,
+    0.05,
+    21.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -10.5,
+    0.05,
+    21.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -8.5,
+    0.05,
+    21.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -6.5,
+    0.05,
+    21.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -4.5,
+    0.05,
+    21.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    22.5,
+    0.05,
+    21.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    20.5,
+    0.05,
+    21.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    18.5,
+    0.05,
+    21.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    16.5,
+    0.05,
+    21.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    14.5,
+    0.05,
+    21.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    12.5,
+    0.05,
+    21.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    10.5,
+    0.05,
+    21.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    8.5,
+    0.05,
+    21.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    6.5,
+    0.05,
+    21.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    4.5,
+    0.05,
+    21.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -23.15,
+    0.05,
+    19.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -23.15,
+    0.05,
+    17.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -23.15,
+    0.05,
+    15.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -23.15,
+    0.05,
+    13.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -23.15,
+    0.05,
+    11.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -23.15,
+    0.05,
+    9.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -23.15,
+    0.05,
+    7.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -23.15,
+    0.05,
+    5.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -23.15,
+    0.05,
+    3.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -23.15,
+    0.05,
+    1.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -23.15,
+    0.05,
+    -4.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -23.15,
+    0.05,
+    -6.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -23.15,
+    0.05,
+    -8.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -23.15,
+    0.05,
+    -10.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -23.15,
+    0.05,
+    -12.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -23.15,
+    0.05,
+    -14.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -23.15,
+    0.05,
+    -16.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    23.15,
+    0.05,
+    19.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    23.15,
+    0.05,
+    17.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    23.15,
+    0.05,
+    15.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    23.15,
+    0.05,
+    13.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    23.15,
+    0.05,
+    11.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    23.15,
+    0.05,
+    9.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    23.15,
+    0.05,
+    7.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    23.15,
+    0.05,
+    5.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    23.15,
+    0.05,
+    3.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    23.15,
+    0.05,
+    1.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    23.15,
+    0.05,
+    -4.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    23.15,
+    0.05,
+    -6.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    23.15,
+    0.05,
+    -12.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    23.15,
+    0.05,
+    -14.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    23.15,
+    0.05,
+    -16.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -21.8,
+    0.05,
+    -19.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -19.8,
+    0.05,
+    -19.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -17.8,
+    0.05,
+    -19.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -15.8,
+    0.05,
+    -19.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -13.8,
+    0.05,
+    -19.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -11.8,
+    0.05,
+    -19.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -9.8,
+    0.05,
+    -19.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -7.8,
+    0.05,
+    -19.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -5.8,
+    0.05,
+    -19.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -3.8,
+    0.05,
+    -19.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    -1.8,
+    0.05,
+    -19.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    0.2,
+    0.05,
+    -19.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    2.2,
+    0.05,
+    -19.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    4.2,
+    0.05,
+    -19.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    6.2,
+    0.05,
+    -19.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    8.2,
+    0.05,
+    -19.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    10.2,
+    0.05,
+    -19.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    12.2,
+    0.05,
+    -19.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    18.2,
+    0.05,
+    -19.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "hedge",
+   "pos": [
+    20.2,
+    0.05,
+    -19.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -20.0,
+    0.05,
+    -6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    20.0,
+    0.05,
+    -5.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -20.0,
+    0.05,
+    14.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    20.0,
+    0.05,
+    14.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -17.0,
+    0.05,
+    -15.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    -10.0,
+    0.05,
+    -16.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    9.0,
+    0.05,
+    -16.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    -3.5,
+    0.05,
+    -17.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    3.5,
+    0.05,
+    -17.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    21.6,
+    0.05,
+    -15.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -21.5,
+    0.05,
+    -12.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -9.2,
+    0.05,
+    -12.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    9.4,
+    0.05,
+    -12.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -13.4,
+    0.05,
+    -6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    13.4,
+    0.05,
+    -6.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -13.4,
+    0.05,
+    1.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    13.4,
+    0.05,
+    1.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -9.0,
+    0.05,
+    -15.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    1.0,
+    0.15,
+    6.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    -1.2,
+    1.2,
+    1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "palco"
+   ]
+  }
+ ]
+}

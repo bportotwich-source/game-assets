@@ -65,7 +65,8 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Compensador 5,56 (`compensador_556`) | Boca do cano | `boca_556` | recuo ×0,7, ruido_m ×1,15 | 0,07 kg | incomum | 820 |
 | Supressor 5,56 (`supressor_556`) | Boca do cano | `boca_556` | ruido_m ×0,35, recuo ×0,85, clarao ×0,1 | 0,45 kg | muito raro | 4076 |
 | Carregador 5,56 (30) (`carregador_556_30`) | Carregadores | `carregador_556` | - | 0,13 kg | incomum | 4468 |
-| Tambor 5,56 (60) (`tambor_556_60`) | Carregadores | `carregador_556` | recarga_s ×1,4, tempo_mirar ×1,15 | 0,6 kg | muito raro | 3476 |
+| Tambor 5,56 (60) (`tambor_556_60`) | Carregadores | `carregador_556` | recarga_s ×1,4, tempo_mirar ×1,15 | 0,6 kg | muito raro | 6400 |
+| Carregador longo 5,56 (60) (`carregador_556_60`) | Carregadores | `carregador_556` | recarga_s ×1,2, tempo_mirar ×1,08 | 0,45 kg | muito raro | 13840 |
 
 ## Munição e efeitos
 
@@ -126,7 +127,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Fuzil Vigília 5,56**, `encaixe_alca`: alca_rebativel
 - **Fuzil Vigília 5,56**, `encaixe_massa`: massa_rebativel
 - **Fuzil Vigília 5,56**, `encaixe_boca`: quebra_chamas_556, compensador_556, supressor_556
-- **Fuzil Vigília 5,56**, `encaixe_carregador`: carregador_556_30, tambor_556_60
+- **Fuzil Vigília 5,56**, `encaixe_carregador`: carregador_556_30, carregador_556_60, tambor_556_60
 - **Fuzil Vigília 5,56**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar
 - **Fuzil Vigília 5,56**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada
 - **Fuzil Vigília 5,56**, `encaixe_lanterna`: lanterna_fuzil

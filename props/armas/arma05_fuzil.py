@@ -113,20 +113,51 @@ def _carregador_curvo(q, cap=30):
 
 
 def _tambor_60(q):
-    """Tambor de 60: torre de alimentacao + caixa redonda com janela, chave de corda e marcas."""
-    q.add('polimero', solido(arred([(MAG_X - 0.029, MAG_Y), (MAG_X + 0.029, MAG_Y), (MAG_X + 0.03, -0.075), (MAG_X - 0.03, -0.075)], 0.002),
-                             -0.0102, 0.0102, 0.0012))
-    cxx, cyy, Rd = MAG_X + 0.004, -0.118, 0.056
-    q.add('polimero', menos(cil_z(Rd, -0.032, 0.032, cxx, cyy, 64), cil_z(Rd - 0.004, -0.033, -0.028, cxx, cyy, 64)))
-    for zs in (-1, 1): q.add('polimero', cil_z(Rd + 0.0015, min(zs * 0.026, zs * 0.03), max(zs * 0.026, zs * 0.03), cxx, cyy, 64))
-    q.add('lente', cil_z(Rd - 0.004, -0.0285, -0.028, cxx, cyy, 64))                              # tampa transparente (esquerda)
-    for i in range(30):                                                                          # cartuchos vistos pela tampa
-        a = i * 2 * math.pi / 30; r = Rd - 0.014
-        m = trimesh.creation.cylinder(radius=0.0045, height=0.044, sections=10); m.apply_translation([cxx + r * math.cos(a), cyy + r * math.sin(a), -0.004])
-        q.add('latao', m)
-    q.add('aluminio_preto', cil_z(0.012, 0.032, 0.036, cxx, cyy, 32))
-    q.add('aluminio_preto', solido(arred([(cxx - 0.02, cyy - 0.004), (cxx + 0.02, cyy - 0.004), (cxx + 0.02, cyy + 0.004), (cxx - 0.02, cyy + 0.004)], 0.003),
-                                   0.036, 0.042, 0.001))                                          # chave de corda
+    """Tambor de 60 com o eixo ao longo do cano: torre de alimentacao em cima, corpo redondo com cintas, tampa da frente com chave de corda."""
+    q.add('polimero', solido(arred([(MAG_X - 0.029, MAG_Y), (MAG_X + 0.029, MAG_Y), (MAG_X + 0.03, -0.074), (MAG_X - 0.03, -0.074)], 0.002),
+                             -0.0102, 0.0102, 0.0012))                                                  # torre
+    for zs in (-1, 1):                                                                             # nervuras da torre
+        for x in (MAG_X - 0.012, MAG_X + 0.012):
+            q.add('polimero', solido(arred([(x - 0.0016, -0.03), (x + 0.0016, -0.03), (x + 0.0016, -0.07), (x - 0.0016, -0.07)], 0.0008),
+                                     min(zs * 0.0102, zs * 0.0112), max(zs * 0.0102, zs * 0.0112)))
+    Rd, cyy = 0.048, -0.115; x0, x1 = MAG_X - 0.048, MAG_X + 0.04
+    q.add('polimero', solido(arred([(MAG_X - 0.034, -0.062), (MAG_X + 0.034, -0.062), (MAG_X + 0.036, -0.08), (MAG_X - 0.036, -0.08)], 0.004),
+                             -0.019, 0.019, 0.004))                                                    # pescoco que abraca o tambor
+    q.add('polimero', torno_x([(0.0, x0 - 0.004), (Rd - 0.006, x0 - 0.004), (Rd - 0.002, x0 - 0.002), (Rd, x0 + 0.002), (Rd, x1 - 0.002),
+                               (Rd - 0.002, x1), (Rd - 0.004, x1 + 0.002), (0.0, x1 + 0.002)], 72, y=cyy))       # corpo
+    for xb in (x0 + 0.012, (x0 + x1) / 2, x1 - 0.012):                                             # cintas
+        q.add('polimero', tubo_x(Rd - 0.002, Rd + 0.0016, xb - 0.003, xb + 0.003, y=cyy, sec=72, ch=0.0008))
+    q.add('polimero', torno_x([(0.0, x1 + 0.006), (Rd - 0.012, x1 + 0.006), (Rd - 0.006, x1 + 0.004), (Rd - 0.005, x1 + 0.001)], 72, y=cyy))  # tampa da frente
+    q.add('aluminio_preto', tubo_x(Rd - 0.013, Rd - 0.009, x1 + 0.005, x1 + 0.0075, y=cyy, sec=72))      # aro da tampa
+    q.add('aluminio_preto', cil_x(0.013, x1 + 0.006, x1 + 0.012, cyy, 0, 40))                     # botao de corda
+    q.add('aluminio_preto', solido(arred([(-0.019, -0.004), (0.019, -0.004), (0.019, 0.004), (-0.019, 0.004)], 0.003), -0.003, 0.003, 0.001)
+          .apply_transform(TF.rotation_matrix(math.pi / 2, [0, 1, 0])).apply_translation([x1 + 0.016, cyy, 0]))   # chave de corda
+    q.add('polimero', torno_x([(0.0, x0 - 0.009), (Rd - 0.016, x0 - 0.009), (Rd - 0.01, x0 - 0.005), (Rd - 0.009, x0 - 0.002)], 72, y=cyy))  # tampa de tras
+    q.merge(_cartucho_556(14), TF.translation_matrix([MAG_X - 0.026, MAG_Y - 0.0035, 0.002]))
+
+
+def _carregador_60(q):
+    """Carregador longo de 60 (quatro fileiras): topo fino que entra no poco, corpo mais largo embaixo, levemente curvo, de aluminio."""
+    R = 0.62; cx, cy = MAG_X + R, MAG_Y; L = 0.25; fi = L / R; k0 = 0.075 / L
+    def faixa(ka, kb, meia, n=40):
+        th = np.linspace(math.pi + fi * ka, math.pi + fi * kb, n)
+        fr = [(cx + (R - meia) * math.cos(t), cy + (R - meia) * math.sin(t)) for t in th]
+        tr = [(cx + (R + meia) * math.cos(t), cy + (R + meia) * math.sin(t)) for t in th]
+        return Polygon(fr + tr[::-1]).buffer(0)
+    topo = faixa(0.0, k0 + 0.03, 0.029, 20)
+    q.add('aluminio_preto', solido(arred(list(topo.exterior.coords)[:-1], 0.0015), -0.0102, 0.0102, 0.001))
+    corpo = faixa(k0, 1.0, 0.0305, 50)
+    q.add('aluminio_preto', solido(arred(list(corpo.exterior.coords)[:-1], 0.004), -0.0175, 0.0175, 0.005))
+    for zs in (-1, 1):                                                                             # caneluras ao longo do corpo
+        for off in (-0.017, -0.004, 0.009):
+            th = np.linspace(math.pi + fi * (k0 + 0.06), math.pi + fi * 0.94, 30)
+            pts = [(cx + (R + off) * math.cos(t), cy + (R + off) * math.sin(t)) for t in th]
+            q.add('aluminio_preto', solido(LineString(pts).buffer(0.0028, cap_style=1), min(zs * 0.0175, zs * 0.0186), max(zs * 0.0175, zs * 0.0186), 0.0005))
+    t = math.pi + fi; c, s_ = math.cos(t), math.sin(t)
+    b0 = np.array([cx + R * c, cy + R * s_]); d = np.array([c, s_]); nn = np.array([s_, -c])
+    base = [b0 + d * 0.034 - nn * 0.002, b0 - d * 0.034 - nn * 0.002, b0 - d * 0.035 + nn * 0.009, b0 + d * 0.035 + nn * 0.009]
+    q.add('polimero', solido(Polygon([tuple(x) for x in base]).buffer(0.002, join_style=1), -0.0195, 0.0195, 0.002))   # base de polimero
+    for zs in (-1, 1): q.add('aco_oxidado', caixa(MAG_X - 0.026, MAG_X + 0.022, MAG_Y - 0.003, MAG_Y + 0.0012, zs * 0.006 - 0.0012, zs * 0.006 + 0.0012))
     q.merge(_cartucho_556(14), TF.translation_matrix([MAG_X - 0.026, MAG_Y - 0.0035, 0.002]))
 
 
@@ -165,7 +196,7 @@ def fuzil_556(A):
     A.encaixe('encaixe_massa', (0.425, FY1 + 0.0055, 0), 'massa_trilho', explodir=(0.02, 0.05, 0), aceita=['massa_rebativel'], padrao='massa_rebativel')
     A.encaixe('encaixe_boca', (F_XM - 0.014, 0, 0), 'boca_556', explodir=(0.08, 0, 0), aceita=['quebra_chamas_556', 'compensador_556', 'supressor_556'],
               padrao='quebra_chamas_556')
-    A.encaixe('encaixe_carregador', (MAG_X, MAG_Y, 0), 'carregador_556', pai='carregador', substitui='carregador', aceita=['carregador_556_30', 'tambor_556_60'],
+    A.encaixe('encaixe_carregador', (MAG_X, MAG_Y, 0), 'carregador_556', pai='carregador', substitui='carregador', aceita=['carregador_556_30', 'carregador_556_60', 'tambor_556_60'],
               descricao='filho do nó carregador; ao pôr um carregador aqui, esconda as malhas do nó carregador')
     A.encaixe('encaixe_coronha', (FX0 - 0.006, -0.003, 0), 'coronha_ar', explodir=(-0.08, 0, 0), aceita=['coronha_retratil_ar', 'coronha_fixa_ar'],
               padrao='coronha_retratil_ar')
@@ -389,8 +420,14 @@ def carregador_556_30(A): _carregador_curvo(A.base, 30); A.pivo = (MAG_X, MAG_Y,
 
 @_acessorio('tambor_556_60', 'Tambor 5,56 (60)', 'carregador', 'carregador_556', capacidade=60, municao='municao_556', peso_kg=0.6,
             raridade='muito raro', valor_troca=60, modificadores={'recarga_s': 1.4, 'tempo_mirar': 1.15}, onde=['quartel'],
-            descricao='Tambor de 60 com tampa transparente: o dobro de tiros, mas pesado e lento para trocar. Dá para ver quantos sobram.')
+            descricao='Tambor de 60 com o eixo ao longo do cano e chave de corda na tampa: o dobro de tiros, mas pesado e lento para trocar.')
 def tambor_556_60(A): _tambor_60(A.base); A.pivo = (MAG_X, MAG_Y, 0)
+
+
+@_acessorio('carregador_556_60', 'Carregador longo 5,56 (60)', 'carregador', 'carregador_556', capacidade=60, municao='municao_556', peso_kg=0.45,
+            raridade='muito raro', valor_troca=50, modificadores={'recarga_s': 1.2, 'tempo_mirar': 1.08}, onde=['quartel'],
+            descricao='Carregador longo de alumínio com quatro fileiras: 60 tiros num pente só. Mais leve que o tambor, mas bate no chão quando deitado.')
+def carregador_556_60(A): _carregador_60(A.base); A.pivo = (MAG_X, MAG_Y, 0)
 
 
 @arma('municao_556', 'Cartucho 5,56', 'municao', 'municao', calibre='5,56', peso_kg=0.012, empilha=60, raridade='incomum', estojo='estojo_556',

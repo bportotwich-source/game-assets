@@ -1865,6 +1865,7 @@
      "substitui": "carregador",
      "aceita": [
       "carregador_556_30",
+      "carregador_556_60",
       "tambor_556_60"
      ],
      "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda as malhas do nó carregador"
@@ -3796,15 +3797,43 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Tambor de 60 com tampa transparente: o dobro de tiros, mas pesado e lento para trocar. Dá para ver quantos sobram.",
+   "descricao": "Tambor de 60 com o eixo ao longo do cano e chave de corda na tampa: o dobro de tiros, mas pesado e lento para trocar.",
    "arquivo": "acessorios/tambor_556_60.glb",
    "tamanho_m": [
-    0.074,
-    0.161,
-    0.115
+    0.099,
+    0.15,
+    0.116
    ],
-   "triangulos": 3476,
-   "kb": 168.1
+   "triangulos": 6400,
+   "kb": 304.2
+  },
+  {
+   "id": "carregador_556_60",
+   "nome": "Carregador longo 5,56 (60)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_556",
+   "capacidade": 60,
+   "municao": "municao_556",
+   "peso_kg": 0.45,
+   "raridade": "muito raro",
+   "valor_troca": 50,
+   "modificadores": {
+    "recarga_s": 1.2,
+    "tempo_mirar": 1.08
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Carregador longo de alumínio com quatro fileiras: 60 tiros num pente só. Mais leve que o tambor, mas bate no chão quando deitado.",
+   "arquivo": "acessorios/carregador_556_60.glb",
+   "tamanho_m": [
+    0.039,
+    0.262,
+    0.113
+   ],
+   "triangulos": 13840,
+   "kb": 653.8
   }
  ],
  "municao": [

@@ -26,6 +26,8 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Rifle Pardal .22 (`rifle_22`) | .22 | 10 | 34 | 70 m | 1,1/s | 70 m | 5000 | 2,7 kg | mira, alca, boca, carregador, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Rifle Pardal .22 sintético (`rifle_22_sintetico`) | .22 | 10 | 34 | 70 m | 1,1/s | 70 m | 5000 | 2,5 kg | mira, alca, boca, carregador, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Pistola sinalizadora (`pistola_sinalizadora`) | sinal 12 | 1 | 25 | 15 m | 0,3/s | 90 m | 800 | 0,45 kg | cartucho | atirar, armar, recarregar, inspecionar, ocioso |
+| Fuzil Atalaia .308 de precisão (`fuzil_308_precisao`) | .308 | 20 | 92 | 200 m | 3/s | 240 m | 3500 | 5,6 kg | punho, mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
+| Fuzil Atalaia .308 curto (`fuzil_308_precisao_curto`) | .308 | 20 | 92 | 150 m | 3/s | 250 m | 3500 | 4,9 kg | punho, mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
 
 ## Acessórios
 
@@ -155,6 +157,11 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Supressor .22 (`supressor_22`) | Boca do cano | `boca_22` | ruido_m ×0,25, precisao ×1,04, alcance_m ×0,95 | 0,16 kg | raro | 1808 |
 | Carregador rotativo .22 (10) (`carregador_22_10`) | Carregadores | `carregador_22` | - | 0,05 kg | comum | 1228 |
 | Carregador .22 (25) (`carregador_22_25`) | Carregadores | `carregador_22` | recarga_s ×1,1 | 0,12 kg | incomum | 1096 |
+| Coronha de precisão (fuzil) (`coronha_precisao_ar`) | Coronhas | `coronha_ar` | recuo ×0,85, precisao_mirando ×1,15, tempo_mirar ×1,1 | 0,95 kg | raro | 20888 |
+| Coronha de precisão preta (fuzil) (`coronha_precisao_ar_preta`) | Coronhas | `coronha_ar` | recuo ×0,85, precisao_mirando ×1,15, tempo_mirar ×1,1 | 0,95 kg | raro | 20888 |
+| Luneta 5-25× de precisão (`luneta_5_25`) | Miras | `trilho_mira` | precisao_mirando ×1,7, tempo_mirar ×1,3, alcance_m ×2,2 | 0,98 kg | muito raro | 6528 |
+| Carregador .308 de fuzil (20) (`carregador_ar10_20`) | Carregadores | `carregador_ar10` | - | 0,2 kg | raro | 5196 |
+| Carregador .308 de fuzil (10) (`carregador_ar10_10`) | Carregadores | `carregador_ar10` | recarga_s ×0,95 | 0,13 kg | incomum | 4688 |
 
 ## Munição e efeitos
 
@@ -335,3 +342,27 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Rifle Pardal .22 sintético**, `encaixe_carregador`: carregador_22_10, carregador_22_25
 - **Rifle Pardal .22 sintético**, `encaixe_bandoleira`: bandoleira
 - **Pistola sinalizadora**, `encaixe_cartucho`: cartucho_sinal_vermelho, cartucho_sinal_verde
+- **Fuzil Atalaia .308 de precisão**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan
+- **Fuzil Atalaia .308 de precisão**, `encaixe_mira`: luneta_5_25, luneta_3_9, luneta_4x, luneta_1_6, mira_holografica, mira_ponto_vermelho_tubo, mira_reflexa
+- **Fuzil Atalaia .308 de precisão**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
+- **Fuzil Atalaia .308 de precisão**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
+- **Fuzil Atalaia .308 de precisão**, `encaixe_boca`: protetor_rosca_308, freio_boca_308, supressor_308
+- **Fuzil Atalaia .308 de precisão**, `encaixe_carregador`: carregador_ar10_20, carregador_ar10_10
+- **Fuzil Atalaia .308 de precisão**, `encaixe_coronha`: coronha_precisao_ar, coronha_precisao_ar_preta, coronha_retratil_ar, coronha_fixa_ar
+- **Fuzil Atalaia .308 de precisão**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_quadrada
+- **Fuzil Atalaia .308 de precisão**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
+- **Fuzil Atalaia .308 de precisão**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
+- **Fuzil Atalaia .308 de precisão**, `encaixe_bipe`: bipe
+- **Fuzil Atalaia .308 de precisão**, `encaixe_bandoleira`: bandoleira
+- **Fuzil Atalaia .308 curto**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan
+- **Fuzil Atalaia .308 curto**, `encaixe_mira`: luneta_5_25, luneta_3_9, luneta_4x, luneta_1_6, mira_holografica, mira_ponto_vermelho_tubo, mira_reflexa
+- **Fuzil Atalaia .308 curto**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
+- **Fuzil Atalaia .308 curto**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
+- **Fuzil Atalaia .308 curto**, `encaixe_boca`: protetor_rosca_308, freio_boca_308, supressor_308
+- **Fuzil Atalaia .308 curto**, `encaixe_carregador`: carregador_ar10_20, carregador_ar10_10
+- **Fuzil Atalaia .308 curto**, `encaixe_coronha`: coronha_precisao_ar, coronha_precisao_ar_preta, coronha_retratil_ar, coronha_fixa_ar
+- **Fuzil Atalaia .308 curto**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_quadrada
+- **Fuzil Atalaia .308 curto**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
+- **Fuzil Atalaia .308 curto**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
+- **Fuzil Atalaia .308 curto**, `encaixe_bipe`: bipe
+- **Fuzil Atalaia .308 curto**, `encaixe_bandoleira`: bandoleira

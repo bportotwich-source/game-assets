@@ -6876,6 +6876,7 @@
    "trancado": true,
    "tranca": "cadeado",
    "ferramenta": "martelo",
+   "estacao_obra": "bancada_carpintaria",
    "constroi": {
     "tabua": 8,
     "caixa_pregos": 1,
@@ -7423,6 +7424,7 @@
     "caixa_pregos": 1
    },
    "ferramenta": "martelo",
+   "estacao_obra": "bancada_carpintaria",
    "estacao": "despensa comunitária (a cozinha e os moradores tiram a comida daqui; mostra quantos dias de comida tem a base)",
    "exibe": [
     {
@@ -7602,6 +7604,7 @@
     "caixa_pregos": 1
    },
    "ferramenta": "martelo",
+   "estacao_obra": "bancada_carpintaria",
    "estacao": "baú pessoal (cada morador tem o seu; mexer no baú dos outros baixa a moral)",
    "arquivo": "mobilias/bau_madeira.glb",
    "tamanho_m": [
@@ -8274,6 +8277,488 @@
      "unidades": 6
     }
    ]
+  },
+  {
+   "id": "bancada_carpintaria",
+   "nome": "Bancada de carpintaria de cavaletes",
+   "grupo": "mobilias",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "serraria",
+    "garagem",
+    "fazenda"
+   ],
+   "constroi": {
+    "tabua": 6,
+    "caixa_pregos": 1
+   },
+   "ferramenta": "serrote",
+   "fase": 2,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.75
+   ],
+   "estacao": "carpintaria (tábuas viram móveis, barricadas reforçadas, cabos de ferramenta e flechas)",
+   "arquivo": "mobilias/bancada_carpintaria.glb",
+   "tamanho_m": [
+    2.229,
+    1.0,
+    0.938
+   ],
+   "triangulos": 3044,
+   "kb": 373.1
+  },
+  {
+   "id": "bancada_costura",
+   "nome": "Mesa de costura com máquina manual",
+   "grupo": "mobilias",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "casas",
+    "galeria",
+    "hotel"
+   ],
+   "fase": 2,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.6
+   ],
+   "sentar": true,
+   "estacao": "costura (roupas, mochilas, coletes acolchoados, sacos e lona de barraca)",
+   "arquivo": "mobilias/bancada_costura.glb",
+   "tamanho_m": [
+    1.1,
+    1.12,
+    0.6
+   ],
+   "triangulos": 2352,
+   "kb": 360.9
+  },
+  {
+   "id": "mesa_enfermaria",
+   "nome": "Mesa de enfermaria improvisada",
+   "grupo": "mobilias",
+   "categoria": "saude",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "clinica",
+    "igreja",
+    "escolinha"
+   ],
+   "constroi": {
+    "tabua": 4,
+    "caixa_pregos": 1,
+    "trapos": 2
+   },
+   "ferramenta": "martelo",
+   "fase": 2,
+   "trabalha": 1,
+   "deitar": true,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.55
+   ],
+   "estacao": "enfermaria (curativos melhores, tala, remédio de ervas; morador ferido se recupera 2× mais rápido deitado aqui)",
+   "arquivo": "mobilias/mesa_enfermaria.glb",
+   "tamanho_m": [
+    2.42,
+    0.925,
+    0.66
+   ],
+   "triangulos": 4908,
+   "kb": 460.5
+  },
+  {
+   "id": "forja_tambor",
+   "nome": "Forja de tambor com fole",
+   "grupo": "mobilias",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "ferrovelho",
+    "fazenda",
+    "fabrica"
+   ],
+   "constroi": {
+    "tambor_200l": 1,
+    "tijolo": 8,
+    "cano_metal": 2,
+    "couro": 2
+   },
+   "ferramenta": "martelo",
+   "fase": 2,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "estacao": "forja (aço vira lâmina, ponta de lança, ferradura e pregos; precisa de carvão)",
+   "usa": "carvao",
+   "luz_m": 5,
+   "ruido_m": 25,
+   "arquivo": "mobilias/forja_tambor.glb",
+   "tamanho_m": [
+    2.011,
+    0.678,
+    0.613
+   ],
+   "triangulos": 3640,
+   "kb": 537.5
+  },
+  {
+   "id": "fogao_tambor",
+   "nome": "Fogão a lenha de tambor",
+   "grupo": "mobilias",
+   "categoria": "cozinha",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "casas",
+    "fazenda",
+    "casa_de_campo"
+   ],
+   "constroi": {
+    "tambor_200l": 1,
+    "cano_metal": 2,
+    "chapa_metal": 1,
+    "tijolo": 4
+   },
+   "ferramenta": "martelo",
+   "fase": 2,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.65
+   ],
+   "estacao": "cozinha (refeições que rendem 2× a comida crua e alegram os moradores; aquece o cômodo)",
+   "usa": "lenha",
+   "luz_m": 2,
+   "aquece": true,
+   "arquivo": "mobilias/fogao_tambor.glb",
+   "tamanho_m": [
+    1.217,
+    2.4,
+    0.67
+   ],
+   "triangulos": 4012,
+   "kb": 348.3,
+   "partes": [
+    {
+     "no": "porta_fornalha",
+     "origem": [
+      -0.445,
+      0.41000000000000003,
+      0.13
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -100
+    }
+   ]
+  },
+  {
+   "id": "defumador",
+   "nome": "Defumador de tábuas",
+   "grupo": "mobilias",
+   "categoria": "cozinha",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "fazenda",
+    "casa_de_campo",
+    "casa_barcos"
+   ],
+   "constroi": {
+    "tabua": 8,
+    "chapa_metal": 1,
+    "caixa_pregos": 1,
+    "tijolo": 4
+   },
+   "ferramenta": "martelo",
+   "fase": 2,
+   "trabalha": 1,
+   "estacao": "defumador (carne e peixe duram 10 dias em vez de 2)",
+   "usa": "lenha",
+   "produz": {
+    "item": "carne_defumada",
+    "qtd": 4,
+    "a_cada_min": 240,
+    "consome": {
+     "carne crua": 4,
+     "lenha": 1
+    }
+   },
+   "arquivo": "mobilias/defumador.glb",
+   "tamanho_m": [
+    0.9,
+    1.82,
+    0.86
+   ],
+   "triangulos": 7328,
+   "kb": 651.4,
+   "partes": [
+    {
+     "no": "porta",
+     "origem": [
+      0.4,
+      0.3,
+      0.355
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -110
+    }
+   ]
+  },
+  {
+   "id": "filtro_barril",
+   "nome": "Filtro de água em barril",
+   "grupo": "mobilias",
+   "categoria": "agua",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "fazenda",
+    "casas"
+   ],
+   "constroi": {
+    "tambor_200l": 1,
+    "carvao": 2,
+    "pedras": 4,
+    "trapos": 2,
+    "tubo_pvc": 1
+   },
+   "ferramenta": "chave_inglesa",
+   "fase": 2,
+   "estacao": "filtro (água de chuva ou do rio fica limpa; ainda precisa ferver se alguém estiver doente)",
+   "conteiner": true,
+   "slots": 1,
+   "saque": [
+    "agua"
+   ],
+   "grade": [
+    2,
+    1
+   ],
+   "produz": {
+    "item": "galao_agua",
+    "qtd": 1,
+    "a_cada_min": 60,
+    "consome": {
+     "agua suja": 5
+    }
+   },
+   "arquivo": "mobilias/filtro_barril.glb",
+   "tamanho_m": [
+    0.604,
+    1.26,
+    0.872
+   ],
+   "triangulos": 8952,
+   "kb": 697.1
+  },
+  {
+   "id": "bancada_eletronica",
+   "nome": "Bancada de eletrônica",
+   "grupo": "mobilias",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "correios",
+    "cinema",
+    "delegacia"
+   ],
+   "constroi": {
+    "tabua": 4,
+    "fio_eletrico": 2,
+    "placa_circuito": 1,
+    "bateria_carro": 1
+   },
+   "ferramenta": "chave_inglesa",
+   "fase": 3,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.6
+   ],
+   "sentar": true,
+   "usa": "energia",
+   "estacao": "eletrônica (rádio de longo alcance, holofote, alarme elétrico, carregador de pilhas; desbloqueia o marco da torre de rádio)",
+   "arquivo": "mobilias/bancada_eletronica.glb",
+   "tamanho_m": [
+    1.5,
+    1.286,
+    0.64
+   ],
+   "triangulos": 4820,
+   "kb": 291.1
+  },
+  {
+   "id": "bancada_municao",
+   "nome": "Mesa de recarga de munição",
+   "grupo": "mobilias",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "delegacia",
+    "quartel",
+    "casa_de_campo"
+   ],
+   "constroi": {
+    "tabua": 5,
+    "caixa_pregos": 1,
+    "pote_parafusos": 1
+   },
+   "ferramenta": "chave_inglesa",
+   "fase": 3,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.6
+   ],
+   "estacao": "recarga (cápsulas vazias + pólvora + chumbo viram munição; 1 erro em 20 dá tiro falho)",
+   "arquivo": "mobilias/bancada_municao.glb",
+   "tamanho_m": [
+    1.2,
+    1.27,
+    0.6
+   ],
+   "triangulos": 3036,
+   "kb": 210.7
+  },
+  {
+   "id": "alambique",
+   "nome": "Alambique de panela",
+   "grupo": "mobilias",
+   "categoria": "oficina",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "fazenda",
+    "casa_de_campo"
+   ],
+   "constroi": {
+    "panela": 1,
+    "tubo_pvc": 1,
+    "cano_metal": 1,
+    "tambor_200l": 1,
+    "tijolo": 6
+   },
+   "ferramenta": "chave_inglesa",
+   "fase": 2,
+   "trabalha": 1,
+   "usa": "lenha",
+   "estacao": "alambique (fruta podre ou grão viram álcool: remédio, lamparina, molotov e combustível do gerador)",
+   "produz": {
+    "item": "alcool",
+    "qtd": 1,
+    "a_cada_min": 90,
+    "consome": {
+     "comida": 3,
+     "lenha": 1
+    }
+   },
+   "arquivo": "mobilias/alambique.glb",
+   "tamanho_m": [
+    1.49,
+    0.88,
+    0.592
+   ],
+   "triangulos": 6704,
+   "kb": 379.7
+  },
+  {
+   "id": "composteira",
+   "nome": "Composteira de pallets",
+   "grupo": "mobilias",
+   "categoria": "agricultura",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "fazenda",
+    "casas"
+   ],
+   "constroi": {
+    "pallet": 3,
+    "arame_liso": 1
+   },
+   "ferramenta": "nenhuma",
+   "fase": 2,
+   "estacao": "composteira (restos de comida viram adubo: canteiros dão 50 % mais)",
+   "produz": {
+    "item": "adubo",
+    "qtd": 1,
+    "a_cada_min": 1440,
+    "consome": {
+     "restos de comida": 4
+    }
+   },
+   "arquivo": "mobilias/composteira.glb",
+   "tamanho_m": [
+    1.302,
+    1.331,
+    1.251
+   ],
+   "triangulos": 8084,
+   "kb": 578.6
+  },
+  {
+   "id": "cama_pallet",
+   "nome": "Cama de pallet com colchão",
+   "grupo": "mobilias",
+   "categoria": "abrigo",
+   "montagem": "floor",
+   "lote": 16,
+   "comodos": [
+    "abrigo",
+    "casas",
+    "galeria"
+   ],
+   "deitar": true,
+   "vagas": 1,
+   "constroi": {
+    "pallet": 2,
+    "colchao_chao": 1
+   },
+   "ferramenta": "nenhuma",
+   "fase": 2,
+   "estacao": "cama (morador com cama própria ganha +10 de moral; dorme fora do chão frio)",
+   "arquivo": "mobilias/cama_pallet.glb",
+   "tamanho_m": [
+    1.45,
+    0.51,
+    2.202
+   ],
+   "triangulos": 5872,
+   "kb": 558.4
   }
  ]
 }

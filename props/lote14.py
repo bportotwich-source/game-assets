@@ -49,7 +49,7 @@ def _lata_simples(p, c, r=0.038, h=0.11, mat='lata', rot=None):
 # ---------------------------------------------------------------------------- ARMAS
 @item('armario_armas_abrigo', 'Armário de armas de madeira com tela', 'mobilias', 'armazenamento', comodos=['abrigo', 'casas', 'quartel', 'fazenda'],
       conteiner=True, slots=12, grade=[6, 4], saque=['armas', 'municao'], aceita=['armas', 'municao', 'acessorios'], trancado=True, tranca='cadeado',
-      ferramenta='martelo', constroi={'tabua': 8, 'caixa_pregos': 1, 'dobradicas': 1, 'corrente_cadeado': 1, 'arame_liso': 1}, fase=2,
+      ferramenta='martelo', estacao_obra='bancada_carpintaria', constroi={'tabua': 8, 'caixa_pregos': 1, 'dobradicas': 1, 'corrente_cadeado': 1, 'arame_liso': 1}, fase=2,
       estacao='arsenal (guarda e mostra as armas da base; moradores pegam daqui para a vigia)', barricada=True,
       vagas_armas=[{'tipo': 'longa', 'pos': [round(-0.42 + k * 0.168, 3), 0.11, -0.12], 'rot_y': 0} for k in range(6)] +
                   [{'tipo': 'curta', 'pos': [round(x, 3), 1.42, -0.2], 'rot_y': 0} for x in (-0.36, -0.12, 0.12, 0.36)] +
@@ -199,7 +199,7 @@ def prateleira_improvisada(M):
 
 @item('despensa', 'Estante de despensa com caixotes', 'mobilias', 'armazenamento', comodos=['abrigo', 'casas', 'diner', 'armazem', 'supermercado'],
       conteiner=True, slots=16, grade=[8, 4], saque=['comida', 'agua'], aceita=['comida', 'agua', 'remedios'], fase=2,
-      constroi={'tabua': 10, 'caixa_pregos': 1}, ferramenta='martelo',
+      constroi={'tabua': 10, 'caixa_pregos': 1}, ferramenta='martelo', estacao_obra='bancada_carpintaria',
       estacao='despensa comunitária (a cozinha e os moradores tiram a comida daqui; mostra quantos dias de comida tem a base)',
       exibe=[{'y': round(y, 3), 'x': [-0.58, 0.58], 'z': [-0.18, 0.18]} for y in (0.12, 0.54, 0.96, 1.38)])
 def despensa(M):
@@ -267,7 +267,7 @@ def _ferragem_canto(p, x, y, z, sx, sy, sz, s=0.05, mat='aco_pintado'):
 
 @item('bau_madeira', 'Baú de madeira com cadeado', 'mobilias', 'armazenamento', comodos=['abrigo', 'casas', 'mansao', 'fazenda', 'casa_barcos'],
       conteiner=True, slots=15, grade=[8, 5], saque=['roupas', 'ferramentas', 'moedas', 'lembrancas'], aceita=[], trancado=True, tranca='cadeado',
-      barricada=True, sentar=True, fase=1, constroi={'tabua': 5, 'dobradicas': 1, 'caixa_pregos': 1}, ferramenta='martelo',
+      barricada=True, sentar=True, fase=1, constroi={'tabua': 5, 'dobradicas': 1, 'caixa_pregos': 1}, ferramenta='martelo', estacao_obra='bancada_carpintaria',
       estacao='baú pessoal (cada morador tem o seu; mexer no baú dos outros baixa a moral)')
 def bau_madeira(M):
     p = M.base; X, Z, H = 0.48, 0.26, 0.42

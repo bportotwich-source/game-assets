@@ -228,6 +228,18 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Pallet de sucata separada (`pallet_sucata`) | 14 | Armazenamento do abrigo | 1,20 × 0,45 × 0,80 | - | camada_1, camada_2, camada_3, camada_4 | - | 4624 |
 | Pilha de sacos de areia no pallet (`pallet_sacos_areia`) | 14 | Armazenamento do abrigo | 1,21 × 0,51 × 1,00 | - | camada_1, camada_2, camada_3 | - | 21388 |
 | Lenheiro coberto (`lenheiro`) | 14 | Armazenamento do abrigo | 1,80 × 1,53 × 0,89 | - | camada_1, camada_2, camada_3, camada_4 | - | 11164 |
+| Bancada de carpintaria de cavaletes (`bancada_carpintaria`) | 16 | Oficina | 2,23 × 1,00 × 0,94 | - | - | - | 3044 |
+| Mesa de costura com máquina manual (`bancada_costura`) | 16 | Oficina | 1,10 × 1,12 × 0,60 | - | - | sentar | 2352 |
+| Mesa de enfermaria improvisada (`mesa_enfermaria`) | 16 | Saúde | 2,42 × 0,93 × 0,66 | - | - | dormir | 4908 |
+| Forja de tambor com fole (`forja_tambor`) | 16 | Oficina | 2,01 × 0,68 × 0,61 | - | - | - | 3640 |
+| Fogão a lenha de tambor (`fogao_tambor`) | 16 | Cozinha | 1,22 × 2,40 × 0,67 | - | porta_fornalha | - | 4012 |
+| Defumador de tábuas (`defumador`) | 16 | Cozinha | 0,90 × 1,82 × 0,86 | - | porta | - | 7328 |
+| Filtro de água em barril (`filtro_barril`) | 16 | Água | 0,60 × 1,26 × 0,87 | 1 espaços: agua | - | - | 8952 |
+| Bancada de eletrônica (`bancada_eletronica`) | 16 | Oficina | 1,50 × 1,29 × 0,64 | - | - | sentar | 4820 |
+| Mesa de recarga de munição (`bancada_municao`) | 16 | Oficina | 1,20 × 1,27 × 0,60 | - | - | - | 3036 |
+| Alambique de panela (`alambique`) | 16 | Oficina | 1,49 × 0,88 × 0,59 | - | - | - | 6704 |
+| Composteira de pallets (`composteira`) | 16 | Agricultura | 1,30 × 1,33 × 1,25 | - | - | - | 8084 |
+| Cama de pallet com colchão (`cama_pallet`) | 16 | Abrigo | 1,45 × 0,51 × 2,20 | - | - | dormir | 5872 |
 
 ## Loot
 
@@ -342,3 +354,5 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Capacete de panela acolchoado (`capacete_panela`) | 15 | Roupas e equipamento | equipamento | 1 | 1,0 kg | 1 | +20 de proteção na cabeça; tira 10 % da audição | abrigo |
 | Mochila de lona improvisada (`mochila_lona`) | 15 | Roupas e equipamento | equipamento | 1 | 0,8 kg | 1 | mochila de 4 × 4 células (a de loja tem 5 × 6); faz barulho de lona ao correr | abrigo |
 | Bolsa de cintura de pano (`bolsa_cintura`) | 15 | Roupas e equipamento | equipamento | 1 | 0,3 kg | 1 | +3 × 2 células de acesso rápido (usar sem abrir a mochila) | abrigo |
+| Peça de carne defumada (`carne_defumada`) | 16 | Comida | comida | 3 | 0,6 kg | 4 | fome -40; dura 10 dias sem estragar | abrigo, fazenda |
+| Saco de adubo de composto (`adubo`) | 16 | Agricultura | material | 2 | 8,0 kg | 1 | canteiro adubado rende 50 % mais por 3 colheitas | abrigo, fazenda, supermercado |

@@ -28,7 +28,7 @@ def receita(r):
     """(ingredientes, ferramenta, estacao, tempo) de um item, venha de 'constroi' (mobilias) ou de 'craft' (loot)."""
     if 'craft' in r:
         c = r['craft']; return c.get('ingredientes', {}), c.get('ferramenta'), c.get('estacao'), c.get('tempo_s')
-    if 'constroi' in r: return r['constroi'], r.get('ferramenta'), None, r.get('tempo_s')
+    if 'constroi' in r: return r['constroi'], r.get('ferramenta'), r.get('estacao_obra'), r.get('tempo_s')
     return None
 
 
@@ -45,6 +45,7 @@ def checar(itens):
         for o in r.get('obtem_de', []):
             alvo = o.get('desmontar') or o.get('consumir') or o.get('fazer')
             if alvo not in itens and alvo != 'ruina': erros.append(f"{r['id']}: obtem_de '{alvo}' não existe")
+        if r.get('produz') and r['produz']['item'] not in itens: erros.append(f"{r['id']}: produz '{r['produz']['item']}' que não existe")
         if r.get('estoque') and r['estoque']['item'] not in itens: erros.append(f"{r['id']}: estoque de '{r['estoque']['item']}' não existe")
     return erros
 
@@ -70,7 +71,19 @@ def md(itens):
             L.append(f"| {r['nome']} (`{r['id']}`) | {r['lote']} | {', '.join(f'{q}× {nome(itens, k)}' for k, q in ing.items())} | "
                      f"{nome(itens, fer) if fer and fer != 'nenhuma' else 'à mão'} | {nome(itens, est) if est else '-'} | {v(t) + ' s' if t else '-'} |")
         L.append('')
-    mats = [r for r in itens.values() if r.get('obtem_de') or (r.get('grupo') == 'loot' and r.get('lote', 0) >= 13)]
+    ests = {}
+    for r in com:
+        e = receita(r)[2]
+        if e and e != 'mao': ests.setdefault(e, []).append(r)
+    est_ids = sorted(set(ests) | {r['id'] for r in itens.values() if r.get('produz')}, key=lambda k: (itens.get(k, {}).get('fase', 9), k))
+    if est_ids:
+        L += ['## Estações: o que cada uma fabrica ou produz', '', '| Estação | Fase | Fabrica | Produz sozinha (com um morador) |', '|---|---|---|---|']
+        for k in est_ids:
+            r = itens.get(k, {'nome': k, 'id': k}); pz = r.get('produz')
+            L.append(f"| {nome(itens, k)} | {r.get('fase', '-')} | {', '.join(x['nome'] for x in ests.get(k, [])) or '-'} | "
+                     f"{f'{pz['qtd']}× {nome(itens, pz['item'])} a cada {pz['a_cada_min']} min, gastando ' + ', '.join(f'{q} {c}' for c, q in pz['consome'].items()) if pz else '-'} |")
+        L.append('')
+    mats = [r for r in itens.values() if r.get('obtem_de') or (r.get('grupo') == 'loot' and r.get('lote') == 13)]
     if mats:
         L += ['## Materiais: de onde vêm e onde entram', '', '| Material | Fase | Grade | Peso | Achado em | Também sai de | Entra em |', '|---|---|---|---|---|---|---|']
         usos = {}

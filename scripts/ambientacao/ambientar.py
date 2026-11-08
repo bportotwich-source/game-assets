@@ -233,6 +233,13 @@ def colocar(com, it, regra, rng, y):
     return None
 
 
+# Para os kits que ja trazem os moveis na geometria (kits 55 a 61): nada de movel, so sinais do fim e loot solto.
+SO_SINAIS = S + S_PAREDE + [('lixo_espalhado', 1, 'livre', 0.3), ('louca_quebrada', 1, 'livre', 0.15), ('roupas', 1, 'livre', 0.25), ('lata_feijao', 1, 'livre', 0.25),
+                            ('garrafa_agua', 1, 'livre', 0.2), ('frasco_remedio', 1, 'livre', 0.12), ('pilha_livros', 1, 'livre', 0.15), ('mochila', 1, 'livre', 0.06),
+                            ('lanterna', 1, 'livre', 0.05), ('vela_fosforos', 1, 'livre', 0.08), ('bilhete', 1, 'livre', 0.08), ('salgadinho', 1, 'livre', 0.12)]
+SO_SINAIS_FORA = [('lixo_espalhado', 1, 'livre', 0.5), ('mancha_sangue', 1, 'livre', 0.12), ('papeis_espalhados', 1, 'livre', 0.3), ('cacos_vidro', 1, 'livre', 0.2)]
+
+
 SEQ_CASA_TERREO = ['sala', 'cozinha', 'jantar', 'lavanderia', 'escritorio', 'deposito']
 SEQ_CASA_CIMA = ['quarto', 'quarto_crianca', 'quarto_solteiro', 'escritorio', 'quarto_solteiro', 'deposito']
 SEQS = {'apto': ['sala', 'quarto', 'cozinha', 'quarto_crianca', 'quarto_solteiro', 'escritorio', 'deposito'], 'terreo': SEQ_CASA_TERREO, 'cima': SEQ_CASA_CIMA,
@@ -318,7 +325,11 @@ def ambientar(kit, cfg, semente=0):
                 if 0 <= u < res['nx'] and 0 <= v < res['nz'] and an['rotulo'][u, v] == c['id']: tipo = r['tipo']; break
             if tipo is None: tipo = tipos[(an['andar'], c['id'])]
             com = Comodo(res, an, c['id']); com.paredes_usadas = []
-            lista = list(TIPOS[tipo]) + [tuple(e) for e in cfg.get('extras', {}).get(tipo, [])]
+            if cfg.get('ja_mobiliado'):            # kit que ja vem com os moveis na geometria: so os sinais do fim e o loot
+                lista = [] if tipo == 'vazio' else (list(SO_SINAIS_FORA) if tipo in ('patio', 'quintal', 'estacionamento', 'varanda') else list(SO_SINAIS))
+            else:
+                lista = list(TIPOS[tipo])
+            lista += [tuple(e) for e in cfg.get('extras', {}).get(tipo, [])]
             n_ok = 0
             for item, n, regra, prob in sorted(lista, key=lambda e: -(CAT[e[0]]['tamanho_m'][0] * CAT[e[0]]['tamanho_m'][2]) if e[0] in CAT else 0):
                 if item not in CAT: print('  item desconhecido', item); continue

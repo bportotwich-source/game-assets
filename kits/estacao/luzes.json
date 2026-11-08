@@ -1,0 +1,134 @@
+{
+ "kit": "estacao",
+ "gerado_por": "scripts/iluminacao/luzes.py",
+ "convencao": "pos em metros no espaço do prédio (o mesmo do building_layout.json); alcance em metros; tipo 'luminaria' = luz de uma luminária do kit, 'gerada' = luz de teto num cômodo sem luminária (teto = altura do teto ali, onde o Godot põe um plafon), 'externa' = luminária fora dos cômodos (varanda, poste, fachada)",
+ "materiais": [],
+ "luzes": [
+  {
+   "pos": [
+    -13.558,
+    2.78,
+    -11.975
+   ],
+   "alcance": 6.6,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -8.808,
+    2.78,
+    -11.975
+   ],
+   "alcance": 6.6,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -4.308,
+    2.78,
+    -11.975
+   ],
+   "alcance": 6.6,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    0.442,
+    2.78,
+    -11.975
+   ],
+   "alcance": 6.6,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    5.192,
+    2.78,
+    -11.975
+   ],
+   "alcance": 6.6,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    9.692,
+    2.78,
+    -11.975
+   ],
+   "alcance": 6.6,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    6.942,
+    2.78,
+    5.775
+   ],
+   "alcance": 4.0,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.0,
+   "andar": 0,
+   "comodo": 2
+  }
+ ]
+}

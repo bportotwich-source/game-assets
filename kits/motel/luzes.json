@@ -1,0 +1,404 @@
+{
+ "kit": "motel",
+ "gerado_por": "scripts/iluminacao/luzes.py",
+ "convencao": "pos em metros no espaço do prédio (o mesmo do building_layout.json); alcance em metros; tipo 'luminaria' = luz de uma luminária do kit, 'gerada' = luz de teto num cômodo sem luminária (teto = altura do teto ali, onde o Godot põe um plafon), 'externa' = luminária fora dos cômodos (varanda, poste, fachada)",
+ "materiais": [],
+ "luzes": [
+  {
+   "pos": [
+    -11.585,
+    2.73,
+    1.045
+   ],
+   "alcance": 5.1,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 2.95,
+   "andar": 0,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -6.835,
+    2.73,
+    1.045
+   ],
+   "alcance": 5.1,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 2.95,
+   "andar": 0,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -1.835,
+    2.73,
+    1.045
+   ],
+   "alcance": 5.1,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 2.95,
+   "andar": 0,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    2.915,
+    2.73,
+    1.045
+   ],
+   "alcance": 5.1,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 2.95,
+   "andar": 0,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    7.665,
+    2.73,
+    1.045
+   ],
+   "alcance": 5.1,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 2.95,
+   "andar": 0,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -11.835,
+    2.73,
+    -2.955
+   ],
+   "alcance": 6.0,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 2.95,
+   "andar": 0,
+   "comodo": 7
+  },
+  {
+   "pos": [
+    -7.835,
+    2.73,
+    -2.955
+   ],
+   "alcance": 6.2,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 2.95,
+   "andar": 0,
+   "comodo": 9
+  },
+  {
+   "pos": [
+    -3.835,
+    2.73,
+    -2.955
+   ],
+   "alcance": 6.2,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 2.95,
+   "andar": 0,
+   "comodo": 11
+  },
+  {
+   "pos": [
+    0.165,
+    2.73,
+    -2.955
+   ],
+   "alcance": 6.2,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 2.95,
+   "andar": 0,
+   "comodo": 13
+  },
+  {
+   "pos": [
+    4.165,
+    2.73,
+    -2.955
+   ],
+   "alcance": 6.2,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 2.95,
+   "andar": 0,
+   "comodo": 15
+  },
+  {
+   "pos": [
+    7.915,
+    2.73,
+    -2.955
+   ],
+   "alcance": 6.1,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 2.95,
+   "andar": 0,
+   "comodo": 17
+  },
+  {
+   "pos": [
+    -11.335,
+    5.73,
+    0.795
+   ],
+   "alcance": 4.9,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 5.95,
+   "andar": 1,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    -6.335,
+    5.73,
+    0.795
+   ],
+   "alcance": 4.9,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 5.95,
+   "andar": 1,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    -1.335,
+    5.73,
+    0.795
+   ],
+   "alcance": 4.9,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 5.95,
+   "andar": 1,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    3.665,
+    5.73,
+    0.795
+   ],
+   "alcance": 4.9,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 5.95,
+   "andar": 1,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    8.665,
+    5.73,
+    0.795
+   ],
+   "alcance": 4.9,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 5.95,
+   "andar": 1,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    -11.835,
+    5.73,
+    -2.955
+   ],
+   "alcance": 6.0,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 5.95,
+   "andar": 1,
+   "comodo": 3
+  },
+  {
+   "pos": [
+    -7.835,
+    5.73,
+    -2.955
+   ],
+   "alcance": 6.2,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 5.95,
+   "andar": 1,
+   "comodo": 5
+  },
+  {
+   "pos": [
+    -3.835,
+    5.73,
+    -2.955
+   ],
+   "alcance": 6.2,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 5.95,
+   "andar": 1,
+   "comodo": 7
+  },
+  {
+   "pos": [
+    0.165,
+    5.73,
+    -2.955
+   ],
+   "alcance": 6.2,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 5.95,
+   "andar": 1,
+   "comodo": 9
+  },
+  {
+   "pos": [
+    4.165,
+    5.73,
+    -2.955
+   ],
+   "alcance": 6.2,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 5.95,
+   "andar": 1,
+   "comodo": 11
+  },
+  {
+   "pos": [
+    7.915,
+    5.73,
+    -2.955
+   ],
+   "alcance": 6.1,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 5.95,
+   "andar": 1,
+   "comodo": 13
+  }
+ ]
+}

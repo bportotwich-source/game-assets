@@ -1,0 +1,62 @@
+{
+ "kit": "escolinha",
+ "gerado_por": "scripts/iluminacao/luzes.py",
+ "convencao": "pos em metros no espaço do prédio (o mesmo do building_layout.json); alcance em metros; tipo 'luminaria' = luz de uma luminária do kit, 'gerada' = luz de teto num cômodo sem luminária (teto = altura do teto ali, onde o Godot põe um plafon), 'externa' = luminária fora dos cômodos (varanda, poste, fachada)",
+ "materiais": [],
+ "luzes": [
+  {
+   "pos": [
+    0.025,
+    3.4,
+    -2.775
+   ],
+   "alcance": 9.0,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 4.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    0.025,
+    3.4,
+    2.725
+   ],
+   "alcance": 9.0,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 4.0,
+   "andar": 0,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    0.025,
+    2.96,
+    6.975
+   ],
+   "alcance": 4.0,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.18,
+   "andar": 0,
+   "comodo": 1
+  }
+ ]
+}

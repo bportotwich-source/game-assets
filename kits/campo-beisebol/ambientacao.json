@@ -1,0 +1,273 @@
+{
+ "kit": "campo-beisebol",
+ "gerado_por": "scripts/ambientacao/ambientar.py",
+ "convencao": "pos em metros no espaço do prédio (mesmo do building_layout.json); rotY em graus; itens de parede (montagem wall) têm o pivô na face de trás, já na altura sugerida",
+ "niveis": {
+  "0": 0.0
+ },
+ "comodos": [
+  {
+   "andar": 0,
+   "comodo": 0,
+   "tipo": "deposito",
+   "area_m2": 7009.3,
+   "centro": [
+    0.08,
+    -12.58
+   ],
+   "itens": 6
+  },
+  {
+   "andar": 0,
+   "comodo": 1,
+   "tipo": "deposito",
+   "area_m2": 3286.2,
+   "centro": [
+    -0.0,
+    -27.87
+   ],
+   "itens": 6
+  },
+  {
+   "andar": 0,
+   "comodo": 2,
+   "tipo": "deposito",
+   "area_m2": 6.9,
+   "centro": [
+    -27.04,
+    7.03
+   ],
+   "itens": 3
+  },
+  {
+   "andar": 0,
+   "comodo": 8,
+   "tipo": "lavabo",
+   "area_m2": 2.1,
+   "centro": [
+    8.64,
+    13.26
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 10,
+   "tipo": "vazio",
+   "area_m2": 1.9,
+   "centro": [
+    9.96,
+    14.85
+   ],
+   "itens": 0
+  },
+  {
+   "andar": 0,
+   "comodo": 11,
+   "tipo": "deposito",
+   "area_m2": 7.8,
+   "centro": [
+    11.61,
+    12.36
+   ],
+   "itens": 0
+  }
+ ],
+ "itens": [
+  {
+   "item": "lixo_espalhado",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/lixo_espalhado.glb",
+   "pos": [
+    48.125,
+    0.0,
+    12.125
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "pilha_livros",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/pilha_livros.glb",
+   "pos": [
+    23.375,
+    0.0,
+    -66.375
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    -25.875,
+    0.0,
+    -65.125
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "salgadinho",
+   "grupo": "loot",
+   "arquivo": "props/loot/salgadinho.glb",
+   "pos": [
+    -10.625,
+    0.0,
+    9.875
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "lanterna",
+   "grupo": "loot",
+   "arquivo": "props/loot/lanterna.glb",
+   "pos": [
+    42.125,
+    0.0,
+    -56.375
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    45.625,
+    1.2,
+    34.0
+   ],
+   "rotY": 180,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "lixo_espalhado",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/lixo_espalhado.glb",
+   "pos": [
+    -11.625,
+    0.0,
+    -30.875
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "papeis_espalhados",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/papeis_espalhados.glb",
+   "pos": [
+    16.125,
+    0.0,
+    -49.625
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "cacos_vidro",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/cacos_vidro.glb",
+   "pos": [
+    16.625,
+    0.0,
+    -34.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "roupas",
+   "grupo": "loot",
+   "arquivo": "props/loot/roupas.glb",
+   "pos": [
+    36.375,
+    0.0,
+    -37.625
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "salgadinho",
+   "grupo": "loot",
+   "arquivo": "props/loot/salgadinho.glb",
+   "pos": [
+    -5.375,
+    0.0,
+    -12.875
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    -33.875,
+    1.2,
+    -43.0
+   ],
+   "rotY": 0,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "louca_quebrada",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/louca_quebrada.glb",
+   "pos": [
+    -27.375,
+    0.0,
+    6.875
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "lata_feijao",
+   "grupo": "loot",
+   "arquivo": "props/loot/lata_feijao.glb",
+   "pos": [
+    -25.625,
+    0.0,
+    6.375
+   ],
+   "rotY": 90,
+   "andar": 0,
+   "comodo": "deposito"
+  },
+  {
+   "item": "marca_busca",
+   "grupo": "mobilias",
+   "arquivo": "props/mobilias/marca_busca.glb",
+   "pos": [
+    -25.25,
+    1.2,
+    7.125
+   ],
+   "rotY": -90,
+   "andar": 0,
+   "comodo": "deposito"
+  }
+ ]
+}

@@ -1,5 +1,5 @@
 {
- "_leia": "Perfil de cada kit para ambientar.py. 'perfil' casa usa a ordem sala/cozinha/jantar (térreo) e quarto/quarto de criança (andares de cima); comercial usa 'principal' para o maior cômodo e 'seq' para os outros, por tamanho. Cômodos pequenos viram banheiro/lavabo, estreitos viram corredor e os de fora viram 'externo'. 'andares' troca o perfil num andar, 'casas_x' separa casas lado a lado e 'comodos' força o tipo do cômodo que contém o ponto [x, z].",
+ "_leia": "Perfil de cada kit para ambientar.py. 'perfil' casa usa a ordem sala/cozinha/jantar (térreo) e quarto/quarto de criança (andares de cima); comercial usa 'principal' para o maior cômodo e 'seq' para os outros, por tamanho. Cômodos pequenos viram banheiro/lavabo, estreitos viram corredor e os de fora viram 'externo'. 'andares' troca o perfil num andar, 'casas_x' separa casas lado a lado e 'comodos' força o tipo do cômodo que contém o ponto [x, z]. 'ja_mobiliado' (kits 55 a 61, que já trazem os móveis na geometria) coloca só os sinais do fim e o loot solto.",
  "padaria": {
   "padrao": "deposito",
   "comodos": [
@@ -963,5 +963,70 @@
   "perfil": "casa",
   "sotao": true,
   "externo": "quintal"
+ },
+ "loft-industrial": {
+  "ja_mobiliado": true,
+  "perfil": "casa",
+  "seq": "apto",
+  "externo": "patio",
+  "telhado": "patio"
+ },
+ "apartamentos-patio": {
+  "ja_mobiliado": true,
+  "perfil": "casa",
+  "seq": "apto",
+  "externo": "patio"
+ },
+ "campo-beisebol": {
+  "ja_mobiliado": true,
+  "principal": "deposito",
+  "seq": [
+   "deposito"
+  ],
+  "externo": "patio"
+ },
+ "hospital": {
+  "ja_mobiliado": true,
+  "principal": "espera",
+  "seq": [
+   "clinica"
+  ],
+  "externo": "estacionamento"
+ },
+ "condominio": {
+  "ja_mobiliado": true,
+  "perfil": "casa",
+  "seq": "apto",
+  "externo": "estacionamento"
+ },
+ "predio-lojas": {
+  "ja_mobiliado": true,
+  "perfil": "casa",
+  "seq": "apto",
+  "externo": "patio",
+  "andares": {
+   "0": {
+    "principal": "loja",
+    "seq": [
+     "deposito"
+    ]
+   }
+  }
+ },
+ "casas-vitorianas-geminadas": {
+  "ja_mobiliado": true,
+  "perfil": "casa",
+  "casas_x": [
+   [
+    -20,
+    0
+   ],
+   [
+    0,
+    20
+   ]
+  ],
+  "externo": "quintal",
+  "sotao": true
  }
 }

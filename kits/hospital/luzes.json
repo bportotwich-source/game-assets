@@ -1,0 +1,15101 @@
+{
+ "kit": "hospital",
+ "gerado_por": "scripts/iluminacao/luzes.py",
+ "convencao": "pos em metros no espaço do prédio (o mesmo do building_layout.json); alcance em metros; tipo 'luminaria' = luz de uma luminária do kit, 'gerada' = luz de teto num cômodo sem luminária (teto = altura do teto ali, onde o Godot põe um plafon), 'externa' = luminária fora dos cômodos (varanda, poste, fachada)",
+ "materiais": [
+  "lamp_glass"
+ ],
+ "luzes": [
+  {
+   "pos": [
+    10.095,
+    2.895,
+    0.0
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 87
+  },
+  {
+   "pos": [
+    -14.095,
+    2.895,
+    0.0
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 27
+  },
+  {
+   "pos": [
+    -10.077,
+    1.72,
+    -3.8
+   ],
+   "alcance": 4.4,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 31
+  },
+  {
+   "pos": [
+    -10.077,
+    1.72,
+    -4.22
+   ],
+   "alcance": 4.4,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 31
+  },
+  {
+   "pos": [
+    -13.595,
+    1.447,
+    -4.8
+   ],
+   "alcance": 4.4,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 31
+  },
+  {
+   "pos": [
+    -6.077,
+    1.72,
+    -3.8
+   ],
+   "alcance": 4.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 39
+  },
+  {
+   "pos": [
+    -6.077,
+    1.72,
+    -4.22
+   ],
+   "alcance": 4.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 39
+  },
+  {
+   "pos": [
+    -9.835,
+    1.447,
+    -4.8
+   ],
+   "alcance": 4.4,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 31
+  },
+  {
+   "pos": [
+    -2.077,
+    1.72,
+    -3.8
+   ],
+   "alcance": 4.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 44
+  },
+  {
+   "pos": [
+    -2.077,
+    1.72,
+    -4.22
+   ],
+   "alcance": 4.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 44
+  },
+  {
+   "pos": [
+    -5.835,
+    1.447,
+    -4.8
+   ],
+   "alcance": 4.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 39
+  },
+  {
+   "pos": [
+    9.683,
+    1.72,
+    -3.8
+   ],
+   "alcance": 4.4,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 66
+  },
+  {
+   "pos": [
+    9.683,
+    1.72,
+    -4.22
+   ],
+   "alcance": 4.4,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 66
+  },
+  {
+   "pos": [
+    6.165,
+    1.447,
+    -4.8
+   ],
+   "alcance": 4.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 65
+  },
+  {
+   "pos": [
+    8.8,
+    1.72,
+    5.923
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    9.22,
+    1.72,
+    5.923
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    8.8,
+    1.447,
+    1.225
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 67
+  },
+  {
+   "pos": [
+    0.405,
+    1.648,
+    8.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    0.405,
+    1.648,
+    10.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    0.405,
+    1.648,
+    12.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    9.595,
+    1.648,
+    8.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    9.595,
+    1.648,
+    10.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    9.595,
+    1.648,
+    12.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    -12.56,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -12.0,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -11.44,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -9.56,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -9.0,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -8.44,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -6.56,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -6.0,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -5.44,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -3.56,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -3.0,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -2.44,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -0.56,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    0.0,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    0.56,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    2.44,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    3.0,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    3.56,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    5.44,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    6.0,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    6.56,
+    3.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    5.0,
+    3.33,
+    3.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    5.0,
+    3.33,
+    2.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    5.0,
+    3.33,
+    3.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -12.84,
+    3.33,
+    -3.868
+   ],
+   "alcance": 4.4,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 31
+  },
+  {
+   "pos": [
+    -12.28,
+    3.33,
+    -3.868
+   ],
+   "alcance": 4.4,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 31
+  },
+  {
+   "pos": [
+    -11.72,
+    3.33,
+    -3.868
+   ],
+   "alcance": 4.4,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 31
+  },
+  {
+   "pos": [
+    -10.935,
+    3.35,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 35
+  },
+  {
+   "pos": [
+    -8.96,
+    3.33,
+    -3.868
+   ],
+   "alcance": 4.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 39
+  },
+  {
+   "pos": [
+    -8.4,
+    3.33,
+    -3.868
+   ],
+   "alcance": 4.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 39
+  },
+  {
+   "pos": [
+    -7.84,
+    3.33,
+    -3.868
+   ],
+   "alcance": 4.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 39
+  },
+  {
+   "pos": [
+    -6.935,
+    3.35,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 42
+  },
+  {
+   "pos": [
+    -4.96,
+    3.33,
+    -3.868
+   ],
+   "alcance": 4.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 44
+  },
+  {
+   "pos": [
+    -4.4,
+    3.33,
+    -3.868
+   ],
+   "alcance": 4.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 44
+  },
+  {
+   "pos": [
+    -3.84,
+    3.33,
+    -3.868
+   ],
+   "alcance": 4.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 44
+  },
+  {
+   "pos": [
+    -2.935,
+    3.35,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 47
+  },
+  {
+   "pos": [
+    6.92,
+    3.33,
+    -3.868
+   ],
+   "alcance": 4.4,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 66
+  },
+  {
+   "pos": [
+    7.48,
+    3.33,
+    -3.868
+   ],
+   "alcance": 4.4,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 66
+  },
+  {
+   "pos": [
+    8.04,
+    3.33,
+    -3.868
+   ],
+   "alcance": 4.4,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 66
+  },
+  {
+   "pos": [
+    8.825,
+    3.35,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 79
+  },
+  {
+   "pos": [
+    8.268,
+    3.33,
+    3.13
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 67
+  },
+  {
+   "pos": [
+    8.268,
+    3.33,
+    2.57
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 67
+  },
+  {
+   "pos": [
+    8.268,
+    3.33,
+    3.69
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 67
+  },
+  {
+   "pos": [
+    7.12,
+    3.35,
+    5.065
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 69
+  },
+  {
+   "pos": [
+    -12.56,
+    3.33,
+    2.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -12.0,
+    3.33,
+    2.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -11.44,
+    3.33,
+    2.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -12.56,
+    3.33,
+    4.6
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -12.0,
+    3.33,
+    4.6
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -11.44,
+    3.33,
+    4.6
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -9.56,
+    3.33,
+    2.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -9.0,
+    3.33,
+    2.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -8.44,
+    3.33,
+    2.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -9.56,
+    3.33,
+    4.6
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -9.0,
+    3.33,
+    4.6
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -8.44,
+    3.33,
+    4.6
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -6.56,
+    3.33,
+    2.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -6.0,
+    3.33,
+    2.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -5.44,
+    3.33,
+    2.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -6.56,
+    3.33,
+    4.6
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -6.0,
+    3.33,
+    4.6
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -5.44,
+    3.33,
+    4.6
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -3.56,
+    3.33,
+    2.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -3.0,
+    3.33,
+    2.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -2.44,
+    3.33,
+    2.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -3.56,
+    3.33,
+    4.6
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -3.0,
+    3.33,
+    4.6
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -2.44,
+    3.33,
+    4.6
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -0.56,
+    3.33,
+    2.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    0.0,
+    3.33,
+    2.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    0.56,
+    3.33,
+    2.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -0.56,
+    3.33,
+    4.6
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    0.0,
+    3.33,
+    4.6
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    0.56,
+    3.33,
+    4.6
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    1.6,
+    3.33,
+    7.5
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    1.6,
+    3.33,
+    6.94
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    1.6,
+    3.33,
+    8.06
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    1.6,
+    3.33,
+    10.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    1.6,
+    3.33,
+    9.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    1.6,
+    3.33,
+    10.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    1.6,
+    3.33,
+    12.5
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    1.6,
+    3.33,
+    11.94
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    1.6,
+    3.33,
+    13.06
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    1.6,
+    3.33,
+    15.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    1.6,
+    3.33,
+    14.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    1.6,
+    3.33,
+    15.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    8.4,
+    3.33,
+    7.5
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    8.4,
+    3.33,
+    6.94
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    8.4,
+    3.33,
+    8.06
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    8.4,
+    3.33,
+    10.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    8.4,
+    3.33,
+    9.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    8.4,
+    3.33,
+    10.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    8.4,
+    3.33,
+    12.5
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    8.4,
+    3.33,
+    11.94
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    8.4,
+    3.33,
+    13.06
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    8.4,
+    3.33,
+    15.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    8.4,
+    3.33,
+    14.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    8.4,
+    3.33,
+    15.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    4.44,
+    3.33,
+    7.5
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    5.0,
+    3.33,
+    7.5
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    5.56,
+    3.33,
+    7.5
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    4.44,
+    3.33,
+    10.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    5.0,
+    3.33,
+    10.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    5.56,
+    3.33,
+    10.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    4.44,
+    3.33,
+    12.5
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    5.0,
+    3.33,
+    12.5
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    5.56,
+    3.33,
+    12.5
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    4.44,
+    3.33,
+    15.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    5.0,
+    3.33,
+    15.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    5.56,
+    3.33,
+    15.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    -13.595,
+    5.248,
+    -4.87
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 1,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -9.835,
+    5.248,
+    -4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 14
+  },
+  {
+   "pos": [
+    -5.835,
+    5.248,
+    -4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 25
+  },
+  {
+   "pos": [
+    6.165,
+    5.248,
+    -4.87
+   ],
+   "alcance": 4.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 70
+  },
+  {
+   "pos": [
+    -10.165,
+    5.248,
+    4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 19
+  },
+  {
+   "pos": [
+    -6.165,
+    5.248,
+    4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    -2.165,
+    5.248,
+    4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 45
+  },
+  {
+   "pos": [
+    1.835,
+    5.248,
+    4.87
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    1.13,
+    5.248,
+    9.835
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    1.13,
+    5.248,
+    13.835
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 52
+  },
+  {
+   "pos": [
+    1.13,
+    5.248,
+    17.595
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 1,
+   "comodo": null
+  },
+  {
+   "pos": [
+    8.87,
+    5.248,
+    1.225
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    8.87,
+    5.248,
+    6.165
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 73
+  },
+  {
+   "pos": [
+    8.87,
+    5.248,
+    10.165
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 91
+  },
+  {
+   "pos": [
+    8.87,
+    5.248,
+    14.165
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 92
+  },
+  {
+   "pos": [
+    -12.56,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -12.0,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -11.44,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -9.56,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -9.0,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -8.44,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -6.56,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -6.0,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -5.44,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -3.56,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -3.0,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -2.44,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -0.56,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    0.0,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    0.56,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    2.44,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    3.0,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    3.56,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    5.44,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    6.0,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    6.56,
+    6.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    5.0,
+    6.93,
+    3.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    5.0,
+    6.93,
+    2.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    5.0,
+    6.93,
+    3.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    5.0,
+    6.93,
+    6.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    5.0,
+    6.93,
+    5.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    5.0,
+    6.93,
+    6.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    5.0,
+    6.93,
+    9.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    5.0,
+    6.93,
+    8.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    5.0,
+    6.93,
+    9.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    5.0,
+    6.93,
+    12.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    5.0,
+    6.93,
+    11.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    5.0,
+    6.93,
+    12.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    5.0,
+    6.93,
+    15.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    5.0,
+    6.93,
+    14.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    5.0,
+    6.93,
+    15.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -12.84,
+    6.93,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 5
+  },
+  {
+   "pos": [
+    -12.28,
+    6.93,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 5
+  },
+  {
+   "pos": [
+    -11.72,
+    6.93,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 5
+  },
+  {
+   "pos": [
+    -10.935,
+    6.95,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 13
+  },
+  {
+   "pos": [
+    -8.96,
+    6.93,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 16
+  },
+  {
+   "pos": [
+    -8.4,
+    6.93,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 16
+  },
+  {
+   "pos": [
+    -7.84,
+    6.93,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 16
+  },
+  {
+   "pos": [
+    -6.935,
+    6.95,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 26
+  },
+  {
+   "pos": [
+    -4.96,
+    6.93,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 29
+  },
+  {
+   "pos": [
+    -4.4,
+    6.93,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 29
+  },
+  {
+   "pos": [
+    -3.84,
+    6.93,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 29
+  },
+  {
+   "pos": [
+    -2.935,
+    6.95,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 38
+  },
+  {
+   "pos": [
+    6.92,
+    6.93,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 72
+  },
+  {
+   "pos": [
+    7.48,
+    6.93,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 72
+  },
+  {
+   "pos": [
+    8.04,
+    6.93,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 72
+  },
+  {
+   "pos": [
+    8.825,
+    6.95,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 89
+  },
+  {
+   "pos": [
+    -12.04,
+    6.93,
+    3.868
+   ],
+   "alcance": 3.8,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 12
+  },
+  {
+   "pos": [
+    -11.48,
+    6.93,
+    3.868
+   ],
+   "alcance": 3.8,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 12
+  },
+  {
+   "pos": [
+    -10.92,
+    6.93,
+    3.868
+   ],
+   "alcance": 3.8,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 12
+  },
+  {
+   "pos": [
+    -12.825,
+    6.95,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 8
+  },
+  {
+   "pos": [
+    -8.16,
+    6.93,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 22
+  },
+  {
+   "pos": [
+    -7.6,
+    6.93,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 22
+  },
+  {
+   "pos": [
+    -7.04,
+    6.93,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 22
+  },
+  {
+   "pos": [
+    -9.065,
+    6.95,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 18
+  },
+  {
+   "pos": [
+    -4.16,
+    6.93,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 34
+  },
+  {
+   "pos": [
+    -3.6,
+    6.93,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 34
+  },
+  {
+   "pos": [
+    -3.04,
+    6.93,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 34
+  },
+  {
+   "pos": [
+    -5.065,
+    6.95,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 31
+  },
+  {
+   "pos": [
+    -0.16,
+    6.93,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 47
+  },
+  {
+   "pos": [
+    0.4,
+    6.93,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 47
+  },
+  {
+   "pos": [
+    0.96,
+    6.93,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 47
+  },
+  {
+   "pos": [
+    -1.065,
+    6.95,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 44
+  },
+  {
+   "pos": [
+    1.732,
+    6.93,
+    8.28
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 56
+  },
+  {
+   "pos": [
+    1.732,
+    6.93,
+    7.72
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 50
+  },
+  {
+   "pos": [
+    1.732,
+    6.93,
+    8.84
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 56
+  },
+  {
+   "pos": [
+    2.88,
+    6.95,
+    6.695
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 60
+  },
+  {
+   "pos": [
+    1.732,
+    6.93,
+    12.4
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 57
+  },
+  {
+   "pos": [
+    1.732,
+    6.93,
+    11.84
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    1.732,
+    6.93,
+    12.96
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 57
+  },
+  {
+   "pos": [
+    2.88,
+    6.95,
+    10.935
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    1.732,
+    6.93,
+    16.28
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 58
+  },
+  {
+   "pos": [
+    1.732,
+    6.93,
+    15.72
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 58
+  },
+  {
+   "pos": [
+    1.732,
+    6.93,
+    16.84
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 58
+  },
+  {
+   "pos": [
+    2.88,
+    6.95,
+    14.935
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 62
+  },
+  {
+   "pos": [
+    8.268,
+    6.93,
+    3.13
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 73
+  },
+  {
+   "pos": [
+    8.268,
+    6.93,
+    2.57
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 73
+  },
+  {
+   "pos": [
+    8.268,
+    6.93,
+    3.69
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 73
+  },
+  {
+   "pos": [
+    7.12,
+    6.95,
+    5.065
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 75
+  },
+  {
+   "pos": [
+    8.268,
+    6.93,
+    7.6
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 86
+  },
+  {
+   "pos": [
+    8.268,
+    6.93,
+    7.04
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 86
+  },
+  {
+   "pos": [
+    8.268,
+    6.93,
+    8.16
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 91
+  },
+  {
+   "pos": [
+    7.12,
+    6.95,
+    9.065
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 78
+  },
+  {
+   "pos": [
+    8.268,
+    6.93,
+    11.6
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 87
+  },
+  {
+   "pos": [
+    8.268,
+    6.93,
+    11.04
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 87
+  },
+  {
+   "pos": [
+    8.268,
+    6.93,
+    12.16
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 92
+  },
+  {
+   "pos": [
+    7.12,
+    6.95,
+    13.065
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 81
+  },
+  {
+   "pos": [
+    8.268,
+    6.93,
+    15.48
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 83
+  },
+  {
+   "pos": [
+    8.268,
+    6.93,
+    14.92
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 83
+  },
+  {
+   "pos": [
+    8.268,
+    6.93,
+    16.04
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 93
+  },
+  {
+   "pos": [
+    7.12,
+    6.95,
+    16.825
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 84
+  },
+  {
+   "pos": [
+    2.97,
+    6.93,
+    3.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    2.97,
+    6.93,
+    2.84
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    2.97,
+    6.93,
+    3.96
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    2.97,
+    6.95,
+    2.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 1,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -13.595,
+    8.848,
+    -4.87
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 2,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -9.835,
+    8.848,
+    -4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 9
+  },
+  {
+   "pos": [
+    -5.835,
+    8.848,
+    -4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 20
+  },
+  {
+   "pos": [
+    6.165,
+    8.848,
+    -4.87
+   ],
+   "alcance": 4.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 60
+  },
+  {
+   "pos": [
+    -10.165,
+    8.848,
+    4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 15
+  },
+  {
+   "pos": [
+    -6.165,
+    8.848,
+    4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 26
+  },
+  {
+   "pos": [
+    -2.165,
+    8.848,
+    4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 37
+  },
+  {
+   "pos": [
+    1.835,
+    8.848,
+    4.87
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    1.13,
+    8.848,
+    9.835
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 43
+  },
+  {
+   "pos": [
+    1.13,
+    8.848,
+    13.835
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 44
+  },
+  {
+   "pos": [
+    1.13,
+    8.848,
+    17.595
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 2,
+   "comodo": null
+  },
+  {
+   "pos": [
+    8.87,
+    8.848,
+    1.225
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    8.87,
+    8.848,
+    6.165
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 63
+  },
+  {
+   "pos": [
+    8.87,
+    8.848,
+    10.165
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 81
+  },
+  {
+   "pos": [
+    8.87,
+    8.848,
+    14.165
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 82
+  },
+  {
+   "pos": [
+    -12.56,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    -12.0,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    -11.44,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    -9.56,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    -9.0,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    -8.44,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    -6.56,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    -6.0,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    -5.44,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    -3.56,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    -3.0,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    -2.44,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    -0.56,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    0.0,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    0.56,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    2.44,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    3.0,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    3.56,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    5.44,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    6.0,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    6.56,
+    10.53,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    5.0,
+    10.53,
+    3.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    5.0,
+    10.53,
+    2.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    5.0,
+    10.53,
+    3.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    5.0,
+    10.53,
+    6.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    5.0,
+    10.53,
+    5.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    5.0,
+    10.53,
+    6.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    5.0,
+    10.53,
+    9.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    5.0,
+    10.53,
+    8.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    5.0,
+    10.53,
+    9.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    5.0,
+    10.53,
+    12.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    5.0,
+    10.53,
+    11.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    5.0,
+    10.53,
+    12.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    5.0,
+    10.53,
+    15.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    5.0,
+    10.53,
+    14.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    5.0,
+    10.53,
+    15.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    -12.84,
+    10.53,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -12.28,
+    10.53,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -11.72,
+    10.53,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -10.935,
+    10.55,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 8
+  },
+  {
+   "pos": [
+    -8.96,
+    10.53,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 12
+  },
+  {
+   "pos": [
+    -8.4,
+    10.53,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 12
+  },
+  {
+   "pos": [
+    -7.84,
+    10.53,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 12
+  },
+  {
+   "pos": [
+    -6.935,
+    10.55,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 21
+  },
+  {
+   "pos": [
+    -4.96,
+    10.53,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 23
+  },
+  {
+   "pos": [
+    -4.4,
+    10.53,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 23
+  },
+  {
+   "pos": [
+    -3.84,
+    10.53,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 23
+  },
+  {
+   "pos": [
+    -2.935,
+    10.55,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    6.92,
+    10.53,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 62
+  },
+  {
+   "pos": [
+    7.48,
+    10.53,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 62
+  },
+  {
+   "pos": [
+    8.04,
+    10.53,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 62
+  },
+  {
+   "pos": [
+    8.825,
+    10.55,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 79
+  },
+  {
+   "pos": [
+    -12.04,
+    10.53,
+    3.868
+   ],
+   "alcance": 3.8,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 7
+  },
+  {
+   "pos": [
+    -11.48,
+    10.53,
+    3.868
+   ],
+   "alcance": 3.8,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 7
+  },
+  {
+   "pos": [
+    -10.92,
+    10.53,
+    3.868
+   ],
+   "alcance": 3.8,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 7
+  },
+  {
+   "pos": [
+    -12.825,
+    10.55,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 4
+  },
+  {
+   "pos": [
+    -8.16,
+    10.53,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 17
+  },
+  {
+   "pos": [
+    -7.6,
+    10.53,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 17
+  },
+  {
+   "pos": [
+    -7.04,
+    10.53,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 17
+  },
+  {
+   "pos": [
+    -9.065,
+    10.55,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 14
+  },
+  {
+   "pos": [
+    -4.16,
+    10.53,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 28
+  },
+  {
+   "pos": [
+    -3.6,
+    10.53,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 28
+  },
+  {
+   "pos": [
+    -3.04,
+    10.53,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 28
+  },
+  {
+   "pos": [
+    -5.065,
+    10.55,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 25
+  },
+  {
+   "pos": [
+    -0.16,
+    10.53,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 39
+  },
+  {
+   "pos": [
+    0.4,
+    10.53,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 39
+  },
+  {
+   "pos": [
+    0.96,
+    10.53,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 39
+  },
+  {
+   "pos": [
+    -1.065,
+    10.55,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 36
+  },
+  {
+   "pos": [
+    1.732,
+    10.53,
+    8.28
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 48
+  },
+  {
+   "pos": [
+    1.732,
+    10.53,
+    7.72
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 42
+  },
+  {
+   "pos": [
+    1.732,
+    10.53,
+    8.84
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 48
+  },
+  {
+   "pos": [
+    2.88,
+    10.55,
+    6.695
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 52
+  },
+  {
+   "pos": [
+    1.732,
+    10.53,
+    12.4
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 49
+  },
+  {
+   "pos": [
+    1.732,
+    10.53,
+    11.84
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 43
+  },
+  {
+   "pos": [
+    1.732,
+    10.53,
+    12.96
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 49
+  },
+  {
+   "pos": [
+    2.88,
+    10.55,
+    10.935
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 53
+  },
+  {
+   "pos": [
+    1.732,
+    10.53,
+    16.28
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 50
+  },
+  {
+   "pos": [
+    1.732,
+    10.53,
+    15.72
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 50
+  },
+  {
+   "pos": [
+    1.732,
+    10.53,
+    16.84
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 50
+  },
+  {
+   "pos": [
+    2.88,
+    10.55,
+    14.935
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 54
+  },
+  {
+   "pos": [
+    8.268,
+    10.53,
+    3.13
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 63
+  },
+  {
+   "pos": [
+    8.268,
+    10.53,
+    2.57
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 63
+  },
+  {
+   "pos": [
+    8.268,
+    10.53,
+    3.69
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 63
+  },
+  {
+   "pos": [
+    7.12,
+    10.55,
+    5.065
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 65
+  },
+  {
+   "pos": [
+    8.268,
+    10.53,
+    7.6
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 76
+  },
+  {
+   "pos": [
+    8.268,
+    10.53,
+    7.04
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 76
+  },
+  {
+   "pos": [
+    8.268,
+    10.53,
+    8.16
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 81
+  },
+  {
+   "pos": [
+    7.12,
+    10.55,
+    9.065
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 68
+  },
+  {
+   "pos": [
+    8.268,
+    10.53,
+    11.6
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 77
+  },
+  {
+   "pos": [
+    8.268,
+    10.53,
+    11.04
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 77
+  },
+  {
+   "pos": [
+    8.268,
+    10.53,
+    12.16
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 82
+  },
+  {
+   "pos": [
+    7.12,
+    10.55,
+    13.065
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 71
+  },
+  {
+   "pos": [
+    8.268,
+    10.53,
+    15.48
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 73
+  },
+  {
+   "pos": [
+    8.268,
+    10.53,
+    14.92
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 73
+  },
+  {
+   "pos": [
+    8.268,
+    10.53,
+    16.04
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 83
+  },
+  {
+   "pos": [
+    7.12,
+    10.55,
+    16.825
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 74
+  },
+  {
+   "pos": [
+    2.97,
+    10.53,
+    3.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    2.97,
+    10.53,
+    2.84
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    2.97,
+    10.53,
+    3.96
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    2.97,
+    10.55,
+    2.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 2,
+   "comodo": 2
+  },
+  {
+   "pos": [
+    -13.595,
+    12.448,
+    -4.87
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 3,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -9.835,
+    12.448,
+    -4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 8
+  },
+  {
+   "pos": [
+    -5.835,
+    12.448,
+    -4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 18
+  },
+  {
+   "pos": [
+    6.165,
+    12.448,
+    -4.87
+   ],
+   "alcance": 4.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 58
+  },
+  {
+   "pos": [
+    -10.165,
+    12.448,
+    4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 13
+  },
+  {
+   "pos": [
+    -6.165,
+    12.448,
+    4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 24
+  },
+  {
+   "pos": [
+    -2.165,
+    12.448,
+    4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 35
+  },
+  {
+   "pos": [
+    1.835,
+    12.448,
+    4.87
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    1.13,
+    12.448,
+    9.835
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 41
+  },
+  {
+   "pos": [
+    1.13,
+    12.448,
+    13.835
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 42
+  },
+  {
+   "pos": [
+    1.13,
+    12.448,
+    17.595
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 3,
+   "comodo": null
+  },
+  {
+   "pos": [
+    8.87,
+    12.448,
+    1.225
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    8.87,
+    12.448,
+    6.165
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    8.87,
+    12.448,
+    10.165
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 79
+  },
+  {
+   "pos": [
+    8.87,
+    12.448,
+    14.165
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 80
+  },
+  {
+   "pos": [
+    -12.56,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -12.0,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -11.44,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -9.56,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -9.0,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -8.44,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -6.56,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -6.0,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -5.44,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -3.56,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -3.0,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -2.44,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -0.56,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    0.0,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    0.56,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    2.44,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    3.0,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    3.56,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.44,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    6.0,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    6.56,
+    14.13,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    14.13,
+    3.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    14.13,
+    2.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    14.13,
+    3.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    14.13,
+    6.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    14.13,
+    5.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    14.13,
+    6.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    14.13,
+    9.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    14.13,
+    8.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    14.13,
+    9.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    14.13,
+    12.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    14.13,
+    11.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    14.13,
+    12.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    14.13,
+    15.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    14.13,
+    14.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    14.13,
+    15.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -12.84,
+    14.13,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -12.28,
+    14.13,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -11.72,
+    14.13,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -10.935,
+    14.15,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 7
+  },
+  {
+   "pos": [
+    -8.96,
+    14.13,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 10
+  },
+  {
+   "pos": [
+    -8.4,
+    14.13,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 10
+  },
+  {
+   "pos": [
+    -7.84,
+    14.13,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 10
+  },
+  {
+   "pos": [
+    -6.935,
+    14.15,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 19
+  },
+  {
+   "pos": [
+    -4.96,
+    14.13,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 21
+  },
+  {
+   "pos": [
+    -4.4,
+    14.13,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 21
+  },
+  {
+   "pos": [
+    -3.84,
+    14.13,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 21
+  },
+  {
+   "pos": [
+    -2.935,
+    14.15,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 30
+  },
+  {
+   "pos": [
+    6.92,
+    14.13,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 60
+  },
+  {
+   "pos": [
+    7.48,
+    14.13,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 60
+  },
+  {
+   "pos": [
+    8.04,
+    14.13,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 60
+  },
+  {
+   "pos": [
+    8.825,
+    14.15,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 77
+  },
+  {
+   "pos": [
+    -12.04,
+    14.13,
+    3.868
+   ],
+   "alcance": 3.8,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -11.48,
+    14.13,
+    3.868
+   ],
+   "alcance": 3.8,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -10.92,
+    14.13,
+    3.868
+   ],
+   "alcance": 3.8,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -12.825,
+    14.15,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 3
+  },
+  {
+   "pos": [
+    -8.16,
+    14.13,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 15
+  },
+  {
+   "pos": [
+    -7.6,
+    14.13,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 15
+  },
+  {
+   "pos": [
+    -7.04,
+    14.13,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 15
+  },
+  {
+   "pos": [
+    -9.065,
+    14.15,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 12
+  },
+  {
+   "pos": [
+    -4.16,
+    14.13,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 26
+  },
+  {
+   "pos": [
+    -3.6,
+    14.13,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 26
+  },
+  {
+   "pos": [
+    -3.04,
+    14.13,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 26
+  },
+  {
+   "pos": [
+    -5.065,
+    14.15,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 23
+  },
+  {
+   "pos": [
+    -0.16,
+    14.13,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 37
+  },
+  {
+   "pos": [
+    0.4,
+    14.13,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 37
+  },
+  {
+   "pos": [
+    0.96,
+    14.13,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 37
+  },
+  {
+   "pos": [
+    -1.065,
+    14.15,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 34
+  },
+  {
+   "pos": [
+    1.732,
+    14.13,
+    8.28
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 46
+  },
+  {
+   "pos": [
+    1.732,
+    14.13,
+    7.72
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 40
+  },
+  {
+   "pos": [
+    1.732,
+    14.13,
+    8.84
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 46
+  },
+  {
+   "pos": [
+    2.88,
+    14.15,
+    6.695
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 50
+  },
+  {
+   "pos": [
+    1.732,
+    14.13,
+    12.4
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 47
+  },
+  {
+   "pos": [
+    1.732,
+    14.13,
+    11.84
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 41
+  },
+  {
+   "pos": [
+    1.732,
+    14.13,
+    12.96
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 47
+  },
+  {
+   "pos": [
+    2.88,
+    14.15,
+    10.935
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    1.732,
+    14.13,
+    16.28
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 48
+  },
+  {
+   "pos": [
+    1.732,
+    14.13,
+    15.72
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 48
+  },
+  {
+   "pos": [
+    1.732,
+    14.13,
+    16.84
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 48
+  },
+  {
+   "pos": [
+    2.88,
+    14.15,
+    14.935
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 52
+  },
+  {
+   "pos": [
+    8.268,
+    14.13,
+    3.13
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    8.268,
+    14.13,
+    2.57
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    8.268,
+    14.13,
+    3.69
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    7.12,
+    14.15,
+    5.065
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 63
+  },
+  {
+   "pos": [
+    8.268,
+    14.13,
+    7.6
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 74
+  },
+  {
+   "pos": [
+    8.268,
+    14.13,
+    7.04
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 74
+  },
+  {
+   "pos": [
+    8.268,
+    14.13,
+    8.16
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 79
+  },
+  {
+   "pos": [
+    7.12,
+    14.15,
+    9.065
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 66
+  },
+  {
+   "pos": [
+    8.268,
+    14.13,
+    11.6
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 75
+  },
+  {
+   "pos": [
+    8.268,
+    14.13,
+    11.04
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 75
+  },
+  {
+   "pos": [
+    8.268,
+    14.13,
+    12.16
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 80
+  },
+  {
+   "pos": [
+    7.12,
+    14.15,
+    13.065
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 69
+  },
+  {
+   "pos": [
+    8.268,
+    14.13,
+    15.48
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 71
+  },
+  {
+   "pos": [
+    8.268,
+    14.13,
+    14.92
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 71
+  },
+  {
+   "pos": [
+    8.268,
+    14.13,
+    16.04
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 81
+  },
+  {
+   "pos": [
+    7.12,
+    14.15,
+    16.825
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 72
+  },
+  {
+   "pos": [
+    2.97,
+    14.13,
+    3.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    2.97,
+    14.13,
+    2.84
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    2.97,
+    14.13,
+    3.96
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    2.97,
+    14.15,
+    2.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 3,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -13.595,
+    16.048,
+    -4.87
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 4,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -9.835,
+    16.048,
+    -4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 8
+  },
+  {
+   "pos": [
+    -5.835,
+    16.048,
+    -4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 18
+  },
+  {
+   "pos": [
+    6.165,
+    16.048,
+    -4.87
+   ],
+   "alcance": 4.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 58
+  },
+  {
+   "pos": [
+    -10.165,
+    16.048,
+    4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 13
+  },
+  {
+   "pos": [
+    -6.165,
+    16.048,
+    4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 24
+  },
+  {
+   "pos": [
+    -2.165,
+    16.048,
+    4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 35
+  },
+  {
+   "pos": [
+    1.835,
+    16.048,
+    4.87
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    1.13,
+    16.048,
+    9.835
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 41
+  },
+  {
+   "pos": [
+    1.13,
+    16.048,
+    13.835
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 42
+  },
+  {
+   "pos": [
+    1.13,
+    16.048,
+    17.595
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 4,
+   "comodo": null
+  },
+  {
+   "pos": [
+    8.87,
+    16.048,
+    1.225
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    8.87,
+    16.048,
+    6.165
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    8.87,
+    16.048,
+    10.165
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 79
+  },
+  {
+   "pos": [
+    8.87,
+    16.048,
+    14.165
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 80
+  },
+  {
+   "pos": [
+    -12.56,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -12.0,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -11.44,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -9.56,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -9.0,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -8.44,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -6.56,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -6.0,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -5.44,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -3.56,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -3.0,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -2.44,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -0.56,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    0.0,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    0.56,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    2.44,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    3.0,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    3.56,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.44,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    6.0,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    6.56,
+    17.73,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    17.73,
+    3.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    17.73,
+    2.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    17.73,
+    3.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    17.73,
+    6.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    17.73,
+    5.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    17.73,
+    6.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    17.73,
+    9.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    17.73,
+    8.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    17.73,
+    9.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    17.73,
+    12.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    17.73,
+    11.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    17.73,
+    12.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    17.73,
+    15.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    17.73,
+    14.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    17.73,
+    15.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -12.84,
+    17.73,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -12.28,
+    17.73,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -11.72,
+    17.73,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -10.935,
+    17.75,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 7
+  },
+  {
+   "pos": [
+    -8.96,
+    17.73,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 10
+  },
+  {
+   "pos": [
+    -8.4,
+    17.73,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 10
+  },
+  {
+   "pos": [
+    -7.84,
+    17.73,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 10
+  },
+  {
+   "pos": [
+    -6.935,
+    17.75,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 19
+  },
+  {
+   "pos": [
+    -4.96,
+    17.73,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 21
+  },
+  {
+   "pos": [
+    -4.4,
+    17.73,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 21
+  },
+  {
+   "pos": [
+    -3.84,
+    17.73,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 21
+  },
+  {
+   "pos": [
+    -2.935,
+    17.75,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 30
+  },
+  {
+   "pos": [
+    6.92,
+    17.73,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 60
+  },
+  {
+   "pos": [
+    7.48,
+    17.73,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 60
+  },
+  {
+   "pos": [
+    8.04,
+    17.73,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 60
+  },
+  {
+   "pos": [
+    8.825,
+    17.75,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 77
+  },
+  {
+   "pos": [
+    -12.04,
+    17.73,
+    3.868
+   ],
+   "alcance": 3.8,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -11.48,
+    17.73,
+    3.868
+   ],
+   "alcance": 3.8,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -10.92,
+    17.73,
+    3.868
+   ],
+   "alcance": 3.8,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -12.825,
+    17.75,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 3
+  },
+  {
+   "pos": [
+    -8.16,
+    17.73,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 15
+  },
+  {
+   "pos": [
+    -7.6,
+    17.73,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 15
+  },
+  {
+   "pos": [
+    -7.04,
+    17.73,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 15
+  },
+  {
+   "pos": [
+    -9.065,
+    17.75,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 12
+  },
+  {
+   "pos": [
+    -4.16,
+    17.73,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 26
+  },
+  {
+   "pos": [
+    -3.6,
+    17.73,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 26
+  },
+  {
+   "pos": [
+    -3.04,
+    17.73,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 26
+  },
+  {
+   "pos": [
+    -5.065,
+    17.75,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 23
+  },
+  {
+   "pos": [
+    -0.16,
+    17.73,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 37
+  },
+  {
+   "pos": [
+    0.4,
+    17.73,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 37
+  },
+  {
+   "pos": [
+    0.96,
+    17.73,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 37
+  },
+  {
+   "pos": [
+    -1.065,
+    17.75,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 34
+  },
+  {
+   "pos": [
+    1.732,
+    17.73,
+    8.28
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 46
+  },
+  {
+   "pos": [
+    1.732,
+    17.73,
+    7.72
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 40
+  },
+  {
+   "pos": [
+    1.732,
+    17.73,
+    8.84
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 46
+  },
+  {
+   "pos": [
+    2.88,
+    17.75,
+    6.695
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 50
+  },
+  {
+   "pos": [
+    1.732,
+    17.73,
+    12.4
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 47
+  },
+  {
+   "pos": [
+    1.732,
+    17.73,
+    11.84
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 41
+  },
+  {
+   "pos": [
+    1.732,
+    17.73,
+    12.96
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 47
+  },
+  {
+   "pos": [
+    2.88,
+    17.75,
+    10.935
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    1.732,
+    17.73,
+    16.28
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 48
+  },
+  {
+   "pos": [
+    1.732,
+    17.73,
+    15.72
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 48
+  },
+  {
+   "pos": [
+    1.732,
+    17.73,
+    16.84
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 48
+  },
+  {
+   "pos": [
+    2.88,
+    17.75,
+    14.935
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 52
+  },
+  {
+   "pos": [
+    8.268,
+    17.73,
+    3.13
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    8.268,
+    17.73,
+    2.57
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    8.268,
+    17.73,
+    3.69
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    7.12,
+    17.75,
+    5.065
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 63
+  },
+  {
+   "pos": [
+    8.268,
+    17.73,
+    7.6
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 74
+  },
+  {
+   "pos": [
+    8.268,
+    17.73,
+    7.04
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 74
+  },
+  {
+   "pos": [
+    8.268,
+    17.73,
+    8.16
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 79
+  },
+  {
+   "pos": [
+    7.12,
+    17.75,
+    9.065
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 66
+  },
+  {
+   "pos": [
+    8.268,
+    17.73,
+    11.6
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 75
+  },
+  {
+   "pos": [
+    8.268,
+    17.73,
+    11.04
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 75
+  },
+  {
+   "pos": [
+    8.268,
+    17.73,
+    12.16
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 80
+  },
+  {
+   "pos": [
+    7.12,
+    17.75,
+    13.065
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 69
+  },
+  {
+   "pos": [
+    8.268,
+    17.73,
+    15.48
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 71
+  },
+  {
+   "pos": [
+    8.268,
+    17.73,
+    14.92
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 71
+  },
+  {
+   "pos": [
+    8.268,
+    17.73,
+    16.04
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 81
+  },
+  {
+   "pos": [
+    7.12,
+    17.75,
+    16.825
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 72
+  },
+  {
+   "pos": [
+    2.97,
+    17.73,
+    3.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    2.97,
+    17.73,
+    2.84
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    2.97,
+    17.73,
+    3.96
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    2.97,
+    17.75,
+    2.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 4,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -13.595,
+    19.648,
+    -4.87
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 5,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -9.835,
+    19.648,
+    -4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 8
+  },
+  {
+   "pos": [
+    -5.835,
+    19.648,
+    -4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 18
+  },
+  {
+   "pos": [
+    6.165,
+    19.648,
+    -4.87
+   ],
+   "alcance": 4.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 58
+  },
+  {
+   "pos": [
+    -10.165,
+    19.648,
+    4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 13
+  },
+  {
+   "pos": [
+    -6.165,
+    19.648,
+    4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 24
+  },
+  {
+   "pos": [
+    -2.165,
+    19.648,
+    4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 35
+  },
+  {
+   "pos": [
+    1.835,
+    19.648,
+    4.87
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    1.13,
+    19.648,
+    9.835
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 41
+  },
+  {
+   "pos": [
+    1.13,
+    19.648,
+    13.835
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 42
+  },
+  {
+   "pos": [
+    1.13,
+    19.648,
+    17.595
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 5,
+   "comodo": null
+  },
+  {
+   "pos": [
+    8.87,
+    19.648,
+    1.225
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    8.87,
+    19.648,
+    6.165
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    8.87,
+    19.648,
+    10.165
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 79
+  },
+  {
+   "pos": [
+    8.87,
+    19.648,
+    14.165
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 80
+  },
+  {
+   "pos": [
+    -12.56,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -12.0,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -11.44,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -9.56,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -9.0,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -8.44,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -6.56,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -6.0,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -5.44,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -3.56,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -3.0,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -2.44,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -0.56,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    0.0,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    0.56,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    2.44,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    3.0,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    3.56,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.44,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    6.0,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    6.56,
+    21.33,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    21.33,
+    3.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    21.33,
+    2.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    21.33,
+    3.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    21.33,
+    6.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    21.33,
+    5.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    21.33,
+    6.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    21.33,
+    9.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    21.33,
+    8.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    21.33,
+    9.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    21.33,
+    12.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    21.33,
+    11.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    21.33,
+    12.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    21.33,
+    15.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    21.33,
+    14.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    21.33,
+    15.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -12.84,
+    21.33,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -12.28,
+    21.33,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -11.72,
+    21.33,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -10.935,
+    21.35,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 7
+  },
+  {
+   "pos": [
+    -8.96,
+    21.33,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 10
+  },
+  {
+   "pos": [
+    -8.4,
+    21.33,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 10
+  },
+  {
+   "pos": [
+    -7.84,
+    21.33,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 10
+  },
+  {
+   "pos": [
+    -6.935,
+    21.35,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 19
+  },
+  {
+   "pos": [
+    -4.96,
+    21.33,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 21
+  },
+  {
+   "pos": [
+    -4.4,
+    21.33,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 21
+  },
+  {
+   "pos": [
+    -3.84,
+    21.33,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 21
+  },
+  {
+   "pos": [
+    -2.935,
+    21.35,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 30
+  },
+  {
+   "pos": [
+    6.92,
+    21.33,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 60
+  },
+  {
+   "pos": [
+    7.48,
+    21.33,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 60
+  },
+  {
+   "pos": [
+    8.04,
+    21.33,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 60
+  },
+  {
+   "pos": [
+    8.825,
+    21.35,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 77
+  },
+  {
+   "pos": [
+    -12.04,
+    21.33,
+    3.868
+   ],
+   "alcance": 3.8,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -11.48,
+    21.33,
+    3.868
+   ],
+   "alcance": 3.8,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -10.92,
+    21.33,
+    3.868
+   ],
+   "alcance": 3.8,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -12.825,
+    21.35,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 3
+  },
+  {
+   "pos": [
+    -8.16,
+    21.33,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 15
+  },
+  {
+   "pos": [
+    -7.6,
+    21.33,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 15
+  },
+  {
+   "pos": [
+    -7.04,
+    21.33,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 15
+  },
+  {
+   "pos": [
+    -9.065,
+    21.35,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 12
+  },
+  {
+   "pos": [
+    -4.16,
+    21.33,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 26
+  },
+  {
+   "pos": [
+    -3.6,
+    21.33,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 26
+  },
+  {
+   "pos": [
+    -3.04,
+    21.33,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 26
+  },
+  {
+   "pos": [
+    -5.065,
+    21.35,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 23
+  },
+  {
+   "pos": [
+    -0.16,
+    21.33,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 37
+  },
+  {
+   "pos": [
+    0.4,
+    21.33,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 37
+  },
+  {
+   "pos": [
+    0.96,
+    21.33,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 37
+  },
+  {
+   "pos": [
+    -1.065,
+    21.35,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 34
+  },
+  {
+   "pos": [
+    1.732,
+    21.33,
+    8.28
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 46
+  },
+  {
+   "pos": [
+    1.732,
+    21.33,
+    7.72
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 40
+  },
+  {
+   "pos": [
+    1.732,
+    21.33,
+    8.84
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 46
+  },
+  {
+   "pos": [
+    2.88,
+    21.35,
+    6.695
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 50
+  },
+  {
+   "pos": [
+    1.732,
+    21.33,
+    12.4
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 47
+  },
+  {
+   "pos": [
+    1.732,
+    21.33,
+    11.84
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 41
+  },
+  {
+   "pos": [
+    1.732,
+    21.33,
+    12.96
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 47
+  },
+  {
+   "pos": [
+    2.88,
+    21.35,
+    10.935
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    1.732,
+    21.33,
+    16.28
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 48
+  },
+  {
+   "pos": [
+    1.732,
+    21.33,
+    15.72
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 48
+  },
+  {
+   "pos": [
+    1.732,
+    21.33,
+    16.84
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 48
+  },
+  {
+   "pos": [
+    2.88,
+    21.35,
+    14.935
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 52
+  },
+  {
+   "pos": [
+    8.268,
+    21.33,
+    3.13
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    8.268,
+    21.33,
+    2.57
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    8.268,
+    21.33,
+    3.69
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    7.12,
+    21.35,
+    5.065
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 63
+  },
+  {
+   "pos": [
+    8.268,
+    21.33,
+    7.6
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 74
+  },
+  {
+   "pos": [
+    8.268,
+    21.33,
+    7.04
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 74
+  },
+  {
+   "pos": [
+    8.268,
+    21.33,
+    8.16
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 79
+  },
+  {
+   "pos": [
+    7.12,
+    21.35,
+    9.065
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 66
+  },
+  {
+   "pos": [
+    8.268,
+    21.33,
+    11.6
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 75
+  },
+  {
+   "pos": [
+    8.268,
+    21.33,
+    11.04
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 75
+  },
+  {
+   "pos": [
+    8.268,
+    21.33,
+    12.16
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 80
+  },
+  {
+   "pos": [
+    7.12,
+    21.35,
+    13.065
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 69
+  },
+  {
+   "pos": [
+    8.268,
+    21.33,
+    15.48
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 71
+  },
+  {
+   "pos": [
+    8.268,
+    21.33,
+    14.92
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 71
+  },
+  {
+   "pos": [
+    8.268,
+    21.33,
+    16.04
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 81
+  },
+  {
+   "pos": [
+    7.12,
+    21.35,
+    16.825
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 72
+  },
+  {
+   "pos": [
+    2.97,
+    21.33,
+    3.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    2.97,
+    21.33,
+    2.84
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    2.97,
+    21.33,
+    3.96
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    2.97,
+    21.35,
+    2.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 5,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -13.595,
+    23.248,
+    -4.87
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 6,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -9.835,
+    23.248,
+    -4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 8
+  },
+  {
+   "pos": [
+    -5.835,
+    23.248,
+    -4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 18
+  },
+  {
+   "pos": [
+    6.165,
+    23.248,
+    -4.87
+   ],
+   "alcance": 4.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 58
+  },
+  {
+   "pos": [
+    -10.165,
+    23.248,
+    4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 13
+  },
+  {
+   "pos": [
+    -6.165,
+    23.248,
+    4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 24
+  },
+  {
+   "pos": [
+    -2.165,
+    23.248,
+    4.87
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 35
+  },
+  {
+   "pos": [
+    1.835,
+    23.248,
+    4.87
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    1.13,
+    23.248,
+    9.835
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 41
+  },
+  {
+   "pos": [
+    1.13,
+    23.248,
+    13.835
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 42
+  },
+  {
+   "pos": [
+    1.13,
+    23.248,
+    17.595
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 6,
+   "comodo": null
+  },
+  {
+   "pos": [
+    8.87,
+    23.248,
+    1.225
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    8.87,
+    23.248,
+    6.165
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    8.87,
+    23.248,
+    10.165
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 79
+  },
+  {
+   "pos": [
+    8.87,
+    23.248,
+    14.165
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 80
+  },
+  {
+   "pos": [
+    -12.56,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -12.0,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -11.44,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -9.56,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -9.0,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -8.44,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -6.56,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -6.0,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -5.44,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -3.56,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -3.0,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -2.44,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -0.56,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    0.0,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    0.56,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    2.44,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    3.0,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    3.56,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.44,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    6.0,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    6.56,
+    24.93,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    24.93,
+    3.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    24.93,
+    2.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    24.93,
+    3.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    24.93,
+    6.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    24.93,
+    5.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    24.93,
+    6.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    24.93,
+    9.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    24.93,
+    8.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    24.93,
+    9.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    24.93,
+    12.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    24.93,
+    11.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    24.93,
+    12.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    24.93,
+    15.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    24.93,
+    14.44
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    5.0,
+    24.93,
+    15.56
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    -12.84,
+    24.93,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -12.28,
+    24.93,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -11.72,
+    24.93,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -10.935,
+    24.95,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 7
+  },
+  {
+   "pos": [
+    -8.96,
+    24.93,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 10
+  },
+  {
+   "pos": [
+    -8.4,
+    24.93,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 10
+  },
+  {
+   "pos": [
+    -7.84,
+    24.93,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 10
+  },
+  {
+   "pos": [
+    -6.935,
+    24.95,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 19
+  },
+  {
+   "pos": [
+    -4.96,
+    24.93,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 21
+  },
+  {
+   "pos": [
+    -4.4,
+    24.93,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 21
+  },
+  {
+   "pos": [
+    -3.84,
+    24.93,
+    -3.868
+   ],
+   "alcance": 4.1,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 21
+  },
+  {
+   "pos": [
+    -2.935,
+    24.95,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 30
+  },
+  {
+   "pos": [
+    6.92,
+    24.93,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 60
+  },
+  {
+   "pos": [
+    7.48,
+    24.93,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 60
+  },
+  {
+   "pos": [
+    8.04,
+    24.93,
+    -3.868
+   ],
+   "alcance": 3.9,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 60
+  },
+  {
+   "pos": [
+    8.825,
+    24.95,
+    -2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 77
+  },
+  {
+   "pos": [
+    -12.04,
+    24.93,
+    3.868
+   ],
+   "alcance": 3.8,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -11.48,
+    24.93,
+    3.868
+   ],
+   "alcance": 3.8,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -10.92,
+    24.93,
+    3.868
+   ],
+   "alcance": 3.8,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    -12.825,
+    24.95,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 3
+  },
+  {
+   "pos": [
+    -8.16,
+    24.93,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 15
+  },
+  {
+   "pos": [
+    -7.6,
+    24.93,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 15
+  },
+  {
+   "pos": [
+    -7.04,
+    24.93,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 15
+  },
+  {
+   "pos": [
+    -9.065,
+    24.95,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 12
+  },
+  {
+   "pos": [
+    -4.16,
+    24.93,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 26
+  },
+  {
+   "pos": [
+    -3.6,
+    24.93,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 26
+  },
+  {
+   "pos": [
+    -3.04,
+    24.93,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 26
+  },
+  {
+   "pos": [
+    -5.065,
+    24.95,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 23
+  },
+  {
+   "pos": [
+    -0.16,
+    24.93,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 37
+  },
+  {
+   "pos": [
+    0.4,
+    24.93,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 37
+  },
+  {
+   "pos": [
+    0.96,
+    24.93,
+    3.868
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 37
+  },
+  {
+   "pos": [
+    -1.065,
+    24.95,
+    2.12
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 34
+  },
+  {
+   "pos": [
+    1.732,
+    24.93,
+    8.28
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 46
+  },
+  {
+   "pos": [
+    1.732,
+    24.93,
+    7.72
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 40
+  },
+  {
+   "pos": [
+    1.732,
+    24.93,
+    8.84
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 46
+  },
+  {
+   "pos": [
+    2.88,
+    24.95,
+    6.695
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 50
+  },
+  {
+   "pos": [
+    1.732,
+    24.93,
+    12.4
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 47
+  },
+  {
+   "pos": [
+    1.732,
+    24.93,
+    11.84
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 41
+  },
+  {
+   "pos": [
+    1.732,
+    24.93,
+    12.96
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 47
+  },
+  {
+   "pos": [
+    2.88,
+    24.95,
+    10.935
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 51
+  },
+  {
+   "pos": [
+    1.732,
+    24.93,
+    16.28
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 48
+  },
+  {
+   "pos": [
+    1.732,
+    24.93,
+    15.72
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 48
+  },
+  {
+   "pos": [
+    1.732,
+    24.93,
+    16.84
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 48
+  },
+  {
+   "pos": [
+    2.88,
+    24.95,
+    14.935
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 52
+  },
+  {
+   "pos": [
+    8.268,
+    24.93,
+    3.13
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    8.268,
+    24.93,
+    2.57
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    8.268,
+    24.93,
+    3.69
+   ],
+   "alcance": 4.6,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    7.12,
+    24.95,
+    5.065
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 63
+  },
+  {
+   "pos": [
+    8.268,
+    24.93,
+    7.6
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 74
+  },
+  {
+   "pos": [
+    8.268,
+    24.93,
+    7.04
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 74
+  },
+  {
+   "pos": [
+    8.268,
+    24.93,
+    8.16
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 79
+  },
+  {
+   "pos": [
+    7.12,
+    24.95,
+    9.065
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 66
+  },
+  {
+   "pos": [
+    8.268,
+    24.93,
+    11.6
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 75
+  },
+  {
+   "pos": [
+    8.268,
+    24.93,
+    11.04
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 75
+  },
+  {
+   "pos": [
+    8.268,
+    24.93,
+    12.16
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 80
+  },
+  {
+   "pos": [
+    7.12,
+    24.95,
+    13.065
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 69
+  },
+  {
+   "pos": [
+    8.268,
+    24.93,
+    15.48
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 71
+  },
+  {
+   "pos": [
+    8.268,
+    24.93,
+    14.92
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 71
+  },
+  {
+   "pos": [
+    8.268,
+    24.93,
+    16.04
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 81
+  },
+  {
+   "pos": [
+    7.12,
+    24.95,
+    16.825
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 72
+  },
+  {
+   "pos": [
+    2.97,
+    24.93,
+    3.4
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    2.97,
+    24.93,
+    2.84
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    2.97,
+    24.93,
+    3.96
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    2.97,
+    24.95,
+    2.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 6,
+   "comodo": 1
+  },
+  {
+   "pos": [
+    0.0,
+    28.525,
+    -2.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    0.0,
+    27.86,
+    -0.9
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 7,
+   "comodo": 3
+  },
+  {
+   "pos": [
+    -9.3,
+    3.188,
+    7.8
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 38
+  },
+  {
+   "pos": [
+    -8.0,
+    3.188,
+    7.8
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 38
+  },
+  {
+   "pos": [
+    -6.7,
+    3.188,
+    7.8
+   ],
+   "alcance": 4.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 38
+  },
+  {
+   "pos": [
+    1.04,
+    3.73,
+    20.5
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    1.5,
+    3.73,
+    20.5
+   ],
+   "alcance": 4.7,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    1.96,
+    3.73,
+    20.5
+   ],
+   "alcance": 4.7,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    1.04,
+    3.73,
+    23.5
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    1.5,
+    3.73,
+    23.5
+   ],
+   "alcance": 4.7,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    1.96,
+    3.73,
+    23.5
+   ],
+   "alcance": 4.7,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    4.54,
+    3.73,
+    20.5
+   ],
+   "alcance": 4.7,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    5.0,
+    3.73,
+    20.5
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    5.46,
+    3.73,
+    20.5
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    4.54,
+    3.73,
+    23.5
+   ],
+   "alcance": 4.7,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 61
+  },
+  {
+   "pos": [
+    5.0,
+    3.73,
+    23.5
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    5.46,
+    3.73,
+    23.5
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    8.04,
+    3.73,
+    20.5
+   ],
+   "alcance": 4.7,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 71
+  },
+  {
+   "pos": [
+    8.5,
+    3.73,
+    20.5
+   ],
+   "alcance": 4.7,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 71
+  },
+  {
+   "pos": [
+    8.96,
+    3.73,
+    20.5
+   ],
+   "alcance": 4.7,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 71
+  },
+  {
+   "pos": [
+    8.04,
+    3.73,
+    23.5
+   ],
+   "alcance": 4.7,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 71
+  },
+  {
+   "pos": [
+    8.5,
+    3.73,
+    23.5
+   ],
+   "alcance": 4.7,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 71
+  },
+  {
+   "pos": [
+    8.96,
+    3.73,
+    23.5
+   ],
+   "alcance": 4.7,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 71
+  },
+  {
+   "pos": [
+    -32.3,
+    5.8,
+    -6.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 1,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -32.3,
+    5.8,
+    8.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 1,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -32.3,
+    5.8,
+    22.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 1,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -17.7,
+    5.8,
+    -6.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 1,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -17.7,
+    5.8,
+    8.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 1,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -17.7,
+    5.8,
+    22.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 1,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -0.9,
+    5.8,
+    27.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 1,
+   "comodo": null
+  },
+  {
+   "pos": [
+    10.9,
+    5.8,
+    27.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 1,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -16.0,
+    5.8,
+    26.5
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 1,
+   "comodo": null
+  },
+  {
+   "pos": [
+    12.9,
+    5.8,
+    2.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 1,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -14.9,
+    5.8,
+    12.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 1,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -12.875,
+    3.53,
+    25.839
+   ],
+   "alcance": 3.8,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.75,
+   "andar": 0,
+   "comodo": 28
+  },
+  {
+   "pos": [
+    -0.125,
+    2.856,
+    -2.661
+   ],
+   "alcance": 4.6,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.076,
+   "andar": 0,
+   "comodo": 49
+  },
+  {
+   "pos": [
+    2.875,
+    3.23,
+    -3.411
+   ],
+   "alcance": 4.7,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.45,
+   "andar": 0,
+   "comodo": 63
+  },
+  {
+   "pos": [
+    4.875,
+    3.55,
+    18.589
+   ],
+   "alcance": 3.6,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.85,
+   "andar": 0,
+   "comodo": 64
+  },
+  {
+   "pos": [
+    -3.125,
+    6.83,
+    -4.411
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 7.05,
+   "andar": 1,
+   "comodo": 37
+  },
+  {
+   "pos": [
+    -0.125,
+    6.83,
+    -1.911
+   ],
+   "alcance": 3.9,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 7.05,
+   "andar": 1,
+   "comodo": 42
+  },
+  {
+   "pos": [
+    2.875,
+    6.83,
+    -3.411
+   ],
+   "alcance": 4.7,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 7.05,
+   "andar": 1,
+   "comodo": 63
+  },
+  {
+   "pos": [
+    -14.375,
+    10.73,
+    22.089
+   ],
+   "alcance": 5.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 10.95,
+   "andar": 2,
+   "comodo": 0
+  },
+  {
+   "pos": [
+    -8.375,
+    10.73,
+    -11.411
+   ],
+   "alcance": 5.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 10.95,
+   "andar": 2,
+   "comodo": 10
+  },
+  {
+   "pos": [
+    -3.125,
+    10.43,
+    -4.411
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 10.65,
+   "andar": 2,
+   "comodo": 31
+  },
+  {
+   "pos": [
+    -0.125,
+    10.43,
+    -1.911
+   ],
+   "alcance": 3.9,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 10.65,
+   "andar": 2,
+   "comodo": 34
+  },
+  {
+   "pos": [
+    2.875,
+    10.43,
+    -3.411
+   ],
+   "alcance": 4.7,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 10.65,
+   "andar": 2,
+   "comodo": 55
+  },
+  {
+   "pos": [
+    14.625,
+    10.73,
+    23.089
+   ],
+   "alcance": 5.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 10.95,
+   "andar": 2,
+   "comodo": 96
+  },
+  {
+   "pos": [
+    15.625,
+    10.73,
+    -11.911
+   ],
+   "alcance": 5.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 10.95,
+   "andar": 2,
+   "comodo": 97
+  },
+  {
+   "pos": [
+    20.625,
+    10.73,
+    -3.911
+   ],
+   "alcance": 5.4,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 10.95,
+   "andar": 2,
+   "comodo": 98
+  },
+  {
+   "pos": [
+    -3.125,
+    14.03,
+    -4.411
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 14.25,
+   "andar": 3,
+   "comodo": 29
+  },
+  {
+   "pos": [
+    -0.125,
+    14.03,
+    -1.911
+   ],
+   "alcance": 3.9,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 14.25,
+   "andar": 3,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    2.875,
+    14.03,
+    -3.411
+   ],
+   "alcance": 4.7,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 14.25,
+   "andar": 3,
+   "comodo": 53
+  },
+  {
+   "pos": [
+    -3.125,
+    17.63,
+    -4.411
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 17.85,
+   "andar": 4,
+   "comodo": 29
+  },
+  {
+   "pos": [
+    -0.125,
+    17.63,
+    -1.911
+   ],
+   "alcance": 3.9,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 17.85,
+   "andar": 4,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    2.875,
+    17.63,
+    -3.411
+   ],
+   "alcance": 4.7,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 17.85,
+   "andar": 4,
+   "comodo": 53
+  },
+  {
+   "pos": [
+    -3.125,
+    21.23,
+    -4.411
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 21.45,
+   "andar": 5,
+   "comodo": 29
+  },
+  {
+   "pos": [
+    -0.125,
+    21.23,
+    -1.911
+   ],
+   "alcance": 3.9,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 21.45,
+   "andar": 5,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    2.875,
+    21.23,
+    -3.411
+   ],
+   "alcance": 4.7,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 21.45,
+   "andar": 5,
+   "comodo": 53
+  },
+  {
+   "pos": [
+    -3.125,
+    24.83,
+    -4.411
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 25.05,
+   "andar": 6,
+   "comodo": 29
+  },
+  {
+   "pos": [
+    -0.125,
+    24.83,
+    -1.911
+   ],
+   "alcance": 3.9,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 25.05,
+   "andar": 6,
+   "comodo": 32
+  },
+  {
+   "pos": [
+    2.875,
+    24.83,
+    -3.411
+   ],
+   "alcance": 4.7,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 25.05,
+   "andar": 6,
+   "comodo": 53
+  },
+  {
+   "pos": [
+    -0.125,
+    28.15,
+    -1.911
+   ],
+   "alcance": 3.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 28.638,
+   "andar": 7,
+   "comodo": 6
+  },
+  {
+   "pos": [
+    3.875,
+    28.15,
+    -3.661
+   ],
+   "alcance": 6.2,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 28.638,
+   "andar": 7,
+   "comodo": 9
+  }
+ ]
+}

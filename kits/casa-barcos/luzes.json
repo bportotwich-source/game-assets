@@ -1,0 +1,421 @@
+{
+ "kit": "casa-barcos",
+ "gerado_por": "scripts/iluminacao/luzes.py",
+ "convencao": "pos em metros no espaço do prédio (o mesmo do building_layout.json); alcance em metros; tipo 'luminaria' = luz de uma luminária do kit, 'gerada' = luz de teto num cômodo sem luminária (teto = altura do teto ali, onde o Godot põe um plafon), 'externa' = luminária fora dos cômodos (varanda, poste, fachada)",
+ "materiais": [
+  "lamp_glass"
+ ],
+ "luzes": [
+  {
+   "pos": [
+    0.0,
+    2.89,
+    5.5
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 53
+  },
+  {
+   "pos": [
+    -2.0,
+    2.67,
+    2.6
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 43
+  },
+  {
+   "pos": [
+    2.0,
+    2.67,
+    2.6
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 43
+  },
+  {
+   "pos": [
+    -2.0,
+    2.67,
+    0.0
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 43
+  },
+  {
+   "pos": [
+    2.0,
+    2.67,
+    -0.2
+   ],
+   "alcance": 9.0,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 43
+  },
+  {
+   "pos": [
+    -5.3,
+    2.306,
+    -3.2
+   ],
+   "alcance": 8.3,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 20
+  },
+  {
+   "pos": [
+    -5.3,
+    2.306,
+    0.9
+   ],
+   "alcance": 8.3,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 20
+  },
+  {
+   "pos": [
+    -5.3,
+    2.306,
+    3.4
+   ],
+   "alcance": 8.3,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 20
+  },
+  {
+   "pos": [
+    -16.8,
+    2.393,
+    4.51
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -10.2,
+    2.393,
+    4.51
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -16.8,
+    2.393,
+    6.49
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -10.2,
+    2.393,
+    6.49
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -1.9,
+    2.545,
+    17.5
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    1.9,
+    2.545,
+    17.5
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -7.8,
+    3.52,
+    9.4
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    5.2,
+    3.52,
+    12.2
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -19.2,
+    3.52,
+    3.8
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -12.0,
+    3.52,
+    -10.9
+   ],
+   "alcance": 3.5,
+   "energia": 1.0,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "luminaria",
+   "andar": 0,
+   "comodo": 13
+  },
+  {
+   "pos": [
+    4.6,
+    3.52,
+    -8.6
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -21.9,
+    3.52,
+    -2.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    8.0,
+    3.52,
+    1.0
+   ],
+   "alcance": 6.0,
+   "energia": 0.8,
+   "cor": [
+    1.0,
+    0.86,
+    0.66
+   ],
+   "tipo": "externa",
+   "andar": 0,
+   "comodo": null
+  },
+  {
+   "pos": [
+    -1.37,
+    3.25,
+    -3.615
+   ],
+   "alcance": 4.5,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.82,
+   "andar": 0,
+   "comodo": 42
+  },
+  {
+   "pos": [
+    -1.37,
+    3.23,
+    10.385
+   ],
+   "alcance": 6.0,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.45,
+   "andar": 0,
+   "comodo": 47
+  },
+  {
+   "pos": [
+    2.63,
+    3.25,
+    -3.865
+   ],
+   "alcance": 3.7,
+   "energia": 0.85,
+   "cor": [
+    1.0,
+    0.93,
+    0.84
+   ],
+   "tipo": "gerada",
+   "teto": 3.82,
+   "andar": 0,
+   "comodo": 55
+  }
+ ]
+}

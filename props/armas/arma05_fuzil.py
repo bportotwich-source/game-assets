@@ -206,7 +206,8 @@ def fuzil_556(A):
               padrao='coronha_retratil_ar')
     A.encaixe('encaixe_empunhadura', (0.3, -0.03, 0), 'mlok_baixo', explodir=(0, -0.06, 0), aceita=['empunhadura_vertical', 'empunhadura_angulada'])
     A.encaixe('encaixe_lanterna', (0.4, -0.006, 0.019), 'mlok_lado', explodir=(0, 0, 0.06), aceita=['lanterna_fuzil'])
-    A.encaixe('encaixe_laser', (0.37, FY1 + 0.0055, 0.0), 'trilho_cima', explodir=(0, 0.06, 0), aceita=['laser_fuzil'])
+    A.encaixe('encaixe_laser', (0.33, -0.006, -0.019), 'mlok_esq', explodir=(0, 0, -0.06), aceita=['laser_fuzil'],
+              descricao='lado esquerdo do guarda-mão (a lanterna fica no direito)')
     A.encaixe('encaixe_bipe', (0.43, -0.03, 0), 'bipe', explodir=(0, -0.06, 0), aceita=['bipe'])
     A.encaixe('encaixe_bandoleira', (0.425, -0.006, -0.0205), 'bandoleira', explodir=(0, 0, -0.04), aceita=['bandoleira'])
     A.encaixe('boca_fogo', (F_XM, 0, 0), 'efeito', descricao='clarão de boca e origem do disparo (-Z)')
@@ -365,10 +366,21 @@ def lanterna_fuzil(A):
     A.encaixe('feixe', (0.0305, 0.0, zl), 'efeito', descricao='SpotLight3D aqui (-Z)'); A.pivo = (0, 0, 0)
 
 
-@_acessorio('laser_fuzil', 'Caixa de laser e luz', 'laser', 'trilho_cima', peso_kg=0.2, raridade='muito raro', valor_troca=70, usa='pilhas',
+def _para_lado(A):
+    """Acessorio desenhado para cima (garra em y = 0) vira para o lado esquerdo: ganha um trilho curto de M-LOK e gira -90 graus em x
+    (o "baixo" do acessorio passa a apontar para +z, contra o guarda-mao)."""
+    trilho(A.base, 'aluminio_preto', -0.03, 0.03, -0.0055, False)
+    R = TF.rotation_matrix(-math.pi / 2, [1, 0, 0]) @ TF.translation_matrix([0, 0.0055, 0])
+    for ms in A.base.parts.values():
+        for m in ms: m.apply_transform(R)
+    for e in A.encaixes: e['pos'] = list(trimesh.transform_points([e['pos']], R)[0])
+    A.pivo = (0, 0, 0)
+
+
+@_acessorio('laser_fuzil', 'Caixa de laser e luz', 'laser', 'mlok_esq', peso_kg=0.2, raridade='muito raro', valor_troca=70, usa='pilhas',
             autonomia_min=300, luz={'alcance_m': 25, 'angulo_graus': 30, 'lumens': 300}, modificadores={'precisao_sem_mirar': 1.4},
             onde=['quartel'], liga_desliga='laser no encaixe "laser" e luz no encaixe "feixe" (para -Z)',
-            descricao='Caixa no trilho de cima com laser vermelho e luz auxiliar, chave de 3 posições e tampas das lentes.')
+            descricao='Caixa presa no lado esquerdo do guarda-mão (trilho curto de M-LOK) com laser vermelho e luz auxiliar, chave de 3 posições e tampas das lentes.')
 def laser_fuzil(A):
     q = A.base
     q.add('aluminio_preto', caixa(-0.02, 0.02, 0.0, 0.006, -0.0135, 0.0135))
@@ -381,7 +393,7 @@ def laser_fuzil(A):
     q.add('borracha', caixa(-0.05, -0.044, 0.012, 0.028, -0.008, 0.008))
     for k in (0.012, 0.026): q.add('recartilhado', cil_z(0.0035, -0.0195, -0.017, k - 0.03, 0.026, 16))       # ajustes do laser
     A.encaixe('laser', (0.036, 0.02, -0.007), 'efeito', descricao='origem do laser (-Z)'); A.encaixe('feixe', (0.036, 0.02, 0.007), 'efeito', descricao='SpotLight3D (-Z)')
-    A.pivo = (0, 0, 0)
+    _para_lado(A)
 
 
 @_acessorio('quebra_chamas_556', 'Quebra-chamas 5,56', 'boca', 'boca_556', peso_kg=0.05, raridade='comum', modificadores={'clarao': 0.4},
@@ -490,11 +502,11 @@ def _garra_trilho(q, L=0.044, alavanca=True):
                                        0.0135, 0.0158, 0.0005))
 
 
-@_acessorio('modulo_laser', 'Módulo de mira laser', 'laser', 'trilho_cima', peso_kg=0.24, raridade='muito raro', valor_troca=80, usa='pilhas',
+@_acessorio('modulo_laser', 'Módulo de mira laser', 'laser', 'mlok_esq', peso_kg=0.24, raridade='muito raro', valor_troca=80, usa='pilhas',
             autonomia_min=360, luz={'alcance_m': 20, 'angulo_graus': 28, 'lumens': 250}, modificadores={'precisao_sem_mirar': 1.5},
             onde=['quartel'], liga_desliga='laser no encaixe "laser" e luz no encaixe "feixe" (para -Z)',
             descricao='Caixa caramelo com laser e luz: botão de disparo quadriculado, seletor giratório, tampa da lente presa por cordão e '
-                      'tampa de pilha recartilhada atrás. Presa por garra de trilho com alavanca.')
+                      'tampa de pilha recartilhada atrás. Presa por garra num trilho curto de M-LOK no lado esquerdo do guarda-mão.')
 def modulo_laser(A):
     q = A.base; _garra_trilho(q, 0.05)
     corpo = arred([(-0.036, 0.006), (0.034, 0.006), (0.034, 0.044), (0.029, 0.05), (-0.031, 0.05), (-0.036, 0.045)], 0.003)
@@ -531,7 +543,7 @@ def modulo_laser(A):
     q.add('tinta_vermelha', caixa(-0.021, 0.009, 0.036, 0.039, 0.0176, 0.0178))
     A.encaixe('laser', (0.0475, yl, 0.0085), 'efeito', descricao='origem do laser (-Z)')
     A.encaixe('feixe', (0.0515, yl, -0.0065), 'efeito', descricao='SpotLight3D (-Z)')
-    A.pivo = (0, 0, 0)
+    _para_lado(A)
 
 
 @_acessorio('lanterna_compacta', 'Lanterna compacta de trilho', 'lanterna', 'mlok_lado', peso_kg=0.11, raridade='incomum', valor_troca=24, usa='pilhas',

@@ -1942,21 +1942,22 @@
     },
     {
      "no": "encaixe_laser",
-     "tipo": "trilho_cima",
+     "tipo": "mlok_esq",
      "pai": "fuzil_556",
      "posicao_m": [
-      0.0,
-      0.1165,
-      -0.407
+      -0.019,
+      0.087,
+      -0.367
      ],
      "aceita": [
       "laser_fuzil",
       "modulo_laser"
      ],
+     "descricao": "lado esquerdo do guarda-mão (a lanterna fica no direito)",
      "explodir_m": [
+      -0.06,
       0.0,
-      0.06,
-      0.0
+      -0.0
      ]
     },
     {
@@ -2377,21 +2378,22 @@
     },
     {
      "no": "encaixe_laser",
-     "tipo": "trilho_cima",
+     "tipo": "mlok_esq",
      "pai": "fuzil_556_bicolor",
      "posicao_m": [
-      0.0,
-      0.1165,
-      -0.407
+      -0.019,
+      0.087,
+      -0.367
      ],
      "aceita": [
       "laser_fuzil",
       "modulo_laser"
      ],
+     "descricao": "lado esquerdo do guarda-mão (a lanterna fica no direito)",
      "explodir_m": [
+      -0.06,
       0.0,
-      0.06,
-      0.0
+      -0.0
      ]
     },
     {
@@ -4075,7 +4077,7 @@
    "nome": "Caixa de laser e luz",
    "grupo": "acessorios",
    "categoria": "laser",
-   "encaixe": "trilho_cima",
+   "encaixe": "mlok_esq",
    "peso_kg": 0.2,
    "raridade": "muito raro",
    "valor_troca": 70,
@@ -4093,23 +4095,23 @@
     "quartel"
    ],
    "liga_desliga": "laser no encaixe \"laser\" e luz no encaixe \"feixe\" (para -Z)",
-   "descricao": "Caixa no trilho de cima com laser vermelho e luz auxiliar, chave de 3 posições e tampas das lentes.",
+   "descricao": "Caixa presa no lado esquerdo do guarda-mão (trilho curto de M-LOK) com laser vermelho e luz auxiliar, chave de 3 posições e tampas das lentes.",
    "arquivo": "acessorios/laser_fuzil.glb",
    "tamanho_m": [
-    0.041,
     0.04,
+    0.041,
     0.086
    ],
-   "triangulos": 1156,
-   "kb": 64.3,
+   "triangulos": 1352,
+   "kb": 73.5,
    "encaixes": [
     {
      "no": "laser",
      "tipo": "efeito",
      "pai": "laser_fuzil",
      "posicao_m": [
+      -0.0255,
       -0.007,
-      0.02,
       -0.036
      ],
      "descricao": "origem do laser (-Z)"
@@ -4119,8 +4121,8 @@
      "tipo": "efeito",
      "pai": "laser_fuzil",
      "posicao_m": [
+      -0.0255,
       0.007,
-      0.02,
       -0.036
      ],
      "descricao": "SpotLight3D (-Z)"
@@ -4289,7 +4291,7 @@
    "nome": "Módulo de mira laser",
    "grupo": "acessorios",
    "categoria": "laser",
-   "encaixe": "trilho_cima",
+   "encaixe": "mlok_esq",
    "peso_kg": 0.24,
    "raridade": "muito raro",
    "valor_troca": 80,
@@ -4307,23 +4309,23 @@
     "quartel"
    ],
    "liga_desliga": "laser no encaixe \"laser\" e luz no encaixe \"feixe\" (para -Z)",
-   "descricao": "Caixa caramelo com laser e luz: botão de disparo quadriculado, seletor giratório, tampa da lente presa por cordão e tampa de pilha recartilhada atrás. Presa por garra de trilho com alavanca.",
+   "descricao": "Caixa caramelo com laser e luz: botão de disparo quadriculado, seletor giratório, tampa da lente presa por cordão e tampa de pilha recartilhada atrás. Presa por garra num trilho curto de M-LOK no lado esquerdo do guarda-mão.",
    "arquivo": "acessorios/modulo_laser.glb",
    "tamanho_m": [
-    0.039,
     0.065,
+    0.039,
     0.103
    ],
-   "triangulos": 5478,
-   "kb": 279.7,
+   "triangulos": 5674,
+   "kb": 288.9,
    "encaixes": [
     {
      "no": "laser",
      "tipo": "efeito",
      "pai": "modulo_laser",
      "posicao_m": [
+      -0.0385,
       0.0085,
-      0.033,
       -0.0475
      ],
      "descricao": "origem do laser (-Z)"
@@ -4333,8 +4335,8 @@
      "tipo": "efeito",
      "pai": "modulo_laser",
      "posicao_m": [
+      -0.0385,
       -0.0065,
-      0.033,
       -0.0515
      ],
      "descricao": "SpotLight3D (-Z)"

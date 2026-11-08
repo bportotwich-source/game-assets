@@ -61,14 +61,14 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Empunhadura vertical (`empunhadura_vertical`) | Empunhaduras | `mlok_baixo` | recuo ×0,85, precisao_rajada ×1,25 | 0,09 kg | incomum | 12444 |
 | Empunhadura angulada (`empunhadura_angulada`) | Empunhaduras | `mlok_baixo` | recuo ×0,9, tempo_mirar ×0,9 | 0,06 kg | incomum | 7070 |
 | Lanterna de fuzil (`lanterna_fuzil`) | Lanternas | `mlok_lado` | - | 0,16 kg | incomum | 5576 |
-| Caixa de laser e luz (`laser_fuzil`) | Lasers | `trilho_cima` | precisao_sem_mirar ×1,4 | 0,2 kg | muito raro | 1156 |
+| Caixa de laser e luz (`laser_fuzil`) | Lasers | `mlok_esq` | precisao_sem_mirar ×1,4 | 0,2 kg | muito raro | 1352 |
 | Quebra-chamas 5,56 (`quebra_chamas_556`) | Boca do cano | `boca_556` | clarao ×0,4 | 0,05 kg | comum | 782 |
 | Compensador 5,56 (`compensador_556`) | Boca do cano | `boca_556` | recuo ×0,7, ruido_m ×1,15 | 0,07 kg | incomum | 820 |
 | Supressor 5,56 (`supressor_556`) | Boca do cano | `boca_556` | ruido_m ×0,35, recuo ×0,85, clarao ×0,1 | 0,45 kg | muito raro | 4076 |
 | Carregador 5,56 (30) (`carregador_556_30`) | Carregadores | `carregador_556` | - | 0,13 kg | incomum | 4468 |
 | Tambor 5,56 (60) (`tambor_556_60`) | Carregadores | `carregador_556` | recarga_s ×1,4, tempo_mirar ×1,15 | 0,6 kg | muito raro | 4980 |
 | Carregador longo 5,56 (60) (`carregador_556_60`) | Carregadores | `carregador_556` | recarga_s ×1,2, tempo_mirar ×1,08 | 0,45 kg | muito raro | 13840 |
-| Módulo de mira laser (`modulo_laser`) | Lasers | `trilho_cima` | precisao_sem_mirar ×1,5 | 0,24 kg | muito raro | 5478 |
+| Módulo de mira laser (`modulo_laser`) | Lasers | `mlok_esq` | precisao_sem_mirar ×1,5 | 0,24 kg | muito raro | 5674 |
 | Lanterna compacta de trilho (`lanterna_compacta`) | Lanternas | `mlok_lado` | - | 0,11 kg | incomum | 2104 |
 | Empunhadura curta inclinada (`empunhadura_curta`) | Empunhaduras | `mlok_baixo` | recuo ×0,9, tempo_mirar ×0,92 | 0,05 kg | incomum | 6808 |
 | Empunhadura vertical quadrada (`empunhadura_quadrada`) | Empunhaduras | `mlok_baixo` | recuo ×0,82, precisao_rajada ×1,3 | 0,1 kg | incomum | 1820 |

@@ -14,6 +14,9 @@ kits usados.
   intensidade e uma semente: mercado (supermercado), padaria, delegacia, posto de gasolina
   e casa de dois andares (casa-americana). Asfalto, faixas, calçadas com meio-fio, postes
   apagados e lixo espalhado com itens de `props/mobilias` e `props/loot`.
+- **Natureza tomando conta** (`mundo/natureza.gd`): árvores (muitas mortas), arbustos, mato,
+  flores e pedras do pacote `props/natureza` (Quaternius, CC0), espalhados por semente nos
+  terrenos e nas frestas de calçada e asfalto. Mato e flores em MultiMesh.
 - **Ruínas geradas na hora** (`mundo/ruinas.gd`): caem algumas telhas (a lista do que caiu
   fica no prédio, para o reparo do M2), parte dos vidros quebra, tudo ganha encardido
   (mais forte perto do chão, com escorridos nas paredes), algumas portas ficam abertas e
@@ -49,6 +52,7 @@ liberado para testar.
 | `mundo/predio.gd` | Monta um kit a partir do `building_layout.json`, com colisão e portas |
 | `mundo/ruinas.gd`, `mundo/encardido.gdshader` | Variante em ruínas |
 | `mundo/ruas.gd` | Asfalto, calçadas, faixas e postes |
+| `mundo/natureza.gd` | Árvores, mato, flores e pedras |
 | `personagem/sobrevivente.gd` | Corpo e movimento do sobrevivente (boneco provisório) |
 | `cameras/vistas.gd` | As 3 vistas e a troca suave |
 

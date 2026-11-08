@@ -8,6 +8,7 @@ const Ruinas = preload("res://jogo/mundo/ruinas.gd")
 const Ruas = preload("res://jogo/mundo/ruas.gd")
 const Sobrevivente = preload("res://jogo/personagem/sobrevivente.gd")
 const Vistas = preload("res://jogo/cameras/vistas.gd")
+const Natureza = preload("res://jogo/mundo/natureza.gd")
 
 const DIST_LOD := 220.0
 
@@ -34,6 +35,9 @@ func _ready() -> void:
 	Ruas.montar(self, mapa)
 	_montar_predios()
 	_espalhar_lixo_rua()
+	var nx: Array = mapa["comprimento_x"]
+	var nz: Array = mapa["comprimento_z"]
+	Natureza.espalhar(self, AABB(Vector3(nx[0], 0, nz[0]), Vector3(nx[1] - nx[0], 0, nz[1] - nz[0])), _livre, _fresta, int(mapa.get("semente_natureza", 7)))
 
 	sobrevivente = Sobrevivente.new()
 	sobrevivente.name = "Sobrevivente"
@@ -131,6 +135,35 @@ func _montar_predios() -> void:
 			p.aplicar_lod(DIST_LOD)
 			predios.append(p)
 			x_borda += largura + vao
+
+
+# Ponto de terreno: fora das ruas e calçadas e longe dos prédios (margem em m).
+func _livre(x: float, z: float, margem: float) -> bool:
+	var borda: float = mapa["rua_largura"] * 0.5 + mapa["calcada"] + 0.3
+	if absf(z) < borda + margem * 0.5 or absf(x) < borda + margem * 0.5:
+		return false
+	for p in predios:
+		var cx: AABB = p.global_transform * p.caixa
+		if x > cx.position.x - margem and x < cx.end.x + margem and z > cx.position.z - margem and z < cx.end.z + margem:
+			return false
+	return true
+
+
+# Fresta onde nasce mato: beira do asfalto junto ao meio-fio e beira de fora da calçada.
+func _fresta(x: float, z: float) -> bool:
+	var meia: float = mapa["rua_largura"] * 0.5
+	var fora: float = meia + mapa["calcada"]
+	var junto := func(v: float) -> bool:
+		var a := absf(v)
+		return (a > meia - 0.4 and a < meia - 0.05) or (a > fora + 0.05 and a < fora + 0.5)
+	var ok: bool = (junto.call(z) and absf(x) > fora) or (junto.call(x) and absf(z) > fora)
+	if not ok:
+		return false
+	for p in predios:
+		var cx: AABB = p.global_transform * p.caixa
+		if x > cx.position.x - 0.3 and x < cx.end.x + 0.3 and z > cx.position.z - 0.3 and z < cx.end.z + 0.3:
+			return false
+	return true
 
 
 func _rng(s: int) -> RandomNumberGenerator:

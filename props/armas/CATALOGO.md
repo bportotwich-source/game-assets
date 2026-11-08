@@ -39,6 +39,9 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Lança improvisada (`lanca_improvisada`) | lâmina | - | 48 | 1,6 m | 1,4/s | 2 m | 900 | 0,95 kg | mao_frente | estocar, estocar_forte, golpe_lateral, empurrar, firmar, refazer_fita, inspecionar, ocioso |
 | Bastão com pregos (`bastao_pregos`) | impacto | - | 52 | 0,95 m | 1,2/s | 4 m | 1400 | 1,05 kg | mao_cima | golpear, golpe_forte, estocar, puxar, inspecionar, ocioso |
 | Bastão com arame farpado (`bastao_arame`) | impacto | - | 58 | 0,95 m | 1,2/s | 4 m | 1100 | 1,15 kg | mao_cima | golpear, golpe_forte, estocar, puxar, inspecionar, ocioso |
+| Coquetel molotov (`coquetel_molotov`) | fogo | - | 40 | 18 m | 0,5/s | 10 m | 1 | 0,7 kg |  | acender, arremessar, inspecionar, ocioso |
+| Bomba de pregos (lata) (`bomba_pregos`) | estilhaços | - | 90 | 15 m | 0,4/s | 60 m | 1 | 0,6 kg |  | acender, arremessar, ocioso |
+| Isca sonora (despertador) (`isca_sonora`) | som | - | 0 | 14 m | 0,5/s | 35 m | 30 | 0,35 kg |  | dar_corda, tocar, arremessar, ocioso |
 
 ## Acessórios
 

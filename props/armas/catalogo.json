@@ -10451,6 +10451,328 @@
      "descricao": "respiração leve parado"
     }
    }
+  },
+  {
+   "id": "coquetel_molotov",
+   "nome": "Coquetel molotov",
+   "grupo": "armas",
+   "categoria": "arremessavel",
+   "classe": "arremessavel",
+   "calibre": "fogo",
+   "capacidade": "-",
+   "dano": 40,
+   "dano_por_s": 12,
+   "raio_m": 2.5,
+   "queima_s": 8,
+   "alcance_m": 18,
+   "tiros_por_s": 0.5,
+   "precisao": 0.8,
+   "ruido_m": 10,
+   "durabilidade": 1,
+   "peso_kg": 0.7,
+   "raridade": "incomum",
+   "valor_troca": 14,
+   "empilha": 3,
+   "receita": {
+    "garrafa_vidro": 1,
+    "galao_gasolina": 0.25,
+    "roupas": 1
+   },
+   "bancada": false,
+   "onde": [
+    "posto",
+    "garagem",
+    "abrigo"
+   ],
+   "descricao": "Garrafa de vidro com combustível e um pano enfiado no gargalo, amarrado com barbante. Acenda o pano e jogue: quebra ao bater e deixa uma poça de fogo por alguns segundos. Ilumina a noite, mas chama atenção.",
+   "arquivo": "armas/coquetel_molotov.glb",
+   "tamanho_m": [
+    0.067,
+    0.266,
+    0.067
+   ],
+   "triangulos": 6964,
+   "kb": 335.0,
+   "partes": [
+    {
+     "no": "pavio",
+     "tipo": "remove",
+     "direcao": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "item": "roupas",
+     "descricao": "pano enfiado no gargalo e amarrado com barbante: é o pavio (acenda antes de jogar)",
+     "pai": "coquetel_molotov",
+     "explodir_m": [
+      0.0,
+      0.06,
+      0.0
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "chama",
+     "tipo": "efeito",
+     "pai": "pavio",
+     "posicao_m": [
+      0.0,
+      0.172,
+      0.0
+     ],
+     "descricao": "onde nasce a chama do pano aceso"
+    },
+    {
+     "no": "quebra",
+     "tipo": "efeito",
+     "pai": "coquetel_molotov",
+     "posicao_m": [
+      0.0,
+      -0.09,
+      0.0
+     ],
+     "descricao": "fundo da garrafa: ao bater, quebra e espalha o fogo (raio do efeito em dados.raio_m)"
+    }
+   ],
+   "animacoes": {
+    "acender": {
+     "duracao_s": 1.4,
+     "laco": false,
+     "descricao": "inclina o gargalo para a outra mão com o isqueiro; ligue a chama aos 0,8 s no encaixe chama"
+    },
+    "arremessar": {
+     "duracao_s": 0.9,
+     "laco": false,
+     "descricao": "joga por cima do ombro; solte aos 0,6 s (vira objeto físico, quebra ao bater)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.2,
+     "laco": false,
+     "descricao": "gira a garrafa vendo o combustível balançar"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "bomba_pregos",
+   "nome": "Bomba de pregos (lata)",
+   "grupo": "armas",
+   "categoria": "arremessavel",
+   "classe": "arremessavel",
+   "calibre": "estilhaços",
+   "capacidade": "-",
+   "dano": 90,
+   "raio_m": 4.0,
+   "pavio_s": 4,
+   "alcance_m": 15,
+   "tiros_por_s": 0.4,
+   "precisao": 0.75,
+   "ruido_m": 60,
+   "durabilidade": 1,
+   "peso_kg": 0.6,
+   "raridade": "raro",
+   "valor_troca": 20,
+   "empilha": 3,
+   "receita": {
+    "lata_feijao": 1,
+    "caixa_pregos": 1,
+    "fita_adesiva": 1,
+    "sucata": 1
+   },
+   "bancada": true,
+   "onde": [
+    "abrigo",
+    "garagem"
+   ],
+   "descricao": "Lata vazia fechada com fita, cheia de pregos por dentro e por fora, com um pavio verde na tampa. Acenda, jogue e corra: estoura 4 s depois e derruba um grupo, mas o estrondo atrai tudo num raio grande.",
+   "arquivo": "armas/bomba_pregos.glb",
+   "tamanho_m": [
+    0.083,
+    0.152,
+    0.083
+   ],
+   "triangulos": 5912,
+   "kb": 283.5,
+   "partes": [
+    {
+     "no": "pavio",
+     "tipo": "remove",
+     "direcao": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "descricao": "pavio verde saindo da tampa: acende e queima ~4 s",
+     "pai": "bomba_pregos",
+     "explodir_m": [
+      0.0,
+      0.05,
+      0.0
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "chama",
+     "tipo": "efeito",
+     "pai": "pavio",
+     "posicao_m": [
+      0.003,
+      0.095,
+      -0.026
+     ],
+     "descricao": "ponta do pavio (faísca)"
+    }
+   ],
+   "animacoes": {
+    "acender": {
+     "duracao_s": 1.2,
+     "laco": false,
+     "descricao": "traz o pavio para o isqueiro; ligue a faísca aos 0,7 s (explode 4 s depois)"
+    },
+    "arremessar": {
+     "duracao_s": 0.9,
+     "laco": false,
+     "descricao": "joga por cima do ombro; solte aos 0,6 s (rola até explodir)"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "isca_sonora",
+   "nome": "Isca sonora (despertador)",
+   "grupo": "armas",
+   "categoria": "arremessavel",
+   "classe": "arremessavel",
+   "calibre": "som",
+   "capacidade": "-",
+   "dano": 0,
+   "alcance_m": 14,
+   "tiros_por_s": 0.5,
+   "precisao": 0.9,
+   "ruido_m": 35,
+   "durabilidade": 30,
+   "toque_s": 20,
+   "atraso_s": 3,
+   "peso_kg": 0.35,
+   "raridade": "comum",
+   "valor_troca": 5,
+   "empilha": 2,
+   "reutilizavel": true,
+   "onde": [
+    "casas",
+    "motel",
+    "hotel",
+    "abrigo"
+   ],
+   "descricao": "Despertador de corda com duas campainhas. Dê corda, jogue longe e ele toca por uns 20 s: os zumbis vão atrás do barulho. Dá para pegar de volta e usar de novo, se ninguém pisar nele.",
+   "arquivo": "armas/isca_sonora.glb",
+   "tamanho_m": [
+    0.047,
+    0.132,
+    0.108
+   ],
+   "triangulos": 4820,
+   "kb": 231.7,
+   "partes": [
+    {
+     "no": "ponteiro_horas",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -360,
+     "descricao": "ponteiro",
+     "pai": "isca_sonora",
+     "explodir_m": [
+      0.03,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "ponteiro_minutos",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -360,
+     "descricao": "ponteiro",
+     "pai": "isca_sonora",
+     "explodir_m": [
+      0.03,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "ponteiro_alarme",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -360,
+     "descricao": "ponteiro do alarme (a corda gira ele até a hora de tocar)",
+     "pai": "isca_sonora",
+     "explodir_m": [
+      0.03,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "martelo",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 24,
+     "descricao": "martelinho entre as campainhas (balança rápido quando toca)",
+     "pai": "isca_sonora",
+     "explodir_m": [
+      0.0,
+      0.03,
+      0.0
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "som",
+     "tipo": "efeito",
+     "pai": "isca_sonora",
+     "posicao_m": [
+      0.005,
+      0.06,
+      0.0
+     ],
+     "descricao": "de onde sai o toque (atrai zumbis num raio de dados.ruido_m)"
+    }
+   ],
+   "animacoes": {
+    "dar_corda": {
+     "duracao_s": 1.4,
+     "laco": false,
+     "descricao": "vira o relógio, gira a chave e põe o alarme para daqui a pouco"
+    },
+    "tocar": {
+     "duracao_s": 0.24,
+     "laco": true,
+     "descricao": "toque do alarme: martelo bate nas campainhas e o relógio treme (repita durante dados.toque_s)"
+    },
+    "arremessar": {
+     "duracao_s": 0.8,
+     "laco": false,
+     "descricao": "joga por baixo para não quebrar; solte aos 0,45 s (toca ao parar no chão)"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
   }
  ],
  "acessorios": [

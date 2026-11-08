@@ -3913,6 +3913,1274 @@
      ]
     }
    ]
+  },
+  {
+   "id": "van_jornada",
+   "nome": "Van Jornada",
+   "classe": "van",
+   "portas": 4,
+   "lugares": 2,
+   "descricao": "Van de carga da família Rumo, desenho próprio e sem marca. A frente, as portas dianteiras, o motor, as rodas, o tanque, o escapamento, os bancos e o volante são os mesmos do sedã Rumo. O baú tem teto alto, assoalho de compensado, leva 650 kg e abre por duas portas atrás; o estepe fica num poço debaixo do assoalho.",
+   "fisica": {
+    "massa_kg": 1100,
+    "centro_massa_m": [
+     0,
+     0.55,
+     0.15
+    ],
+    "tracao": "dianteira",
+    "forca_motor_n": 3300,
+    "freio": 38,
+    "carga_kg": 650,
+    "direcao_graus": [
+     32,
+     8
+    ],
+    "vel_max_kmh": 130,
+    "roda_raio_m": 0.305,
+    "roda_largura_m": 0.185,
+    "suspensao": {
+     "curso_m": 0.16,
+     "rigidez": 50,
+     "compressao": 0.85,
+     "retorno": 0.9
+    },
+    "atrito_pneu": {
+     "asfalto": 2.6,
+     "terra": 1.9,
+     "grama": 1.5,
+     "lama": 1.0
+    }
+   },
+   "combustivel": {
+    "tanque_l": 45,
+    "consumo_l_100km": 9,
+    "marcha_lenta_l_h": 0.8,
+    "bocal": "tampa_combustivel"
+   },
+   "bateria": {
+    "capacidade_ah": 45
+   },
+   "cor_padrao": [
+    0.8122,
+    0.8122,
+    0.7667
+   ],
+   "cores_sorteio": [
+    [
+     0.8122,
+     0.8122,
+     0.7667
+    ],
+    [
+     0.5605,
+     0.017,
+     0.0104
+    ],
+    [
+     0.009,
+     0.0511,
+     0.1905
+    ],
+    [
+     0.6524,
+     0.4098,
+     0.017
+    ],
+    [
+     0.0582,
+     0.1011,
+     0.0582
+    ],
+    [
+     0.2674,
+     0.2758,
+     0.2674
+    ],
+    [
+     0.0415,
+     0.0415,
+     0.0478
+    ],
+    [
+     0.68,
+     0.1573,
+     0.017
+    ]
+   ],
+   "arquivo": "van_jornada.glb",
+   "tamanho_m": [
+    2.077,
+    1.807,
+    4.677
+   ],
+   "triangulos": 205192,
+   "kb": 10329.9,
+   "partes": [
+    {
+     "no": "capo",
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -68,
+     "peca": "capo",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      30,
+      40
+     ],
+     "depende_de": [
+      "capo:aberto"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      0.0,
+      0.9075,
+      0.7
+     ],
+     "triangulos": 3254
+    },
+    {
+     "no": "porta_de",
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -66,
+     "peca": "porta_dianteira_e",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      75
+     ],
+     "depende_de": [],
+     "pai": "van_jornada",
+     "origem_m": [
+      0.8,
+      0.6,
+      0.605
+     ],
+     "triangulos": 9206
+    },
+    {
+     "no": "porta_dd",
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 66,
+     "peca": "porta_dianteira_d",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      75
+     ],
+     "depende_de": [],
+     "pai": "van_jornada",
+     "origem_m": [
+      -0.8,
+      0.6,
+      0.605
+     ],
+     "triangulos": 9194
+    },
+    {
+     "no": "paralama_e",
+     "tipo": "peca",
+     "peca": "paralama_e",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      70
+     ],
+     "depende_de": [
+      "farol:fora"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      0.8,
+      0.55,
+      1.27
+     ],
+     "triangulos": 5508
+    },
+    {
+     "no": "paralama_d",
+     "tipo": "peca",
+     "peca": "paralama_d",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      70
+     ],
+     "depende_de": [
+      "farol:fora"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      -0.8,
+      0.55,
+      1.27
+     ],
+     "triangulos": 5430
+    },
+    {
+     "no": "tampa_combustivel",
+     "tipo": "tampa",
+     "eixo": "y",
+     "abre_graus": -80,
+     "peca": null,
+     "pai": "van_jornada",
+     "origem_m": [
+      0.8025,
+      0.8,
+      -1.86
+     ],
+     "triangulos": 282
+    },
+    {
+     "no": "para_brisa",
+     "tipo": "peca",
+     "peca": "para_brisa",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      90,
+      120
+     ],
+     "depende_de": [],
+     "quebra_ao_tirar": 0.3,
+     "pai": "van_jornada",
+     "origem_m": [
+      0.0,
+      1.0,
+      0.55
+     ],
+     "triangulos": 2192
+    },
+    {
+     "no": "porta_te",
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -100,
+     "peca": "porta_traseira_e_van",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      50,
+      60
+     ],
+     "depende_de": [],
+     "pai": "van_jornada",
+     "origem_m": [
+      0.62,
+      1.14,
+      -2.4
+     ],
+     "triangulos": 962
+    },
+    {
+     "no": "porta_td",
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 100,
+     "peca": "porta_traseira_d_van",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      50,
+      60
+     ],
+     "depende_de": [],
+     "pai": "van_jornada",
+     "origem_m": [
+      -0.62,
+      1.14,
+      -2.4
+     ],
+     "triangulos": 724
+    },
+    {
+     "no": "para_choque_d",
+     "tipo": "peca",
+     "peca": "para_choque_dianteiro",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      40,
+      50
+     ],
+     "depende_de": [],
+     "pai": "van_jornada",
+     "origem_m": [
+      0.0,
+      0.315,
+      2.1
+     ],
+     "triangulos": 7864
+    },
+    {
+     "no": "para_choque_t",
+     "tipo": "peca",
+     "peca": "para_choque_traseiro_van",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      40,
+      50
+     ],
+     "depende_de": [],
+     "pai": "van_jornada",
+     "origem_m": [
+      0.0,
+      0.315,
+      -2.4
+     ],
+     "triangulos": 7816
+    },
+    {
+     "no": "farol_e",
+     "tipo": "peca",
+     "peca": "farol",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      20,
+      25
+     ],
+     "depende_de": [
+      "capo:aberto"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      0.58,
+      0.61,
+      2.03
+     ],
+     "triangulos": 1408
+    },
+    {
+     "no": "farol_d",
+     "tipo": "peca",
+     "peca": "farol",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      20,
+      25
+     ],
+     "depende_de": [
+      "capo:aberto"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      -0.58,
+      0.61,
+      2.03
+     ],
+     "triangulos": 1408
+    },
+    {
+     "no": "lanterna_e",
+     "tipo": "peca",
+     "peca": "lanterna_vertical",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      15,
+      20
+     ],
+     "depende_de": [
+      "porta_te|porta_td:aberta"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      0.7,
+      0.79,
+      -2.34
+     ],
+     "triangulos": 668
+    },
+    {
+     "no": "lanterna_d",
+     "tipo": "peca",
+     "peca": "lanterna_vertical",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      15,
+      20
+     ],
+     "depende_de": [
+      "porta_te|porta_td:aberta"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      -0.7,
+      0.79,
+      -2.34
+     ],
+     "triangulos": 668
+    },
+    {
+     "no": "retrovisor_e",
+     "tipo": "peca",
+     "peca": "retrovisor",
+     "obrigatoria": false,
+     "ferramentas": [],
+     "tempo_s": [
+      5,
+      20
+     ],
+     "depende_de": [],
+     "pai": "porta_de",
+     "origem_m": [
+      0.7686,
+      0.955,
+      0.5
+     ],
+     "triangulos": 114
+    },
+    {
+     "no": "retrovisor_d",
+     "tipo": "peca",
+     "peca": "retrovisor",
+     "obrigatoria": false,
+     "ferramentas": [],
+     "tempo_s": [
+      5,
+      20
+     ],
+     "depende_de": [],
+     "pai": "porta_dd",
+     "origem_m": [
+      -0.7686,
+      0.955,
+      0.5
+     ],
+     "triangulos": 114
+    },
+    {
+     "no": "roda_de",
+     "tipo": "roda",
+     "peca": "roda_aro14",
+     "tracao": true,
+     "direcao": true,
+     "obrigatoria": true,
+     "ferramentas": [
+      "chave_de_roda",
+      "macaco_sanfona|macaco_jacare"
+     ],
+     "tempo_s": [
+      40,
+      50
+     ],
+     "depende_de": [
+      "carro:no_macaco"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      0.71,
+      0.305,
+      1.27
+     ],
+     "triangulos": 9344
+    },
+    {
+     "no": "roda_dd",
+     "tipo": "roda",
+     "peca": "roda_aro14",
+     "tracao": true,
+     "direcao": true,
+     "obrigatoria": true,
+     "ferramentas": [
+      "chave_de_roda",
+      "macaco_sanfona|macaco_jacare"
+     ],
+     "tempo_s": [
+      40,
+      50
+     ],
+     "depende_de": [
+      "carro:no_macaco"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      -0.71,
+      0.305,
+      1.27
+     ],
+     "triangulos": 9344
+    },
+    {
+     "no": "roda_te",
+     "tipo": "roda",
+     "peca": "roda_aro14",
+     "tracao": false,
+     "direcao": false,
+     "obrigatoria": true,
+     "ferramentas": [
+      "chave_de_roda",
+      "macaco_sanfona|macaco_jacare"
+     ],
+     "tempo_s": [
+      40,
+      50
+     ],
+     "depende_de": [
+      "carro:no_macaco"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      0.71,
+      0.305,
+      -1.28
+     ],
+     "triangulos": 9344
+    },
+    {
+     "no": "roda_td",
+     "tipo": "roda",
+     "peca": "roda_aro14",
+     "tracao": false,
+     "direcao": false,
+     "obrigatoria": true,
+     "ferramentas": [
+      "chave_de_roda",
+      "macaco_sanfona|macaco_jacare"
+     ],
+     "tempo_s": [
+      40,
+      50
+     ],
+     "depende_de": [
+      "carro:no_macaco"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      -0.71,
+      0.305,
+      -1.28
+     ],
+     "triangulos": 9344
+    },
+    {
+     "no": "estepe",
+     "tipo": "peca",
+     "peca": "roda_aro14",
+     "obrigatoria": false,
+     "ferramentas": [],
+     "tempo_s": [
+      5,
+      5
+     ],
+     "depende_de": [
+      "porta_te|porta_td:aberta",
+      "assoalho_porta_malas:aberto"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      0.0,
+      0.36,
+      -1.93
+     ],
+     "triangulos": 9344
+    },
+    {
+     "no": "motor",
+     "tipo": "peca",
+     "peca": "motor_1_6",
+     "obrigatoria": true,
+     "ferramentas": [
+      "jogo_de_chaves",
+      "talha"
+     ],
+     "tempo_s": [
+      240,
+      300
+     ],
+     "depende_de": [
+      "capo:aberto",
+      "radiador:fora",
+      "bateria:fora"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      0.0,
+      0.26,
+      1.3
+     ],
+     "triangulos": 6624
+    },
+    {
+     "no": "alternador",
+     "tipo": "peca",
+     "peca": "alternador",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      45,
+      60
+     ],
+     "depende_de": [
+      "capo:aberto"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      -0.22,
+      0.5,
+      1.46
+     ],
+     "triangulos": 532
+    },
+    {
+     "no": "radiador",
+     "tipo": "peca",
+     "peca": "radiador",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      75
+     ],
+     "depende_de": [
+      "capo:aberto"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      0.0,
+      0.37,
+      1.905
+     ],
+     "triangulos": 992
+    },
+    {
+     "no": "bateria",
+     "tipo": "peca",
+     "peca": "bateria_12v",
+     "obrigatoria": true,
+     "ferramentas": [
+      "jogo_de_chaves|chave_inglesa"
+     ],
+     "tempo_s": [
+      15,
+      20
+     ],
+     "depende_de": [
+      "capo:aberto"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      0.3,
+      0.565,
+      0.93
+     ],
+     "triangulos": 696
+    },
+    {
+     "no": "escapamento",
+     "tipo": "peca",
+     "peca": "escapamento",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves",
+      "macaco_sanfona|macaco_jacare"
+     ],
+     "tempo_s": [
+      60,
+      75
+     ],
+     "depende_de": [
+      "carro:no_macaco"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      0.0,
+      0.165,
+      -0.5
+     ],
+     "triangulos": 2092
+    },
+    {
+     "no": "tanque",
+     "tipo": "peca",
+     "peca": "tanque_45l",
+     "obrigatoria": true,
+     "ferramentas": [
+      "jogo_de_chaves",
+      "macaco_sanfona|macaco_jacare"
+     ],
+     "tempo_s": [
+      90,
+      120
+     ],
+     "depende_de": [
+      "carro:no_macaco"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      0.0,
+      0.125,
+      -0.83
+     ],
+     "triangulos": 172
+    },
+    {
+     "no": "banco_motorista",
+     "tipo": "peca",
+     "peca": "banco_dianteiro",
+     "obrigatoria": true,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      70
+     ],
+     "depende_de": [
+      "porta_de:aberta"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      0.37,
+      0.29,
+      -0.28
+     ],
+     "triangulos": 6256
+    },
+    {
+     "no": "banco_passageiro",
+     "tipo": "peca",
+     "peca": "banco_dianteiro",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      70
+     ],
+     "depende_de": [
+      "porta_dd:aberta"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      -0.37,
+      0.29,
+      -0.28
+     ],
+     "triangulos": 6256
+    },
+    {
+     "no": "divisoria",
+     "tipo": "peca",
+     "peca": "divisoria_van",
+     "obrigatoria": false,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      60,
+      75
+     ],
+     "depende_de": [
+      "porta_te|porta_td:aberta"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      0.0,
+      0.5,
+      -0.8
+     ],
+     "triangulos": 1116
+    },
+    {
+     "no": "volante",
+     "tipo": "peca",
+     "peca": "volante",
+     "obrigatoria": true,
+     "ferramentas": [
+      "jogo_de_chaves"
+     ],
+     "tempo_s": [
+      30,
+      30
+     ],
+     "depende_de": [
+      "porta_de:aberta"
+     ],
+     "pai": "van_jornada",
+     "origem_m": [
+      0.37,
+      0.82,
+      0.06
+     ],
+     "triangulos": 1208
+    },
+    {
+     "no": "porta_luvas",
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -75,
+     "peca": null,
+     "pai": "van_jornada",
+     "origem_m": [
+      -0.375,
+      0.586,
+      0.215
+     ],
+     "triangulos": 56
+    },
+    {
+     "no": "assoalho_porta_malas",
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": 75,
+     "peca": null,
+     "pai": "van_jornada",
+     "origem_m": [
+      0.0,
+      0.5,
+      -1.6
+     ],
+     "triangulos": 24
+    },
+    {
+     "no": "quebra_sol_e",
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -80,
+     "peca": null,
+     "pai": "van_jornada",
+     "origem_m": [
+      0.38,
+      1.336,
+      -0.215
+     ],
+     "triangulos": 44
+    },
+    {
+     "no": "quebra_sol_d",
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -80,
+     "peca": null,
+     "pai": "van_jornada",
+     "origem_m": [
+      -0.38,
+      1.336,
+      -0.215
+     ],
+     "triangulos": 56
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "camera_1a_pessoa",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.37,
+      1.13,
+      -0.32
+     ]
+    },
+    {
+     "no": "assento_motorista",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.37,
+      0.48,
+      -0.3
+     ]
+    },
+    {
+     "no": "assento_passageiro",
+     "tipo": "ponto",
+     "posicao_m": [
+      -0.37,
+      0.48,
+      -0.3
+     ]
+    },
+    {
+     "no": "saida_motorista",
+     "tipo": "ponto",
+     "posicao_m": [
+      1.35,
+      0.0,
+      -0.05
+     ]
+    },
+    {
+     "no": "saida_passageiro",
+     "tipo": "ponto",
+     "posicao_m": [
+      -1.35,
+      0.0,
+      -0.05
+     ]
+    },
+    {
+     "no": "carregar_bau",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.0,
+      0.0,
+      -3.1
+     ]
+    },
+    {
+     "no": "bocal_tanque",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.811,
+      0.8,
+      -1.95
+     ]
+    },
+    {
+     "no": "saida_escape",
+     "tipo": "ponto",
+     "posicao_m": [
+      -0.43,
+      0.19,
+      -2.33
+     ]
+    },
+    {
+     "no": "luz_farol_e",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.58,
+      0.614,
+      2.09
+     ]
+    },
+    {
+     "no": "luz_farol_d",
+     "tipo": "ponto",
+     "posicao_m": [
+      -0.58,
+      0.614,
+      2.09
+     ]
+    },
+    {
+     "no": "luz_freio_e",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.7,
+      0.86,
+      -2.43
+     ]
+    },
+    {
+     "no": "luz_freio_d",
+     "tipo": "ponto",
+     "posicao_m": [
+      -0.7,
+      0.86,
+      -2.43
+     ]
+    },
+    {
+     "no": "luz_freio_alta",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.0,
+      1.76,
+      -2.42
+     ]
+    },
+    {
+     "no": "macaco_e",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.7,
+      0.22,
+      -0.2
+     ]
+    },
+    {
+     "no": "macaco_d",
+     "tipo": "ponto",
+     "posicao_m": [
+      -0.7,
+      0.22,
+      -0.2
+     ]
+    },
+    {
+     "no": "talha_motor",
+     "tipo": "ponto",
+     "posicao_m": [
+      0.0,
+      1.4,
+      1.3
+     ]
+    }
+   ],
+   "compartimentos": [
+    {
+     "id": "bau",
+     "nome": "Baú",
+     "grade": [
+      10,
+      8
+     ],
+     "abre_por": "porta_te",
+     "saque": [
+      [
+       "caixa_papelao",
+       0.45
+      ],
+      [
+       "caixa_ferramentas",
+       0.2
+      ],
+      [
+       "galao_gasolina",
+       0.15
+      ],
+      [
+       "garrafao_agua",
+       0.2
+      ],
+      [
+       "enlatados",
+       0.25
+      ],
+      [
+       "cobertor",
+       0.2
+      ],
+      [
+       "lona",
+       0.2
+      ],
+      [
+       "corda",
+       0.3
+      ],
+      [
+       "tabuas",
+       0.15
+      ],
+      [
+       "pneu_velho",
+       0.1
+      ],
+      [
+       "caixa_remedios",
+       0.06
+      ],
+      [
+       "sucata",
+       0.3
+      ]
+     ],
+     "tranca": true,
+     "carga_kg": 650,
+     "nota": "abre pela porta de trás esquerda (a direita só abre depois dela); 1,28 m de altura: as caixas empilham"
+    },
+    {
+     "id": "poco_estepe",
+     "nome": "Poço do estepe",
+     "grade": [
+      4,
+      2
+     ],
+     "abre_por": "assoalho_porta_malas",
+     "saque": [
+      [
+       "macaco_sanfona",
+       0.7
+      ],
+      [
+       "chave_de_roda",
+       0.7
+      ],
+      [
+       "triangulo",
+       0.5
+      ],
+      [
+       "cabos_chupeta",
+       0.2
+      ]
+     ]
+    },
+    {
+     "id": "porta_luvas",
+     "nome": "Porta-luvas",
+     "grade": [
+      3,
+      2
+     ],
+     "abre_por": "porta_luvas",
+     "saque": [
+      [
+       "mapa_cidade",
+       0.4
+      ],
+      [
+       "lanterna",
+       0.3
+      ],
+      [
+       "pilhas",
+       0.3
+      ],
+      [
+       "isqueiro",
+       0.25
+      ],
+      [
+       "fita_isolante",
+       0.3
+      ],
+      [
+       "chave_casa",
+       0.1
+      ],
+      [
+       "nota_entrega",
+       0.5
+      ],
+      [
+       "frasco_remedio",
+       0.1
+      ]
+     ]
+    },
+    {
+     "id": "bolsa_porta_de",
+     "nome": "Bolsa da porta do motorista",
+     "grade": [
+      3,
+      1
+     ],
+     "abre_por": "porta_de",
+     "saque": [
+      [
+       "garrafa_agua",
+       0.2
+      ],
+      [
+       "salgadinho",
+       0.2
+      ],
+      [
+       "chave_carro",
+       0.02
+      ]
+     ]
+    },
+    {
+     "id": "bolsa_porta_dd",
+     "nome": "Bolsa da porta do passageiro",
+     "grade": [
+      3,
+      1
+     ],
+     "abre_por": "porta_dd",
+     "saque": [
+      [
+       "garrafa_agua",
+       0.2
+      ],
+      [
+       "salgadinho",
+       0.2
+      ],
+      [
+       "chave_carro",
+       0.02
+      ]
+     ]
+    },
+    {
+     "id": "console",
+     "nome": "Console",
+     "grade": [
+      2,
+      1
+     ],
+     "abre_por": null,
+     "saque": [
+      [
+       "isqueiro",
+       0.3
+      ],
+      [
+       "pilhas",
+       0.2
+      ]
+     ]
+    },
+    {
+     "id": "quebra_sol_e",
+     "nome": "Quebra-sol do motorista",
+     "grade": [
+      1,
+      1
+     ],
+     "abre_por": "quebra_sol_e",
+     "saque": [
+      [
+       "chave_carro",
+       0.1
+      ]
+     ]
+    },
+    {
+     "id": "quebra_sol_d",
+     "nome": "Quebra-sol do passageiro",
+     "grade": [
+      1,
+      1
+     ],
+     "abre_por": "quebra_sol_d",
+     "saque": [
+      [
+       "chave_carro",
+       0.1
+      ]
+     ]
+    }
+   ]
   }
  ],
  "pecas": [
@@ -4954,6 +6222,121 @@
    ],
    "triangulos": 7816,
    "kb": 376.1
+  },
+  {
+   "id": "porta_traseira_e_van",
+   "nome": "Porta de trás esquerda da van",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 16,
+   "empilha": 1,
+   "padrao": "van_jornada",
+   "efeito": "fecha o baú; tem a maçaneta e a fechadura",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/porta_traseira_e_van.glb",
+   "tamanho_m": [
+    0.627,
+    0.074,
+    1.18
+   ],
+   "triangulos": 962,
+   "kb": 83.4
+  },
+  {
+   "id": "porta_traseira_d_van",
+   "nome": "Porta de trás direita da van",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 16,
+   "empilha": 1,
+   "padrao": "van_jornada",
+   "efeito": "fecha o baú; abre depois da esquerda",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/porta_traseira_d_van.glb",
+   "tamanho_m": [
+    0.627,
+    0.063,
+    1.18
+   ],
+   "triangulos": 724,
+   "kb": 70.4
+  },
+  {
+   "id": "para_choque_traseiro_van",
+   "nome": "Para-choque traseiro da van",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 7,
+   "empilha": 1,
+   "padrao": "van_jornada",
+   "efeito": "absorve a primeira parte das batidas de trás; tem o degrau",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "celulas": [
+    7,
+    1
+   ],
+   "arquivo": "pecas/para_choque_traseiro_van.glb",
+   "tamanho_m": [
+    1.803,
+    0.194,
+    0.752
+   ],
+   "triangulos": 7816,
+   "kb": 376.1
+  },
+  {
+   "id": "divisoria_van",
+   "nome": "Divisória da cabine",
+   "grupo": "loot",
+   "categoria": "veiculo",
+   "montagem": "floor",
+   "recurso": "peca_veiculo",
+   "valor": 1,
+   "peso_kg": 9,
+   "empilha": 1,
+   "padrao": "van_jornada",
+   "efeito": "segura a carga numa freada e esconde o baú de quem olha pela janela",
+   "onde": [
+    "ferro_velho",
+    "concessionaria",
+    "posto",
+    "garagem"
+   ],
+   "carga_maos": true,
+   "arquivo": "pecas/divisoria_van.glb",
+   "tamanho_m": [
+    1.637,
+    0.015,
+    1.474
+   ],
+   "triangulos": 1116,
+   "kb": 54.0
   }
  ],
  "ferramentas": [

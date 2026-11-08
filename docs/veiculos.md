@@ -80,6 +80,8 @@ No hatch Brisa os encaixes têm os mesmos nomes. Muda o que é da traseira: `tam
 
 Na picape Lida só há as portas dianteiras (as mesmas do sedã) e os bancos da frente. `tampa_porta_malas` é a tampa da caçamba (`tampa_cacamba`, 14 kg): a dobradiça fica embaixo e ela cai 90° para trás, virando rampa. `vidro_traseiro` é o vidro de trás da cabine (`vidro_traseiro_cabine`). O estepe vai deitado na frente da caçamba, preso por cintas, e sai sem ferramenta. O escapamento e o tanque são os do sedã.
 
+Na van Jornada também só há as portas dianteiras e os bancos da frente. Não existe `tampa_porta_malas` nem `vidro_traseiro`: o baú abre por duas portas atrás, `porta_te` e `porta_td` (`porta_traseira_e_van` e `porta_traseira_d_van`, 16 kg cada), presas na quina e abrindo 100° para os lados. Os vidros de trás são parte delas, e a placa fica na porta esquerda. A esquerda tem a maçaneta e a fechadura; a direita só abre depois dela. Atrás dos bancos há a `divisoria` (`divisoria_van`, 9 kg), chapa até a cintura e grade até o teto, que sai por dentro do baú. O baú tem 10 × 8 casas e leva 650 kg, com assoalho de compensado, forração lateral, trilhos de amarrar e 1,28 m de altura. O estepe fica num poço debaixo do assoalho (`assoalho_porta_malas`), com o macaco e a chave de roda. As lanternas são as em pé do hatch, nas colunas das quinas.
+
 Partes que abrem e fecham mas não saem como loot: `tampa_combustivel` (portinhola do tanque), `porta_luvas`, `assoalho_porta_malas` (tampa sobre o estepe), `quebra_sol_e` `quebra_sol_d` (onde às vezes está a chave).
 
 ### 3.2 Condição
@@ -123,14 +125,15 @@ Cada peça tem um `padrao`. Peças do mesmo padrão servem em qualquer modelo qu
 
 | Padrão | Peças | Serve em |
 |---|---|---|
-| `compacto_1_6` | motor, alternador, radiador, escapamentos | sedã Rumo, hatch Brisa e os próximos (picape, van) |
+| `compacto_1_6` | motor, alternador, radiador, escapamentos | sedã Rumo, hatch Brisa, picape Lida e van Jornada |
 | `aro14_4furos` | roda, estepe | sedã, hatch, picape, van |
 | `bateria_12v` | bateria | todos os carros e o gerador da base |
-| `familia_rumo` | capô, portas dianteiras, para-lamas, para-brisa, para-choque dianteiro, tanque | sedã Rumo, hatch Brisa e picape Lida (a mesma frente) |
+| `familia_rumo` | capô, portas dianteiras, para-lamas, para-brisa, para-choque dianteiro, tanque | sedã Rumo, hatch Brisa, picape Lida e van Jornada (a mesma frente) |
 | `sedan_rumo` | portas traseiras, tampa do porta-malas, para-choque traseiro, vidro traseiro | só o sedã Rumo |
 | `hatch_brisa` | portas traseiras, tampa traseira com vidro, para-choque traseiro, escapamento curto | só o hatch Brisa |
 | `picape_lida` | tampa da caçamba, vidro de trás da cabine, para-choque traseiro com degrau | só a picape Lida |
-| `universal` | faróis, lanternas (as do sedã e as em pé do hatch e da picape), retrovisores, bancos, volante | qualquer carro |
+| `van_jornada` | portas de trás com os vidros, divisória da cabine, para-choque traseiro com degrau | só a van Jornada |
+| `universal` | faróis, lanternas (as do sedã e as em pé do hatch, da picape e da van), retrovisores, bancos, volante | qualquer carro |
 
 ## 4. Desmontar e montar
 
@@ -162,7 +165,7 @@ Com o capô aberto, ou mirando no carro e apertando **O**, abre a tela da oficin
 ### 4.4 Peças grandes
 
 - **Carga nas mãos** (portas, capô, tampa, vidros grandes, bancos): o jogador carrega com as duas mãos, sem arma, a 60% da velocidade, e pode largar a qualquer momento (tecla G). Essas peças não entram na mochila: vão no porta-malas, se couberem na grade, no banco de trás ou no chão.
-- **Motor**: não vai no inventário. Precisa de uma **talha** (a do ferro-velho e a da oficina da concessionária já existem nos kits; na base, a talha entra como estação da fase 2). Com a talha, o motor sai do carro, fica pendurado e pode ser baixado no carro de destino se os dois estiverem embaixo da talha, ou no carrinho de oficina, ou na caçamba de uma picape (próximo veículo).
+- **Motor**: não vai no inventário. Precisa de uma **talha** (a do ferro-velho e a da oficina da concessionária já existem nos kits; na base, a talha entra como estação da fase 2). Com a talha, o motor sai do carro, fica pendurado e pode ser baixado no carro de destino se os dois estiverem embaixo da talha, ou no carrinho de oficina, ou na caçamba da picape Lida.
 - Rodas e bateria podem ir na mochila (se couberem na grade), mas pesam: cada roda a mais deixa o passo mais lento.
 
 ## 5. Dirigir
@@ -340,7 +343,7 @@ Mudanças em código que já existe (combinar antes com a thread do jogo, porque
 | V2 | Peças: encaixes, montar e desmontar com ferramenta, condição, tela da oficina |
 | V3 | Carros abandonados com estados e semente, porta-malas e compartimentos com saque, sifão |
 | V4 | Dano por zona, atropelamento, zumbis nos vidros, reparos |
-| Depois | Próximos modelos: hatch, perua, picape (caçamba e guincho), van, moto; talha e carrinho de oficina na base |
+| Depois | Próximos modelos: perua, guincho, moto; talha e carrinho de oficina na base |
 
 ## 11. Convenções do modelo 3D
 

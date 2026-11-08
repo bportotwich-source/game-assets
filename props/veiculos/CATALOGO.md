@@ -174,6 +174,62 @@ Medidas 2,08 × 1,55 × 4,68 m · 212008 triângulos · 10,5 MB
 | Quebra-sol do motorista (`quebra_sol_e`) | 1 × 1 | `quebra_sol_e` |
 | Quebra-sol do passageiro (`quebra_sol_d`) | 1 × 1 | `quebra_sol_d` |
 
+## Van Jornada (`van_jornada`)
+
+Van de carga da família Rumo, desenho próprio e sem marca. A frente, as portas dianteiras, o motor, as rodas, o tanque, o escapamento, os bancos e o volante são os mesmos do sedã Rumo. O baú tem teto alto, assoalho de compensado, leva 650 kg e abre por duas portas atrás; o estepe fica num poço debaixo do assoalho.
+
+Medidas 2,08 × 1,81 × 4,68 m · 205192 triângulos · 10,1 MB
+
+| Nó | Tipo | Vira o item | Precisa para andar | Abre | Ferramentas | Tempo (tirar / pôr) |
+|---|---|---|---|---|---|---|
+| `capo` | tampa | `capo` | - | -68° em x | jogo_de_chaves | 30 s / 40 s |
+| `porta_de` | porta | `porta_dianteira_e` | - | -66° em y | jogo_de_chaves | 60 s / 75 s |
+| `porta_dd` | porta | `porta_dianteira_d` | - | 66° em y | jogo_de_chaves | 60 s / 75 s |
+| `paralama_e` | peca | `paralama_e` | - | - | jogo_de_chaves | 60 s / 70 s |
+| `paralama_d` | peca | `paralama_d` | - | - | jogo_de_chaves | 60 s / 70 s |
+| `tampa_combustivel` | tampa | - | - | -80° em y | - | - |
+| `para_brisa` | peca | `para_brisa` | - | - | jogo_de_chaves | 90 s / 120 s |
+| `porta_te` | porta | `porta_traseira_e_van` | - | -100° em y | jogo_de_chaves | 50 s / 60 s |
+| `porta_td` | porta | `porta_traseira_d_van` | - | 100° em y | jogo_de_chaves | 50 s / 60 s |
+| `para_choque_d` | peca | `para_choque_dianteiro` | - | - | jogo_de_chaves | 40 s / 50 s |
+| `para_choque_t` | peca | `para_choque_traseiro_van` | - | - | jogo_de_chaves | 40 s / 50 s |
+| `farol_e` | peca | `farol` | - | - | jogo_de_chaves | 20 s / 25 s |
+| `farol_d` | peca | `farol` | - | - | jogo_de_chaves | 20 s / 25 s |
+| `lanterna_e` | peca | `lanterna_vertical` | - | - | jogo_de_chaves | 15 s / 20 s |
+| `lanterna_d` | peca | `lanterna_vertical` | - | - | jogo_de_chaves | 15 s / 20 s |
+| `retrovisor_e` | peca | `retrovisor` | - | - | - | 5 s / 20 s |
+| `retrovisor_d` | peca | `retrovisor` | - | - | - | 5 s / 20 s |
+| `roda_de` | roda | `roda_aro14` | sim | - | chave_de_roda, macaco_sanfona ou macaco_jacare | 40 s / 50 s |
+| `roda_dd` | roda | `roda_aro14` | sim | - | chave_de_roda, macaco_sanfona ou macaco_jacare | 40 s / 50 s |
+| `roda_te` | roda | `roda_aro14` | sim | - | chave_de_roda, macaco_sanfona ou macaco_jacare | 40 s / 50 s |
+| `roda_td` | roda | `roda_aro14` | sim | - | chave_de_roda, macaco_sanfona ou macaco_jacare | 40 s / 50 s |
+| `estepe` | peca | `roda_aro14` | - | - | - | 5 s / 5 s |
+| `motor` | peca | `motor_1_6` | sim | - | jogo_de_chaves, talha | 240 s / 300 s |
+| `alternador` | peca | `alternador` | - | - | jogo_de_chaves | 45 s / 60 s |
+| `radiador` | peca | `radiador` | - | - | jogo_de_chaves | 60 s / 75 s |
+| `bateria` | peca | `bateria_12v` | sim | - | jogo_de_chaves ou chave_inglesa | 15 s / 20 s |
+| `escapamento` | peca | `escapamento` | - | - | jogo_de_chaves, macaco_sanfona ou macaco_jacare | 60 s / 75 s |
+| `tanque` | peca | `tanque_45l` | sim | - | jogo_de_chaves, macaco_sanfona ou macaco_jacare | 90 s / 120 s |
+| `banco_motorista` | peca | `banco_dianteiro` | sim | - | jogo_de_chaves | 60 s / 70 s |
+| `banco_passageiro` | peca | `banco_dianteiro` | - | - | jogo_de_chaves | 60 s / 70 s |
+| `divisoria` | peca | `divisoria_van` | - | - | jogo_de_chaves | 60 s / 75 s |
+| `volante` | peca | `volante` | sim | - | jogo_de_chaves | 30 s / 30 s |
+| `porta_luvas` | tampa | - | - | -75° em x | - | - |
+| `assoalho_porta_malas` | tampa | - | - | 75° em x | - | - |
+| `quebra_sol_e` | tampa | - | - | -80° em x | - | - |
+| `quebra_sol_d` | tampa | - | - | -80° em x | - | - |
+
+| Compartimento | Grade | Abre por |
+|---|---|---|
+| Baú (`bau`) | 10 × 8 | `porta_te` |
+| Poço do estepe (`poco_estepe`) | 4 × 2 | `assoalho_porta_malas` |
+| Porta-luvas (`porta_luvas`) | 3 × 2 | `porta_luvas` |
+| Bolsa da porta do motorista (`bolsa_porta_de`) | 3 × 1 | `porta_de` |
+| Bolsa da porta do passageiro (`bolsa_porta_dd`) | 3 × 1 | `porta_dd` |
+| Console (`console`) | 2 × 1 | sempre aberto |
+| Quebra-sol do motorista (`quebra_sol_e`) | 1 × 1 | `quebra_sol_e` |
+| Quebra-sol do passageiro (`quebra_sol_d`) | 1 × 1 | `quebra_sol_d` |
+
 ## Peças (loot)
 
 | Item | Padrão | Peso | Grade | Função | Triângulos |
@@ -213,6 +269,10 @@ Medidas 2,08 × 1,55 × 4,68 m · 212008 triângulos · 10,5 MB
 | Tampa da caçamba (`tampa_cacamba`) | picape_lida | 14 kg | carga nas mãos | fecha a caçamba; aberta, vira rampa e aumenta a carga | 1444 |
 | Vidro de trás da cabine (`vidro_traseiro_cabine`) | picape_lida | 4 kg | carga nas mãos | protege a cabine por trás | 44 |
 | Para-choque traseiro da picape (`para_choque_traseiro_picape`) | picape_lida | 7 kg | 7 × 1 | absorve a primeira parte das batidas de trás; tem o degrau | 7816 |
+| Porta de trás esquerda da van (`porta_traseira_e_van`) | van_jornada | 16 kg | carga nas mãos | fecha o baú; tem a maçaneta e a fechadura | 962 |
+| Porta de trás direita da van (`porta_traseira_d_van`) | van_jornada | 16 kg | carga nas mãos | fecha o baú; abre depois da esquerda | 724 |
+| Para-choque traseiro da van (`para_choque_traseiro_van`) | van_jornada | 7 kg | 7 × 1 | absorve a primeira parte das batidas de trás; tem o degrau | 7816 |
+| Divisória da cabine (`divisoria_van`) | van_jornada | 9 kg | carga nas mãos | segura a carga numa freada e esconde o baú de quem olha pela janela | 1116 |
 
 ## Ferramentas e materiais de oficina (loot)
 

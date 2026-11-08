@@ -1,0 +1,2242 @@
+{
+ "grid": {
+  "module_width": 2.0,
+  "wall_thickness": 0.25,
+  "floor_level": 0.15,
+  "showroom": {
+   "x": [
+    -16.0,
+    -2.0
+   ],
+   "z": [
+    -11.0,
+    -1.0
+   ],
+   "ceiling": 3.6,
+   "band_top": 4.2,
+   "rooms_front_z": -7.8
+  },
+  "garage": {
+   "x": [
+    0.0,
+    10.0
+   ],
+   "z": [
+    -11.0,
+    -1.0
+   ],
+   "deck": 5.0,
+   "parapet_top": 5.6,
+   "bay_opening": [
+    3.4,
+    3.6
+   ]
+  },
+  "site": {
+   "x": [
+    -19.0,
+    19.0
+   ],
+   "z": [
+    -14.0,
+    18.0
+   ],
+   "lot_level": 0.0,
+   "sidewalk_z": [
+    11.5,
+    13.2
+   ]
+  },
+  "textures": "PBR (albedo + normal + ORM), 2 m tiles, UV in metres / 2"
+ },
+ "placements": [
+  {
+   "piece": "s_win",
+   "pos": [
+    -15.0,
+    0.15,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "s_win",
+   "pos": [
+    -13.0,
+    0.15,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "s_win",
+   "pos": [
+    -11.0,
+    0.15,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "s_door2",
+   "pos": [
+    -9.0,
+    0.15,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "s_win",
+   "pos": [
+    -7.0,
+    0.15,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "s_win",
+   "pos": [
+    -5.0,
+    0.15,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "s_win",
+   "pos": [
+    -3.0,
+    0.15,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "s_plain",
+   "pos": [
+    -15.0,
+    0.15,
+    -11.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "s_plain",
+   "pos": [
+    -13.0,
+    0.15,
+    -11.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "s_win_s",
+   "pos": [
+    -11.0,
+    0.15,
+    -11.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "s_plain",
+   "pos": [
+    -9.0,
+    0.15,
+    -11.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "s_win_s",
+   "pos": [
+    -7.0,
+    0.15,
+    -11.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "s_plain",
+   "pos": [
+    -5.0,
+    0.15,
+    -11.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "s_door_s",
+   "pos": [
+    -3.0,
+    0.15,
+    -11.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "s_plain_l",
+   "pos": [
+    -16.0,
+    0.15,
+    -10.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "s_plain",
+   "pos": [
+    -16.0,
+    0.15,
+    -8.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "s_win",
+   "pos": [
+    -16.0,
+    0.15,
+    -6.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "s_win",
+   "pos": [
+    -16.0,
+    0.15,
+    -4.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "s_win_r",
+   "pos": [
+    -16.0,
+    0.15,
+    -2.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "s_win_s_r",
+   "pos": [
+    -2.0,
+    0.15,
+    -10.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "s_plain",
+   "pos": [
+    -2.0,
+    0.15,
+    -8.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "s_win",
+   "pos": [
+    -2.0,
+    0.15,
+    -6.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "s_win",
+   "pos": [
+    -2.0,
+    0.15,
+    -4.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "s_door1_l",
+   "pos": [
+    -2.0,
+    0.15,
+    -2.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "door_glass",
+   "pos": [
+    -9.915,
+    0.155,
+    -1.1
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "front",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_glass",
+   "pos": [
+    -8.085,
+    0.155,
+    -1.1
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "front",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_glass",
+   "pos": [
+    -2.1,
+    0.155,
+    -1.545
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_metal",
+   "pos": [
+    -2.56,
+    0.155,
+    -10.875
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "showroom",
+    "ext",
+    "back",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "sr_roof",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom",
+    "roof"
+   ]
+  },
+  {
+   "piece": "link_roof",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "sr_floor",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "sr_plan",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -14.83,
+    0.155,
+    -7.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -11.73,
+    0.155,
+    -7.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -9.03,
+    0.155,
+    -7.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    -3.43,
+    0.155,
+    -7.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "k_bay",
+   "pos": [
+    2.0,
+    0.15,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "k_bay_half",
+   "pos": [
+    6.0,
+    0.15,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "k_door",
+   "pos": [
+    9.0,
+    0.15,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "k_win",
+   "pos": [
+    1.0,
+    0.15,
+    -11.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "k_plain",
+   "pos": [
+    3.0,
+    0.15,
+    -11.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "k_win",
+   "pos": [
+    5.0,
+    0.15,
+    -11.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "k_plain",
+   "pos": [
+    7.0,
+    0.15,
+    -11.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "k_plain",
+   "pos": [
+    9.0,
+    0.15,
+    -11.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "k_plain_l",
+   "pos": [
+    0.0,
+    0.15,
+    -10.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "k_win",
+   "pos": [
+    0.0,
+    0.15,
+    -8.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "k_win",
+   "pos": [
+    0.0,
+    0.15,
+    -6.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "k_plain",
+   "pos": [
+    0.0,
+    0.15,
+    -4.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "k_door_r",
+   "pos": [
+    0.0,
+    0.15,
+    -2.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "k_win_n_r",
+   "pos": [
+    10.0,
+    0.15,
+    -10.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "k_plain",
+   "pos": [
+    10.0,
+    0.15,
+    -8.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "k_plain",
+   "pos": [
+    10.0,
+    0.15,
+    -6.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "k_win",
+   "pos": [
+    10.0,
+    0.15,
+    -4.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "k_plain_l",
+   "pos": [
+    10.0,
+    0.15,
+    -2.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "door_metal_g",
+   "pos": [
+    0.125,
+    0.155,
+    -2.455
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_metal_g",
+   "pos": [
+    8.545,
+    0.155,
+    -1.125
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "front",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "g_roof",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina",
+    "roof"
+   ]
+  },
+  {
+   "piece": "svc_sign",
+   "pos": [
+    4.0,
+    0.15,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "g_floor",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina"
+   ]
+  },
+  {
+   "piece": "g_plan",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina"
+   ]
+  },
+  {
+   "piece": "door_int",
+   "pos": [
+    7.0,
+    0.155,
+    -10.43
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "oficina",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "turntable",
+   "pos": [
+    -12.7,
+    0.15,
+    -4.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "car_coupe_r",
+   "pos": [
+    -12.7,
+    0.27,
+    -4.6
+   ],
+   "rotY": 30.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "car_sedan_b",
+   "pos": [
+    -5.6,
+    0.15,
+    -4.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "sofa",
+   "pos": [
+    -6.6,
+    0.15,
+    -7.74
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "side_table",
+   "pos": [
+    -5.0,
+    0.15,
+    -7.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "desk",
+   "pos": [
+    -3.5,
+    0.15,
+    -5.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "office_chair",
+   "pos": [
+    -3.5,
+    0.15,
+    -5.55
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "guest_chair",
+   "pos": [
+    -3.9,
+    0.15,
+    -4.25
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "guest_chair",
+   "pos": [
+    -3.1,
+    0.15,
+    -4.25
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "brochure_rack",
+   "pos": [
+    -15.75,
+    0.15,
+    -7.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "water_cooler",
+   "pos": [
+    -15.4,
+    0.15,
+    -2.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "plant",
+   "pos": [
+    -7.6,
+    0.15,
+    -1.75
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "plant",
+   "pos": [
+    -10.4,
+    0.15,
+    -1.75
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "plant",
+   "pos": [
+    -13.0,
+    0.15,
+    -1.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "plant",
+   "pos": [
+    -6.0,
+    0.15,
+    -8.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "wc",
+   "pos": [
+    -15.0,
+    0.15,
+    -10.75
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "sink_one",
+   "pos": [
+    -15.75,
+    0.15,
+    -9.1
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "desk",
+   "pos": [
+    -11.5,
+    0.15,
+    -9.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "office_chair",
+   "pos": [
+    -11.5,
+    0.15,
+    -10.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "guest_chair",
+   "pos": [
+    -11.9,
+    0.15,
+    -9.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "guest_chair",
+   "pos": [
+    -11.1,
+    0.15,
+    -9.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "file_cab",
+   "pos": [
+    -12.6,
+    0.15,
+    -7.86
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "desk",
+   "pos": [
+    -7.0,
+    0.15,
+    -9.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "office_chair",
+   "pos": [
+    -7.0,
+    0.15,
+    -10.35
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "guest_chair",
+   "pos": [
+    -7.4,
+    0.15,
+    -9.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "guest_chair",
+   "pos": [
+    -6.6,
+    0.15,
+    -9.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "bookcase",
+   "pos": [
+    -9.54,
+    0.15,
+    -9.6
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "kitchenette",
+   "pos": [
+    -5.54,
+    0.15,
+    -9.4
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "fridge",
+   "pos": [
+    -4.4,
+    0.15,
+    -10.75
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "table_set",
+   "pos": [
+    -4.3,
+    0.15,
+    -9.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "showroom"
+   ]
+  },
+  {
+   "piece": "lift_up",
+   "pos": [
+    2.0,
+    0.15,
+    -5.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "oficina"
+   ]
+  },
+  {
+   "piece": "car_sedan_k_svc",
+   "pos": [
+    2.0,
+    1.9,
+    -5.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina"
+   ]
+  },
+  {
+   "piece": "lift_down",
+   "pos": [
+    6.0,
+    0.15,
+    -5.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina"
+   ]
+  },
+  {
+   "piece": "car_pickup_o_svc",
+   "pos": [
+    6.0,
+    0.15,
+    -5.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "oficina"
+   ]
+  },
+  {
+   "piece": "workbench",
+   "pos": [
+    9.75,
+    0.15,
+    -6.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "oficina"
+   ]
+  },
+  {
+   "piece": "tool_chest",
+   "pos": [
+    9.75,
+    0.15,
+    -4.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "oficina"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    9.45,
+    0.15,
+    -7.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina"
+   ]
+  },
+  {
+   "piece": "tire_rack",
+   "pos": [
+    2.0,
+    0.15,
+    -10.75
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina"
+   ]
+  },
+  {
+   "piece": "compressor",
+   "pos": [
+    4.6,
+    0.15,
+    -10.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina"
+   ]
+  },
+  {
+   "piece": "drum",
+   "pos": [
+    0.7,
+    0.15,
+    -9.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina"
+   ]
+  },
+  {
+   "piece": "drum_r",
+   "pos": [
+    0.78,
+    0.15,
+    -8.92
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina"
+   ]
+  },
+  {
+   "piece": "tire_stack",
+   "pos": [
+    0.65,
+    0.15,
+    -7.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina"
+   ]
+  },
+  {
+   "piece": "floor_jack",
+   "pos": [
+    4.0,
+    0.15,
+    -3.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina"
+   ]
+  },
+  {
+   "piece": "hose_reel",
+   "pos": [
+    0.25,
+    2.15,
+    -4.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "oficina"
+   ]
+  },
+  {
+   "piece": "desk",
+   "pos": [
+    8.6,
+    0.15,
+    -8.435
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina"
+   ]
+  },
+  {
+   "piece": "office_chair",
+   "pos": [
+    8.6,
+    0.15,
+    -9.25
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina"
+   ]
+  },
+  {
+   "piece": "file_cab",
+   "pos": [
+    7.45,
+    0.15,
+    -8.06
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "oficina"
+   ]
+  },
+  {
+   "piece": "parts_shelf",
+   "pos": [
+    9.75,
+    0.15,
+    -9.8
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "oficina"
+   ]
+  },
+  {
+   "piece": "fl_light",
+   "pos": [
+    1.0,
+    5.14,
+    -3.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina",
+    "roof"
+   ]
+  },
+  {
+   "piece": "fl_light",
+   "pos": [
+    1.0,
+    5.14,
+    -6.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina",
+    "roof"
+   ]
+  },
+  {
+   "piece": "fl_light",
+   "pos": [
+    3.0,
+    5.14,
+    -3.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina",
+    "roof"
+   ]
+  },
+  {
+   "piece": "fl_light",
+   "pos": [
+    3.0,
+    5.14,
+    -6.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina",
+    "roof"
+   ]
+  },
+  {
+   "piece": "fl_light",
+   "pos": [
+    5.0,
+    5.14,
+    -3.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina",
+    "roof"
+   ]
+  },
+  {
+   "piece": "fl_light",
+   "pos": [
+    5.0,
+    5.14,
+    -6.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina",
+    "roof"
+   ]
+  },
+  {
+   "piece": "fl_light",
+   "pos": [
+    7.0,
+    5.14,
+    -3.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina",
+    "roof"
+   ]
+  },
+  {
+   "piece": "fl_light",
+   "pos": [
+    7.0,
+    5.14,
+    -6.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina",
+    "roof"
+   ]
+  },
+  {
+   "piece": "fl_light",
+   "pos": [
+    9.0,
+    5.14,
+    -3.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina",
+    "roof"
+   ]
+  },
+  {
+   "piece": "fl_light",
+   "pos": [
+    9.0,
+    5.14,
+    -6.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "oficina",
+    "roof"
+   ]
+  },
+  {
+   "piece": "site",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "pennants",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site",
+    "roof"
+   ]
+  },
+  {
+   "piece": "car_sedan_r",
+   "pos": [
+    -16.2,
+    0.0,
+    8.36
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "car_wagon_g",
+   "pos": [
+    -13.6,
+    0.0,
+    8.36
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "car_coupe_y",
+   "pos": [
+    -2.6,
+    0.0,
+    8.36
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "car_sedan_s",
+   "pos": [
+    0.0,
+    0.0,
+    8.36
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "car_hatch_p",
+   "pos": [
+    2.6,
+    0.0,
+    8.36
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "car_pickup_b",
+   "pos": [
+    13.0,
+    0.0,
+    8.36
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "car_wagon_w",
+   "pos": [
+    15.6,
+    0.0,
+    8.36
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "balloons",
+   "pos": [
+    -16.2,
+    1.42,
+    7.86
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "balloons",
+   "pos": [
+    0.0,
+    1.42,
+    7.86
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "balloons",
+   "pos": [
+    15.6,
+    1.44,
+    7.235
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "car_sedan_s",
+   "pos": [
+    15.4,
+    0.0,
+    -11.8
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "car_coupe_k",
+   "pos": [
+    15.4,
+    0.0,
+    -9.2
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "car_hatch_t",
+   "pos": [
+    15.4,
+    0.0,
+    -4.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "car_pickup_o",
+   "pos": [
+    15.4,
+    0.0,
+    -1.4
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "pylon_sign",
+   "pos": [
+    -11.0,
+    0.12,
+    8.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lot_lamp",
+   "pos": [
+    -16.5,
+    0.0,
+    12.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lot_lamp",
+   "pos": [
+    -3.5,
+    0.0,
+    12.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lot_lamp",
+   "pos": [
+    4.8,
+    0.0,
+    12.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lot_lamp",
+   "pos": [
+    16.5,
+    0.0,
+    12.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lot_lamp",
+   "pos": [
+    -15.0,
+    0.0,
+    1.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lot_lamp",
+   "pos": [
+    10.6,
+    0.0,
+    0.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site",
+    "roof"
+   ]
+  },
+  {
+   "piece": "lot_lamp",
+   "pos": [
+    17.0,
+    0.0,
+    -13.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site",
+    "roof"
+   ]
+  },
+  {
+   "piece": "flag_r",
+   "pos": [
+    -9.6,
+    0.15,
+    12.4
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "flag_b",
+   "pos": [
+    -2.6,
+    0.15,
+    12.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "flag_y",
+   "pos": [
+    5.8,
+    0.15,
+    12.4
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "flag_g",
+   "pos": [
+    13.6,
+    0.15,
+    12.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "flag_r",
+   "pos": [
+    17.4,
+    0.0,
+    5.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "flag_b",
+   "pos": [
+    17.4,
+    0.0,
+    1.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "tube_man",
+   "pos": [
+    16.4,
+    0.0,
+    3.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bollard",
+   "pos": [
+    0.15,
+    0.15,
+    -0.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bollard",
+   "pos": [
+    3.85,
+    0.15,
+    -0.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bollard",
+   "pos": [
+    4.15,
+    0.15,
+    -0.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bollard",
+   "pos": [
+    7.85,
+    0.15,
+    -0.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    -13.6,
+    0.15,
+    0.1
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -17.6,
+    0.05,
+    -3.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    -17.6,
+    0.05,
+    -9.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -12.0,
+    0.05,
+    -12.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    -7.0,
+    0.05,
+    -12.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    4.0,
+    0.05,
+    -12.7
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    18.4,
+    0.05,
+    9.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -16.9,
+    0.05,
+    -5.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -16.9,
+    0.05,
+    -1.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -16.9,
+    0.05,
+    -7.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -0.9,
+    0.05,
+    -11.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    8.5,
+    0.05,
+    -11.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    -6.0,
+    0.15,
+    0.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    -8.0,
+    0.15,
+    -3.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "showroom"
+   ]
+  }
+ ]
+}

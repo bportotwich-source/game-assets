@@ -206,7 +206,7 @@ def fuzil_556(A):
               padrao='coronha_retratil_ar')
     A.encaixe('encaixe_empunhadura', (0.3, -0.03, 0), 'mlok_baixo', explodir=(0, -0.06, 0), aceita=['empunhadura_vertical', 'empunhadura_angulada'])
     A.encaixe('encaixe_lanterna', (0.4, -0.006, 0.019), 'mlok_lado', explodir=(0, 0, 0.06), aceita=['lanterna_fuzil'])
-    A.encaixe('encaixe_laser', (0.33, -0.006, -0.019), 'mlok_esq', explodir=(0, 0, -0.06), aceita=['laser_fuzil'],
+    A.encaixe('encaixe_laser', (0.4, -0.006, -0.019), 'mlok_esq', explodir=(0, 0, -0.06), aceita=['laser_fuzil'],
               descricao='lado esquerdo do guarda-mão (a lanterna fica no direito)')
     A.encaixe('encaixe_bipe', (0.43, -0.03, 0), 'bipe', explodir=(0, -0.06, 0), aceita=['bipe'])
     A.encaixe('encaixe_bandoleira', (0.425, -0.006, -0.0205), 'bandoleira', explodir=(0, 0, -0.04), aceita=['bandoleira'])

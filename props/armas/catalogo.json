@@ -10226,6 +10226,231 @@
      "descricao": "respiração leve parado"
     }
    }
+  },
+  {
+   "id": "bastao_pregos",
+   "nome": "Bastão com pregos",
+   "grupo": "armas",
+   "categoria": "bastao",
+   "classe": "corpo_a_corpo",
+   "calibre": "impacto",
+   "capacidade": "-",
+   "dano": 52,
+   "dano_golpe_forte": 85,
+   "alcance_m": 0.95,
+   "tiros_por_s": 1.2,
+   "precisao": 1.0,
+   "ruido_m": 4,
+   "durabilidade": 1400,
+   "peso_kg": 1.05,
+   "raridade": "comum",
+   "valor_troca": 10,
+   "duas_maos": true,
+   "prende_no_alvo": 0.15,
+   "derruba": 0.3,
+   "receita": {
+    "taco_madeira": 1,
+    "caixa_pregos": 1
+   },
+   "bancada": true,
+   "reparo": {
+    "caixa_pregos": 1
+   },
+   "onde": [
+    "casas",
+    "garagem",
+    "escolinha",
+    "abrigo"
+   ],
+   "descricao": "Taco de madeira com uns vinte pregos batidos na parte grossa, alguns entortados, e pega de fita isolante. Bate bem mais que o taco e rasga, mas às vezes prende no alvo e precisa ser arrancado. Feito na bancada com uma caixa de pregos.",
+   "arquivo": "armas/bastao_pregos.glb",
+   "tamanho_m": [
+    0.138,
+    0.14,
+    0.841
+   ],
+   "triangulos": 13016,
+   "kb": 803.1,
+   "encaixes": [
+    {
+     "no": "mao_cima",
+     "tipo": "mao",
+     "pai": "bastao_pregos",
+     "posicao_m": [
+      0.0,
+      0.0,
+      -0.14
+     ],
+     "descricao": "mão de cima (a de baixo fica no pivô, junto do pomo)"
+    },
+    {
+     "no": "barril",
+     "tipo": "efeito",
+     "pai": "bastao_pregos",
+     "posicao_m": [
+      0.0,
+      0.0,
+      -0.66
+     ],
+     "descricao": "parte grossa: onde o golpe pesa (teste de acerto)"
+    },
+    {
+     "no": "ponta",
+     "tipo": "efeito",
+     "pai": "bastao_pregos",
+     "posicao_m": [
+      0.0,
+      0.0,
+      -0.78
+     ],
+     "descricao": "ponta do bastão (cutucada)"
+    }
+   ],
+   "animacoes": {
+    "golpear": {
+     "duracao_s": 0.7,
+     "laco": false,
+     "descricao": "golpe na diagonal com as duas mãos: acerto entre 0,3 e 0,42 s no encaixe barril"
+    },
+    "golpe_forte": {
+     "duracao_s": 1.1,
+     "laco": false,
+     "descricao": "levanta por cima da cabeça e desce com tudo: acerto entre 0,64 e 0,78 s (derruba)"
+    },
+    "estocar": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "cutucada com a ponta para afastar (empurra, pouco dano)"
+    },
+    "puxar": {
+     "duracao_s": 0.9,
+     "laco": false,
+     "descricao": "quando um prego prende no alvo: sacode e arranca (toque depois de um acerto que prendeu)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.4,
+     "laco": false,
+     "descricao": "levanta o bastão perto do rosto e gira olhando a ponta"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "bastao_arame",
+   "nome": "Bastão com arame farpado",
+   "grupo": "armas",
+   "categoria": "bastao",
+   "classe": "corpo_a_corpo",
+   "calibre": "impacto",
+   "capacidade": "-",
+   "dano": 58,
+   "dano_golpe_forte": 90,
+   "alcance_m": 0.95,
+   "tiros_por_s": 1.2,
+   "precisao": 1.0,
+   "ruido_m": 4,
+   "durabilidade": 1100,
+   "peso_kg": 1.15,
+   "raridade": "incomum",
+   "valor_troca": 12,
+   "duas_maos": true,
+   "prende_no_alvo": 0.1,
+   "sangramento": true,
+   "derruba": 0.3,
+   "receita": {
+    "taco_madeira": 1,
+    "arame_farpado": 1
+   },
+   "bancada": true,
+   "reparo": {
+    "arame_farpado": 1
+   },
+   "onde": [
+    "casas",
+    "garagem",
+    "escolinha",
+    "abrigo"
+   ],
+   "descricao": "Taco de madeira com arame farpado enrolado na parte grossa, pontas amarradas e torcidas, e pega de fita isolante. Rasga e faz sangrar; prende menos que o de pregos, mas o arame afrouxa e quebra antes. Feito na bancada com um rolo de arame farpado.",
+   "arquivo": "armas/bastao_arame.glb",
+   "tamanho_m": [
+    0.088,
+    0.097,
+    0.841
+   ],
+   "triangulos": 43254,
+   "kb": 2220.2,
+   "encaixes": [
+    {
+     "no": "mao_cima",
+     "tipo": "mao",
+     "pai": "bastao_arame",
+     "posicao_m": [
+      0.0,
+      0.0,
+      -0.14
+     ],
+     "descricao": "mão de cima (a de baixo fica no pivô, junto do pomo)"
+    },
+    {
+     "no": "barril",
+     "tipo": "efeito",
+     "pai": "bastao_arame",
+     "posicao_m": [
+      0.0,
+      0.0,
+      -0.66
+     ],
+     "descricao": "parte grossa: onde o golpe pesa (teste de acerto)"
+    },
+    {
+     "no": "ponta",
+     "tipo": "efeito",
+     "pai": "bastao_arame",
+     "posicao_m": [
+      0.0,
+      0.0,
+      -0.78
+     ],
+     "descricao": "ponta do bastão (cutucada)"
+    }
+   ],
+   "animacoes": {
+    "golpear": {
+     "duracao_s": 0.7,
+     "laco": false,
+     "descricao": "golpe na diagonal com as duas mãos: acerto entre 0,3 e 0,42 s no encaixe barril"
+    },
+    "golpe_forte": {
+     "duracao_s": 1.1,
+     "laco": false,
+     "descricao": "levanta por cima da cabeça e desce com tudo: acerto entre 0,64 e 0,78 s (derruba)"
+    },
+    "estocar": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "cutucada com a ponta para afastar (empurra, pouco dano)"
+    },
+    "puxar": {
+     "duracao_s": 0.9,
+     "laco": false,
+     "descricao": "quando o arame prende no alvo: sacode e arranca (toque depois de um acerto que prendeu)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.4,
+     "laco": false,
+     "descricao": "levanta o bastão perto do rosto e gira olhando a ponta"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
   }
  ],
  "acessorios": [

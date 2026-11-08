@@ -32,6 +32,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Pistola Guardiã 9 mm (preta) (`pistola_guardia_9mm_preta`) | 9 mm | 17 | 34 | 28 m | 4,0/s | 60 m | 900 | 0,98 kg | empunhadura, boca, trilho, carregador, cinto | atirar_dupla, atirar, atirar_ultimo, vazia, desarmar, armar, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Arco recurvo de madeira (`arco_recurvo`) | flecha | 1 | 70 | 35 m | 0,6/s | 6 m | 1500 | 1,2 kg | flecha, mira, estabilizador, aljava | puxar, segurar, soltar, encaixar, inspecionar, ocioso |
 | Arco composto (`arco_composto`) | flecha | 1 | 95 | 50 m | 0,55/s | 5 m | 1200 | 1,9 kg | flecha, soltador, mira, estabilizador, aljava | puxar, segurar, soltar, encaixar, inspecionar, ocioso |
+| Besta recurva (`besta_recurva`) | virote | 1 | 110 | 45 m | 0,2/s | 10 m | 1400 | 3,4 kg | virote, mira, alca, massa, estribo, lanterna, laser, empunhadura | atirar, vazia, armar, destravar, travar, carregar, inspecionar, ocioso |
 
 ## Acessórios
 
@@ -180,6 +181,8 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Soltador de pulso (`soltador_pulso`) | Soltadores | `loop_d` | precisao ×1,1, tremor ×0,9 | 0,09 kg | incomum | 2092 |
 | Mira de 5 pinos com luz (`mira_pinos_luz`) | Miras | `rosca_mira_composto` | precisao_mirando ×1,45 | 0,16 kg | raro | 10148 |
 | Aljava de arco composto (5 flechas) (`aljava_composto`) | Aljavas | `aljava_composto` | recarga_s ×0,8 | 0,3 kg | incomum | 5766 |
+| Luneta de besta (distâncias) (`luneta_besta`) | Miras | `trilho_mira` | precisao_mirando ×1,4, tempo_mirar ×1,1, alcance_m ×1,2 | 0,32 kg | incomum | 5408 |
+| Estribo de besta (`estribo_besta`) | Estribos | `estribo_besta` | armar_s ×0,78 | 0,18 kg | comum | 5056 |
 
 ## Munição e efeitos
 
@@ -217,6 +220,9 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Flecha de ponta de campo (`flecha_campo`) | Munição | Ponta de aço simples: entra menos, mas quase sempre dá para usar de novo. Pivô no entalhe (ponto que encosta na corda). | 638 |
 | Flecha de carbono (caça) (`flecha_carbono`) | Munição | Haste de carbono com ponta de 3 lâminas e nock luminoso (acende no disparo: fácil de achar no mato). Serve nos dois arcos. Pivô no entalhe (ponto que encosta na corda). | 866 |
 | Flecha de carbono (treino) (`flecha_carbono_campo`) | Munição | Ponta de campo simples: quase sempre volta inteira. Serve nos dois arcos. Pivô no entalhe (ponto que encosta na corda). | 766 |
+| Virote de caça (`virote_caca`) | Munição | Haste de carbono com ponta de 3 lâminas: atravessa fundo. Pivô na nock (ponto que encosta na corda). | 882 |
+| Virote de ponta de campo (`virote_campo`) | Munição | Ponta simples de aço: quase sempre dá para usar de novo. Pivô na nock (ponto que encosta na corda). | 846 |
+| Virote improvisado (prego) (`virote_prego`) | Munição | Haste de cabo de vassoura com um prego preso com fita: feito na bancada, erra mais. Pivô na nock (ponto que encosta na corda). | 1950 |
 | Clarão de boca (`clarao_boca`) | Efeitos | Mostrar por 1 ou 2 quadros no encaixe boca_fogo a cada tiro; girar ao acaso em -Z e variar a escala (0,8 a 1,2). Material emissivo com transparência. | 372 |
 | Luz do sinal vermelho (`sinal_luz_vermelha`) | Efeitos | Bola de luz que sobe até ~80 m e desce devagar por 7 s. Pôr uma luz omnidirecional vermelha forte no centro e piscar a escala (0,9 a 1,1). Material emissivo com transparência no halo. | 1920 |
 | Luz do sinal verde (`sinal_luz_verde`) | Efeitos | Igual ao vermelho, em verde. Pôr uma luz omnidirecional verde forte no centro. | 1920 |
@@ -427,3 +433,11 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Arco composto**, `encaixe_mira`: mira_pinos_luz
 - **Arco composto**, `encaixe_estabilizador`: estabilizador_arco, estabilizador_curto_arco
 - **Arco composto**, `encaixe_aljava`: aljava_composto
+- **Besta recurva**, `encaixe_virote`: virote_caca, virote_campo, virote_prego
+- **Besta recurva**, `encaixe_mira`: luneta_besta, luneta_4x, luneta_4x_22, mira_ponto_vermelho_tubo, mira_holografica, mira_reflexa
+- **Besta recurva**, `encaixe_alca`: alca_rebativel
+- **Besta recurva**, `encaixe_massa`: massa_rebativel
+- **Besta recurva**, `encaixe_estribo`: estribo_besta
+- **Besta recurva**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
+- **Besta recurva**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
+- **Besta recurva**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, empunhadura_reta, empunhadura_reta_tan, batente_mao

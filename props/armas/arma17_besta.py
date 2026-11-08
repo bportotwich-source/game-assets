@@ -121,8 +121,8 @@ def _corpo_besta(p):
     for zs in (-1, 1):                                                                      # aba de protecao dos dedos
         p.add('polimero_oliva', solido(arred([(0.17, 0.0), (0.335, 0.0), (0.33, 0.018), (0.175, 0.018)], 0.004), min(zs * 0.0205, zs * 0.03), max(zs * 0.0205, zs * 0.03), 0.002))
         p.add('tinta_vermelha', caixa(0.33, 0.333, 0.002, 0.016, min(zs * 0.0298, zs * 0.0302), max(zs * 0.0298, zs * 0.0302)))
-        placa_mlok(p, 'aluminio_preto', 0.37, 0.45, 0.004, zs * 0.021, zs, alt=0.014, esp=0.0035)
-    placa_mlok_baixo(p, 'aluminio_preto', 0.355, 0.47, -0.004, esp=0.004)
+    p.add('aluminio_preto', solido(arred([(0.392, -0.0045), (0.468, -0.0045), (0.468, 0.0), (0.392, 0.0)], 0.0015), -0.0105, 0.0105, 0.0006))
+    trilho(p, 'aluminio_preto', 0.395, 0.465, -0.0045, True, 0.019, 0.01)                   # trilho curto embaixo (lanterna OU laser OU os dois juntos)
     # cabeca (aluminio): bolsos dos bracos dos dois lados e ponte de baixo; parafusos dos bracos
     p.add('aluminio_preto', solido(arred([(0.5, -0.016), (0.585, -0.016), (0.6, 0.0), (0.59, 0.022), (0.5, 0.022)], 0.008), -0.062, 0.062, 0.004))
     for zs in (-1, 1):
@@ -233,10 +233,8 @@ def _besta(A):
     A.encaixe('mira_ferro', (-0.066, Y_MIRA + 0.0195, 0), 'mira', descricao='centro do furo da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z)')
     A.encaixe('encaixe_estribo', (0.606, 0.0, 0), 'estribo_besta', explodir=(0.08, 0, 0), aceita=['estribo_besta'], padrao='estribo_besta',
               descricao='bucha na frente da cabeça: estribo para pôr o pé e armar')
-    A.encaixe('encaixe_lanterna', (0.41, 0.004, 0.021), 'mlok_lado', explodir=(0, 0, 0.06), aceita=ACEITA_LANTERNA, descricao='placa de M-LOK do lado direito do trilho')
-    A.encaixe('encaixe_laser', (0.41, 0.004, -0.021), 'mlok_esq', explodir=(0, 0, -0.06), aceita=ACEITA_LASER, descricao='placa de M-LOK do lado esquerdo do trilho')
-    A.encaixe('encaixe_empunhadura', (0.4125, -0.004, 0), 'mlok_baixo', explodir=(0, -0.06, 0), aceita=ACEITA_EMPUNHADURA,
-              descricao='placa de M-LOK embaixo do trilho, na frente do guarda-mão (os dedos ficam longe da corda)')
+    A.encaixe('encaixe_trilho', (0.449, -0.01, 0), 'trilho_curto', explodir=(0.02, -0.05, 0), aceita=['lanterna_pistola', 'laser_pistola', 'combo_lanterna_laser'],
+              descricao='trilho curto embaixo, na frente do guarda-mão: lanterna, laser ou a lanterna com laser (um só)')
     A.encaixe('boca_fogo', (0.6, LY, 0), 'efeito', descricao='de onde o virote sai (projétil para -Z, sem clarão, estalo seco)')
     # ---- animacoes
     def solta(ks):

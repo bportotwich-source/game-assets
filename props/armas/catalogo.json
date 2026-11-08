@@ -9414,8 +9414,8 @@
     0.19,
     1.03
    ],
-   "triangulos": 30622,
-   "kb": 1600.0,
+   "triangulos": 28242,
+   "kb": 1488.2,
    "partes": [
     {
      "no": "braco_dir",
@@ -9643,71 +9643,24 @@
      ]
     },
     {
-     "no": "encaixe_lanterna",
-     "tipo": "mlok_lado",
-     "pai": "besta_recurva",
-     "posicao_m": [
-      0.021,
-      0.064,
-      -0.45
-     ],
-     "aceita": [
-      "lanterna_fuzil",
-      "lanterna_compacta"
-     ],
-     "descricao": "placa de M-LOK do lado direito do trilho",
-     "explodir_m": [
-      0.06,
-      0.0,
-      0.0
-     ]
-    },
-    {
-     "no": "encaixe_laser",
-     "tipo": "mlok_esq",
-     "pai": "besta_recurva",
-     "posicao_m": [
-      -0.021,
-      0.064,
-      -0.45
-     ],
-     "aceita": [
-      "laser_fuzil",
-      "modulo_laser",
-      "modulo_laser_tan"
-     ],
-     "descricao": "placa de M-LOK do lado esquerdo do trilho",
-     "explodir_m": [
-      -0.06,
-      0.0,
-      -0.0
-     ]
-    },
-    {
-     "no": "encaixe_empunhadura",
-     "tipo": "mlok_baixo",
+     "no": "encaixe_trilho",
+     "tipo": "trilho_curto",
      "pai": "besta_recurva",
      "posicao_m": [
       0.0,
-      0.056,
-      -0.4525
+      0.05,
+      -0.489
      ],
      "aceita": [
-      "empunhadura_vertical",
-      "empunhadura_angulada",
-      "empunhadura_curta",
-      "empunhadura_curta_tan",
-      "empunhadura_quadrada",
-      "empunhadura_cilindrica",
-      "empunhadura_reta",
-      "empunhadura_reta_tan",
-      "batente_mao"
+      "lanterna_pistola",
+      "laser_pistola",
+      "combo_lanterna_laser"
      ],
-     "descricao": "placa de M-LOK embaixo do trilho, na frente do guarda-mão (os dedos ficam longe da corda)",
+     "descricao": "trilho curto embaixo, na frente do guarda-mão: lanterna, laser ou a lanterna com laser (um só)",
      "explodir_m": [
       0.0,
-      -0.06,
-      0.0
+      -0.05,
+      -0.02
      ]
     },
     {

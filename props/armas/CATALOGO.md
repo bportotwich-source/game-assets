@@ -32,7 +32,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Pistola Guardiã 9 mm (preta) (`pistola_guardia_9mm_preta`) | 9 mm | 17 | 34 | 28 m | 4,0/s | 60 m | 900 | 0,98 kg | empunhadura, boca, trilho, carregador, cinto | atirar_dupla, atirar, atirar_ultimo, vazia, desarmar, armar, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Arco recurvo de madeira (`arco_recurvo`) | flecha | 1 | 70 | 35 m | 0,6/s | 6 m | 1500 | 1,2 kg | flecha, mira, estabilizador, aljava | puxar, segurar, soltar, encaixar, inspecionar, ocioso |
 | Arco composto (`arco_composto`) | flecha | 1 | 95 | 50 m | 0,55/s | 5 m | 1200 | 1,9 kg | flecha, soltador, mira, estabilizador, aljava | puxar, segurar, soltar, encaixar, inspecionar, ocioso |
-| Besta recurva (`besta_recurva`) | virote | 1 | 110 | 45 m | 0,2/s | 10 m | 1400 | 3,4 kg | virote, mira, alca, massa, estribo, lanterna, laser, empunhadura | atirar, vazia, armar, destravar, travar, carregar, inspecionar, ocioso |
+| Besta recurva (`besta_recurva`) | virote | 1 | 110 | 45 m | 0,2/s | 10 m | 1400 | 3,4 kg | virote, mira, alca, massa, estribo, trilho | atirar, vazia, armar, destravar, travar, carregar, inspecionar, ocioso |
 
 ## Acessórios
 
@@ -438,6 +438,4 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Besta recurva**, `encaixe_alca`: alca_rebativel
 - **Besta recurva**, `encaixe_massa`: massa_rebativel
 - **Besta recurva**, `encaixe_estribo`: estribo_besta
-- **Besta recurva**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
-- **Besta recurva**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
-- **Besta recurva**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, empunhadura_reta, empunhadura_reta_tan, batente_mao
+- **Besta recurva**, `encaixe_trilho`: lanterna_pistola, laser_pistola, combo_lanterna_laser

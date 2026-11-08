@@ -1,0 +1,1572 @@
+{
+ "grid": {
+  "module_width": 2.0,
+  "wall_thickness": 0.3,
+  "floor_raise": 0.15,
+  "building": {
+   "x": [
+    -10.0,
+    10.0
+   ],
+   "z": [
+    -6.0,
+    6.0
+   ],
+   "floors": 1,
+   "ceiling": 4.5,
+   "roof_slab": 5.0,
+   "parapet": 5.9,
+   "round_corner": {
+    "center": [
+     6.0,
+     2.0
+    ],
+    "radius": 4.0,
+    "facets": 6
+   }
+  },
+  "site": {
+   "x": [
+    -28.0,
+    14.0
+   ],
+   "z": [
+    -12.0,
+    14.0
+   ],
+   "walk_level": 0.15
+  },
+  "roof": "flat membrane roof with a continuous coping, glazed roof monitor over the hall, 2 condensers, vents and a blank pylon sign",
+  "textures": "PBR (albedo + normal + ORM), 2 m tiles, UV in metres / 2"
+ },
+ "placements": [
+  {
+   "piece": "w_rib",
+   "pos": [
+    -9.0,
+    0.15,
+    6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "w_rib",
+   "pos": [
+    -7.0,
+    0.15,
+    6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "w_plain",
+   "pos": [
+    -5.0,
+    0.15,
+    6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "w_rib",
+   "pos": [
+    -3.0,
+    0.15,
+    6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "w_rib",
+   "pos": [
+    -1.0,
+    0.15,
+    6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "w_gb",
+   "pos": [
+    1.0,
+    0.15,
+    6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "w_rib",
+   "pos": [
+    3.0,
+    0.15,
+    6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "w_gb",
+   "pos": [
+    5.0,
+    0.15,
+    6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "w_high",
+   "pos": [
+    -9.0,
+    0.15,
+    -6.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "w_high",
+   "pos": [
+    -7.0,
+    0.15,
+    -6.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "w_high",
+   "pos": [
+    -5.0,
+    0.15,
+    -6.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "w_high",
+   "pos": [
+    -3.0,
+    0.15,
+    -6.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "w_dock",
+   "pos": [
+    -1.0,
+    0.15,
+    -6.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "w_plain",
+   "pos": [
+    1.0,
+    0.15,
+    -6.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "w_svc",
+   "pos": [
+    3.0,
+    0.15,
+    -6.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "w_high",
+   "pos": [
+    5.0,
+    0.15,
+    -6.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "w_high",
+   "pos": [
+    7.0,
+    0.15,
+    -6.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "w_high",
+   "pos": [
+    9.0,
+    0.15,
+    -6.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "back"
+   ]
+  },
+  {
+   "piece": "w_high",
+   "pos": [
+    -10.0,
+    0.15,
+    -5.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "left"
+   ]
+  },
+  {
+   "piece": "w_plain",
+   "pos": [
+    -10.0,
+    0.15,
+    -3.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "left"
+   ]
+  },
+  {
+   "piece": "w_plain",
+   "pos": [
+    -10.0,
+    0.15,
+    -1.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "left"
+   ]
+  },
+  {
+   "piece": "w_door2",
+   "pos": [
+    -10.0,
+    0.15,
+    1.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "left"
+   ]
+  },
+  {
+   "piece": "w_door2",
+   "pos": [
+    -10.0,
+    0.15,
+    3.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "left"
+   ]
+  },
+  {
+   "piece": "w_plain",
+   "pos": [
+    -10.0,
+    0.15,
+    5.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "left"
+   ]
+  },
+  {
+   "piece": "w_high",
+   "pos": [
+    10.0,
+    0.15,
+    -5.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "right"
+   ]
+  },
+  {
+   "piece": "w_svc",
+   "pos": [
+    10.0,
+    0.15,
+    -3.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "right"
+   ]
+  },
+  {
+   "piece": "w_plain",
+   "pos": [
+    10.0,
+    0.15,
+    -1.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "right"
+   ]
+  },
+  {
+   "piece": "w_rib",
+   "pos": [
+    10.0,
+    0.15,
+    1.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "right"
+   ]
+  },
+  {
+   "piece": "corner",
+   "pos": [
+    -10.0,
+    0.15,
+    6.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "floor0",
+    "ext"
+   ]
+  },
+  {
+   "piece": "corner",
+   "pos": [
+    -10.0,
+    0.15,
+    -6.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "floor0",
+    "ext"
+   ]
+  },
+  {
+   "piece": "corner",
+   "pos": [
+    10.0,
+    0.15,
+    -6.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "floor0",
+    "ext"
+   ]
+  },
+  {
+   "piece": "arc_wall",
+   "pos": [
+    6.0,
+    0.15,
+    2.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "marquee",
+   "pos": [
+    6.0,
+    0.15,
+    2.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "roof",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "pylon",
+   "pos": [
+    8.0,
+    5.15,
+    4.0
+   ],
+   "rotY": 45.0,
+   "tags": [
+    "roof"
+   ]
+  },
+  {
+   "piece": "canopy",
+   "pos": [
+    -10.0,
+    0.0,
+    0.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "ext"
+   ]
+  },
+  {
+   "piece": "floor",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "plan",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "door_leaf_arc",
+   "pos": [
+    9.281,
+    0.156,
+    3.992
+   ],
+   "rotY": 232.5,
+   "tags": [
+    "floor0",
+    "front",
+    "ext",
+    "door"
+   ],
+   "door": {
+    "closed": 232.5,
+    "open": 142.5
+   }
+  },
+  {
+   "piece": "door_leaf_arc",
+   "pos": [
+    7.992,
+    0.156,
+    5.281
+   ],
+   "rotY": 37.5,
+   "tags": [
+    "floor0",
+    "front",
+    "ext",
+    "door"
+   ],
+   "door": {
+    "closed": 37.5,
+    "open": 127.5
+   }
+  },
+  {
+   "piece": "door_leaf_glass",
+   "pos": [
+    -9.85,
+    0.156,
+    0.1
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "floor0",
+    "left",
+    "ext",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_leaf_glass",
+   "pos": [
+    -9.85,
+    0.156,
+    1.9
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "floor0",
+    "left",
+    "ext",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_leaf_glass",
+   "pos": [
+    -9.85,
+    0.156,
+    2.1
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "floor0",
+    "left",
+    "ext",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_leaf_glass",
+   "pos": [
+    -9.85,
+    0.156,
+    3.9
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "floor0",
+    "left",
+    "ext",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_leaf_metal",
+   "pos": [
+    3.45,
+    0.156,
+    -5.85
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "floor0",
+    "back",
+    "ext",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "door_leaf_metal",
+   "pos": [
+    9.85,
+    0.156,
+    -2.55
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "floor0",
+    "right",
+    "ext",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "door_leaf_interior",
+   "pos": [
+    -8.63,
+    0.16,
+    -1.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_leaf_interior",
+   "pos": [
+    -5.28,
+    0.16,
+    -1.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_leaf_interior",
+   "pos": [
+    -1.33,
+    0.16,
+    -1.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "door_leaf_interior",
+   "pos": [
+    4.57,
+    0.16,
+    -1.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "bench_double",
+   "pos": [
+    -6.5,
+    0.15,
+    1.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "bench_double",
+   "pos": [
+    -2.5,
+    0.15,
+    1.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "bench_double",
+   "pos": [
+    1.5,
+    0.15,
+    1.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "lockers",
+   "pos": [
+    -9.7,
+    0.15,
+    4.85
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "kiosk",
+   "pos": [
+    -5.0,
+    0.15,
+    5.7
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "depart_board",
+   "pos": [
+    3.05,
+    2.65,
+    -1.43
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "wall_clock",
+   "pos": [
+    -2.3,
+    3.25,
+    -1.43
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "water_fountain",
+   "pos": [
+    -6.5,
+    0.15,
+    -1.43
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "trash_bin",
+   "pos": [
+    -9.3,
+    0.15,
+    0.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "trash_bin",
+   "pos": [
+    5.6,
+    0.15,
+    5.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "trash_bin",
+   "pos": [
+    -1.7,
+    0.15,
+    -1.1
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "planter",
+   "pos": [
+    4.6,
+    0.15,
+    5.1
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "planter",
+   "pos": [
+    -9.0,
+    0.15,
+    -0.7
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "pendant_globe",
+   "pos": [
+    -8.5,
+    4.65,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "pendant_globe",
+   "pos": [
+    -8.5,
+    4.65,
+    5.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "pendant_globe",
+   "pos": [
+    3.5,
+    4.65,
+    0.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "pendant_globe",
+   "pos": [
+    3.5,
+    4.65,
+    5.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "pendant_globe",
+   "pos": [
+    -3.0,
+    4.65,
+    5.1
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "pendant_globe",
+   "pos": [
+    0.5,
+    4.65,
+    5.1
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "cafe_counter",
+   "pos": [
+    7.4,
+    0.15,
+    -2.29
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "back_kitchen",
+   "pos": [
+    7.6,
+    0.15,
+    -5.7
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "stool",
+   "pos": [
+    6.4,
+    0.15,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "stool",
+   "pos": [
+    7.0,
+    0.15,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "stool",
+   "pos": [
+    7.6,
+    0.15,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "stool",
+   "pos": [
+    8.2,
+    0.15,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "office_desk",
+   "pos": [
+    2.3,
+    0.15,
+    -1.57
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "office_desk",
+   "pos": [
+    3.8,
+    0.15,
+    -1.57
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "safe",
+   "pos": [
+    1.6,
+    0.15,
+    -5.7
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "file_cab",
+   "pos": [
+    4.6,
+    0.15,
+    -5.7
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "file_cab",
+   "pos": [
+    5.1,
+    0.15,
+    -5.7
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "bag_shelf",
+   "pos": [
+    -3.13,
+    0.15,
+    -3.6
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "bag_cart",
+   "pos": [
+    0.2,
+    0.15,
+    -3.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "sink_bank",
+   "pos": [
+    -9.7,
+    0.15,
+    -2.7
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "sink_bank",
+   "pos": [
+    -3.27,
+    0.15,
+    -2.7
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "floor0"
+   ]
+  },
+  {
+   "piece": "site",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bench_wall",
+   "pos": [
+    -10.0,
+    0.15,
+    -3.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bench_wall",
+   "pos": [
+    -10.0,
+    0.15,
+    -5.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bay_pole_1",
+   "pos": [
+    -15.9,
+    0.15,
+    -4.5
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -17.3,
+    0.0,
+    -4.5
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bay_pole_2",
+   "pos": [
+    -15.9,
+    0.15,
+    -1.5
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -17.3,
+    0.0,
+    -1.5
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bay_pole_3",
+   "pos": [
+    -15.9,
+    0.15,
+    1.5
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -17.3,
+    0.0,
+    1.5
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bay_pole_4",
+   "pos": [
+    -15.9,
+    0.15,
+    4.5
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -17.3,
+    0.0,
+    4.5
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "trash_bin",
+   "pos": [
+    -12.0,
+    0.15,
+    -0.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bike_rack",
+   "pos": [
+    -15.0,
+    0.15,
+    7.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    -10.2,
+    0.15,
+    8.5
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    1.5,
+    0.15,
+    8.5
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    9.0,
+    0.15,
+    8.5
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    -22.0,
+    0.0,
+    -9.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    -22.0,
+    0.0,
+    8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -13.5,
+    0.09,
+    8.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    -7.0,
+    0.09,
+    8.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -1.0,
+    0.09,
+    8.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    4.0,
+    0.09,
+    8.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bollard",
+   "pos": [
+    7.5,
+    0.15,
+    8.75
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bollard",
+   "pos": [
+    8.6,
+    0.15,
+    8.75
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bollard",
+   "pos": [
+    11.35,
+    0.15,
+    3.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bollard",
+   "pos": [
+    11.35,
+    0.15,
+    4.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "taxi_sign",
+   "pos": [
+    11.35,
+    0.15,
+    0.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bench_wall",
+   "pos": [
+    -4.0,
+    0.15,
+    6.05
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "bench_wall",
+   "pos": [
+    0.0,
+    0.15,
+    6.05
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    12.8,
+    0.12,
+    -9.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "site"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    -13.0,
+    0.15,
+    2.0
+   ],
+   "rotY": 0.0,
+   "tags": []
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    -4.0,
+    0.15,
+    3.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "floor0"
+   ]
+  }
+ ]
+}

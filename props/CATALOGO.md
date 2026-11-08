@@ -265,6 +265,17 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Painéis solares no cavalete com baterias (`painel_solar`) | 18 | Energia | 2,86 × 1,41 × 1,47 | - | - | - | 1236 |
 | Cata-vento de bomba d'água em torre (`cata_vento`) | 18 | Energia | 2,40 × 6,65 × 3,45 | - | cabeca | - | 5976 |
 | Torre de rádio da comunidade (`torre_radio`) | 18 | Comunidade | 5,59 × 9,74 × 5,71 | - | - | - | 4436 |
+| Poste de luz restaurado (`poste_luz`) | 19 | Vila e cidade | 0,52 × 6,54 × 1,96 | - | - | - | 948 |
+| Subestação religada (`subestacao`) | 19 | Vila e cidade | 3,24 × 2,91 × 4,04 | - | - | - | 10168 |
+| Turbina eólica pequena no mastro (`turbina_eolica`) | 19 | Energia | 5,19 × 9,84 × 5,19 | - | cabeca, rotor | - | 1428 |
+| Estação de tratamento de água em tambores (`tratamento_agua`) | 19 | Vila e cidade | 3,08 × 1,98 × 1,03 | - | - | - | 7308 |
+| Módulo de muralha de blocos com passarela (`muralha_concreto`) | 19 | Defesa da base | 2,00 × 3,16 × 1,11 | - | - | - | 4500 |
+| Portão principal de chapa com guarita (`portao_guarita`) | 19 | Defesa da base | 5,92 × 4,13 × 1,60 | - | porta_esq, porta_dir | - | 7804 |
+| Banca de feira com toldo (`banca_feira`) | 19 | Vila e cidade | 3,05 × 2,34 × 1,51 | - | - | - | 4944 |
+| Ponto da caravana (abrigo de ônibus reformado) (`ponto_onibus`) | 19 | Vila e cidade | 3,23 × 2,70 × 1,45 | - | - | sentar | 3820 |
+| Forno de barro comunitário (`forno_comunitario`) | 19 | Vila e cidade | 2,23 × 1,87 × 1,76 | - | - | - | 18424 |
+| Placa de boas-vindas da vila (`placa_boas_vindas`) | 19 | Vila e cidade | 2,70 × 2,36 × 1,03 | - | - | - | 6544 |
+| Memorial aos que se foram (`memorial`) | 19 | Vila e cidade | 3,04 × 2,13 × 0,93 | - | - | - | 4972 |
 
 ## Loot
 
@@ -384,3 +395,4 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Carne crua embrulhada (`carne_crua`) | 18 | Comida | comida | 3 | 0,8 kg | 4 | estraga em 2 dias: cozinhe no panelão ou defume | fazenda |
 | Cesto de legumes da estufa (`cesto_legumes`) | 18 | Comida | comida | 4 | 2,5 kg | 1 | alface, tomate e cenoura: comida fresca que espanta a fraqueza | fazenda |
 | Rolo de plástico transparente (`rolo_plastico`) | 18 | Materiais de construção | sucata | 2 | 4,0 kg | 1 | cobre estufas e janelas sem vidro | fazenda, supermercado, galeria, serraria |
+| Pão caseiro do forno da vila (`pao_caseiro`) | 19 | Comida | comida | 3 | 0,4 kg | 6 | mata a fome e dá +moral; dura 4 dias | padaria, fazenda |

@@ -8,7 +8,8 @@ import os
 
 exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sedan_forma.py'), encoding='utf-8').read(), 'sedan_forma.py', 'exec'))
 
-HATCH = True
+TIPO = 'hatch'
+Z_PISO_TRAS = -1.40
 ZR = -2.00                    # traseira da carroceria
 ZBL = -1.86                   # base do vidro traseiro (na tampa)
 Z_BOCAL = -1.735

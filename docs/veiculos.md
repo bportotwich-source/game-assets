@@ -78,6 +78,8 @@ Cada peça é um nó separado no modelo, com nome fixo (o **encaixe**). Quando o
 
 No hatch Brisa os encaixes têm os mesmos nomes. Muda o que é da traseira: `tampa_porta_malas` vira a tampa traseira (`tampa_traseira_hatch`, 12 kg, abre 80° com o vidro), o `vidro_traseiro` fica preso nela (`vidro_traseiro_hatch`, 6 kg), as lanternas são em pé (`lanterna_vertical`), o escapamento é curto (`escapamento_curto`) e o porta-malas tem 7 × 4 casas, com o estepe embaixo do assoalho.
 
+Na picape Lida só há as portas dianteiras (as mesmas do sedã) e os bancos da frente. `tampa_porta_malas` é a tampa da caçamba (`tampa_cacamba`, 14 kg): a dobradiça fica embaixo e ela cai 90° para trás, virando rampa. `vidro_traseiro` é o vidro de trás da cabine (`vidro_traseiro_cabine`). O estepe vai deitado na frente da caçamba, preso por cintas, e sai sem ferramenta. O escapamento e o tanque são os do sedã.
+
 Partes que abrem e fecham mas não saem como loot: `tampa_combustivel` (portinhola do tanque), `porta_luvas`, `assoalho_porta_malas` (tampa sobre o estepe), `quebra_sol_e` `quebra_sol_d` (onde às vezes está a chave).
 
 ### 3.2 Condição
@@ -124,10 +126,11 @@ Cada peça tem um `padrao`. Peças do mesmo padrão servem em qualquer modelo qu
 | `compacto_1_6` | motor, alternador, radiador, escapamentos | sedã Rumo, hatch Brisa e os próximos (picape, van) |
 | `aro14_4furos` | roda, estepe | sedã, hatch, picape, van |
 | `bateria_12v` | bateria | todos os carros e o gerador da base |
-| `familia_rumo` | capô, portas dianteiras, para-lamas, para-brisa, para-choque dianteiro, tanque | sedã Rumo e hatch Brisa (a mesma frente) |
+| `familia_rumo` | capô, portas dianteiras, para-lamas, para-brisa, para-choque dianteiro, tanque | sedã Rumo, hatch Brisa e picape Lida (a mesma frente) |
 | `sedan_rumo` | portas traseiras, tampa do porta-malas, para-choque traseiro, vidro traseiro | só o sedã Rumo |
-| `hatch_brisa` | portas traseiras, tampa traseira com vidro, para-choque traseiro, lanternas em pé, escapamento curto | só o hatch Brisa |
-| `universal` | faróis, lanternas, retrovisores, bancos, volante | qualquer carro |
+| `hatch_brisa` | portas traseiras, tampa traseira com vidro, para-choque traseiro, escapamento curto | só o hatch Brisa |
+| `picape_lida` | tampa da caçamba, vidro de trás da cabine, para-choque traseiro com degrau | só a picape Lida |
+| `universal` | faróis, lanternas (as do sedã e as em pé do hatch e da picape), retrovisores, bancos, volante | qualquer carro |
 
 ## 4. Desmontar e montar
 

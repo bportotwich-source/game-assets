@@ -9,7 +9,7 @@ PECA.update({
     'porta_traseira_e_hatch': _peca('porta_traseira_e_hatch', 'Porta traseira esquerda do hatch', 18, 'hatch_brisa', 'protege quem vai atrás', carga_maos=True),
     'porta_traseira_d_hatch': _peca('porta_traseira_d_hatch', 'Porta traseira direita do hatch', 18, 'hatch_brisa', 'protege quem vai atrás', carga_maos=True),
     'para_choque_traseiro_hatch': _peca('para_choque_traseiro_hatch', 'Para-choque traseiro do hatch', 6, 'hatch_brisa', 'absorve a primeira parte das batidas de trás', (6, 1)),
-    'lanterna_vertical': _peca('lanterna_vertical', 'Lanterna traseira em pé', 1, 'hatch_brisa', 'luz de freio, de ré e pisca', (1, 2)),
+    'lanterna_vertical': _peca('lanterna_vertical', 'Lanterna traseira em pé', 1, 'universal', 'luz de freio, de ré e pisca', (1, 2)),
     'escapamento_curto': _peca('escapamento_curto', 'Escapamento curto com silencioso', 7, 'hatch_brisa', 'sem ele o motor faz o dobro de barulho', (5, 1)),
 })
 
@@ -124,14 +124,15 @@ def _lanterna_vertical(q, s):
     C = lambda x0, x1, y0, y1, d0, d1, n=14: _casca_contorno(x0, x1, y0, y1, d0, d1, frente=False, n=n)
     q.add('plastico_preto', L(menos(C(xa + 0.003, xb - 0.003, ya + 0.003, yb - 0.003, -0.004, -0.03), C(xa + 0.009, xb - 0.009, ya + 0.009, yb - 0.009, 0.02, -0.05))))
     q.add('refletor', L(C(xa + 0.005, xb - 0.005, ya + 0.005, yb - 0.005, -0.02, -0.032)))
-    q.add('plastico_preto', L(C(xa + 0.009, xb - 0.009, ya + 0.009, yb - 0.009, -0.032, -0.08)))
+    q.add('plastico_preto', L(C(xa + 0.009, xb - 0.009, ya + 0.009, yb - 0.009, -0.032, -getattr(SF, 'LANTERNA_FUNDO', 0.08))))
     y1, y2 = ya + 0.075, ya + 0.165
     q.add('lente_re', L(C(xa + 0.007, xb - 0.007, ya + 0.007, y1 - 0.002, -0.002, -0.009)))
     q.add('lente_pisca', L(C(xa + 0.007, xb - 0.007, y1 + 0.002, y2 - 0.002, -0.002, -0.009)))
     q.add('lente_lanterna', L(C(xa + 0.007, xb - 0.007, y2 + 0.002, yb - 0.007, -0.002, -0.009)))
     for y in (y1, y2): q.add('cromado', L(C(xa + 0.007, xb - 0.007, y - 0.002, y + 0.002, 0.0, -0.006)))
-    for k in range(4):                                                     # frisos horizontais da lente vermelha
+    for k in range(6):                                                     # frisos horizontais da lente vermelha
         y = y2 + 0.03 + k * 0.045
+        if y + 0.006 > yb - 0.015: break
         q.add('lente_lanterna', L(C(xa + 0.012, xb - 0.012, y, y + 0.006, 0.001, -0.004)))
 
 

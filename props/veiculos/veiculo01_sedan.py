@@ -44,7 +44,7 @@ class _Divisor:
 def _janelas(borda=0.0):
     """Aberturas de todos os vidros (solidos): laterais dos dois lados, para-brisa e traseiro."""
     lat = []
-    for fn in (SF.janela_dianteira, SF.janela_traseira, SF.janela_terceira):
+    for fn in getattr(SF, 'JANELAS', (SF.janela_dianteira, SF.janela_traseira, SF.janela_terceira)):
         m = prisma_zy(fn(borda), 0.30, 1.2); lat += [m, _mx(m)]
     def topo(z0, z1, rec):
         zs = np.linspace(z0, z1, 30)
@@ -52,7 +52,7 @@ def _janelas(borda=0.0):
         pg = _Pg(pts + [(-x, z) for (x, z) in pts[::-1]])
         return prisma_xz(pg, 0.80, 2.0)
     ps = topo(SF.ZWS + 0.05 - borda, -0.19 + borda, 0.065 - borda)
-    tr = topo(SF.Z_VIDRO_TRAS - borda, SF.ZBL + 0.055 - borda, SF.REC_VIDRO_TRAS - borda)
+    tr = SF.vidro_tras_vao(borda) if hasattr(SF, 'vidro_tras_vao') else topo(SF.Z_VIDRO_TRAS - borda, SF.ZBL + 0.055 - borda, SF.REC_VIDRO_TRAS - borda)
     return lat, ps, tr
 
 
@@ -66,6 +66,7 @@ def _carroceria(Vc, recortes=()):
     casca = menos(casca, *caixas)
     lat, ps, tr = _janelas()
     casca = menos(casca, *lat, ps, tr, *recortes)
+    if hasattr(SF, 'vazios'): casca = menos(casca, *SF.vazios())     # caçamba da picape
     # portinhola do tanque (lado esquerdo, atras da porta traseira)
     zt, yt_ = SF.Z_BOCAL, 0.80
     rec = prisma_zy(_Pg(_Pt(zt, yt_).buffer(0.075, 16).exterior.coords).intersection(_sbox(zt - 0.09, yt_ - 0.062, zt + 0.09, yt_ + 0.062)), 0.70, 1.2)
@@ -75,7 +76,7 @@ def _carroceria(Vc, recortes=()):
     R = []
     R.append(('capo', SF.regiao_capo(), SF.regiao_capo(_G)))
     R.append(('tampa_porta_malas', SF.regiao_tampa(), SF.regiao_tampa(_G)))
-    for qual, nomes in (('d', ('porta_de', 'porta_dd')), ('t', ('porta_te', 'porta_td'))):
+    for qual, nomes in [q for q in (('d', ('porta_de', 'porta_dd')), ('t', ('porta_te', 'porta_td'))) if q[0] in getattr(SF, 'PORTAS', 'dt')]:
         for lado, no in zip((1, -1), nomes):
             R.append((no, SF.regiao_porta(qual, lado), SF.regiao_porta(qual, lado, _G)))
     for lado, no in ((1, 'paralama_e'), (-1, 'paralama_d')):
@@ -87,7 +88,7 @@ def _carroceria(Vc, recortes=()):
     camada = menos(SF.corpo_cabine(0.006, pontas=0.0), SF.corpo_cabine(0.014, desce=0.03, pontas=-0.01))
     latv, psv, trv = _janelas(0.012)
     Vc.achar('para_brisa')['geo'].add('vidro', inter(camada, psv))
-    Vc.achar('vidro_traseiro')['geo'].add('vidro', inter(camada, trv))
+    Vc.achar('vidro_traseiro')['geo'].add('vidro', SF.vidro_tras_vidro() if hasattr(SF, 'vidro_tras_vidro') else inter(camada, trv))
     for m in latv:
         D.dividir(inter(camada, m), 'vidro', Vc, so=('porta_de', 'porta_dd', 'porta_te', 'porta_td'))
     # espessura das portas e dos batentes: o miolo entre a chapa e x = 0,70 vira batente pintado, com o forro na face de dentro
@@ -96,7 +97,8 @@ def _carroceria(Vc, recortes=()):
         arcos += [cil_x(SF.R_CAIXA + 0.025, 0.48, 1.2, SF.Y_CAIXA, zc, 48), cil_x(SF.R_CAIXA + 0.025, -1.2, -0.48, SF.Y_CAIXA, zc, 48)]
     dentro2 = menos(dentro, *arcos)
     for s in (1, -1):
-        faixa = _cx(0.70, 1.2, 0.0, 2.0, -1.42, 0.72) if s > 0 else _cx(-1.2, -0.70, 0.0, 2.0, -1.42, 0.72)
+        zm = getattr(SF, 'Z_MIOLO', -1.42)
+        faixa = _cx(0.70, 1.2, 0.0, 2.0, zm, 0.72) if s > 0 else _cx(-1.2, -0.70, 0.0, 2.0, zm, 0.72)
         miolo = menos(inter(dentro2, faixa), *lat)
         face = _cx(0.70, 0.713, 0, 2, -3, 3) if s > 0 else _cx(-0.713, -0.70, 0, 2, -3, 3)
         D.dividir(inter(miolo, face), 'forro_porta', Vc, so=('porta_de', 'porta_dd', 'porta_te', 'porta_td'))
@@ -138,12 +140,13 @@ def _partes_carroceria(Vc):
     yb_ = SF.yt(0.70)
     Vc.parte('capo', (0, yb_ - 0.01, 0.70), 'tampa', eixo='x', abre_graus=-68, repouso=(0, 0, 0),
              item=PECA['capo'], peca='capo', **REG['capo'])
-    zd, ab = SF.TAMPA; yd = SF.yt(zd) - 0.01 if zd < SF.ZBL else SF.ytop(zd) - 0.01
+    zd, ab = SF.TAMPA[:2]; yd = SF.TAMPA[2] if len(SF.TAMPA) > 2 else (SF.yt(zd) - 0.01 if zd < SF.ZBL else SF.ytop(zd) - 0.01)
     it = PECA[SF.ITEM_TAMPA] if hasattr(SF, 'ITEM_TAMPA') else PECA['tampa_porta_malas']
     Vc.parte('tampa_porta_malas', (0, yd, zd), 'tampa', eixo='x', abre_graus=ab, item=it, peca=it['id'], **REG['tampa_porta_malas'])
     sx = getattr(SF, 'SUFIXO_TRAS', '')
     for no, z, s, it in (('porta_de', 0.605, 1, 'porta_dianteira_e'), ('porta_dd', 0.605, -1, 'porta_dianteira_d'),
                          ('porta_te', -0.50, 1, 'porta_traseira_e' + sx), ('porta_td', -0.50, -1, 'porta_traseira_d' + sx)):
+        if no[-2] == 't' and 't' not in getattr(SF, 'PORTAS', 'dt'): continue
         Vc.parte(no, (s * 0.80, 0.60, z), 'porta', eixo='y', abre_graus=-66 * s, repouso=(0, 0, 90 * s),
                  item=PECA[it], peca=it, **REG['porta_d' if no[-2] == 'd' else 'porta_t'])
     for no, s, it in (('paralama_e', 1, 'paralama_e'), ('paralama_d', -1, 'paralama_d')):
@@ -151,8 +154,8 @@ def _partes_carroceria(Vc):
     Vc.parte('tampa_combustivel', (SF.x_lado(SF.Z_BOCAL + 0.09, 1.0) - 0.03, 0.80, SF.Z_BOCAL + 0.09), 'tampa', eixo='y', abre_graus=-80, peca=None)
     Vc.parte('para_brisa', (0, 1.0, 0.55), 'peca', repouso=(-62, 0, 0), item=PECA['para_brisa'], peca='para_brisa', **REG['para_brisa'])
     if hasattr(SF, 'VIDRO_TRAS'):     # vidro preso na tampa (hatch): é filho da tampa e abre junto
-        o, rep, iv = SF.VIDRO_TRAS
-        Vc.parte('vidro_traseiro', o, 'peca', pai='tampa_porta_malas', repouso=rep, item=PECA[iv], peca=iv, **REG['vidro_traseiro'])
+        o, rep, iv = SF.VIDRO_TRAS[:3]; pai = SF.VIDRO_TRAS[3] if len(SF.VIDRO_TRAS) > 3 else 'tampa_porta_malas'
+        Vc.parte('vidro_traseiro', o, 'peca', pai=pai, repouso=rep, item=PECA[iv], peca=iv, **REG['vidro_traseiro'])
     else:
         Vc.parte('vidro_traseiro', (0, 1.0, -1.62), 'peca', repouso=(55, 0, 0), item=PECA['vidro_traseiro'], peca='vidro_traseiro', **REG['vidro_traseiro'])
 
@@ -390,7 +393,7 @@ def _recortes():
     r = []
     for s in (1, -1):
         h = _casca_contorno(0.395, 0.775, 0.535, 0.692, 0.06, -0.09); r.append(h if s > 0 else _mx(h))
-        t = _casca_contorno(*SF.LANTERNA, 0.06, -0.08, frente=False); r.append(t if s > 0 else _mx(t))
+        t = _casca_contorno(*SF.LANTERNA, 0.06, -getattr(SF, 'LANTERNA_FUNDO', 0.08), frente=False); r.append(t if s > 0 else _mx(t))
     r.append(_cx(-0.388, 0.388, 0.540, 0.692, 1.98, 2.2))
     return r
 
@@ -879,9 +882,9 @@ def _forro_e_cabine(Vc, dentro):
         g = Vc.achar(no)['geo']
         g.add('forro_teto', _cham(xc - 0.18, xc + 0.18, 1.316, 1.336, -0.40, -0.215, 0.008))
         if xc < 0: g.add('espelho_retrovisor', _cx(xc - 0.07, xc + 0.07, 1.3155, 1.3165, -0.36, -0.27))
-    hatch = getattr(SF, 'HATCH', False)
-    p.add('carpete', inter(dentro, _cx(-0.79, 0.79, 0.0, 0.29, -1.40 if hatch else -1.72, 0.735)))       # carpete do piso
-    if not hatch:
+    tipo = getattr(SF, 'TIPO', 'sedan')
+    p.add('carpete', inter(dentro, _cx(-0.79, 0.79, 0.0, 0.29, getattr(SF, 'Z_PISO_TRAS', -1.72), 0.735)))   # carpete do piso
+    if tipo == 'sedan':
         p.add('chassi', inter(dentro, _cx(-0.79, 0.79, 0.478, 0.955, -1.745, -1.72)))                      # parede atrás do banco
         p.add('carpete', inter(dentro, _cx(-0.79, 0.79, 0.935, 0.955, -1.72, -1.46)))                      # tampão traseiro
         for x in (-0.45, 0.45):

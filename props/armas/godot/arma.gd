@@ -67,6 +67,10 @@ func por_acessorio(no: String, acessorio_id: String) -> bool:
 		var ok: bool = (instalados.get(k, "") in r) if r is Array else (instalados.get(k, "") == r)
 		if acessorio_id != "" and not ok:
 			return false
+	if acessorio_id != "":
+		for k in e.get("exclui", []):   # ex.: ponte de mira da pistola e mira no ferrolho ocupam o mesmo lugar
+			if instalados.has(k):
+				por_acessorio(k, "")
 	var alvo: Node3D = modelo.find_child(no, true, false)
 	for c in alvo.get_children():
 		c.queue_free()
@@ -107,7 +111,7 @@ func _rebater_miras() -> void:
 ## Ponto de onde a câmera de 1ª pessoa mira: o "olho" da mira/luneta acoplada ou, sem ela, o furo da alça ("mira_ferro").
 func linha_de_visada() -> Node3D:
 	for e in dados.get("encaixes", []):
-		if e["no"] == "encaixe_mira" and instalados.has(e["no"]):
+		if e["no"] in ["encaixe_mira", "encaixe_ponte"] and instalados.has(e["no"]):
 			var olho := modelo.find_child(e["no"], true, false).find_child("olho", true, false)
 			if olho:
 				return olho

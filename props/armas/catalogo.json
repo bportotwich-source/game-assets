@@ -46,15 +46,15 @@
     "posto",
     "casas"
    ],
-   "descricao": "Pistola de polímero com ferrolho de aço, 15 tiros. Leve e confiável, mas o tiro chama zumbis num raio de 60 m.",
+   "descricao": "Pistola de polímero com ferrolho de aço quadrado e punho com cavas e pontilhado, 15 tiros. Leve e confiável, mas o tiro chama zumbis num raio de 60 m.",
    "arquivo": "armas/pistola_9mm.glb",
    "tamanho_m": [
     0.032,
-    0.154,
+    0.155,
     0.233
    ],
-   "triangulos": 32020,
-   "kb": 1777.2,
+   "triangulos": 32846,
+   "kb": 1831.3,
    "partes": [
     {
      "no": "gatilho",
@@ -125,9 +125,36 @@
      "aceita": [
       "mira_ponto_vermelho_compacta"
      ],
+     "exclui": [
+      "encaixe_ponte"
+     ],
+     "descricao": "mira no rebaixo do ferrolho (anda com ele); tira a ponte de mira se houver",
      "explodir_m": [
       0.0,
       0.04,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_ponte",
+     "tipo": "ponte_pistola",
+     "pai": "pistola_9mm",
+     "posicao_m": [
+      0.0,
+      0.046,
+      -0.134
+     ],
+     "aceita": [
+      "ponte_mira_pistola",
+      "ponte_mira_pistola_tan"
+     ],
+     "exclui": [
+      "encaixe_mira"
+     ],
+     "descricao": "ponte presa na armação que passa por cima do ferrolho com a mira de ponto (não anda com o ferrolho)",
+     "explodir_m": [
+      0.0,
+      0.06,
       0.0
      ]
     },
@@ -143,6 +170,9 @@
      "aceita": [
       "protetor_rosca_9mm",
       "supressor_9mm",
+      "supressor_9mm_tan",
+      "supressor_9mm_verde",
+      "supressor_9mm_cinza",
       "compensador_9mm",
       "supressor_garrafa"
      ],
@@ -1675,8 +1705,19 @@
     0.616
    ],
    "triangulos": 43284,
-   "kb": 2260.1,
+   "kb": 2260.2,
    "partes": [
+    {
+     "no": "punho",
+     "tipo": "troca",
+     "descricao": "punho de pistola (troca pelo encaixe_punho)",
+     "pai": "fuzil_556",
+     "explodir_m": [
+      -0.0,
+      -0.06,
+      0.02
+     ]
+    },
     {
      "no": "gatilho",
      "tipo": "gira",
@@ -1773,6 +1814,31 @@
     }
    ],
    "encaixes": [
+    {
+     "no": "encaixe_punho",
+     "tipo": "punho_ar",
+     "pai": "punho",
+     "posicao_m": [
+      0.0,
+      0.048,
+      -0.017
+     ],
+     "substitui": "punho",
+     "aceita": [
+      "punho_ar",
+      "punho_ar_tan",
+      "punho_cavas",
+      "punho_cavas_tan",
+      "punho_reto",
+      "punho_reto_tan"
+     ],
+     "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
+     "explodir_m": [
+      -0.0,
+      -0.08,
+      0.02
+     ]
+    },
     {
      "no": "encaixe_mira",
      "tipo": "trilho_mira",
@@ -1923,7 +1989,8 @@
       "empunhadura_cilindrica",
       "batente_mao",
       "empunhadura_reta",
-      "empunhadura_reta_tan"
+      "empunhadura_reta_tan",
+      "empunhadura_dobravel"
      ],
      "explodir_m": [
       0.0,
@@ -1961,7 +2028,8 @@
      ],
      "aceita": [
       "laser_fuzil",
-      "modulo_laser"
+      "modulo_laser",
+      "modulo_laser_tan"
      ],
      "descricao": "lado esquerdo do guarda-mão (a lanterna fica no direito)",
      "explodir_m": [
@@ -2118,8 +2186,19 @@
     0.616
    ],
    "triangulos": 43284,
-   "kb": 2260.9,
+   "kb": 2261.1,
    "partes": [
+    {
+     "no": "punho",
+     "tipo": "troca",
+     "descricao": "punho de pistola (troca pelo encaixe_punho)",
+     "pai": "fuzil_556_bicolor",
+     "explodir_m": [
+      -0.0,
+      -0.06,
+      0.02
+     ]
+    },
     {
      "no": "gatilho",
      "tipo": "gira",
@@ -2216,6 +2295,31 @@
     }
    ],
    "encaixes": [
+    {
+     "no": "encaixe_punho",
+     "tipo": "punho_ar",
+     "pai": "punho",
+     "posicao_m": [
+      0.0,
+      0.048,
+      -0.017
+     ],
+     "substitui": "punho",
+     "aceita": [
+      "punho_ar",
+      "punho_ar_tan",
+      "punho_cavas",
+      "punho_cavas_tan",
+      "punho_reto",
+      "punho_reto_tan"
+     ],
+     "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
+     "explodir_m": [
+      -0.0,
+      -0.08,
+      0.02
+     ]
+    },
     {
      "no": "encaixe_mira",
      "tipo": "trilho_mira",
@@ -2367,7 +2471,8 @@
       "empunhadura_cilindrica",
       "batente_mao",
       "empunhadura_reta",
-      "empunhadura_reta_tan"
+      "empunhadura_reta_tan",
+      "empunhadura_dobravel"
      ],
      "padrao": "empunhadura_curta_tan",
      "explodir_m": [
@@ -2407,7 +2512,8 @@
      ],
      "aceita": [
       "laser_fuzil",
-      "modulo_laser"
+      "modulo_laser",
+      "modulo_laser_tan"
      ],
      "descricao": "lado esquerdo do guarda-mão (a lanterna fica no direito)",
      "explodir_m": [
@@ -3447,6 +3553,1641 @@
      "descricao": "respiração leve parado"
     }
    }
+  },
+  {
+   "id": "smg_9mm",
+   "nome": "Submetralhadora Faísca 9 mm",
+   "grupo": "armas",
+   "categoria": "submetralhadora",
+   "classe": "fogo",
+   "calibre": "9 mm",
+   "municao": "municao_9mm",
+   "capacidade": 30,
+   "dano": 28,
+   "alcance_m": 40,
+   "alcance_max_m": 150,
+   "modo": "semiautomático e automático (seletor)",
+   "tiros_por_s": 14,
+   "recarga_s": 1.9,
+   "recarga_vazia_s": 2.4,
+   "precisao": 0.62,
+   "recuo": 0.22,
+   "ruido_m": 120,
+   "durabilidade": 5000,
+   "peso_kg": 1.9,
+   "raridade": "muito raro",
+   "valor_troca": 150,
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "estojo_s": 0.02,
+   "descricao": "Arma curta de polímero com o carregador dentro do punho e coronha de varetas que encolhe. Cabe numa mochila, atira rápido e usa a mesma munição da pistola: ótima para limpar corredores.",
+   "arquivo": "armas/smg_9mm.glb",
+   "tamanho_m": [
+    0.055,
+    0.212,
+    0.33
+   ],
+   "triangulos": 34146,
+   "kb": 1800.1,
+   "partes": [
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -12,
+     "descricao": "puxa para trás",
+     "pai": "smg_9mm",
+     "explodir_m": [
+      0.0,
+      -0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "seletor",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -90,
+     "descricao": "seletor dos dois lados: trava (0°), semi (-45°), automático (-90°)",
+     "pai": "smg_9mm",
+     "explodir_m": [
+      0.04,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": -0.035,
+     "descricao": "ferrolho visto pela janela da direita",
+     "pai": "smg_9mm",
+     "explodir_m": [
+      0.05,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "alavanca",
+     "tipo": "desliza",
+     "curso_m": -0.045,
+     "descricao": "alavanca de manejo em T (puxa para trás)",
+     "pai": "smg_9mm",
+     "explodir_m": [
+      -0.0,
+      0.03,
+      0.05
+     ]
+    },
+    {
+     "no": "coronha",
+     "tipo": "desliza",
+     "curso_m": -0.13,
+     "descricao": "coronha de varetas: fechada (0) ou aberta (-130 mm)",
+     "pai": "smg_9mm",
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.08
+     ]
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      -0.13917310096006544,
+      -0.9902680687415704,
+      0.0
+     ],
+     "municao": "municao_9mm",
+     "capacidade": 30,
+     "descricao": "carregador de 30 que entra pelo punho",
+     "pai": "smg_9mm",
+     "explodir_m": [
+      0.0,
+      -0.12,
+      0.0
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_mira",
+     "tipo": "trilho_mira",
+     "pai": "smg_9mm",
+     "posicao_m": [
+      0.0,
+      0.1115,
+      -0.045
+     ],
+     "aceita": [
+      "mira_holografica",
+      "mira_reflexa",
+      "mira_ponto_vermelho_tubo"
+     ],
+     "descricao": "trilho de cima",
+     "explodir_m": [
+      0.0,
+      0.07,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_alca",
+     "tipo": "alca_trilho",
+     "pai": "smg_9mm",
+     "posicao_m": [
+      -0.0,
+      0.1115,
+      0.074
+     ],
+     "aceita": [
+      "alca_rebativel",
+      "alca_polimero",
+      "alca_polimero_tan"
+     ],
+     "padrao": "alca_rebativel",
+     "rebate_com": "encaixe_mira",
+     "descricao": "deita (animação \"dobrar\" do acessório) quando há mira no encaixe_mira",
+     "explodir_m": [
+      -0.0,
+      0.05,
+      0.02
+     ]
+    },
+    {
+     "no": "encaixe_massa",
+     "tipo": "massa_trilho",
+     "pai": "smg_9mm",
+     "posicao_m": [
+      0.0,
+      0.1115,
+      -0.158
+     ],
+     "aceita": [
+      "massa_rebativel",
+      "massa_polimero",
+      "massa_polimero_tan"
+     ],
+     "padrao": "massa_rebativel",
+     "rebate_com": "encaixe_mira",
+     "descricao": "deita (animação \"dobrar\" do acessório) quando há mira no encaixe_mira",
+     "explodir_m": [
+      0.0,
+      0.05,
+      -0.02
+     ]
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_rosca_9mm",
+     "pai": "smg_9mm",
+     "posicao_m": [
+      0.0,
+      0.08,
+      -0.213
+     ],
+     "aceita": [
+      "protetor_rosca_9mm",
+      "supressor_9mm",
+      "compensador_9mm",
+      "supressor_garrafa"
+     ],
+     "padrao": "protetor_rosca_9mm",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.06
+     ]
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_smg",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.054,
+      -0.011
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_smg_20",
+      "carregador_smg_30",
+      "carregador_smg_40"
+     ],
+     "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda o original"
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "smg_9mm",
+     "posicao_m": [
+      0.0,
+      0.0505,
+      -0.148
+     ],
+     "aceita": [
+      "empunhadura_dobravel",
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "batente_mao"
+     ],
+     "padrao": "empunhadura_dobravel",
+     "descricao": "trilho curto de baixo",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "smg_9mm",
+     "posicao_m": [
+      0.025,
+      0.079,
+      -0.15
+     ],
+     "aceita": [
+      "lanterna_compacta",
+      "lanterna_fuzil"
+     ],
+     "descricao": "trilho curto da direita",
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "smg_9mm",
+     "posicao_m": [
+      -0.0195,
+      0.079,
+      -0.13
+     ],
+     "aceita": [
+      "modulo_laser",
+      "modulo_laser_tan",
+      "laser_fuzil"
+     ],
+     "descricao": "lado esquerdo da frente",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_bandoleira",
+     "tipo": "bandoleira",
+     "pai": "smg_9mm",
+     "posicao_m": [
+      -0.0235,
+      0.068,
+      0.084
+     ],
+     "aceita": [
+      "bandoleira"
+     ],
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "ombro",
+     "tipo": "efeito",
+     "pai": "coronha",
+     "posicao_m": [
+      -0.0,
+      0.05,
+      0.116
+     ],
+     "descricao": "ponto da soleira que encosta no ombro"
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "smg_9mm",
+     "posicao_m": [
+      0.0,
+      0.08,
+      -0.213
+     ],
+     "descricao": "clarão de boca e origem do disparo (-Z)"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "smg_9mm",
+     "posicao_m": [
+      0.0215,
+      0.09,
+      -0.03
+     ],
+     "descricao": "onde nasce o estojo (sai para a direita)"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "smg_9mm",
+     "posicao_m": [
+      -0.0,
+      0.131,
+      0.074
+     ],
+     "descricao": "centro do furo da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z)"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.07,
+     "laco": false,
+     "descricao": "um tiro (repita a 14 por segundo no automático): ferrolho recua 35 mm, coice leve"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.07,
+     "laco": false,
+     "descricao": "último tiro: o ferrolho fica aberto atrás"
+    },
+    "recarregar": {
+     "duracao_s": 1.9,
+     "laco": false,
+     "descricao": "aperta o retém, o carregador cai pelo punho (0,5 s) e o novo entra (1,55 s); troque o nó entre 0,5 e 1,2 s"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 2.4,
+     "laco": false,
+     "descricao": "igual à recarga e no fim puxa a alavanca em T para soltar o ferrolho"
+    },
+    "trocar_modo": {
+     "duracao_s": 0.4,
+     "laco": false,
+     "descricao": "trava -> semi -> automático"
+    },
+    "estender": {
+     "duracao_s": 0.4,
+     "laco": false,
+     "descricao": "abre a coronha (aperte a trava atrás)"
+    },
+    "recolher": {
+     "duracao_s": 0.4,
+     "laco": false,
+     "descricao": "fecha a coronha"
+    },
+    "inspecionar": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "puxa a alavanca até ver o cartucho pela janela, solta e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "smg_9mm_tan",
+   "nome": "Submetralhadora Faísca 9 mm caramelo",
+   "grupo": "armas",
+   "categoria": "submetralhadora",
+   "classe": "fogo",
+   "calibre": "9 mm",
+   "municao": "municao_9mm",
+   "capacidade": 30,
+   "dano": 28,
+   "alcance_m": 40,
+   "alcance_max_m": 150,
+   "modo": "semiautomático e automático (seletor)",
+   "tiros_por_s": 14,
+   "recarga_s": 1.9,
+   "recarga_vazia_s": 2.4,
+   "precisao": 0.62,
+   "recuo": 0.22,
+   "ruido_m": 120,
+   "durabilidade": 5000,
+   "peso_kg": 1.9,
+   "raridade": "muito raro",
+   "valor_troca": 160,
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "estojo_s": 0.02,
+   "descricao": "A mesma submetralhadora com corpo, punho e coronha caramelo; carregador e trilhos pretos.",
+   "arquivo": "armas/smg_9mm_tan.glb",
+   "tamanho_m": [
+    0.055,
+    0.212,
+    0.33
+   ],
+   "triangulos": 34146,
+   "kb": 1800.7,
+   "partes": [
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -12,
+     "descricao": "puxa para trás",
+     "pai": "smg_9mm_tan",
+     "explodir_m": [
+      0.0,
+      -0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "seletor",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -90,
+     "descricao": "seletor dos dois lados: trava (0°), semi (-45°), automático (-90°)",
+     "pai": "smg_9mm_tan",
+     "explodir_m": [
+      0.04,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": -0.035,
+     "descricao": "ferrolho visto pela janela da direita",
+     "pai": "smg_9mm_tan",
+     "explodir_m": [
+      0.05,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "alavanca",
+     "tipo": "desliza",
+     "curso_m": -0.045,
+     "descricao": "alavanca de manejo em T (puxa para trás)",
+     "pai": "smg_9mm_tan",
+     "explodir_m": [
+      -0.0,
+      0.03,
+      0.05
+     ]
+    },
+    {
+     "no": "coronha",
+     "tipo": "desliza",
+     "curso_m": -0.13,
+     "descricao": "coronha de varetas: fechada (0) ou aberta (-130 mm)",
+     "pai": "smg_9mm_tan",
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.08
+     ]
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      -0.13917310096006544,
+      -0.9902680687415704,
+      0.0
+     ],
+     "municao": "municao_9mm",
+     "capacidade": 30,
+     "descricao": "carregador de 30 que entra pelo punho",
+     "pai": "smg_9mm_tan",
+     "explodir_m": [
+      0.0,
+      -0.12,
+      0.0
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_mira",
+     "tipo": "trilho_mira",
+     "pai": "smg_9mm_tan",
+     "posicao_m": [
+      0.0,
+      0.1115,
+      -0.045
+     ],
+     "aceita": [
+      "mira_holografica",
+      "mira_reflexa",
+      "mira_ponto_vermelho_tubo"
+     ],
+     "descricao": "trilho de cima",
+     "explodir_m": [
+      0.0,
+      0.07,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_alca",
+     "tipo": "alca_trilho",
+     "pai": "smg_9mm_tan",
+     "posicao_m": [
+      -0.0,
+      0.1115,
+      0.074
+     ],
+     "aceita": [
+      "alca_rebativel",
+      "alca_polimero",
+      "alca_polimero_tan"
+     ],
+     "padrao": "alca_rebativel",
+     "rebate_com": "encaixe_mira",
+     "descricao": "deita (animação \"dobrar\" do acessório) quando há mira no encaixe_mira",
+     "explodir_m": [
+      -0.0,
+      0.05,
+      0.02
+     ]
+    },
+    {
+     "no": "encaixe_massa",
+     "tipo": "massa_trilho",
+     "pai": "smg_9mm_tan",
+     "posicao_m": [
+      0.0,
+      0.1115,
+      -0.158
+     ],
+     "aceita": [
+      "massa_rebativel",
+      "massa_polimero",
+      "massa_polimero_tan"
+     ],
+     "padrao": "massa_rebativel",
+     "rebate_com": "encaixe_mira",
+     "descricao": "deita (animação \"dobrar\" do acessório) quando há mira no encaixe_mira",
+     "explodir_m": [
+      0.0,
+      0.05,
+      -0.02
+     ]
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_rosca_9mm",
+     "pai": "smg_9mm_tan",
+     "posicao_m": [
+      0.0,
+      0.08,
+      -0.213
+     ],
+     "aceita": [
+      "protetor_rosca_9mm",
+      "supressor_9mm",
+      "compensador_9mm",
+      "supressor_garrafa"
+     ],
+     "padrao": "protetor_rosca_9mm",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.06
+     ]
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_smg",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.054,
+      -0.011
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_smg_20",
+      "carregador_smg_30",
+      "carregador_smg_40"
+     ],
+     "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda o original"
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "smg_9mm_tan",
+     "posicao_m": [
+      0.0,
+      0.0505,
+      -0.148
+     ],
+     "aceita": [
+      "empunhadura_dobravel",
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "batente_mao"
+     ],
+     "padrao": "empunhadura_dobravel",
+     "descricao": "trilho curto de baixo",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "smg_9mm_tan",
+     "posicao_m": [
+      0.025,
+      0.079,
+      -0.15
+     ],
+     "aceita": [
+      "lanterna_compacta",
+      "lanterna_fuzil"
+     ],
+     "descricao": "trilho curto da direita",
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "smg_9mm_tan",
+     "posicao_m": [
+      -0.0195,
+      0.079,
+      -0.13
+     ],
+     "aceita": [
+      "modulo_laser",
+      "modulo_laser_tan",
+      "laser_fuzil"
+     ],
+     "descricao": "lado esquerdo da frente",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_bandoleira",
+     "tipo": "bandoleira",
+     "pai": "smg_9mm_tan",
+     "posicao_m": [
+      -0.0235,
+      0.068,
+      0.084
+     ],
+     "aceita": [
+      "bandoleira"
+     ],
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "ombro",
+     "tipo": "efeito",
+     "pai": "coronha",
+     "posicao_m": [
+      -0.0,
+      0.05,
+      0.116
+     ],
+     "descricao": "ponto da soleira que encosta no ombro"
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "smg_9mm_tan",
+     "posicao_m": [
+      0.0,
+      0.08,
+      -0.213
+     ],
+     "descricao": "clarão de boca e origem do disparo (-Z)"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "smg_9mm_tan",
+     "posicao_m": [
+      0.0215,
+      0.09,
+      -0.03
+     ],
+     "descricao": "onde nasce o estojo (sai para a direita)"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "smg_9mm_tan",
+     "posicao_m": [
+      -0.0,
+      0.131,
+      0.074
+     ],
+     "descricao": "centro do furo da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z)"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.07,
+     "laco": false,
+     "descricao": "um tiro (repita a 14 por segundo no automático): ferrolho recua 35 mm, coice leve"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.07,
+     "laco": false,
+     "descricao": "último tiro: o ferrolho fica aberto atrás"
+    },
+    "recarregar": {
+     "duracao_s": 1.9,
+     "laco": false,
+     "descricao": "aperta o retém, o carregador cai pelo punho (0,5 s) e o novo entra (1,55 s); troque o nó entre 0,5 e 1,2 s"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 2.4,
+     "laco": false,
+     "descricao": "igual à recarga e no fim puxa a alavanca em T para soltar o ferrolho"
+    },
+    "trocar_modo": {
+     "duracao_s": 0.4,
+     "laco": false,
+     "descricao": "trava -> semi -> automático"
+    },
+    "estender": {
+     "duracao_s": 0.4,
+     "laco": false,
+     "descricao": "abre a coronha (aperte a trava atrás)"
+    },
+    "recolher": {
+     "duracao_s": 0.4,
+     "laco": false,
+     "descricao": "fecha a coronha"
+    },
+    "inspecionar": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "puxa a alavanca até ver o cartucho pela janela, solta e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "pistola_9mm_tan",
+   "nome": "Pistola Sentinela 9 mm (areia)",
+   "grupo": "armas",
+   "categoria": "pistola",
+   "classe": "fogo",
+   "calibre": "9 mm",
+   "municao": "municao_9mm",
+   "capacidade": 15,
+   "dano": 34,
+   "alcance_m": 25,
+   "alcance_max_m": 50,
+   "modo": "semiautomático",
+   "tiros_por_s": 4.0,
+   "recarga_s": 1.6,
+   "recarga_vazia_s": 2.1,
+   "precisao": 0.72,
+   "recuo": 0.3,
+   "ruido_m": 60,
+   "durabilidade": 600,
+   "peso_kg": 0.78,
+   "raridade": "incomum",
+   "valor_troca": 40,
+   "onde": [
+    "quartel",
+    "correios",
+    "motel",
+    "posto",
+    "casas"
+   ],
+   "descricao": "A mesma Sentinela com armação areia, ferrolho preto e cano dourado. Aceita os mesmos acessórios.",
+   "arquivo": "armas/pistola_9mm_tan.glb",
+   "tamanho_m": [
+    0.032,
+    0.155,
+    0.233
+   ],
+   "triangulos": 32846,
+   "kb": 1835.0,
+   "partes": [
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": -14,
+     "descricao": "puxa para tras ao atirar",
+     "pai": "pistola_9mm_tan",
+     "explodir_m": [
+      0.0,
+      -0.03,
+      -0.05
+     ]
+    },
+    {
+     "no": "cano",
+     "tipo": "desliza",
+     "curso_m": 0.004,
+     "descricao": "recua 4 mm com o ferrolho",
+     "pai": "pistola_9mm_tan",
+     "explodir_m": [
+      0.0,
+      0.07,
+      -0.06
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": 0.032,
+     "descricao": "recua 32 mm ao atirar; fica travado atrás com o carregador vazio",
+     "pai": "pistola_9mm_tan",
+     "explodir_m": [
+      -0.0,
+      0.035,
+      0.04
+     ]
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      -0.0,
+      -0.956,
+      0.292
+     ],
+     "municao": "municao_9mm",
+     "capacidade": 15,
+     "descricao": "sai pelo fundo do punho ao recarregar",
+     "pai": "pistola_9mm_tan",
+     "explodir_m": [
+      -0.0,
+      -0.07,
+      0.02
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_mira",
+     "tipo": "mira_ferrolho",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0,
+      0.0851,
+      -0.036
+     ],
+     "aceita": [
+      "mira_ponto_vermelho_compacta"
+     ],
+     "exclui": [
+      "encaixe_ponte"
+     ],
+     "descricao": "mira no rebaixo do ferrolho (anda com ele); tira a ponte de mira se houver",
+     "explodir_m": [
+      0.0,
+      0.04,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_ponte",
+     "tipo": "ponte_pistola",
+     "pai": "pistola_9mm_tan",
+     "posicao_m": [
+      0.0,
+      0.046,
+      -0.134
+     ],
+     "aceita": [
+      "ponte_mira_pistola",
+      "ponte_mira_pistola_tan"
+     ],
+     "exclui": [
+      "encaixe_mira"
+     ],
+     "descricao": "ponte presa na armação que passa por cima do ferrolho com a mira de ponto (não anda com o ferrolho)",
+     "explodir_m": [
+      0.0,
+      0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_rosca_9mm",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.1922
+     ],
+     "aceita": [
+      "protetor_rosca_9mm",
+      "supressor_9mm",
+      "supressor_9mm_tan",
+      "supressor_9mm_verde",
+      "supressor_9mm_cinza",
+      "compensador_9mm",
+      "supressor_garrafa"
+     ],
+     "padrao": "protetor_rosca_9mm",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.06
+     ]
+    },
+    {
+     "no": "encaixe_trilho",
+     "tipo": "trilho_curto",
+     "pai": "pistola_9mm_tan",
+     "posicao_m": [
+      0.0,
+      0.0325,
+      -0.135
+     ],
+     "aceita": [
+      "lanterna_pistola",
+      "laser_pistola",
+      "combo_lanterna_laser"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.05,
+      -0.02
+     ]
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_9mm",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.052,
+      -0.0155
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_9mm",
+      "carregador_9mm_estendido"
+     ],
+     "descricao": "filho do nó carregador (anda com a recarga); ao pôr um carregador aqui, esconda as malhas próprias do nó carregador"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "pistola_9mm_tan",
+     "posicao_m": [
+      0.012,
+      0.08,
+      -0.086
+     ],
+     "descricao": "onde nasce o estojo ejetado (vai para +X e para cima)"
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.1932
+     ],
+     "descricao": "clarão de boca e origem do disparo (raycast para -Z)"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0,
+      0.0895,
+      -0.005
+     ],
+     "descricao": "linha de visada: alça -> massa"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.14,
+     "laco": false,
+     "descricao": "um disparo: gatilho, recuo do ferrolho e do cano, coice da arma (soltar estojo em saida_estojo aos 0,04 s)"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.14,
+     "laco": false,
+     "descricao": "último tiro: o ferrolho fica travado atrás"
+    },
+    "vazia": {
+     "duracao_s": 0.1,
+     "laco": true,
+     "descricao": "pose parada: ferrolho travado atrás, carregador vazio"
+    },
+    "recarregar": {
+     "duracao_s": 1.6,
+     "laco": false,
+     "descricao": "troca tática: solta o carregador (0,3 s), carregador novo entra (1,2 s); trocar o nó carregador entre 0,5 e 0,9 s"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 2.1,
+     "laco": false,
+     "descricao": "recarga com a arma vazia: troca o carregador e solta o ferrolho (1,5 s)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "gira a arma, puxa o ferrolho até ver o cartucho na câmara e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "pistola_9mm_verde",
+   "nome": "Pistola Sentinela 9 mm (verde-oliva)",
+   "grupo": "armas",
+   "categoria": "pistola",
+   "classe": "fogo",
+   "calibre": "9 mm",
+   "municao": "municao_9mm",
+   "capacidade": 15,
+   "dano": 34,
+   "alcance_m": 25,
+   "alcance_max_m": 50,
+   "modo": "semiautomático",
+   "tiros_por_s": 4.0,
+   "recarga_s": 1.6,
+   "recarga_vazia_s": 2.1,
+   "precisao": 0.72,
+   "recuo": 0.3,
+   "ruido_m": 60,
+   "durabilidade": 600,
+   "peso_kg": 0.78,
+   "raridade": "incomum",
+   "valor_troca": 40,
+   "onde": [
+    "quartel",
+    "correios",
+    "motel",
+    "posto",
+    "casas"
+   ],
+   "descricao": "A mesma Sentinela com armação verde-oliva, ferrolho preto e cano dourado. Aceita os mesmos acessórios.",
+   "arquivo": "armas/pistola_9mm_verde.glb",
+   "tamanho_m": [
+    0.032,
+    0.155,
+    0.233
+   ],
+   "triangulos": 32846,
+   "kb": 1833.7,
+   "partes": [
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": -14,
+     "descricao": "puxa para tras ao atirar",
+     "pai": "pistola_9mm_verde",
+     "explodir_m": [
+      0.0,
+      -0.03,
+      -0.05
+     ]
+    },
+    {
+     "no": "cano",
+     "tipo": "desliza",
+     "curso_m": 0.004,
+     "descricao": "recua 4 mm com o ferrolho",
+     "pai": "pistola_9mm_verde",
+     "explodir_m": [
+      0.0,
+      0.07,
+      -0.06
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": 0.032,
+     "descricao": "recua 32 mm ao atirar; fica travado atrás com o carregador vazio",
+     "pai": "pistola_9mm_verde",
+     "explodir_m": [
+      -0.0,
+      0.035,
+      0.04
+     ]
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      -0.0,
+      -0.956,
+      0.292
+     ],
+     "municao": "municao_9mm",
+     "capacidade": 15,
+     "descricao": "sai pelo fundo do punho ao recarregar",
+     "pai": "pistola_9mm_verde",
+     "explodir_m": [
+      -0.0,
+      -0.07,
+      0.02
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_mira",
+     "tipo": "mira_ferrolho",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0,
+      0.0851,
+      -0.036
+     ],
+     "aceita": [
+      "mira_ponto_vermelho_compacta"
+     ],
+     "exclui": [
+      "encaixe_ponte"
+     ],
+     "descricao": "mira no rebaixo do ferrolho (anda com ele); tira a ponte de mira se houver",
+     "explodir_m": [
+      0.0,
+      0.04,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_ponte",
+     "tipo": "ponte_pistola",
+     "pai": "pistola_9mm_verde",
+     "posicao_m": [
+      0.0,
+      0.046,
+      -0.134
+     ],
+     "aceita": [
+      "ponte_mira_pistola",
+      "ponte_mira_pistola_tan"
+     ],
+     "exclui": [
+      "encaixe_mira"
+     ],
+     "descricao": "ponte presa na armação que passa por cima do ferrolho com a mira de ponto (não anda com o ferrolho)",
+     "explodir_m": [
+      0.0,
+      0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_rosca_9mm",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.1922
+     ],
+     "aceita": [
+      "protetor_rosca_9mm",
+      "supressor_9mm",
+      "supressor_9mm_tan",
+      "supressor_9mm_verde",
+      "supressor_9mm_cinza",
+      "compensador_9mm",
+      "supressor_garrafa"
+     ],
+     "padrao": "protetor_rosca_9mm",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.06
+     ]
+    },
+    {
+     "no": "encaixe_trilho",
+     "tipo": "trilho_curto",
+     "pai": "pistola_9mm_verde",
+     "posicao_m": [
+      0.0,
+      0.0325,
+      -0.135
+     ],
+     "aceita": [
+      "lanterna_pistola",
+      "laser_pistola",
+      "combo_lanterna_laser"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.05,
+      -0.02
+     ]
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_9mm",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.052,
+      -0.0155
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_9mm",
+      "carregador_9mm_estendido"
+     ],
+     "descricao": "filho do nó carregador (anda com a recarga); ao pôr um carregador aqui, esconda as malhas próprias do nó carregador"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "pistola_9mm_verde",
+     "posicao_m": [
+      0.012,
+      0.08,
+      -0.086
+     ],
+     "descricao": "onde nasce o estojo ejetado (vai para +X e para cima)"
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.1932
+     ],
+     "descricao": "clarão de boca e origem do disparo (raycast para -Z)"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0,
+      0.0895,
+      -0.005
+     ],
+     "descricao": "linha de visada: alça -> massa"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.14,
+     "laco": false,
+     "descricao": "um disparo: gatilho, recuo do ferrolho e do cano, coice da arma (soltar estojo em saida_estojo aos 0,04 s)"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.14,
+     "laco": false,
+     "descricao": "último tiro: o ferrolho fica travado atrás"
+    },
+    "vazia": {
+     "duracao_s": 0.1,
+     "laco": true,
+     "descricao": "pose parada: ferrolho travado atrás, carregador vazio"
+    },
+    "recarregar": {
+     "duracao_s": 1.6,
+     "laco": false,
+     "descricao": "troca tática: solta o carregador (0,3 s), carregador novo entra (1,2 s); trocar o nó carregador entre 0,5 e 0,9 s"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 2.1,
+     "laco": false,
+     "descricao": "recarga com a arma vazia: troca o carregador e solta o ferrolho (1,5 s)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "gira a arma, puxa o ferrolho até ver o cartucho na câmara e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "pistola_9mm_cinza",
+   "nome": "Pistola Sentinela 9 mm (cinza)",
+   "grupo": "armas",
+   "categoria": "pistola",
+   "classe": "fogo",
+   "calibre": "9 mm",
+   "municao": "municao_9mm",
+   "capacidade": 15,
+   "dano": 34,
+   "alcance_m": 25,
+   "alcance_max_m": 50,
+   "modo": "semiautomático",
+   "tiros_por_s": 4.0,
+   "recarga_s": 1.6,
+   "recarga_vazia_s": 2.1,
+   "precisao": 0.72,
+   "recuo": 0.3,
+   "ruido_m": 60,
+   "durabilidade": 600,
+   "peso_kg": 0.78,
+   "raridade": "incomum",
+   "valor_troca": 40,
+   "onde": [
+    "quartel",
+    "correios",
+    "motel",
+    "posto",
+    "casas"
+   ],
+   "descricao": "A mesma Sentinela com armação cinza, ferrolho preto e cano dourado. Aceita os mesmos acessórios.",
+   "arquivo": "armas/pistola_9mm_cinza.glb",
+   "tamanho_m": [
+    0.032,
+    0.155,
+    0.233
+   ],
+   "triangulos": 32846,
+   "kb": 1835.7,
+   "partes": [
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": -14,
+     "descricao": "puxa para tras ao atirar",
+     "pai": "pistola_9mm_cinza",
+     "explodir_m": [
+      0.0,
+      -0.03,
+      -0.05
+     ]
+    },
+    {
+     "no": "cano",
+     "tipo": "desliza",
+     "curso_m": 0.004,
+     "descricao": "recua 4 mm com o ferrolho",
+     "pai": "pistola_9mm_cinza",
+     "explodir_m": [
+      0.0,
+      0.07,
+      -0.06
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": 0.032,
+     "descricao": "recua 32 mm ao atirar; fica travado atrás com o carregador vazio",
+     "pai": "pistola_9mm_cinza",
+     "explodir_m": [
+      -0.0,
+      0.035,
+      0.04
+     ]
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      -0.0,
+      -0.956,
+      0.292
+     ],
+     "municao": "municao_9mm",
+     "capacidade": 15,
+     "descricao": "sai pelo fundo do punho ao recarregar",
+     "pai": "pistola_9mm_cinza",
+     "explodir_m": [
+      -0.0,
+      -0.07,
+      0.02
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_mira",
+     "tipo": "mira_ferrolho",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0,
+      0.0851,
+      -0.036
+     ],
+     "aceita": [
+      "mira_ponto_vermelho_compacta"
+     ],
+     "exclui": [
+      "encaixe_ponte"
+     ],
+     "descricao": "mira no rebaixo do ferrolho (anda com ele); tira a ponte de mira se houver",
+     "explodir_m": [
+      0.0,
+      0.04,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_ponte",
+     "tipo": "ponte_pistola",
+     "pai": "pistola_9mm_cinza",
+     "posicao_m": [
+      0.0,
+      0.046,
+      -0.134
+     ],
+     "aceita": [
+      "ponte_mira_pistola",
+      "ponte_mira_pistola_tan"
+     ],
+     "exclui": [
+      "encaixe_mira"
+     ],
+     "descricao": "ponte presa na armação que passa por cima do ferrolho com a mira de ponto (não anda com o ferrolho)",
+     "explodir_m": [
+      0.0,
+      0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_rosca_9mm",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.1922
+     ],
+     "aceita": [
+      "protetor_rosca_9mm",
+      "supressor_9mm",
+      "supressor_9mm_tan",
+      "supressor_9mm_verde",
+      "supressor_9mm_cinza",
+      "compensador_9mm",
+      "supressor_garrafa"
+     ],
+     "padrao": "protetor_rosca_9mm",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.06
+     ]
+    },
+    {
+     "no": "encaixe_trilho",
+     "tipo": "trilho_curto",
+     "pai": "pistola_9mm_cinza",
+     "posicao_m": [
+      0.0,
+      0.0325,
+      -0.135
+     ],
+     "aceita": [
+      "lanterna_pistola",
+      "laser_pistola",
+      "combo_lanterna_laser"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.05,
+      -0.02
+     ]
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_9mm",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.052,
+      -0.0155
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_9mm",
+      "carregador_9mm_estendido"
+     ],
+     "descricao": "filho do nó carregador (anda com a recarga); ao pôr um carregador aqui, esconda as malhas próprias do nó carregador"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "pistola_9mm_cinza",
+     "posicao_m": [
+      0.012,
+      0.08,
+      -0.086
+     ],
+     "descricao": "onde nasce o estojo ejetado (vai para +X e para cima)"
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.1932
+     ],
+     "descricao": "clarão de boca e origem do disparo (raycast para -Z)"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0,
+      0.0895,
+      -0.005
+     ],
+     "descricao": "linha de visada: alça -> massa"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.14,
+     "laco": false,
+     "descricao": "um disparo: gatilho, recuo do ferrolho e do cano, coice da arma (soltar estojo em saida_estojo aos 0,04 s)"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.14,
+     "laco": false,
+     "descricao": "último tiro: o ferrolho fica travado atrás"
+    },
+    "vazia": {
+     "duracao_s": 0.1,
+     "laco": true,
+     "descricao": "pose parada: ferrolho travado atrás, carregador vazio"
+    },
+    "recarregar": {
+     "duracao_s": 1.6,
+     "laco": false,
+     "descricao": "troca tática: solta o carregador (0,3 s), carregador novo entra (1,2 s); trocar o nó carregador entre 0,5 e 0,9 s"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 2.1,
+     "laco": false,
+     "descricao": "recarga com a arma vazia: troca o carregador e solta o ferrolho (1,5 s)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "gira a arma, puxa o ferrolho até ver o cartucho na câmara e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
   }
  ],
  "acessorios": [
@@ -3489,15 +5230,15 @@
     "quartel",
     "motel"
    ],
-   "descricao": "Tubo de alumínio com defletores. O tiro só é ouvido a 18 m: essencial para não chamar a horda.",
+   "descricao": "Tubo longo de alumínio com defletores e reforço com conchas atrás (ajuda a pistola a funcionar com o peso). O tiro só é ouvido a 18 m: essencial para não chamar a horda.",
    "arquivo": "acessorios/supressor_9mm.glb",
    "tamanho_m": [
     0.036,
     0.036,
-    0.162
+    0.173
    ],
-   "triangulos": 4056,
-   "kb": 213.7
+   "triangulos": 5072,
+   "kb": 256.1
   },
   {
    "id": "compensador_9mm",
@@ -3667,21 +5408,21 @@
    "descricao": "Lanterna e laser num corpo só, com chave de três posições.",
    "arquivo": "acessorios/combo_lanterna_laser.glb",
    "tamanho_m": [
-    0.029,
-    0.038,
-    0.076
+    0.03,
+    0.041,
+    0.089
    ],
-   "triangulos": 1208,
-   "kb": 63.8,
+   "triangulos": 3224,
+   "kb": 171.2,
    "encaixes": [
     {
      "no": "feixe",
      "tipo": "efeito",
      "pai": "combo_lanterna_laser",
      "posicao_m": [
-      0.004,
-      -0.024,
-      -0.018
+      0.0,
+      -0.021,
+      -0.0275
      ],
      "descricao": "SpotLight3D aqui (-Z)"
     },
@@ -3690,9 +5431,9 @@
      "tipo": "efeito",
      "pai": "combo_lanterna_laser",
      "posicao_m": [
-      -0.0075,
-      -0.0145,
-      -0.018
+      0.0,
+      -0.035,
+      -0.0015
      ],
      "descricao": "origem do laser (-Z)"
     }
@@ -3723,10 +5464,10 @@
    "tamanho_m": [
     0.025,
     0.026,
-    0.028
+    0.034
    ],
-   "triangulos": 540,
-   "kb": 33.4,
+   "triangulos": 1316,
+   "kb": 73.9,
    "encaixes": [
     {
      "no": "olho",
@@ -3734,8 +5475,8 @@
      "pai": "mira_ponto_vermelho_compacta",
      "posicao_m": [
       0.0,
-      0.015,
-      -0.009
+      0.0145,
+      0.0
      ],
      "descricao": "centro da lente: linha de visada"
     }
@@ -5259,7 +7000,7 @@
    "grupo": "acessorios",
    "categoria": "laser",
    "encaixe": "mlok_esq",
-   "peso_kg": 0.24,
+   "peso_kg": 0.2,
    "raridade": "muito raro",
    "valor_troca": 80,
    "usa": "pilhas",
@@ -5276,24 +7017,24 @@
     "quartel"
    ],
    "liga_desliga": "laser no encaixe \"laser\" e luz no encaixe \"feixe\" (para -Z)",
-   "descricao": "Caixa caramelo com laser e luz: botão de disparo quadriculado, seletor giratório, tampa da lente presa por cordão e tampa de pilha recartilhada atrás. Presa por garra num trilho curto de M-LOK no lado esquerdo do guarda-mão.",
+   "descricao": "Caixa baixa e comprida com laser e luz: dois emissores e farol com anel recartilhado na frente, botões de ajuste e de disparo por fora, seletor e tampa da pilha atrás. Presa por garra num trilho curto de M-LOK no lado do guarda-mão.",
    "arquivo": "acessorios/modulo_laser.glb",
    "tamanho_m": [
-    0.065,
-    0.039,
-    0.103
+    0.032,
+    0.033,
+    0.104
    ],
-   "triangulos": 5674,
-   "kb": 288.9,
+   "triangulos": 4148,
+   "kb": 221.9,
    "encaixes": [
     {
      "no": "laser",
      "tipo": "efeito",
      "pai": "modulo_laser",
      "posicao_m": [
-      -0.0385,
-      0.0085,
-      -0.0475
+      -0.02,
+      -0.0045,
+      -0.0465
      ],
      "descricao": "origem do laser (-Z)"
     },
@@ -5302,9 +7043,66 @@
      "tipo": "efeito",
      "pai": "modulo_laser",
      "posicao_m": [
-      -0.0385,
-      -0.0065,
-      -0.0515
+      -0.02,
+      0.007,
+      -0.0522
+     ],
+     "descricao": "SpotLight3D (-Z)"
+    }
+   ]
+  },
+  {
+   "id": "modulo_laser_tan",
+   "nome": "Módulo de mira laser (caramelo)",
+   "grupo": "acessorios",
+   "categoria": "laser",
+   "encaixe": "mlok_esq",
+   "peso_kg": 0.2,
+   "raridade": "muito raro",
+   "valor_troca": 80,
+   "usa": "pilhas",
+   "autonomia_min": 360,
+   "luz": {
+    "alcance_m": 20,
+    "angulo_graus": 28,
+    "lumens": 250
+   },
+   "modificadores": {
+    "precisao_sem_mirar": 1.5
+   },
+   "onde": [
+    "quartel"
+   ],
+   "liga_desliga": "laser no encaixe \"laser\" e luz no encaixe \"feixe\" (para -Z)",
+   "descricao": "O mesmo módulo de laser fino, em caramelo.",
+   "arquivo": "acessorios/modulo_laser_tan.glb",
+   "tamanho_m": [
+    0.032,
+    0.033,
+    0.104
+   ],
+   "triangulos": 4148,
+   "kb": 222.8,
+   "encaixes": [
+    {
+     "no": "laser",
+     "tipo": "efeito",
+     "pai": "modulo_laser_tan",
+     "posicao_m": [
+      -0.02,
+      -0.0045,
+      -0.0465
+     ],
+     "descricao": "origem do laser (-Z)"
+    },
+    {
+     "no": "feixe",
+     "tipo": "efeito",
+     "pai": "modulo_laser_tan",
+     "posicao_m": [
+      -0.02,
+      0.007,
+      -0.0522
      ],
      "descricao": "SpotLight3D (-Z)"
     }
@@ -7045,6 +8843,457 @@
    ],
    "triangulos": 12552,
    "kb": 886.8
+  },
+  {
+   "id": "carregador_smg_20",
+   "nome": "Carregador da submetralhadora (20)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_smg",
+   "capacidade": 20,
+   "municao": "municao_9mm",
+   "peso_kg": 0.1,
+   "raridade": "incomum",
+   "valor_troca": 10,
+   "modificadores": {
+    "recarga_s": 0.95
+   },
+   "descricao": "Curto: fica rente ao fundo do punho, a arma cabe em qualquer bolso de mochila.",
+   "arquivo": "acessorios/carregador_smg_20.glb",
+   "tamanho_m": [
+    0.025,
+    0.126,
+    0.056
+   ],
+   "triangulos": 1624,
+   "kb": 80.4
+  },
+  {
+   "id": "carregador_smg_30",
+   "nome": "Carregador da submetralhadora (30)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_smg",
+   "capacidade": 30,
+   "municao": "municao_9mm",
+   "peso_kg": 0.13,
+   "raridade": "incomum",
+   "valor_troca": 12,
+   "descricao": "Carregador padrão de 30. Vem na arma.",
+   "arquivo": "acessorios/carregador_smg_30.glb",
+   "tamanho_m": [
+    0.025,
+    0.156,
+    0.06
+   ],
+   "triangulos": 1672,
+   "kb": 82.7
+  },
+  {
+   "id": "carregador_smg_40",
+   "nome": "Carregador da submetralhadora (40)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_smg",
+   "capacidade": 40,
+   "municao": "municao_9mm",
+   "peso_kg": 0.17,
+   "raridade": "raro",
+   "valor_troca": 22,
+   "modificadores": {
+    "recarga_s": 1.08
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Comprido: 40 tiros, mas atrapalha deitar no chão.",
+   "arquivo": "acessorios/carregador_smg_40.glb",
+   "tamanho_m": [
+    0.025,
+    0.192,
+    0.065
+   ],
+   "triangulos": 1768,
+   "kb": 87.2
+  },
+  {
+   "id": "empunhadura_dobravel",
+   "nome": "Empunhadura frontal dobrável",
+   "grupo": "acessorios",
+   "categoria": "empunhadura",
+   "encaixe": "mlok_baixo",
+   "peso_kg": 0.08,
+   "raridade": "incomum",
+   "valor_troca": 14,
+   "modificadores": {
+    "recuo": 0.88,
+    "precisao_rajada": 1.2
+   },
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "Empunhadura que dobra para a frente, rente ao trilho, para guardar a arma (nó \"haste\", animações dobrar/abrir). Vem na submetralhadora.",
+   "arquivo": "acessorios/empunhadura_dobravel.glb",
+   "tamanho_m": [
+    0.026,
+    0.083,
+    0.042
+   ],
+   "triangulos": 8600,
+   "kb": 433.4,
+   "partes": [
+    {
+     "no": "haste",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 90,
+     "descricao": "dobra para a frente (animação dobrar)",
+     "pai": "empunhadura_dobravel",
+     "explodir_m": [
+      0.0,
+      -0.04,
+      0.0
+     ]
+    }
+   ],
+   "animacoes": {
+    "dobrar": {
+     "duracao_s": 0.3,
+     "laco": false,
+     "descricao": "dobra a empunhadura para a frente"
+    },
+    "abrir": {
+     "duracao_s": 0.3,
+     "laco": false,
+     "descricao": "abre a empunhadura"
+    }
+   }
+  },
+  {
+   "id": "supressor_9mm_tan",
+   "nome": "Supressor 9 mm (areia)",
+   "grupo": "acessorios",
+   "categoria": "boca",
+   "encaixe": "boca_rosca_9mm",
+   "peso_kg": 0.2,
+   "durabilidade": 1200,
+   "raridade": "raro",
+   "valor_troca": 60,
+   "modificadores": {
+    "ruido_m": 0.3,
+    "dano": 0.95,
+    "alcance_m": 1.05,
+    "recuo": 0.85
+   },
+   "onde": [
+    "quartel",
+    "motel"
+   ],
+   "descricao": "Tubo longo de alumínio com defletores e reforço com conchas atrás (ajuda a pistola a funcionar com o peso). O tiro só é ouvido a 18 m: essencial para não chamar a horda.",
+   "arquivo": "acessorios/supressor_9mm_tan.glb",
+   "tamanho_m": [
+    0.036,
+    0.036,
+    0.173
+   ],
+   "triangulos": 5072,
+   "kb": 256.1
+  },
+  {
+   "id": "supressor_9mm_verde",
+   "nome": "Supressor 9 mm (verde-oliva)",
+   "grupo": "acessorios",
+   "categoria": "boca",
+   "encaixe": "boca_rosca_9mm",
+   "peso_kg": 0.2,
+   "durabilidade": 1200,
+   "raridade": "raro",
+   "valor_troca": 60,
+   "modificadores": {
+    "ruido_m": 0.3,
+    "dano": 0.95,
+    "alcance_m": 1.05,
+    "recuo": 0.85
+   },
+   "onde": [
+    "quartel",
+    "motel"
+   ],
+   "descricao": "Tubo longo de alumínio com defletores e reforço com conchas atrás (ajuda a pistola a funcionar com o peso). O tiro só é ouvido a 18 m: essencial para não chamar a horda.",
+   "arquivo": "acessorios/supressor_9mm_verde.glb",
+   "tamanho_m": [
+    0.036,
+    0.036,
+    0.173
+   ],
+   "triangulos": 5072,
+   "kb": 256.2
+  },
+  {
+   "id": "supressor_9mm_cinza",
+   "nome": "Supressor 9 mm (cinza)",
+   "grupo": "acessorios",
+   "categoria": "boca",
+   "encaixe": "boca_rosca_9mm",
+   "peso_kg": 0.2,
+   "durabilidade": 1200,
+   "raridade": "raro",
+   "valor_troca": 60,
+   "modificadores": {
+    "ruido_m": 0.3,
+    "dano": 0.95,
+    "alcance_m": 1.05,
+    "recuo": 0.85
+   },
+   "onde": [
+    "quartel",
+    "motel"
+   ],
+   "descricao": "Tubo longo de alumínio com defletores e reforço com conchas atrás (ajuda a pistola a funcionar com o peso). O tiro só é ouvido a 18 m: essencial para não chamar a horda.",
+   "arquivo": "acessorios/supressor_9mm_cinza.glb",
+   "tamanho_m": [
+    0.036,
+    0.036,
+    0.173
+   ],
+   "triangulos": 5072,
+   "kb": 256.2
+  },
+  {
+   "id": "ponte_mira_pistola",
+   "nome": "Ponte de mira com ponto vermelho",
+   "grupo": "acessorios",
+   "categoria": "mira",
+   "encaixe": "ponte_pistola",
+   "peso_kg": 0.09,
+   "raridade": "muito raro",
+   "valor_troca": 70,
+   "usa": "pilhas",
+   "autonomia_min": 3000,
+   "modificadores": {
+    "precisao_mirando": 1.3,
+    "tempo_mirar": 0.85
+   },
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "linha_de_visada": "encaixe \"olho\": centro da lente, a câmera mira por ali",
+   "descricao": "Ponte de alumínio presa na armação que passa por cima do ferrolho, na frente da janela de ejeção, com uma mira de ponto vermelho em cima. Como não anda com o ferrolho, o ponto fica parado no tiro. Põe-se sem ferramenta.",
+   "arquivo": "acessorios/ponte_mira_pistola.glb",
+   "tamanho_m": [
+    0.033,
+    0.081,
+    0.098
+   ],
+   "triangulos": 3024,
+   "kb": 154.8,
+   "encaixes": [
+    {
+     "no": "olho",
+     "tipo": "mira",
+     "pai": "ponte_mira_pistola",
+     "posicao_m": [
+      0.0,
+      0.0627,
+      -0.0015
+     ],
+     "descricao": "centro da lente: linha de visada"
+    }
+   ]
+  },
+  {
+   "id": "ponte_mira_pistola_tan",
+   "nome": "Ponte de mira com ponto vermelho (areia)",
+   "grupo": "acessorios",
+   "categoria": "mira",
+   "encaixe": "ponte_pistola",
+   "peso_kg": 0.09,
+   "raridade": "muito raro",
+   "valor_troca": 70,
+   "usa": "pilhas",
+   "autonomia_min": 3000,
+   "modificadores": {
+    "precisao_mirando": 1.3,
+    "tempo_mirar": 0.85
+   },
+   "onde": [
+    "quartel"
+   ],
+   "linha_de_visada": "encaixe \"olho\": centro da lente, a câmera mira por ali",
+   "descricao": "A mesma ponte de mira em alumínio cor de areia, para combinar com a armação areia.",
+   "arquivo": "acessorios/ponte_mira_pistola_tan.glb",
+   "tamanho_m": [
+    0.033,
+    0.081,
+    0.098
+   ],
+   "triangulos": 3024,
+   "kb": 155.7,
+   "encaixes": [
+    {
+     "no": "olho",
+     "tipo": "mira",
+     "pai": "ponte_mira_pistola_tan",
+     "posicao_m": [
+      0.0,
+      0.0627,
+      -0.0015
+     ],
+     "descricao": "centro da lente: linha de visada"
+    }
+   ]
+  },
+  {
+   "id": "punho_ar",
+   "nome": "Punho original do fuzil",
+   "grupo": "acessorios",
+   "categoria": "punho",
+   "encaixe": "punho_ar",
+   "peso_kg": 0.07,
+   "modificadores": {},
+   "raridade": "comum",
+   "valor_troca": 5,
+   "descricao": "O punho que vem no fuzil: polímero com área pontilhada.",
+   "arquivo": "acessorios/punho_ar.glb",
+   "tamanho_m": [
+    0.033,
+    0.111,
+    0.078
+   ],
+   "triangulos": 20692,
+   "kb": 1174.4
+  },
+  {
+   "id": "punho_ar_tan",
+   "nome": "Punho original do fuzil (caramelo)",
+   "grupo": "acessorios",
+   "categoria": "punho",
+   "encaixe": "punho_ar",
+   "peso_kg": 0.07,
+   "modificadores": {},
+   "raridade": "comum",
+   "valor_troca": 5,
+   "descricao": "O punho original em caramelo.",
+   "arquivo": "acessorios/punho_ar_tan.glb",
+   "tamanho_m": [
+    0.033,
+    0.111,
+    0.078
+   ],
+   "triangulos": 20692,
+   "kb": 1174.7
+  },
+  {
+   "id": "punho_cavas",
+   "nome": "Punho emborrachado com cavas",
+   "grupo": "acessorios",
+   "categoria": "punho",
+   "encaixe": "punho_ar",
+   "peso_kg": 0.09,
+   "modificadores": {
+    "recuo": 0.95,
+    "estabilidade_mirando": 1.1
+   },
+   "descricao": "Borracha com textura de pedrinhas em toda a volta, ressalto para o dedo médio, cavas para os outros dedos e base larga que apoia a mão. Não escorrega com a mão suada ou molhada.",
+   "raridade": "incomum",
+   "valor_troca": 10,
+   "onde": [
+    "quartel",
+    "galeria",
+    "delegacia"
+   ],
+   "arquivo": "acessorios/punho_cavas.glb",
+   "tamanho_m": [
+    0.045,
+    0.117,
+    0.086
+   ],
+   "triangulos": 15960,
+   "kb": 1108.6
+  },
+  {
+   "id": "punho_cavas_tan",
+   "nome": "Punho emborrachado com cavas (caramelo)",
+   "grupo": "acessorios",
+   "categoria": "punho",
+   "encaixe": "punho_ar",
+   "peso_kg": 0.09,
+   "modificadores": {
+    "recuo": 0.95,
+    "estabilidade_mirando": 1.1
+   },
+   "descricao": "O punho emborrachado com cavas em caramelo.",
+   "raridade": "incomum",
+   "valor_troca": 10,
+   "onde": [
+    "quartel",
+    "galeria",
+    "delegacia"
+   ],
+   "arquivo": "acessorios/punho_cavas_tan.glb",
+   "tamanho_m": [
+    0.045,
+    0.117,
+    0.086
+   ],
+   "triangulos": 15960,
+   "kb": 1110.0
+  },
+  {
+   "id": "punho_reto",
+   "nome": "Punho reto de polímero",
+   "grupo": "acessorios",
+   "categoria": "punho",
+   "encaixe": "punho_ar",
+   "peso_kg": 0.06,
+   "modificadores": {
+    "tempo_mirar": 0.95
+   },
+   "descricao": "Punho mais em pé e liso, com rabo de castor que protege a mão, painel de textura fina dos lados e compartimento com tampa no fundo (cabe pilha ou bilhete).",
+   "raridade": "incomum",
+   "valor_troca": 10,
+   "onde": [
+    "quartel",
+    "galeria",
+    "delegacia"
+   ],
+   "arquivo": "acessorios/punho_reto.glb",
+   "tamanho_m": [
+    0.03,
+    0.115,
+    0.075
+   ],
+   "triangulos": 21556,
+   "kb": 1224.4
+  },
+  {
+   "id": "punho_reto_tan",
+   "nome": "Punho reto de polímero (caramelo)",
+   "grupo": "acessorios",
+   "categoria": "punho",
+   "encaixe": "punho_ar",
+   "peso_kg": 0.06,
+   "modificadores": {
+    "tempo_mirar": 0.95
+   },
+   "descricao": "O punho reto de polímero em caramelo.",
+   "raridade": "incomum",
+   "valor_troca": 10,
+   "onde": [
+    "quartel",
+    "galeria",
+    "delegacia"
+   ],
+   "arquivo": "acessorios/punho_reto_tan.glb",
+   "tamanho_m": [
+    0.03,
+    0.115,
+    0.075
+   ],
+   "triangulos": 21556,
+   "kb": 1227.7
   }
  ],
  "municao": [

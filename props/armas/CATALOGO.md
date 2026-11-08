@@ -6,29 +6,34 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 
 | Arma | Calibre | Tiros | Dano | Alcance | Cadência | Ruído | Durab. | Peso | Encaixes | Animações |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Pistola Sentinela 9 mm (`pistola_9mm`) | 9 mm | 15 | 34 | 25 m | 4,0/s | 60 m | 600 | 0,78 kg | mira, boca, trilho, carregador | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
+| Pistola Sentinela 9 mm (`pistola_9mm`) | 9 mm | 15 | 34 | 25 m | 4,0/s | 60 m | 600 | 0,78 kg | mira, ponte, boca, trilho, carregador | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Revólver Vigia .38 (`revolver_38`) | .38 | 6 | 45 | 25 m | 2,5/s | 70 m | 1500 | 0,95 kg | mira, empunhadura, recarga, cinto | atirar, engatilhar, atirar_armado, recarregar, inspecionar, ocioso |
 | Espingarda Mutirão 12 (`espingarda_12`) | 12 | 5 | 150 | 15 m | 1,3/s | 110 m | 900 | 3,4 kg | mira, coronha, boca, tubo, cano, lateral, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Espingarda Mutirão 12 curta (`espingarda_12_curta`) | 12 | 4 | 150 | 12 m | 1,3/s | 120 m | 900 | 2,7 kg | mira, coronha, boca, cano, lateral, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Carabina Paciência .308 (`carabina_308`) | .308 | 10 | 95 | 150 m | 0,8/s | 220 m | 2500 | 6,2 kg | mira, boca, carregador, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Carabina Paciência .308 de caça (`carabina_308_caca`) | .308 | 5 | 95 | 120 m | 0,8/s | 220 m | 2500 | 3,9 kg | mira, boca, carregador, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
-| Fuzil Vigília 5,56 (`fuzil_556`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,3 kg | mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
-| Fuzil Vigília 5,56 bicolor (`fuzil_556_bicolor`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,3 kg | mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
+| Fuzil Vigília 5,56 (`fuzil_556`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,3 kg | punho, mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
+| Fuzil Vigília 5,56 bicolor (`fuzil_556_bicolor`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,3 kg | punho, mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
 | Fuzil Brasa 7,62 (`fuzil_762`) | 7,62×39 | 30 | 55 | 70 m | 10/s | 180 m | 6000 | 3,6 kg | mira, boca, carregador, coronha, empunhadura, lanterna, guarda_mao, enfeite, tampa, mira_tampa, baioneta, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
 | Fuzil Brasa 7,62 tático (`fuzil_762_tatico`) | 7,62×39 | 30 | 55 | 70 m | 10/s | 180 m | 6000 | 3,6 kg | mira, boca, carregador, coronha, empunhadura, lanterna, guarda_mao, enfeite, tampa, mira_tampa, baioneta, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
+| Submetralhadora Faísca 9 mm (`smg_9mm`) | 9 mm | 30 | 28 | 40 m | 14/s | 120 m | 5000 | 1,9 kg | mira, alca, massa, boca, carregador, empunhadura, lanterna, laser, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, estender, recolher, inspecionar, ocioso |
+| Submetralhadora Faísca 9 mm caramelo (`smg_9mm_tan`) | 9 mm | 30 | 28 | 40 m | 14/s | 120 m | 5000 | 1,9 kg | mira, alca, massa, boca, carregador, empunhadura, lanterna, laser, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, estender, recolher, inspecionar, ocioso |
+| Pistola Sentinela 9 mm (areia) (`pistola_9mm_tan`) | 9 mm | 15 | 34 | 25 m | 4,0/s | 60 m | 600 | 0,78 kg | mira, ponte, boca, trilho, carregador | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
+| Pistola Sentinela 9 mm (verde-oliva) (`pistola_9mm_verde`) | 9 mm | 15 | 34 | 25 m | 4,0/s | 60 m | 600 | 0,78 kg | mira, ponte, boca, trilho, carregador | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
+| Pistola Sentinela 9 mm (cinza) (`pistola_9mm_cinza`) | 9 mm | 15 | 34 | 25 m | 4,0/s | 60 m | 600 | 0,78 kg | mira, ponte, boca, trilho, carregador | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 
 ## Acessórios
 
 | Acessório | Tipo | Encaixe | Efeito no jogo | Peso | Raridade | Triângulos |
 |---|---|---|---|---|---|---|
 | Protetor de rosca 9 mm (`protetor_rosca_9mm`) | Boca do cano | `boca_rosca_9mm` | - | 0,01 kg | comum | 640 |
-| Supressor 9 mm (`supressor_9mm`) | Boca do cano | `boca_rosca_9mm` | ruido_m ×0,3, dano ×0,95, alcance_m ×1,05, recuo ×0,85 | 0,2 kg | raro | 4056 |
+| Supressor 9 mm (`supressor_9mm`) | Boca do cano | `boca_rosca_9mm` | ruido_m ×0,3, dano ×0,95, alcance_m ×1,05, recuo ×0,85 | 0,2 kg | raro | 5072 |
 | Compensador 9 mm (`compensador_9mm`) | Boca do cano | `boca_rosca_9mm` | recuo ×0,7, ruido_m ×1,15 | 0,04 kg | incomum | 548 |
 | Supressor improvisado (garrafa PET) (`supressor_garrafa`) | Boca do cano | `boca_rosca_9mm` | ruido_m ×0,55, precisao ×0,8 | 0,08 kg | comum | 2672 |
 | Lanterna tática de trilho (`lanterna_pistola`) | Trilho | `trilho_curto` | - | 0,11 kg | incomum | 4468 |
 | Mira laser de trilho (`laser_pistola`) | Trilho | `trilho_curto` | precisao_sem_mirar ×1,35 | 0,06 kg | raro | 848 |
-| Lanterna com laser (`combo_lanterna_laser`) | Trilho | `trilho_curto` | precisao_sem_mirar ×1,35 | 0,15 kg | muito raro | 1208 |
-| Mira de ponto vermelho compacta (`mira_ponto_vermelho_compacta`) | Miras | `mira_ferrolho` | precisao_mirando ×1,25, tempo_mirar ×0,85 | 0,03 kg | raro | 540 |
+| Lanterna com laser (`combo_lanterna_laser`) | Trilho | `trilho_curto` | precisao_sem_mirar ×1,35 | 0,15 kg | muito raro | 3224 |
+| Mira de ponto vermelho compacta (`mira_ponto_vermelho_compacta`) | Miras | `mira_ferrolho` | precisao_mirando ×1,25, tempo_mirar ×0,85 | 0,03 kg | raro | 1316 |
 | Carregador 9 mm (15) (`carregador_9mm`) | Carregadores | `carregador_9mm` | - | 0,09 kg | comum | 1192 |
 | Carregador 9 mm estendido (24) (`carregador_9mm_estendido`) | Carregadores | `carregador_9mm` | recarga_s ×1,1 | 0,13 kg | raro | 1386 |
 | Carregador rápido .38 (6) (`carregador_rapido_38`) | Recarga rápida | `recarga_38` | recarga_s ×0,55 | 0,1 kg | incomum | 4484 |
@@ -71,7 +76,8 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Tambor 5,56 (60) (`tambor_556_60`) | Carregadores | `carregador_556` | recarga_s ×1,4, tempo_mirar ×1,15 | 0,6 kg | muito raro | 4980 |
 | Tambor tático 5,56 (60) (`tambor_556_60_tatico`) | Carregadores | `carregador_556` | recarga_s ×1,35, tempo_mirar ×1,13 | 0,55 kg | muito raro | 6396 |
 | Carregador longo 5,56 (60) (`carregador_556_60`) | Carregadores | `carregador_556` | recarga_s ×1,2, tempo_mirar ×1,08 | 0,45 kg | muito raro | 13840 |
-| Módulo de mira laser (`modulo_laser`) | Lasers | `mlok_esq` | precisao_sem_mirar ×1,5 | 0,24 kg | muito raro | 5674 |
+| Módulo de mira laser (`modulo_laser`) | Lasers | `mlok_esq` | precisao_sem_mirar ×1,5 | 0,2 kg | muito raro | 4148 |
+| Módulo de mira laser (caramelo) (`modulo_laser_tan`) | Lasers | `mlok_esq` | precisao_sem_mirar ×1,5 | 0,2 kg | muito raro | 4148 |
 | Lanterna compacta de trilho (`lanterna_compacta`) | Lanternas | `mlok_lado` | - | 0,11 kg | incomum | 2104 |
 | Empunhadura curta inclinada (`empunhadura_curta`) | Empunhaduras | `mlok_baixo` | recuo ×0,9, tempo_mirar ×0,92 | 0,05 kg | incomum | 6808 |
 | Empunhadura vertical quadrada (`empunhadura_quadrada`) | Empunhaduras | `mlok_baixo` | recuo ×0,82, precisao_rajada ×1,3 | 0,1 kg | incomum | 1820 |
@@ -120,6 +126,21 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Supressor 7,62 (gasto) (`supressor_762_gasto`) | Boca do cano | `boca_762` | ruido_m ×0,35, clarao ×0,05, recuo ×0,8 | 0,55 kg | muito raro | 2752 |
 | Lanterna compacta de trilho (gasto) (`lanterna_compacta_gasto`) | Lanternas | `mlok_lado` | - | 0,11 kg | incomum | 2104 |
 | Carregador 7,62 de polímero (30) (gasto) (`carregador_762_30_grade_gasto`) | Carregadores | `carregador_762` | - | 0,25 kg | incomum | 12552 |
+| Carregador da submetralhadora (20) (`carregador_smg_20`) | Carregadores | `carregador_smg` | recarga_s ×0,95 | 0,1 kg | incomum | 1624 |
+| Carregador da submetralhadora (30) (`carregador_smg_30`) | Carregadores | `carregador_smg` | - | 0,13 kg | incomum | 1672 |
+| Carregador da submetralhadora (40) (`carregador_smg_40`) | Carregadores | `carregador_smg` | recarga_s ×1,08 | 0,17 kg | raro | 1768 |
+| Empunhadura frontal dobrável (`empunhadura_dobravel`) | Empunhaduras | `mlok_baixo` | recuo ×0,88, precisao_rajada ×1,2 | 0,08 kg | incomum | 8600 |
+| Supressor 9 mm (areia) (`supressor_9mm_tan`) | Boca do cano | `boca_rosca_9mm` | ruido_m ×0,3, dano ×0,95, alcance_m ×1,05, recuo ×0,85 | 0,2 kg | raro | 5072 |
+| Supressor 9 mm (verde-oliva) (`supressor_9mm_verde`) | Boca do cano | `boca_rosca_9mm` | ruido_m ×0,3, dano ×0,95, alcance_m ×1,05, recuo ×0,85 | 0,2 kg | raro | 5072 |
+| Supressor 9 mm (cinza) (`supressor_9mm_cinza`) | Boca do cano | `boca_rosca_9mm` | ruido_m ×0,3, dano ×0,95, alcance_m ×1,05, recuo ×0,85 | 0,2 kg | raro | 5072 |
+| Ponte de mira com ponto vermelho (`ponte_mira_pistola`) | Miras | `ponte_pistola` | precisao_mirando ×1,3, tempo_mirar ×0,85 | 0,09 kg | muito raro | 3024 |
+| Ponte de mira com ponto vermelho (areia) (`ponte_mira_pistola_tan`) | Miras | `ponte_pistola` | precisao_mirando ×1,3, tempo_mirar ×0,85 | 0,09 kg | muito raro | 3024 |
+| Punho original do fuzil (`punho_ar`) | Punhos | `punho_ar` | - | 0,07 kg | comum | 20692 |
+| Punho original do fuzil (caramelo) (`punho_ar_tan`) | Punhos | `punho_ar` | - | 0,07 kg | comum | 20692 |
+| Punho emborrachado com cavas (`punho_cavas`) | Punhos | `punho_ar` | recuo ×0,95, estabilidade_mirando ×1,1 | 0,09 kg | incomum | 15960 |
+| Punho emborrachado com cavas (caramelo) (`punho_cavas_tan`) | Punhos | `punho_ar` | recuo ×0,95, estabilidade_mirando ×1,1 | 0,09 kg | incomum | 15960 |
+| Punho reto de polímero (`punho_reto`) | Punhos | `punho_ar` | tempo_mirar ×0,95 | 0,06 kg | incomum | 21556 |
+| Punho reto de polímero (caramelo) (`punho_reto_tan`) | Punhos | `punho_ar` | tempo_mirar ×0,95 | 0,06 kg | incomum | 21556 |
 
 ## Munição e efeitos
 
@@ -149,7 +170,8 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 ## Compatibilidade
 
 - **Pistola Sentinela 9 mm**, `encaixe_mira`: mira_ponto_vermelho_compacta
-- **Pistola Sentinela 9 mm**, `encaixe_boca`: protetor_rosca_9mm, supressor_9mm, compensador_9mm, supressor_garrafa
+- **Pistola Sentinela 9 mm**, `encaixe_ponte`: ponte_mira_pistola, ponte_mira_pistola_tan
+- **Pistola Sentinela 9 mm**, `encaixe_boca`: protetor_rosca_9mm, supressor_9mm, supressor_9mm_tan, supressor_9mm_verde, supressor_9mm_cinza, compensador_9mm, supressor_garrafa
 - **Pistola Sentinela 9 mm**, `encaixe_trilho`: lanterna_pistola, laser_pistola, combo_lanterna_laser
 - **Pistola Sentinela 9 mm**, `encaixe_carregador`: carregador_9mm, carregador_9mm_estendido
 - **Revólver Vigia .38**, `encaixe_mira`: mira_ponto_vermelho_revolver
@@ -179,26 +201,28 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Carabina Paciência .308 de caça**, `encaixe_carregador`: carregador_308_5, carregador_308_10
 - **Carabina Paciência .308 de caça**, `encaixe_bipe`: bipe
 - **Carabina Paciência .308 de caça**, `encaixe_bandoleira`: bandoleira
+- **Fuzil Vigília 5,56**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan
 - **Fuzil Vigília 5,56**, `encaixe_mira`: mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa
 - **Fuzil Vigília 5,56**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
 - **Fuzil Vigília 5,56**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
 - **Fuzil Vigília 5,56**, `encaixe_boca`: quebra_chamas_556, compensador_556, supressor_556, supressor_556_tan
 - **Fuzil Vigília 5,56**, `encaixe_carregador`: carregador_556_30, carregador_556_60, tambor_556_60, carregador_556_30_tan, tambor_556_60_tatico
 - **Fuzil Vigília 5,56**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan, coronha_leve_ar, coronha_leve_ar_tan
-- **Fuzil Vigília 5,56**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, batente_mao, empunhadura_reta, empunhadura_reta_tan
+- **Fuzil Vigília 5,56**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, batente_mao, empunhadura_reta, empunhadura_reta_tan, empunhadura_dobravel
 - **Fuzil Vigília 5,56**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
-- **Fuzil Vigília 5,56**, `encaixe_laser`: laser_fuzil, modulo_laser
+- **Fuzil Vigília 5,56**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
 - **Fuzil Vigília 5,56**, `encaixe_bipe`: bipe
 - **Fuzil Vigília 5,56**, `encaixe_bandoleira`: bandoleira
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_mira`: mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_boca`: quebra_chamas_556, compensador_556, supressor_556, supressor_556_tan
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_carregador`: carregador_556_30, carregador_556_60, tambor_556_60, carregador_556_30_tan, tambor_556_60_tatico
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan, coronha_leve_ar, coronha_leve_ar_tan
-- **Fuzil Vigília 5,56 bicolor**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, batente_mao, empunhadura_reta, empunhadura_reta_tan
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, batente_mao, empunhadura_reta, empunhadura_reta_tan, empunhadura_dobravel
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
-- **Fuzil Vigília 5,56 bicolor**, `encaixe_laser`: laser_fuzil, modulo_laser
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_bipe`: bipe
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_bandoleira`: bandoleira
 - **Fuzil Brasa 7,62**, `encaixe_mira`: mira_lateral_ak, luneta_lateral_ak
@@ -225,3 +249,36 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Fuzil Brasa 7,62 tático**, `encaixe_mira_tampa`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa_gasto
 - **Fuzil Brasa 7,62 tático**, `encaixe_baioneta`: baioneta_ak
 - **Fuzil Brasa 7,62 tático**, `encaixe_bandoleira`: bandoleira
+- **Submetralhadora Faísca 9 mm**, `encaixe_mira`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo
+- **Submetralhadora Faísca 9 mm**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
+- **Submetralhadora Faísca 9 mm**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
+- **Submetralhadora Faísca 9 mm**, `encaixe_boca`: protetor_rosca_9mm, supressor_9mm, compensador_9mm, supressor_garrafa
+- **Submetralhadora Faísca 9 mm**, `encaixe_carregador`: carregador_smg_20, carregador_smg_30, carregador_smg_40
+- **Submetralhadora Faísca 9 mm**, `encaixe_empunhadura`: empunhadura_dobravel, empunhadura_reta, empunhadura_reta_tan, empunhadura_curta, empunhadura_curta_tan, empunhadura_vertical, empunhadura_angulada, batente_mao
+- **Submetralhadora Faísca 9 mm**, `encaixe_lanterna`: lanterna_compacta, lanterna_fuzil
+- **Submetralhadora Faísca 9 mm**, `encaixe_laser`: modulo_laser, modulo_laser_tan, laser_fuzil
+- **Submetralhadora Faísca 9 mm**, `encaixe_bandoleira`: bandoleira
+- **Submetralhadora Faísca 9 mm caramelo**, `encaixe_mira`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo
+- **Submetralhadora Faísca 9 mm caramelo**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
+- **Submetralhadora Faísca 9 mm caramelo**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
+- **Submetralhadora Faísca 9 mm caramelo**, `encaixe_boca`: protetor_rosca_9mm, supressor_9mm, compensador_9mm, supressor_garrafa
+- **Submetralhadora Faísca 9 mm caramelo**, `encaixe_carregador`: carregador_smg_20, carregador_smg_30, carregador_smg_40
+- **Submetralhadora Faísca 9 mm caramelo**, `encaixe_empunhadura`: empunhadura_dobravel, empunhadura_reta, empunhadura_reta_tan, empunhadura_curta, empunhadura_curta_tan, empunhadura_vertical, empunhadura_angulada, batente_mao
+- **Submetralhadora Faísca 9 mm caramelo**, `encaixe_lanterna`: lanterna_compacta, lanterna_fuzil
+- **Submetralhadora Faísca 9 mm caramelo**, `encaixe_laser`: modulo_laser, modulo_laser_tan, laser_fuzil
+- **Submetralhadora Faísca 9 mm caramelo**, `encaixe_bandoleira`: bandoleira
+- **Pistola Sentinela 9 mm (areia)**, `encaixe_mira`: mira_ponto_vermelho_compacta
+- **Pistola Sentinela 9 mm (areia)**, `encaixe_ponte`: ponte_mira_pistola, ponte_mira_pistola_tan
+- **Pistola Sentinela 9 mm (areia)**, `encaixe_boca`: protetor_rosca_9mm, supressor_9mm, supressor_9mm_tan, supressor_9mm_verde, supressor_9mm_cinza, compensador_9mm, supressor_garrafa
+- **Pistola Sentinela 9 mm (areia)**, `encaixe_trilho`: lanterna_pistola, laser_pistola, combo_lanterna_laser
+- **Pistola Sentinela 9 mm (areia)**, `encaixe_carregador`: carregador_9mm, carregador_9mm_estendido
+- **Pistola Sentinela 9 mm (verde-oliva)**, `encaixe_mira`: mira_ponto_vermelho_compacta
+- **Pistola Sentinela 9 mm (verde-oliva)**, `encaixe_ponte`: ponte_mira_pistola, ponte_mira_pistola_tan
+- **Pistola Sentinela 9 mm (verde-oliva)**, `encaixe_boca`: protetor_rosca_9mm, supressor_9mm, supressor_9mm_tan, supressor_9mm_verde, supressor_9mm_cinza, compensador_9mm, supressor_garrafa
+- **Pistola Sentinela 9 mm (verde-oliva)**, `encaixe_trilho`: lanterna_pistola, laser_pistola, combo_lanterna_laser
+- **Pistola Sentinela 9 mm (verde-oliva)**, `encaixe_carregador`: carregador_9mm, carregador_9mm_estendido
+- **Pistola Sentinela 9 mm (cinza)**, `encaixe_mira`: mira_ponto_vermelho_compacta
+- **Pistola Sentinela 9 mm (cinza)**, `encaixe_ponte`: ponte_mira_pistola, ponte_mira_pistola_tan
+- **Pistola Sentinela 9 mm (cinza)**, `encaixe_boca`: protetor_rosca_9mm, supressor_9mm, supressor_9mm_tan, supressor_9mm_verde, supressor_9mm_cinza, compensador_9mm, supressor_garrafa
+- **Pistola Sentinela 9 mm (cinza)**, `encaixe_trilho`: lanterna_pistola, laser_pistola, combo_lanterna_laser
+- **Pistola Sentinela 9 mm (cinza)**, `encaixe_carregador`: carregador_9mm, carregador_9mm_estendido

@@ -13,6 +13,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Carabina Paciência .308 (`carabina_308`) | .308 | 10 | 95 | 150 m | 0,8/s | 220 m | 2500 | 6,2 kg | mira, boca, carregador, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Carabina Paciência .308 de caça (`carabina_308_caca`) | .308 | 5 | 95 | 120 m | 0,8/s | 220 m | 2500 | 3,9 kg | mira, boca, carregador, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
 | Fuzil Vigília 5,56 (`fuzil_556`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,3 kg | mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
+| Fuzil Vigília 5,56 bicolor (`fuzil_556_bicolor`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,3 kg | mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
 
 ## Acessórios
 
@@ -65,8 +66,18 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Compensador 5,56 (`compensador_556`) | Boca do cano | `boca_556` | recuo ×0,7, ruido_m ×1,15 | 0,07 kg | incomum | 820 |
 | Supressor 5,56 (`supressor_556`) | Boca do cano | `boca_556` | ruido_m ×0,35, recuo ×0,85, clarao ×0,1 | 0,45 kg | muito raro | 4076 |
 | Carregador 5,56 (30) (`carregador_556_30`) | Carregadores | `carregador_556` | - | 0,13 kg | incomum | 4468 |
-| Tambor 5,56 (60) (`tambor_556_60`) | Carregadores | `carregador_556` | recarga_s ×1,4, tempo_mirar ×1,15 | 0,6 kg | muito raro | 6400 |
+| Tambor 5,56 (60) (`tambor_556_60`) | Carregadores | `carregador_556` | recarga_s ×1,4, tempo_mirar ×1,15 | 0,6 kg | muito raro | 4980 |
 | Carregador longo 5,56 (60) (`carregador_556_60`) | Carregadores | `carregador_556` | recarga_s ×1,2, tempo_mirar ×1,08 | 0,45 kg | muito raro | 13840 |
+| Módulo de mira laser (`modulo_laser`) | Lasers | `trilho_cima` | precisao_sem_mirar ×1,5 | 0,24 kg | muito raro | 5478 |
+| Lanterna compacta de trilho (`lanterna_compacta`) | Lanternas | `mlok_lado` | - | 0,11 kg | incomum | 2104 |
+| Empunhadura curta inclinada (`empunhadura_curta`) | Empunhaduras | `mlok_baixo` | recuo ×0,9, tempo_mirar ×0,92 | 0,05 kg | incomum | 6808 |
+| Empunhadura vertical quadrada (`empunhadura_quadrada`) | Empunhaduras | `mlok_baixo` | recuo ×0,82, precisao_rajada ×1,3 | 0,1 kg | incomum | 1820 |
+| Empunhadura cilíndrica recartilhada (`empunhadura_cilindrica`) | Empunhaduras | `mlok_baixo` | recuo ×0,84, precisao_rajada ×1,28 | 0,12 kg | raro | 1948 |
+| Batente de mão (`batente_mao`) | Empunhaduras | `mlok_baixo` | recuo ×0,92, tempo_mirar ×0,9 | 0,04 kg | incomum | 1984 |
+| Empunhadura curta inclinada (caramelo) (`empunhadura_curta_tan`) | Empunhaduras | `mlok_baixo` | recuo ×0,9, tempo_mirar ×0,92 | 0,05 kg | incomum | 6808 |
+| Coronha retrátil caramelo (`coronha_retratil_ar_tan`) | Coronhas | `coronha_ar` | recuo ×0,7, precisao ×1,25 | 0,25 kg | raro | 15612 |
+| Supressor 5,56 caramelo (`supressor_556_tan`) | Boca do cano | `boca_556` | ruido_m ×0,3, clarao ×0,05, recuo ×0,85 | 0,45 kg | muito raro | 4076 |
+| Carregador 5,56 (30) caramelo (`carregador_556_30_tan`) | Carregadores | `carregador_556` | - | 0,13 kg | incomum | 4468 |
 
 ## Munição e efeitos
 
@@ -126,11 +137,22 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Fuzil Vigília 5,56**, `encaixe_mira`: mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x
 - **Fuzil Vigília 5,56**, `encaixe_alca`: alca_rebativel
 - **Fuzil Vigília 5,56**, `encaixe_massa`: massa_rebativel
-- **Fuzil Vigília 5,56**, `encaixe_boca`: quebra_chamas_556, compensador_556, supressor_556
-- **Fuzil Vigília 5,56**, `encaixe_carregador`: carregador_556_30, carregador_556_60, tambor_556_60
-- **Fuzil Vigília 5,56**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar
-- **Fuzil Vigília 5,56**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada
-- **Fuzil Vigília 5,56**, `encaixe_lanterna`: lanterna_fuzil
-- **Fuzil Vigília 5,56**, `encaixe_laser`: laser_fuzil
+- **Fuzil Vigília 5,56**, `encaixe_boca`: quebra_chamas_556, compensador_556, supressor_556, supressor_556_tan
+- **Fuzil Vigília 5,56**, `encaixe_carregador`: carregador_556_30, carregador_556_60, tambor_556_60, carregador_556_30_tan
+- **Fuzil Vigília 5,56**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan
+- **Fuzil Vigília 5,56**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, batente_mao
+- **Fuzil Vigília 5,56**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
+- **Fuzil Vigília 5,56**, `encaixe_laser`: laser_fuzil, modulo_laser
 - **Fuzil Vigília 5,56**, `encaixe_bipe`: bipe
 - **Fuzil Vigília 5,56**, `encaixe_bandoleira`: bandoleira
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_mira`: mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_alca`: alca_rebativel
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_massa`: massa_rebativel
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_boca`: quebra_chamas_556, compensador_556, supressor_556, supressor_556_tan
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_carregador`: carregador_556_30, carregador_556_60, tambor_556_60, carregador_556_30_tan
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, batente_mao
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_laser`: laser_fuzil, modulo_laser
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_bipe`: bipe
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_bandoleira`: bandoleira

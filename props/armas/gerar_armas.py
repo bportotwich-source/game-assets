@@ -51,11 +51,11 @@ EMISSIVOS = {'ponto_vermelho': (1.0, 0.05, 0.02), 'led_lanterna': (1.0, 0.97, 0.
              'clarao': (1.0, 0.62, 0.22), 'clarao_nucleo': (1.0, 0.92, 0.7)}
 
 
-def _tex_grip(seed, px=1024, tile=0.05):
+def _tex_grip(seed, px=1024, tile=0.05, cor='polimero_grip'):
     """Pontilhado do punho de polimero: picotes pequenos e irregulares (normal + rugosidade)."""
     n = int(tile * px); g = GT.noise(n, n, 0.0006 * px, 0.0006 * px, seed); f = GT.fbm(n, n, 0.003 * px, 3, seed + 3)
     pic = GT.smooth(0.3, 1.4, g)
-    c = GT.rgb(CORES['polimero_grip'])[None, None]
+    c = GT.rgb(CORES[cor])[None, None]
     alb = c * (0.72 + 0.1 * pic[..., None] + 0.03 * f[..., None]); hm = 0.00025 * pic + 0.00005 * f
     return alb, hm, 0.75 + 0.15 * pic, 1.2, 0.0004, tile, px
 
@@ -75,12 +75,13 @@ def materiais():
     lin = lambda c: ((c / 255) / 12.92) if c <= 10 else (((c / 255) + 0.055) / 1.055) ** 2.4      # cores em sRGB -> fator linear do glTF
     for k, c in CORES.items(): MATS[k].baseColorFactor = [lin(x) for x in c] + [1.0]
     for k, (met, rough) in METAL.items(): MATS[k].metallicFactor = met; MATS[k].roughnessFactor = rough
-    for i, (k, fn) in enumerate((('polimero_grip', _tex_grip), ('recartilhado', _tex_serrilha))):
+    for i, (k, fn) in enumerate((('polimero_grip', _tex_grip), ('recartilhado', _tex_serrilha),
+                                  ('polimero_grip_tan', lambda s: _tex_grip(s, cor='polimero_tan')))):
         alb, hm, rough, nstr, aod, tile, px = fn(301 + i)
         a, nm, o = tex_set(alb, hm, rough, nstr, aod, px)
         TEX[k] = (a, nm, o); gp.UV_ESCALA[k] = tile
         MATS[k] = PBRMaterial(name=k, baseColorTexture=a, normalTexture=nm, occlusionTexture=o, metallicRoughnessTexture=o,
-                              baseColorFactor=[255, 255, 255, 255], metallicFactor=0.0 if k == 'polimero_grip' else 0.7, roughnessFactor=1.0)
+                              baseColorFactor=[255, 255, 255, 255], metallicFactor=0.0 if k.startswith('polimero_grip') else 0.7, roughnessFactor=1.0)
     for k, (c, alpha, rough) in TRANSP.items():
         MATS[k] = PBRMaterial(name=k, baseColorFactor=[c[0] / 255, c[1] / 255, c[2] / 255, alpha], alphaMode='BLEND',
                               metallicFactor=0.0, roughnessFactor=rough)

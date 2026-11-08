@@ -113,26 +113,28 @@ def _carregador_curvo(q, cap=30):
 
 
 def _tambor_60(q):
-    """Tambor de 60 com o eixo ao longo do cano: torre de alimentacao em cima, corpo redondo com cintas, tampa da frente com chave de corda."""
+    """Tambor de 60 com o eixo ao longo do cano: torre de alimentacao em cima, corpo redondo com cinta larga, tampa abaulada na frente com disco central e travas."""
     q.add('polimero', solido(arred([(MAG_X - 0.029, MAG_Y), (MAG_X + 0.029, MAG_Y), (MAG_X + 0.03, -0.074), (MAG_X - 0.03, -0.074)], 0.002),
                              -0.0102, 0.0102, 0.0012))                                                  # torre
     for zs in (-1, 1):                                                                             # nervuras da torre
         for x in (MAG_X - 0.012, MAG_X + 0.012):
             q.add('polimero', solido(arred([(x - 0.0016, -0.03), (x + 0.0016, -0.03), (x + 0.0016, -0.07), (x - 0.0016, -0.07)], 0.0008),
                                      min(zs * 0.0102, zs * 0.0112), max(zs * 0.0102, zs * 0.0112)))
-    Rd, cyy = 0.048, -0.115; x0, x1 = MAG_X - 0.048, MAG_X + 0.04
+    Rd, cyy = 0.05, -0.118; x0, x1 = MAG_X - 0.03, MAG_X + 0.062                                # tambor um pouco a frente da torre
     q.add('polimero', solido(arred([(MAG_X - 0.034, -0.062), (MAG_X + 0.034, -0.062), (MAG_X + 0.036, -0.08), (MAG_X - 0.036, -0.08)], 0.004),
                              -0.019, 0.019, 0.004))                                                    # pescoco que abraca o tambor
-    q.add('polimero', torno_x([(0.0, x0 - 0.004), (Rd - 0.006, x0 - 0.004), (Rd - 0.002, x0 - 0.002), (Rd, x0 + 0.002), (Rd, x1 - 0.002),
-                               (Rd - 0.002, x1), (Rd - 0.004, x1 + 0.002), (0.0, x1 + 0.002)], 72, y=cyy))       # corpo
-    for xb in (x0 + 0.012, (x0 + x1) / 2, x1 - 0.012):                                             # cintas
-        q.add('polimero', tubo_x(Rd - 0.002, Rd + 0.0016, xb - 0.003, xb + 0.003, y=cyy, sec=72, ch=0.0008))
-    q.add('polimero', torno_x([(0.0, x1 + 0.006), (Rd - 0.012, x1 + 0.006), (Rd - 0.006, x1 + 0.004), (Rd - 0.005, x1 + 0.001)], 72, y=cyy))  # tampa da frente
-    q.add('aluminio_preto', tubo_x(Rd - 0.013, Rd - 0.009, x1 + 0.005, x1 + 0.0075, y=cyy, sec=72))      # aro da tampa
-    q.add('aluminio_preto', cil_x(0.013, x1 + 0.006, x1 + 0.012, cyy, 0, 40))                     # botao de corda
-    q.add('aluminio_preto', solido(arred([(-0.019, -0.004), (0.019, -0.004), (0.019, 0.004), (-0.019, 0.004)], 0.003), -0.003, 0.003, 0.001)
-          .apply_transform(TF.rotation_matrix(math.pi / 2, [0, 1, 0])).apply_translation([x1 + 0.016, cyy, 0]))   # chave de corda
-    q.add('polimero', torno_x([(0.0, x0 - 0.009), (Rd - 0.016, x0 - 0.009), (Rd - 0.01, x0 - 0.005), (Rd - 0.009, x0 - 0.002)], 72, y=cyy))  # tampa de tras
+    q.add('polimero', torno_x([(0.0, x0), (Rd - 0.004, x0), (Rd - 0.001, x0 + 0.002), (Rd, x0 + 0.005), (Rd, x1 - 0.006),
+                               (Rd + 0.002, x1 - 0.004), (Rd + 0.002, x1 - 0.001), (Rd, x1), (0.0, x1)], 72, y=cyy))       # corpo e borda da tampa
+    q.add('polimero', tubo_x(Rd - 0.0035, Rd + 0.0006, x0 + 0.03, x0 + 0.05, y=cyy, sec=72, ch=0.0008))   # cinta larga
+    q.add('polimero', torno_x([(0.0, x1 + 0.0045), (Rd - 0.016, x1 + 0.0045), (Rd - 0.011, x1 + 0.0025), (Rd - 0.004, x1 + 0.0005), (Rd - 0.003, x1 - 0.0005)],
+                              72, y=cyy))                                                                # tampa abaulada
+    q.add('polimero', torno_x([(0.0, x1 + 0.0075), (0.024, x1 + 0.0075), (0.0255, x1 + 0.0065), (0.0255, x1 + 0.003)], 64, y=cyy))   # disco central
+    q.add('aluminio_preto', tubo_x(0.0256, 0.0264, x1 + 0.0035, x1 + 0.0055, y=cyy, sec=64))
+    for k in range(8):                                                                             # travas da tampa na borda
+        a = k * math.pi / 4; yy, zz = cyy + (Rd + 0.0012) * math.sin(a), (Rd + 0.0012) * math.cos(a)
+        m = caixa(x1 - 0.008, x1 - 0.001, -0.002, 0.002, -0.0018, 0.0018); m.apply_transform(TF.rotation_matrix(a, [1, 0, 0])); m.apply_translation([0, yy, zz])
+        q.add('polimero', m)
+    q.add('polimero', torno_x([(0.0, x0 - 0.004), (Rd - 0.012, x0 - 0.004), (Rd - 0.006, x0 - 0.002), (Rd - 0.005, x0 + 0.001)], 72, y=cyy))  # fundo
     q.merge(_cartucho_556(14), TF.translation_matrix([MAG_X - 0.026, MAG_Y - 0.0035, 0.002]))
 
 
@@ -420,7 +422,7 @@ def carregador_556_30(A): _carregador_curvo(A.base, 30); A.pivo = (MAG_X, MAG_Y,
 
 @_acessorio('tambor_556_60', 'Tambor 5,56 (60)', 'carregador', 'carregador_556', capacidade=60, municao='municao_556', peso_kg=0.6,
             raridade='muito raro', valor_troca=60, modificadores={'recarga_s': 1.4, 'tempo_mirar': 1.15}, onde=['quartel'],
-            descricao='Tambor de 60 com o eixo ao longo do cano e chave de corda na tampa: o dobro de tiros, mas pesado e lento para trocar.')
+            descricao='Tambor de 60 com o eixo ao longo do cano e tampa abaulada na frente: o dobro de tiros, mas pesado e lento para trocar.')
 def tambor_556_60(A): _tambor_60(A.base); A.pivo = (MAG_X, MAG_Y, 0)
 
 
@@ -449,3 +451,216 @@ ATLAS556 = {'topo': (0, 0), 'lado+': (0, 230), 'lado-': (0, 490), 'ponta+': (360
 def caixa_municao_556(A):
     caixa_municao(A, 'rotulo_556', CX556, _arte_caixa(CX556, '5,56', '20 CARTUCHOS', 'PONTA FINA 55 gr', cor=(70, 70, 30), atlas=ATLAS556),
                   _cartucho_556(12), 5, 4, 0.0142, 0.0118, faltam=(6, 13), bandeja=0.04, atlas=ATLAS556)
+
+
+# ============================================================================ acessorios novos (fotos do Bruno) e versao bicolor
+def _recolore(q, mapa):
+    """Troca materiais de uma peca (base ou parte): mapa = {material_antigo: material_novo}."""
+    novo = {}
+    for k, ms in q.parts.items(): novo.setdefault(mapa.get(k, k), []).extend(ms)
+    q.parts = novo
+    q.uv = {mapa.get(k, k): f for k, f in q.uv.items()}
+
+
+TAN = {'aluminio_preto': 'chassi_tan', 'polimero': 'polimero_tan', 'polimero_grip': 'polimero_grip_tan'}
+
+
+def _em_tan(A, mapa=TAN):
+    _recolore(A.base, mapa)
+    for pt in A.partes: _recolore(pt['peca'], mapa)
+
+
+def _cil_y(r, y0, y1, x=0.0, z=0.0, sec=32):
+    return trimesh.creation.cylinder(radius=r, segment=[[x, y0, z], [x, y1, z]], sections=sec)
+
+
+def _garra_trilho(q, L=0.044, alavanca=True):
+    """Garra de trilho preta (abraca o trilho de 21 mm por baixo do acessorio), com alavanca de trava e parafusos."""
+    q.add('aluminio_preto', caixa(-L / 2, L / 2, 0.0, 0.006, -0.0135, 0.0135))
+    for zs in (-1, 1): q.add('aluminio_preto', caixa(-L / 2 + 0.002, L / 2 - 0.002, -0.0058, 0.0, min(zs * 0.0106, zs * 0.0135), max(zs * 0.0106, zs * 0.0135)))
+    q.add('aco_oxidado', cil_z(0.0022, -0.016, 0.016, 0.0, -0.003, 16))                                     # barra transversal
+    for x in (-L / 2 + 0.008, L / 2 - 0.008): q.add('aco_oxidado', cil_z(0.0028, -0.0145, -0.0135, x, 0.002, 6))   # parafusos sextavados
+    if alavanca:
+        q.add('aluminio_preto', solido(arred([(-0.006, -0.006), (0.006, -0.006), (0.004, 0.004), (0.0015, 0.012), (-0.0015, 0.012), (-0.004, 0.004)], 0.0012),
+                                       0.0135, 0.0158, 0.0005))
+
+
+@_acessorio('modulo_laser', 'Módulo de mira laser', 'laser', 'trilho_cima', peso_kg=0.24, raridade='muito raro', valor_troca=80, usa='pilhas',
+            autonomia_min=360, luz={'alcance_m': 20, 'angulo_graus': 28, 'lumens': 250}, modificadores={'precisao_sem_mirar': 1.5},
+            onde=['quartel'], liga_desliga='laser no encaixe "laser" e luz no encaixe "feixe" (para -Z)',
+            descricao='Caixa caramelo com laser e luz: botão de disparo quadriculado, seletor giratório, tampa da lente presa por cordão e '
+                      'tampa de pilha recartilhada atrás. Presa por garra de trilho com alavanca.')
+def modulo_laser(A):
+    q = A.base; _garra_trilho(q, 0.05)
+    corpo = arred([(-0.036, 0.006), (0.034, 0.006), (0.034, 0.044), (0.029, 0.05), (-0.031, 0.05), (-0.036, 0.045)], 0.003)
+    q.add('chassi_tan', solido(corpo, -0.017, 0.017, 0.0022))
+    for zs in (-1, 1): q.add('chassi_tan', solido(arred([(-0.036, 0.006), (0.034, 0.006), (0.034, 0.011), (-0.036, 0.011)], 0.001),
+                                                  min(zs * 0.017, zs * 0.0176), max(zs * 0.017, zs * 0.0176), 0.0003))     # rodape
+    # frente: tampa recartilhada da luz e cone do laser com tampa presa
+    yl = 0.033
+    q.add('chassi_tan', tubo_x(0.0, 0.0105, 0.034, 0.037, yl, -0.0065, sec=48))
+    q.add('recartilhado', tubo_x(0.0, 0.0102, 0.037, 0.049, yl, -0.0065, sec=48)); q.add('chassi_tan', tubo_x(0.0, 0.0072, 0.049, 0.0515, yl, -0.0065, sec=40))
+    q.add('chassi_tan', torno_x([(0.0, 0.034), (0.0078, 0.034), (0.0078, 0.037), (0.0058, 0.047), (0.0, 0.047)], 40, yl, 0.0085))
+    q.add('aluminio_preto', tubo_x(0.0028, 0.0042, 0.0465, 0.0475, yl, 0.0085, sec=24)); q.add('lente_laser', cil_x(0.0028, 0.0462, 0.0468, yl, 0.0085, 20))
+    q.add('borracha', solido(LineString([(0.036, yl + 0.011), (0.042, yl + 0.0175), (0.048, yl + 0.016), (0.05, yl + 0.0105)]).buffer(0.0012, cap_style=1), -0.002, 0.004))   # cordao
+    # tras: tampa da pilha recartilhada (cone) e botao do ajuste de altura em cima
+    q.add('recartilhado', torno_x([(0.0, -0.036), (0.0085, -0.036), (0.0085, -0.039), (0.0068, -0.05), (0.0, -0.05)], 40, 0.02, 0.0))
+    q.add('chassi_tan', tubo_x(0.0, 0.0062, -0.052, -0.05, 0.02, 0.0, sec=32))
+    q.add('recartilhado', _cil_y(0.0075, 0.05, 0.056, -0.015, 0.0, 40)); q.add('chassi_tan', _cil_y(0.0058, 0.056, 0.058, -0.015, 0.0, 32))
+    q.add('aco_oxidado', caixa(-0.0185, -0.0115, 0.0575, 0.0588, -0.0007, 0.0007))                         # fenda do ajuste
+    # lado esquerdo: botao de disparo quadriculado e seletor giratorio
+    q.add('chassi_tan', solido(arred([(-0.028, 0.012), (-0.01, 0.012), (-0.01, 0.03), (-0.028, 0.03)], 0.003), -0.0185, -0.017, 0.0005))
+    q.add('borracha', solido(arred([(-0.0265, 0.0135), (-0.0115, 0.0135), (-0.0115, 0.0285), (-0.0265, 0.0285)], 0.002), -0.0195, -0.0183, 0.0004))
+    for i in range(4):
+        for j in range(4):
+            m = trimesh.creation.icosphere(1, radius=0.0011); m.apply_scale([1, 1, 0.6]); m.apply_translation([-0.0245 + i * 0.0037, 0.0155 + j * 0.0037, -0.0195]); q.add('borracha', m)
+    q.add('chassi_tan', cil_z(0.0085, -0.0188, -0.017, 0.016, 0.021, 40))
+    q.add('aluminio_preto', menos(cil_z(0.0065, -0.0212, -0.0185, 0.016, 0.021, 40),
+                                  caixa(0.009, 0.023, 0.0205, 0.0215, -0.023, -0.0205).apply_transform(TF.rotation_matrix(math.radians(-40), [0, 0, 1], point=[0.016, 0.021, 0]))))
+    for ang in (150, 30):                                                                           # setas L / R gravadas
+        a = math.radians(ang); q.add('aco_oxidado', caixa(-0.0006, 0.0006, -0.0018, 0.0018, -0.0001, 0.0001)
+                                    .apply_transform(TF.rotation_matrix(a, [0, 0, 1])).apply_translation([0.016 + 0.011 * math.cos(a), 0.021 - 0.011 * math.sin(a) - 0.002, -0.0171]))
+    q.add('chassi_tan', cil_z(0.0032, -0.0182, -0.017, 0.027, 0.043, 24))                                # parafuso de canto
+    # lado direito: placa de aviso
+    q.add('plastico_branco', caixa(-0.024, 0.012, 0.016, 0.042, 0.0172, 0.0176))
+    q.add('tinta_vermelha', caixa(-0.021, 0.009, 0.036, 0.039, 0.0176, 0.0178))
+    A.encaixe('laser', (0.0475, yl, 0.0085), 'efeito', descricao='origem do laser (-Z)')
+    A.encaixe('feixe', (0.0515, yl, -0.0065), 'efeito', descricao='SpotLight3D (-Z)')
+    A.pivo = (0, 0, 0)
+
+
+@_acessorio('lanterna_compacta', 'Lanterna compacta de trilho', 'lanterna', 'mlok_lado', peso_kg=0.11, raridade='incomum', valor_troca=24, usa='pilhas',
+            autonomia_min=60, luz={'alcance_m': 45, 'angulo_graus': 20, 'lumens': 600}, modificadores={}, onde=['quartel', 'delegacia', 'posto'],
+            liga_desliga='SpotLight3D no encaixe "feixe" (para -Z)',
+            descricao='Lanterna curta com garra de trilho, corpo recartilhado e coroa dentada na frente (serve para quebrar vidro).')
+def lanterna_compacta(A):
+    q = A.base; zl = 0.02
+    q.add('aluminio_preto', solido(arred([(-0.014, -0.008), (0.014, -0.008), (0.014, 0.008), (-0.014, 0.008)], 0.002), 0.0, 0.005, 0.001))
+    q.add('aluminio_preto', solido(arred([(-0.012, -0.0065), (0.012, -0.0065), (0.012, 0.0065), (-0.012, 0.0065)], 0.002), 0.004, zl - 0.009, 0.001))
+    for x in (-0.007, 0.007): q.add('aco_oxidado', cil_x(0.0016, x - 0.0015, x + 0.0015, 0.0075, 0.0045, 6))
+    q.add('aluminio_preto', torno_x([(0.0, -0.038), (0.0095, -0.038), (0.0105, -0.036), (0.0105, 0.004), (0.0128, 0.01), (0.0128, 0.024), (0.0, 0.024)], 40, 0.0, zl))
+    q.add('recartilhado', tubo_x(0.0, 0.0108, -0.03, -0.004, 0.0, zl, sec=40))
+    coroa = tubo_x(0.0098, 0.0132, 0.024, 0.031, 0.0, zl, sec=48)
+    for i in range(6):
+        g = caixa(0.027, 0.034, -0.0025, 0.0025, 0.0, 0.02); g.apply_transform(TF.rotation_matrix(i * math.pi / 3, [1, 0, 0])); g.apply_translation([0, 0, zl]); coroa = menos(coroa, g)
+    q.add('aluminio_preto', coroa)
+    q.add('refletor', torno_x([(0.0032, 0.013), (0.0096, 0.0238)], 32, 0.0, zl)); q.add('led_lanterna', cil_x(0.0028, 0.0128, 0.0135, 0.0, zl, 16))
+    q.add('lente', cil_x(0.0097, 0.0236, 0.0242, 0.0, zl, 40))
+    q.add('borracha', torno_x([(0.0, -0.045), (0.0068, -0.045), (0.0085, -0.042), (0.0085, -0.038), (0.0, -0.038)], 32, 0.0, zl))
+    A.encaixe('feixe', (0.031, 0.0, zl), 'efeito', descricao='SpotLight3D aqui (-Z)'); A.pivo = (0, 0, 0)
+
+
+@_acessorio('empunhadura_curta', 'Empunhadura curta inclinada', 'empunhadura', 'mlok_baixo', peso_kg=0.05, raridade='incomum', valor_troca=12,
+            modificadores={'recuo': 0.9, 'tempo_mirar': 0.92}, onde=['quartel', 'galeria'],
+            descricao='Empunhadura baixa inclinada para a frente, com nervuras para os dedos: segura firme sem pesar.')
+def empunhadura_curta(A):
+    q = A.base; _base_mlok(q, 0.05)
+    cont = suave([(-0.026, -0.004), (0.03, -0.004), (0.026, -0.012), (0.016, -0.036), (0.008, -0.047), (-0.004, -0.048), (-0.014, -0.04), (-0.024, -0.014)], 3)
+    lg = lambda y: 0.011 + 0.001 * GT.smooth(-0.004, -0.03, y)
+    q.add('polimero', punho_redondo(cont, -0.004, -0.048, lg, n=2.4, fatias=60, voltas=44, raio_base=0.004))
+    nerv = punho_redondo(cont, -0.004, -0.048, lambda y: lg(y) + 0.0009, n=2.4, fatias=60, voltas=44, raio_base=0.004)
+    for y in (-0.016, -0.024, -0.032, -0.04):
+        q.add('polimero', inter([nerv.copy(), caixa(-0.03, 0.001, y - 0.002, y, -1, 1)]))
+    A.pivo = (0, 0, 0)
+
+
+@_acessorio('empunhadura_quadrada', 'Empunhadura vertical quadrada', 'empunhadura', 'mlok_baixo', peso_kg=0.1, raridade='incomum', valor_troca=15,
+            modificadores={'recuo': 0.82, 'precisao_rajada': 1.3}, onde=['quartel', 'delegacia'],
+            descricao='Empunhadura alta de seção quadrada com cantos chanfrados, sulcos e tampa recartilhada (guarda pilha reserva).')
+def empunhadura_quadrada(A):
+    q = A.base; _base_mlok(q, 0.044)
+    q.add('polimero', solido(arred([(-0.022, -0.004), (0.022, -0.004), (0.022, -0.011), (0.0135, -0.03), (-0.0135, -0.024), (-0.022, -0.011)], 0.002),
+                             -0.0135, 0.0135, 0.0015))                                                     # cabeca inclinada
+    sec = arred([(-0.0135, -0.0135), (0.0135, -0.0135), (0.0135, 0.0135), (-0.0135, 0.0135)], 0.004)
+    corpo = ext_y(sec, -0.106, -0.02)
+    cortes = []
+    for y in (-0.044, -0.064, -0.084):
+        cortes.append(menos(ext_y(sec.buffer(0.002), y, y + 0.0014), ext_y(sec.buffer(-0.001), y - 0.001, y + 0.003)))
+    q.add('polimero', menos(corpo, *cortes))
+    q.add('polimero', ext_y(sec.buffer(0.0006), -0.11, -0.106))
+    q.add('recartilhado', _cil_y(0.0125, -0.118, -0.11, 0.0, 0.0, 48)); q.add('aluminio_preto', _cil_y(0.0105, -0.1195, -0.118, 0.0, 0.0, 40))
+    A.pivo = (0, 0, 0)
+
+
+@_acessorio('empunhadura_cilindrica', 'Empunhadura cilíndrica recartilhada', 'empunhadura', 'mlok_baixo', peso_kg=0.12, raridade='raro', valor_troca=18,
+            modificadores={'recuo': 0.84, 'precisao_rajada': 1.28}, onde=['quartel'],
+            descricao='Cilindro de alumínio recartilhado preso num bloco inclinado: a mão fica um pouco mais à frente.')
+def empunhadura_cilindrica(A):
+    q = A.base; _base_mlok(q, 0.044)
+    q.add('aluminio_preto', solido(arred([(-0.022, -0.004), (0.022, -0.004), (0.02, -0.012), (0.004, -0.03), (-0.016, -0.03), (-0.02, -0.014)], 0.002),
+                                   -0.011, 0.011, 0.0015))                                                 # bloco inclinado
+    L = 0.09; r = 0.0155
+    perf = [(0.0, 0.0), (r - 0.002, 0.0), (r, 0.002), (r, L - 0.003), (r - 0.003, L), (0.0, L)]
+    m = []
+    m.append(('aluminio_preto', torno_x(perf, 56)))
+    for a, b in ((0.012, 0.038), (0.044, 0.078)): m.append(('recartilhado', tubo_x(0.0, r + 0.0005, a, b, sec=56)))
+    for a in (0.0385, 0.0415): m.append(('aluminio_preto', tubo_x(0.0, r + 0.0008, a, a + 0.0015, sec=56)))
+    M = TF.translation_matrix([-0.006, -0.026, 0]) @ TF.rotation_matrix(math.radians(-80), [0, 0, 1])
+    for mat, g in m: q.add(mat, g.apply_transform(M))
+    A.pivo = (0, 0, 0)
+
+
+@_acessorio('batente_mao', 'Batente de mão', 'empunhadura', 'mlok_baixo', peso_kg=0.04, raridade='incomum', valor_troca=10,
+            modificadores={'recuo': 0.92, 'tempo_mirar': 0.9}, onde=['quartel', 'galeria'],
+            descricao='Gancho vazado na frente do guarda-mão: a mão encosta nele e não escorrega para o cano quente.')
+def batente_mao(A):
+    q = A.base; _base_mlok(q, 0.06)
+    fora = suave([(-0.036, -0.004), (0.036, -0.004), (0.042, -0.012), (0.042, -0.03), (0.034, -0.044), (0.022, -0.046), (0.012, -0.036), (-0.02, -0.012),
+                  (-0.036, -0.008)], 3)
+    furo = suave([(0.012, -0.0115), (0.031, -0.0115), (0.035, -0.02), (0.033, -0.033), (0.025, -0.037), (0.018, -0.03)], 3)
+    q.add('polimero', solido(Polygon(fora).difference(Polygon(furo)), -0.0075, 0.0075, 0.0018))
+    q.add('polimero', solido(LineString([(-0.032, -0.0055), (0.034, -0.0055)]).buffer(0.0008), -0.0085, 0.0085))   # aba fina de cima
+    A.pivo = (0, 0, 0)
+
+
+# variantes caramelo para a versao bicolor
+@_acessorio('empunhadura_curta_tan', 'Empunhadura curta inclinada (caramelo)', 'empunhadura', 'mlok_baixo', peso_kg=0.05, raridade='incomum', valor_troca=12,
+            modificadores={'recuo': 0.9, 'tempo_mirar': 0.92}, onde=['quartel'], descricao='A mesma empunhadura curta, em polímero caramelo.')
+def empunhadura_curta_tan(A): empunhadura_curta(A); _em_tan(A)
+
+
+@_acessorio('coronha_retratil_ar_tan', 'Coronha retrátil caramelo', 'coronha', 'coronha_ar', peso_kg=0.25, raridade='raro', valor_troca=24,
+            modificadores={'recuo': 0.7, 'precisao': 1.25}, onde=['quartel'], descricao='Coronha retrátil de 5 posições em polímero caramelo.')
+def coronha_retratil_ar_tan(A): coronha_retratil_12(A); _em_tan(A, {'polimero': 'polimero_tan'})
+
+
+@_acessorio('supressor_556_tan', 'Supressor 5,56 caramelo', 'boca', 'boca_556', peso_kg=0.45, raridade='muito raro', valor_troca=90,
+            modificadores={'ruido_m': 0.3, 'clarao': 0.05, 'recuo': 0.85}, onde=['quartel'],
+            descricao='O mesmo supressor com pintura cerâmica caramelo: o tiro é ouvido a 50 m em vez de 160.')
+def supressor_556_tan(A): supressor_556(A); _em_tan(A)
+
+
+@_acessorio('carregador_556_30_tan', 'Carregador 5,56 (30) caramelo', 'carregador', 'carregador_556', capacidade=30, municao='municao_556', peso_kg=0.13,
+            raridade='incomum', valor_troca=12, modificadores={}, onde=['quartel'], descricao='Carregador curvo de polímero caramelo, 30 tiros.')
+def carregador_556_30_tan(A): _carregador_curvo(A.base, 30); _em_tan(A); A.pivo = (MAG_X, MAG_Y, 0)
+
+
+NOVOS = {'encaixe_mira': [], 'encaixe_boca': ['supressor_556_tan'], 'encaixe_carregador': ['carregador_556_30_tan'],
+         'encaixe_coronha': ['coronha_retratil_ar_tan'], 'encaixe_laser': ['modulo_laser'], 'encaixe_lanterna': ['lanterna_compacta'],
+         'encaixe_empunhadura': ['empunhadura_curta', 'empunhadura_curta_tan', 'empunhadura_quadrada', 'empunhadura_cilindrica', 'batente_mao']}
+
+
+def _aceita_novos(A):
+    for e in A.encaixes:
+        for n in NOVOS.get(e['no'], []):
+            if n not in e.get('aceita', []): e['aceita'].append(n)
+
+
+def fuzil_556_bicolor(A):
+    fuzil_556(A); _aceita_novos(A)
+    _recolore(A.base, TAN)
+    for pt in A.partes:
+        if pt['no'] == 'carregador': _recolore(pt['peca'], {'polimero': 'polimero_tan'})
+    padrao = {'encaixe_mira': 'luneta_1_6', 'encaixe_boca': 'supressor_556_tan', 'encaixe_coronha': 'coronha_retratil_ar_tan',
+              'encaixe_empunhadura': 'empunhadura_curta_tan', 'encaixe_lanterna': 'lanterna_compacta'}
+    for e in A.encaixes:
+        if e['no'] in padrao: e['padrao'] = padrao[e['no']]
+
+
+REG['fuzil_556_bicolor'] = dict(REG['fuzil_556'], id='fuzil_556_bicolor', nome='Fuzil Vigília 5,56 bicolor', fn=fuzil_556_bicolor, raridade='muito raro',
+                                valor_troca=230, onde=['quartel'],
+                                descricao='O mesmo fuzil com guarda-mão, punho, carregador e coronha caramelo e receptor preto. Vem montado com '
+                                          'luneta 1-6×, supressor, lanterna compacta e empunhadura curta.')
+_f556 = REG['fuzil_556']['fn']
+def _fuzil_556_com_novos(A): _f556(A); _aceita_novos(A)
+REG['fuzil_556']['fn'] = _fuzil_556_com_novos

@@ -1844,7 +1844,8 @@
      "aceita": [
       "quebra_chamas_556",
       "compensador_556",
-      "supressor_556"
+      "supressor_556",
+      "supressor_556_tan"
      ],
      "padrao": "quebra_chamas_556",
      "explodir_m": [
@@ -1866,7 +1867,8 @@
      "aceita": [
       "carregador_556_30",
       "carregador_556_60",
-      "tambor_556_60"
+      "tambor_556_60",
+      "carregador_556_30_tan"
      ],
      "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda as malhas do nó carregador"
     },
@@ -1881,7 +1883,8 @@
      ],
      "aceita": [
       "coronha_retratil_ar",
-      "coronha_fixa_ar"
+      "coronha_fixa_ar",
+      "coronha_retratil_ar_tan"
      ],
      "padrao": "coronha_retratil_ar",
      "explodir_m": [
@@ -1901,7 +1904,12 @@
      ],
      "aceita": [
       "empunhadura_vertical",
-      "empunhadura_angulada"
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_quadrada",
+      "empunhadura_cilindrica",
+      "batente_mao"
      ],
      "explodir_m": [
       0.0,
@@ -1919,7 +1927,8 @@
       -0.437
      ],
      "aceita": [
-      "lanterna_fuzil"
+      "lanterna_fuzil",
+      "lanterna_compacta"
      ],
      "explodir_m": [
       0.06,
@@ -1937,7 +1946,8 @@
       -0.407
      ],
      "aceita": [
-      "laser_fuzil"
+      "laser_fuzil",
+      "modulo_laser"
      ],
      "explodir_m": [
       0.0,
@@ -2007,6 +2017,437 @@
      "no": "mira_ferro",
      "tipo": "mira",
      "pai": "fuzil_556",
+     "posicao_m": [
+      0.0,
+      0.131,
+      -0.029
+     ],
+     "descricao": "linha de visada das miras rebatíveis"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.09,
+     "laco": false,
+     "descricao": "um tiro (repita em rajada a 11 por segundo): transportador recua 80 mm, coice leve; a tampa da janela abre"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.1,
+     "laco": false,
+     "descricao": "último tiro: o ferrolho fica preso atrás"
+    },
+    "vazia": {
+     "duracao_s": 0.1,
+     "laco": true,
+     "descricao": "pose parada: ferrolho atrás"
+    },
+    "recarregar": {
+     "duracao_s": 2.2,
+     "laco": false,
+     "descricao": "aperta o retém, carregador cai (0,35 s), novo entra (1,72 s); trocar o nó carregador entre 0,6 e 1,3 s"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "troca o carregador e bate no retém: o ferrolho fecha (2,0 s)"
+    },
+    "trocar_modo": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "seletor: trava -> semi -> auto (no jogo, pare na posição escolhida)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.8,
+     "laco": false,
+     "descricao": "puxa a alavanca até ver o cartucho na câmara, solta e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "fuzil_556_bicolor",
+   "nome": "Fuzil Vigília 5,56 bicolor",
+   "grupo": "armas",
+   "categoria": "fuzil",
+   "classe": "fogo",
+   "calibre": "5,56",
+   "municao": "municao_556",
+   "capacidade": 30,
+   "dano": 42,
+   "alcance_m": 80,
+   "alcance_max_m": 400,
+   "modo": "semiautomático e automático (seletor)",
+   "tiros_por_s": 11,
+   "recarga_s": 2.2,
+   "recarga_vazia_s": 2.6,
+   "precisao": 0.8,
+   "recuo": 0.35,
+   "ruido_m": 160,
+   "durabilidade": 3000,
+   "peso_kg": 3.3,
+   "raridade": "muito raro",
+   "valor_troca": 230,
+   "onde": [
+    "quartel"
+   ],
+   "estojo_s": 0.02,
+   "descricao": "O mesmo fuzil com guarda-mão, punho, carregador e coronha caramelo e receptor preto. Vem montado com luneta 1-6×, supressor, lanterna compacta e empunhadura curta.",
+   "arquivo": "armas/fuzil_556_bicolor.glb",
+   "tamanho_m": [
+    0.043,
+    0.23,
+    0.616
+   ],
+   "triangulos": 43284,
+   "kb": 2260.9,
+   "partes": [
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": -12,
+     "descricao": "puxa para trás",
+     "pai": "fuzil_556_bicolor",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "seletor",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 90,
+     "descricao": "trava / semi (90°) / auto (180°)",
+     "pai": "fuzil_556_bicolor",
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": -0.08,
+     "descricao": "transportador: recua 80 mm a cada tiro; fica atrás com o carregador vazio",
+     "pai": "fuzil_556_bicolor",
+     "explodir_m": [
+      0.04,
+      0.05,
+      0.05
+     ]
+    },
+    {
+     "no": "alavanca",
+     "tipo": "desliza",
+     "curso_m": -0.065,
+     "descricao": "alavanca de manejo (puxa e solta)",
+     "pai": "fuzil_556_bicolor",
+     "explodir_m": [
+      -0.0,
+      0.04,
+      0.06
+     ]
+    },
+    {
+     "no": "tampa_janela",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": 100,
+     "descricao": "abre no primeiro tiro e fica aberta",
+     "pai": "fuzil_556_bicolor",
+     "explodir_m": [
+      0.04,
+      -0.01,
+      0.0
+     ]
+    },
+    {
+     "no": "retem_ferrolho",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -8,
+     "descricao": "retém do ferrolho (esquerda)",
+     "pai": "fuzil_556_bicolor",
+     "explodir_m": [
+      -0.03,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      0.12,
+      -0.99,
+      0.0
+     ],
+     "municao": "municao_556",
+     "capacidade": 30,
+     "descricao": "carregador curvo de 30",
+     "pai": "fuzil_556_bicolor",
+     "explodir_m": [
+      0.0,
+      -0.1,
+      -0.02
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_mira",
+     "tipo": "trilho_mira",
+     "pai": "fuzil_556_bicolor",
+     "posicao_m": [
+      0.0,
+      0.1165,
+      -0.117
+     ],
+     "aceita": [
+      "mira_holografica",
+      "mira_ponto_vermelho_tubo",
+      "luneta_1_6",
+      "luneta_4x"
+     ],
+     "padrao": "luneta_1_6",
+     "explodir_m": [
+      0.0,
+      0.07,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_alca",
+     "tipo": "alca_trilho",
+     "pai": "fuzil_556_bicolor",
+     "posicao_m": [
+      0.0,
+      0.1165,
+      -0.029
+     ],
+     "aceita": [
+      "alca_rebativel"
+     ],
+     "padrao": "alca_rebativel",
+     "explodir_m": [
+      -0.0,
+      0.05,
+      0.02
+     ]
+    },
+    {
+     "no": "encaixe_massa",
+     "tipo": "massa_trilho",
+     "pai": "fuzil_556_bicolor",
+     "posicao_m": [
+      0.0,
+      0.1165,
+      -0.462
+     ],
+     "aceita": [
+      "massa_rebativel"
+     ],
+     "padrao": "massa_rebativel",
+     "explodir_m": [
+      0.0,
+      0.05,
+      -0.02
+     ]
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_556",
+     "pai": "fuzil_556_bicolor",
+     "posicao_m": [
+      0.0,
+      0.093,
+      -0.561
+     ],
+     "aceita": [
+      "quebra_chamas_556",
+      "compensador_556",
+      "supressor_556",
+      "supressor_556_tan"
+     ],
+     "padrao": "supressor_556_tan",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.08
+     ]
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_556",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.077,
+      -0.142
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_556_30",
+      "carregador_556_60",
+      "tambor_556_60",
+      "carregador_556_30_tan"
+     ],
+     "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda as malhas do nó carregador"
+    },
+    {
+     "no": "encaixe_coronha",
+     "tipo": "coronha_ar",
+     "pai": "fuzil_556_bicolor",
+     "posicao_m": [
+      0.0,
+      0.09,
+      -0.011
+     ],
+     "aceita": [
+      "coronha_retratil_ar",
+      "coronha_fixa_ar",
+      "coronha_retratil_ar_tan"
+     ],
+     "padrao": "coronha_retratil_ar_tan",
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.08
+     ]
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "fuzil_556_bicolor",
+     "posicao_m": [
+      0.0,
+      0.063,
+      -0.337
+     ],
+     "aceita": [
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_quadrada",
+      "empunhadura_cilindrica",
+      "batente_mao"
+     ],
+     "padrao": "empunhadura_curta_tan",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "fuzil_556_bicolor",
+     "posicao_m": [
+      0.019,
+      0.087,
+      -0.437
+     ],
+     "aceita": [
+      "lanterna_fuzil",
+      "lanterna_compacta"
+     ],
+     "padrao": "lanterna_compacta",
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "trilho_cima",
+     "pai": "fuzil_556_bicolor",
+     "posicao_m": [
+      0.0,
+      0.1165,
+      -0.407
+     ],
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser"
+     ],
+     "explodir_m": [
+      0.0,
+      0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_bipe",
+     "tipo": "bipe",
+     "pai": "fuzil_556_bicolor",
+     "posicao_m": [
+      0.0,
+      0.063,
+      -0.467
+     ],
+     "aceita": [
+      "bipe"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_bandoleira",
+     "tipo": "bandoleira",
+     "pai": "fuzil_556_bicolor",
+     "posicao_m": [
+      -0.0205,
+      0.087,
+      -0.462
+     ],
+     "aceita": [
+      "bandoleira"
+     ],
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "fuzil_556_bicolor",
+     "posicao_m": [
+      0.0,
+      0.093,
+      -0.575
+     ],
+     "descricao": "clarão de boca e origem do disparo (-Z)"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "fuzil_556_bicolor",
+     "posicao_m": [
+      0.0148,
+      0.093,
+      -0.127
+     ],
+     "descricao": "onde nasce o estojo (vai para a direita e um pouco para trás)"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "fuzil_556_bicolor",
      "posicao_m": [
       0.0,
       0.131,
@@ -3797,15 +4238,15 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Tambor de 60 com o eixo ao longo do cano e chave de corda na tampa: o dobro de tiros, mas pesado e lento para trocar.",
+   "descricao": "Tambor de 60 com o eixo ao longo do cano e tampa abaulada na frente: o dobro de tiros, mas pesado e lento para trocar.",
    "arquivo": "acessorios/tambor_556_60.glb",
    "tamanho_m": [
-    0.099,
-    0.15,
-    0.116
+    0.106,
+    0.156,
+    0.105
    ],
-   "triangulos": 6400,
-   "kb": 304.2
+   "triangulos": 4980,
+   "kb": 237.7
   },
   {
    "id": "carregador_556_60",
@@ -3834,6 +4275,359 @@
    ],
    "triangulos": 13840,
    "kb": 653.8
+  },
+  {
+   "id": "modulo_laser",
+   "nome": "Módulo de mira laser",
+   "grupo": "acessorios",
+   "categoria": "laser",
+   "encaixe": "trilho_cima",
+   "peso_kg": 0.24,
+   "raridade": "muito raro",
+   "valor_troca": 80,
+   "usa": "pilhas",
+   "autonomia_min": 360,
+   "luz": {
+    "alcance_m": 20,
+    "angulo_graus": 28,
+    "lumens": 250
+   },
+   "modificadores": {
+    "precisao_sem_mirar": 1.5
+   },
+   "onde": [
+    "quartel"
+   ],
+   "liga_desliga": "laser no encaixe \"laser\" e luz no encaixe \"feixe\" (para -Z)",
+   "descricao": "Caixa caramelo com laser e luz: botão de disparo quadriculado, seletor giratório, tampa da lente presa por cordão e tampa de pilha recartilhada atrás. Presa por garra de trilho com alavanca.",
+   "arquivo": "acessorios/modulo_laser.glb",
+   "tamanho_m": [
+    0.039,
+    0.065,
+    0.103
+   ],
+   "triangulos": 5478,
+   "kb": 279.7,
+   "encaixes": [
+    {
+     "no": "laser",
+     "tipo": "efeito",
+     "pai": "modulo_laser",
+     "posicao_m": [
+      0.0085,
+      0.033,
+      -0.0475
+     ],
+     "descricao": "origem do laser (-Z)"
+    },
+    {
+     "no": "feixe",
+     "tipo": "efeito",
+     "pai": "modulo_laser",
+     "posicao_m": [
+      -0.0065,
+      0.033,
+      -0.0515
+     ],
+     "descricao": "SpotLight3D (-Z)"
+    }
+   ]
+  },
+  {
+   "id": "lanterna_compacta",
+   "nome": "Lanterna compacta de trilho",
+   "grupo": "acessorios",
+   "categoria": "lanterna",
+   "encaixe": "mlok_lado",
+   "peso_kg": 0.11,
+   "raridade": "incomum",
+   "valor_troca": 24,
+   "usa": "pilhas",
+   "autonomia_min": 60,
+   "luz": {
+    "alcance_m": 45,
+    "angulo_graus": 20,
+    "lumens": 600
+   },
+   "modificadores": {},
+   "onde": [
+    "quartel",
+    "delegacia",
+    "posto"
+   ],
+   "liga_desliga": "SpotLight3D no encaixe \"feixe\" (para -Z)",
+   "descricao": "Lanterna curta com garra de trilho, corpo recartilhado e coroa dentada na frente (serve para quebrar vidro).",
+   "arquivo": "acessorios/lanterna_compacta.glb",
+   "tamanho_m": [
+    0.033,
+    0.026,
+    0.076
+   ],
+   "triangulos": 2104,
+   "kb": 108.6,
+   "encaixes": [
+    {
+     "no": "feixe",
+     "tipo": "efeito",
+     "pai": "lanterna_compacta",
+     "posicao_m": [
+      0.02,
+      0.0,
+      -0.031
+     ],
+     "descricao": "SpotLight3D aqui (-Z)"
+    }
+   ]
+  },
+  {
+   "id": "empunhadura_curta",
+   "nome": "Empunhadura curta inclinada",
+   "grupo": "acessorios",
+   "categoria": "empunhadura",
+   "encaixe": "mlok_baixo",
+   "peso_kg": 0.05,
+   "raridade": "incomum",
+   "valor_troca": 12,
+   "modificadores": {
+    "recuo": 0.9,
+    "tempo_mirar": 0.92
+   },
+   "onde": [
+    "quartel",
+    "galeria"
+   ],
+   "descricao": "Empunhadura baixa inclinada para a frente, com nervuras para os dedos: segura firme sem pesar.",
+   "arquivo": "acessorios/empunhadura_curta.glb",
+   "tamanho_m": [
+    0.026,
+    0.047,
+    0.053
+   ],
+   "triangulos": 6808,
+   "kb": 321.0
+  },
+  {
+   "id": "empunhadura_quadrada",
+   "nome": "Empunhadura vertical quadrada",
+   "grupo": "acessorios",
+   "categoria": "empunhadura",
+   "encaixe": "mlok_baixo",
+   "peso_kg": 0.1,
+   "raridade": "incomum",
+   "valor_troca": 15,
+   "modificadores": {
+    "recuo": 0.82,
+    "precisao_rajada": 1.3
+   },
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "Empunhadura alta de seção quadrada com cantos chanfrados, sulcos e tampa recartilhada (guarda pilha reserva).",
+   "arquivo": "acessorios/empunhadura_quadrada.glb",
+   "tamanho_m": [
+    0.028,
+    0.119,
+    0.044
+   ],
+   "triangulos": 1820,
+   "kb": 95.6
+  },
+  {
+   "id": "empunhadura_cilindrica",
+   "nome": "Empunhadura cilíndrica recartilhada",
+   "grupo": "acessorios",
+   "categoria": "empunhadura",
+   "encaixe": "mlok_baixo",
+   "peso_kg": 0.12,
+   "raridade": "raro",
+   "valor_troca": 18,
+   "modificadores": {
+    "recuo": 0.84,
+    "precisao_rajada": 1.28
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Cilindro de alumínio recartilhado preso num bloco inclinado: a mão fica um pouco mais à frente.",
+   "arquivo": "acessorios/empunhadura_cilindrica.glb",
+   "tamanho_m": [
+    0.033,
+    0.117,
+    0.046
+   ],
+   "triangulos": 1948,
+   "kb": 107.5
+  },
+  {
+   "id": "batente_mao",
+   "nome": "Batente de mão",
+   "grupo": "acessorios",
+   "categoria": "empunhadura",
+   "encaixe": "mlok_baixo",
+   "peso_kg": 0.04,
+   "raridade": "incomum",
+   "valor_troca": 10,
+   "modificadores": {
+    "recuo": 0.92,
+    "tempo_mirar": 0.9
+   },
+   "onde": [
+    "quartel",
+    "galeria"
+   ],
+   "descricao": "Gancho vazado na frente do guarda-mão: a mão encosta nele e não escorrega para o cano quente.",
+   "arquivo": "acessorios/batente_mao.glb",
+   "tamanho_m": [
+    0.02,
+    0.045,
+    0.078
+   ],
+   "triangulos": 1984,
+   "kb": 94.9
+  },
+  {
+   "id": "empunhadura_curta_tan",
+   "nome": "Empunhadura curta inclinada (caramelo)",
+   "grupo": "acessorios",
+   "categoria": "empunhadura",
+   "encaixe": "mlok_baixo",
+   "peso_kg": 0.05,
+   "raridade": "incomum",
+   "valor_troca": 12,
+   "modificadores": {
+    "recuo": 0.9,
+    "tempo_mirar": 0.92
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "A mesma empunhadura curta, em polímero caramelo.",
+   "arquivo": "acessorios/empunhadura_curta_tan.glb",
+   "tamanho_m": [
+    0.026,
+    0.047,
+    0.053
+   ],
+   "triangulos": 6808,
+   "kb": 321.0
+  },
+  {
+   "id": "coronha_retratil_ar_tan",
+   "nome": "Coronha retrátil caramelo",
+   "grupo": "acessorios",
+   "categoria": "coronha",
+   "encaixe": "coronha_ar",
+   "peso_kg": 0.25,
+   "raridade": "raro",
+   "valor_troca": 24,
+   "modificadores": {
+    "recuo": 0.7,
+    "precisao": 1.25
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Coronha retrátil de 5 posições em polímero caramelo.",
+   "arquivo": "acessorios/coronha_retratil_ar_tan.glb",
+   "tamanho_m": [
+    0.043,
+    0.148,
+    0.277
+   ],
+   "triangulos": 15612,
+   "kb": 736.4,
+   "partes": [
+    {
+     "no": "soleira",
+     "tipo": "desliza",
+     "curso_m": -0.064,
+     "descricao": "corre no tubo, 5 posições de 16 mm",
+     "pai": "coronha_retratil_ar_tan",
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.08
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "ombro",
+     "tipo": "efeito",
+     "pai": "soleira",
+     "posicao_m": [
+      -0.0,
+      -0.05,
+      0.276
+     ],
+     "descricao": "ponto da soleira que encosta no ombro"
+    }
+   ],
+   "animacoes": {
+    "estender": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "abre a coronha até a última posição"
+    },
+    "recolher": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "fecha a coronha"
+    }
+   }
+  },
+  {
+   "id": "supressor_556_tan",
+   "nome": "Supressor 5,56 caramelo",
+   "grupo": "acessorios",
+   "categoria": "boca",
+   "encaixe": "boca_556",
+   "peso_kg": 0.45,
+   "raridade": "muito raro",
+   "valor_troca": 90,
+   "modificadores": {
+    "ruido_m": 0.3,
+    "clarao": 0.05,
+    "recuo": 0.85
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "O mesmo supressor com pintura cerâmica caramelo: o tiro é ouvido a 50 m em vez de 160.",
+   "arquivo": "acessorios/supressor_556_tan.glb",
+   "tamanho_m": [
+    0.041,
+    0.044,
+    0.176
+   ],
+   "triangulos": 4076,
+   "kb": 206.3
+  },
+  {
+   "id": "carregador_556_30_tan",
+   "nome": "Carregador 5,56 (30) caramelo",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_556",
+   "capacidade": 30,
+   "municao": "municao_556",
+   "peso_kg": 0.13,
+   "raridade": "incomum",
+   "valor_troca": 12,
+   "modificadores": {},
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Carregador curvo de polímero caramelo, 30 tiros.",
+   "arquivo": "acessorios/carregador_556_30_tan.glb",
+   "tamanho_m": [
+    0.024,
+    0.192,
+    0.094
+   ],
+   "triangulos": 4468,
+   "kb": 213.7
   }
  ],
  "municao": [

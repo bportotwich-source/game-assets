@@ -1,0 +1,2872 @@
+{
+ "grid": {
+  "module_width": 2.0,
+  "trailer_floor": 0.8,
+  "yard_level": 0.05,
+  "gravel_level": 0.07,
+  "road_level": 0.09,
+  "trailer": {
+   "length": 12.0,
+   "width": 4.0,
+   "wall_top": 3.1500000000000004,
+   "ceiling": 3.08,
+   "front": "+Z local (porta)",
+   "hitch": "-X local"
+  },
+  "lots": [
+   {
+    "x": -10.0,
+    "z": -10.0,
+    "rotY": 0
+   },
+   {
+    "x": -10.0,
+    "z": -1.0,
+    "rotY": 0
+   },
+   {
+    "x": -10.0,
+    "z": 8.0,
+    "rotY": 0
+   },
+   {
+    "x": 10.0,
+    "z": -8.0,
+    "rotY": 180
+   },
+   {
+    "x": 10.0,
+    "z": 1.0,
+    "rotY": 180
+   },
+   {
+    "x": 10.0,
+    "z": 10.0,
+    "rotY": 180
+   }
+  ],
+  "lane_x": [
+   -2.5,
+   2.5
+  ],
+  "site": {
+   "x": [
+    -22.0,
+    22.0
+   ],
+   "z": [
+    -16.0,
+    16.0
+   ]
+  },
+  "textures": "PBR (albedo + normal + ORM), 2 m tiles, UV in metres / 2"
+ },
+ "placements": [
+  {
+   "piece": "trailer_a",
+   "pos": [
+    -10.0,
+    0.0,
+    -10.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote1",
+    "ext"
+   ]
+  },
+  {
+   "piece": "trailer_in",
+   "pos": [
+    -10.0,
+    0.0,
+    -10.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "trailer_roof",
+   "pos": [
+    -10.0,
+    0.0,
+    -10.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote1",
+    "roof"
+   ]
+  },
+  {
+   "piece": "door_trailer",
+   "pos": [
+    -12.84,
+    0.805,
+    -8.05
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote1",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "sofa",
+   "pos": [
+    -12.7,
+    0.8,
+    -10.6
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "armchair",
+   "pos": [
+    -14.9,
+    0.8,
+    -11.883
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "coffee_table",
+   "pos": [
+    -14.3,
+    0.8,
+    -10.5
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "tv_stand",
+   "pos": [
+    -15.883,
+    0.8,
+    -10.4
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "rug",
+   "pos": [
+    -14.1,
+    0.8,
+    -10.5
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "plant",
+   "pos": [
+    -15.5,
+    0.8,
+    -8.55
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "kitchen",
+   "pos": [
+    -10.075,
+    0.8,
+    -11.883
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "fridge",
+   "pos": [
+    -8.81,
+    0.8,
+    -11.883
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "dinette",
+   "pos": [
+    -10.45,
+    0.8,
+    -8.58
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "chair_d",
+   "pos": [
+    -11.02,
+    0.8,
+    -8.58
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "chair_d",
+   "pos": [
+    -9.88,
+    0.8,
+    -8.58
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    -11.3,
+    0.8,
+    -11.55
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "shower",
+   "pos": [
+    -7.93,
+    0.8,
+    -11.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "wc",
+   "pos": [
+    -7.0,
+    0.8,
+    -11.883
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "vanity",
+   "pos": [
+    -6.657,
+    0.8,
+    -10.6
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "bed",
+   "pos": [
+    -4.117,
+    0.8,
+    -10.3
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "nightstand",
+   "pos": [
+    -4.117,
+    0.8,
+    -11.42
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "dresser",
+   "pos": [
+    -5.95,
+    0.8,
+    -11.883
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "deck",
+   "pos": [
+    -10.0,
+    0.0,
+    -10.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "deck_awning",
+   "pos": [
+    -10.0,
+    0.0,
+    -10.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote1",
+    "roof"
+   ]
+  },
+  {
+   "piece": "carport",
+   "pos": [
+    -10.0,
+    0.0,
+    -10.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote1",
+    "roof"
+   ]
+  },
+  {
+   "piece": "car_sedan_r",
+   "pos": [
+    -6.3,
+    0.07,
+    -5.65
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "propane",
+   "pos": [
+    -16.65,
+    0.0,
+    -11.2
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "power_post",
+   "pos": [
+    -16.9,
+    0.0,
+    -8.6
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "shed",
+   "pos": [
+    -15.25,
+    0.05,
+    -4.1
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "wheelie_bin",
+   "pos": [
+    -3.0,
+    0.07,
+    -7.05
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "planter",
+   "pos": [
+    -12.4,
+    0.77,
+    -5.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "picnic_table",
+   "pos": [
+    -12.3,
+    0.05,
+    -4.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "grill",
+   "pos": [
+    -10.6,
+    0.05,
+    -3.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "lattice",
+   "pos": [
+    -16.3,
+    0.0,
+    -5.6
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote1"
+   ]
+  },
+  {
+   "piece": "trailer_b",
+   "pos": [
+    -10.0,
+    0.0,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote2",
+    "ext"
+   ]
+  },
+  {
+   "piece": "trailer_in",
+   "pos": [
+    -10.0,
+    0.0,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "trailer_roof",
+   "pos": [
+    -10.0,
+    0.0,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote2",
+    "roof"
+   ]
+  },
+  {
+   "piece": "door_trailer",
+   "pos": [
+    -12.84,
+    0.805,
+    0.95
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote2",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "sofa",
+   "pos": [
+    -12.7,
+    0.8,
+    -1.6
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "armchair",
+   "pos": [
+    -14.9,
+    0.8,
+    -2.883
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "coffee_table",
+   "pos": [
+    -14.3,
+    0.8,
+    -1.5
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "tv_stand",
+   "pos": [
+    -15.883,
+    0.8,
+    -1.4
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "rug",
+   "pos": [
+    -14.1,
+    0.8,
+    -1.5
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "kitchen",
+   "pos": [
+    -10.075,
+    0.8,
+    -2.883
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "fridge",
+   "pos": [
+    -8.81,
+    0.8,
+    -2.883
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "dinette",
+   "pos": [
+    -10.45,
+    0.8,
+    0.42
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "chair_d",
+   "pos": [
+    -11.02,
+    0.8,
+    0.42
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "chair_d",
+   "pos": [
+    -9.88,
+    0.8,
+    0.42
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    -11.3,
+    0.8,
+    -2.55
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "shower",
+   "pos": [
+    -7.93,
+    0.8,
+    -2.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "wc",
+   "pos": [
+    -7.0,
+    0.8,
+    -2.883
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "vanity",
+   "pos": [
+    -6.657,
+    0.8,
+    -1.6
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "bed",
+   "pos": [
+    -4.117,
+    0.8,
+    -1.3
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "nightstand",
+   "pos": [
+    -4.117,
+    0.8,
+    -2.42
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "dresser",
+   "pos": [
+    -5.95,
+    0.8,
+    -2.883
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "deck",
+   "pos": [
+    -10.0,
+    0.0,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "deck_awning",
+   "pos": [
+    -10.0,
+    0.0,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote2",
+    "roof"
+   ]
+  },
+  {
+   "piece": "carport",
+   "pos": [
+    -10.0,
+    0.0,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote2",
+    "roof"
+   ]
+  },
+  {
+   "piece": "car_wagon_b",
+   "pos": [
+    -6.3,
+    0.07,
+    3.35
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "propane",
+   "pos": [
+    -16.65,
+    0.0,
+    -2.2
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "power_post",
+   "pos": [
+    -16.9,
+    0.0,
+    0.4
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "shed",
+   "pos": [
+    -15.25,
+    0.05,
+    4.9
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "wheelie_bin",
+   "pos": [
+    -3.0,
+    0.07,
+    1.95
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "lawn_chair",
+   "pos": [
+    -12.9,
+    0.77,
+    2.5
+   ],
+   "rotY": 160.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "lawn_chair_r",
+   "pos": [
+    -11.7,
+    0.77,
+    2.6
+   ],
+   "rotY": 200.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "clothesline",
+   "pos": [
+    -11.9,
+    0.05,
+    5.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote2"
+   ]
+  },
+  {
+   "piece": "trailer_c",
+   "pos": [
+    -10.0,
+    0.0,
+    8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote3",
+    "ext"
+   ]
+  },
+  {
+   "piece": "trailer_in",
+   "pos": [
+    -10.0,
+    0.0,
+    8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "trailer_roof",
+   "pos": [
+    -10.0,
+    0.0,
+    8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "door_trailer",
+   "pos": [
+    -12.84,
+    0.805,
+    9.95
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote3",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "sofa",
+   "pos": [
+    -12.7,
+    0.8,
+    7.4
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "armchair",
+   "pos": [
+    -14.9,
+    0.8,
+    6.117
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "coffee_table",
+   "pos": [
+    -14.3,
+    0.8,
+    7.5
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "tv_stand",
+   "pos": [
+    -15.883,
+    0.8,
+    7.6
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "rug",
+   "pos": [
+    -14.1,
+    0.8,
+    7.5
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "plant",
+   "pos": [
+    -15.5,
+    0.8,
+    9.45
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "kitchen",
+   "pos": [
+    -10.075,
+    0.8,
+    6.117
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "fridge",
+   "pos": [
+    -8.81,
+    0.8,
+    6.117
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "dinette",
+   "pos": [
+    -10.45,
+    0.8,
+    9.42
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "chair_d",
+   "pos": [
+    -11.02,
+    0.8,
+    9.42
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "chair_d",
+   "pos": [
+    -9.88,
+    0.8,
+    9.42
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    -11.3,
+    0.8,
+    6.45
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "shower",
+   "pos": [
+    -7.93,
+    0.8,
+    6.1
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "wc",
+   "pos": [
+    -7.0,
+    0.8,
+    6.117
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "vanity",
+   "pos": [
+    -6.657,
+    0.8,
+    7.4
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "bed",
+   "pos": [
+    -4.117,
+    0.8,
+    7.7
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "nightstand",
+   "pos": [
+    -4.117,
+    0.8,
+    6.58
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "dresser",
+   "pos": [
+    -5.95,
+    0.8,
+    6.117
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "deck",
+   "pos": [
+    -10.0,
+    0.0,
+    8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "deck_awning",
+   "pos": [
+    -10.0,
+    0.0,
+    8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "carport",
+   "pos": [
+    -10.0,
+    0.0,
+    8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote3",
+    "roof"
+   ]
+  },
+  {
+   "piece": "car_pickup_y",
+   "pos": [
+    -6.3,
+    0.07,
+    12.35
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "propane",
+   "pos": [
+    -16.65,
+    0.0,
+    6.8
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "power_post",
+   "pos": [
+    -16.9,
+    0.0,
+    9.4
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "shed",
+   "pos": [
+    -15.25,
+    0.05,
+    13.9
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "wheelie_bin",
+   "pos": [
+    -3.0,
+    0.07,
+    10.95
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "picnic_table",
+   "pos": [
+    -12.3,
+    0.05,
+    13.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "grill",
+   "pos": [
+    -10.6,
+    0.05,
+    14.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote3"
+   ]
+  },
+  {
+   "piece": "trailer_d",
+   "pos": [
+    10.0,
+    0.0,
+    -8.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote4",
+    "ext"
+   ]
+  },
+  {
+   "piece": "trailer_in",
+   "pos": [
+    10.0,
+    0.0,
+    -8.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "trailer_roof",
+   "pos": [
+    10.0,
+    0.0,
+    -8.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote4",
+    "roof"
+   ]
+  },
+  {
+   "piece": "door_trailer",
+   "pos": [
+    12.84,
+    0.805,
+    -9.95
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote4",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "sofa",
+   "pos": [
+    12.7,
+    0.8,
+    -7.4
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "armchair",
+   "pos": [
+    14.9,
+    0.8,
+    -6.117
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "coffee_table",
+   "pos": [
+    14.3,
+    0.8,
+    -7.5
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "tv_stand",
+   "pos": [
+    15.883,
+    0.8,
+    -7.6
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "rug",
+   "pos": [
+    14.1,
+    0.8,
+    -7.5
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "kitchen",
+   "pos": [
+    10.075,
+    0.8,
+    -6.117
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "fridge",
+   "pos": [
+    8.81,
+    0.8,
+    -6.117
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "dinette",
+   "pos": [
+    10.45,
+    0.8,
+    -9.42
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "chair_d",
+   "pos": [
+    11.02,
+    0.8,
+    -9.42
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "chair_d",
+   "pos": [
+    9.88,
+    0.8,
+    -9.42
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    11.3,
+    0.8,
+    -6.45
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "shower",
+   "pos": [
+    7.93,
+    0.8,
+    -6.1
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "wc",
+   "pos": [
+    7.0,
+    0.8,
+    -6.117
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "vanity",
+   "pos": [
+    6.657,
+    0.8,
+    -7.4
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "bed",
+   "pos": [
+    4.117,
+    0.8,
+    -7.7
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "nightstand",
+   "pos": [
+    4.117,
+    0.8,
+    -6.58
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "dresser",
+   "pos": [
+    5.95,
+    0.8,
+    -6.117
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "deck",
+   "pos": [
+    10.0,
+    0.0,
+    -8.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "deck_awning",
+   "pos": [
+    10.0,
+    0.0,
+    -8.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote4",
+    "roof"
+   ]
+  },
+  {
+   "piece": "carport",
+   "pos": [
+    10.0,
+    0.0,
+    -8.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote4",
+    "roof"
+   ]
+  },
+  {
+   "piece": "car_hatch_g",
+   "pos": [
+    6.3,
+    0.07,
+    -12.35
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "propane",
+   "pos": [
+    16.65,
+    0.0,
+    -6.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "power_post",
+   "pos": [
+    16.9,
+    0.0,
+    -9.4
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "shed",
+   "pos": [
+    15.25,
+    0.05,
+    -13.9
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "wheelie_bin",
+   "pos": [
+    3.0,
+    0.07,
+    -10.95
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "planter",
+   "pos": [
+    12.4,
+    0.77,
+    -12.1
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "lawn_chair",
+   "pos": [
+    12.9,
+    0.77,
+    -11.5
+   ],
+   "rotY": 340.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "lawn_chair_r",
+   "pos": [
+    11.7,
+    0.77,
+    -11.6
+   ],
+   "rotY": 380.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "clothesline",
+   "pos": [
+    11.9,
+    0.05,
+    -14.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote4"
+   ]
+  },
+  {
+   "piece": "trailer_e",
+   "pos": [
+    10.0,
+    0.0,
+    1.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote5",
+    "ext"
+   ]
+  },
+  {
+   "piece": "trailer_in",
+   "pos": [
+    10.0,
+    0.0,
+    1.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "trailer_roof",
+   "pos": [
+    10.0,
+    0.0,
+    1.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote5",
+    "roof"
+   ]
+  },
+  {
+   "piece": "door_trailer",
+   "pos": [
+    12.84,
+    0.805,
+    -0.95
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote5",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "sofa",
+   "pos": [
+    12.7,
+    0.8,
+    1.6
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "armchair",
+   "pos": [
+    14.9,
+    0.8,
+    2.883
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "coffee_table",
+   "pos": [
+    14.3,
+    0.8,
+    1.5
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "tv_stand",
+   "pos": [
+    15.883,
+    0.8,
+    1.4
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "rug",
+   "pos": [
+    14.1,
+    0.8,
+    1.5
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "plant",
+   "pos": [
+    15.5,
+    0.8,
+    -0.45
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "kitchen",
+   "pos": [
+    10.075,
+    0.8,
+    2.883
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "fridge",
+   "pos": [
+    8.81,
+    0.8,
+    2.883
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "dinette",
+   "pos": [
+    10.45,
+    0.8,
+    -0.42
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "chair_d",
+   "pos": [
+    11.02,
+    0.8,
+    -0.42
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "chair_d",
+   "pos": [
+    9.88,
+    0.8,
+    -0.42
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    11.3,
+    0.8,
+    2.55
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "shower",
+   "pos": [
+    7.93,
+    0.8,
+    2.9
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "wc",
+   "pos": [
+    7.0,
+    0.8,
+    2.883
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "vanity",
+   "pos": [
+    6.657,
+    0.8,
+    1.6
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "bed",
+   "pos": [
+    4.117,
+    0.8,
+    1.3
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "nightstand",
+   "pos": [
+    4.117,
+    0.8,
+    2.42
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "dresser",
+   "pos": [
+    5.95,
+    0.8,
+    2.883
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "deck",
+   "pos": [
+    10.0,
+    0.0,
+    1.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "deck_awning",
+   "pos": [
+    10.0,
+    0.0,
+    1.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote5",
+    "roof"
+   ]
+  },
+  {
+   "piece": "carport",
+   "pos": [
+    10.0,
+    0.0,
+    1.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote5",
+    "roof"
+   ]
+  },
+  {
+   "piece": "car_coupe_t",
+   "pos": [
+    6.3,
+    0.07,
+    -3.35
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "propane",
+   "pos": [
+    16.65,
+    0.0,
+    2.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "power_post",
+   "pos": [
+    16.9,
+    0.0,
+    -0.4
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "shed",
+   "pos": [
+    15.25,
+    0.05,
+    -4.9
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "wheelie_bin",
+   "pos": [
+    3.0,
+    0.07,
+    -1.95
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "picnic_table",
+   "pos": [
+    12.3,
+    0.05,
+    -4.8
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "grill",
+   "pos": [
+    10.6,
+    0.05,
+    -5.2
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "lattice",
+   "pos": [
+    16.3,
+    0.0,
+    -3.4
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote5"
+   ]
+  },
+  {
+   "piece": "trailer_f",
+   "pos": [
+    10.0,
+    0.0,
+    10.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote6",
+    "ext"
+   ]
+  },
+  {
+   "piece": "trailer_in",
+   "pos": [
+    10.0,
+    0.0,
+    10.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "trailer_roof",
+   "pos": [
+    10.0,
+    0.0,
+    10.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote6",
+    "roof"
+   ]
+  },
+  {
+   "piece": "door_trailer",
+   "pos": [
+    12.84,
+    0.805,
+    8.05
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote6",
+    "door"
+   ],
+   "door": {
+    "closed": 180.0,
+    "open": 270.0
+   }
+  },
+  {
+   "piece": "sofa",
+   "pos": [
+    12.7,
+    0.8,
+    10.6
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "armchair",
+   "pos": [
+    14.9,
+    0.8,
+    11.883
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "coffee_table",
+   "pos": [
+    14.3,
+    0.8,
+    10.5
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "tv_stand",
+   "pos": [
+    15.883,
+    0.8,
+    10.4
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "rug",
+   "pos": [
+    14.1,
+    0.8,
+    10.5
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "kitchen",
+   "pos": [
+    10.075,
+    0.8,
+    11.883
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "fridge",
+   "pos": [
+    8.81,
+    0.8,
+    11.883
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "dinette",
+   "pos": [
+    10.45,
+    0.8,
+    8.58
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "chair_d",
+   "pos": [
+    11.02,
+    0.8,
+    8.58
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "chair_d",
+   "pos": [
+    9.88,
+    0.8,
+    8.58
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    11.3,
+    0.8,
+    11.55
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "shower",
+   "pos": [
+    7.93,
+    0.8,
+    11.9
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "wc",
+   "pos": [
+    7.0,
+    0.8,
+    11.883
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "vanity",
+   "pos": [
+    6.657,
+    0.8,
+    10.6
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "bed",
+   "pos": [
+    4.117,
+    0.8,
+    10.3
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "nightstand",
+   "pos": [
+    4.117,
+    0.8,
+    11.42
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "dresser",
+   "pos": [
+    5.95,
+    0.8,
+    11.883
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "deck",
+   "pos": [
+    10.0,
+    0.0,
+    10.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "deck_awning",
+   "pos": [
+    10.0,
+    0.0,
+    10.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote6",
+    "roof"
+   ]
+  },
+  {
+   "piece": "carport",
+   "pos": [
+    10.0,
+    0.0,
+    10.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote6",
+    "roof"
+   ]
+  },
+  {
+   "piece": "car_sedan_w",
+   "pos": [
+    6.3,
+    0.07,
+    5.65
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "propane",
+   "pos": [
+    16.65,
+    0.0,
+    11.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "power_post",
+   "pos": [
+    16.9,
+    0.0,
+    8.6
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "shed",
+   "pos": [
+    15.25,
+    0.05,
+    4.1
+   ],
+   "rotY": 270.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "wheelie_bin",
+   "pos": [
+    3.0,
+    0.07,
+    7.05
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "planter",
+   "pos": [
+    12.4,
+    0.77,
+    5.9
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "lawn_chair",
+   "pos": [
+    12.9,
+    0.77,
+    6.5
+   ],
+   "rotY": 340.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "lawn_chair_r",
+   "pos": [
+    11.7,
+    0.77,
+    6.4
+   ],
+   "rotY": 380.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "clothesline",
+   "pos": [
+    11.9,
+    0.05,
+    4.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "lote6"
+   ]
+  },
+  {
+   "piece": "site",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "fence",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "sign_board",
+   "pos": [
+    -5.0,
+    0.05,
+    15.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "mailboxes",
+   "pos": [
+    4.6,
+    0.09,
+    14.7
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "dumpster",
+   "pos": [
+    -17.5,
+    0.05,
+    14.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "speed_bump",
+   "pos": [
+    0.0,
+    0.0,
+    5.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "speed_bump",
+   "pos": [
+    0.0,
+    0.0,
+    -6.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "street_light",
+   "pos": [
+    -3.2,
+    0.0,
+    8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "street_light",
+   "pos": [
+    3.2,
+    0.0,
+    3.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "street_light",
+   "pos": [
+    -3.2,
+    0.0,
+    -1.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "street_light",
+   "pos": [
+    3.2,
+    0.0,
+    -8.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -20.5,
+    0.05,
+    -14.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -20.5,
+    0.05,
+    3.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    20.5,
+    0.05,
+    -2.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    20.5,
+    0.05,
+    14.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -6.0,
+    0.05,
+    -14.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    6.5,
+    0.05,
+    14.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -20.5,
+    0.05,
+    12.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    13.0,
+    0.05,
+    -14.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    -19.8,
+    0.05,
+    -5.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    19.8,
+    0.05,
+    6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    16.5,
+    0.05,
+    -14.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    -14.5,
+    0.05,
+    14.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque",
+    "roof"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -7.4,
+    0.05,
+    15.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -8.4,
+    0.05,
+    15.1
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    7.0,
+    0.05,
+    14.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -21.0,
+    0.05,
+    9.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    21.0,
+    0.05,
+    -9.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    21.0,
+    0.05,
+    9.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    0.5,
+    0.09,
+    9.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "parque"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    -13.6,
+    0.8,
+    -0.1
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "lote2"
+   ]
+  }
+ ]
+}

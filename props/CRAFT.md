@@ -77,18 +77,36 @@ Ingredientes são ids do loot (`props/loot/catalogo.json`); estações e constru
 | Fosso com estacas (`fosso_estacas`) | 17 | 4× Feixe de lenha (`lenha`) | Pá (`pa`) | - | - |
 | Holofote em poste com bateria (`holofote`) | 17 | 2× Cano de ferro (`cano_metal`), 2× Rolo de fio elétrico (`fio_eletrico`), 1× Bateria de carro (`bateria_carro`), 1× Placa de circuito (`placa_circuito`), 1× Lanterna (`lanterna`) | Chave inglesa (`chave_inglesa`) | Bancada de eletrônica (`bancada_eletronica`) | - |
 | Plataforma de tiro de andaime (`plataforma_tiro`) | 17 | 6× Cano de ferro (`cano_metal`), 6× Tábua de madeira (`tabua`), 1× Pote de parafusos e porcas (`pote_parafusos`), 4× Saco de areia (`saco_areia`) | Chave inglesa (`chave_inglesa`) | - | - |
+| Barraca de lona com cumeeira (`barraca_lona`) | 18 | 2× Lona dobrada (`lona`), 1× Rolo de corda (`corda`), 3× Feixe de lenha (`lenha`) | à mão | - | - |
+| Cata-vento de bomba d'água em torre (`cata_vento`) | 18 | 8× Cano de ferro (`cano_metal`), 6× Chapa de metal ondulada (`chapa_metal`), 1× Molas e engrenagens (`engrenagens`), 1× Tambor de 200 L (`tambor_200l`) | Chave inglesa (`chave_inglesa`) | Forja de tambor com fole (`forja_tambor`) | - |
+| Chuveiro de balde com cortina de lona (`chuveiro_balde`) | 18 | 4× Feixe de lenha (`lenha`), 1× Lona dobrada (`lona`), 1× Rolo de corda (`corda`), 1× Lata vazia (`lata_vazia`), 1× Pallet de madeira (`pallet`) | Martelo de unha (`martelo`) | - | - |
+| Coelheira de tábuas e tela (`coelheira`) | 18 | 6× Tábua de madeira (`tabua`), 1× Caixa de pregos (`caixa_pregos`), 1× Rolo de arame liso (`arame_liso`), 1× Chapa de metal ondulada (`chapa_metal`) | Martelo de unha (`martelo`) | - | - |
+| Estufa de cano e plástico (`estufa`) | 18 | 8× Cano de PVC (`tubo_pvc`), 2× Rolo de plástico transparente (`rolo_plastico`), 6× Tábua de madeira (`tabua`), 10× terra (cavar com pá) | Pá (`pa`) | - | - |
+| Latrina de tábuas com fossa (`latrina`) | 18 | 10× Tábua de madeira (`tabua`), 1× Caixa de pregos (`caixa_pregos`), 1× Chapa de metal ondulada (`chapa_metal`) | Pá (`pa`) | - | - |
+| Maca de campanha dobrável (`maca_campanha`) | 18 | 3× Cano de ferro (`cano_metal`), 1× Lona dobrada (`lona`), 1× Rolo de corda (`corda`) | Chave inglesa (`chave_inglesa`) | Mesa de costura com máquina manual (`bancada_costura`) | - |
+| Mesa comprida do refeitório com bancos (`mesa_refeitorio`) | 18 | 10× Tábua de madeira (`tabua`), 1× Caixa de pregos (`caixa_pregos`) | Martelo de unha (`martelo`) | Bancada de carpintaria de cavaletes (`bancada_carpintaria`) | - |
+| Painéis solares no cavalete com baterias (`painel_solar`) | 18 | 4× Feixe de lenha (`lenha`), 2× Rolo de fio elétrico (`fio_eletrico`), 2× Bateria de carro (`bateria_carro`), 1× Placa de circuito (`placa_circuito`), 2× Tábua de madeira (`tabua`) | Chave inglesa (`chave_inglesa`) | Bancada de eletrônica (`bancada_eletronica`) | - |
+| Panelão no tripé sobre fogueira (`panelao_tripe`) | 18 | 3× Feixe de lenha (`lenha`), 1× Corrente com cadeado (`corrente_cadeado`), 8× Punhado de pedras (`pedras`), 4× Punhado de sucata (`sucata_metal`) | Martelo de unha (`martelo`) | Forja de tambor com fole (`forja_tambor`) | - |
+| Poço de pedra com sarilho (`poco_sarilho`) | 18 | 24× Punhado de pedras (`pedras`), 2× Saco de cimento 25 kg (`cimento`), 4× Feixe de lenha (`lenha`), 1× Rolo de corda (`corda`), 1× Chapa de metal ondulada (`chapa_metal`) | Pá (`pa`) | - | - |
+| Tanque de lavar de cimento (`tanque_lavar`) | 18 | 1× Saco de cimento 25 kg (`cimento`), 10× Tijolos (`tijolo`), 1× Cano de PVC (`tubo_pvc`) | à mão | - | - |
+| Torre de rádio da comunidade (`torre_radio`) | 18 | 10× Cano de ferro (`cano_metal`), 4× Rolo de fio elétrico (`fio_eletrico`), 1× Rádio portátil (`radio_portatil`), 2× Placa de circuito (`placa_circuito`), 1× Bateria de carro (`bateria_carro`), 2× Rolo de arame liso (`arame_liso`) | Chave inglesa (`chave_inglesa`) | Bancada de eletrônica (`bancada_eletronica`) | - |
 
 ## Estações: o que cada uma fabrica ou produz
 
 | Estação | Fase | Fabrica | Produz sozinha (com um morador) |
 |---|---|---|---|
 | Alambique de panela (`alambique`) | 2 | - | 1× Garrafa de álcool 70 % (`alcool`) a cada 90 min, gastando 3 comida, 1 lenha |
-| Bancada de carpintaria de cavaletes (`bancada_carpintaria`) | 2 | Armário de armas de madeira com tela, Estante de despensa com caixotes, Baú de madeira com cadeado, Porta reforçada com chapa | - |
+| Bancada de carpintaria de cavaletes (`bancada_carpintaria`) | 2 | Armário de armas de madeira com tela, Estante de despensa com caixotes, Baú de madeira com cadeado, Porta reforçada com chapa, Mesa comprida do refeitório com bancos | - |
+| Mesa de costura com máquina manual (`bancada_costura`) | 2 | Maca de campanha dobrável | - |
 | Composteira de pallets (`composteira`) | 2 | - | 1× Saco de adubo de composto (`adubo`) a cada 1440 min, gastando 4 restos de comida |
 | Defumador de tábuas (`defumador`) | 2 | - | 4× Peça de carne defumada (`carne_defumada`) a cada 240 min, gastando 4 carne crua, 1 lenha |
 | Filtro de água em barril (`filtro_barril`) | 2 | - | 1× Galão de água 5 L (`galao_agua`) a cada 60 min, gastando 5 agua suja |
-| Forja de tambor com fole (`forja_tambor`) | 2 | Grade de janela de vergalhão | - |
-| Bancada de eletrônica (`bancada_eletronica`) | 3 | Holofote em poste com bateria | - |
+| Forja de tambor com fole (`forja_tambor`) | 2 | Grade de janela de vergalhão, Panelão no tripé sobre fogueira, Cata-vento de bomba d'água em torre | - |
+| Bancada de eletrônica (`bancada_eletronica`) | 3 | Holofote em poste com bateria, Painéis solares no cavalete com baterias, Torre de rádio da comunidade | - |
+| Cata-vento de bomba d'água em torre (`cata_vento`) | 3 | - | 2× Galão de água 5 L (`galao_agua`) a cada 60 min, gastando  |
+| Coelheira de tábuas e tela (`coelheira`) | 3 | - | 2× Carne crua embrulhada (`carne_crua`) a cada 2880 min, gastando 2 restos de comida, 1 palha |
+| Estufa de cano e plástico (`estufa`) | 3 | - | 1× Cesto de legumes da estufa (`cesto_legumes`) a cada 1440 min, gastando 1 galao_agua |
+| Poço de pedra com sarilho (`poco_sarilho`) | 3 | - | 4× Galão de água 5 L (`galao_agua`) a cada 60 min, gastando  |
 | Bancada de trabalho com morsa (`bancada_trabalho`) | - | Colete de placas de sucata | - |
 | Fogueira de pedras (`fogueira`) | - | Curativo de pano fervido | - |
 
@@ -99,29 +117,31 @@ Ingredientes são ids do loot (`props/loot/catalogo.json`); estações e constru
 | Carretel de linha e anzóis (`linha_pesca`) | 1 | 1×1 | 0,1 kg | casa_barcos, casas, supermercado, parque_trailers | - | Bolsa de cintura de pano, Vara de pesca improvisada |
 | Garrafa PET vazia 2 L (`garrafa_pet`) | 1 | 1×2 | 0,05 kg | casas, rua, supermercado, diner, posto | - | Filtro de água de garrafa |
 | Garrafa de álcool 70 % (`alcool`) | 1 | 1×2 | 1,0 kg | supermercado, clinica, casas, posto | - | Curativo de pano fervido, Lamparina de lata, Tocha de pano e álcool |
-| Lata vazia (`lata_vazia`) | 1 | 1×1 | 0,06 kg | casas, rua, supermercado, diner, abrigo | comer Lata de feijão (`lata_feijao`) (1), comer Lata de milho (`lata_milho`) (1) | Alarme de latas, Caneca de lata com alça de arame, Fogareiro de lata, Lamparina de lata |
-| Lona dobrada (`lona`) | 1 | 2×2 | 2,5 kg | armazem, fazenda, garagem, parque_trailers, posto | - | Coletor de água da chuva, Mochila de lona improvisada, Torre de vigia |
+| Lata vazia (`lata_vazia`) | 1 | 1×1 | 0,06 kg | casas, rua, supermercado, diner, abrigo | comer Lata de feijão (`lata_feijao`) (1), comer Lata de milho (`lata_milho`) (1) | Alarme de latas, Caneca de lata com alça de arame, Chuveiro de balde com cortina de lona, Fogareiro de lata, Lamparina de lata |
+| Lona dobrada (`lona`) | 1 | 2×2 | 2,5 kg | armazem, fazenda, garagem, parque_trailers, posto | - | Barraca de lona com cumeeira, Chuveiro de balde com cortina de lona, Coletor de água da chuva, Maca de campanha dobrável, Mochila de lona improvisada, Torre de vigia |
 | Pacote de abraçadeiras de nylon (`abracadeiras`) | 1 | 1×1 | 0,1 kg | garagem, casas, fabrica, cinema, supermercado | - | amarra rápido: armadilhas, lanternas na arma, reparos |
 | Pedra de amolar (`pedra_amolar`) | 1 | 1×1 | 0,4 kg | casas, fazenda, serraria, casa_de_campo | - | recupera o fio de facas, facão, machado e lança (sem bancada) |
 | Pote de parafusos e porcas (`pote_parafusos`) | 1 | 1×1 | 0,9 kg | garagem, casas, fabrica, serraria | - | Chapa de seteira para janela, Colete de placas de sucata, Grade de janela de vergalhão, Kit de reparo improvisado, Mesa de recarga de munição, Plataforma de tiro de andaime, Porta reforçada com chapa |
-| Punhado de pedras (`pedras`) | 1 | 1×1 | 2,0 kg | rua, parque, fazenda, casa_barcos, serraria | - | Filtro de água de garrafa, Filtro de água em barril, Fogueira de pedras, Kit de acender fogo |
-| Punhado de sucata (`sucata_metal`) | 1 | 2×1 | 1,2 kg | ferrovelho, garagem, posto, fabrica, rua | desmontar Carcaça de carro depenada (`carcaca_carro`) (12), desmontar Pilha de sucata (`pilha_sucata`) (8), desmontar Carrinho de compras (`carrinho_compras`) (3), desmontar Arquivo de aço 4 gavetas (`arquivo_aco`) (4), desmontar Estante de aço (5 prateleiras) (`estante_metal`) (4) | Grade de janela de vergalhão, Kit de acender fogo |
-| Rolo de arame liso (`arame_liso`) | 1 | 1×1 | 1,0 kg | armazem, fazenda, serraria, garagem, casa_de_campo | - | Armadilha de laço, Armário de armas de madeira com tela, Caneca de lata com alça de arame, Cavalo de frisa de estacas, Composteira de pallets, Kit de reparo improvisado |
+| Punhado de pedras (`pedras`) | 1 | 1×1 | 2,0 kg | rua, parque, fazenda, casa_barcos, serraria | - | Filtro de água de garrafa, Filtro de água em barril, Fogueira de pedras, Kit de acender fogo, Panelão no tripé sobre fogueira, Poço de pedra com sarilho |
+| Punhado de sucata (`sucata_metal`) | 1 | 2×1 | 1,2 kg | ferrovelho, garagem, posto, fabrica, rua | desmontar Carcaça de carro depenada (`carcaca_carro`) (12), desmontar Pilha de sucata (`pilha_sucata`) (8), desmontar Carrinho de compras (`carrinho_compras`) (3), desmontar Arquivo de aço 4 gavetas (`arquivo_aco`) (4), desmontar Estante de aço (5 prateleiras) (`estante_metal`) (4) | Grade de janela de vergalhão, Kit de acender fogo, Panelão no tripé sobre fogueira |
+| Rolo de arame liso (`arame_liso`) | 1 | 1×1 | 1,0 kg | armazem, fazenda, serraria, garagem, casa_de_campo | - | Armadilha de laço, Armário de armas de madeira com tela, Caneca de lata com alça de arame, Cavalo de frisa de estacas, Coelheira de tábuas e tela, Composteira de pallets, Kit de reparo improvisado, Torre de rádio da comunidade |
 | Trapos amarrados (`trapos`) | 1 | 1×1 | 0,3 kg | casas, lavanderia, hotel, motel, garagem | desmontar Pilha de roupas dobradas (`roupas`) (3), desmontar Cama de solteiro (`cama_solteiro`) (2), desmontar Cama de casal (`cama_casal`) (3) | Bolsa de cintura de pano, Capacete de panela acolchoado, Curativo de pano fervido, Filtro de água de garrafa, Filtro de água em barril, Kit de acender fogo, Kit de reparo improvisado, Lamparina de lata, Mesa de enfermaria improvisada, Mochila de lona improvisada, Tala de tábua e pano, Tocha de pano e álcool |
-| Cano de PVC (`tubo_pvc`) | 2 | 4×1 | 0,6 kg | casas, armazem, fabrica, piscina, fazenda | - | Alambique de panela, Filtro de água em barril |
-| Corrente com cadeado (`corrente_cadeado`) | 2 | 2×1 | 2,2 kg | garagem, armazem, delegacia, estacao, parque_trailers | - | Armário de armas de madeira com tela, Porta reforçada com chapa, Sino de alarme de botijão |
+| Cano de PVC (`tubo_pvc`) | 2 | 4×1 | 0,6 kg | casas, armazem, fabrica, piscina, fazenda | - | Alambique de panela, Estufa de cano e plástico, Filtro de água em barril, Tanque de lavar de cimento |
+| Corrente com cadeado (`corrente_cadeado`) | 2 | 2×1 | 2,2 kg | garagem, armazem, delegacia, estacao, parque_trailers | - | Armário de armas de madeira com tela, Panelão no tripé sobre fogueira, Porta reforçada com chapa, Sino de alarme de botijão |
 | Lata de cola de contato (`cola_contato`) | 2 | 1×1 | 0,3 kg | casas, garagem, serraria, escolinha | - | cola couro, borracha e madeira: proteções, reparo de botas e mochila |
-| Molas e engrenagens (`engrenagens`) | 2 | 1×1 | 0,6 kg | fabrica, garagem, relojoaria, casas | desmontar Relógio de parede parado (`relogio_parede`) (2), desmontar Máquina de lavar (`maquina_lavar`) (3), desmontar Vitrola com discos (`vitrola`) (2) | mecanismos: armadilhas, besta, bomba d'água, cata-vento |
+| Molas e engrenagens (`engrenagens`) | 2 | 1×1 | 0,6 kg | fabrica, garagem, relojoaria, casas | desmontar Relógio de parede parado (`relogio_parede`) (2), desmontar Máquina de lavar (`maquina_lavar`) (3), desmontar Vitrola com discos (`vitrola`) (2) | Cata-vento de bomba d'água em torre |
 | Par de dobradiças (`dobradicas`) | 2 | 1×1 | 0,4 kg | casas, garagem, serraria, armazem | desmontar Guarda-roupa 2 portas (`guarda_roupa`) (2), desmontar Armário aéreo de cozinha (`armario_aereo`) (2) | Armário de armas de madeira com tela, Baú de madeira com cadeado |
 | Peça de carne defumada (`carne_defumada`) | 2 | 1×1 | 0,6 kg | abrigo, fazenda | fazer Defumador de tábuas (`defumador`) (4) | fome -40; dura 10 dias sem estragar |
 | Retalho de couro (`couro`) | 2 | 2×1 | 0,5 kg | casas, fazenda, mansao, concessionaria, cinema | desmontar Poltrona (`poltrona`) (2), desmontar Sofá 3 lugares (`sofa`) (3), desmontar Mesa de booth com dois sofás (`mesa_booth`) (2) | Colete de placas de sucata, Forja de tambor com fole |
-| Rolo de fio elétrico (`fio_eletrico`) | 2 | 1×1 | 0,8 kg | casas, fabrica, garagem, cinema, hotel | desmontar Cordão de luzes (`cordao_luzes`) (1), desmontar Abajur (`abajur`) (1) | Bancada de eletrônica, Holofote em poste com bateria |
+| Rolo de fio elétrico (`fio_eletrico`) | 2 | 1×1 | 0,8 kg | casas, fabrica, garagem, cinema, hotel | desmontar Cordão de luzes (`cordao_luzes`) (1), desmontar Abajur (`abajur`) (1) | Bancada de eletrônica, Holofote em poste com bateria, Painéis solares no cavalete com baterias, Torre de rádio da comunidade |
 | Saco de adubo de composto (`adubo`) | 2 | 2×2 | 8,0 kg | abrigo, fazenda, supermercado | fazer Composteira de pallets (`composteira`) (1) | canteiro adubado rende 50 % mais por 3 colheitas |
 | Saco de carvão (`carvao`) | 2 | 2×2 | 3,0 kg | supermercado, posto, casas, diner, armazem | fazer Fogueira de pedras (`fogueira`) (1) | Filtro de água de garrafa, Filtro de água em barril, Kit de acender fogo |
-| Tijolos (`tijolo`) | 2 | 1×1 | 2,4 kg | fabrica, ruinas, casas, armazem | desmontar ruínas (6) | Alambique de panela, Defumador de tábuas, Fogão a lenha de tambor, Forja de tambor com fole, Prateleira de tábuas e tijolos |
+| Tijolos (`tijolo`) | 2 | 1×1 | 2,4 kg | fabrica, ruinas, casas, armazem | desmontar ruínas (6) | Alambique de panela, Defumador de tábuas, Fogão a lenha de tambor, Forja de tambor com fole, Prateleira de tábuas e tijolos, Tanque de lavar de cimento |
+| Carne crua embrulhada (`carne_crua`) | 3 | 1×1 | 0,8 kg | fazenda | fazer Coelheira de tábuas e tela (`coelheira`) (2) | estraga em 2 dias: cozinhe no panelão ou defume |
+| Cesto de legumes da estufa (`cesto_legumes`) | 3 | 2×2 | 2,5 kg | fazenda | fazer Estufa de cano e plástico (`estufa`) (1) | alface, tomate e cenoura: comida fresca que espanta a fraqueza |
 | Motor elétrico pequeno (`motor_eletrico`) | 3 | 2×1 | 1,6 kg | casas, fabrica, garagem, lavanderia | desmontar Máquina de lavar (`maquina_lavar`) (1), desmontar Aquecedor a óleo (`aquecedor`) (1), desmontar Compressor de ar com tanque (`compressor_ar`) (1) | gera energia girando (cata-vento, bicicleta-gerador) ou move bomba d'água |
-| Placa de circuito (`placa_circuito`) | 3 | 1×1 | 0,2 kg | casas, escritorio, cinema, delegacia, correios | desmontar Rack com TV (`rack_tv`) (2), desmontar TV de tubo com tela rachada (`tv_tubo`) (2), desmontar Rádio portátil (`radio_portatil`) (1) | Bancada de eletrônica, Holofote em poste com bateria |
-| Saco de cimento 25 kg (`cimento`) | 4 | 3×2 | 25,0 kg | armazem, fabrica, garagem_vertical, ruinas | - | muralha de concreto, cisterna, reforma de prédios (fase 4) |
+| Placa de circuito (`placa_circuito`) | 3 | 1×1 | 0,2 kg | casas, escritorio, cinema, delegacia, correios | desmontar Rack com TV (`rack_tv`) (2), desmontar TV de tubo com tela rachada (`tv_tubo`) (2), desmontar Rádio portátil (`radio_portatil`) (1) | Bancada de eletrônica, Holofote em poste com bateria, Painéis solares no cavalete com baterias, Torre de rádio da comunidade |
+| Saco de cimento 25 kg (`cimento`) | 4 | 3×2 | 25,0 kg | armazem, fabrica, garagem_vertical, ruinas | - | Poço de pedra com sarilho, Tanque de lavar de cimento |
 
 ## Armazenamento do abrigo
 

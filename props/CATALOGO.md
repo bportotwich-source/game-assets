@@ -252,6 +252,19 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Holofote em poste com bateria (`holofote`) | 17 | Defesa da base | 0,85 × 2,88 × 0,90 | - | cabeca | - | 1536 |
 | Sino de alarme de botijão (`sino_alarme`) | 17 | Defesa da base | 1,30 × 2,30 × 0,84 | - | - | - | 3728 |
 | Plataforma de tiro de andaime (`plataforma_tiro`) | 17 | Defesa da base | 2,09 × 2,50 × 1,06 | - | - | - | 8528 |
+| Barraca de lona com cumeeira (`barraca_lona`) | 18 | Comunidade | 2,70 × 1,74 × 2,77 | - | - | dormir | 6020 |
+| Latrina de tábuas com fossa (`latrina`) | 18 | Comunidade | 1,24 × 2,42 × 1,40 | - | porta | - | 4480 |
+| Chuveiro de balde com cortina de lona (`chuveiro_balde`) | 18 | Comunidade | 1,11 × 2,69 × 1,10 | - | - | - | 3496 |
+| Tanque de lavar de cimento (`tanque_lavar`) | 18 | Comunidade | 1,30 × 0,96 × 1,16 | - | - | - | 3140 |
+| Mesa comprida do refeitório com bancos (`mesa_refeitorio`) | 18 | Comunidade | 2,60 × 1,09 × 1,61 | - | - | sentar | 3424 |
+| Panelão no tripé sobre fogueira (`panelao_tripe`) | 18 | Comunidade | 2,06 × 2,05 × 1,54 | - | - | - | 6024 |
+| Maca de campanha dobrável (`maca_campanha`) | 18 | Comunidade | 2,15 × 0,51 × 0,70 | - | - | dormir | 2560 |
+| Poço de pedra com sarilho (`poco_sarilho`) | 18 | Comunidade | 2,09 × 3,05 × 1,50 | - | sarilho | - | 7688 |
+| Coelheira de tábuas e tela (`coelheira`) | 18 | Agricultura | 1,66 × 1,27 × 0,84 | - | tampa | - | 6216 |
+| Estufa de cano e plástico (`estufa`) | 18 | Agricultura | 4,13 × 2,12 × 2,46 | - | - | - | 32060 |
+| Painéis solares no cavalete com baterias (`painel_solar`) | 18 | Energia | 2,86 × 1,41 × 1,47 | - | - | - | 1236 |
+| Cata-vento de bomba d'água em torre (`cata_vento`) | 18 | Energia | 2,40 × 6,65 × 3,45 | - | cabeca | - | 5976 |
+| Torre de rádio da comunidade (`torre_radio`) | 18 | Comunidade | 5,59 × 9,74 × 5,71 | - | - | - | 4436 |
 
 ## Loot
 
@@ -368,3 +381,6 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Bolsa de cintura de pano (`bolsa_cintura`) | 15 | Roupas e equipamento | equipamento | 1 | 0,3 kg | 1 | +3 × 2 células de acesso rápido (usar sem abrir a mochila) | abrigo |
 | Peça de carne defumada (`carne_defumada`) | 16 | Comida | comida | 3 | 0,6 kg | 4 | fome -40; dura 10 dias sem estragar | abrigo, fazenda |
 | Saco de adubo de composto (`adubo`) | 16 | Agricultura | material | 2 | 8,0 kg | 1 | canteiro adubado rende 50 % mais por 3 colheitas | abrigo, fazenda, supermercado |
+| Carne crua embrulhada (`carne_crua`) | 18 | Comida | comida | 3 | 0,8 kg | 4 | estraga em 2 dias: cozinhe no panelão ou defume | fazenda |
+| Cesto de legumes da estufa (`cesto_legumes`) | 18 | Comida | comida | 4 | 2,5 kg | 1 | alface, tomate e cenoura: comida fresca que espanta a fraqueza | fazenda |
+| Rolo de plástico transparente (`rolo_plastico`) | 18 | Materiais de construção | sucata | 2 | 4,0 kg | 1 | cobre estufas e janelas sem vidro | fazenda, supermercado, galeria, serraria |

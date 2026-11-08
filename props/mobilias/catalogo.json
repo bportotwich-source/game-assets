@@ -9205,6 +9205,554 @@
    ],
    "triangulos": 8528,
    "kb": 584.4
+  },
+  {
+   "id": "barraca_lona",
+   "nome": "Barraca de lona com cumeeira",
+   "grupo": "mobilias",
+   "categoria": "comunidade",
+   "montagem": "floor",
+   "lote": 18,
+   "comodos": [
+    "abrigo",
+    "fazenda",
+    "rua",
+    "parque"
+   ],
+   "constroi": {
+    "lona": 2,
+    "corda": 1,
+    "lenha": 3
+   },
+   "ferramenta": "nenhuma",
+   "fase": 3,
+   "moradores": 2,
+   "deitar": true,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    1.3
+   ],
+   "estacao": "moradia (abriga 2 moradores; protege da chuva, mas não do frio forte nem de zumbi)",
+   "arquivo": "mobilias/barraca_lona.glb",
+   "tamanho_m": [
+    2.7,
+    1.738,
+    2.767
+   ],
+   "triangulos": 6020,
+   "kb": 628.5
+  },
+  {
+   "id": "latrina",
+   "nome": "Latrina de tábuas com fossa",
+   "grupo": "mobilias",
+   "categoria": "comunidade",
+   "montagem": "floor",
+   "lote": 18,
+   "comodos": [
+    "abrigo",
+    "fazenda"
+   ],
+   "constroi": {
+    "tabua": 10,
+    "caixa_pregos": 1,
+    "chapa_metal": 1
+   },
+   "ferramenta": "pa",
+   "fase": 3,
+   "higiene": 2,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.85
+   ],
+   "estacao": "latrina (fossa longe da água: sem ela a comunidade adoece; cal tira o cheiro)",
+   "arquivo": "mobilias/latrina.glb",
+   "tamanho_m": [
+    1.24,
+    2.419,
+    1.4
+   ],
+   "triangulos": 4480,
+   "kb": 421.0,
+   "partes": [
+    {
+     "no": "porta",
+     "origem": [
+      0.48,
+      0.05,
+      0.55
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": -100
+    }
+   ]
+  },
+  {
+   "id": "chuveiro_balde",
+   "nome": "Chuveiro de balde com cortina de lona",
+   "grupo": "mobilias",
+   "categoria": "comunidade",
+   "montagem": "floor",
+   "lote": 18,
+   "comodos": [
+    "abrigo",
+    "fazenda"
+   ],
+   "constroi": {
+    "lenha": 4,
+    "lona": 1,
+    "corda": 1,
+    "lata_vazia": 1,
+    "pallet": 1
+   },
+   "ferramenta": "martelo",
+   "fase": 3,
+   "higiene": 2,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "estacao": "banho (um balde de 10 L por banho; banho quente se a água vier do fogão)",
+   "arquivo": "mobilias/chuveiro_balde.glb",
+   "tamanho_m": [
+    1.108,
+    2.688,
+    1.104
+   ],
+   "triangulos": 3496,
+   "kb": 345.8
+  },
+  {
+   "id": "tanque_lavar",
+   "nome": "Tanque de lavar de cimento",
+   "grupo": "mobilias",
+   "categoria": "comunidade",
+   "montagem": "floor",
+   "lote": 18,
+   "comodos": [
+    "abrigo",
+    "fazenda",
+    "casas"
+   ],
+   "constroi": {
+    "cimento": 1,
+    "tijolo": 10,
+    "tubo_pvc": 1
+   },
+   "ferramenta": "nenhuma",
+   "fase": 3,
+   "higiene": 1,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.6
+   ],
+   "estacao": "lavanderia (roupas e ataduras limpas: menos doença na comunidade)",
+   "arquivo": "mobilias/tanque_lavar.glb",
+   "tamanho_m": [
+    1.304,
+    0.96,
+    1.164
+   ],
+   "triangulos": 3140,
+   "kb": 379.6
+  },
+  {
+   "id": "mesa_refeitorio",
+   "nome": "Mesa comprida do refeitório com bancos",
+   "grupo": "mobilias",
+   "categoria": "comunidade",
+   "montagem": "floor",
+   "lote": 18,
+   "comodos": [
+    "abrigo",
+    "igreja",
+    "escolinha",
+    "fazenda"
+   ],
+   "constroi": {
+    "tabua": 10,
+    "caixa_pregos": 1
+   },
+   "ferramenta": "martelo",
+   "estacao_obra": "bancada_carpintaria",
+   "fase": 3,
+   "sentar": 8,
+   "moral": 1,
+   "estacao": "refeitório (8 lugares; comer junto melhora o moral da comunidade)",
+   "arquivo": "mobilias/mesa_refeitorio.glb",
+   "tamanho_m": [
+    2.6,
+    1.092,
+    1.61
+   ],
+   "triangulos": 3424,
+   "kb": 344.8
+  },
+  {
+   "id": "panelao_tripe",
+   "nome": "Panelão no tripé sobre fogueira",
+   "grupo": "mobilias",
+   "categoria": "comunidade",
+   "montagem": "floor",
+   "lote": 18,
+   "comodos": [
+    "abrigo",
+    "fazenda",
+    "rua",
+    "parque"
+   ],
+   "constroi": {
+    "lenha": 3,
+    "corrente_cadeado": 1,
+    "pedras": 8,
+    "sucata_metal": 4
+   },
+   "ferramenta": "martelo",
+   "estacao_obra": "forja_tambor",
+   "fase": 3,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.8
+   ],
+   "luz_m": 6,
+   "estacao": "cozinha comunitária (uma panela alimenta 10 moradores; sopa rende mais que comer cada lata sozinho)",
+   "arquivo": "mobilias/panelao_tripe.glb",
+   "tamanho_m": [
+    2.058,
+    2.047,
+    1.539
+   ],
+   "triangulos": 6024,
+   "kb": 547.8
+  },
+  {
+   "id": "maca_campanha",
+   "nome": "Maca de campanha dobrável",
+   "grupo": "mobilias",
+   "categoria": "comunidade",
+   "montagem": "floor",
+   "lote": 18,
+   "comodos": [
+    "abrigo",
+    "clinica",
+    "igreja",
+    "escolinha"
+   ],
+   "constroi": {
+    "cano_metal": 3,
+    "lona": 1,
+    "corda": 1
+   },
+   "ferramenta": "chave_inglesa",
+   "estacao_obra": "bancada_costura",
+   "fase": 3,
+   "deitar": true,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.55
+   ],
+   "estacao": "enfermaria (ferido deitado aqui sara 2× mais rápido; 3 macas e uma mesa de enfermaria viram hospital de campanha)",
+   "arquivo": "mobilias/maca_campanha.glb",
+   "tamanho_m": [
+    2.15,
+    0.51,
+    0.704
+   ],
+   "triangulos": 2560,
+   "kb": 266.5
+  },
+  {
+   "id": "poco_sarilho",
+   "nome": "Poço de pedra com sarilho",
+   "grupo": "mobilias",
+   "categoria": "comunidade",
+   "montagem": "floor",
+   "lote": 18,
+   "comodos": [
+    "abrigo",
+    "fazenda",
+    "rua"
+   ],
+   "constroi": {
+    "pedras": 24,
+    "cimento": 2,
+    "lenha": 4,
+    "corda": 1,
+    "chapa_metal": 1
+   },
+   "ferramenta": "pa",
+   "fase": 3,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.95
+   ],
+   "produz": {
+    "item": "galao_agua",
+    "qtd": 4,
+    "a_cada_min": 60,
+    "consome": {}
+   },
+   "estacao": "poço (água sem fim, mas precisa ferver ou filtrar; cavar leva 2 dias de 3 moradores)",
+   "arquivo": "mobilias/poco_sarilho.glb",
+   "tamanho_m": [
+    2.089,
+    3.052,
+    1.5
+   ],
+   "triangulos": 7688,
+   "kb": 786.2,
+   "partes": [
+    {
+     "no": "sarilho",
+     "origem": [
+      0.0,
+      1.3,
+      0.0
+     ],
+     "tipo": "porta",
+     "eixo": "x",
+     "abre_graus": 360,
+     "gira_livre": true
+    }
+   ]
+  },
+  {
+   "id": "coelheira",
+   "nome": "Coelheira de tábuas e tela",
+   "grupo": "mobilias",
+   "categoria": "agricultura",
+   "montagem": "floor",
+   "lote": 18,
+   "comodos": [
+    "abrigo",
+    "fazenda",
+    "casas"
+   ],
+   "constroi": {
+    "tabua": 6,
+    "caixa_pregos": 1,
+    "arame_liso": 1,
+    "chapa_metal": 1
+   },
+   "ferramenta": "martelo",
+   "fase": 3,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "produz": {
+    "item": "carne_crua",
+    "qtd": 2,
+    "a_cada_min": 2880,
+    "consome": {
+     "restos de comida": 2,
+     "palha": 1
+    }
+   },
+   "estacao": "criação (2 casais de coelhos dão carne e couro a cada 2 dias, se tiver capim e restos)",
+   "arquivo": "mobilias/coelheira.glb",
+   "tamanho_m": [
+    1.66,
+    1.267,
+    0.836
+   ],
+   "triangulos": 6216,
+   "kb": 439.4,
+   "partes": [
+    {
+     "no": "tampa",
+     "origem": [
+      0.0,
+      1.1300000000000001,
+      -0.36
+     ],
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -80
+    }
+   ]
+  },
+  {
+   "id": "estufa",
+   "nome": "Estufa de cano e plástico",
+   "grupo": "mobilias",
+   "categoria": "agricultura",
+   "montagem": "floor",
+   "lote": 18,
+   "comodos": [
+    "abrigo",
+    "fazenda"
+   ],
+   "constroi": {
+    "tubo_pvc": 8,
+    "rolo_plastico": 2,
+    "tabua": 6,
+    "terra": 10
+   },
+   "ferramenta": "pa",
+   "fase": 3,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "produz": {
+    "item": "cesto_legumes",
+    "qtd": 1,
+    "a_cada_min": 1440,
+    "consome": {
+     "galao_agua": 1
+    }
+   },
+   "estacao": "estufa (canteiros que produzem até no inverno; com adubo rendem 50 % mais)",
+   "arquivo": "mobilias/estufa.glb",
+   "tamanho_m": [
+    4.13,
+    2.124,
+    2.46
+   ],
+   "triangulos": 32060,
+   "kb": 1730.3
+  },
+  {
+   "id": "painel_solar",
+   "nome": "Painéis solares no cavalete com baterias",
+   "grupo": "mobilias",
+   "categoria": "energia",
+   "montagem": "floor",
+   "lote": 18,
+   "comodos": [
+    "abrigo",
+    "fazenda",
+    "casas"
+   ],
+   "constroi": {
+    "lenha": 4,
+    "fio_eletrico": 2,
+    "bateria_carro": 2,
+    "placa_circuito": 1,
+    "tabua": 2
+   },
+   "ferramenta": "chave_inglesa",
+   "estacao_obra": "bancada_eletronica",
+   "fase": 3,
+   "energia_w": 300,
+   "precisa_achar": "placas solares (telhados das casas, do posto e da concessionária)",
+   "estacao": "energia (2 placas de 150 W carregam as baterias de dia: luz, rádio e cerca elétrica à noite)",
+   "arquivo": "mobilias/painel_solar.glb",
+   "tamanho_m": [
+    2.856,
+    1.406,
+    1.473
+   ],
+   "triangulos": 1236,
+   "kb": 187.3
+  },
+  {
+   "id": "cata_vento",
+   "nome": "Cata-vento de bomba d'água em torre",
+   "grupo": "mobilias",
+   "categoria": "energia",
+   "montagem": "floor",
+   "lote": 18,
+   "comodos": [
+    "fazenda",
+    "abrigo"
+   ],
+   "constroi": {
+    "cano_metal": 8,
+    "chapa_metal": 6,
+    "engrenagens": 1,
+    "tambor_200l": 1
+   },
+   "ferramenta": "chave_inglesa",
+   "estacao_obra": "forja_tambor",
+   "fase": 3,
+   "produz": {
+    "item": "galao_agua",
+    "qtd": 2,
+    "a_cada_min": 60,
+    "consome": {}
+   },
+   "precisa_achar": "bomba de poço (ferro-velho ou fazenda)",
+   "estacao": "bomba de vento (puxa água do lençol sem ninguém trabalhar; enche o tambor ao lado)",
+   "arquivo": "mobilias/cata_vento.glb",
+   "tamanho_m": [
+    2.4,
+    6.653,
+    3.446
+   ],
+   "triangulos": 5976,
+   "kb": 447.0,
+   "partes": [
+    {
+     "no": "cabeca",
+     "origem": [
+      0.0,
+      5.22,
+      0.0
+     ],
+     "tipo": "porta",
+     "eixo": "y",
+     "abre_graus": 360,
+     "gira_livre": true
+    }
+   ]
+  },
+  {
+   "id": "torre_radio",
+   "nome": "Torre de rádio da comunidade",
+   "grupo": "mobilias",
+   "categoria": "comunidade",
+   "montagem": "floor",
+   "lote": 18,
+   "comodos": [
+    "abrigo",
+    "igreja",
+    "delegacia",
+    "quartel"
+   ],
+   "constroi": {
+    "cano_metal": 10,
+    "fio_eletrico": 4,
+    "radio_portatil": 1,
+    "placa_circuito": 2,
+    "bateria_carro": 1,
+    "arame_liso": 2
+   },
+   "ferramenta": "chave_inglesa",
+   "estacao_obra": "bancada_eletronica",
+   "fase": 3,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.6,
+    0.0,
+    1.0
+   ],
+   "marco": true,
+   "estacao": "marco da fase Assentamento → Vila (chama sobreviventes de longe; abre trocas com outras comunidades e o mapa regional)",
+   "arquivo": "mobilias/torre_radio.glb",
+   "tamanho_m": [
+    5.595,
+    9.74,
+    5.705
+   ],
+   "triangulos": 4436,
+   "kb": 502.1
   }
  ]
 }

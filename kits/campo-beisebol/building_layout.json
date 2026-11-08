@@ -1,0 +1,1554 @@
+{
+ "grid": {
+  "module_width": 2.0,
+  "ground": 0.0,
+  "cabin_floors": [
+   0.15,
+   3.15
+  ],
+  "cabin": {
+   "center": [
+    10.8,
+    12.8
+   ],
+   "rotY": -140.0,
+   "half_size": [
+    3.0,
+    2.5
+   ]
+  },
+  "diamond": {
+   "base_distance": 18.29,
+   "home": [
+    0,
+    0
+   ],
+   "first": [
+    12.932983027901953,
+    -12.932983027901953
+   ],
+   "second": [
+    0.0,
+    -25.865966055803906
+   ],
+   "third": [
+    -12.932983027901953,
+    -12.932983027901953
+   ],
+   "rubber": [
+    0,
+    -14.02
+   ]
+  },
+  "outfield_fence_radius": 55.0,
+  "side_fence_offset": 8.0,
+  "site": {
+   "x": [
+    -52.0,
+    52.0
+   ],
+   "z": [
+    -68.0,
+    34.0
+   ]
+  },
+  "textures": "PBR (albedo + normal + ORM), 2 m tiles, UV in metres / 2"
+ },
+ "placements": [
+  {
+   "piece": "site",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "field",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "chalk",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "home_plate",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "mound",
+   "pos": [
+    0.0,
+    0.0,
+    -14.02
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "base",
+   "pos": [
+    12.664,
+    0.0,
+    -12.933
+   ],
+   "rotY": 45.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "base",
+   "pos": [
+    0.0,
+    0.0,
+    -25.866
+   ],
+   "rotY": 45.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "base",
+   "pos": [
+    -12.664,
+    0.0,
+    -12.933
+   ],
+   "rotY": 45.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "on_deck",
+   "pos": [
+    6.718,
+    0.0,
+    0.354
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "on_deck",
+   "pos": [
+    -6.718,
+    0.0,
+    0.354
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "outfield_fence",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "side_fence_1",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "side_fence_3",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "backstop",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "foul_pole",
+   "pos": [
+    38.976,
+    0.0,
+    -38.976
+   ],
+   "rotY": 135.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "foul_pole",
+   "pos": [
+    -38.976,
+    0.0,
+    -38.976
+   ],
+   "rotY": 45.0,
+   "tags": [
+    "campo"
+   ]
+  },
+  {
+   "piece": "gate_field",
+   "pos": [
+    14.998,
+    0.0,
+    -3.684
+   ],
+   "rotY": 45.0,
+   "tags": [
+    "campo",
+    "door"
+   ],
+   "door": {
+    "closed": 45.0,
+    "open": 135.0
+   }
+  },
+  {
+   "piece": "gate_field",
+   "pos": [
+    -14.998,
+    0.0,
+    -3.684
+   ],
+   "rotY": 135.0,
+   "tags": [
+    "campo",
+    "door"
+   ],
+   "door": {
+    "closed": 135.0,
+    "open": 45.0
+   }
+  },
+  {
+   "piece": "dugout_b",
+   "pos": [
+    11.667,
+    0.0,
+    -0.354
+   ],
+   "rotY": -135.0,
+   "tags": [
+    "predio"
+   ]
+  },
+  {
+   "piece": "dugout_bench",
+   "pos": [
+    13.718,
+    0.1,
+    0.99
+   ],
+   "rotY": -135.0,
+   "tags": [
+    "predio"
+   ]
+  },
+  {
+   "piece": "helmet_rack",
+   "pos": [
+    14.814,
+    0.1,
+    -1.874
+   ],
+   "rotY": -45.0,
+   "tags": [
+    "predio"
+   ]
+  },
+  {
+   "piece": "bat_rack",
+   "pos": [
+    9.935,
+    0.1,
+    2.581
+   ],
+   "rotY": -225.0,
+   "tags": [
+    "predio"
+   ]
+  },
+  {
+   "piece": "water_cooler",
+   "pos": [
+    11.102,
+    0.1,
+    0.919
+   ],
+   "rotY": -135.0,
+   "tags": [
+    "predio"
+   ]
+  },
+  {
+   "piece": "ball_bucket",
+   "pos": [
+    13.046,
+    0.1,
+    -0.955
+   ],
+   "rotY": -135.0,
+   "tags": [
+    "predio"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    12.622,
+    0.1,
+    1.167
+   ],
+   "rotY": -135.0,
+   "tags": [
+    "predio"
+   ]
+  },
+  {
+   "piece": "door_service",
+   "pos": [
+    11.872,
+    0.1,
+    2.977
+   ],
+   "rotY": -135.0,
+   "tags": [
+    "predio",
+    "door"
+   ],
+   "door": {
+    "closed": -135.0,
+    "open": -225.0
+   }
+  },
+  {
+   "piece": "dugout_r",
+   "pos": [
+    -11.667,
+    0.0,
+    -0.354
+   ],
+   "rotY": 135.0,
+   "tags": [
+    "predio"
+   ]
+  },
+  {
+   "piece": "dugout_bench",
+   "pos": [
+    -13.011,
+    0.1,
+    1.697
+   ],
+   "rotY": 135.0,
+   "tags": [
+    "predio"
+   ]
+  },
+  {
+   "piece": "helmet_rack",
+   "pos": [
+    -10.147,
+    0.1,
+    2.793
+   ],
+   "rotY": 225.0,
+   "tags": [
+    "predio"
+   ]
+  },
+  {
+   "piece": "bat_rack",
+   "pos": [
+    -14.602,
+    0.1,
+    -2.086
+   ],
+   "rotY": 45.0,
+   "tags": [
+    "predio"
+   ]
+  },
+  {
+   "piece": "water_cooler",
+   "pos": [
+    -12.94,
+    0.1,
+    -0.919
+   ],
+   "rotY": 135.0,
+   "tags": [
+    "predio"
+   ]
+  },
+  {
+   "piece": "ball_bucket",
+   "pos": [
+    -11.066,
+    0.1,
+    1.025
+   ],
+   "rotY": 135.0,
+   "tags": [
+    "predio"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    -13.188,
+    0.1,
+    0.601
+   ],
+   "rotY": 135.0,
+   "tags": [
+    "predio"
+   ]
+  },
+  {
+   "piece": "door_service",
+   "pos": [
+    -14.998,
+    0.1,
+    -0.148
+   ],
+   "rotY": 135.0,
+   "tags": [
+    "predio",
+    "door"
+   ],
+   "door": {
+    "closed": 135.0,
+    "open": 45.0
+   }
+  },
+  {
+   "piece": "bleacher",
+   "pos": [
+    19.163,
+    0.0,
+    -7.0
+   ],
+   "rotY": -135.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bleacher",
+   "pos": [
+    -19.163,
+    0.0,
+    -7.0
+   ],
+   "rotY": 135.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bleacher",
+   "pos": [
+    0.0,
+    0.0,
+    9.8
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "cabin_ground",
+   "pos": [
+    10.8,
+    0.0,
+    12.8
+   ],
+   "rotY": -140.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "ext"
+   ]
+  },
+  {
+   "piece": "cabin_slab",
+   "pos": [
+    10.8,
+    0.0,
+    12.8
+   ],
+   "rotY": -140.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "cabin_upper",
+   "pos": [
+    10.8,
+    0.0,
+    12.8
+   ],
+   "rotY": -140.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "ext"
+   ]
+  },
+  {
+   "piece": "cabin_roof",
+   "pos": [
+    10.8,
+    0.0,
+    12.8
+   ],
+   "rotY": -140.0,
+   "tags": [
+    "predio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "cabin_stair",
+   "pos": [
+    10.8,
+    0.0,
+    12.8
+   ],
+   "rotY": -140.0,
+   "tags": [
+    "predio"
+   ]
+  },
+  {
+   "piece": "concession",
+   "pos": [
+    10.8,
+    0.0,
+    12.8
+   ],
+   "rotY": -140.0,
+   "tags": [
+    "predio",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "restroom_a",
+   "pos": [
+    10.8,
+    0.0,
+    12.8
+   ],
+   "rotY": -140.0,
+   "tags": [
+    "predio",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "restroom_b",
+   "pos": [
+    10.8,
+    0.0,
+    12.8
+   ],
+   "rotY": -140.0,
+   "tags": [
+    "predio",
+    "floor0"
+   ]
+  },
+  {
+   "piece": "press_box",
+   "pos": [
+    10.8,
+    0.0,
+    12.8
+   ],
+   "rotY": -140.0,
+   "tags": [
+    "predio",
+    "floor1"
+   ]
+  },
+  {
+   "piece": "menu_board",
+   "pos": [
+    9.193,
+    0.0,
+    10.885
+   ],
+   "rotY": -140.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "ext"
+   ]
+  },
+  {
+   "piece": "service_window",
+   "pos": [
+    9.193,
+    0.0,
+    10.885
+   ],
+   "rotY": -140.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "ext"
+   ]
+  },
+  {
+   "piece": "door_service",
+   "pos": [
+    13.561,
+    0.162,
+    13.616
+   ],
+   "rotY": -140.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": -140.0,
+    "open": -230.0
+   }
+  },
+  {
+   "piece": "door_service",
+   "pos": [
+    13.944,
+    3.162,
+    13.295
+   ],
+   "rotY": -140.0,
+   "tags": [
+    "predio",
+    "floor1",
+    "door"
+   ],
+   "door": {
+    "closed": -140.0,
+    "open": -230.0
+   }
+  },
+  {
+   "piece": "door_service",
+   "pos": [
+    8.219,
+    0.162,
+    14.235
+   ],
+   "rotY": -230.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": -230.0,
+    "open": -320.0
+   }
+  },
+  {
+   "piece": "door_service",
+   "pos": [
+    9.504,
+    0.162,
+    15.767
+   ],
+   "rotY": -230.0,
+   "tags": [
+    "predio",
+    "floor0",
+    "door"
+   ],
+   "door": {
+    "closed": -230.0,
+    "open": -320.0
+   }
+  },
+  {
+   "piece": "flagpole",
+   "pos": [
+    5.486,
+    0.0,
+    12.69
+   ],
+   "rotY": -140.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "picnic_table",
+   "pos": [
+    13.142,
+    0.0,
+    8.746
+   ],
+   "rotY": -50.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "picnic_table",
+   "pos": [
+    14.813,
+    0.0,
+    10.738
+   ],
+   "rotY": -50.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    11.553,
+    0.0,
+    8.252
+   ],
+   "rotY": -140.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "light_tower",
+   "pos": [
+    26.163,
+    0.0,
+    -7.778
+   ],
+   "rotY": -123.355,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "light_tower",
+   "pos": [
+    -26.163,
+    0.0,
+    -7.778
+   ],
+   "rotY": 123.355,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "light_tower",
+   "pos": [
+    25.4,
+    0.0,
+    -60.5
+   ],
+   "rotY": -35.583,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "light_tower",
+   "pos": [
+    -25.4,
+    0.0,
+    -60.5
+   ],
+   "rotY": 35.583,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "scoreboard",
+   "pos": [
+    0.0,
+    0.0,
+    -61.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "batting_cage",
+   "pos": [
+    -33.1,
+    0.0,
+    3.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "shed",
+   "pos": [
+    -27.0,
+    0.0,
+    7.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio"
+   ]
+  },
+  {
+   "piece": "shed_stuff",
+   "pos": [
+    -27.0,
+    0.0,
+    7.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio"
+   ]
+  },
+  {
+   "piece": "door_shed",
+   "pos": [
+    -27.54,
+    0.12,
+    8.54
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "predio",
+    "door"
+   ],
+   "door": {
+    "closed": 0.0,
+    "open": 90.0
+   }
+  },
+  {
+   "piece": "scorer_table",
+   "pos": [
+    -5.5,
+    0.0,
+    11.4
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "fountain",
+   "pos": [
+    -6.2,
+    0.0,
+    8.6
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "park_bench",
+   "pos": [
+    -9.0,
+    0.0,
+    14.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "park_bench",
+   "pos": [
+    -14.0,
+    0.0,
+    14.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "park_bench",
+   "pos": [
+    14.5,
+    0.0,
+    4.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    -4.3,
+    0.0,
+    13.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    5.0,
+    0.0,
+    15.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    -16.0,
+    0.0,
+    2.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    20.0,
+    0.0,
+    -3.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    -21.0,
+    0.0,
+    -6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bike_rack",
+   "pos": [
+    -18.0,
+    0.0,
+    16.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    -20.0,
+    0.12,
+    18.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    0.0,
+    0.12,
+    18.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "lamp_post",
+   "pos": [
+    20.0,
+    0.12,
+    18.15
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -26.35,
+    -0.03,
+    19.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -23.65,
+    -0.03,
+    19.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -20.95,
+    -0.03,
+    19.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -18.25,
+    -0.03,
+    19.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -15.55,
+    -0.03,
+    19.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -12.85,
+    -0.03,
+    19.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -10.15,
+    -0.03,
+    19.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -7.45,
+    -0.03,
+    19.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -4.75,
+    -0.03,
+    19.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    -2.05,
+    -0.03,
+    19.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    0.65,
+    -0.03,
+    19.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    3.35,
+    -0.03,
+    19.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    6.05,
+    -0.03,
+    19.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    8.75,
+    -0.03,
+    19.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    11.45,
+    -0.03,
+    19.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    14.15,
+    -0.03,
+    19.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    16.85,
+    -0.03,
+    19.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    19.55,
+    -0.03,
+    19.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    22.25,
+    -0.03,
+    19.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "wheel_stop",
+   "pos": [
+    24.95,
+    -0.03,
+    19.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_sedan_r",
+   "pos": [
+    -18.25,
+    -0.03,
+    21.3
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_wagon_b",
+   "pos": [
+    -15.55,
+    -0.03,
+    21.3
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_hatch_y",
+   "pos": [
+    -4.75,
+    -0.03,
+    21.3
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_pickup_s",
+   "pos": [
+    6.05,
+    -0.03,
+    21.3
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "car_sedan_r",
+   "pos": [
+    14.15,
+    -0.03,
+    21.3
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -40.0,
+    0.0,
+    10.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    -46.0,
+    0.0,
+    -6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    40.0,
+    0.0,
+    8.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    46.0,
+    0.0,
+    -12.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    34.0,
+    0.0,
+    14.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -12.0,
+    0.0,
+    -64.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    14.0,
+    0.0,
+    -65.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -38.0,
+    0.0,
+    -48.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    40.0,
+    0.0,
+    -46.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree_b",
+   "pos": [
+    -30.0,
+    0.0,
+    15.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua",
+    "roof"
+   ]
+  },
+  {
+   "piece": "bush_row",
+   "pos": [
+    -23.0,
+    0.0,
+    16.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "bush_row",
+   "pos": [
+    23.0,
+    0.0,
+    16.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    -2.0,
+    0.0,
+    11.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "rua"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    2.0,
+    0.0,
+    -6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "campo"
+   ]
+  }
+ ]
+}

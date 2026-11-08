@@ -9717,6 +9717,515 @@
      "descricao": "respiração leve parado"
     }
    }
+  },
+  {
+   "id": "faca_combate",
+   "nome": "Faca de combate",
+   "grupo": "armas",
+   "categoria": "faca",
+   "classe": "corpo_a_corpo",
+   "calibre": "lâmina",
+   "capacidade": "-",
+   "dano": 45,
+   "dano_estocada": 60,
+   "alcance_m": 0.6,
+   "tiros_por_s": 1.8,
+   "precisao": 1.0,
+   "ruido_m": 1,
+   "durabilidade": 3000,
+   "peso_kg": 0.32,
+   "raridade": "incomum",
+   "valor_troca": 30,
+   "prende_no_alvo": 0.15,
+   "onde": [
+    "quartel",
+    "casa_de_campo",
+    "delegacia",
+    "armazem",
+    "loja_caca"
+   ],
+   "descricao": "Lâmina de 18 cm de aço escurecido com ponta recortada, fio liso e serrilha perto do cabo para cortar corda. Cabo de borracha com cavas e pomo com quebra-vidro. Não faz barulho e não gasta munição, mas é preciso chegar muito perto.",
+   "arquivo": "armas/faca_combate.glb",
+   "tamanho_m": [
+    0.026,
+    0.054,
+    0.325
+   ],
+   "triangulos": 24284,
+   "kb": 1434.1,
+   "encaixes": [
+    {
+     "no": "cinto",
+     "tipo": "bainha_faca",
+     "pai": "faca_combate",
+     "posicao_m": [
+      -0.0105,
+      0.003,
+      -0.125
+     ],
+     "aceita": [
+      "bainha_cinto_faca"
+     ],
+     "descricao": "a faca entra na bainha pelo pivô (a bainha tem o encaixe \"arma\")"
+    },
+    {
+     "no": "ponta",
+     "tipo": "efeito",
+     "pai": "faca_combate",
+     "posicao_m": [
+      0.0,
+      0.0042,
+      -0.243
+     ],
+     "descricao": "ponta da lâmina (teste de acerto da estocada)"
+    },
+    {
+     "no": "fio_meio",
+     "tipo": "efeito",
+     "pai": "faca_combate",
+     "posicao_m": [
+      0.0,
+      -0.016,
+      -0.155
+     ],
+     "descricao": "meio do fio (teste de acerto do golpe de corte)"
+    }
+   ],
+   "animacoes": {
+    "golpear": {
+     "duracao_s": 0.55,
+     "laco": false,
+     "descricao": "corte de lado (da direita para a esquerda): o acerto vale entre 0,15 e 0,3 s, use o encaixe fio_meio"
+    },
+    "estocar": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "estocada para a frente (mais dano em zumbi, mas a faca pode prender: acerto entre 0,18 e 0,3 s no encaixe ponta)"
+    },
+    "golpe_baixo": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "golpe de cima para baixo (na cabeça de zumbi caído)"
+    },
+    "sacar": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "tira da bainha na cintura e traz para a frente"
+    },
+    "guardar": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "volta para a bainha"
+    },
+    "inspecionar": {
+     "duracao_s": 2.2,
+     "laco": false,
+     "descricao": "gira a faca na mão olhando os dois lados da lâmina"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "facao",
+   "nome": "Facão de mato",
+   "grupo": "armas",
+   "categoria": "facao",
+   "classe": "corpo_a_corpo",
+   "calibre": "lâmina",
+   "capacidade": "-",
+   "dano": 60,
+   "dano_golpe_forte": 90,
+   "alcance_m": 0.85,
+   "tiros_por_s": 1.3,
+   "precisao": 1.0,
+   "ruido_m": 2,
+   "durabilidade": 2600,
+   "peso_kg": 0.62,
+   "raridade": "comum",
+   "valor_troca": 22,
+   "corta_vegetacao": true,
+   "prende_no_alvo": 0.1,
+   "onde": [
+    "casa_de_campo",
+    "fazenda",
+    "armazem",
+    "loja_caca",
+    "galpao"
+   ],
+   "descricao": "Lâmina de 34 cm de aço carbono escurecido que alarga na ponta para pesar no golpe. Talas de madeira com rebites de latão e fiel de couro. Alcança mais que a faca e abre caminho no mato, mas o golpe é mais lento.",
+   "arquivo": "armas/facao.glb",
+   "tamanho_m": [
+    0.027,
+    0.082,
+    0.493
+   ],
+   "triangulos": 20562,
+   "kb": 1374.1,
+   "encaixes": [
+    {
+     "no": "cinto",
+     "tipo": "bainha_facao",
+     "pai": "facao",
+     "posicao_m": [
+      -0.012,
+      0.0,
+      -0.185
+     ],
+     "aceita": [
+      "bainha_lona_facao"
+     ],
+     "descricao": "o facão entra na bainha pelo pivô (a bainha tem o encaixe \"arma\")"
+    },
+    {
+     "no": "ponta",
+     "tipo": "efeito",
+     "pai": "facao",
+     "posicao_m": [
+      0.0,
+      0.005,
+      -0.405
+     ],
+     "descricao": "ponta da lâmina"
+    },
+    {
+     "no": "fio_meio",
+     "tipo": "efeito",
+     "pai": "facao",
+     "posicao_m": [
+      0.0,
+      -0.026,
+      -0.285
+     ],
+     "descricao": "parte larga do fio, onde o golpe pesa (teste de acerto)"
+    }
+   ],
+   "animacoes": {
+    "golpear": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "golpe na diagonal (de cima à direita para baixo à esquerda): acerto entre 0,18 e 0,32 s no encaixe fio_meio"
+    },
+    "golpe_forte": {
+     "duracao_s": 1.0,
+     "laco": false,
+     "descricao": "levanta acima da cabeça e desce com força (corta galho e cabeça de zumbi): acerto entre 0,52 e 0,66 s; gasta mais fôlego"
+    },
+    "cortar_mato": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "golpe baixo de lado para abrir caminho no mato"
+    },
+    "sacar": {
+     "duracao_s": 0.65,
+     "laco": false,
+     "descricao": "tira da bainha na cintura"
+    },
+    "guardar": {
+     "duracao_s": 0.65,
+     "laco": false,
+     "descricao": "volta para a bainha"
+    },
+    "inspecionar": {
+     "duracao_s": 2.2,
+     "laco": false,
+     "descricao": "vira o facão olhando o fio dos dois lados"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "machadinha_tatica",
+   "nome": "Machadinha tática",
+   "grupo": "armas",
+   "categoria": "machadinha",
+   "classe": "corpo_a_corpo",
+   "calibre": "lâmina",
+   "capacidade": "-",
+   "dano": 70,
+   "dano_golpe_forte": 105,
+   "alcance_m": 0.7,
+   "tiros_por_s": 1.1,
+   "precisao": 1.0,
+   "ruido_m": 3,
+   "durabilidade": 3500,
+   "peso_kg": 0.75,
+   "raridade": "incomum",
+   "valor_troca": 40,
+   "arromba": true,
+   "corta_madeira": true,
+   "prende_no_alvo": 0.2,
+   "onde": [
+    "quartel",
+    "quartel_bombeiros",
+    "delegacia",
+    "loja_caca",
+    "armazem"
+   ],
+   "descricao": "Cabeça e espiga numa peça só de aço escurecido: fio curvo com barba de um lado e ponta do outro para arrombar portas e janelas. Cabo com talas e cordão enrolado (dá para desenrolar e usar o cordão). Bate mais forte que o facão, mas alcança menos.",
+   "arquivo": "armas/machadinha_tatica.glb",
+   "tamanho_m": [
+    0.029,
+    0.388,
+    0.181
+   ],
+   "triangulos": 38626,
+   "kb": 1820.3,
+   "encaixes": [
+    {
+     "no": "capa",
+     "tipo": "capa_machadinha",
+     "pai": "machadinha_tatica",
+     "posicao_m": [
+      0.0,
+      0.225,
+      -0.06
+     ],
+     "aceita": [
+      "capa_machadinha"
+     ],
+     "descricao": "capa por cima do fio (tirar antes de usar; a animação \"tirar_capa\" puxa para a frente)",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.06
+     ]
+    },
+    {
+     "no": "fio_meio",
+     "tipo": "efeito",
+     "pai": "machadinha_tatica",
+     "posicao_m": [
+      0.0,
+      0.244,
+      -0.094
+     ],
+     "descricao": "meio do fio (teste de acerto do golpe)"
+    },
+    {
+     "no": "ponta_tras",
+     "tipo": "efeito",
+     "pai": "machadinha_tatica",
+     "posicao_m": [
+      -0.0,
+      0.251,
+      0.082
+     ],
+     "descricao": "ponta de trás (golpe de ponta e alavanca para arrombar)"
+    }
+   ],
+   "animacoes": {
+    "golpear": {
+     "duracao_s": 0.65,
+     "laco": false,
+     "descricao": "golpe de cima para baixo na frente: acerto entre 0,26 e 0,38 s no encaixe fio_meio"
+    },
+    "golpe_forte": {
+     "duracao_s": 1.0,
+     "laco": false,
+     "descricao": "levanta atrás do ombro e desce com tudo (racha porta e cabeça): acerto entre 0,55 e 0,68 s"
+    },
+    "golpe_ponta": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "vira a machadinha e bate com a ponta de trás (fura capacete e crânio; pode prender)"
+    },
+    "arrombar": {
+     "duracao_s": 2.0,
+     "laco": false,
+     "descricao": "encaixa a ponta de trás na fresta e faz alavanca (porta, janela, tampa de caixa)"
+    },
+    "tirar_capa": {
+     "duracao_s": 0.4,
+     "laco": false,
+     "descricao": "segura firme enquanto a mão puxa a capa (esconda o encaixe capa aos 0,25 s)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.2,
+     "laco": false,
+     "descricao": "gira a machadinha olhando o fio e a ponta"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
+  },
+  {
+   "id": "lanca_improvisada",
+   "nome": "Lança improvisada",
+   "grupo": "armas",
+   "categoria": "lanca",
+   "classe": "corpo_a_corpo",
+   "calibre": "lâmina",
+   "capacidade": "-",
+   "dano": 48,
+   "dano_golpe_forte": 80,
+   "alcance_m": 1.6,
+   "tiros_por_s": 1.4,
+   "precisao": 1.0,
+   "ruido_m": 2,
+   "durabilidade": 900,
+   "peso_kg": 0.95,
+   "raridade": "comum",
+   "valor_troca": 8,
+   "duas_maos": true,
+   "prende_no_alvo": 0.35,
+   "empurra": true,
+   "receita": {
+    "faca_cozinha": 1,
+    "fita_adesiva": 1,
+    "cabo_madeira": 1
+   },
+   "bancada": false,
+   "reparo": {
+    "fita_adesiva": 1
+   },
+   "onde": [
+    "casas",
+    "quartel",
+    "abrigo"
+   ],
+   "descricao": "Cabo de vassoura com uma faca de cozinha enfiada na ponta serrada, presa com prego, abraçadeiras, fita prata e arame. Mantém o zumbi a 1,5 m, mas a faca pode prender no alvo e a fita afrouxa com o uso. Feita na hora, sem bancada; o cabo pode vir de vassoura, rodo ou enxada.",
+   "arquivo": "armas/lanca_improvisada.glb",
+   "tamanho_m": [
+    0.042,
+    0.095,
+    1.573
+   ],
+   "triangulos": 22544,
+   "kb": 1073.8,
+   "partes": [
+    {
+     "no": "amarracao",
+     "tipo": "remove",
+     "direcao": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "descricao": "fita, arame, prego e abraçadeiras (a fita afrouxa com o uso: refaça com \"refazer_fita\"; tirar solta a faca)",
+     "pai": "lanca_improvisada",
+     "explodir_m": [
+      0.0,
+      0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "faca",
+     "tipo": "remove",
+     "direcao": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "item": "faca_cozinha",
+     "descricao": "faca de cozinha sem as talas; a espiga fica dentro do corte do cabo. Troque quando quebrar (volta como sucata)",
+     "pai": "lanca_improvisada",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.12
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "mao_frente",
+     "tipo": "mao",
+     "pai": "lanca_improvisada",
+     "posicao_m": [
+      0.0,
+      0.0,
+      -0.45
+     ],
+     "descricao": "onde a mão da frente segura (pano enrolado); a de trás fica no pivô (fita)"
+    },
+    {
+     "no": "ponta",
+     "tipo": "efeito",
+     "pai": "lanca_improvisada",
+     "posicao_m": [
+      0.0,
+      -0.016,
+      -1.375
+     ],
+     "descricao": "ponta da faca (teste de acerto da estocada)"
+    },
+    {
+     "no": "fio_meio",
+     "tipo": "efeito",
+     "pai": "lanca_improvisada",
+     "posicao_m": [
+      0.0,
+      -0.033,
+      -1.265
+     ],
+     "descricao": "meio do fio (golpe de lado)"
+    },
+    {
+     "no": "cabo_tras",
+     "tipo": "efeito",
+     "pai": "lanca_improvisada",
+     "posicao_m": [
+      -0.0,
+      0.0,
+      0.198
+     ],
+     "descricao": "ponta de trás do cabo (firmar no chão contra um avanço)"
+    }
+   ],
+   "animacoes": {
+    "estocar": {
+     "duracao_s": 0.55,
+     "laco": false,
+     "descricao": "estocada rápida com as duas mãos: acerto entre 0,2 e 0,3 s no encaixe ponta (a ~1,4 m do corpo)"
+    },
+    "estocar_forte": {
+     "duracao_s": 1.0,
+     "laco": false,
+     "descricao": "recolhe o corpo e enfia com tudo (atravessa e pode prender): acerto entre 0,56 e 0,7 s"
+    },
+    "golpe_lateral": {
+     "duracao_s": 0.8,
+     "laco": false,
+     "descricao": "vira o fio para o lado e varre (corta, empurra e afasta dois zumbis de uma vez)"
+    },
+    "empurrar": {
+     "duracao_s": 0.6,
+     "laco": false,
+     "descricao": "segura o cabo atravessado na frente do peito e empurra (derruba quem chegou perto demais)"
+    },
+    "firmar": {
+     "duracao_s": 1.2,
+     "laco": false,
+     "descricao": "apoia a ponta de trás no chão e aponta para cima: quem correr para cima se espeta (fica parado no fim)"
+    },
+    "refazer_fita": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "traz a ponta para perto e passa mais fita (gasta 1 fita adesiva e devolve a durabilidade)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.4,
+     "laco": false,
+     "descricao": "traz a ponta para perto e gira olhando a faca e a amarração"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
   }
  ],
  "acessorios": [
@@ -14766,6 +15275,111 @@
    ],
    "triangulos": 5056,
    "kb": 239.8
+  },
+  {
+   "id": "bainha_cinto_faca",
+   "nome": "Bainha de cinto (faca de combate)",
+   "grupo": "acessorios",
+   "categoria": "bainha",
+   "encaixe": "bainha_faca",
+   "peso_kg": 0.14,
+   "raridade": "comum",
+   "valor_troca": 8,
+   "modificadores": {
+    "sacar_s": 0.85
+   },
+   "onde": [
+    "quartel",
+    "casa_de_campo",
+    "armazem"
+   ],
+   "descricao": "Bainha rígida moldada com ilhoses, furo de dreno na ponta, passador de cinto e tira com botão de pressão por cima do cabo.",
+   "arquivo": "acessorios/bainha_cinto_faca.glb",
+   "tamanho_m": [
+    0.032,
+    0.077,
+    0.217
+   ],
+   "triangulos": 10892,
+   "kb": 579.1,
+   "encaixes": [
+    {
+     "no": "arma",
+     "tipo": "efeito",
+     "pai": "bainha_cinto_faca",
+     "posicao_m": [
+      0.0105,
+      -0.003,
+      0.125
+     ],
+     "descricao": "ponha a faca aqui (pivô da faca) para guardá-la na bainha"
+    }
+   ]
+  },
+  {
+   "id": "bainha_lona_facao",
+   "nome": "Bainha de lona (facão)",
+   "grupo": "acessorios",
+   "categoria": "bainha",
+   "encaixe": "bainha_facao",
+   "peso_kg": 0.18,
+   "raridade": "comum",
+   "valor_troca": 6,
+   "modificadores": {
+    "sacar_s": 0.9
+   },
+   "onde": [
+    "casa_de_campo",
+    "fazenda",
+    "armazem"
+   ],
+   "descricao": "Bainha de lona costurada com ponteira e boca de couro, passador largo de cinto e tira com fivela por cima do cabo.",
+   "arquivo": "acessorios/bainha_lona_facao.glb",
+   "tamanho_m": [
+    0.032,
+    0.103,
+    0.385
+   ],
+   "triangulos": 13026,
+   "kb": 794.9,
+   "encaixes": [
+    {
+     "no": "arma",
+     "tipo": "efeito",
+     "pai": "bainha_lona_facao",
+     "posicao_m": [
+      0.012,
+      0.0,
+      0.185
+     ],
+     "descricao": "ponha o facão aqui (pivô do facão) para guardá-lo na bainha"
+    }
+   ]
+  },
+  {
+   "id": "capa_machadinha",
+   "nome": "Capa da lâmina (machadinha)",
+   "grupo": "acessorios",
+   "categoria": "capa",
+   "encaixe": "capa_machadinha",
+   "peso_kg": 0.07,
+   "raridade": "comum",
+   "valor_troca": 4,
+   "modificadores": {},
+   "onde": [
+    "quartel",
+    "loja_caca",
+    "armazem"
+   ],
+   "descricao": "Capa moldada que cobre o fio, com tira de náilon e botão de pressão por cima da cabeça. Não corta a mochila.",
+   "arquivo": "acessorios/capa_machadinha.glb",
+   "tamanho_m": [
+    0.021,
+    0.135,
+    0.156
+   ],
+   "triangulos": 3180,
+   "kb": 194.3
   }
  ],
  "municao": [

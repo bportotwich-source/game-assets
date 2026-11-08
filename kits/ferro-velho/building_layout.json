@@ -1,0 +1,1106 @@
+{
+ "grid": {
+  "module_width": 2.0,
+  "wall_thickness": 0.25,
+  "office_floor": 0.15,
+  "yard_level": 0.05,
+  "office": {
+   "x": [
+    10.0,
+    16.0
+   ],
+   "z": [
+    3.0,
+    11.0
+   ],
+   "parapet": 3.6,
+   "ceiling": 2.9,
+   "front": "-X"
+  },
+  "fence": {
+   "x": [
+    -18.0,
+    18.0
+   ],
+   "z": [
+    -12.0,
+    12.0
+   ],
+   "height": 2.4,
+   "gate_x": [
+    -4.0,
+    2.0
+   ]
+  },
+  "lean_to": {
+   "x": [
+    -6.0,
+    8.0
+   ],
+   "z": [
+    -12.0,
+    -8.0
+   ]
+  },
+  "site": {
+   "x": [
+    -21.0,
+    21.0
+   ],
+   "z": [
+    -15.0,
+    15.0
+   ]
+  },
+  "textures": "PBR (albedo + normal + ORM), 2 m tiles, UV in metres / 2"
+ },
+ "placements": [
+  {
+   "piece": "o_win_l_ea",
+   "pos": [
+    10.0,
+    0.15,
+    4.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "escritorio",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "o_door",
+   "pos": [
+    10.0,
+    0.15,
+    6.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "escritorio",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "o_win",
+   "pos": [
+    10.0,
+    0.15,
+    8.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "escritorio",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "o_win_r_eb",
+   "pos": [
+    10.0,
+    0.15,
+    10.0
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "escritorio",
+    "ext",
+    "front"
+   ]
+  },
+  {
+   "piece": "o_plain_l_ea",
+   "pos": [
+    16.0,
+    0.15,
+    10.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "escritorio",
+    "ext"
+   ]
+  },
+  {
+   "piece": "o_win",
+   "pos": [
+    16.0,
+    0.15,
+    8.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "escritorio",
+    "ext"
+   ]
+  },
+  {
+   "piece": "o_door_b",
+   "pos": [
+    16.0,
+    0.15,
+    6.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "escritorio",
+    "ext"
+   ]
+  },
+  {
+   "piece": "o_ac_r_eb",
+   "pos": [
+    16.0,
+    0.15,
+    4.0
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "escritorio",
+    "ext"
+   ]
+  },
+  {
+   "piece": "o_win",
+   "pos": [
+    11.0,
+    0.15,
+    11.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "escritorio",
+    "ext"
+   ]
+  },
+  {
+   "piece": "o_plain",
+   "pos": [
+    13.0,
+    0.15,
+    11.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "escritorio",
+    "ext"
+   ]
+  },
+  {
+   "piece": "o_plain",
+   "pos": [
+    15.0,
+    0.15,
+    11.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "escritorio",
+    "ext"
+   ]
+  },
+  {
+   "piece": "o_plain",
+   "pos": [
+    11.0,
+    0.15,
+    3.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "escritorio",
+    "ext"
+   ]
+  },
+  {
+   "piece": "o_win",
+   "pos": [
+    13.0,
+    0.15,
+    3.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "escritorio",
+    "ext"
+   ]
+  },
+  {
+   "piece": "o_plain",
+   "pos": [
+    15.0,
+    0.15,
+    3.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "escritorio",
+    "ext"
+   ]
+  },
+  {
+   "piece": "o_roof",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "escritorio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "o_floor",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "escritorio"
+   ]
+  },
+  {
+   "piece": "o_plan",
+   "pos": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "escritorio"
+   ]
+  },
+  {
+   "piece": "door_metal",
+   "pos": [
+    10.125,
+    0.155,
+    5.56
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "escritorio",
+    "door"
+   ],
+   "door": {
+    "closed": -90.0,
+    "open": 0.0
+   }
+  },
+  {
+   "piece": "door_metal",
+   "pos": [
+    15.875,
+    0.155,
+    6.44
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "escritorio",
+    "door"
+   ],
+   "door": {
+    "closed": 90.0,
+    "open": 180.0
+   }
+  },
+  {
+   "piece": "counter",
+   "pos": [
+    13.2,
+    0.15,
+    8.6
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "escritorio"
+   ]
+  },
+  {
+   "piece": "register",
+   "pos": [
+    12.95,
+    1.07,
+    9.5
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "escritorio"
+   ]
+  },
+  {
+   "piece": "shelves",
+   "pos": [
+    15.75,
+    0.15,
+    7.9
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "escritorio"
+   ]
+  },
+  {
+   "piece": "shelves",
+   "pos": [
+    15.75,
+    0.15,
+    9.7
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "escritorio"
+   ]
+  },
+  {
+   "piece": "desk",
+   "pos": [
+    13.6,
+    0.15,
+    3.95
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "escritorio"
+   ]
+  },
+  {
+   "piece": "office_chair",
+   "pos": [
+    13.6,
+    0.15,
+    4.75
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "escritorio"
+   ]
+  },
+  {
+   "piece": "file_cab",
+   "pos": [
+    15.75,
+    0.15,
+    3.9
+   ],
+   "rotY": -90.0,
+   "tags": [
+    "escritorio"
+   ]
+  },
+  {
+   "piece": "water_cooler",
+   "pos": [
+    10.5,
+    0.15,
+    10.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "escritorio"
+   ]
+  },
+  {
+   "piece": "guest_chair",
+   "pos": [
+    11.0,
+    0.15,
+    10.45
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "escritorio"
+   ]
+  },
+  {
+   "piece": "guest_chair",
+   "pos": [
+    11.7,
+    0.15,
+    10.45
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "escritorio"
+   ]
+  },
+  {
+   "piece": "plant",
+   "pos": [
+    10.55,
+    0.15,
+    3.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "escritorio"
+   ]
+  },
+  {
+   "piece": "trash_can",
+   "pos": [
+    12.4,
+    0.15,
+    4.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "escritorio"
+   ]
+  },
+  {
+   "piece": "site",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "fence",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "gate",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "lean_to",
+   "pos": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "parts_rack",
+   "pos": [
+    -4.6,
+    0.15,
+    -11.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "parts_rack",
+   "pos": [
+    -1.8,
+    0.15,
+    -11.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "parts_rack_b",
+   "pos": [
+    1.4,
+    0.15,
+    -11.65
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "tire_rack",
+   "pos": [
+    5.6,
+    0.15,
+    -11.3
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "engine_pallet",
+   "pos": [
+    3.4,
+    0.15,
+    -10.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "engine_pallet_b",
+   "pos": [
+    6.8,
+    0.05,
+    -6.6
+   ],
+   "rotY": 25.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "engine_pallet",
+   "pos": [
+    4.6,
+    0.05,
+    -6.4
+   ],
+   "rotY": -10.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "junk_sedan_r",
+   "pos": [
+    -15.8,
+    0.05,
+    -9.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "car_stack_3",
+   "pos": [
+    -15.8,
+    0.05,
+    -3.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "junk_wagon_b",
+   "pos": [
+    -15.8,
+    0.05,
+    2.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "car_stack_2",
+   "pos": [
+    -15.8,
+    0.05,
+    7.5
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "junk_coupe_o",
+   "pos": [
+    -11.6,
+    0.05,
+    -9.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "junk_hatch_g",
+   "pos": [
+    -11.6,
+    0.05,
+    -3.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "junk_sedan_t",
+   "pos": [
+    -11.6,
+    0.05,
+    2.0
+   ],
+   "rotY": 180.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "junk_pickup_y",
+   "pos": [
+    -11.6,
+    0.05,
+    7.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "junk_sedan_r",
+   "pos": [
+    13.6,
+    0.05,
+    -1.8
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "junk_wagon_b",
+   "pos": [
+    13.6,
+    0.05,
+    -6.0
+   ],
+   "rotY": 75.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "scrap_heap",
+   "pos": [
+    9.5,
+    0.05,
+    -4.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "bale_pile",
+   "pos": [
+    -6.0,
+    0.05,
+    -3.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "bale",
+   "pos": [
+    -6.4,
+    0.05,
+    0.6
+   ],
+   "rotY": 20.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "tire_heap",
+   "pos": [
+    -6.5,
+    0.05,
+    7.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "tire_stack",
+   "pos": [
+    -8.6,
+    0.05,
+    10.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "tire_stack_b",
+   "pos": [
+    -7.6,
+    0.05,
+    10.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "tire_stack",
+   "pos": [
+    -6.6,
+    0.05,
+    10.7
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "tire_stack_b",
+   "pos": [
+    -3.2,
+    0.05,
+    -6.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "tow_truck",
+   "pos": [
+    4.6,
+    0.05,
+    1.5
+   ],
+   "rotY": 200.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "car_ok",
+   "pos": [
+    5.6,
+    0.05,
+    9.2
+   ],
+   "rotY": 90.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "drum_b",
+   "pos": [
+    16.9,
+    0.05,
+    9.5
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "drum_r",
+   "pos": [
+    16.9,
+    0.05,
+    10.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "drum_y",
+   "pos": [
+    17.3,
+    0.05,
+    1.2
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "drum_r",
+   "pos": [
+    16.6,
+    0.05,
+    1.4
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "drum_r",
+   "pos": [
+    -17.3,
+    0.05,
+    -11.55
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "drum_b",
+   "pos": [
+    -17.35,
+    0.05,
+    -10.9
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "light_pole",
+   "pos": [
+    1.4,
+    0.05,
+    -2.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -20.0,
+    0.05,
+    -13.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -20.0,
+    0.05,
+    -4.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -20.0,
+    0.05,
+    6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    20.0,
+    0.05,
+    -13.6
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    20.0,
+    0.05,
+    -4.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    20.0,
+    0.05,
+    6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    -9.0,
+    0.05,
+    -13.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "tree",
+   "pos": [
+    8.0,
+    0.05,
+    -13.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio",
+    "roof"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -12.0,
+    0.05,
+    12.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    -8.0,
+    0.05,
+    12.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    6.0,
+    0.05,
+    12.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    11.0,
+    0.05,
+    12.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "bush",
+   "pos": [
+    16.0,
+    0.05,
+    12.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    -1.0,
+    0.05,
+    6.0
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "patio"
+   ]
+  },
+  {
+   "piece": "player_scale_ref",
+   "pos": [
+    11.2,
+    0.15,
+    6.8
+   ],
+   "rotY": 0.0,
+   "tags": [
+    "escritorio"
+   ]
+  }
+ ]
+}

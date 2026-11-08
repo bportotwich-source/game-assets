@@ -145,7 +145,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Punho reto de polímero (caramelo) (`punho_reto_tan`) | Punhos | `punho_ar` | tempo_mirar ×0,95 | 0,06 kg | incomum | 21556 |
 | Carregador da Ciclone (17) (`carregador_ciclone_17`) | Carregadores | `carregador_ciclone` | recarga_s ×0,95 | 0,09 kg | incomum | 1480 |
 | Carregador da Ciclone (30) (`carregador_ciclone_30`) | Carregadores | `carregador_ciclone` | - | 0,14 kg | incomum | 1672 |
-| Tambor da Ciclone (50) (`tambor_ciclone_50`) | Carregadores | `carregador_ciclone` | recarga_s ×1,25, tempo_mirar ×1,08 | 0,55 kg | muito raro | 2180 |
+| Tambor da Ciclone (50) (`tambor_ciclone_50`) | Carregadores | `carregador_ciclone` | recarga_s ×1,25, tempo_mirar ×1,08 | 0,55 kg | muito raro | 2116 |
 
 ## Munição e efeitos
 

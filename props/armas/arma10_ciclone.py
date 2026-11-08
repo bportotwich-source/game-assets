@@ -34,26 +34,24 @@ def _carregador_ciclone(q, cap=30, mat='polimero'):
 
 
 def _tambor_ciclone(q, mat='polimero'):
-    """Tambor de 50: pescoco curto que entra no poco e disco de lado (eixo z) com tampa recartilhada da corda."""
+    """Tambor de 50: pescoco que entra no poco e disco virado para a frente (eixo ao longo do cano), botao da corda na face da frente."""
     corpo = _paralelo(CMAG, 0.118, 0.0158, CDIR)
     q.add(mat, solido(arred(list(corpo.exterior.coords)[:-1], 0.0028), -0.0108, 0.0108, 0.0012))
-    c = np.array(CMAG) + CDIR * 0.152; R = 0.046
-    disco = torno_x([(0.0, -0.021), (R - 0.006, -0.021), (R, -0.015), (R, 0.015), (R - 0.006, 0.021), (0.0, 0.021)], 64)
-    disco.apply_transform(TF.rotation_matrix(-math.pi / 2, [0, 1, 0])); disco.apply_translation([c[0], c[1], 0])
-    q.add(mat, disco)
-    for zs in (-1, 1):
-        q.add(mat, cil_z(R - 0.008, min(zs * 0.021, zs * 0.0225), max(zs * 0.021, zs * 0.0225), c[0], c[1], 64))         # tampas
+    c = np.array(CMAG) + CDIR * 0.152; R = 0.046; X = c[0]
+
+    def em_c(m): m.apply_translation([0, c[1], 0]); return m
+    q.add(mat, em_c(torno_x([(0.0, X - 0.021), (R - 0.006, X - 0.021), (R, X - 0.015), (R, X + 0.015), (R - 0.006, X + 0.021), (0.0, X + 0.021)], 64)))
+    for xs in (-1, 1):
+        q.add(mat, em_c(torno_x([(R - 0.008, min(X + xs * 0.021, X + xs * 0.0225)), (R - 0.008, max(X + xs * 0.021, X + xs * 0.0225))], 64)))   # tampas
         for i in range(10):                                                                                   # nervuras radiais
-            a = i * 2 * math.pi / 10
-            r = caixa(0.012, R - 0.011, -0.0012, 0.0012, min(zs * 0.0225, zs * 0.0236), max(zs * 0.0225, zs * 0.0236))
-            r.apply_transform(TF.rotation_matrix(a, [0, 0, 1])); r.apply_translation([c[0], c[1], 0]); q.add(mat, r)
-    q.add('recartilhado', cil_z(0.011, 0.0225, 0.03, c[0], c[1], 40))                                       # botao da corda (direita)
-    q.add('aco_oxidado', solido(arred([(c[0] - 0.009, c[1] - 0.0015), (c[0] + 0.009, c[1] - 0.0015), (c[0] + 0.009, c[1] + 0.0015),
-                                       (c[0] - 0.009, c[1] + 0.0015)], 0.001), 0.03, 0.0315))                 # alavanca da corda
-    for k in range(5):                                                                                         # janela de contagem
-        a = math.radians(200 + k * 14)
-        q.add('lente_clara', caixa(-0.002, 0.002, -0.0012, 0.0012, -0.0237, -0.0232).apply_transform(TF.rotation_matrix(a, [0, 0, 1]))
-              .apply_translation([c[0] + 0.033 * math.cos(a), c[1] + 0.033 * math.sin(a), 0]))
+            r = caixa(min(X + xs * 0.0225, X + xs * 0.0236), max(X + xs * 0.0225, X + xs * 0.0236), 0.012, R - 0.011, -0.0012, 0.0012)
+            r.apply_translation([-X, 0, 0]); r.apply_transform(TF.rotation_matrix(i * 2 * math.pi / 10, [1, 0, 0])); r.apply_translation([X, c[1], 0]); q.add(mat, r)
+    q.add('recartilhado', em_c(torno_x([(0.011, X + 0.0225), (0.011, X + 0.03)], 40)))                                   # botao da corda (frente)
+    q.add('aco_oxidado', caixa(X + 0.03, X + 0.0315, c[1] - 0.009, c[1] + 0.009, -0.0015, 0.0015))                       # alavanca da corda
+    for k in range(5):                                                                                         # janela de contagem (lado direito)
+        a = math.radians(-30 + k * 14)
+        q.add('lente_clara', caixa(X - 0.008, X + 0.008, -0.0012, 0.0012, R - 0.0004, R + 0.0002).apply_transform(TF.rotation_matrix(a, [1, 0, 0]))
+              .apply_translation([0, c[1], 0]))
     q.merge(_cartucho_9mm_malha(16), TF.translation_matrix([CMAG[0] - 0.0105, CMAG[1] - 0.004, 0.0025]))
 
 

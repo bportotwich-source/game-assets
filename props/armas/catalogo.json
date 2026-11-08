@@ -9373,6 +9373,350 @@
      "descricao": "respiração leve parado"
     }
    }
+  },
+  {
+   "id": "besta_recurva",
+   "nome": "Besta recurva",
+   "grupo": "armas",
+   "categoria": "besta",
+   "classe": "besta",
+   "calibre": "virote",
+   "municao": "virote_caca",
+   "capacidade": 1,
+   "dano": 110,
+   "alcance_m": 45,
+   "alcance_max_m": 80,
+   "modo": "um tiro (armar com o pé no estribo)",
+   "tiros_por_s": 0.2,
+   "recarga_s": 1.2,
+   "armar_s": 2.8,
+   "armar_sem_estribo_s": 3.6,
+   "precisao": 0.88,
+   "recuo": 0.15,
+   "ruido_m": 10,
+   "durabilidade": 1400,
+   "peso_kg": 3.4,
+   "raridade": "raro",
+   "valor_troca": 95,
+   "virote_volta": 0.7,
+   "forca_lb": 165,
+   "fica_armada": true,
+   "onde": [
+    "casa_de_campo",
+    "galeria",
+    "armazem",
+    "loja_caca"
+   ],
+   "descricao": "Besta de 165 lb com braços recurvos e coronha esqueletada: atira forte e quase sem barulho, e pode ficar armada esperando (sem cansar o braço). Armar é lento: pé no estribo e puxar com as duas mãos. Mantenha os dedos embaixo das abas do guarda-mão.",
+   "arquivo": "armas/besta_recurva.glb",
+   "tamanho_m": [
+    0.505,
+    0.19,
+    1.03
+   ],
+   "triangulos": 28242,
+   "kb": 1488.2,
+   "partes": [
+    {
+     "no": "braco_dir",
+     "tipo": "gira",
+     "eixo": "y",
+     "curso_graus": 34.38682030940551,
+     "descricao": "braço direito: com a besta armada fica dobrado para trás; abre no disparo",
+     "pai": "besta_recurva",
+     "explodir_m": [
+      0.08,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "braco_esq",
+     "tipo": "gira",
+     "eixo": "y",
+     "curso_graus": -34.38682030940551,
+     "descricao": "braço esquerdo (espelho)",
+     "pai": "besta_recurva",
+     "explodir_m": [
+      -0.08,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "corda_dir",
+     "tipo": "gira",
+     "eixo": "y",
+     "curso_graus": -68.38473869830456,
+     "descricao": "metade direita da corda (filha do braço direito)",
+     "pai": "braco_dir",
+     "explodir_m": [
+      -0.0,
+      0.02,
+      0.04
+     ]
+    },
+    {
+     "no": "corda_esq",
+     "tipo": "gira",
+     "eixo": "y",
+     "curso_graus": 68.38473869830456,
+     "descricao": "metade esquerda da corda",
+     "pai": "braco_esq",
+     "explodir_m": [
+      -0.0,
+      0.02,
+      0.04
+     ]
+    },
+    {
+     "no": "trava_corda",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -30,
+     "descricao": "garras que seguram a corda armada; abrem para trás quando o gatilho solta",
+     "pai": "besta_recurva",
+     "explodir_m": [
+      0.0,
+      0.04,
+      0.0
+     ]
+    },
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -12,
+     "descricao": "puxa para trás ao atirar",
+     "pai": "besta_recurva",
+     "explodir_m": [
+      0.0,
+      -0.04,
+      -0.03
+     ]
+    },
+    {
+     "no": "seguranca",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": 50,
+     "descricao": "trava de segurança (dos dois lados): para a frente = F (dispara), para trás = S; arma sozinha ao armar",
+     "pai": "besta_recurva",
+     "explodir_m": [
+      0.04,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "virote",
+     "tipo": "remove",
+     "direcao": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "municao": "virote_caca",
+     "capacidade": 1,
+     "descricao": "virote deitado no trilho com a nock encostada na corda armada",
+     "pai": "besta_recurva",
+     "explodir_m": [
+      0.0,
+      0.05,
+      0.0
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_virote",
+     "tipo": "virote",
+     "pai": "virote",
+     "posicao_m": [
+      0.0,
+      0.0985,
+      -0.1
+     ],
+     "substitui": "virote",
+     "aceita": [
+      "virote_caca",
+      "virote_campo",
+      "virote_prego"
+     ],
+     "descricao": "filho do nó virote: o virote escolhido troca a malha (nock na corda)"
+    },
+    {
+     "no": "encaixe_mira",
+     "tipo": "trilho_mira",
+     "pai": "besta_recurva",
+     "posicao_m": [
+      0.0,
+      0.1235,
+      -0.008
+     ],
+     "padrao": "luneta_besta",
+     "aceita": [
+      "luneta_besta",
+      "luneta_4x",
+      "luneta_4x_22",
+      "mira_ponto_vermelho_tubo",
+      "mira_holografica",
+      "mira_reflexa"
+     ],
+     "explodir_m": [
+      0.0,
+      0.07,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_alca",
+     "tipo": "alca_trilho",
+     "pai": "besta_recurva",
+     "posicao_m": [
+      -0.0,
+      0.1235,
+      0.026
+     ],
+     "aceita": [
+      "alca_rebativel"
+     ],
+     "padrao": "alca_rebativel",
+     "rebate_com": "encaixe_mira",
+     "descricao": "deita (animação \"dobrar\" do acessório) quando há mira ou luneta no encaixe_mira",
+     "explodir_m": [
+      -0.0,
+      0.05,
+      0.02
+     ]
+    },
+    {
+     "no": "encaixe_massa",
+     "tipo": "massa_trilho",
+     "pai": "besta_recurva",
+     "posicao_m": [
+      0.0,
+      0.1235,
+      -0.535
+     ],
+     "aceita": [
+      "massa_rebativel"
+     ],
+     "padrao": "massa_rebativel",
+     "rebate_com": "encaixe_mira",
+     "descricao": "na ponte por cima do virote; deita quando há mira ou luneta",
+     "explodir_m": [
+      0.0,
+      0.05,
+      -0.02
+     ]
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "besta_recurva",
+     "posicao_m": [
+      -0.0,
+      0.143,
+      0.026
+     ],
+     "descricao": "centro do furo da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z)"
+    },
+    {
+     "no": "encaixe_estribo",
+     "tipo": "estribo_besta",
+     "pai": "besta_recurva",
+     "posicao_m": [
+      0.0,
+      0.06,
+      -0.646
+     ],
+     "aceita": [
+      "estribo_besta"
+     ],
+     "padrao": "estribo_besta",
+     "descricao": "bucha na frente da cabeça: estribo para pôr o pé e armar",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.08
+     ]
+    },
+    {
+     "no": "encaixe_trilho",
+     "tipo": "trilho_curto",
+     "pai": "besta_recurva",
+     "posicao_m": [
+      0.0,
+      0.05,
+      -0.489
+     ],
+     "aceita": [
+      "lanterna_pistola",
+      "laser_pistola",
+      "combo_lanterna_laser"
+     ],
+     "descricao": "trilho curto embaixo, na frente do guarda-mão: lanterna, laser ou a lanterna com laser (um só)",
+     "explodir_m": [
+      0.0,
+      -0.05,
+      -0.02
+     ]
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "besta_recurva",
+     "posicao_m": [
+      0.0,
+      0.0985,
+      -0.64
+     ],
+     "descricao": "de onde o virote sai (projétil para -Z, sem clarão, estalo seco)"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "dispara: o gatilho solta a trava, a corda bate na frente e vibra, o virote voa (esconda o nó virote aos 0,09 s). Termina desarmada"
+    },
+    "vazia": {
+     "duracao_s": 0.1,
+     "laco": false,
+     "descricao": "pose desarmada (depois de atirar, até armar de novo)"
+    },
+    "armar": {
+     "duracao_s": 2.8,
+     "laco": false,
+     "descricao": "põe o pé no estribo (ponta para baixo), puxa a corda com as duas mãos até a trava (1,95 s); a segurança vai para S sozinha. Sem estribo: 3,6 s"
+    },
+    "destravar": {
+     "duracao_s": 0.2,
+     "laco": false,
+     "descricao": "polegar empurra a segurança para F"
+    },
+    "travar": {
+     "duracao_s": 0.2,
+     "laco": false,
+     "descricao": "segurança para S"
+    },
+    "carregar": {
+     "duracao_s": 1.2,
+     "laco": false,
+     "descricao": "deita um virote no trilho (pena ímpar na canaleta) e empurra até a nock encostar na corda; mostre o nó virote aos 0,3 s"
+    },
+    "inspecionar": {
+     "duracao_s": 2.4,
+     "laco": false,
+     "descricao": "vira a besta para olhar os braços e a corda"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   }
   }
  ],
  "acessorios": [
@@ -14348,6 +14692,80 @@
    ],
    "triangulos": 5766,
    "kb": 276.4
+  },
+  {
+   "id": "luneta_besta",
+   "nome": "Luneta de besta (distâncias)",
+   "grupo": "acessorios",
+   "categoria": "mira",
+   "encaixe": "trilho_mira",
+   "peso_kg": 0.32,
+   "raridade": "incomum",
+   "valor_troca": 40,
+   "aumento": [
+    3,
+    3
+   ],
+   "modificadores": {
+    "precisao_mirando": 1.4,
+    "tempo_mirar": 1.1,
+    "alcance_m": 1.2
+   },
+   "usa": "pilhas",
+   "onde": [
+    "casa_de_campo",
+    "galeria",
+    "loja_caca"
+   ],
+   "linha_de_visada": "encaixe \"olho\"; 3× fixa; pontos de 20, 30, 40 e 50 m abaixo do centro",
+   "descricao": "Luneta curta de 3× com retículo de vários pontos (um para cada distância: o virote cai bem mais que uma bala) e iluminação vermelha.",
+   "arquivo": "acessorios/luneta_besta.glb",
+   "tamanho_m": [
+    0.046,
+    0.064,
+    0.21
+   ],
+   "triangulos": 5408,
+   "kb": 272.4,
+   "encaixes": [
+    {
+     "no": "olho",
+     "tipo": "mira",
+     "pai": "luneta_besta",
+     "posicao_m": [
+      -0.0,
+      0.028,
+      0.105
+     ],
+     "descricao": "ocular: linha de visada (afastar o olho uns 9 cm)"
+    }
+   ]
+  },
+  {
+   "id": "estribo_besta",
+   "nome": "Estribo de besta",
+   "grupo": "acessorios",
+   "categoria": "estribo",
+   "encaixe": "estribo_besta",
+   "peso_kg": 0.18,
+   "raridade": "comum",
+   "valor_troca": 8,
+   "modificadores": {
+    "armar_s": 0.78
+   },
+   "onde": [
+    "casa_de_campo",
+    "armazem"
+   ],
+   "descricao": "Alça de aço com sapata de borracha na frente da besta: pé dentro, ponta no chão, e dá para armar bem mais rápido.",
+   "arquivo": "acessorios/estribo_besta.glb",
+   "tamanho_m": [
+    0.176,
+    0.062,
+    0.16
+   ],
+   "triangulos": 5056,
+   "kb": 239.8
   }
  ],
  "municao": [
@@ -15357,6 +15775,84 @@
    ],
    "triangulos": 766,
    "kb": 41.0
+  },
+  {
+   "id": "virote_caca",
+   "nome": "Virote de caça",
+   "grupo": "municao",
+   "categoria": "municao",
+   "calibre": "virote",
+   "peso_kg": 0.03,
+   "empilha": 12,
+   "multiplicador_dano": 1.0,
+   "raridade": "incomum",
+   "onde": [
+    "casa_de_campo",
+    "armazem",
+    "galeria"
+   ],
+   "encaixe": "virote",
+   "descricao": "Haste de carbono com ponta de 3 lâminas: atravessa fundo. Pivô na nock (ponto que encosta na corda).",
+   "arquivo": "municao/virote_caca.glb",
+   "tamanho_m": [
+    0.024,
+    0.021,
+    0.462
+   ],
+   "triangulos": 882,
+   "kb": 44.5
+  },
+  {
+   "id": "virote_campo",
+   "nome": "Virote de ponta de campo",
+   "grupo": "municao",
+   "categoria": "municao",
+   "calibre": "virote",
+   "peso_kg": 0.03,
+   "empilha": 12,
+   "multiplicador_dano": 0.8,
+   "raridade": "comum",
+   "onde": [
+    "casa_de_campo",
+    "armazem",
+    "galeria"
+   ],
+   "encaixe": "virote",
+   "descricao": "Ponta simples de aço: quase sempre dá para usar de novo. Pivô na nock (ponto que encosta na corda).",
+   "arquivo": "municao/virote_campo.glb",
+   "tamanho_m": [
+    0.024,
+    0.021,
+    0.45
+   ],
+   "triangulos": 846,
+   "kb": 44.6
+  },
+  {
+   "id": "virote_prego",
+   "nome": "Virote improvisado (prego)",
+   "grupo": "municao",
+   "categoria": "municao",
+   "calibre": "virote",
+   "peso_kg": 0.03,
+   "empilha": 12,
+   "multiplicador_dano": 0.65,
+   "raridade": "comum",
+   "onde": [
+    "casa_de_campo",
+    "armazem",
+    "galeria"
+   ],
+   "encaixe": "virote",
+   "descricao": "Haste de cabo de vassoura com um prego preso com fita: feito na bancada, erra mais. Pivô na nock (ponto que encosta na corda).",
+   "arquivo": "municao/virote_prego.glb",
+   "tamanho_m": [
+    0.024,
+    0.021,
+    0.472
+   ],
+   "triangulos": 1950,
+   "kb": 97.2
   }
  ],
  "efeitos": [

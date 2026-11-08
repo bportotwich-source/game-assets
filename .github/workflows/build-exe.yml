@@ -8,7 +8,7 @@ on:
   push:
     branches: [main, kit-galeria]
   pull_request:
-    paths: ["editor/**", "menu/**", "visitar/**", "scripts/godot/**", "project.godot", "export_presets.cfg", ".github/workflows/build-exe.yml"]
+    paths: ["editor/**", "menu/**", "visitar/**", "scripts/godot/**", "project.godot", "export_presets.cfg", "scripts/ci/**", ".github/workflows/build-exe.yml"]
   workflow_dispatch:
 
 permissions:
@@ -35,7 +35,7 @@ jobs:
           rm -rf templates *.zip *.tpz
 
       - name: Importar peças
-        run: timeout 1500 ./godot --headless --import || true
+        run: scripts/ci/importar_em_partes.sh ./godot 3
 
       - name: Exportar para Windows
         run: |

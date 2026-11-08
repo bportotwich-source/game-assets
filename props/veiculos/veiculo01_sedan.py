@@ -434,7 +434,9 @@ def _caminho_ponta(frente, zlim, off, n=96):
     zs = np.linspace(zlim, SF.ZF if frente else SF.ZR, 900)
     xs = np.array([SF.hw(z) * SF.fx(z) for z in zs])
     lado = np.column_stack([xs, zs]); outro = lado[::-1].copy(); outro[:, 0] *= -1
-    pl = np.vstack([lado, outro[1:]]) if frente else np.vstack([outro, lado[::-1][1:]])
+    # frente: +x -> centro -> -x; traseira: -x -> centro -> +x (assim o 'lado' do perfil aponta para fora nas duas pontas)
+    esp = lado.copy(); esp[:, 0] *= -1
+    pl = np.vstack([lado, outro[1:]]) if frente else np.vstack([esp, lado[::-1][1:]])
     from shapely.geometry import LineString as _LS
     ls = _LS(pl); pts = [ls.interpolate(t, normalized=True).coords[0] for t in np.linspace(0, 1, n)]
     P = np.array(pts); out = []

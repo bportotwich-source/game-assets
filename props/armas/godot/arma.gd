@@ -118,6 +118,24 @@ func linha_de_visada() -> Node3D:
 	return modelo.find_child("mira_ferro", true, false)
 
 
+## Ponto de referência para o personagem (IK das mãos, ombro, olho): "punho", "gatilho", "guarda_mao", "coronha", "mira",
+## "cano", "carregador" ou "corda". Se um acessório montado traz o seu próprio ref_ (empunhadura frontal, coronha trocada),
+## vale o do acessório; "mira" com luneta/ponto vermelho devolve o "olho" da mira. Devolve null se a arma não tem o ponto.
+func ponto_ref(qual: String) -> Node3D:
+	if qual == "mira":
+		var olho := linha_de_visada()
+		if olho and olho.name == "olho":
+			return olho
+	var nome := "ref_" + qual
+	for no in instalados:
+		var enc := modelo.find_child(no, true, false)
+		if enc:
+			var r := enc.find_child(nome, true, false)
+			if r:
+				return r
+	return modelo.find_child(nome, true, false)
+
+
 ## Valor final de um atributo com os modificadores dos acessórios (ex.: atributo("ruido_m")).
 func atributo(nome: String) -> float:
 	var v := float(dados.get(nome, 0.0))

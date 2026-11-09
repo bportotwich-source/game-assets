@@ -33,6 +33,14 @@ props/armas/
   ferrolho, o supressor anda com o cano, o carregador trocado anda com a animação de recarga).
 - **Pontos de efeito:** `boca_fogo` (clarão e origem do tiro, raycast para -Z), `saida_estojo` (onde nasce o estojo ejetado),
   `mira_ferro` (linha de visada), e nos acessórios `olho` (centro da lente), `feixe` (SpotLight3D da lanterna), `laser`.
+- **Pontos de referência do personagem** (`pontos_ref.py`, nós `ref_*`, lista em `pontos_ref` no catálogo): onde o corpo encosta
+  na arma, para IK das mãos, ombro e olho. `ref_punho` (mão que segura; o -Y do nó desce ao longo do punho, inclinado pelo ângulo
+  medido na malha), `ref_gatilho` (ponta do indicador), `ref_guarda_mao` (mão de apoio: embaixo do guarda-mão, na telha da
+  espingarda, ou do lado esquerdo do punho nas pistolas), `ref_coronha` (soleira, no ombro), `ref_mira` (centro da alça; com luneta
+  vale o `olho` dela), `ref_cano` (boca), `ref_carregador` (mão da recarga, anda com o carregador), `ref_corda` (arco e besta).
+  Facas, machadinha e arremessáveis só têm `ref_punho`; lança e bastões também têm `ref_guarda_mao`. Empunhaduras frontais e coronhas
+  trazem o seu próprio `ref_guarda_mao`/`ref_coronha`, que vale no lugar do da arma quando montadas. No Godot: `arma.ponto_ref("guarda_mao")`.
+  Os pontos são calculados da malha e regravados a cada `gerar_armas.py`; ajuste fino por arma em `AJUSTE` dentro de `pontos_ref.py`.
 - **Trilho padrão do Recomeço:** 21 mm de largura com fendas a cada 10 mm. Lanternas, lasers, empunhaduras e bipés usam o mesmo trilho
   em todas as armas.
 - **Animações glTF** embutidas, só das peças da arma (as mãos virão com os personagens). O nó raiz da arma também se mexe (coice,

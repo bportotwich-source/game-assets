@@ -14,6 +14,9 @@ done
 mapfile -t DIRS < <(ls -d kits/*/ props/*/ 2>/dev/null | sed 's#/$##')
 for d in "${DIRS[@]}"; do touch "$d/.gdignore"; done
 for ((i = 0; i < ${#DIRS[@]}; i += LOTE)); do
+  # so o lote atual fica visivel: com os lotes ja importados a vista, a memoria crescia a cada GLB
+  # importado (passava de 10 GB nos lotes do fim)
+  for d in "${DIRS[@]}"; do touch "$d/.gdignore"; done
   for d in "${DIRS[@]:i:LOTE}"; do rm -f "$d/.gdignore"; done
   echo "Lote $((i / LOTE + 1)): ${DIRS[*]:i:LOTE}"
   timeout 1200 "$GODOT" --headless --import > /dev/null 2>&1 || echo "  aviso: saiu com $?"

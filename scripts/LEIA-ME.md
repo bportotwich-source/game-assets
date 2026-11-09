@@ -11,3 +11,10 @@ Atenção ao sentido: o kit usa Y para cima e giro positivo anti-horário visto 
 |---|---|---|
 | Godot 4 | `godot/door.gd` (num Node3D pai da folha) | `godot/interactor.gd` (num RayCast3D da câmera, ação "interact") |
 | Unity | `unity/KitDoor.cs` (na folha, com BoxCollider) | `unity/DoorInteractor.cs` (na câmera, tecla E) |
+
+## Vidro das janelas (scripts/detalhe/vidro.py)
+
+Todo vidro de janela e porta sai **transparente** e igual em todos os kits: material `glass` (o jogo procura esse
+nome para quebrar o vidro), quase incolor, alpha 0.16, `alphaMode BLEND`, liso. Vidros especiais mantêm nome e tom
+(`gglass` guarda-corpo, `jal` basculante, `glass_f`/`frost` jateado mais fosco). `detalhe.glb_jpeg()` aplica isso
+sozinho em todo gerador; para reaplicar nos GLB prontos: `python3 scripts/detalhe/vidro.py kits/`.

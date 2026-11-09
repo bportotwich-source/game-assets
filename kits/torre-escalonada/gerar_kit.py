@@ -708,3 +708,6 @@ for e in L:
     asm.merge(pieces[e['piece']],Tm)
 asm.scene('building').export(f'{OUT}/building_assembled.glb',include_normals=True)
 print(len(pieces),'pieces',len(L),'placements',sum(1 for e in L if 'door' in e),'doors')
+# vidros transparentes iguais aos dos outros kits (scripts/detalhe/vidro.py)
+import sys, glob as _g; sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts', 'detalhe')); from vidro import vidro_glb
+for _f in _g.glob(f'{OUT}/**/*.glb', recursive=True): vidro_glb(_f)

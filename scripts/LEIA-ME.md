@@ -26,3 +26,9 @@ janelas de batente com duas folhas), com a origem no eixo de abertura. A aparên
 Como cada folha abre está em `kits/<kit>/janelas.json`: `desliza` (guilhotina: subir `curso_m` em Y) ou `gira`
 (batente: girar em Y até `angulo_graus`, o sinal já abre para dentro). Os geradores desses kits chamam isso no fim;
 para refazer à mão: `python3 scripts/detalhe/folhas.py kits/<kit>`.
+
+## Vão da janela rebocado por dentro (scripts/detalhe/vao.py)
+
+Nas peças `*win*` dos 13 kits do jogo, as faces do vão (ombreiras, peitoril e verga) entre o reboco interno e o
+marco eram do material de fora (tábua, tijolo) e apareciam de dentro de casa. `vao.py` corta essas faces no
+plano de trás do marco e passa a parte de dentro para `plaster`. Uso: `python3 scripts/detalhe/vao.py kits/<kit>`.

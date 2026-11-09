@@ -1,0 +1,87 @@
+{
+ "_leia": "Folhas de janela separadas por scripts/detalhe/folhas.py. Cada peca tem nos \"folha\" (e \"folha_2\"...) com a origem no eixo. desliza: subir curso_m em Y. gira: girar em Y ate angulo_graus na dobradica (o sinal ja abre para dentro, -Z). eixo_m e a origem do no na peca.",
+ "wall_a0_window": [
+  {
+   "no": "folha",
+   "tipo": "desliza",
+   "curso_m": 0.87,
+   "eixo_m": [
+    0.0,
+    2.125,
+    -0.13
+   ],
+   "largura_m": 0.9,
+   "altura_m": 0.905
+  }
+ ],
+ "wall_a1_window": [
+  {
+   "no": "folha",
+   "tipo": "desliza",
+   "curso_m": 0.87,
+   "eixo_m": [
+    0.0,
+    0.955,
+    -0.13
+   ],
+   "largura_m": 0.9,
+   "altura_m": 0.905
+  }
+ ],
+ "wall_a2_window": [
+  {
+   "no": "folha",
+   "tipo": "desliza",
+   "curso_m": 0.87,
+   "eixo_m": [
+    0.0,
+    0.955,
+    -0.13
+   ],
+   "largura_m": 0.9,
+   "altura_m": 0.905
+  }
+ ],
+ "wall_b0_window": [
+  {
+   "no": "folha",
+   "tipo": "desliza",
+   "curso_m": 0.87,
+   "eixo_m": [
+    0.0,
+    2.125,
+    -0.13
+   ],
+   "largura_m": 0.9,
+   "altura_m": 0.905
+  }
+ ],
+ "wall_b1_window": [
+  {
+   "no": "folha",
+   "tipo": "desliza",
+   "curso_m": 0.87,
+   "eixo_m": [
+    0.0,
+    0.955,
+    -0.13
+   ],
+   "largura_m": 0.9,
+   "altura_m": 0.905
+  }
+ ],
+ "wall_b2_window": [
+  {
+   "no": "folha",
+   "tipo": "desliza",
+   "curso_m": 0.87,
+   "eixo_m": [
+    0.0,
+    0.955,
+    -0.13
+   ],
+   "largura_m": 0.9,
+   "altura_m": 0.905
+  }
+ ]
+}

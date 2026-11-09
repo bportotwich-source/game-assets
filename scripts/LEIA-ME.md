@@ -18,3 +18,11 @@ Todo vidro de janela e porta sai **transparente** e igual em todos os kits: mate
 nome para quebrar o vidro), quase incolor, alpha 0.16, `alphaMode BLEND`, liso. Vidros especiais mantêm nome e tom
 (`gglass` guarda-corpo, `jal` basculante, `glass_f`/`frost` jateado mais fosco). `detalhe.glb_jpeg()` aplica isso
 sozinho em todo gerador; para reaplicar nos GLB prontos: `python3 scripts/detalhe/vidro.py kits/`.
+
+## Folha da janela separada (scripts/detalhe/folhas.py)
+
+Nos 13 kits do jogo Recomeço cada peça de janela (`*win*`) tem a folha num nó próprio, `folha` (e `folha_2`... nas
+janelas de batente com duas folhas), com a origem no eixo de abertura. A aparência fechada é idêntica à de antes.
+Como cada folha abre está em `kits/<kit>/janelas.json`: `desliza` (guilhotina: subir `curso_m` em Y) ou `gira`
+(batente: girar em Y até `angulo_graus`, o sinal já abre para dentro). Os geradores desses kits chamam isso no fim;
+para refazer à mão: `python3 scripts/detalhe/folhas.py kits/<kit>`.

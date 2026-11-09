@@ -644,3 +644,6 @@ print(len(pieces),'pieces',len(L),'placements',sum(1 for e in L if 'door' in e),
 # vidros transparentes iguais aos dos outros kits (scripts/detalhe/vidro.py)
 import sys, glob as _g; sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts', 'detalhe')); from vidro import vidro_glb
 for _f in _g.glob(f'{OUT}/**/*.glb', recursive=True): vidro_glb(_f)
+# folha da janela em no proprio, para o jogo abrir (scripts/detalhe/folhas.py, grava janelas.json)
+import sys as _s, os as _o; _s.path.insert(0, _o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '..', '..', 'scripts', 'detalhe')); import folhas as _folhas
+_folhas.kit(OUT)

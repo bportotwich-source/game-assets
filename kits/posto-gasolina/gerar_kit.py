@@ -654,3 +654,6 @@ for _f in _g.glob(f'{OUT}/**/*.glb', recursive=True): vidro_glb(_f)
 # folha da janela em no proprio, para o jogo abrir (scripts/detalhe/folhas.py, grava janelas.json)
 import sys as _s, os as _o; _s.path.insert(0, _o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '..', '..', 'scripts', 'detalhe')); import folhas as _folhas
 _folhas.kit(OUT)
+# vao da janela rebocado por dentro (scripts/detalhe/vao.py)
+import vao as _vao, glob as _gl
+for _f in _gl.glob(_o.path.join(OUT, 'pieces', '*win*.glb')): _vao.rebocar(_f)

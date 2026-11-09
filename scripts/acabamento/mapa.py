@@ -71,6 +71,8 @@ POR_TIPO = {
     'mercado': ([14], [4]), 'padaria_loja': ([14, 15], [3, 4]), 'padaria_producao': ([15], [2]), 'diner': ([15, 14], [3]), 'posto_loja': ([14], [4]),
     'oficina': ([16], [5]), 'showroom': ([0], [4]), 'biblioteca': ([18], [0, 1]), 'sala_aula': ([13], [0]), 'correios': ([13], [4]), 'triagem': ([16], [5]),
     'quartel': ([13, 16], [5]), 'igreja': ([0], [0]), 'cinema_foyer': ([2, 18], [4]), 'cinema_sala': ([0], [5]), 'projecao': ([16], [5]),
+    'galeria': ([14, 0], [4]), 'saguao_estacao': ([18, 14], [3, 4]), 'caixa_dagua': ([16], [5]), 'casa_barcos': ([10], [6]), 'concha': ([0], [5]),
+    'palco_bastidores': ([16], [5]), 'celeiro': ([16], [5]), 'ferro_velho': ([16], [5]), 'observatorio': ([18], [1]), 'skate': ([16], [5]),
     'galpao': ([16], [5]), 'fabrica': ([16], [5]), 'serraria': ([16], [5]), 'arquivo': ([13], [4]), 'trailer': ([12, 4], [4]),
 }
 FORA = {'vazio', 'patio', 'quintal', 'varanda', 'estacionamento'}
@@ -106,16 +108,24 @@ def gerar(kit, cfg):
             if t in FORA or t not in POR_TIPO: continue
             ps, fs = POR_TIPO[t]
             sp = ps[h(kit, a, c['id'], 'p') % len(ps)]; sf = fs[h(kit, a, c['id'], 'f') % len(fs)]
-            cx, cz = c['centro']
-            loc, _, _ = ray.intersects_location([[cx, an['y'] + 1.2, cz]], [[0, 1.0, 0]], multiple_hits=True)
-            acima = sorted(v for v in loc[:, 1] if v > an['y'] + 1.9) if len(loc) else []
-            teto = (acima[0] if acima else an['teto'] - 0.2) - an['y']
+            # pe-direito: mediana do primeiro obstaculo acima de 2,1 m em ate 40 celulas do comodo
+            # (um raio so, no centro, pegava luminaria, dossel de cama ou movel embutido)
+            ii, jj = np.nonzero(rot == c['id'])
+            if len(ii) > 40:
+                sel = np.linspace(0, len(ii) - 1, 40).astype(int); ii, jj = ii[sel], jj[sel]
+            org = np.stack([res['xs'][ii], np.full(len(ii), an['y'] + 1.2), res['zs'][jj]], 1)
+            loc, idx, _ = ray.intersects_location(org, np.tile([0, 1.0, 0], (len(org), 1)), multiple_hits=True)
+            prim = np.full(len(org), np.inf)
+            ok = loc[:, 1] > an['y'] + 2.1 if len(loc) else np.zeros(0, bool)
+            if ok.any(): np.minimum.at(prim, idx[ok], loc[ok, 1])
+            prim = prim[np.isfinite(prim)]
+            teto = (float(np.median(prim)) if len(prim) else an['teto'] - 0.2) - an['y']
             m = cheio == c['id']
-            img[a][m.T] = [sp + 1, sf + 1, int(np.clip(round(teto / 0.02), 0, 255)), 255]
+            img[a][m.T] = [sp + 1, sf + 1, int(round(teto / 0.02)) if teto <= 5.0 else 0, 255]
             resumo.append(dict(andar=a, comodo=c['id'], tipo=t, parede=sp, piso=sf, pe_direito=round(float(teto), 2)))
     out = dict(kit=kit, gerado_por='scripts/acabamento/mapa.py',
                convencao="mapa: RGBA8 em base64, andar por andar, linha z, coluna x; R = estilo de parede + 1, G = estilo de piso + 1, "
-                         "B = pé-direito / 0,02 m, A = 255 dentro de um cômodo. Célula (ix, iz) cobre x0 + ix*cel e z0 + iz*cel.",
+                         "B = pé-direito / 0,02 m (0 = mais de 5 m: sem sanca), A = 255 dentro de um cômodo. Célula (ix, iz) cobre x0 + ix*cel e z0 + iz*cel.",
                x0=round(float(res['x0']), 4), z0=round(float(res['z0']), 4), cel=CM.CEL, nx=nx, nz=nz, niveis=[round(float(an['y']), 3) for an in res['andares']],
                materiais=dict(paredes=cfg.get('paredes', PAREDE_PADRAO), pisos=cfg.get('pisos', PISO_PADRAO)),
                comodos=resumo, mapa=base64.b64encode(img.tobytes()).decode())

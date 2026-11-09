@@ -106,14 +106,14 @@ void fragment() {
 				orm = vec3(alt > 0.105 ? 0.7 : 1.0, 0.45, 0.0);
 				nm = vec3(0.0, alt > 0.105 ? 0.7 : 0.0, 1.0);
 			}
-			if ((bits & 2) != 0 && pe - alt < 0.10 && pe > 1.0) {   // sanca
+			if ((bits & 2) != 0 && pe - alt < 0.10 && pe - alt > -0.02 && pe > 1.0) {   // sanca
 				float k = (pe - alt) / 0.10;
 				alb = vec3(0.96, 0.95, 0.92);
 				orm = vec3(mix(0.75, 1.0, k), 0.6, 0.0);
 				nm = vec3(0.0, -0.6 * (1.0 - k), 1.0);
 			}
 			// sombra perto do piso e do teto (oclusão assada, barata)
-			orm.r *= mix(0.72, 1.0, smoothstep(0.0, 0.35, alt)) * mix(0.8, 1.0, smoothstep(0.0, 0.3, pe - alt));
+			orm.r *= mix(0.72, 1.0, smoothstep(0.0, 0.35, alt)) * mix(0.8, 1.0, smoothstep(0.0, 0.3, abs(pe - alt)));
 			nm = normalize(nm);
 			n_mundo = normalize(t * nm.x + vec3(0.0, 1.0, 0.0) * nm.y + wnrm * nm.z);
 		} else {

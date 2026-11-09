@@ -7,3 +7,5 @@ Papel de parede, azulejo, lambri e piso por cômodo, sem mexer nas peças dos ki
 - `acabamento.gdshader` + `acabamento.gd`: no Godot, `preload("res://acabamentos/acabamento.gd").aplicar(predio, kit)` troca os materiais de parede lisa (`plaster`) e de piso genérico (`floor`) pelo shader. O shader lê `kits/<kit>/acabamento.json` para saber o estilo de cada cômodo.
 
 Cada kit precisa de `kits/<kit>/acabamento.json`: `python3 scripts/acabamento/mapa.py <kit>` (usa os cômodos e tipos da ambientação). No visitar, a tecla K liga e desliga o acabamento.
+
+Todos os 61 kits já têm `acabamento.json`. Nos kits mais novos, o piso já vem por cômodo (carpete, vinílico, taco), então só as paredes lisas mudam. O pé-direito de cada cômodo é a mediana da altura do teto em até 40 pontos do cômodo; acima de 5 m (galpões, átrios) não há sanca.

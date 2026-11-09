@@ -289,7 +289,70 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "pistola_9mm",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 13.7,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0339,
+      -0.0643
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "pistola_9mm",
+     "posicao_m": [
+      -0.0158,
+      -0.012,
+      0.004
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0,
+      0.0895,
+      -0.005
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.1932
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.0376,
+      0.0159
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "revolver_38",
@@ -562,7 +625,70 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "revolver_38",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 9.6,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.029,
+      -0.0424
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "revolver_38",
+     "posicao_m": [
+      -0.0168,
+      -0.012,
+      0.004
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "revolver_38",
+     "posicao_m": [
+      0.0,
+      0.0858,
+      -0.028
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "revolver_38",
+     "posicao_m": [
+      0.0,
+      0.07,
+      -0.1952
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "tambor",
+     "posicao_m": [
+      0.0,
+      0.0575,
+      -0.036
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "espingarda_12",
@@ -938,7 +1064,80 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "espingarda_12",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 17.4,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0264,
+      -0.0741
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "telha",
+     "posicao_m": [
+      0.0,
+      0.0382,
+      -0.4172
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "espingarda_12",
+     "posicao_m": [
+      -0.0,
+      0.0369,
+      0.2762
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "espingarda_12",
+     "posicao_m": [
+      0.0,
+      0.1125,
+      -0.008
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "espingarda_12",
+     "posicao_m": [
+      0.0,
+      0.09,
+      -0.746
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "espingarda_12",
+     "posicao_m": [
+      0.0,
+      0.043,
+      -0.173
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "espingarda_12_curta",
@@ -1290,7 +1489,70 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "espingarda_12_curta",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 17.4,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0264,
+      -0.0741
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "telha",
+     "posicao_m": [
+      0.0,
+      0.0382,
+      -0.4025
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "espingarda_12_curta",
+     "posicao_m": [
+      0.0,
+      0.1125,
+      -0.008
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "espingarda_12_curta",
+     "posicao_m": [
+      0.0,
+      0.09,
+      -0.594
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "espingarda_12_curta",
+     "posicao_m": [
+      0.0,
+      0.043,
+      -0.173
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "carabina_308",
@@ -1611,7 +1873,80 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "carabina_308",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 17.3,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0334,
+      -0.0691
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "carabina_308",
+     "posicao_m": [
+      0.0,
+      0.049,
+      -0.393
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "carabina_308",
+     "posicao_m": [
+      0.0,
+      0.0227,
+      0.2553
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "carabina_308",
+     "posicao_m": [
+      0.0,
+      0.101,
+      -0.128
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "carabina_308",
+     "posicao_m": [
+      0.0,
+      0.08,
+      -0.803
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.006,
+      -0.1385
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "carabina_308_caca",
@@ -1920,7 +2255,80 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "carabina_308_caca",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 30.4,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0184,
+      -0.0561
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "carabina_308_caca",
+     "posicao_m": [
+      0.0,
+      0.0315,
+      -0.355
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "carabina_308_caca",
+     "posicao_m": [
+      0.0,
+      0.0169,
+      0.2883
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "carabina_308_caca",
+     "posicao_m": [
+      0.0,
+      0.089,
+      -0.115
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "carabina_308_caca",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.76
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.021,
+      -0.1255
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "fuzil_556",
@@ -2402,7 +2810,80 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "fuzil_556",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 18.2,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0424,
+      -0.0741
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "fuzil_556",
+     "posicao_m": [
+      0.0,
+      0.063,
+      -0.337
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "fuzil_556",
+     "posicao_m": [
+      0.0,
+      0.0409,
+      0.2632
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "fuzil_556",
+     "posicao_m": [
+      0.0,
+      0.136,
+      -0.029
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "fuzil_556",
+     "posicao_m": [
+      0.0,
+      0.093,
+      -0.575
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.0889,
+      -0.1737
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "fuzil_556_bicolor",
@@ -2886,7 +3367,80 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "fuzil_556_bicolor",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 18.2,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0424,
+      -0.0741
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "fuzil_556_bicolor",
+     "posicao_m": [
+      0.0,
+      0.063,
+      -0.337
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "fuzil_556_bicolor",
+     "posicao_m": [
+      0.0,
+      0.0409,
+      0.2632
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "fuzil_556_bicolor",
+     "posicao_m": [
+      0.0,
+      0.136,
+      -0.029
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "fuzil_556_bicolor",
+     "posicao_m": [
+      0.0,
+      0.093,
+      -0.575
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.0889,
+      -0.1737
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "fuzil_762",
@@ -3365,7 +3919,80 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "fuzil_762",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 17.9,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0504,
+      -0.0661
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "fuzil_762",
+     "posicao_m": [
+      0.0,
+      0.0465,
+      -0.318
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "fuzil_762",
+     "posicao_m": [
+      -0.0,
+      0.0074,
+      0.409
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "fuzil_762",
+     "posicao_m": [
+      0.0,
+      0.1277,
+      -0.193
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "fuzil_762",
+     "posicao_m": [
+      0.0,
+      0.084,
+      -0.603
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.12,
+      -0.1603
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "fuzil_762_tatico",
@@ -3860,7 +4487,80 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "fuzil_762_tatico",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 17.9,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0504,
+      -0.0661
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "fuzil_762_tatico",
+     "posicao_m": [
+      0.0,
+      0.0465,
+      -0.318
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "fuzil_762_tatico",
+     "posicao_m": [
+      -0.0,
+      0.022,
+      0.3765
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "fuzil_762_tatico",
+     "posicao_m": [
+      0.0,
+      0.1277,
+      -0.193
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "fuzil_762_tatico",
+     "posicao_m": [
+      0.0,
+      0.084,
+      -0.603
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.12,
+      -0.1574
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "smg_9mm",
@@ -4265,7 +4965,80 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "smg_9mm",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 6.2,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0364,
+      -0.0621
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "smg_9mm",
+     "posicao_m": [
+      0.0,
+      0.0505,
+      -0.148
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "coronha",
+     "posicao_m": [
+      -0.0,
+      0.05,
+      0.116
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "smg_9mm",
+     "posicao_m": [
+      -0.0,
+      0.131,
+      0.074
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "smg_9mm",
+     "posicao_m": [
+      0.0,
+      0.08,
+      -0.213
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.075,
+      0.0085
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "smg_9mm_tan",
@@ -4670,7 +5443,80 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "smg_9mm_tan",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 6.2,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0364,
+      -0.0621
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "smg_9mm_tan",
+     "posicao_m": [
+      0.0,
+      0.0505,
+      -0.148
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "coronha",
+     "posicao_m": [
+      -0.0,
+      0.05,
+      0.116
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "smg_9mm_tan",
+     "posicao_m": [
+      -0.0,
+      0.131,
+      0.074
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "smg_9mm_tan",
+     "posicao_m": [
+      0.0,
+      0.08,
+      -0.213
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.075,
+      0.0085
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "pistola_9mm_tan",
@@ -4945,7 +5791,70 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "pistola_9mm_tan",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 13.7,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0339,
+      -0.0643
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "pistola_9mm_tan",
+     "posicao_m": [
+      -0.0158,
+      -0.012,
+      0.004
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0,
+      0.0895,
+      -0.005
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.1932
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.0376,
+      0.0159
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "pistola_9mm_verde",
@@ -5220,7 +6129,70 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "pistola_9mm_verde",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 13.7,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0339,
+      -0.0643
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "pistola_9mm_verde",
+     "posicao_m": [
+      -0.0158,
+      -0.012,
+      0.004
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0,
+      0.0895,
+      -0.005
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.1932
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.0376,
+      0.0159
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "pistola_9mm_cinza",
@@ -5495,7 +6467,70 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "pistola_9mm_cinza",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 13.7,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0339,
+      -0.0643
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "pistola_9mm_cinza",
+     "posicao_m": [
+      -0.0158,
+      -0.012,
+      0.004
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0,
+      0.0895,
+      -0.005
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.1932
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.0376,
+      0.0159
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "smg_ciclone_9mm",
@@ -5903,7 +6938,80 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "smg_ciclone_9mm",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 13.1,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0384,
+      -0.0461
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "smg_ciclone_9mm",
+     "posicao_m": [
+      0.0,
+      0.0545,
+      -0.276
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "coronha",
+     "posicao_m": [
+      -0.0,
+      0.05,
+      0.289
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "smg_ciclone_9mm",
+     "posicao_m": [
+      -0.0,
+      0.127,
+      0.036
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "smg_ciclone_9mm",
+     "posicao_m": [
+      0.0,
+      0.08,
+      -0.354
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.0867,
+      -0.1325
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "smg_ciclone_9mm_tan",
@@ -6311,7 +7419,80 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "smg_ciclone_9mm_tan",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 13.1,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0384,
+      -0.0461
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "smg_ciclone_9mm_tan",
+     "posicao_m": [
+      0.0,
+      0.0545,
+      -0.276
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "coronha",
+     "posicao_m": [
+      -0.0,
+      0.05,
+      0.289
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "smg_ciclone_9mm_tan",
+     "posicao_m": [
+      -0.0,
+      0.127,
+      0.036
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "smg_ciclone_9mm_tan",
+     "posicao_m": [
+      0.0,
+      0.08,
+      -0.354
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.0867,
+      -0.1325
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "rifle_22",
@@ -6636,7 +7817,80 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "rifle_22",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 28,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0144,
+      -0.0561
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "rifle_22",
+     "posicao_m": [
+      0.0,
+      0.0275,
+      -0.278
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "rifle_22",
+     "posicao_m": [
+      0.0,
+      0.0125,
+      0.2707
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "rifle_22",
+     "posicao_m": [
+      0.0,
+      0.0835,
+      -0.258
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "rifle_22",
+     "posicao_m": [
+      0.0,
+      0.062,
+      -0.658
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.0395,
+      -0.104
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "rifle_22_sintetico",
@@ -6961,7 +8215,80 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "rifle_22_sintetico",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 28,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0144,
+      -0.0561
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "rifle_22_sintetico",
+     "posicao_m": [
+      0.0,
+      0.0275,
+      -0.278
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "rifle_22_sintetico",
+     "posicao_m": [
+      0.0,
+      0.0125,
+      0.2707
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "rifle_22_sintetico",
+     "posicao_m": [
+      0.0,
+      0.0835,
+      -0.258
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "rifle_22_sintetico",
+     "posicao_m": [
+      0.0,
+      0.062,
+      -0.658
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.0395,
+      -0.104
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "pistola_sinalizadora",
@@ -7158,7 +8485,70 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "pistola_sinalizadora",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 22.5,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0194,
+      -0.0601
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "pistola_sinalizadora",
+     "posicao_m": [
+      -0.0142,
+      -0.012,
+      0.004
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "pistola_sinalizadora",
+     "posicao_m": [
+      0.0,
+      0.0785,
+      -0.022
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.06,
+      -0.176
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "cartucho",
+     "posicao_m": [
+      0.0,
+      0.06,
+      -0.058
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "fuzil_308_precisao",
@@ -7632,7 +9022,80 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "fuzil_308_precisao",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 17.3,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0434,
+      -0.0821
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "fuzil_308_precisao",
+     "posicao_m": [
+      0.0,
+      0.066,
+      -0.36
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "fuzil_308_precisao",
+     "posicao_m": [
+      0.0,
+      0.0404,
+      0.2659
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "fuzil_308_precisao",
+     "posicao_m": [
+      0.0,
+      0.146,
+      -0.028
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "fuzil_308_precisao",
+     "posicao_m": [
+      0.0,
+      0.1,
+      -0.74
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.0254,
+      -0.1696
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "fuzil_308_precisao_curto",
@@ -8106,7 +9569,80 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "fuzil_308_precisao_curto",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 17.3,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0434,
+      -0.0821
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "fuzil_308_precisao_curto",
+     "posicao_m": [
+      0.0,
+      0.066,
+      -0.36
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "fuzil_308_precisao_curto",
+     "posicao_m": [
+      0.0,
+      0.0404,
+      0.2659
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "fuzil_308_precisao_curto",
+     "posicao_m": [
+      0.0,
+      0.146,
+      -0.028
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "fuzil_308_precisao_curto",
+     "posicao_m": [
+      0.0,
+      0.1,
+      -0.57
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.0254,
+      -0.1696
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "pistola_guardia_9mm",
@@ -8438,7 +9974,70 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "pistola_guardia_9mm",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 8.2,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0346,
+      -0.0667
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "pistola_guardia_9mm",
+     "posicao_m": [
+      -0.0167,
+      -0.012,
+      0.004
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0,
+      0.0894,
+      -0.014
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.218
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.0421,
+      0.0172
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "pistola_guardia_9mm_preta",
@@ -8770,7 +10369,70 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "pistola_guardia_9mm_preta",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 8.2,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0346,
+      -0.0667
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "pistola_guardia_9mm_preta",
+     "posicao_m": [
+      -0.0167,
+      -0.012,
+      0.004
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0,
+      0.0894,
+      -0.014
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "cano",
+     "posicao_m": [
+      0.0,
+      0.068,
+      -0.218
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.0421,
+      0.0172
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "arco_recurvo",
@@ -9014,7 +10676,49 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "arco_recurvo",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_corda",
+     "pai": "flecha",
+     "posicao_m": [
+      -0.0,
+      0.052,
+      0.182
+     ],
+     "descricao": "mão que puxa a corda (arco e besta): ponto de encaixe da flecha na corda"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "arco_recurvo",
+     "posicao_m": [
+      -0.004,
+      0.124,
+      0.612
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "arco_recurvo",
+     "posicao_m": [
+      0.0,
+      0.052,
+      -0.178
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    }
+   ]
   },
   {
    "id": "arco_composto",
@@ -9372,7 +11076,49 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "arco_composto",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_corda",
+     "pai": "laco_d",
+     "posicao_m": [
+      -0.0,
+      0.06,
+      0.1985
+     ],
+     "descricao": "mão que puxa a corda (arco e besta): ponto de encaixe da flecha na corda"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "arco_composto",
+     "posicao_m": [
+      -0.0,
+      0.132,
+      0.5669
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "arco_composto",
+     "posicao_m": [
+      0.0,
+      0.06,
+      -0.114
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    }
+   ]
   },
   {
    "id": "besta_recurva",
@@ -9716,7 +11462,80 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "besta_recurva",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 14.6,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0266,
+      -0.0645
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "besta_recurva",
+     "posicao_m": [
+      0.0,
+      0.05,
+      -0.489
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "besta_recurva",
+     "posicao_m": [
+      0.0,
+      0.0359,
+      0.3835
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "besta_recurva",
+     "posicao_m": [
+      -0.0,
+      0.143,
+      0.026
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "besta_recurva",
+     "posicao_m": [
+      0.0,
+      0.0985,
+      -0.64
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "virote",
+     "posicao_m": [
+      0.0,
+      0.0985,
+      -0.1
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   },
   {
    "id": "faca_combate",
@@ -9827,7 +11646,19 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "faca_combate",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    }
+   ]
   },
   {
    "id": "facao",
@@ -9939,7 +11770,19 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "facao",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    }
+   ]
   },
   {
    "id": "machadinha_tatica",
@@ -10057,7 +11900,19 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "machadinha_tatica",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    }
+   ]
   },
   {
    "id": "lanca_improvisada",
@@ -10225,7 +12080,29 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "lanca_improvisada",
+     "posicao_m": [
+      -0.0,
+      0.0,
+      0.198
+     ],
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "lanca_improvisada",
+     "posicao_m": [
+      0.0,
+      0.0,
+      -0.45
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    }
+   ]
   },
   {
    "id": "bastao_pregos",
@@ -10337,7 +12214,29 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "bastao_pregos",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "bastao_pregos",
+     "posicao_m": [
+      0.0,
+      0.0,
+      -0.14
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    }
+   ]
   },
   {
    "id": "bastao_arame",
@@ -10450,7 +12349,29 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "bastao_arame",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "bastao_arame",
+     "posicao_m": [
+      0.0,
+      0.0,
+      -0.14
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    }
+   ]
   },
   {
    "id": "coquetel_molotov",
@@ -10557,7 +12478,19 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "coquetel_molotov",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    }
+   ]
   },
   {
    "id": "bomba_pregos",
@@ -10646,7 +12579,19 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "bomba_pregos",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    }
+   ]
   },
   {
    "id": "isca_sonora",
@@ -10772,7 +12717,19 @@
      "laco": true,
      "descricao": "respiração leve parado"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "isca_sonora",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    }
+   ]
   }
  ],
  "acessorios": [
@@ -11342,7 +13299,19 @@
      "laco": false,
      "descricao": "fecha a coronha"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_coronha",
+     "pai": "coronha_retratil_12",
+     "posicao_m": [
+      0.0,
+      -0.0491,
+      0.2742
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    }
+   ]
   },
   {
    "id": "coronha_fixa_12",
@@ -11382,6 +13351,18 @@
       0.338
      ],
      "descricao": "ponto da soleira que encosta no ombro"
+    }
+   ],
+   "pontos_ref": [
+    {
+     "no": "ref_coronha",
+     "pai": "coronha_fixa_12",
+     "posicao_m": [
+      0.0,
+      -0.0527,
+      0.3351
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
    ]
   },
@@ -12025,7 +14006,19 @@
      "laco": false,
      "descricao": "fecha a coronha"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_coronha",
+     "pai": "coronha_retratil_ar",
+     "posicao_m": [
+      0.0,
+      -0.0491,
+      0.2742
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    }
+   ]
   },
   {
    "id": "coronha_fixa_ar",
@@ -12063,6 +14056,18 @@
       0.338
      ],
      "descricao": "ponto da soleira que encosta no ombro"
+    }
+   ],
+   "pontos_ref": [
+    {
+     "no": "ref_coronha",
+     "pai": "coronha_fixa_ar",
+     "posicao_m": [
+      0.0,
+      -0.0527,
+      0.3351
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
    ]
   },
@@ -12262,7 +14267,19 @@
     0.04
    ],
    "triangulos": 12444,
-   "kb": 696.7
+   "kb": 696.7,
+   "pontos_ref": [
+    {
+     "no": "ref_guarda_mao",
+     "pai": "empunhadura_vertical",
+     "posicao_m": [
+      0.0,
+      -0.0495,
+      -0.0018
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    }
+   ]
   },
   {
    "id": "empunhadura_angulada",
@@ -12289,7 +14306,19 @@
     0.07
    ],
    "triangulos": 7070,
-   "kb": 333.3
+   "kb": 333.3,
+   "pontos_ref": [
+    {
+     "no": "ref_guarda_mao",
+     "pai": "empunhadura_angulada",
+     "posicao_m": [
+      0.0,
+      -0.036,
+      0.0
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    }
+   ]
   },
   {
    "id": "lanterna_fuzil",
@@ -12764,7 +14793,19 @@
     0.053
    ],
    "triangulos": 6808,
-   "kb": 321.0
+   "kb": 321.0,
+   "pontos_ref": [
+    {
+     "no": "ref_guarda_mao",
+     "pai": "empunhadura_curta",
+     "posicao_m": [
+      0.0,
+      -0.0473,
+      -0.0015
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    }
+   ]
   },
   {
    "id": "empunhadura_quadrada",
@@ -12791,7 +14832,19 @@
     0.044
    ],
    "triangulos": 1820,
-   "kb": 95.6
+   "kb": 95.6,
+   "pontos_ref": [
+    {
+     "no": "ref_guarda_mao",
+     "pai": "empunhadura_quadrada",
+     "posicao_m": [
+      0.0,
+      -0.0597,
+      0.0
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    }
+   ]
   },
   {
    "id": "empunhadura_cilindrica",
@@ -12817,7 +14870,19 @@
     0.046
    ],
    "triangulos": 1948,
-   "kb": 107.5
+   "kb": 107.5,
+   "pontos_ref": [
+    {
+     "no": "ref_guarda_mao",
+     "pai": "empunhadura_cilindrica",
+     "posicao_m": [
+      0.0,
+      -0.0584,
+      0.0121
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    }
+   ]
   },
   {
    "id": "batente_mao",
@@ -12844,7 +14909,19 @@
     0.078
    ],
    "triangulos": 1984,
-   "kb": 94.9
+   "kb": 94.9,
+   "pontos_ref": [
+    {
+     "no": "ref_guarda_mao",
+     "pai": "batente_mao",
+     "posicao_m": [
+      0.0,
+      -0.0452,
+      0.003
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    }
+   ]
   },
   {
    "id": "empunhadura_curta_tan",
@@ -12870,7 +14947,19 @@
     0.053
    ],
    "triangulos": 6808,
-   "kb": 321.0
+   "kb": 321.0,
+   "pontos_ref": [
+    {
+     "no": "ref_guarda_mao",
+     "pai": "empunhadura_curta_tan",
+     "posicao_m": [
+      0.0,
+      -0.0473,
+      -0.0015
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    }
+   ]
   },
   {
    "id": "coronha_retratil_ar_tan",
@@ -12935,7 +15024,19 @@
      "laco": false,
      "descricao": "fecha a coronha"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_coronha",
+     "pai": "coronha_retratil_ar_tan",
+     "posicao_m": [
+      0.0,
+      -0.0491,
+      0.2742
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    }
+   ]
   },
   {
    "id": "supressor_556_tan",
@@ -13028,6 +15129,18 @@
      ],
      "descricao": "ponto da soleira que encosta no ombro"
     }
+   ],
+   "pontos_ref": [
+    {
+     "no": "ref_coronha",
+     "pai": "coronha_madeira_ak",
+     "posicao_m": [
+      0.0,
+      -0.0776,
+      0.346
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    }
    ]
   },
   {
@@ -13095,7 +15208,19 @@
      "laco": false,
      "descricao": "abre a coronha"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_coronha",
+     "pai": "coronha_rebativel_ak",
+     "posicao_m": [
+      0.0,
+      -0.058,
+      0.312
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    }
+   ]
   },
   {
    "id": "freio_ak",
@@ -13472,6 +15597,18 @@
      ],
      "descricao": "ponto da soleira que encosta no ombro"
     }
+   ],
+   "pontos_ref": [
+    {
+     "no": "ref_coronha",
+     "pai": "coronha_polimero_ak",
+     "posicao_m": [
+      0.0,
+      -0.0817,
+      0.3404
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    }
    ]
   },
   {
@@ -13538,7 +15675,19 @@
      "laco": false,
      "descricao": "fecha a coronha"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_coronha",
+     "pai": "coronha_retratil_ak",
+     "posicao_m": [
+      0.0,
+      -0.0491,
+      0.3062
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    }
+   ]
   },
   {
    "id": "compensador_ak",
@@ -13759,7 +15908,19 @@
     0.036
    ],
    "triangulos": 10404,
-   "kb": 551.6
+   "kb": 551.6,
+   "pontos_ref": [
+    {
+     "no": "ref_guarda_mao",
+     "pai": "empunhadura_reta",
+     "posicao_m": [
+      0.0,
+      -0.038,
+      -0.0001
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    }
+   ]
   },
   {
    "id": "empunhadura_reta_tan",
@@ -13785,7 +15946,19 @@
     0.036
    ],
    "triangulos": 10404,
-   "kb": 551.9
+   "kb": 551.9,
+   "pontos_ref": [
+    {
+     "no": "ref_guarda_mao",
+     "pai": "empunhadura_reta_tan",
+     "posicao_m": [
+      0.0,
+      -0.038,
+      -0.0001
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    }
+   ]
   },
   {
    "id": "coronha_leve_ar",
@@ -13851,7 +16024,19 @@
      "laco": false,
      "descricao": "fecha a coronha"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_coronha",
+     "pai": "coronha_leve_ar",
+     "posicao_m": [
+      0.0,
+      -0.0481,
+      0.2635
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    }
+   ]
   },
   {
    "id": "coronha_leve_ar_tan",
@@ -13917,7 +16102,19 @@
      "laco": false,
      "descricao": "fecha a coronha"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_coronha",
+     "pai": "coronha_leve_ar_tan",
+     "posicao_m": [
+      0.0,
+      -0.0481,
+      0.2635
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    }
+   ]
   },
   {
    "id": "coronha_leve_ak",
@@ -13983,7 +16180,19 @@
      "laco": false,
      "descricao": "fecha a coronha"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_coronha",
+     "pai": "coronha_leve_ak",
+     "posicao_m": [
+      0.0,
+      -0.0481,
+      0.2955
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    }
+   ]
   },
   {
    "id": "coronha_leve_ak_tan",
@@ -14049,7 +16258,19 @@
      "laco": false,
      "descricao": "fecha a coronha"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_coronha",
+     "pai": "coronha_leve_ak_tan",
+     "posicao_m": [
+      0.0,
+      -0.0481,
+      0.2955
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    }
+   ]
   },
   {
    "id": "carregador_762_30_grade",
@@ -14111,6 +16332,18 @@
       0.312
      ],
      "descricao": "ponto da soleira que encosta no ombro"
+    }
+   ],
+   "pontos_ref": [
+    {
+     "no": "ref_coronha",
+     "pai": "coronha_esqueleto_ak",
+     "posicao_m": [
+      0.0,
+      -0.063,
+      0.3135
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
    ]
   },
@@ -14329,6 +16562,18 @@
       0.312
      ],
      "descricao": "ponto da soleira que encosta no ombro"
+    }
+   ],
+   "pontos_ref": [
+    {
+     "no": "ref_coronha",
+     "pai": "coronha_esqueleto_ak_gasto",
+     "posicao_m": [
+      0.0,
+      -0.063,
+      0.3135
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
    ]
   },
@@ -14553,7 +16798,19 @@
      "laco": false,
      "descricao": "abre a empunhadura"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_guarda_mao",
+     "pai": "empunhadura_dobravel",
+     "posicao_m": [
+      0.0,
+      -0.0415,
+      0.0111
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    }
+   ]
   },
   {
    "id": "supressor_9mm_tan",
@@ -15193,7 +17450,19 @@
      "laco": false,
      "descricao": "sobe o apoio de rosto (para lunetas altas)"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_coronha",
+     "pai": "coronha_precisao_ar",
+     "posicao_m": [
+      0.0,
+      -0.0566,
+      0.2759
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    }
+   ]
   },
   {
    "id": "coronha_precisao_ar_preta",
@@ -15256,7 +17525,19 @@
      "laco": false,
      "descricao": "sobe o apoio de rosto (para lunetas altas)"
     }
-   }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_coronha",
+     "pai": "coronha_precisao_ar_preta",
+     "posicao_m": [
+      0.0,
+      -0.0566,
+      0.2759
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    }
+   ]
   },
   {
    "id": "luneta_5_25",
@@ -17062,5 +19343,15 @@
    "triangulos": 1920,
    "kb": 92.0
   }
- ]
+ ],
+ "pontos_ref": {
+  "ref_punho": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano",
+  "ref_gatilho": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar",
+  "ref_guarda_mao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)",
+  "ref_coronha": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)",
+  "ref_mira": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)",
+  "ref_cano": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)",
+  "ref_carregador": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)",
+  "ref_corda": "mão que puxa a corda (arco e besta): ponto de encaixe da flecha na corda"
+ }
 }

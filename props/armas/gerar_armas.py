@@ -1123,7 +1123,12 @@ def main(ids):
         print(f"{id_:30s} {r['triangulos']:7d} tris {r['kb']:7.1f} KB  {r['tamanho_m']}")
     ordem = list(REG)
     for g in grupos: cat[g].sort(key=lambda r: ordem.index(r['id']) if r['id'] in ordem else 999)
-    json.dump(dict(CAB, **cat), open(arq, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    import pontos_ref                                              # pontos ref_* das maos/ombro/olho (ver pontos_ref.py)
+    cat_ac = {r['id']: r for r in cat['acessorios']}
+    for g in ('armas', 'acessorios'):
+        for r in cat[g]:
+            if not ids or r['id'] in ids or g == 'acessorios': pontos_ref.aplicar_item(r, g, cat_ac)
+    json.dump(dict(CAB, pontos_ref=pontos_ref.DESCR, **cat), open(arq, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     catalogo_md(cat)
 
 

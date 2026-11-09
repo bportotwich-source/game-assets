@@ -240,6 +240,57 @@ SO_SINAIS = S + S_PAREDE + [('lixo_espalhado', 1, 'livre', 0.3), ('louca_quebrad
 SO_SINAIS_FORA = [('lixo_espalhado', 1, 'livre', 0.5), ('mancha_sangue', 1, 'livre', 0.12), ('papeis_espalhados', 1, 'livre', 0.3), ('cacos_vidro', 1, 'livre', 0.2)]
 
 
+# ---- Modo "mobiliado" (kits.json: "mobiliado": true): casa montada como casa de verdade, cada cômodo com o
+# conjunto completo de móveis e decoração na parede, sem tralha jogada no chão (cacos, papéis, sangue, latas).
+# O saque continua nas gavetas e armários (o jogo sorteia o de cada um).
+MOBILIADO = {
+    'sala': [('sofa', 1, 'parede', 1), ('poltrona', 2, 'parede', 1), ('rack_tv', 1, 'parede', 1), ('tv_tubo', 1, 'parede', 0.9), ('tapete_sala', 1, 'centro', 1),
+             ('estante_livros', 1, 'parede', 1), ('abajur', 1, 'parede', 0.9), ('vitrola', 1, 'parede', 0.4), ('vaso_planta_morta', 1, 'parede', 0.8), ('aquecedor', 1, 'parede', 0.3),
+             ('quadro_familia', 2, 'muro', 1), ('relogio_parede', 1, 'muro', 0.8)],
+    'cozinha': [('geladeira', 1, 'parede', 1), ('fogao', 1, 'parede', 1), ('balcao_pia', 2, 'parede', 1), ('armario_aereo', 2, 'muro', 1), ('mesa_jantar', 1, 'centro', 0.8),
+                ('lixeira', 1, 'parede', 0.8), ('calendario_parede', 1, 'muro', 0.9), ('relogio_parede', 1, 'muro', 0.4)],
+    'jantar': [('mesa_jantar', 1, 'centro', 1), ('estante_livros', 1, 'parede', 0.7), ('aquecedor', 1, 'parede', 0.3), ('vaso_planta_morta', 1, 'parede', 0.7), ('tapete_sala', 1, 'centro', 0.4),
+               ('quadro_familia', 2, 'muro', 1), ('relogio_parede', 1, 'muro', 0.6)],
+    'quarto': [('cama_casal', 1, 'parede', 1), ('criado_mudo', 2, 'parede', 1), ('guarda_roupa', 1, 'parede', 1), ('comoda', 1, 'parede', 1), ('abajur', 1, 'parede', 0.8),
+               ('poltrona', 1, 'parede', 0.4), ('tapete_sala', 1, 'centro', 0.5), ('vaso_planta_morta', 1, 'parede', 0.3), ('quadro_familia', 2, 'muro', 1)],
+    'quarto_crianca': [('cama_solteiro', 1, 'parede', 1), ('criado_mudo', 1, 'parede', 1), ('comoda', 1, 'parede', 1), ('guarda_roupa', 1, 'parede', 0.8), ('estante_livros', 1, 'parede', 0.6),
+                       ('berco', 1, 'parede', 0.2), ('tapete_sala', 1, 'centro', 0.6), ('desenho_crianca', 2, 'muro', 1), ('quadro_familia', 1, 'muro', 0.4)],
+    'quarto_solteiro': [('cama_solteiro', 1, 'parede', 1), ('criado_mudo', 1, 'parede', 1), ('guarda_roupa', 1, 'parede', 1), ('escrivaninha', 1, 'parede', 0.8), ('comoda', 1, 'parede', 0.5),
+                        ('abajur', 1, 'parede', 0.5), ('quadro_familia', 1, 'muro', 0.7)],
+    'banheiro': [('vaso_sanitario', 1, 'parede', 1), ('pia_banheiro', 1, 'parede', 1), ('banheira', 1, 'parede', 0.8), ('armario_banheiro', 1, 'muro', 1)],
+    'lavabo': [('vaso_sanitario', 1, 'parede', 1), ('pia_banheiro', 1, 'parede', 1), ('armario_banheiro', 1, 'muro', 0.8)],
+    'lavanderia': [('maquina_lavar', 1, 'parede', 1), ('estante_metal', 1, 'parede', 0.7), ('caixa_papelao', 1, 'parede', 0.5), ('varal_roupas', 1, 'centro', 0.4), ('calendario_parede', 1, 'muro', 0.3)],
+    'escritorio': [('mesa_escritorio', 1, 'parede', 1), ('estante_livros', 2, 'parede', 1), ('arquivo_aco', 1, 'parede', 0.7), ('poltrona', 1, 'parede', 0.6), ('abajur', 1, 'parede', 0.5),
+                   ('globo_terrestre', 1, 'parede', 0.3), ('quadro_familia', 1, 'muro', 0.7), ('calendario_parede', 1, 'muro', 0.6), ('relogio_parede', 1, 'muro', 0.5)],
+    'corredor': [('vaso_planta_morta', 1, 'parede', 0.6), ('aquecedor', 1, 'parede', 0.3), ('quadro_familia', 2, 'muro', 0.9), ('relogio_parede', 1, 'muro', 0.4)],
+    'garagem': [('bancada_trabalho', 1, 'parede', 1), ('painel_ferramentas', 1, 'muro', 1), ('estante_metal', 2, 'parede', 1), ('bicicleta', 1, 'parede', 0.6), ('carrinho_mao', 1, 'parede', 0.4),
+                ('caixa_papelao', 2, 'parede', 0.8), ('pilha_pneus', 1, 'parede', 0.4), ('mangueira_jardim', 1, 'parede', 0.5), ('caixa_ferramentas', 1, 'parede', 0.6)],
+    'deposito': [('estante_metal', 2, 'parede', 1), ('caixa_papelao', 3, 'parede', 1), ('caixa_madeira', 1, 'parede', 0.6), ('mala_viagem', 1, 'parede', 0.4)],
+    'sotao': [('caixa_papelao', 3, 'parede', 1), ('mala_viagem', 2, 'parede', 0.8), ('comoda', 1, 'parede', 0.5), ('poltrona', 1, 'parede', 0.4), ('estante_livros', 1, 'parede', 0.4)],
+    'varanda': [('cadeira', 2, 'parede', 1), ('vaso_planta_morta', 2, 'parede', 0.8), ('banco_praca', 1, 'parede', 0.3)],
+}
+# Fora do modo mobiliado ficam estes; no mobiliado saem (é a tralha jogada que o Bruno não quer na casa normal).
+TRALHA = {e[0] for e in S} | {'lixo_espalhado', 'louca_quebrada', 'fruteira_podre', 'pichacao_infectados', 'pichacao_nao_entre'}
+
+
+# Sala grande (planta aberta, sem cozinha separada): ganha a cozinha e a mesa de jantar num canto.
+SALA_INTEGRADA = [('geladeira', 1, 'parede', 1), ('fogao', 1, 'parede', 1), ('balcao_pia', 2, 'parede', 1), ('armario_aereo', 2, 'muro', 0.9), ('mesa_jantar', 1, 'centro', 1)]
+
+
+def lista_mobiliada(tipo, area=0.0, tem_cozinha=True):
+    """Cômodo da casa: o conjunto completo. Outros (loja, clínica...): a lista normal sem a tralha e sem loot no chão."""
+    if tipo in MOBILIADO:
+        return list(MOBILIADO[tipo]) + (SALA_INTEGRADA if tipo == 'sala' and area > 35 and not tem_cozinha else [])
+    fica = []
+    for e in TIPOS[tipo]:
+        if e[0] in TRALHA or e[0] not in CAT:
+            continue
+        if e[2] == 'livre' and CAT[e[0]]['grupo'] == 'loot':
+            continue
+        fica.append(e if e[0] != 'marca_busca' else (e[0], e[1], e[2], e[3] * 0.4))
+    return fica
+
+
 SEQ_CASA_TERREO = ['sala', 'cozinha', 'jantar', 'lavanderia', 'escritorio', 'deposito']
 SEQ_CASA_CIMA = ['quarto', 'quarto_crianca', 'quarto_solteiro', 'escritorio', 'quarto_solteiro', 'deposito']
 SEQS = {'apto': ['sala', 'quarto', 'cozinha', 'quarto_crianca', 'quarto_solteiro', 'escritorio', 'deposito'], 'terreo': SEQ_CASA_TERREO, 'cima': SEQ_CASA_CIMA,
@@ -327,13 +378,17 @@ def ambientar(kit, cfg, semente=0):
             com = Comodo(res, an, c['id']); com.paredes_usadas = []
             if cfg.get('ja_mobiliado'):            # kit que ja vem com os moveis na geometria: so os sinais do fim e o loot
                 lista = [] if tipo == 'vazio' else (list(SO_SINAIS_FORA) if tipo in ('patio', 'quintal', 'estacionamento', 'varanda') else list(SO_SINAIS))
+            elif cfg.get('mobiliado'):
+                lista = lista_mobiliada(tipo, c['area'], 'cozinha' in tipos.values() or any(r.get('tipo') == 'cozinha' for r in regras))
             else:
                 lista = list(TIPOS[tipo])
             lista += [tuple(e) for e in cfg.get('extras', {}).get(tipo, [])]
             n_ok = 0
             for item, n, regra, prob in sorted(lista, key=lambda e: -(CAT[e[0]]['tamanho_m'][0] * CAT[e[0]]['tamanho_m'][2]) if e[0] in CAT else 0):
                 if item not in CAT: print('  item desconhecido', item); continue
-                reps = n if n == 1 else int(round(n * min(3.0, max(1.0, c['area'] / 20.0))))
+                # No mobiliado o cômodo de casa leva o conjunto certo (2 criados-mudos, não 5), sem crescer com a área.
+                fixo = cfg.get('mobiliado') and tipo in MOBILIADO
+                reps = n if (n == 1 or fixo) else int(round(n * min(3.0, max(1.0, c['area'] / 20.0))))
                 for _ in range(reps):
                     if rng.random() > prob: continue
                     r = colocar(com, CAT[item], regra, rng, an['y'])

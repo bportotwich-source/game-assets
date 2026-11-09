@@ -1,5 +1,5 @@
 {
- "_leia": "Perfil de cada kit para ambientar.py. 'perfil' casa usa a ordem sala/cozinha/jantar (térreo) e quarto/quarto de criança (andares de cima); comercial usa 'principal' para o maior cômodo e 'seq' para os outros, por tamanho. Cômodos pequenos viram banheiro/lavabo, estreitos viram corredor e os de fora viram 'externo'. 'andares' troca o perfil num andar, 'casas_x' separa casas lado a lado e 'comodos' força o tipo do cômodo que contém o ponto [x, z]. 'ja_mobiliado' (kits 55 a 61, que já trazem os móveis na geometria) coloca só os sinais do fim e o loot solto.",
+ "_leia": "Perfil de cada kit para ambientar.py. 'perfil' casa usa a ordem sala/cozinha/jantar (térreo) e quarto/quarto de criança (andares de cima); comercial usa 'principal' para o maior cômodo e 'seq' para os outros, por tamanho. Cômodos pequenos viram banheiro/lavabo, estreitos viram corredor e os de fora viram 'externo'. 'andares' troca o perfil num andar, 'casas_x' separa casas lado a lado e 'comodos' força o tipo do cômodo que contém o ponto [x, z]. 'ja_mobiliado' (kits 55 a 61, que já trazem os móveis na geometria) coloca só os sinais do fim e o loot solto. 'mobiliado' (os kits do jogo Recomeço) monta cada cômodo de casa com o conjunto completo de móveis e quadros, sem tralha no chão (MOBILIADO em ambientar.py).",
  "padaria": {
   "padrao": "deposito",
   "comodos": [
@@ -115,7 +115,8 @@
     ],
     "tipo": "sotao"
    }
-  ]
+  ],
+  "mobiliado": true
  },
  "armazem": {
   "principal": "galpao",
@@ -153,7 +154,8 @@
  "bangalo": {
   "perfil": "casa",
   "seq": "casa_terrea",
-  "externo": "quintal"
+  "externo": "quintal",
+  "mobiliado": true
  },
  "biblioteca": {
   "principal": "biblioteca",
@@ -229,7 +231,8 @@
      "escritorio"
     ]
    }
-  }
+  },
+  "mobiliado": true
  },
  "casa-barcos": {
   "principal": "casa_barcos",
@@ -297,7 +300,8 @@
      "lavanderia"
     ]
    }
-  }
+  },
+  "mobiliado": true
  },
  "casas-shotgun": {
   "perfil": "casa",
@@ -331,7 +335,8 @@
   "externo": "quintal",
   "ignorar_andares": [
    1
-  ]
+  ],
+  "mobiliado": true
  },
  "casas-vitorianas": {
   "perfil": "casa",
@@ -380,7 +385,8 @@
      "escritorio"
     ]
    }
-  }
+  },
+  "mobiliado": true
  },
  "cinema-drive-in": {
   "principal": "cinema_foyer",
@@ -436,7 +442,8 @@
      "deposito"
     ]
    }
-  }
+  },
+  "mobiliado": true
  },
  "concessionaria": {
   "principal": "showroom",
@@ -496,7 +503,8 @@
      "deposito"
     ]
    }
-  }
+  },
+  "mobiliado": true
  },
  "diner": {
   "principal": "diner",
@@ -504,7 +512,8 @@
    "cozinha_comercial",
    "deposito"
   ],
-  "externo": "estacionamento"
+  "externo": "estacionamento",
+  "mobiliado": true
  },
  "duplex": {
   "perfil": "casa",
@@ -790,7 +799,8 @@
    "deposito",
    "escritorio"
   ],
-  "externo": "estacionamento"
+  "externo": "estacionamento",
+  "mobiliado": true
  },
  "predio-mansarda": {
   "perfil": "casa",
@@ -816,7 +826,8 @@
      "garagem"
     ]
    }
-  }
+  },
+  "mobiliado": true
  },
  "predio-tijolos": {
   "perfil": "casa",
@@ -888,7 +899,8 @@
    "refeitorio",
    "deposito"
   ],
-  "externo": "estacionamento"
+  "externo": "estacionamento",
+  "mobiliado": true
  },
  "three-flats": {
   "perfil": "casa",
@@ -911,7 +923,8 @@
      "lavanderia"
     ]
    }
-  }
+  },
+  "mobiliado": true
  },
  "torre-art-deco": {
   "perfil": "casa",

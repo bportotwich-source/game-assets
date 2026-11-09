@@ -464,7 +464,9 @@ def door_casing(p, ow, t, oh=2.1):
         prof_x(p, 'frame', -ow / 2 - 0.09, ow / 2 + 0.09, crect(z0, z1, oh + 0.02, oh + 0.13, 0.005, (0, 1, 1, 0) if z > 0 else (1, 0, 0, 1)))
 
 def glb_jpeg(path, q=88):
-    """Troca as imagens PNG embutidas no GLB por JPEG (cor e ORM q88, normal q92): arquivos ~4x menores."""
+    """Troca as imagens PNG embutidas no GLB por JPEG (cor e ORM q88, normal q92): arquivos ~4x menores.
+    Antes disso deixa os vidros transparentes e iguais em todos os kits (vidro.py)."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); from vidro import vidro_glb; vidro_glb(path)
     data = open(path, 'rb').read(); _, _, _ = struct.unpack('<III', data[:12]); off = 12; chunks = []
     while off < len(data):
         ln, ty = struct.unpack('<II', data[off:off + 8]); chunks.append((ty, data[off + 8:off + 8 + ln])); off += 8 + ln

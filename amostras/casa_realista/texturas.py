@@ -17,6 +17,15 @@ CLASSES = {
     'verniz':   ('verniz', dict(c1=(0.050, 0.020, 0.010), c2=(0.150, 0.062, 0.026), cru=(0.36, 0.22, 0.11), rug=0.22, kd=0.85, po=0.8, bisel=0.0012)),
     'pinho':    ('verniz', dict(c1=(0.42, 0.28, 0.13), c2=(0.62, 0.47, 0.26), cru=(0.66, 0.52, 0.32), rug=0.72, kd=0.3, po=0.6, bisel=0.0008)),
     'vidro':    ('vidro', dict()),
+    # versões que se repetem a cada 2 m (ladrilho.py), nas cores do kit 7
+    'tabua_l':    ('pintura', dict(cor=(0.19, 0.30, 0.145), descasca=0.50, rug=0.62, suj=0.9, ext=False, bisel=0.002)),
+    'tijolo_l':   ('tijolo', dict(bisel=0.0, larg=0.25, fiada=0.0625, musgo=0.0, sal=0.35)),
+    'reboco_l':   ('reboco', dict(cor=(0.74, 0.70, 0.60), bisel=0.0, mancha=0.0, trinca=0.45)),
+    'assoalho_l': ('assoalho', dict(c1=(0.105, 0.050, 0.024), c2=(0.26, 0.145, 0.070), bisel=0.0, larg=0.1, comp=2.0, gasto=0.38, periodo=2.0)),
+    'deck_l':     ('assoalho', dict(c1=(0.10, 0.07, 0.05), c2=(0.22, 0.16, 0.11), cinza=(0.27, 0.25, 0.22), bisel=0.0, larg=0.2, comp=2.0, gasto=1.6, rug=0.8, periodo=2.0)),
+    'telha_l':    ('telha', dict(cor=(0.055, 0.058, 0.072), bisel=0.0)),
+    'pedra_l':    ('gen', dict(p=((0.50, 0.48, 0.43), 0.85, 0.0, (0.58, 0.57, 0.53), 0.7, 0.0, 0.12, 2.5, 0.45), mancha=(0.30, 0.29, 0.25), bisel=0.0, esc=0.12, fino=True)),
+    'tinta_l':    ('pintura', dict(cor=(0.80, 0.77, 0.68), descasca=0.20, rug=0.5, suj=0.6, ext=False, bisel=0.0)),
     # genéricos: cor, rug, metal, cor gasta, rug gasta, metal gasto, desgaste, grão, sujeira, escala
     'latao':    ('gen', dict(p=((0.62, 0.40, 0.12), 0.34, 1.0, (0.88, 0.68, 0.30), 0.22, 1.0, 0.9, 0.3, 1.3), mancha=(0.10, 0.075, 0.04), bisel=0.0006)),
     'ferro':    ('gen', dict(p=((0.030, 0.030, 0.032), 0.55, 0.85, (0.32, 0.31, 0.30), 0.35, 1.0, 1.0, 0.5, 1.0), mancha=(0.20, 0.08, 0.03), bisel=0.0005)),
@@ -271,7 +280,7 @@ def f_tijolo(nt, pos, geo, p):
         nt.links.new(vec, b.inputs['Vector'])
         b.inputs['Color1'].default_value = c1; b.inputs['Color2'].default_value = c2
         b.inputs['Scale'].default_value = 1.0; b.inputs['Mortar Size'].default_value = 0.0055; b.inputs['Mortar Smooth'].default_value = 0.35
-        b.inputs['Bias'].default_value = 0.0; b.inputs['Brick Width'].default_value = 0.225; b.inputs['Row Height'].default_value = 0.075
+        b.inputs['Bias'].default_value = 0.0; b.inputs['Brick Width'].default_value = p.get('larg', 0.225); b.inputs['Row Height'].default_value = p.get('fiada', 0.075)
         return b
     b = tij((0, 0, 0, 1), (1, 1, 1, 1))
     t = _xyz(nt, b.outputs['Color'])[0]
@@ -287,9 +296,11 @@ def f_tijolo(nt, pos, geo, p):
     baixo = _math(nt, 'SUBTRACT', 1.0, _smooth(nt, pz, -0.42, -0.12))
     musgo = _math(nt, 'MULTIPLY', _smooth(nt, _math(nt, 'MULTIPLY', baixo, _math(nt, 'ADD', v2, 0.45)), 0.35, 0.75), 0.75)
     musgo = _math(nt, 'MULTIPLY', musgo, _math(nt, 'ADD', 0.55, _math(nt, 'MULTIPLY', junta, 0.45)))
+    musgo = _math(nt, 'MULTIPLY', musgo, p.get('musgo', 1.0))
     cor = _mix(nt, musgo, cor, (0.055, 0.065, 0.030))
     sal = _math(nt, 'MULTIPLY', _smooth(nt, _math(nt, 'MULTIPLY', v1, v2), 0.30, 0.42), 0.38)
     sal = _math(nt, 'MULTIPLY', sal, _math(nt, 'SUBTRACT', 1.0, junta))
+    sal = _math(nt, 'MULTIPLY', sal, p.get('sal', 1.0))
     cor = _mix(nt, sal, cor, (0.62, 0.60, 0.55))
     alt = _math(nt, 'MULTIPLY', _math(nt, 'SUBTRACT', 1.0, junta), 0.0045)
     alt = _math(nt, 'SUBTRACT', alt, _math(nt, 'MULTIPLY', poro, 0.0012))
@@ -313,18 +324,19 @@ def f_reboco(nt, pos, geo, p):
     wv = _vm(nt, 'ADD', pos, _vm(nt, 'SCALE', nz.outputs['Color'], escala=0.22))
     vo = _n(nt, 'ShaderNodeTexVoronoi', feature='DISTANCE_TO_EDGE'); vo.inputs['Scale'].default_value = 2.1
     nt.links.new(wv, vo.inputs['Vector'])
-    zona = _smooth(nt, _noise(nt, pos, 0.9, 2.0), 0.50, 0.60)
+    zona = _math(nt, 'MULTIPLY', _smooth(nt, _noise(nt, pos, 0.9, 2.0), 0.50, 0.60), p.get('trinca', 1.0))
     trinca = _math(nt, 'MULTIPLY', _math(nt, 'SUBTRACT', 1.0, _smooth(nt, vo.outputs['Distance'], 0.0, 0.0035)), zona)
     trinca = _math(nt, 'MULTIPLY', trinca, _smooth(nt, _noise(nt, pos, 7.0, 2.0), 0.35, 0.5))
     # mancha de infiltração (contorno + miolo amarelado)
     w = _noise(nt, _vm(nt, 'ADD', pos, (3.1, 1.7, 0.4)), 1.25, 3.0)
-    alto = _smooth(nt, pz, 1.2, 2.6)
+    alto = _math(nt, 'MULTIPLY', _smooth(nt, pz, 1.2, 2.6), p.get('mancha', 1.0))
     miolo = _math(nt, 'MULTIPLY', _smooth(nt, w, 0.675, 0.70), alto)
     borda = _math(nt, 'MULTIPLY', _math(nt, 'MULTIPLY', _smooth(nt, w, 0.665, 0.678), _math(nt, 'SUBTRACT', 1.0, _smooth(nt, w, 0.682, 0.70))), alto)
     cor = _mix(nt, _math(nt, 'MULTIPLY', miolo, 0.28), cor, (0.50, 0.40, 0.20))
     cor = _mix(nt, _math(nt, 'MULTIPLY', borda, 0.5), cor, (0.30, 0.22, 0.10))
     # encardido: reentrâncias, faixa de mãos/móveis e perto do piso
     perto = _math(nt, 'MULTIPLY', _math(nt, 'SUBTRACT', 1.0, _smooth(nt, pz, 0.14, 0.75)), _math(nt, 'ADD', v2, 0.25))
+    perto = _math(nt, 'MULTIPLY', perto, p.get('mancha', 1.0))
     sujo = _math(nt, 'MAXIMUM', _smooth(nt, _math(nt, 'MULTIPLY', cav, _math(nt, 'ADD', v2, 0.5)), 0.2, 0.8), _math(nt, 'MULTIPLY', perto, 0.5))
     mp = _n(nt, 'ShaderNodeMapping'); mp.inputs['Scale'].default_value = (20, 20, 0.9); nt.links.new(pos, mp.inputs[0])
     esc = _math(nt, 'MULTIPLY', _smooth(nt, _noise(nt, mp.outputs[0], 1.0, 2.0), 0.60, 0.82), 0.22)
@@ -340,15 +352,19 @@ def f_reboco(nt, pos, geo, p):
 
 
 def f_assoalho(nt, pos, geo, p):
-    LARG, COMP = 0.095, 1.9
+    LARG, COMP = p.get('larg', 0.095), p.get('comp', 1.9)
     v1 = _noise(nt, pos, 1.6, 3.0)
     v2 = _noise(nt, pos, 18.0, 4.0)
     px, py, pz = _xyz(nt, pos)
     fx = _math(nt, 'DIVIDE', _math(nt, 'ADD', px, 20.0), LARG)
     fila = _math(nt, 'FLOOR', fx)
+    if p.get('periodo'):
+        fila = _math(nt, 'MODULO', fila, round(p['periodo'] / LARG))
     wn = _n(nt, 'ShaderNodeTexWhiteNoise', noise_dimensions='1D'); nt.links.new(fila, wn.inputs['W'])
     yy = _math(nt, 'DIVIDE', _math(nt, 'ADD', _math(nt, 'ADD', py, 20.0), _math(nt, 'MULTIPLY', wn.outputs['Value'], COMP)), COMP)
     idp = _math(nt, 'FLOOR', yy)
+    if p.get('periodo'):
+        idp = _math(nt, 'MODULO', idp, max(1, round(p['periodo'] / COMP)))
     w2 = _n(nt, 'ShaderNodeTexWhiteNoise', noise_dimensions='2D'); nt.links.new(_comb(nt, fila, idp, 0.0), w2.inputs['Vector'])
     rnd = w2.outputs['Value']
     r2 = _xyz(nt, w2.outputs['Color'])[1]
@@ -368,15 +384,15 @@ def f_assoalho(nt, pos, geo, p):
     cor = _mix(nt, _math(nt, 'MULTIPLY', _smooth(nt, poros, 0.55, 0.75), 0.35), cor, (0.06, 0.03, 0.015))
     # verniz gasto nos caminhos e nas beiras das tábuas
     gasto = _math(nt, 'ADD', _math(nt, 'MULTIPLY', _smooth(nt, _math(nt, 'ADD', v1, _math(nt, 'MULTIPLY', v2, 0.25)), 0.54, 0.80), 0.7), _math(nt, 'MULTIPLY', beira, _math(nt, 'MULTIPLY', v2, 0.9)))
-    gasto = _math(nt, 'MINIMUM', gasto, 1.0)
-    cinza = _escala_cor(nt, (0.30, 0.255, 0.20), _math(nt, 'ADD', 0.6, _math(nt, 'MULTIPLY', poros, 0.7)))
+    gasto = _math(nt, 'MINIMUM', _math(nt, 'MULTIPLY', gasto, p.get('gasto', 1.0)), 1.0)
+    cinza = _escala_cor(nt, p.get('cinza', (0.30, 0.255, 0.20)), _math(nt, 'ADD', 0.6, _math(nt, 'MULTIPLY', poros, 0.7)))
     cor = _mix(nt, _math(nt, 'MULTIPLY', gasto, 0.78), cor, cinza)
     risco = _math(nt, 'MULTIPLY', _riscos(nt, pos, (70, 2.2, 30), (0.0, 0.0, 0.9), 0.68, 0.74), _smooth(nt, v1, 0.35, 0.6))
     cor = _mix(nt, _math(nt, 'MULTIPLY', risco, 0.35), cor, (0.55, 0.47, 0.36))
     po = _math(nt, 'MULTIPLY', _smooth(nt, v2, 0.45, 0.8), 0.22)
     cor = _mix(nt, po, cor, (0.30, 0.27, 0.22))
     cor = _mix(nt, fresta, cor, (0.018, 0.014, 0.010))
-    r = _mixf(nt, gasto, 0.30, 0.72)
+    r = _mixf(nt, gasto, p.get('rug', 0.30), 0.72 if p.get('rug', 0.3) < 0.6 else 0.9)
     r = _math(nt, 'ADD', r, _math(nt, 'MULTIPLY', _math(nt, 'SUBTRACT', v2, 0.5), 0.2))
     r = _math(nt, 'MAXIMUM', r, _math(nt, 'MULTIPLY', risco, 0.7))
     r = _math(nt, 'ADD', r, _math(nt, 'MULTIPLY', po, 1.2))
@@ -443,7 +459,50 @@ def f_vidro(nt, pos, geo, p):
     return dict(cor=cor, rug=r, met=0.0, alt=None, ao=1.0, alfa=alfa)
 
 
-FAMILIAS = dict(liso=f_liso, gen=f_gen, pintura=f_pintura, tijolo=f_tijolo, reboco=f_reboco, assoalho=f_assoalho, verniz=f_verniz, vidro=f_vidro)
+def f_telha(nt, pos, geo, p):
+    """Telha asfáltica: fiadas de 0,2 m, abas de 1/3 m desencontradas, grânulos minerais."""
+    FI, AB = 0.2, 1.0 / 3.0
+    v1 = _noise(nt, pos, 1.9, 3.0)
+    v2 = _noise(nt, pos, 17.0, 4.0)
+    px, py, pz = _xyz(nt, pos)
+    fv = _math(nt, 'DIVIDE', _math(nt, 'ADD', pz, 20.0), FI)
+    fila = _math(nt, 'MODULO', _math(nt, 'FLOOR', fv), 10)
+    wn = _n(nt, 'ShaderNodeTexWhiteNoise', noise_dimensions='1D'); nt.links.new(fila, wn.inputs['W'])
+    off = _math(nt, 'ADD', _math(nt, 'MULTIPLY', _math(nt, 'MODULO', fila, 2), 0.15), _math(nt, 'MULTIPLY', wn.outputs['Value'], 0.07))
+    fu = _math(nt, 'DIVIDE', _math(nt, 'ADD', _math(nt, 'ADD', px, 20.0), off), AB)
+    aba = _math(nt, 'MODULO', _math(nt, 'FLOOR', fu), 6)
+    w2 = _n(nt, 'ShaderNodeTexWhiteNoise', noise_dimensions='2D'); nt.links.new(_comb(nt, fila, aba, 0.0), w2.inputs['Vector'])
+    rnd = w2.outputs['Value']
+    du = _math(nt, 'MULTIPLY', _math(nt, 'SUBTRACT', 0.5, _math(nt, 'ABSOLUTE', _math(nt, 'SUBTRACT', _math(nt, 'FRACT', fu), 0.5))), AB)
+    dv = _math(nt, 'MULTIPLY', _math(nt, 'SUBTRACT', 0.5, _math(nt, 'ABSOLUTE', _math(nt, 'SUBTRACT', _math(nt, 'FRACT', fv), 0.5))), FI)
+    fenda = _math(nt, 'SUBTRACT', 1.0, _smooth(nt, du, 0.0025, 0.006))
+    linha = _math(nt, 'SUBTRACT', 1.0, _smooth(nt, dv, 0.002, 0.007))
+    sombra = _math(nt, 'SUBTRACT', 1.0, _smooth(nt, dv, 0.0, 0.035))
+    gr = _noise(nt, pos, 850.0, 2.0, 0.7)
+    gr2 = _noise(nt, _vm(nt, 'ADD', pos, (7.3, 1.1, 4.2)), 600.0, 1.0)
+    cor = _escala_cor(nt, p['cor'], _math(nt, 'ADD', 0.62, _math(nt, 'MULTIPLY', rnd, 0.75)))
+    cor = _escala_cor(nt, cor, _math(nt, 'ADD', 0.45, _math(nt, 'MULTIPLY', gr, 1.15)))
+    cor = _mix(nt, _math(nt, 'MULTIPLY', _smooth(nt, gr2, 0.66, 0.72), 0.5), cor, (0.20, 0.19, 0.18))              # grânulos claros
+    cor = _mix(nt, _math(nt, 'MULTIPLY', _smooth(nt, gr2, 0.34, 0.28), 0.35), cor, (0.10, 0.06, 0.04))            # grânulos ferrugem
+    careca = _math(nt, 'MULTIPLY', _smooth(nt, _math(nt, 'MULTIPLY', v2, _math(nt, 'ADD', v1, 0.35)), 0.46, 0.58), 0.38)   # perda de grânulos
+    cor = _mix(nt, careca, cor, (0.022, 0.022, 0.024))
+    mp = _n(nt, 'ShaderNodeMapping'); mp.inputs['Scale'].default_value = (22, 22, 1.3); nt.links.new(pos, mp.inputs[0])
+    esc = _math(nt, 'MULTIPLY', _smooth(nt, _noise(nt, mp.outputs[0], 1.0, 2.0), 0.55, 0.8), 0.30)
+    cor = _mix(nt, esc, cor, (0.17, 0.165, 0.15))
+    musgo = _math(nt, 'MULTIPLY', _smooth(nt, _math(nt, 'MULTIPLY', _math(nt, 'MAXIMUM', fenda, sombra), _math(nt, 'ADD', v2, 0.3)), 0.5, 0.8), _smooth(nt, v1, 0.45, 0.7))
+    cor = _mix(nt, _math(nt, 'MULTIPLY', musgo, 0.7), cor, (0.05, 0.075, 0.025))
+    cor = _mix(nt, _math(nt, 'MULTIPLY', sombra, 0.35), cor, (0.012, 0.012, 0.014))
+    cor = _mix(nt, _math(nt, 'MAXIMUM', fenda, linha), cor, (0.008, 0.008, 0.009))
+    alt = _math(nt, 'MULTIPLY', gr, 0.0009)
+    alt = _math(nt, 'SUBTRACT', alt, _math(nt, 'MULTIPLY', careca, 0.0005))
+    alt = _math(nt, 'ADD', alt, _math(nt, 'MULTIPLY', rnd, 0.0012))
+    alt = _math(nt, 'SUBTRACT', alt, _math(nt, 'MULTIPLY', _math(nt, 'MAXIMUM', fenda, linha), 0.004))
+    r = _mixf(nt, careca, _math(nt, 'ADD', 0.90, _math(nt, 'MULTIPLY', gr, 0.08)), 0.62)
+    ao = _math(nt, 'SUBTRACT', 1.0, _math(nt, 'MULTIPLY', _math(nt, 'MAXIMUM', _math(nt, 'MAXIMUM', fenda, linha), _math(nt, 'MULTIPLY', sombra, 0.5)), 0.7))
+    return dict(cor=cor, rug=r, met=0.0, alt=alt, ao=ao)
+
+
+FAMILIAS = dict(telha=f_telha, liso=f_liso, gen=f_gen, pintura=f_pintura, tijolo=f_tijolo, reboco=f_reboco, assoalho=f_assoalho, verniz=f_verniz, vidro=f_vidro)
 
 
 def montar_material(m, nome):

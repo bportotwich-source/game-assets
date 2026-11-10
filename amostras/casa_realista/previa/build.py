@@ -20,6 +20,15 @@ for f in sorted(glob.glob(SRC + '/tex/casa_*_cor.png')):
                 if t != r: i2 = i2.resize((t, t), Image.LANCZOS)
                 i2.save(dst, 'WEBP', quality=q, method=4)
             if t == r: disco += os.path.getsize(dst)
+LADR = sys.argv[3] if len(sys.argv) > 3 else None
+v_lad = 0
+if LADR:
+    os.makedirs(OUT + '/tex/lad', exist_ok=True)
+    for f in sorted(glob.glob(LADR + '/*_cor.png')):
+        n = os.path.basename(f)[:-8]; r = Image.open(f).width; v_lad += r * r * 2.0 * 4 / 3
+        for tipo, q in (('cor', 88), ('orm', 86), ('normal', 92)):
+            Image.open(f'{LADR}/{n}_{tipo}.png').save(f'{OUT}/tex/lad/{n}_{tipo}.webp', 'WEBP', quality=q, method=4)
+print('VRAM ladrilhos MB', v_lad / 1048576)
 pecas = json.load(open(SRC + '/pecas.json'))
 j = glb_json(OUT + '/novo/casa.glb')
 prims = {n['name']: len(j['meshes'][n['mesh']]['primitives']) for n in j['nodes'] if 'mesh' in n}
@@ -56,7 +65,8 @@ conta = [(mb(vram), 'de memória de vídeo só para esta amostra, contra ' + f'{
          (f'{tab[-1]["mat_a"]} → {tab[-1]["mat_n"]}', 'chamadas de desenho da amostra: cai, porque cada peça usa um conjunto só de texturas')]
 atual = [dict(arq='wall_siding_window.glb', pos=[[-1, 0, 0]]), dict(arq='wall_siding_door.glb', pos=[[1, 0, 0]]), dict(arq='door_leaf_front.glb', pos=[[0.53, 0.015, -0.18]]),
          dict(arq='floor_tile.glb', pos=[[-1, 0, -1.3], [1, 0, -1.3], [-1, 0, -3.3], [1, 0, -3.3]]), dict(arq='interior_wall_plain.glb', pos=[[-1.94, 0, -1.3, 90], [-1.94, 0, -3.3, 90]]),
-         dict(arq='comoda.glb', pos=[[-1.63, 0, -1.7, 90]]), dict(arq='lampiao.glb', pos=[[-1.66, 0.85, -1.45, 20]]), dict(arq='lata_feijao.glb', pos=[[-1.60, 0.85, -1.92, -55]])]
+         dict(arq='comoda.glb', pos=[[-1.63, 0, -1.7, 90]], movel=True), dict(arq='lampiao.glb', pos=[[-1.66, 0.85, -1.45, 20]], movel=True), dict(arq='lata_feijao.glb', pos=[[-1.60, 0.85, -1.92, -55]], movel=True)]
+shutil.copy(REPO + '/kits/bangalo/building_assembled.glb', OUT + '/atual/bangalo.glb')
 D = dict(res=res, tabela=tab, conta=conta, atual=atual)
 h = open(os.path.dirname(os.path.abspath(__file__)) + '/modelo.html').read().replace('/*DADOS*/{}', json.dumps(D, ensure_ascii=False))
 open(OUT + '/index.html', 'w').write(h)

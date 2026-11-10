@@ -18,3 +18,13 @@ configurar_telhado(tv=0.08, bump=0.022, graus=30)    # se tiver telhas em fiadas
   - Telhado fino (`tv` de 8 cm): a parede sobe só até a face de baixo da telha, e a testeira cobre a ponta.
   - Depois de exportar, chame `glb_jpeg(arquivo)` em cada GLB.
 - Lista completa de funções no topo de `detalhe.py`.
+
+## Correções de montagem (`montagem.py`)
+
+Roda direto nos GLB das peças de um kit, depois de gerar: `python3 scripts/detalhe/montagem.py kits/<kit>`. Rodar de novo não muda nada.
+
+- **Teto sem sulcos.** O corpo da laje é recuado 2 cm de cada lado para não piscar com as paredes, e isso deixava um sulco de 4 cm no teto a cada módulo. O script estende a face de baixo do corpo até a borda do piso (vale para lajes comuns e para a laje do núcleo de escada).
+- **Batente sob a folha da janela.** Fecha a fresta de 1 a 2 cm entre o peitoril e a folha com uma ripa fina: por dentro na guilhotina, por fora na folha de abrir. O nó `folha` não muda.
+- **Folha de porta na altura do vão.** `python3 scripts/detalhe/montagem.py --porta <folha.glb> <altura>` estica a folha até a altura pedida.
+
+O `building_assembled.glb` (prévia do prédio inteiro) não é refeito por este script.

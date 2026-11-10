@@ -42,6 +42,9 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Coquetel molotov (`coquetel_molotov`) | fogo | - | 40 | 18 m | 0,5/s | 10 m | 1 | 0,7 kg |  | acender, arremessar, inspecionar, ocioso |
 | Bomba de pregos (lata) (`bomba_pregos`) | estilhaços | - | 90 | 15 m | 0,4/s | 60 m | 1 | 0,6 kg |  | acender, arremessar, ocioso |
 | Isca sonora (despertador) (`isca_sonora`) | som | - | 0 | 14 m | 0,5/s | 35 m | 30 | 0,35 kg |  | dar_corda, tocar, arremessar, ocioso |
+| Fuzil M4A1 (`fuzil_m4a1`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,4 kg |  | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, ocioso |
+| Fuzil M4A1 com luneta (`fuzil_m4a1_luneta`) | 5,56 | 30 | 42 | 140 m | 11/s | 60 m | 3000 | 4,3 kg |  | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, ocioso |
+| Fuzil M4A1 tático (`fuzil_m4a1_tatico`) | 5,56 | 60 | 42 | 100 m | 11/s | 60 m | 3000 | 5,2 kg |  | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, ocioso |
 
 ## Acessórios
 

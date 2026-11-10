@@ -42,4 +42,16 @@ python3 empacotar.py saida/m4a1_sem_tex.glb saida/tex m4a1.glb webp
 conferência. Um grupo de textura que já existe em `saida/tex` não é assado de novo;
 `REASSAR=E,F` força os grupos listados.
 
-Ainda não tem os pontos `ref_`, os encaixes e as animações do padrão das outras armas.
+## Versões de jogo
+
+`python3 jogo.py saida` grava três montagens em `props/armas/armas/` e as põe no
+`catalogo.json`, no padrão das outras armas (nós `gatilho`, `ferrolho`, `carregador`...,
+`boca_fogo`, `saida_estojo`, `mira_ferro`, pontos `ref_*` e animações embutidas):
+
+| id | Montagem |
+| --- | --- |
+| `fuzil_m4a1` | clássica: alça de transporte, trilho quádruplo, coronha retrátil |
+| `fuzil_m4a1_luneta` | guarda-mão longo, supressor, luneta, empunhadura angulada, carregador de polímero, coronha fixa |
+| `fuzil_m4a1_tatico` | guarda-mão longo, supressor, prismática, reflex, laser, lanterna, empunhadura vertical, tambor de 60, punho vazado, tubo vermelho, coronha moderna |
+
+Os acessórios vêm fixos em cada montagem; não usam os nós `encaixe_*` de troca das outras armas.

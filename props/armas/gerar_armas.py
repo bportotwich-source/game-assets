@@ -1115,8 +1115,9 @@ def main(ids):
     MATS['refletor'] = PBRMaterial(name='refletor', baseColorFactor=[0.9, 0.9, 0.92, 1], metallicFactor=1.0, roughnessFactor=0.08)
     arq = os.path.join(AQUI, 'catalogo.json'); grupos = ('armas', 'acessorios', 'municao', 'efeitos')
     cat = {g: [] for g in grupos}
-    if ids and os.path.exists(arq):
-        velho = json.load(open(arq, encoding='utf-8')); cat = {g: [r for r in velho.get(g, []) if r['id'] not in ids] for g in grupos}
+    if os.path.exists(arq):                                        # itens de outro gerador (campo "gerador") ficam sempre
+        velho = json.load(open(arq, encoding='utf-8'))
+        cat = {g: [r for r in velho.get(g, []) if (r['id'] not in ids if ids else r.get('gerador'))] for g in grupos}
     for id_, it in REG.items():
         if ids and id_ not in ids: continue
         r = exportar(it, AQUI); cat[it['grupo']].append(r)

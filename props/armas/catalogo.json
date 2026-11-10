@@ -12730,6 +12730,651 @@
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     }
    ]
+  },
+  {
+   "id": "fuzil_m4a1",
+   "nome": "Fuzil M4A1",
+   "grupo": "armas",
+   "categoria": "fuzil",
+   "classe": "fogo",
+   "calibre": "5,56",
+   "municao": "municao_556",
+   "dano": 42,
+   "alcance_max_m": 400,
+   "modo": "semiautomático e automático (seletor)",
+   "tiros_por_s": 11,
+   "recuo": 0.35,
+   "durabilidade": 3000,
+   "estojo_s": 0.02,
+   "capacidade": 30,
+   "alcance_m": 80,
+   "recarga_s": 2.2,
+   "recarga_vazia_s": 2.6,
+   "precisao": 0.8,
+   "ruido_m": 160,
+   "peso_kg": 3.4,
+   "raridade": "raro",
+   "valor_troca": 180,
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "Fuzil 5,56 clássico e bem detalhado: alça de transporte com mira, guarda-mão de trilho quádruplo, coronha retrátil e carregador de metal de 30. Cada peça é um nó próprio do modelo.",
+   "arquivo": "armas/fuzil_m4a1.glb",
+   "tamanho_m": [
+    0.06,
+    0.282,
+    0.848
+   ],
+   "triangulos": 39068,
+   "kb": 6095.2,
+   "gerador": "m4a1/jogo.py",
+   "partes": [
+    {
+     "no": "punho",
+     "tipo": "troca",
+     "descricao": "punho de pistola",
+     "pai": "fuzil_m4a1"
+    },
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": -12,
+     "descricao": "puxa para trás",
+     "pai": "fuzil_m4a1"
+    },
+    {
+     "no": "seletor",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": 90,
+     "descricao": "seguro / semi (90°) / auto (180°)",
+     "pai": "fuzil_m4a1"
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": -0.08,
+     "descricao": "transportador: recua 80 mm a cada tiro; fica atrás com o carregador vazio",
+     "pai": "fuzil_m4a1"
+    },
+    {
+     "no": "alavanca",
+     "tipo": "desliza",
+     "curso_m": -0.065,
+     "descricao": "alavanca de manejo (puxa e solta)",
+     "pai": "fuzil_m4a1"
+    },
+    {
+     "no": "tampa_janela",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -110,
+     "descricao": "abre no primeiro tiro e fica aberta",
+     "pai": "fuzil_m4a1"
+    },
+    {
+     "no": "retem_ferrolho",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -8,
+     "descricao": "retém do ferrolho (esquerda)",
+     "pai": "fuzil_m4a1"
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      0,
+      -1,
+      0
+     ],
+     "descricao": "sai para baixo",
+     "pai": "fuzil_m4a1"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.09,
+     "laco": false,
+     "descricao": "um tiro (repita em rajada a 11 por segundo): transportador recua 80 mm, coice leve; a tampa da janela abre"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.1,
+     "laco": false,
+     "descricao": "último tiro: o ferrolho fica preso atrás"
+    },
+    "vazia": {
+     "duracao_s": 0.1,
+     "laco": true,
+     "descricao": "pose parada: ferrolho atrás"
+    },
+    "recarregar": {
+     "duracao_s": 2.2,
+     "laco": false,
+     "descricao": "carregador cai (0,35 s) e o novo entra (1,72 s)"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "troca o carregador e bate no retém: o ferrolho fecha (2,0 s)"
+    },
+    "trocar_modo": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "seletor: seguro -> semi -> auto (no jogo, pare na posição escolhida)"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "fuzil_m4a1",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 18.8,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0364,
+      -0.0748
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "fuzil_m4a1",
+     "posicao_m": [
+      0.0,
+      0.062,
+      -0.29
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "fuzil_m4a1",
+     "posicao_m": [
+      0.0,
+      0.0445,
+      0.2674
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "fuzil_m4a1",
+     "posicao_m": [
+      0.0,
+      0.1493,
+      0.0
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "fuzil_m4a1",
+     "posicao_m": [
+      0.0,
+      0.093,
+      -0.581
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.0937,
+      -0.1582
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
+  },
+  {
+   "id": "fuzil_m4a1_luneta",
+   "nome": "Fuzil M4A1 com luneta",
+   "grupo": "armas",
+   "categoria": "fuzil",
+   "classe": "fogo",
+   "calibre": "5,56",
+   "municao": "municao_556",
+   "dano": 42,
+   "alcance_max_m": 400,
+   "modo": "semiautomático e automático (seletor)",
+   "tiros_por_s": 11,
+   "recuo": 0.35,
+   "durabilidade": 3000,
+   "estojo_s": 0.02,
+   "variante_de": "fuzil_m4a1",
+   "capacidade": 30,
+   "alcance_m": 140,
+   "recarga_s": 2.2,
+   "recarga_vazia_s": 2.6,
+   "precisao": 0.92,
+   "ruido_m": 60,
+   "peso_kg": 4.3,
+   "raridade": "muito raro",
+   "valor_troca": 260,
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "A M4A1 montada para tiro de longe: guarda-mão longo vazado, supressor, luneta em suporte de peça única, empunhadura angulada, carregador de polímero e coronha fixa. O supressor baixa o ruído para 60 m.",
+   "arquivo": "armas/fuzil_m4a1_luneta.glb",
+   "tamanho_m": [
+    0.07,
+    0.323,
+    1.006
+   ],
+   "triangulos": 40520,
+   "kb": 8731.4,
+   "gerador": "m4a1/jogo.py",
+   "partes": [
+    {
+     "no": "punho",
+     "tipo": "troca",
+     "descricao": "punho de pistola",
+     "pai": "fuzil_m4a1_luneta"
+    },
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": -12,
+     "descricao": "puxa para trás",
+     "pai": "fuzil_m4a1_luneta"
+    },
+    {
+     "no": "seletor",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": 90,
+     "descricao": "seguro / semi (90°) / auto (180°)",
+     "pai": "fuzil_m4a1_luneta"
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": -0.08,
+     "descricao": "transportador: recua 80 mm a cada tiro; fica atrás com o carregador vazio",
+     "pai": "fuzil_m4a1_luneta"
+    },
+    {
+     "no": "alavanca",
+     "tipo": "desliza",
+     "curso_m": -0.065,
+     "descricao": "alavanca de manejo (puxa e solta)",
+     "pai": "fuzil_m4a1_luneta"
+    },
+    {
+     "no": "tampa_janela",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -110,
+     "descricao": "abre no primeiro tiro e fica aberta",
+     "pai": "fuzil_m4a1_luneta"
+    },
+    {
+     "no": "retem_ferrolho",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -8,
+     "descricao": "retém do ferrolho (esquerda)",
+     "pai": "fuzil_m4a1_luneta"
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      0,
+      -1,
+      0
+     ],
+     "descricao": "sai para baixo",
+     "pai": "fuzil_m4a1_luneta"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.09,
+     "laco": false,
+     "descricao": "um tiro (repita em rajada a 11 por segundo): transportador recua 80 mm, coice leve; a tampa da janela abre"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.1,
+     "laco": false,
+     "descricao": "último tiro: o ferrolho fica preso atrás"
+    },
+    "vazia": {
+     "duracao_s": 0.1,
+     "laco": true,
+     "descricao": "pose parada: ferrolho atrás"
+    },
+    "recarregar": {
+     "duracao_s": 2.2,
+     "laco": false,
+     "descricao": "carregador cai (0,35 s) e o novo entra (1,72 s)"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 2.6,
+     "laco": false,
+     "descricao": "troca o carregador e bate no retém: o ferrolho fecha (2,0 s)"
+    },
+    "trocar_modo": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "seletor: seguro -> semi -> auto (no jogo, pare na posição escolhida)"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "fuzil_m4a1_luneta",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 18.8,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0364,
+      -0.0748
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "fuzil_m4a1_luneta",
+     "posicao_m": [
+      0.0,
+      0.026,
+      -0.3435
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "fuzil_m4a1_luneta",
+     "posicao_m": [
+      0.0,
+      0.0413,
+      0.2769
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "fuzil_m4a1_luneta",
+     "posicao_m": [
+      0.0,
+      0.161,
+      0.028
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "fuzil_m4a1_luneta",
+     "posicao_m": [
+      0.0,
+      0.093,
+      -0.729
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.1017,
+      -0.1599
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
+  },
+  {
+   "id": "fuzil_m4a1_tatico",
+   "nome": "Fuzil M4A1 tático",
+   "grupo": "armas",
+   "categoria": "fuzil",
+   "classe": "fogo",
+   "calibre": "5,56",
+   "municao": "municao_556",
+   "dano": 42,
+   "alcance_max_m": 400,
+   "modo": "semiautomático e automático (seletor)",
+   "tiros_por_s": 11,
+   "recuo": 0.35,
+   "durabilidade": 3000,
+   "estojo_s": 0.02,
+   "variante_de": "fuzil_m4a1",
+   "apoio_vertical": true,
+   "capacidade": 60,
+   "alcance_m": 100,
+   "recarga_s": 2.8,
+   "recarga_vazia_s": 3.2,
+   "precisao": 0.85,
+   "ruido_m": 60,
+   "peso_kg": 5.2,
+   "raridade": "muito raro",
+   "valor_troca": 300,
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "A M4A1 com tudo: guarda-mão longo, supressor, mira prismática com tampas, reflex a 45°, módulo laser, lanterna, empunhadura vertical vazada, carregador de tambor de 60, punho vazado, alavanca ambidestra, tubo vermelho e coronha moderna. Pesada, mas silenciosa e com muita munição.",
+   "arquivo": "armas/fuzil_m4a1_tatico.glb",
+   "tamanho_m": [
+    0.12,
+    0.332,
+    1.007
+   ],
+   "triangulos": 43271,
+   "kb": 8921.7,
+   "gerador": "m4a1/jogo.py",
+   "partes": [
+    {
+     "no": "punho",
+     "tipo": "troca",
+     "descricao": "punho de pistola",
+     "pai": "fuzil_m4a1_tatico"
+    },
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": -12,
+     "descricao": "puxa para trás",
+     "pai": "fuzil_m4a1_tatico"
+    },
+    {
+     "no": "seletor",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": 90,
+     "descricao": "seguro / semi (90°) / auto (180°)",
+     "pai": "fuzil_m4a1_tatico"
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": -0.08,
+     "descricao": "transportador: recua 80 mm a cada tiro; fica atrás com o carregador vazio",
+     "pai": "fuzil_m4a1_tatico"
+    },
+    {
+     "no": "alavanca",
+     "tipo": "desliza",
+     "curso_m": -0.065,
+     "descricao": "alavanca de manejo (puxa e solta)",
+     "pai": "fuzil_m4a1_tatico"
+    },
+    {
+     "no": "tampa_janela",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -110,
+     "descricao": "abre no primeiro tiro e fica aberta",
+     "pai": "fuzil_m4a1_tatico"
+    },
+    {
+     "no": "retem_ferrolho",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -8,
+     "descricao": "retém do ferrolho (esquerda)",
+     "pai": "fuzil_m4a1_tatico"
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      0,
+      -1,
+      0
+     ],
+     "descricao": "sai para baixo",
+     "pai": "fuzil_m4a1_tatico"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.09,
+     "laco": false,
+     "descricao": "um tiro (repita em rajada a 11 por segundo): transportador recua 80 mm, coice leve; a tampa da janela abre"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.1,
+     "laco": false,
+     "descricao": "último tiro: o ferrolho fica preso atrás"
+    },
+    "vazia": {
+     "duracao_s": 0.1,
+     "laco": true,
+     "descricao": "pose parada: ferrolho atrás"
+    },
+    "recarregar": {
+     "duracao_s": 2.8,
+     "laco": false,
+     "descricao": "carregador cai (0,35 s) e o novo entra (2,19 s)"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 3.31,
+     "laco": false,
+     "descricao": "troca o carregador e bate no retém: o ferrolho fecha (2,5 s)"
+    },
+    "trocar_modo": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "seletor: seguro -> semi -> auto (no jogo, pare na posição escolhida)"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   },
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "fuzil_m4a1_tatico",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 18.6,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0364,
+      -0.0748
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "fuzil_m4a1_tatico",
+     "posicao_m": [
+      0.0,
+      0.0197,
+      -0.3229
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "fuzil_m4a1_tatico",
+     "posicao_m": [
+      0.0,
+      0.0411,
+      0.2779
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "fuzil_m4a1_tatico",
+     "posicao_m": [
+      0.0,
+      0.167,
+      -0.028
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "fuzil_m4a1_tatico",
+     "posicao_m": [
+      0.0,
+      0.093,
+      -0.729
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.075,
+      -0.141
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ]
   }
  ],
  "acessorios": [

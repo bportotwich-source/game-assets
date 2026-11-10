@@ -43,11 +43,14 @@ jobs:
           ./godot --headless --export-release "Windows Desktop" build/GameAssets.exe
           ls -la build
 
+      # Cópia de conveniência na aba Actions. Se a cota de armazenamento da conta
+      # estiver cheia, o build continua e a versão publicada em Releases sai igual.
       - uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
           name: GameAssets-windows
           path: build/GameAssets.exe
-          retention-days: 30
+          retention-days: 3
 
       - name: Publicar em Releases (última versão)
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'

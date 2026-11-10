@@ -1,0 +1,54 @@
+{
+ "gerado_por": "scripts/materiais/publicar.py",
+ "convencao": "ladrilho de 2 m que emenda nos quatro lados; UV em metros / 2, igual às peças dos kits; normal OpenGL; ORM = oclusão, rugosidade, metálico",
+ "materiais": {
+  "tabua_verde": {
+   "descricao": "Tábua de fachada pintada de verde, fiadas de 20 cm, tinta descascando no veio",
+   "lado_m": 2.0,
+   "pixels": 2048,
+   "origem": "siding"
+  },
+  "tijolo_vermelho": {
+   "descricao": "Tijolo aparente vermelho, fiada de 6,25 cm, junta de argamassa",
+   "lado_m": 2.0,
+   "pixels": 2048,
+   "origem": "brick"
+  },
+  "telha_asfaltica": {
+   "descricao": "Telha asfáltica cinza, fiadas de 20 cm",
+   "lado_m": 2.0,
+   "pixels": 2048,
+   "origem": "shingles"
+  },
+  "assoalho": {
+   "descricao": "Assoalho de tábua envernizada de 10 cm, gasto",
+   "lado_m": 2.0,
+   "pixels": 2048,
+   "origem": "floor"
+  },
+  "deck": {
+   "descricao": "Tábua de varanda sem verniz, acinzentada",
+   "lado_m": 2.0,
+   "pixels": 2048,
+   "origem": "deck"
+  },
+  "reboco_claro": {
+   "descricao": "Reboco pintado claro, com trincas finas",
+   "lado_m": 2.0,
+   "pixels": 1024,
+   "origem": "plaster"
+  },
+  "pedra_clara": {
+   "descricao": "Pedra clara de capa e peitoril",
+   "lado_m": 2.0,
+   "pixels": 1024,
+   "origem": "cap"
+  },
+  "tinta_creme": {
+   "descricao": "Madeira pintada de creme, para molduras, caixilhos e portas",
+   "lado_m": 2.0,
+   "pixels": 1024,
+   "origem": "tinta"
+  }
+ }
+}

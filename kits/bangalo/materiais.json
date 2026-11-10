@@ -1,0 +1,19 @@
+{
+ "kit": "bangalo",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "siding": {"material": "tabua_verde"},
+  "brick": {"material": "tijolo_vermelho"},
+  "shingles": {"material": "telha_asfaltica"},
+  "floor": {"material": "assoalho"},
+  "deck": {"material": "deck"},
+  "plaster": {"material": "reboco_claro"},
+  "cap": {"material": "pedra_clara"},
+  "concrete": {"material": "pedra_clara", "sem_uv": true},
+  "trim": {"material": "tinta_creme", "sem_uv": true},
+  "frame": {"material": "tinta_creme", "sem_uv": true},
+  "sash": {"material": "tinta_creme", "sem_uv": true},
+  "door_int": {"material": "tinta_creme", "sem_uv": true},
+  "door": {"material": "tinta_creme", "sem_uv": true, "cor": [0.6, 0.2, 0.15]}
+ }
+}

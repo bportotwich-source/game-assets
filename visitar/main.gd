@@ -5,6 +5,7 @@ extends Node3D
 const KitDoorScript = preload("res://scripts/godot/door.gd")
 const PlayerScript = preload("res://visitar/player.gd")
 const Acabamento = preload("res://acabamentos/acabamento.gd")
+const Realista = preload("res://materiais/realista.gd")
 
 const KITS := [
 	"predio-tijolos", "predio-mansarda", "padaria", "casa-enxaimel",
@@ -35,6 +36,8 @@ var _tom: ShaderMaterial          # variação de tom em coordenadas do mundo (n
 var _relogio_sombra := 0.0
 var _acab: Array = []             # materiais do acabamento por cômodo (acabamentos/acabamento.gd)
 var _acab_ligado := true
+var _real: Array = []             # materiais trocados pelos realistas (materiais/realista.gd)
+var _real_ligado := true
 var _plafon_base: Mesh            # plafon simples nos cômodos que não têm luminária no kit
 var _plafon_vidro: Mesh
 var _plafon_vidro_mat: StandardMaterial3D
@@ -75,6 +78,16 @@ func _unhandled_input(event: InputEvent) -> void:
 					sm.set_shader_parameter("ligado", _acab_ligado)
 				_update_hud()
 				return
+			KEY_R:
+				_real_ligado = not _real_ligado
+				Realista.ligar(_real, _real_ligado)
+				# o acabamento por cômodo guarda as texturas do material da peça: refaz com as de agora
+				_acab = Acabamento.aplicar(_building, kit)
+				for sm in _acab:
+					sm.set_shader_parameter("ligado", _acab_ligado)
+				_variacao_tom()
+				_update_hud()
+				return
 			KEY_BRACKETRIGHT, KEY_PAGEDOWN:
 				_load_kit(KITS[(cur + 1) % KITS.size()])
 				return
@@ -99,7 +112,12 @@ func _load_kit(k: String) -> void:
 	_scenes.clear()
 	_shapes.clear()
 	var box := _build_kit(k)
+	_real = Realista.aplicar(_building, k)
+	if not _real_ligado:
+		Realista.ligar(_real, false)
 	_acab = Acabamento.aplicar(_building, k)
+	for sm in _acab:
+		sm.set_shader_parameter("ligado", _acab_ligado)
 	_ambientar(k)
 	_iluminar(k)
 	var spawn := Vector3(_front_door_x(box), 0.1, box.end.z + 6.0)
@@ -194,6 +212,7 @@ func _update_hud() -> void:
 	lines += "E ou clique: abrir/fechar porta | F: voar (Espaço sobe, Q desce) | Esc: soltar o mouse\n"
 	lines += "M: mostrar/esconder os móveis e itens (%s)\n" % ("ligado" if _mostrar_ambiente else "desligado")
 	lines += "K: papel de parede, azulejo e piso por cômodo (%s)\n" % ("ligado" if _acab_ligado else "desligado")
+	lines += "R: materiais realistas (%s)\n" % (("ligado" if _real_ligado else "desligado") if not _real.is_empty() else "este prédio ainda não tem")
 	lines += "L: acender/apagar as luzes (%s) | I: iluminação %s (I compara com a antiga)\n" % ["acesas" if _luzes_ligadas else "apagadas", "nova" if _ilum_nova else "antiga"]
 	lines += "Trocar de prédio: [ anterior | ] próximo (ou Page Up / Page Down; 1 a 9 e 0 vão aos 10 primeiros)"
 	_hud.text = lines

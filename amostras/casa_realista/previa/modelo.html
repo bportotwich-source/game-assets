@@ -1,0 +1,317 @@
+<title>Bangalô Realista</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: o visor 3D ocupa a primeira tela inteira, como uma vitrine; abaixo, uma coluna de leitura com a conta do custo. */
+:root{
+  --fundo:#f1efe8; --papel:#fbfaf6; --tinta:#1e2422; --suave:#5d6763; --linha:#d5d2c6;
+  --tabua:#4f7772; --porta:#8a2a20; --latao:#9a7420; --alerta:#a4501a;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif; --texto:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --fundo:#141817; --papel:#1b2120; --tinta:#e9e6da; --suave:#9aa5a0; --linha:#2f3836;
+  --tabua:#86b3ac; --porta:#e0796b; --latao:#d9b25a; --alerta:#e59a5c; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --fundo:#141817; --papel:#1b2120; --tinta:#e9e6da; --suave:#9aa5a0; --linha:#2f3836;
+  --tabua:#86b3ac; --porta:#e0796b; --latao:#d9b25a; --alerta:#e59a5c; color-scheme:dark }
+body{background:var(--fundo);color:var(--tinta);font-family:var(--texto);font-size:16px;line-height:1.55}
+*{box-sizing:border-box}
+.palco{position:relative;height:min(82vh,820px);min-height:440px;background:#1a1f1e;overflow:hidden;touch-action:none}
+.palco canvas{display:block;width:100%;height:100%}
+.divisor{position:absolute;top:0;bottom:0;width:44px;margin-left:-22px;cursor:ew-resize;display:flex;justify-content:center;z-index:3}
+.divisor::before{content:"";width:2px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.35)}
+.divisor span{position:absolute;top:50%;width:34px;height:34px;margin-top:-17px;border-radius:50%;background:#fff;color:#1e2422;display:grid;place-items:center;font:600 13px var(--mono);box-shadow:0 1px 6px rgba(0,0,0,.5)}
+.rotulo{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));padding:5px 10px;background:rgba(15,18,17,.72);color:#f3f0e6;font:600 12px/1 var(--display);letter-spacing:.09em;text-transform:uppercase;z-index:2;pointer-events:none}
+.rotulo.a{left:max(16px,env(safe-area-inset-left,0px))} .rotulo.n{right:max(16px,env(safe-area-inset-right,0px));background:var(--porta-fixa,#8a2a20)}
+.barra{position:absolute;left:0;right:0;bottom:0;z-index:4;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;
+  padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));
+  background:linear-gradient(to top,rgba(12,15,14,.86),rgba(12,15,14,.55) 70%,rgba(12,15,14,0))}
+.grupo{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+.grupo b{font:600 11px var(--display);letter-spacing:.1em;text-transform:uppercase;color:#aeb8b3;margin-right:4px}
+.barra button{font:500 13px var(--texto);color:#f1eee4;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);padding:6px 10px;border-radius:3px;cursor:pointer}
+.barra button:hover{background:rgba(255,255,255,.2)}
+.barra button[aria-pressed="true"]{background:#f1eee4;color:#1e2422;border-color:#f1eee4}
+.barra button:focus-visible,.divisor:focus-visible{outline:2px solid #ffd27a;outline-offset:2px}
+.carga{position:absolute;inset:0;display:grid;place-items:center;z-index:5;background:#1a1f1e;color:#e9e6da;font:500 14px var(--mono);text-align:center;padding:16px}
+.carga i{display:block;width:220px;max-width:70vw;height:3px;background:#39423f;margin:12px auto 0}
+.carga i u{display:block;height:100%;width:0;background:#e0796b;transition:width .2s}
+main{max-width:860px;margin:0 auto;padding-block:36px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:34px}
+h1{font:700 clamp(30px,5vw,46px)/1.02 var(--display);font-stretch:80%;letter-spacing:-.01em;margin:0;text-wrap:balance}
+h2{font:700 23px/1.15 var(--display);font-stretch:85%;margin:0 0 10px;text-wrap:balance}
+p{margin:0 0 12px;max-width:66ch} .lide{font-size:18px;color:var(--suave)}
+section{display:flex;flex-direction:column}
+.rolagem{overflow-x:auto;border-top:2px solid var(--tinta);border-bottom:1px solid var(--linha)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px;font-variant-numeric:tabular-nums}
+th,td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--linha);white-space:nowrap}
+th:first-child,td:first-child{text-align:left;white-space:normal}
+thead th{font:600 11px var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--suave)}
+tbody tr:last-child td{border-bottom:0;font-weight:700}
+td.n{color:var(--porta);font-weight:600} td small{color:var(--suave);font-weight:400}
+.conta{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0;border-top:2px solid var(--tinta)}
+.conta div{padding:14px 16px 14px 0;border-bottom:1px solid var(--linha);min-width:0}
+.conta strong{display:block;font:700 30px/1 var(--display);font-stretch:80%;color:var(--porta);margin-bottom:6px;font-variant-numeric:tabular-nums}
+.conta span{font-size:14px;color:var(--suave)}
+ol.plano{margin:0;padding:0;list-style:none;counter-reset:p;display:flex;flex-direction:column;gap:0;border-top:2px solid var(--tinta)}
+ol.plano li{counter-increment:p;display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 10px;padding:14px 0;border-bottom:1px solid var(--linha)}
+ol.plano li::before{content:counter(p);font:700 28px/1 var(--display);color:var(--tabua)}
+ol.plano h3{margin:0 0 4px;font:700 17px/1.2 var(--display)} ol.plano p{margin:0;font-size:15px}
+code{font:500 13px var(--mono);background:var(--papel);border:1px solid var(--linha);padding:1px 5px;border-radius:3px}
+.nota{font-size:14px;color:var(--suave)}
+@media (max-width:560px){.barra button{padding:6px 8px;font-size:12.5px}.palco{height:78vh}}
+</style>
+
+<div class="palco" id="palco">
+  <div class="carga" id="carga"><div><span id="cargaTxt">Carregando a amostra…</span><i><u id="cargaBar"></u></i></div></div>
+  <div class="rotulo a" id="rotA">Atual</div><div class="rotulo n" id="rotN">Textura exclusiva</div>
+  <div class="divisor" id="divisor" tabindex="0" role="slider" aria-label="Divisão entre a versão atual e a realista" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span>◂▸</span></div>
+  <div class="barra">
+    <div class="grupo" id="gCena"><b>Cena</b>
+      <button data-cena="amostra" aria-pressed="true">Amostra de perto</button><button data-cena="casa" aria-pressed="false">Casa inteira</button></div>
+    <div class="grupo" id="gModo"><b>Ver</b>
+      <button data-modo="atual" aria-pressed="false">Atual</button><button data-modo="dividir" aria-pressed="true">Atual | Exclusiva</button><button data-modo="misto" aria-pressed="false">Repetida</button><button data-modo="dividir2" aria-pressed="false">Repetida | Exclusiva</button><button data-modo="novo" aria-pressed="false">Exclusiva</button></div>
+    <div class="grupo" id="gCam"><b>Câmera</b>
+      <button data-cam="fachada">Fachada</button><button data-cam="porta">Porta</button><button data-cam="macaneta">Maçaneta</button><button data-cam="janela">Janela</button><button data-cam="tabuas">Tábuas</button><button data-cam="sala">Sala</button><button data-cam="comoda">Cômoda</button><button data-cam="itens">Itens</button></div>
+    <div class="grupo" id="gCamCasa" hidden><b>Câmera</b>
+      <button data-cam="c_frente">Frente</button><button data-cam="c_canto">Canto</button><button data-cam="c_varanda">Varanda</button><button data-cam="c_telhado">Telhado</button><button data-cam="c_fundos">Fundos</button><button data-cam="c_sala">Sala</button><button id="bTelhado" aria-pressed="false">Tirar telhado</button></div>
+    <div class="grupo" id="gAcao"><b>Abrir</b>
+      <button data-abre="porta" aria-pressed="false">Porta</button><button data-abre="janela" aria-pressed="false">Janela</button><button data-abre="gavetas" aria-pressed="false">Gavetas</button></div>
+    <div class="grupo"><b>Extra</b>
+      <button id="bMalha" aria-pressed="false">Malha</button><button id="b4k" aria-pressed="false">Textura 4K</button></div>
+  </div>
+</div>
+
+<main>
+  <header>
+    <h1>O bangalô no mesmo nível da M4A1</h1>
+    <p class="lide">Duas cenas. Em <b>Casa inteira</b>, o bangalô completo com os materiais realistas que se repetem, o caminho escolhido para as casas. Em <b>Amostra de perto</b>, quatro metros de fachada, um canto de sala e três objetos com textura exclusiva, no método da M4A1. Arraste a linha do meio para comparar com o que está no pacote hoje.</p>
+  </header>
+
+  <section>
+    <h2>Casa inteira: materiais que se repetem</h2>
+    <p>Aqui a casa é a mesma do pacote, peça por peça. Só os materiais foram trocados por oito novos, feitos do mesmo jeito da amostra e preparados para emendar sozinhos a cada 2 m: tábua pintada, tijolo, reboco, assoalho, deck, telha, pedra e tinta lisa. Cada um tem 1024 pontos por metro, contra 192 hoje.</p>
+    <div class="conta"><div><strong>85 MB</strong><span>de memória de vídeo para os oito materiais, e esse valor serve para todas as casas que usarem os mesmos, não só para o bangalô</span></div><div><strong>0</strong><span>triângulos e chamadas de desenho a mais: a geometria da casa não mudou neste piloto</span></div><div><strong>5×</strong><span>mais nitidez de perto: 1024 pontos por metro, contra 192 hoje</span></div></div>
+    <p style="margin-top:14px">O que ainda falta neste piloto, e que entra na etapa seguinte: as quinas ainda são vivas, as portas e janelas ainda são as simples pintadas, e não há sujeira própria de cada parede. O número de memória é calculado pelo formato das texturas, não medido dentro do jogo.</p>
+  </section>
+
+  <section>
+    <h2>Amostra de perto: o que mudou</h2>
+    <p>A geometria quase não cresceu nas paredes. O salto vem das texturas: cada peça recebe cor, relevo e brilho calculados na própria forma dela, no Blender. A tinta descasca a partir das quinas e segue o veio da tábua, a sujeira junta nos cantos, o latão fica polido onde a mão pega, o vidro tem poeira nas bordas.</p>
+    <p>Porta, folha da janela e as três gavetas continuam peças separadas, abrindo no mesmo eixo de hoje. A gaveta agora é uma caixa de pinho de verdade por dentro, com puxadores de alça e espelho de fechadura.</p>
+  </section>
+
+  <section>
+    <h2>Números da amostra</h2>
+    <div class="rolagem"><table id="tab"><thead><tr><th>Peça</th><th>Triângulos hoje</th><th>Triângulos realista</th><th>Materiais hoje</th><th>Materiais realista</th><th>Textura própria</th></tr></thead><tbody></tbody></table></div>
+    <p class="nota" style="margin-top:10px">Materiais contam como chamadas de desenho: cada material de cada peça é um desenho a mais por quadro. Na versão realista a peça inteira usa um conjunto só de texturas, mais um para o vidro.</p>
+  </section>
+
+  <section>
+    <h2>O custo, sem enfeite</h2>
+    <div class="conta" id="conta"></div>
+    <p style="margin-top:14px">Triângulo não é o problema. O problema é textura. Hoje a casa inteira divide sete texturas pequenas que se repetem a cada 2 m. Na amostra, cada módulo de parede tem a sua textura exclusiva de 4096 px, e é por isso que cada mancha e cada lasca fica no lugar certo.</p>
+    <p>Feito desse jeito no bangalô inteiro, só as 26 paredes externas pediriam mais de 1 GB de memória de vídeo. Com 13 prédios no mapa do Recomeço, não cabe em placa nenhuma. Os números de memória e de tamanho acima são calculados pelo formato das texturas; não rodei esta amostra dentro do jogo.</p>
+    <p>No fps, o efeito direto é pequeno e até ajuda um pouco, porque cada peça passa a ter menos materiais. O risco é outro: se a memória de vídeo acabar, o jogo engasga ao virar a câmera. O gargalo de hoje, que é quantidade de desenhos e zumbis, continua igual.</p>
+  </section>
+
+  <section>
+    <h2>Como levar isso para o pacote inteiro</h2>
+    <ol class="plano">
+      <li><div><h3>Itens e armas: textura exclusiva, como aqui</h3><p>São pequenos e ficam perto da câmera, na mão ou no inventário. Um conjunto de 1024 px por item resolve. Os 100 e poucos itens de saque somariam perto de 300 MB em disco, então vale fazer por lotes, começando pelos mais vistos.</p></div></li>
+      <li><div><h3>Móveis: textura exclusiva menor, com versão simples para longe</h3><p>Cômoda, cama, sofá e armário em 1024 px ficam muito perto do que está na tela. Os 275 móveis pedem cerca de 750 MB de memória se todos estiverem carregados, então precisam de uma versão leve que troca sozinha a partir de uns 15 m.</p></div></li>
+      <li><div><h3>Casas: materiais realistas que se repetem, mais sujeira por cima</h3><p>Para parede, piso e telhado, a saída é criar os mesmos materiais desta amostra em versão que emenda sozinha (tábua pintada, tijolo, reboco, assoalho) e compartilhar entre todos os kits. A variação de cada casa vem de manchas e lascas aplicadas por cima. É o que a cena Casa inteira mostra.</p></div></li>
+      <li><div><h3>Portas, janelas e ferragens: exclusivas, uma vez por modelo</h3><p>Uma porta como esta serve para todas as casas que usam o mesmo modelo, então a textura exclusiva se paga. São poucas dezenas de modelos no pacote.</p></div></li>
+    </ol>
+    <p class="nota" style="margin-top:12px">Tempo de produção: esta amostra levou cerca de uma hora de cálculo de textura no Blender. Um kit inteiro no caminho 3 fica perto do que os kits de alto detalhe já levam hoje.</p>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+const DADOS = /*DADOS*/{};
+(function(){
+const palco = document.getElementById('palco');
+const renderer = new THREE.WebGLRenderer({antialias:true, powerPreference:'high-performance'});
+renderer.setPixelRatio(Math.min(window.devicePixelRatio||1, 2));
+renderer.outputEncoding = THREE.sRGBEncoding;
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 0.58;
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+palco.insertBefore(renderer.domElement, palco.firstChild);
+const cena = new THREE.Scene();
+const cam = new THREE.PerspectiveCamera(42, 1, 0.03, 200);
+const ctl = new THREE.OrbitControls(cam, renderer.domElement);
+ctl.enableDamping = true; ctl.dampingFactor = 0.1; ctl.minDistance = 0.12; ctl.maxDistance = 16; ctl.zoomSpeed = 0.9;
+
+// céu simples e ambiente para os reflexos
+const ceuMat = new THREE.ShaderMaterial({side:THREE.BackSide, depthWrite:false, uniforms:{}, vertexShader:
+ 'varying vec3 d; void main(){ d = normalize(position); gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.0); }', fragmentShader:
+ 'varying vec3 d; void main(){ float h = d.y; vec3 z = vec3(0.24,0.42,0.72); vec3 hz = vec3(0.80,0.84,0.86); vec3 ch = vec3(0.22,0.21,0.17);'+
+ ' vec3 c = h>0.0 ? mix(hz,z,pow(max(h,0.0001),0.55)) : mix(hz*0.7,ch,pow(max(-h,0.0001),0.35)); vec3 s = normalize(vec3(-0.45,0.62,0.64)); float a = max(dot(normalize(d),s),0.0);'+
+ ' c += vec3(1.0,0.9,0.7)*(pow(a+0.0001,40.0)*0.6 + pow(a+0.0001,600.0)*6.0); c = min(c, vec3(8.0)); gl_FragColor = vec4(c,1.0);\n#include <tonemapping_fragment>\n#include <encodings_fragment>\n}'});
+const ceu = new THREE.Mesh(new THREE.SphereGeometry(90, 32, 16), ceuMat);
+{ const cs = new THREE.Scene(); cs.add(ceu.clone()); const pm = new THREE.PMREMGenerator(renderer); cena.environment = pm.fromScene(cs, 0.02).texture; pm.dispose(); }
+cena.add(ceu);
+const sol = new THREE.DirectionalLight(0xfff0d8, 3.2); sol.position.set(-4.4, 6.2, 6.4); sol.target.position.set(0, 0.8, -1.5);
+sol.castShadow = true; sol.shadow.mapSize.set(2048, 2048); sol.shadow.bias = -0.0003; sol.shadow.normalBias = 0.012;
+Object.assign(sol.shadow.camera, {left:-5, right:5, top:5, bottom:-5, near:1, far:22}); cena.add(sol, sol.target);
+const chao = new THREE.Mesh(new THREE.CircleGeometry(30, 48), new THREE.MeshStandardMaterial({color:0x3b3d2c, roughness:1, metalness:0}));
+chao.rotation.x = -Math.PI/2; chao.position.y = -0.45; chao.receiveShadow = true; cena.add(chao);
+
+const novo = new THREE.Group(), atual = new THREE.Group(), moveisN = new THREE.Group(), moveisA = new THREE.Group(), misto = new THREE.Group(); cena.add(novo, atual, moveisN, moveisA, misto);
+const mov = {novo:{}, atual:{}, misto:{}};
+const LAD = {siding:'siding', brick:'brick', plaster:'plaster', floor:'floor', deck:'deck', shingles:'shingles', cap:'cap', concrete:'cap', trim:'tinta', frame:'tinta', sash:'tinta', door:'tinta', door_int:'tinta'}, ladTex = {};
+const casaA = new THREE.Group(), casaM = new THREE.Group(); casaA.position.y = casaM.position.y = -0.45; cena.add(casaA, casaM); let cenaSel = 'amostra', casaOk = false, semTelhado = false;
+function trocar(m, nm){ m.map = lad(LAD[nm],'cor'); m.normalMap = lad(LAD[nm],'normal'); m.roughnessMap = m.metalnessMap = m.aoMap = lad(LAD[nm],'orm'); m.roughness = 1; m.metalness = 1; if (!/door/.test(nm)) m.color.set(0xffffff); else if (nm === 'door') m.color.set(0x8a2a20); if (!m.normalScale) m.normalScale = new THREE.Vector2(1,-1); }
+function lad(n, tipo){ const k = n+'_'+tipo; if (!ladTex[k]){ const t = tl.load('tex/lad/'+k+'.webp'); t.flipY = false; t.wrapS = t.wrapT = THREE.RepeatWrapping; t.anisotropy = renderer.capabilities.getMaxAnisotropy(); if (tipo === 'cor') t.encoding = THREE.sRGBEncoding; ladTex[k] = t; } return ladTex[k]; }      // partes que abrem
+let total = 0, feitos = 0;
+const txt = document.getElementById('cargaTxt'), bar = document.getElementById('cargaBar');
+function passo(){ feitos++; bar.style.width = (100*feitos/Math.max(total,1)).toFixed(0)+'%'; if (feitos >= total) pronto(); }
+const leve = Math.min(window.innerWidth, window.innerHeight) < 560;
+const tl = new THREE.TextureLoader();
+const mats = {};
+function tex(g, tipo, res, cb){ const t = tl.load('tex/'+res+'/casa_'+g+'_'+tipo+'.webp', cb, undefined, cb); t.flipY = false; t.anisotropy = renderer.capabilities.getMaxAnisotropy();
+  if (tipo === 'cor') t.encoding = THREE.sRGBEncoding; return t; }
+function aplicar(g, res, conta){
+  const c = tex(g,'cor',res,conta), o = tex(g,'orm',res,conta), n = tex(g,'normal',res,conta);
+  for (const m of (mats[g]||[])) { m.map = c; m.roughnessMap = o; m.metalnessMap = o; m.normalMap = n; if (!m.transparent) m.aoMap = o; m.roughness = 1; m.metalness = 1; m.needsUpdate = true; }
+}
+function resDe(g, max){ const r = DADOS.res[g]; if (leve) return Math.min(r, 1024); return max ? r : Math.min(r, 2048); }
+
+const gl = new THREE.GLTFLoader();
+function carregar(url, ok){ fetch(url).then(function(r){ return r.json(); }).then(function(j){ const b = atob(j.glb), u = new Uint8Array(b.length); for (let i = 0; i < b.length; i++) u[i] = b.charCodeAt(i);
+  gl.parse(u.buffer, '', ok, function(e){ txt.textContent = 'Não consegui abrir ' + url; }); }).catch(function(){ txt.textContent = 'Não consegui baixar ' + url; }); }
+const grupos = Object.keys(DADOS.res);
+total = 1 + grupos.length*3 + DADOS.atual.length;
+carregar('novo/casa.json', function(g){
+  g.scene.traverse(function(o){
+    if (o.isMesh){ o.castShadow = true; o.receiveShadow = true; o.geometry.setAttribute('uv2', o.geometry.attributes.uv);
+      const nm = o.material.name || '', k = nm.replace('casa_','').replace('_vidro','');
+      if (nm.indexOf('_vidro') > 0){ o.material.transparent = true; o.material.depthWrite = false; o.material.side = THREE.DoubleSide; o.material.envMapIntensity = 1.6; o.castShadow = false; o.renderOrder = 2; }
+      (mats[k] = mats[k] || []).indexOf(o.material) < 0 && mats[k].push(o.material); }
+    if (/^(porta_frente|janela_folha|gaveta_\d)$/.test(o.name)) mov.novo[o.name] = {o:o, p:o.position.clone()};
+    if (o.name === 'lata_feijao') o.rotation.set(0, 1.25, 0);
+  });
+  novo.add(g.scene);
+  ['comoda','lampiao','lata_feijao'].forEach(function(n){ const o = g.scene.getObjectByName(n); if (o) moveisN.attach(o); });
+  for (const k of grupos) aplicar(k, resDe(k,false), passo);
+  passo();
+});
+DADOS.atual.forEach(function(it){
+  carregar('atual/'+it.arq.replace('.glb','.json'), function(g){
+    it.pos.forEach(function(p, i){
+      const s = i ? g.scene.clone(true) : g.scene;
+      s.position.set(p[0],p[1],p[2]); s.rotation.y = (p[3]||0)*Math.PI/180;
+      s.traverse(function(o){ if (o.isMesh){ o.castShadow = true; o.receiveShadow = true;
+          if (/glass|vidro/.test(o.name) || (o.material && /glass|vidro/.test(o.material.name||''))){ o.castShadow = false; o.material.depthWrite = false; o.renderOrder = 2; } }
+        if (/^(folha|gaveta_\d)$/.test(o.name)) mov.atual[o.name] = {o:o, p:o.position.clone()}; });
+      if (it.arq.indexOf('door_leaf') === 0) mov.atual.porta = {o:s, p:s.position.clone()};
+      if (it.movel) { moveisA.add(s); return; }
+      atual.add(s);
+      const c = s.clone(true), feitos2 = {};
+      c.traverse(function(o){ if (o.isMesh){ const nm = o.material.name || ''; if (!feitos2[nm]){ const m = o.material.clone(); feitos2[nm] = m;
+            if (LAD[nm] && o.geometry.attributes.uv) trocar(m, nm); }
+          o.material = feitos2[nm]; if (!o.geometry.attributes.uv2 && o.geometry.attributes.uv) o.geometry.setAttribute('uv2', o.geometry.attributes.uv); }
+        if (/^(folha|gaveta_\d)$/.test(o.name)) mov.misto[o.name] = {o:o, p:o.position.clone()}; });
+      if (it.arq.indexOf('door_leaf') === 0) mov.misto.porta = {o:c, p:c.position.clone()};
+      misto.add(c);
+    });
+    passo();
+  });
+});
+
+// câmeras
+const CAMS = {fachada:[[0.9,1.25,6.4],[0,1.2,0]], porta:[[2.0,1.45,2.3],[1.0,1.25,0]], macaneta:[[1.17,1.17,0.42],[1.37,1.06,-0.15]], janela:[[-2.0,1.65,1.9],[-1.0,1.5,0]],
+  tabuas:[[-0.55,0.55,0.85],[-1.45,0.32,0]], c_frente:[[2,2.2,19],[0,1.4,3]], c_canto:[[13,3.2,14.5],[0,1.2,0]], c_varanda:[[3.2,1.5,10.4],[-1.5,1.3,6]], c_telhado:[[-10,9.5,13],[0,2.6,0]], c_fundos:[[-9,2.6,-14],[0,1.3,-3]], c_sala:[[-0.9,2.0,0.7],[-5.2,1.45,5.2]], sala:[[1.75,1.75,-4.6],[-0.9,1.0,-0.7]], comoda:[[-0.15,1.15,-2.75],[-1.7,0.5,-1.7]], itens:[[-1.18,1.14,-1.98],[-1.63,0.94,-1.68]]};
+let voo = null;
+function irPara(nome, jah){ const c = CAMS[nome]; const a = new THREE.Vector3().fromArray(c[0]), b = new THREE.Vector3().fromArray(c[1]);
+  if (jah){ cam.position.copy(a); ctl.target.copy(b); return; }
+  voo = {p0:cam.position.clone(), t0:ctl.target.clone(), p1:a, t1:b, k:0}; }
+irPara('fachada', true);
+document.getElementById('gCam').addEventListener('click', function(e){ const n = e.target.dataset.cam; if (n) irPara(n); });
+document.getElementById('gCamCasa').addEventListener('click', function(e){ const n = e.target.dataset.cam; if (n) irPara(n); });
+function telhado(){ [casaA, casaM].forEach(function(G){ G.traverse(function(o){ if (o.isMesh && /shingles|ridge|ceiling|gutter/.test(o.material.name||'')) o.visible = !semTelhado; }); }); }
+document.getElementById('bTelhado').addEventListener('click', function(e){ semTelhado = !semTelhado; e.target.setAttribute('aria-pressed', semTelhado); telhado(); });
+function carregarCasa(){
+  document.getElementById('carga').hidden = false; txt.textContent = 'Carregando a casa inteira…'; bar.style.width = '30%';
+  carregar('atual/bangalo.json', function(g){
+    g.scene.traverse(function(o){ if (o.isMesh){ o.castShadow = true; o.receiveShadow = true; if (/glass/.test(o.material.name||'')){ o.castShadow = false; o.material.depthWrite = false; o.renderOrder = 2; } } });
+    casaA.add(g.scene); const c = g.scene.clone(true);
+    c.traverse(function(o){ if (o.isMesh){ const nm = o.material.name || ''; o.material = o.material.clone(); if (LAD[nm] && o.geometry.attributes.uv){ trocar(o.material, nm); if (!o.geometry.attributes.uv2) o.geometry.setAttribute('uv2', o.geometry.attributes.uv); }
+        else if (nm === 'gutter' || nm === 'iron' || nm === 'dark') { o.material.roughness = 0.55; o.material.metalness = nm === 'dark' ? 0 : 0.6; } } });
+    casaM.add(c); casaOk = true; document.getElementById('carga').hidden = true; });
+}
+document.getElementById('gCena').addEventListener('click', function(e){ const c = e.target.dataset.cena; if (!c || c === cenaSel) return; cenaSel = c;
+  document.querySelectorAll('#gCena button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.cena === c); });
+  const casa = c === 'casa'; document.getElementById('gCam').hidden = casa; document.getElementById('gCamCasa').hidden = !casa; document.getElementById('gAcao').hidden = casa; b4k.hidden = casa || leve;
+  document.querySelector('[data-modo="dividir2"]').hidden = casa; document.querySelector('[data-modo="novo"]').hidden = casa; document.querySelector('[data-modo="dividir"]').textContent = casa ? 'Atual | Repetida' : 'Atual | Exclusiva';
+  if (casa && (modo === 'novo' || modo === 'dividir2')) modo = 'dividir';
+  const r = casa ? 13 : 5; Object.assign(sol.shadow.camera, {left:-r, right:r, top:r, bottom:-r, far: casa ? 40 : 22}); sol.shadow.camera.updateProjectionMatrix(); sol.position.set(-4.4, 6.2, 6.4).multiplyScalar(casa ? 2.2 : 1); sol.shadow.mapSize.set(casa ? 4096 : 2048, casa ? 4096 : 2048); if (sol.shadow.map){ sol.shadow.map.dispose(); sol.shadow.map = null; }
+  ctl.maxDistance = casa ? 45 : 16; irPara(casa ? 'c_canto' : 'fachada', true); arruma(); if (casa && !casaOk) carregarCasa(); });
+
+// modos e divisor
+let modo = 'dividir', corte = 0.5, malha = false;
+const div = document.getElementById('divisor'), rotA = document.getElementById('rotA'), rotN = document.getElementById('rotN');
+const ROT = {atual:'Atual', misto:'Material repetido', novo:'Textura exclusiva'};
+function lados(){ if (cenaSel === 'casa') return modo === 'dividir' ? ['atual','misto'] : [modo, modo]; return modo === 'dividir' ? ['atual','novo'] : modo === 'dividir2' ? ['misto','novo'] : [modo, modo]; }
+function arruma(){ const L = lados(), dv = L[0] !== L[1]; div.hidden = !dv; rotA.hidden = false; rotN.hidden = !dv; rotA.textContent = ROT[L[0]]; rotN.textContent = ROT[L[1]]; div.style.left = (corte*100)+'%'; div.setAttribute('aria-valuenow', Math.round(corte*100));
+  document.querySelectorAll('#gModo button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.modo === modo); }); }
+document.getElementById('gModo').addEventListener('click', function(e){ if (e.target.dataset.modo){ modo = e.target.dataset.modo; arruma(); } });
+let arr = false;
+div.addEventListener('pointerdown', function(e){ arr = true; div.setPointerCapture(e.pointerId); e.preventDefault(); });
+div.addEventListener('pointermove', function(e){ if (!arr) return; const r = palco.getBoundingClientRect(); corte = Math.min(0.97, Math.max(0.03, (e.clientX - r.left)/r.width)); arruma(); });
+div.addEventListener('pointerup', function(){ arr = false; }); div.addEventListener('pointercancel', function(){ arr = false; });
+div.addEventListener('keydown', function(e){ if (e.key === 'ArrowLeft') corte = Math.max(0.03, corte-0.03); else if (e.key === 'ArrowRight') corte = Math.min(0.97, corte+0.03); else return; arruma(); });
+arruma();
+
+// abrir
+const abre = {porta:0, janela:0, gavetas:0}, alvo = {porta:0, janela:0, gavetas:0};
+document.getElementById('gAcao').addEventListener('click', function(e){ const k = e.target.dataset.abre; if (!k) return; alvo[k] = alvo[k] ? 0 : 1; e.target.setAttribute('aria-pressed', !!alvo[k]); });
+function suave(t){ return t*t*(3-2*t); }
+function mexe(){
+  const p = suave(abre.porta), j = suave(abre.janela), g = suave(abre.gavetas), n = mov.novo;
+  if (n.porta_frente) n.porta_frente.o.rotation.y = p*1.66;
+  if (n.janela_folha) n.janela_folha.o.position.y = n.janela_folha.p.y + j*0.66;
+  [mov.atual, mov.misto].forEach(function(a){ if (a.porta) a.porta.o.rotation.y = p*1.48; if (a.folha) a.folha.o.position.y = a.folha.p.y + j*0.695; });
+  [0.30, 0.19, 0.08].forEach(function(d, i){ const k = 'gaveta_'+(3-i);
+    if (n[k]) n[k].o.position.z = n[k].p.z + g*d; if (mov.atual[k]) mov.atual[k].o.position.z = mov.atual[k].p.z + g*d; });
+}
+document.getElementById('bMalha').addEventListener('click', function(e){ malha = !malha; e.target.setAttribute('aria-pressed', malha);
+  [novo, atual, misto, moveisN, moveisA, casaA, casaM].forEach(function(G){ G.traverse(function(o){ if (o.isMesh) o.material.wireframe = malha; }); }); });
+const b4k = document.getElementById('b4k'); if (leve) b4k.hidden = true;
+b4k.addEventListener('click', function(){ const on = b4k.getAttribute('aria-pressed') !== 'true'; b4k.setAttribute('aria-pressed', on);
+  for (const k of grupos) if (DADOS.res[k] > 2048) aplicar(k, resDe(k, on), function(){}); });
+
+function pronto(){ document.getElementById('carga').hidden = true; }
+function tam(){ const w = palco.clientWidth, h = palco.clientHeight; renderer.setSize(w, h, false); cam.aspect = w/h; cam.fov = w < h ? 58 : 42; cam.updateProjectionMatrix(); }
+window.addEventListener('resize', tam); tam();
+let antes = performance.now();
+function quadro(agora){
+  const dt = Math.min(0.05, (agora - antes)/1000); antes = agora;
+  for (const k in abre){ const d = alvo[k] - abre[k]; if (d) abre[k] += Math.sign(d)*Math.min(Math.abs(d), dt*1.4); }
+  mexe();
+  if (voo){ voo.k = Math.min(1, voo.k + dt*1.3); const s = suave(voo.k); cam.position.lerpVectors(voo.p0, voo.p1, s); ctl.target.lerpVectors(voo.t0, voo.t1, s); if (voo.k >= 1) voo = null; }
+  ctl.update();
+  const w = palco.clientWidth, h = palco.clientHeight;
+  const L = lados();
+  function mostra(m){ const am = cenaSel === 'amostra'; atual.visible = moveisA.visible = am && m === 'atual'; novo.visible = am && m === 'novo'; misto.visible = am && m === 'misto'; moveisN.visible = am && m !== 'atual'; casaA.visible = !am && m === 'atual'; casaM.visible = !am && m !== 'atual'; }
+  if (L[0] !== L[1]){
+    const x = Math.round(w*corte); renderer.setScissorTest(true);
+    renderer.setScissor(0, 0, x, h); mostra(L[0]); renderer.render(cena, cam);
+    renderer.setScissor(x, 0, w - x, h); mostra(L[1]); renderer.render(cena, cam);
+    renderer.setScissorTest(false);
+  } else { mostra(L[0]); renderer.render(cena, cam); }
+  requestAnimationFrame(quadro);
+}
+requestAnimationFrame(quadro);
+renderer.domElement.addEventListener('pointerdown', function(){ voo = null; });
+
+// tabela e conta
+const tb = document.querySelector('#tab tbody'), f = function(n){ return n.toLocaleString('pt-BR'); };
+DADOS.tabela.forEach(function(r){ const tr = document.createElement('tr');
+  [r.nome, f(r.tris_a), f(r.tris_n), f(r.mat_a), f(r.mat_n), r.tex].forEach(function(v, i){ const td = document.createElement('td'); td.textContent = v; if (i === 2 || i === 4) td.className = 'n'; tr.appendChild(td); });
+  tb.appendChild(tr); });
+const ct = document.getElementById('conta');
+DADOS.conta.forEach(function(c){ const d = document.createElement('div'), s = document.createElement('strong'), t = document.createElement('span'); s.textContent = c[0]; t.textContent = c[1]; d.append(s, t); ct.appendChild(d); });
+})();
+</script>

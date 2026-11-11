@@ -20,3 +20,7 @@ O mapa de 0,25 m é maior que a parede interna (12 cm) e não fica alinhado com 
 - Cômodo pequeno com escada dentro que a ambientação chamou de banheiro, lavabo, depósito ou vazio é tratado como corredor (só no acabamento; o `ambientacao.json` não muda).
 
 Ainda aberto: nos kits que já trazem piso próprio em módulos de 2 m (ladrilho `tile`/`slate`, mármore), o piso não acompanha as paredes quando o cômodo não cai na linha do módulo (casas-vitorianas, casa-reboco).
+
+## Molduras modeladas
+
+`python3 scripts/detalhe/molduras.py kits/<kit> --teto <pé-direito>` põe nas peças de parede do kit, em geometria, a guarnição de porta e de janela, o rodapé com perfil e a sanca (um nó `molduras` por peça, com o material `trim` do kit). Depois é preciso gerar o `acabamento.json` de novo: ele passa a trazer `molduras_modeladas: true` e o shader deixa de pintar rodapé e sanca por cima. Feito nos 13 prédios do jogo. O lambri e o friso dele continuam pintados, porque mudam de cômodo para cômodo.

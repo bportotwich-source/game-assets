@@ -21,6 +21,7 @@ uniform int n_niveis = 1;
 uniform float niveis[48];
 uniform bool eh_piso = false;
 uniform bool ligado = true;
+uniform bool molduras_modeladas = false;   // o kit traz rodapé e sanca em geometria (scripts/detalhe/molduras.py): não pinta os do shader
 
 uniform sampler2DArray acab_albedo : source_color, filter_linear_mipmap_anisotropic, repeat_enable;
 uniform sampler2DArray acab_normal : hint_normal, filter_linear_mipmap_anisotropic, repeat_enable;
@@ -93,7 +94,7 @@ void fragment() {
 			alb = texture(acab_albedo, vec3(uv, camada)).rgb * cor;
 			orm = texture(acab_orm, vec3(uv, camada)).rgb;
 			nm = texture(acab_normal, vec3(uv, camada)).rgb * 2.0 - 1.0;
-			int bits = int(d.w + 0.5);
+			int bits = molduras_modeladas ? 0 : int(d.w + 0.5);
 			// arremate de madeira em cima do lambri/azulejo
 			if (d.z > 0.05 && abs(alt - d.z) < 0.025) {
 				float k = (alt - d.z) / 0.025;

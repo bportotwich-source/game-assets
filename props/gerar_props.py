@@ -1130,11 +1130,18 @@ def catalogo_md(regs):
 def main(ids):
     materiais(); raiz = AQUI; regs = {'mobilias': [], 'loot': []}
     cats = {}
+    feitos_a_parte = set()                # itens refeitos por outro gerador ("gerador" no catálogo, ex.: moveis_realistas/): ficam como estão
     for g in regs:
         f = os.path.join(raiz, g, 'catalogo.json')
-        if ids and os.path.exists(f): regs[g] = [r for r in json.load(open(f, encoding='utf-8'))['itens'] if r['id'] not in ids]
+        if not os.path.exists(f): continue
+        antigos = json.load(open(f, encoding='utf-8'))['itens']
+        feitos_a_parte |= {r['id'] for r in antigos if r.get('gerador')}
+        regs[g] = [r for r in antigos if (r['id'] not in ids if ids else r.get('gerador'))]
     for id_, it in ITENS.items():
         if ids and id_ not in ids: continue
+        if id_ in feitos_a_parte:
+            if ids: print(f"{id_}: refeito por outro gerador, não mexo"); regs[it['grupo']] += [r for r in json.load(open(os.path.join(raiz, it['grupo'], 'catalogo.json'), encoding='utf-8'))['itens'] if r['id'] == id_]
+            continue
         r = exportar(it, raiz); regs[it['grupo']].append(r)
         print(f"{id_:18s} {r['triangulos']:7d} tris {r['kb']:7.1f} KB  {r['tamanho_m']}")
     ordem = list(ITENS)

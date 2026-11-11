@@ -9,6 +9,7 @@ props/
   CATALOGO.md           tabelas em português (gerado)
   mobilias/<id>.glb     mobilias/catalogo.json
   loot/<id>.glb         loot/catalogo.json
+  moveis_realistas/     móveis refeitos no nível da M4A1 (Blender + texturas assadas); substituem o de mesmo id em mobilias/ (moveis_realistas/README.md)
   veiculos/             carros em peças que viram loot, porta-malas e ferramentas de oficina (veiculos/README.md, design em docs/veiculos.md)
 ```
 

@@ -2,6 +2,7 @@
 # em primeira pessoa na frente da entrada. [ e ] trocam de prédio (1 a 9 e 0 vão direto aos 10 primeiros).
 extends Node3D
 
+const ArquivoMoveis = preload("res://mobiliar/arquivo.gd")
 const KitDoorScript = preload("res://scripts/godot/door.gd")
 const PlayerScript = preload("res://visitar/player.gd")
 const Acabamento = preload("res://acabamentos/acabamento.gd")
@@ -295,11 +296,9 @@ func _add_shapes(inst: Node3D, body: CollisionObject3D) -> void:
 # Móveis e itens do prédio (kits/<kit>/ambientacao.json, gerado por scripts/ambientacao/ambientar.py).
 # Cada item vira uma cena de props/ com uma caixa de colisão; manchas, cacos e papéis no chão não colidem.
 func _ambientar(k: String) -> void:
-	var path := "res://kits/%s/ambientacao.json" % k
-	if not FileAccess.file_exists(path):
-		return
-	var data = JSON.parse_string(FileAccess.get_file_as_string(path))
-	if typeof(data) != TYPE_DICTIONARY or not data.has("itens"):
+	# Se o prédio foi arrumado no Modo Mobiliar, vale a versão salva lá.
+	var data: Dictionary = ArquivoMoveis.ler(k)
+	if data["itens"].is_empty():
 		return
 	_ambiente = Node3D.new()
 	_ambiente.name = "Ambientacao"

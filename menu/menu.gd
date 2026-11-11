@@ -1,4 +1,4 @@
-# Tela inicial: escolher entre montar um prédio com as peças ou visitar os kits prontos.
+# Tela inicial: montar um prédio com as peças, mobiliar os prédios prontos ou visitar os kits.
 extends Control
 
 
@@ -24,6 +24,7 @@ func _ready() -> void:
 	sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	v.add_child(sub)
 	v.add_child(_big("Montar um prédio com as peças", "res://editor/editor.tscn"))
+	v.add_child(_big("Mobiliar os prédios", "res://mobiliar/mobiliar.tscn"))
 	v.add_child(_big("Visitar os prédios prontos", "res://visitar/main.tscn"))
 	var quit := _big("Sair", "")
 	v.add_child(quit)

@@ -123,6 +123,7 @@ static func aplicar(predio: Node3D, kit: String) -> Array:
 				sm.set_shader_parameter("n_niveis", niveis.size())
 				sm.set_shader_parameter("niveis", niv)
 				sm.set_shader_parameter("eh_piso", eh_piso)
+				sm.set_shader_parameter("molduras_modeladas", bool(d.get("molduras_modeladas", false)))
 				sm.set_shader_parameter("acab_albedo", _arrays["albedo"])
 				sm.set_shader_parameter("acab_normal", _arrays["normal"])
 				sm.set_shader_parameter("acab_orm", _arrays["orm"])

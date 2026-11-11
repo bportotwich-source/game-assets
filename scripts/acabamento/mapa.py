@@ -208,6 +208,7 @@ def gerar(kit, cfg):
                          "B = pé-direito / 0,02 m (0 = mais de 5 m: sem sanca), A = 255 dentro de um cômodo. Célula (ix, iz) cobre x0 + ix*cel e z0 + iz*cel.",
                x0=round(float(res['x0']), 4), z0=round(float(res['z0']), 4), cel=CM.CEL, nx=nx, nz=nz, niveis=[round(float(an['y']), 3) for an in res['andares']],
                materiais=dict(paredes=cfg.get('paredes', PAREDE_PADRAO), pisos=cfg.get('pisos', PISO_PADRAO)),
+               molduras_modeladas=any(b'"molduras"' in open(f, 'rb').read(4096 * 8) for f in __import__('glob').glob(os.path.join(pasta, 'pieces', '*.glb'))),
                comodos=resumo, mapa=base64.b64encode(img.tobytes()).decode(),
                fino=dict(convencao="mesmo desenho do 'mapa', com célula menor; RGBA8 comprimido com gzip e depois base64",
                          cel=CM.CEL / SUB, nx=nx * SUB, nz=nz * SUB, mapa_gz=base64.b64encode(gzip.compress(np.stack(finos).tobytes(), 9, mtime=0)).decode()))

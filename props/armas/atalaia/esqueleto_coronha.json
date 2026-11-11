@@ -1,0 +1,51 @@
+{
+"origem": "coronha_precisao_ar.glb",
+"nos": [
+{
+"no": "apoio_face",
+"pai": null,
+"posicao": [
+0.0,
+0.0,
+0.0
+]
+},
+{
+"no": "ombro",
+"pai": null,
+"posicao": [
+-0.0,
+-0.05,
+0.28
+]
+}
+],
+"animacoes": [
+{
+"nome": "subir_apoio",
+"faixas": [
+{
+"no": "apoio_face",
+"caminho": "translation",
+"interp": "LINEAR",
+"t": [
+0.0,
+0.4
+],
+"v": [
+[
+0.0,
+0.0,
+0.0
+],
+[
+0.0,
+0.015,
+0.0
+]
+]
+}
+]
+}
+]
+}

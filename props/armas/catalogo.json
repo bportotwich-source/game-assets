@@ -4598,15 +4598,15 @@
     "delegacia"
    ],
    "estojo_s": 0.02,
-   "descricao": "Arma curta de polímero com o carregador dentro do punho e coronha de varetas que encolhe. Cabe numa mochila, atira rápido e usa a mesma munição da pistola: ótima para limpar corredores.",
+   "descricao": "Arma curta de polímero com o carregador dentro do punho e coronha de varetas que encolhe. Cabe numa mochila, atira rápido e usa a mesma munição da pistola: ótima para limpar corredores. Modelo detalhado, com texturas assadas (desgaste nas arestas, pontilhado no punho, gravações).",
    "arquivo": "armas/smg_9mm.glb",
    "tamanho_m": [
     0.055,
-    0.212,
-    0.33
+    0.21,
+    0.329
    ],
-   "triangulos": 34146,
-   "kb": 1800.1,
+   "triangulos": 38898,
+   "kb": 4143.6,
    "partes": [
     {
      "no": "gatilho",
@@ -4983,7 +4983,7 @@
       0.0,
       0.0
      ],
-     "inclinacao_graus": 6.2,
+     "inclinacao_graus": 6.1,
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     },
     {
@@ -4991,8 +4991,8 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.0364,
-      -0.0621
+      0.0404,
+      -0.0625
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
     },
@@ -5010,7 +5010,7 @@
      "no": "ref_coronha",
      "pai": "coronha",
      "posicao_m": [
-      -0.0,
+      0.0,
       0.05,
       0.116
      ],
@@ -5020,7 +5020,7 @@
      "no": "ref_mira",
      "pai": "smg_9mm",
      "posicao_m": [
-      -0.0,
+      0.0,
       0.131,
       0.074
      ],
@@ -5041,12 +5041,16 @@
      "pai": "carregador",
      "posicao_m": [
       0.0,
-      -0.075,
-      0.0085
+      -0.0733,
+      0.008
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "smg/jogo.py",
+   "arquivo_leve": "armas/smg_9mm_leve.glb",
+   "triangulos_leve": 6000,
+   "kb_leve": 1015.1
   },
   {
    "id": "smg_9mm_tan",
@@ -5076,15 +5080,15 @@
     "delegacia"
    ],
    "estojo_s": 0.02,
-   "descricao": "A mesma submetralhadora com corpo, punho e coronha caramelo; carregador e trilhos pretos.",
+   "descricao": "A mesma submetralhadora com corpo, punho e coronha caramelo; carregador e trilhos pretos. Modelo detalhado, com texturas assadas (desgaste nas arestas, pontilhado no punho, gravações).",
    "arquivo": "armas/smg_9mm_tan.glb",
    "tamanho_m": [
     0.055,
-    0.212,
-    0.33
+    0.21,
+    0.329
    ],
-   "triangulos": 34146,
-   "kb": 1800.7,
+   "triangulos": 38898,
+   "kb": 4222.6,
    "partes": [
     {
      "no": "gatilho",
@@ -5461,7 +5465,7 @@
       0.0,
       0.0
      ],
-     "inclinacao_graus": 6.2,
+     "inclinacao_graus": 6.1,
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     },
     {
@@ -5469,8 +5473,8 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.0364,
-      -0.0621
+      0.0404,
+      -0.0625
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
     },
@@ -5488,7 +5492,7 @@
      "no": "ref_coronha",
      "pai": "coronha",
      "posicao_m": [
-      -0.0,
+      0.0,
       0.05,
       0.116
      ],
@@ -5498,7 +5502,7 @@
      "no": "ref_mira",
      "pai": "smg_9mm_tan",
      "posicao_m": [
-      -0.0,
+      0.0,
       0.131,
       0.074
      ],
@@ -5519,12 +5523,16 @@
      "pai": "carregador",
      "posicao_m": [
       0.0,
-      -0.075,
-      0.0085
+      -0.0733,
+      0.008
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "smg/jogo.py",
+   "arquivo_leve": "armas/smg_9mm_tan_leve.glb",
+   "triangulos_leve": 6000,
+   "kb_leve": 1047.6
   },
   {
    "id": "pistola_9mm_tan",

@@ -30,16 +30,45 @@ static func _preparar() -> bool:
 	return true
 
 
+# Mapa de cômodos do acabamento.json: o fino (célula de 0,0625 m, gzip) quando o arquivo traz, senão o de 0,25 m.
+# ACABAMENTO_MAPA_ANTIGO=1 força o de 0,25 m, para comparar.
+static func ler_mapa(d: Dictionary) -> Dictionary:
+	var n: int = (d["niveis"] as Array).size()
+	if d.has("fino") and OS.get_environment("ACABAMENTO_MAPA_ANTIGO") == "":
+		var f: Dictionary = d["fino"]
+		var nx := int(f["nx"])
+		var nz := int(f["nz"])
+		var bytes := Marshalls.base64_to_raw(f["mapa_gz"]).decompress_dynamic(-1, FileAccess.COMPRESSION_GZIP)
+		if bytes.size() == nx * nz * n * 4:
+			return {"img": Image.create_from_data(nx, nz * n, false, Image.FORMAT_RGBA8, bytes), "nx": nx, "nz": nz, "cel": float(f["cel"])}
+		push_warning("acabamento.json: mapa fino com tamanho inesperado, usando o de 0,25 m")
+	var nx0 := int(d["nx"])
+	var nz0 := int(d["nz"])
+	return {"img": Image.create_from_data(nx0, nz0 * n, false, Image.FORMAT_RGBA8, Marshalls.base64_to_raw(d["mapa"])), "nx": nx0, "nz": nz0, "cel": float(d["cel"])}
+
+
+# Escadas ficam de fora: espelho, banzo e lateral são faces em pé de material "plaster" e pegavam papel, lambri e azulejo.
+static func peca_sem_acabamento(no: Node, predio: Node) -> bool:
+	if OS.get_environment("ACABAMENTO_MAPA_ANTIGO") != "":
+		return false
+	while no != null and no != predio:
+		var arq := no.scene_file_path.get_file().to_lower()
+		if arq != "":
+			return arq.contains("stair") or arq.contains("escada") or arq.begins_with("step")
+		no = no.get_parent()
+	return false
+
+
 static func aplicar(predio: Node3D, kit: String) -> Array:
 	var path := "res://kits/%s/acabamento.json" % kit
 	if not FileAccess.file_exists(path) or not _preparar():
 		return []
 	var d: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(path))
-	var bytes := Marshalls.base64_to_raw(d["mapa"])
-	var nx := int(d["nx"])
-	var nz := int(d["nz"])
 	var niveis: Array = d["niveis"]
-	var img := Image.create_from_data(nx, nz * niveis.size(), false, Image.FORMAT_RGBA8, bytes)
+	var mp := ler_mapa(d)
+	var nx: int = mp["nx"]
+	var nz: int = mp["nz"]
+	var img: Image = mp["img"]
 	var mapa := ImageTexture.create_from_image(img)
 	var niv := PackedFloat32Array()
 	niv.resize(48)
@@ -66,7 +95,7 @@ static func aplicar(predio: Node3D, kit: String) -> Array:
 	var pisos: Array = d["materiais"]["pisos"]
 	var feitos := {}
 	for mi in predio.find_children("*", "MeshInstance3D", true, false):
-		if mi.mesh == null:
+		if mi.mesh == null or peca_sem_acabamento(mi, predio):
 			continue
 		for s in mi.mesh.get_surface_count():
 			var m = mi.mesh.surface_get_material(s)
@@ -89,7 +118,7 @@ static func aplicar(predio: Node3D, kit: String) -> Array:
 				sm.set_shader_parameter("orig_rugosidade", m.roughness)
 				sm.set_shader_parameter("mapa", mapa)
 				sm.set_shader_parameter("mapa_origem", Vector2(d["x0"], d["z0"]))
-				sm.set_shader_parameter("mapa_cel", float(d["cel"]))
+				sm.set_shader_parameter("mapa_cel", float(mp["cel"]))
 				sm.set_shader_parameter("mapa_tam", Vector2i(nx, nz))
 				sm.set_shader_parameter("n_niveis", niveis.size())
 				sm.set_shader_parameter("niveis", niv)

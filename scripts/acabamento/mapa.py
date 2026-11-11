@@ -8,10 +8,16 @@ Como funciona
   - O shader acabamento.gdshader troca so os materiais listados em 'materiais' (paredes lisas e pisos genericos):
     na parede, le a celula 0,2 m na frente da face; no piso, a celula embaixo. Fora dos comodos, fica o material original.
   - Os estilos (camadas, altura do lambri/azulejo, cores) estao em ESTILOS e vao para acabamentos/estilos.json.
+  - Mapa fino ('fino' no json, celula de 0,0625 m, comprimido): a grade de 0,25 m e maior que a parede interna (12 cm) e
+    nao fica alinhada com ela, entao as celulas que pegam parede erravam o lado (faixa do papel do vizinho nos cantos e ao
+    lado das portas, piso entrando pela soleira, retalhos na caixa de escada). No mapa fino cada celula livre recebe o
+    comodo de onde se chega nela sem atravessar parede; nos vaos entre dois comodos a parede fica sem acabamento (batente)
+    e o piso troca no meio do vao; caixa de escada e vazios fechados ficam com pintura lisa propria. O campo 'mapa' antigo continua no arquivo para quem ainda nao le o fino.
 
 Uso: python3 scripts/acabamento/mapa.py [kit ...]     (sem argumentos: todos os kits)
 """
-import base64, json, math, os, sys
+import base64, gzip, json, math, os, sys
+from collections import deque
 import numpy as np, trimesh
 from scipy import ndimage
 
@@ -49,7 +55,9 @@ PAREDES = [
     P('pintura', TINTA['cinza'], rodape=False, sanca=False),                           # 16 deposito, garagem
     P('pintura', TINTA['rosa']),                                                       # 17 quarto
     P('pintura', TINTA['bege'], baixo='lambri_madeira', altura=1.0),                   # 18 escritorio formal
+    P('pintura', TINTA['branco'], rodape=False, sanca=False),                          # 19 caixa de escada e vazios fechados (mapa fino)
 ]
+NEUTRO = 19
 PISOS = [dict(camada=L[n], cor=list(c)) for n, c in [
     ('tabua_corrida', (1, 1, 1)),            # 0
     ('taco', (1, 1, 1)),                     # 1
@@ -88,6 +96,68 @@ def h(*k):
     return v
 
 
+SUB = 4                               # o mapa fino divide cada celula em SUB x SUB
+ALCANCE = 0.3                         # ate onde um comodo avanca por celulas livres sem dono (m)
+VAO = 2.2                             # maior vao (m) tratado como passagem entre comodos
+
+
+def mapa_fino(res, an, estilo):
+    """Rotulo de comodo por celula fina de um andar e a imagem RGBA (mesma convencao do mapa de 0,25 m).
+    estilo: id do comodo -> (parede + 1, piso + 1, pe-direito / 0,02) ou None para comodo sem acabamento."""
+    nx, nz = res['nx'] * SUB, res['nz'] * SUB; f = CM.CEL / SUB; x0, z0 = res['x0'], res['z0']; y = an['y']
+    solido = np.zeros((nx, nz), bool)
+    for h in (0.3, 0.5, 1.0, 1.6, 2.0):
+        sec = res['malha'].section(plane_origin=[0, y + h, 0], plane_normal=[0, 1, 0])
+        if sec is None: continue
+        for ent in sec.entities:
+            pts = sec.vertices[ent.points]
+            for a, b in zip(pts[:-1], pts[1:]):
+                n = max(2, int(np.linalg.norm(b - a) / (f * 0.4)) + 1); t = np.linspace(0, 1, n)[:, None]
+                p = a + (b - a) * t; ix = ((p[:, 0] - x0) / f).astype(int); iz = ((p[:, 2] - z0) / f).astype(int)
+                ok = (ix >= 0) & (iz >= 0) & (ix < nx) & (iz < nz); solido[ix[ok], iz[ok]] = True
+    # vao: celulas livres na linha de uma parede (porta, passagem). Fecha o solido ao longo de x e de z e fica so com
+    # o que e fino no outro sentido (um corredor estreito tambem fecha, mas e comprido e sai aqui)
+    L = np.ones((int(VAO / f), 1), bool); fino = np.ones((1, int(0.45 / f)), bool)
+    def garganta(m, L, fino):
+        g = ndimage.binary_closing(np.pad(m, 40), structure=L)[40:-40, 40:-40] & ~m
+        return g & ~ndimage.binary_opening(g, structure=fino)
+    vao = garganta(solido, L, fino) | garganta(solido, L.T, fino.T)
+    rot = np.repeat(np.repeat(an['rotulo'], SUB, 0), SUB, 1)
+    rot = np.where(solido | vao, -1, rot)
+    # 1) cada comodo avanca pelas celulas livres sem dono (frestas junto das paredes), sem atravessar parede nem vao
+    dist = np.where(rot >= 0, 0, 10 ** 6); fila = deque(zip(*np.nonzero(rot >= 0))); lim = int(ALCANCE / f)
+    viz = ((1, 0), (-1, 0), (0, 1), (0, -1))
+    while fila:
+        a, b = fila.popleft(); d = dist[a, b] + 1
+        if d > lim: continue
+        for da, db in viz:
+            u, v = a + da, b + db
+            if 0 <= u < nx and 0 <= v < nz and not solido[u, v] and not vao[u, v] and dist[u, v] > d:
+                dist[u, v] = d; rot[u, v] = rot[a, b]; fila.append((u, v))
+    # 2) vazios fechados que sobram (caixa de escada, vao sobre a escada, armario pequeno): acabamento neutro proprio,
+    #    em vez de retalhos dos comodos em volta
+    resto = (rot < 0) & ~solido & ~vao
+    comp, n = ndimage.label(resto)
+    neutro = np.zeros((nx, nz), bool)
+    for k in range(1, n + 1):
+        m = comp == k
+        if m[0].any() or m[-1].any() or m[:, 0].any() or m[:, -1].any(): continue        # aberto para fora
+        if m.sum() * f * f < 0.3: continue
+        neutro |= m
+    # paredes e vaos: comodo livre mais perto (para o piso trocar no meio do vao e para quem amostra dentro de um movel fixo)
+    sem = (rot < 0) & ~neutro
+    d, (ii, jj) = ndimage.distance_transform_edt(sem, return_indices=True)
+    cheio = np.where(sem & (solido | vao) & (d <= SUB + 0.01) & ~neutro[ii, jj], rot[ii, jj], rot)
+    img = np.zeros((nz, nx, 4), np.uint8)
+    for cid, e in estilo.items():
+        if e is None: continue
+        m = cheio == cid
+        img[m.T] = [e[0], e[1], e[2], 255]
+    img[..., 0][vao.T] = 0                                   # batente e ombreira ficam como a peca veio
+    img[neutro.T] = [NEUTRO + 1, 0, 0, 255]
+    return cheio, img
+
+
 def gerar(kit, cfg):
     pasta = os.path.join(RAIZ, 'kits', kit)
     amb = json.load(open(os.path.join(pasta, 'ambientacao.json'), encoding='utf-8'))
@@ -96,15 +166,23 @@ def gerar(kit, cfg):
     ray = trimesh.ray.ray_triangle.RayMeshIntersector(res['malha'])
     nx, nz = res['nx'], res['nz']; n_and = len(res['andares'])
     img = np.zeros((n_and, nz, nx, 4), np.uint8)
-    resumo = []
+    resumo = []; finos = []
+    # pegada das escadas: comodo pequeno com escada dentro e patamar, nao banheiro nem deposito
+    escadas = [m.bounds for n, m in CM.carregar_kit(pasta)[1] if any(t in n.lower() for t in ('stair', 'escada')) and 'slab' not in n and 'rail' not in n and 'guard' not in n]
     for an in res['andares']:
         a = an['andar']; rot = an['rotulo'].copy()
         # celulas de parede/porta herdam o comodo mais perto (ate 2 celulas)
         vazio = rot < 0
         d, (ii, jj) = ndimage.distance_transform_edt(vazio, return_indices=True)
         cheio = np.where(vazio & (d <= 2.01), rot[ii, jj], rot)
+        est = {c['id']: None for c in an['comodos']}
         for c in an['comodos']:
             t = tipo.get((a, c['id']), 'vazio')
+            if t in ('banheiro', 'lavabo', 'deposito', 'vazio') and c['area'] <= 16:
+                m = an['rotulo'] == c['id']; ix, iz = np.nonzero(m); px, pz = res['xs'][ix], res['zs'][iz]
+                for b in escadas:
+                    if b[0][1] < an['y'] + 2.0 and b[1][1] > an['y'] + 0.3 and ((px > b[0][0]) & (px < b[1][0]) & (pz > b[0][2]) & (pz < b[1][2])).sum() >= 4:
+                        t = 'corredor'; break
             if t in FORA or t not in POR_TIPO: continue
             ps, fs = POR_TIPO[t]
             sp = ps[h(kit, a, c['id'], 'p') % len(ps)]; sf = fs[h(kit, a, c['id'], 'f') % len(fs)]
@@ -121,14 +199,18 @@ def gerar(kit, cfg):
             prim = prim[np.isfinite(prim)]
             teto = (float(np.median(prim)) if len(prim) else an['teto'] - 0.2) - an['y']
             m = cheio == c['id']
-            img[a][m.T] = [sp + 1, sf + 1, int(round(teto / 0.02)) if teto <= 5.0 else 0, 255]
+            est[c['id']] = (sp + 1, sf + 1, int(round(teto / 0.02)) if teto <= 5.0 else 0)
+            img[a][m.T] = [est[c['id']][0], est[c['id']][1], est[c['id']][2], 255]
             resumo.append(dict(andar=a, comodo=c['id'], tipo=t, parede=sp, piso=sf, pe_direito=round(float(teto), 2)))
+        finos.append(mapa_fino(res, an, est)[1])
     out = dict(kit=kit, gerado_por='scripts/acabamento/mapa.py',
                convencao="mapa: RGBA8 em base64, andar por andar, linha z, coluna x; R = estilo de parede + 1, G = estilo de piso + 1, "
                          "B = pé-direito / 0,02 m (0 = mais de 5 m: sem sanca), A = 255 dentro de um cômodo. Célula (ix, iz) cobre x0 + ix*cel e z0 + iz*cel.",
                x0=round(float(res['x0']), 4), z0=round(float(res['z0']), 4), cel=CM.CEL, nx=nx, nz=nz, niveis=[round(float(an['y']), 3) for an in res['andares']],
                materiais=dict(paredes=cfg.get('paredes', PAREDE_PADRAO), pisos=cfg.get('pisos', PISO_PADRAO)),
-               comodos=resumo, mapa=base64.b64encode(img.tobytes()).decode())
+               comodos=resumo, mapa=base64.b64encode(img.tobytes()).decode(),
+               fino=dict(convencao="mesmo desenho do 'mapa', com célula menor; RGBA8 comprimido com gzip e depois base64",
+                         cel=CM.CEL / SUB, nx=nx * SUB, nz=nz * SUB, mapa_gz=base64.b64encode(gzip.compress(np.stack(finos).tobytes(), 9, mtime=0)).decode()))
     json.dump(out, open(os.path.join(pasta, 'acabamento.json'), 'w', encoding='utf-8'), ensure_ascii=False)
     print(f"{kit}: {len(resumo)} cômodos com acabamento, {n_and} andares", flush=True)
 

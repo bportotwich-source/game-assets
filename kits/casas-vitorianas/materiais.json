@@ -1,0 +1,188 @@
+{
+ "kit": "casas-vitorianas",
+ "gerado_por": "scripts/materiais/mapear.py",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "acc_a": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.929,
+    0.695,
+    0.662
+   ]
+  },
+  "acc_b": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.76,
+    0.816,
+    0.748
+   ]
+  },
+  "acc_c": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    1.0,
+    0.946,
+    0.79
+   ]
+  },
+  "acc_d": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.623,
+    0.709,
+    0.89
+   ]
+  },
+  "acc_e": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.748,
+    0.86,
+    0.849
+   ]
+  },
+  "attic": {
+   "material": "deck"
+  },
+  "concrete": {
+   "material": "concreto"
+  },
+  "deck": {
+   "material": "deck"
+  },
+  "door": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.834,
+    0.557,
+    0.524
+   ]
+  },
+  "door_a": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.754,
+    0.485,
+    0.513
+   ]
+  },
+  "door_b": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.696,
+    0.584,
+    0.513
+   ]
+  },
+  "door_c": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.476,
+    0.709,
+    0.67
+   ]
+  },
+  "door_d": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.866,
+    0.485,
+    0.536
+   ]
+  },
+  "door_e": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.974,
+    0.792,
+    0.558
+   ]
+  },
+  "door_int": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "floor": {
+   "material": "assoalho"
+  },
+  "frame": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "plaster": {
+   "material": "reboco_claro"
+  },
+  "plinth": {
+   "material": "concreto",
+   "cor": [
+    0.866,
+    0.83,
+    0.797
+   ]
+  },
+  "sash": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "shingles": {
+   "material": "telha_asfaltica"
+  },
+  "siding_a": {
+   "material": "tabua_branca",
+   "cor": [
+    0.921,
+    0.784,
+    0.461
+   ]
+  },
+  "siding_b": {
+   "material": "tabua_branca",
+   "cor": [
+    0.672,
+    0.758,
+    0.578
+   ]
+  },
+  "siding_c": {
+   "material": "tabua_branca",
+   "cor": [
+    0.554,
+    0.788,
+    0.757
+   ]
+  },
+  "siding_d": {
+   "material": "tabua_branca",
+   "cor": [
+    0.602,
+    0.727,
+    0.874
+   ]
+  },
+  "siding_e": {
+   "material": "tabua_branca",
+   "cor": [
+    0.926,
+    0.607,
+    0.502
+   ]
+  },
+  "trim": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  }
+ }
+}

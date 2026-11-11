@@ -25,6 +25,14 @@ CLASSES = {
     'deck_l':     ('assoalho', dict(c1=(0.10, 0.07, 0.05), c2=(0.22, 0.16, 0.11), cinza=(0.27, 0.25, 0.22), bisel=0.0, larg=0.2, comp=2.0, gasto=1.6, rug=0.8, periodo=2.0)),
     'telha_l':    ('telha', dict(cor=(0.055, 0.058, 0.072), bisel=0.0)),
     'pedra_l':    ('gen', dict(p=((0.50, 0.48, 0.43), 0.85, 0.0, (0.58, 0.57, 0.53), 0.7, 0.0, 0.12, 2.5, 0.45), mancha=(0.30, 0.29, 0.25), bisel=0.0, esc=0.12, fino=True)),
+    'tabua_branca_l': ('pintura', dict(cor=(0.82, 0.81, 0.78), descasca=0.42, rug=0.6, suj=0.9, ext=False, bisel=0.002)),
+    'reboco_ext_l': ('reboco', dict(cor=(0.80, 0.78, 0.72), bisel=0.0, mancha=0.35, trinca=0.5)),
+    'telha_barro_l': ('telha', dict(cor=(0.40, 0.13, 0.065), bisel=0.0)),
+    'cantaria_l': ('tijolo', dict(bisel=0.0, larg=0.5, fiada=0.25, junta=0.007, musgo=0.0, sal=0.15, poro=0.5, poro_cor=(0.30, 0.28, 0.24),
+                                  cores=((0.62, 0.58, 0.49), (0.50, 0.47, 0.40), (0.42, 0.40, 0.35), (0.68, 0.64, 0.55)))),
+    'bloco_l':    ('tijolo', dict(bisel=0.0, larg=0.4, fiada=0.2, junta=0.008, musgo=0.0, sal=0.1, poro=1.2, poro_cor=(0.22, 0.22, 0.21),
+                                  cores=((0.50, 0.50, 0.48), (0.42, 0.42, 0.41), (0.36, 0.36, 0.35), (0.56, 0.56, 0.54)))),
+    'concreto_l': ('gen', dict(p=((0.42, 0.41, 0.39), 0.9, 0.0, (0.55, 0.54, 0.52), 0.8, 0.0, 0.3, 2.0, 0.6), mancha=(0.22, 0.21, 0.18), bisel=0.0, esc=0.12, fino=True)),
     'tinta_l':    ('pintura', dict(cor=(0.80, 0.77, 0.68), descasca=0.20, rug=0.5, suj=0.6, ext=False, bisel=0.0)),
     # genéricos: cor, rug, metal, cor gasta, rug gasta, metal gasto, desgaste, grão, sujeira, escala
     'latao':    ('gen', dict(p=((0.62, 0.40, 0.12), 0.34, 1.0, (0.88, 0.68, 0.30), 0.22, 1.0, 0.9, 0.3, 1.3), mancha=(0.10, 0.075, 0.04), bisel=0.0006)),
@@ -279,18 +287,19 @@ def f_tijolo(nt, pos, geo, p):
         b = _n(nt, 'ShaderNodeTexBrick', offset=0.5)
         nt.links.new(vec, b.inputs['Vector'])
         b.inputs['Color1'].default_value = c1; b.inputs['Color2'].default_value = c2
-        b.inputs['Scale'].default_value = 1.0; b.inputs['Mortar Size'].default_value = 0.0055; b.inputs['Mortar Smooth'].default_value = 0.35
+        b.inputs['Scale'].default_value = 1.0; b.inputs['Mortar Size'].default_value = p.get('junta', 0.0055); b.inputs['Mortar Smooth'].default_value = 0.35
         b.inputs['Bias'].default_value = 0.0; b.inputs['Brick Width'].default_value = p.get('larg', 0.225); b.inputs['Row Height'].default_value = p.get('fiada', 0.075)
         return b
     b = tij((0, 0, 0, 1), (1, 1, 1, 1))
     t = _xyz(nt, b.outputs['Color'])[0]
     junta = b.outputs['Fac']
-    cb = _mix(nt, t, (0.36, 0.115, 0.07), (0.21, 0.075, 0.055))
-    cb = _mix(nt, _smooth(nt, t, 0.80, 0.86), cb, (0.085, 0.06, 0.055))            # tijolos requeimados
-    cb = _mix(nt, _smooth(nt, t, 0.05, 0.0), cb, (0.44, 0.20, 0.11))
+    ca, cb2, cq, cc = p.get('cores', ((0.36, 0.115, 0.07), (0.21, 0.075, 0.055), (0.085, 0.06, 0.055), (0.44, 0.20, 0.11)))
+    cb = _mix(nt, t, ca, cb2)
+    cb = _mix(nt, _smooth(nt, t, 0.80, 0.86), cb, cq)            # tijolos requeimados
+    cb = _mix(nt, _smooth(nt, t, 0.05, 0.0), cb, cc)
     cb = _escala_cor(nt, cb, _math(nt, 'ADD', 0.72, _math(nt, 'MULTIPLY', v2, 0.56)))
     poro = _smooth(nt, _noise(nt, pos, 95.0, 2.0), 0.63, 0.74)
-    cb = _mix(nt, _math(nt, 'MULTIPLY', poro, 0.6), cb, (0.07, 0.045, 0.035))
+    cb = _mix(nt, _math(nt, 'MULTIPLY', poro, 0.6 * p.get('poro', 1.0)), cb, p.get('poro_cor', (0.07, 0.045, 0.035)))
     cm = _escala_cor(nt, (0.42, 0.40, 0.36), _math(nt, 'ADD', 0.7, _math(nt, 'MULTIPLY', g, 0.6)))
     cor = _mix(nt, junta, cb, cm)
     baixo = _math(nt, 'SUBTRACT', 1.0, _smooth(nt, pz, -0.42, -0.12))

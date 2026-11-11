@@ -2382,15 +2382,15 @@
     "delegacia"
    ],
    "estojo_s": 0.02,
-   "descricao": "Fuzil de receptor de alumínio, guarda-mão M-LOK e trilho contínuo em cima. Seletor de tiro automático, muitos encaixes. Rajadas gastam munição rápido e chamam a horda a 160 m.",
+   "descricao": "Fuzil de receptor de alumínio, guarda-mão longo vazado e trilho contínuo em cima. Seletor de tiro automático, muitos encaixes. Rajadas gastam munição rápido e chamam a horda a 160 m. Modelo detalhado, feito com as peças da M4A1 e texturas assadas.",
    "arquivo": "armas/fuzil_556.glb",
    "tamanho_m": [
-    0.043,
-    0.23,
-    0.616
+    0.058,
+    0.25,
+    0.596
    ],
-   "triangulos": 43284,
-   "kb": 2260.2,
+   "triangulos": 25754,
+   "kb": 3653.2,
    "partes": [
     {
      "no": "punho",
@@ -2844,7 +2844,7 @@
       0.0,
       0.0
      ],
-     "inclinacao_graus": 18.2,
+     "inclinacao_graus": 18.8,
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     },
     {
@@ -2852,8 +2852,8 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.0424,
-      -0.0741
+      0.0364,
+      -0.0748
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
     },
@@ -2862,7 +2862,7 @@
      "pai": "fuzil_556",
      "posicao_m": [
       0.0,
-      0.063,
+      0.074,
       -0.337
      ],
      "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
@@ -2872,8 +2872,8 @@
      "pai": "fuzil_556",
      "posicao_m": [
       0.0,
-      0.0409,
-      0.2632
+      0.0344,
+      0.2674
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     },
@@ -2882,8 +2882,8 @@
      "pai": "fuzil_556",
      "posicao_m": [
       0.0,
-      0.136,
-      -0.029
+      0.1425,
+      0.003
      ],
      "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
     },
@@ -2893,7 +2893,7 @@
      "posicao_m": [
       0.0,
       0.093,
-      -0.575
+      -0.555
      ],
      "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
     },
@@ -2902,12 +2902,16 @@
      "pai": "carregador",
      "posicao_m": [
       0.0,
-      -0.0889,
-      -0.1737
+      -0.1017,
+      -0.1599
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "vigilia/jogo.py",
+   "arquivo_leve": "armas/fuzil_556_leve.glb",
+   "triangulos_leve": 6000,
+   "kb_leve": 1055.3
   },
   {
    "id": "fuzil_556_bicolor",
@@ -2936,15 +2940,15 @@
     "quartel"
    ],
    "estojo_s": 0.02,
-   "descricao": "O mesmo fuzil com guarda-mão, punho, carregador e coronha caramelo e receptor preto. Vem montado com luneta 1-6×, supressor, lanterna compacta e empunhadura curta.",
+   "descricao": "O mesmo fuzil com guarda-mão, punho, carregador e coronha caramelo e receptor preto. Vem montado com luneta 1-6×, supressor, lanterna compacta e empunhadura curta. Modelo detalhado, feito com as peças da M4A1 e texturas assadas.",
    "arquivo": "armas/fuzil_556_bicolor.glb",
    "tamanho_m": [
-    0.043,
-    0.23,
-    0.616
+    0.058,
+    0.25,
+    0.596
    ],
-   "triangulos": 43284,
-   "kb": 2261.1,
+   "triangulos": 25754,
+   "kb": 3681.5,
    "partes": [
     {
      "no": "punho",
@@ -3401,7 +3405,7 @@
       0.0,
       0.0
      ],
-     "inclinacao_graus": 18.2,
+     "inclinacao_graus": 18.8,
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     },
     {
@@ -3409,8 +3413,8 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.0424,
-      -0.0741
+      0.0364,
+      -0.0748
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
     },
@@ -3419,7 +3423,7 @@
      "pai": "fuzil_556_bicolor",
      "posicao_m": [
       0.0,
-      0.063,
+      0.074,
       -0.337
      ],
      "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
@@ -3429,8 +3433,8 @@
      "pai": "fuzil_556_bicolor",
      "posicao_m": [
       0.0,
-      0.0409,
-      0.2632
+      0.0344,
+      0.2674
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     },
@@ -3439,8 +3443,8 @@
      "pai": "fuzil_556_bicolor",
      "posicao_m": [
       0.0,
-      0.136,
-      -0.029
+      0.1425,
+      0.003
      ],
      "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
     },
@@ -3450,7 +3454,7 @@
      "posicao_m": [
       0.0,
       0.093,
-      -0.575
+      -0.555
      ],
      "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
     },
@@ -3459,12 +3463,16 @@
      "pai": "carregador",
      "posicao_m": [
       0.0,
-      -0.0889,
-      -0.1737
+      -0.1017,
+      -0.1599
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "vigilia/jogo.py",
+   "arquivo_leve": "armas/fuzil_556_bicolor_leve.glb",
+   "triangulos_leve": 6000,
+   "kb_leve": 1091.3
   },
   {
    "id": "fuzil_762",
@@ -14665,15 +14673,15 @@
     "quartel",
     "delegacia"
    ],
-   "descricao": "Tubo com coronha de polímero de 5 posições (mesma peça da espingarda). Nó \"soleira\", animações estender/recolher.",
+   "descricao": "Tubo com coronha de polímero de 5 posições. Nó \"soleira\", animações estender/recolher. Modelo detalhado, a coronha da M4A1.",
    "arquivo": "acessorios/coronha_retratil_ar.glb",
    "tamanho_m": [
-    0.043,
-    0.148,
-    0.277
+    0.04,
+    0.154,
+    0.252
    ],
-   "triangulos": 15612,
-   "kb": 736.4,
+   "triangulos": 4930,
+   "kb": 577.3,
    "partes": [
     {
      "no": "soleira",
@@ -14694,9 +14702,9 @@
      "tipo": "efeito",
      "pai": "soleira",
      "posicao_m": [
-      -0.0,
+      0.0,
       -0.05,
-      0.276
+      0.2525
      ],
      "descricao": "ponto da soleira que encosta no ombro"
     }
@@ -14719,12 +14727,13 @@
      "pai": "coronha_retratil_ar",
      "posicao_m": [
       0.0,
-      -0.0491,
-      0.2742
+      -0.0586,
+      0.2524
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
-   ]
+   ],
+   "gerador": "vigilia/jogo.py"
   },
   {
    "id": "coronha_fixa_ar",
@@ -15683,15 +15692,15 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Coronha retrátil de 5 posições em polímero caramelo.",
+   "descricao": "Coronha retrátil de 5 posições em polímero caramelo. Modelo detalhado, a coronha da M4A1.",
    "arquivo": "acessorios/coronha_retratil_ar_tan.glb",
    "tamanho_m": [
-    0.043,
-    0.148,
-    0.277
+    0.04,
+    0.154,
+    0.252
    ],
-   "triangulos": 15612,
-   "kb": 736.4,
+   "triangulos": 4930,
+   "kb": 561.6,
    "partes": [
     {
      "no": "soleira",
@@ -15712,9 +15721,9 @@
      "tipo": "efeito",
      "pai": "soleira",
      "posicao_m": [
-      -0.0,
+      0.0,
       -0.05,
-      0.276
+      0.2525
      ],
      "descricao": "ponto da soleira que encosta no ombro"
     }
@@ -15737,12 +15746,13 @@
      "pai": "coronha_retratil_ar_tan",
      "posicao_m": [
       0.0,
-      -0.0491,
-      0.2742
+      -0.0586,
+      0.2524
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
-   ]
+   ],
+   "gerador": "vigilia/jogo.py"
   },
   {
    "id": "supressor_556_tan",

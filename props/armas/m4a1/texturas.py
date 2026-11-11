@@ -143,7 +143,7 @@ def montar_material(m, nome):
         mt = _math(nt, 'MULTIPLY', mt, _math(nt, 'SUBTRACT', 1.0, _math(nt, 'MULTIPLY', sujo, 0.8)))
         alt = _math(nt, 'MULTIPLY', g, 0.00006 * grao)
         alt = _math(nt, 'SUBTRACT', alt, _math(nt, 'MULTIPLY', risco, 0.00008))
-        if nome == 'polim_grip':
+        if nome in ('polim_grip', 'tan_grip'):
             T, B = GRIP['T'], GRIP['B']
             Lg = math.hypot(B[0] - T[0], B[1] - T[1])
             a = ((B[0] - T[0]) / Lg, (B[1] - T[1]) / Lg)

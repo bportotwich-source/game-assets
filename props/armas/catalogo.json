@@ -6587,15 +6587,15 @@
     "quartel"
    ],
    "estojo_s": 0.02,
-   "descricao": "Submetralhadora de cano alto, na linha do ombro: o coice vai reto para trás e quase não levanta. Atira muito rápido, aceita carregador de pistola longo e o tambor de 50. A coronha dobra para o lado.",
+   "descricao": "Submetralhadora de cano alto, na linha do ombro: o coice vai reto para trás e quase não levanta. Atira muito rápido, aceita carregador de pistola longo e o tambor de 50. A coronha dobra para o lado. Modelo detalhado, com texturas assadas (desgaste nas arestas, pontilhado no punho e no painel, gravações).",
    "arquivo": "armas/smg_ciclone_9mm.glb",
    "tamanho_m": [
-    0.056,
-    0.219,
-    0.644
+    0.057,
+    0.217,
+    0.643
    ],
-   "triangulos": 31934,
-   "kb": 1722.6,
+   "triangulos": 37859,
+   "kb": 3793.7,
    "partes": [
     {
      "no": "gatilho",
@@ -6976,7 +6976,7 @@
       0.0,
       0.0
      ],
-     "inclinacao_graus": 13.1,
+     "inclinacao_graus": 26.6,
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     },
     {
@@ -6984,8 +6984,8 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.0384,
-      -0.0461
+      0.0393,
+      -0.0463
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
     },
@@ -7003,7 +7003,7 @@
      "no": "ref_coronha",
      "pai": "coronha",
      "posicao_m": [
-      -0.0,
+      0.0,
       0.05,
       0.289
      ],
@@ -7013,7 +7013,7 @@
      "no": "ref_mira",
      "pai": "smg_ciclone_9mm",
      "posicao_m": [
-      -0.0,
+      0.0,
       0.127,
       0.036
      ],
@@ -7034,12 +7034,16 @@
      "pai": "carregador",
      "posicao_m": [
       0.0,
-      -0.0867,
-      -0.1325
+      -0.0847,
+      -0.1328
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "ciclone/jogo.py",
+   "arquivo_leve": "armas/smg_ciclone_9mm_leve.glb",
+   "triangulos_leve": 6000,
+   "kb_leve": 965.6
   },
   {
    "id": "smg_ciclone_9mm_tan",
@@ -7068,15 +7072,15 @@
     "quartel"
    ],
    "estojo_s": 0.02,
-   "descricao": "A mesma Ciclone com chassi, punho e coronha cor de areia; corpo de cima e carregador pretos.",
+   "descricao": "A mesma Ciclone com chassi, punho e coronha cor de areia; corpo de cima e carregador pretos. Modelo detalhado, com texturas assadas (desgaste nas arestas, pontilhado no punho e no painel, gravações).",
    "arquivo": "armas/smg_ciclone_9mm_tan.glb",
    "tamanho_m": [
-    0.056,
-    0.219,
-    0.644
+    0.057,
+    0.217,
+    0.643
    ],
-   "triangulos": 31934,
-   "kb": 1726.3,
+   "triangulos": 37859,
+   "kb": 3846.3,
    "partes": [
     {
      "no": "gatilho",
@@ -7457,7 +7461,7 @@
       0.0,
       0.0
      ],
-     "inclinacao_graus": 13.1,
+     "inclinacao_graus": 26.6,
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     },
     {
@@ -7465,8 +7469,8 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.0384,
-      -0.0461
+      0.0393,
+      -0.0463
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
     },
@@ -7484,7 +7488,7 @@
      "no": "ref_coronha",
      "pai": "coronha",
      "posicao_m": [
-      -0.0,
+      0.0,
       0.05,
       0.289
      ],
@@ -7494,7 +7498,7 @@
      "no": "ref_mira",
      "pai": "smg_ciclone_9mm_tan",
      "posicao_m": [
-      -0.0,
+      0.0,
       0.127,
       0.036
      ],
@@ -7515,12 +7519,16 @@
      "pai": "carregador",
      "posicao_m": [
       0.0,
-      -0.0867,
-      -0.1325
+      -0.0847,
+      -0.1328
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "ciclone/jogo.py",
+   "arquivo_leve": "armas/smg_ciclone_9mm_tan_leve.glb",
+   "triangulos_leve": 6000,
+   "kb_leve": 984.0
   },
   {
    "id": "rifle_22",

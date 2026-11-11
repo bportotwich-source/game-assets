@@ -28,3 +28,7 @@ Roda direto nos GLB das peças de um kit, depois de gerar: `python3 scripts/deta
 - **Folha de porta na altura do vão.** `python3 scripts/detalhe/montagem.py --porta <folha.glb> <altura>` estica a folha até a altura pedida.
 
 O `building_assembled.glb` (prévia do prédio inteiro) não é refeito por este script.
+
+## Folhas de porta lisas (`portas.py`)
+
+`python3 scripts/detalhe/portas.py kits/<kit>/pieces/door_leaf_x.glb` troca uma folha que era só uma caixa por uma folha com almofadas em relevo, maçaneta e dobradiças, com a mesma largura, altura, pivô e materiais. Folha que já tem relevo é pulada. Já aplicado no diner, no posto e na porta de aço do supermercado; se o `gerar_kit.py` desses kits rodar de novo, rode o script outra vez.

@@ -10048,7 +10048,7 @@
    "nome": "Pistola Guardiã 9 mm (preta)",
    "grupo": "armas",
    "categoria": "pistola",
-   "descricao": "A mesma Guardiã toda preta (alumínio anodizado e talas pretas). Aceita os mesmos acessórios.",
+   "descricao": "A mesma Guardiã toda preta (alumínio anodizado, ferrolho oxidado e talas pretas). Aceita os mesmos acessórios. Modelo detalhado, com texturas assadas (desgaste nas arestas, quadriculado nas talas, gravações).",
    "classe": "fogo",
    "calibre": "9 mm",
    "municao": "municao_9mm",
@@ -10075,12 +10075,12 @@
    ],
    "arquivo": "armas/pistola_guardia_9mm_preta.glb",
    "tamanho_m": [
-    0.033,
+    0.032,
     0.158,
-    0.263
+    0.264
    ],
-   "triangulos": 45324,
-   "kb": 2369.2,
+   "triangulos": 50200,
+   "kb": 4800.7,
    "partes": [
     {
      "no": "talas",
@@ -10383,7 +10383,7 @@
       0.0,
       0.0
      ],
-     "inclinacao_graus": 8.2,
+     "inclinacao_graus": 8.3,
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     },
     {
@@ -10391,7 +10391,7 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.0346,
+      0.0353,
       -0.0667
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
@@ -10400,7 +10400,7 @@
      "no": "ref_guarda_mao",
      "pai": "pistola_guardia_9mm_preta",
      "posicao_m": [
-      -0.0167,
+      -0.0158,
       -0.012,
       0.004
      ],
@@ -10431,12 +10431,16 @@
      "pai": "carregador",
      "posicao_m": [
       0.0,
-      -0.0421,
+      -0.0423,
       0.0172
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "guardia/jogo.py",
+   "arquivo_leve": "armas/pistola_guardia_9mm_preta_leve.glb",
+   "triangulos_leve": 6000,
+   "kb_leve": 1096.8
   },
   {
    "id": "arco_recurvo",

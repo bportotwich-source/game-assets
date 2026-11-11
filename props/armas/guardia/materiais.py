@@ -1,4 +1,6 @@
-"""Classes de material da Guardiã (somadas às da M4A1 em m4a1/texturas.py)."""
+"""Classes de material da Guardiã (somadas às da M4A1 em m4a1/texturas.py).
+VARIANTE=preta troca a pintura areia por alumínio anodizado, aço oxidado e polímero pretos."""
+import os
 import texturas
 from texturas import _n, _math, _smooth
 
@@ -13,6 +15,13 @@ texturas.CLASSES.update({
     'tinta_vermelha':   ((0.60, 0.02, 0.02), 0.50, 0.0, None, 0, 0, 0, 0, 0),
 })
 
+if os.environ.get('VARIANTE') == 'preta':
+    texturas.CLASSES.update({
+        'areia_al':         ((0.030, 0.032, 0.031), 0.48, 0.75, (0.30, 0.31, 0.32), 0.32, 1.0, 1.30, 0.25, 1.3),   # alumínio anodizado preto
+        'areia_aco':        ((0.036, 0.037, 0.036), 0.58, 0.65, (0.27, 0.27, 0.26), 0.34, 1.0, 1.50, 0.45, 1.3),   # aço oxidado preto
+        'polim_areia':      ((0.021, 0.022, 0.022), 0.60, 0.0, (0.060, 0.060, 0.058), 0.40, 0.0, 0.80, 1.00, 1.4),
+        'polim_areia_grip': ((0.021, 0.022, 0.022), 0.60, 0.0, (0.060, 0.060, 0.058), 0.40, 0.0, 0.80, 1.00, 1.5),
+    })
 
 def quadriculado(nt, pos, geo):
     """Quadriculado das talas: pirâmides de 1,7 mm em losango na face de fora (a borda abaulada fica lisa)."""

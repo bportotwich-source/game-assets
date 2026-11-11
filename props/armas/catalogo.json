@@ -46,15 +46,15 @@
     "posto",
     "casas"
    ],
-   "descricao": "Pistola de polímero com ferrolho de aço quadrado e punho com cavas e pontilhado, 15 tiros. Leve e confiável, mas o tiro chama zumbis num raio de 60 m.",
+   "descricao": "Pistola de polímero com ferrolho de aço quadrado e punho com cavas e pontilhado, 15 tiros. Leve e confiável, mas o tiro chama zumbis num raio de 60 m. Modelo detalhado, com texturas assadas (desgaste nas arestas, pontilhado no punho, gravações).",
    "arquivo": "armas/pistola_9mm.glb",
    "tamanho_m": [
-    0.032,
-    0.155,
+    0.031,
+    0.154,
     0.233
    ],
-   "triangulos": 32846,
-   "kb": 1831.3,
+   "triangulos": 34861,
+   "kb": 4076.1,
    "partes": [
     {
      "no": "gatilho",
@@ -299,7 +299,7 @@
       0.0,
       0.0
      ],
-     "inclinacao_graus": 13.7,
+     "inclinacao_graus": 6.7,
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     },
     {
@@ -307,8 +307,8 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.0339,
-      -0.0643
+      0.0354,
+      -0.0651
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
     },
@@ -316,7 +316,7 @@
      "no": "ref_guarda_mao",
      "pai": "pistola_9mm",
      "posicao_m": [
-      -0.0158,
+      -0.0155,
       -0.012,
       0.004
      ],
@@ -352,7 +352,11 @@
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "sentinela/jogo.py",
+   "arquivo_leve": "armas/pistola_9mm_leve.glb",
+   "triangulos_leve": 5999,
+   "kb_leve": 982.0
   },
   {
    "id": "revolver_38",
@@ -384,15 +388,15 @@
     "motel",
     "quartel"
    ],
-   "descricao": "Revólver de 6 tiros com tambor que abre de lado. Não engasga nunca e é fácil de achar em casas, mas recarrega devagar sem o carregador rápido.",
+   "descricao": "Revólver de 6 tiros com tambor que abre de lado. Não engasga nunca e é fácil de achar em casas, mas recarrega devagar sem o carregador rápido. Modelo detalhado, com texturas assadas (aço azulado gasto nas arestas, talas de nogueira quadriculadas, gravações).",
    "arquivo": "armas/revolver_38.glb",
    "tamanho_m": [
     0.039,
     0.133,
     0.217
    ],
-   "triangulos": 44096,
-   "kb": 2789.0,
+   "triangulos": 31972,
+   "kb": 3425.2,
    "partes": [
     {
      "no": "punho",
@@ -635,7 +639,7 @@
       0.0,
       0.0
      ],
-     "inclinacao_graus": 9.6,
+     "inclinacao_graus": 9.7,
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     },
     {
@@ -643,8 +647,8 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.029,
-      -0.0424
+      0.0302,
+      -0.0425
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
     },
@@ -652,7 +656,7 @@
      "no": "ref_guarda_mao",
      "pai": "revolver_38",
      "posicao_m": [
-      -0.0168,
+      -0.0166,
       -0.012,
       0.004
      ],
@@ -688,7 +692,11 @@
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "revolver/jogo.py",
+   "arquivo_leve": "armas/revolver_38_leve.glb",
+   "triangulos_leve": 6000,
+   "kb_leve": 963.7
   },
   {
    "id": "espingarda_12",
@@ -5548,15 +5556,15 @@
     "posto",
     "casas"
    ],
-   "descricao": "A mesma Sentinela com armação areia, ferrolho preto e cano dourado. Aceita os mesmos acessórios.",
+   "descricao": "A mesma Sentinela com armação areia, ferrolho preto e cano dourado. Aceita os mesmos acessórios. Modelo detalhado, com texturas assadas (desgaste nas arestas, pontilhado no punho, gravações).",
    "arquivo": "armas/pistola_9mm_tan.glb",
    "tamanho_m": [
-    0.032,
-    0.155,
+    0.031,
+    0.154,
     0.233
    ],
-   "triangulos": 32846,
-   "kb": 1835.0,
+   "triangulos": 34861,
+   "kb": 4144.3,
    "partes": [
     {
      "no": "gatilho",
@@ -5801,7 +5809,7 @@
       0.0,
       0.0
      ],
-     "inclinacao_graus": 13.7,
+     "inclinacao_graus": 6.7,
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     },
     {
@@ -5809,8 +5817,8 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.0339,
-      -0.0643
+      0.0354,
+      -0.0651
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
     },
@@ -5818,7 +5826,7 @@
      "no": "ref_guarda_mao",
      "pai": "pistola_9mm_tan",
      "posicao_m": [
-      -0.0158,
+      -0.0155,
       -0.012,
       0.004
      ],
@@ -5854,7 +5862,11 @@
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "sentinela/jogo.py",
+   "arquivo_leve": "armas/pistola_9mm_tan_leve.glb",
+   "triangulos_leve": 5999,
+   "kb_leve": 1014.8
   },
   {
    "id": "pistola_9mm_verde",
@@ -5886,15 +5898,15 @@
     "posto",
     "casas"
    ],
-   "descricao": "A mesma Sentinela com armação verde-oliva, ferrolho preto e cano dourado. Aceita os mesmos acessórios.",
+   "descricao": "A mesma Sentinela com armação verde-oliva, ferrolho preto e cano dourado. Aceita os mesmos acessórios. Modelo detalhado, com texturas assadas (desgaste nas arestas, pontilhado no punho, gravações).",
    "arquivo": "armas/pistola_9mm_verde.glb",
    "tamanho_m": [
-    0.032,
-    0.155,
+    0.031,
+    0.154,
     0.233
    ],
-   "triangulos": 32846,
-   "kb": 1833.7,
+   "triangulos": 34861,
+   "kb": 4091.8,
    "partes": [
     {
      "no": "gatilho",
@@ -6139,7 +6151,7 @@
       0.0,
       0.0
      ],
-     "inclinacao_graus": 13.7,
+     "inclinacao_graus": 6.7,
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     },
     {
@@ -6147,8 +6159,8 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.0339,
-      -0.0643
+      0.0354,
+      -0.0651
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
     },
@@ -6156,7 +6168,7 @@
      "no": "ref_guarda_mao",
      "pai": "pistola_9mm_verde",
      "posicao_m": [
-      -0.0158,
+      -0.0155,
       -0.012,
       0.004
      ],
@@ -6192,7 +6204,11 @@
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "sentinela/jogo.py",
+   "arquivo_leve": "armas/pistola_9mm_verde_leve.glb",
+   "triangulos_leve": 5999,
+   "kb_leve": 1001.1
   },
   {
    "id": "pistola_9mm_cinza",
@@ -6224,15 +6240,15 @@
     "posto",
     "casas"
    ],
-   "descricao": "A mesma Sentinela com armação cinza, ferrolho preto e cano dourado. Aceita os mesmos acessórios.",
+   "descricao": "A mesma Sentinela com armação cinza, ferrolho preto e cano dourado. Aceita os mesmos acessórios. Modelo detalhado, com texturas assadas (desgaste nas arestas, pontilhado no punho, gravações).",
    "arquivo": "armas/pistola_9mm_cinza.glb",
    "tamanho_m": [
-    0.032,
-    0.155,
+    0.031,
+    0.154,
     0.233
    ],
-   "triangulos": 32846,
-   "kb": 1835.7,
+   "triangulos": 34861,
+   "kb": 4104.5,
    "partes": [
     {
      "no": "gatilho",
@@ -6477,7 +6493,7 @@
       0.0,
       0.0
      ],
-     "inclinacao_graus": 13.7,
+     "inclinacao_graus": 6.7,
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     },
     {
@@ -6485,8 +6501,8 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.0339,
-      -0.0643
+      0.0354,
+      -0.0651
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
     },
@@ -6494,7 +6510,7 @@
      "no": "ref_guarda_mao",
      "pai": "pistola_9mm_cinza",
      "posicao_m": [
-      -0.0158,
+      -0.0155,
       -0.012,
       0.004
      ],
@@ -6530,7 +6546,11 @@
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "sentinela/jogo.py",
+   "arquivo_leve": "armas/pistola_9mm_cinza_leve.glb",
+   "triangulos_leve": 5999,
+   "kb_leve": 1003.3
   },
   {
    "id": "smg_ciclone_9mm",
@@ -10048,7 +10068,7 @@
    "nome": "Pistola Guardiã 9 mm (preta)",
    "grupo": "armas",
    "categoria": "pistola",
-   "descricao": "A mesma Guardiã toda preta (alumínio anodizado e talas pretas). Aceita os mesmos acessórios.",
+   "descricao": "A mesma Guardiã toda preta (alumínio anodizado, ferrolho oxidado e talas pretas). Aceita os mesmos acessórios. Modelo detalhado, com texturas assadas (desgaste nas arestas, quadriculado nas talas, gravações).",
    "classe": "fogo",
    "calibre": "9 mm",
    "municao": "municao_9mm",
@@ -10075,12 +10095,12 @@
    ],
    "arquivo": "armas/pistola_guardia_9mm_preta.glb",
    "tamanho_m": [
-    0.033,
+    0.032,
     0.158,
-    0.263
+    0.264
    ],
-   "triangulos": 45324,
-   "kb": 2369.2,
+   "triangulos": 50200,
+   "kb": 4800.7,
    "partes": [
     {
      "no": "talas",
@@ -10383,7 +10403,7 @@
       0.0,
       0.0
      ],
-     "inclinacao_graus": 8.2,
+     "inclinacao_graus": 8.3,
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     },
     {
@@ -10391,7 +10411,7 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.0346,
+      0.0353,
       -0.0667
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
@@ -10400,7 +10420,7 @@
      "no": "ref_guarda_mao",
      "pai": "pistola_guardia_9mm_preta",
      "posicao_m": [
-      -0.0167,
+      -0.0158,
       -0.012,
       0.004
      ],
@@ -10431,12 +10451,16 @@
      "pai": "carregador",
      "posicao_m": [
       0.0,
-      -0.0421,
+      -0.0423,
       0.0172
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "guardia/jogo.py",
+   "arquivo_leve": "armas/pistola_guardia_9mm_preta_leve.glb",
+   "triangulos_leve": 6000,
+   "kb_leve": 1096.8
   },
   {
    "id": "arco_recurvo",

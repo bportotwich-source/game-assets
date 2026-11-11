@@ -15,8 +15,10 @@ de trilho, coldre) e os pontos das mãos continuam valendo sem mudança.
 | `../armas/pistola_guardia_9mm.glb` | arma do jogo: 19 peças em nós próprios, 2 conjuntos de textura 2048 px (A: armação, talas, gatilho, carregador; B: ferrolho, cano, miras, cão, alavancas) |
 | `../armas/pistola_guardia_9mm_leve.glb` | versão leve para ver de longe ou no chão: uma malha só, cerca de 6 mil triângulos, 1 conjunto de textura 1024 px assado da detalhada (campo `arquivo_leve` do catálogo) |
 
-A `pistola_guardia_9mm_preta` continua no modelo antigo (`../arma14_guardia.py`), que
-também segue gerando os acessórios da Guardiã.
+A `pistola_guardia_9mm_preta` é o mesmo modelo assado com outro acabamento (alumínio
+anodizado, ferrolho oxidado e talas pretas): `VARIANTE=preta` nos dois comandos abaixo, com
+outra pasta de saída. Ela também tem a versão leve (`pistola_guardia_9mm_preta_leve.glb`).
+Os acessórios da Guardiã continuam saindo do `../arma14_guardia.py`.
 
 ## Orçamento do piloto
 
@@ -34,23 +36,31 @@ pip install bpy pillow numpy shapely
 python3 gerar.py 2048 saida          # modelo, UVs e bake (uns 7 min em 4 núcleos)
 python3 jogo.py saida                # GLB do jogo, versão leve e catálogo
 python3 foto.py saida/guardia.blend fotos/guardia esq 34d perto boca   # renders de conferência
+
+VARIANTE=preta python3 gerar.py 2048 saida_preta    # a Guardiã preta
+VARIANTE=preta python3 jogo.py saida_preta
 ```
 
 - `modelo.py`: as peças, em milímetros (usa as primitivas de `../m4a1/lib.py`).
 - `materiais.py`: as classes de material da pistola (pintura areia sobre alumínio e sobre
   aço, polímero areia, aço do cano) e o quadriculado das talas, somados aos de
-  `../m4a1/texturas.py`.
-- `gerar.py`: monta, desdobra, assa e salva `guardia.blend`. Um grupo de textura que já
-  existe em `saida/tex` não é assado de novo; `REASSAR=A,B` força.
-- `jogo.py`: põe as peças nos nós de `esqueleto.json`, grava as animações, mede os pontos
-  `ref_*`, faz a versão leve e atualiza o `catalogo.json` (a arma fica com
-  `"gerador": "guardia/jogo.py"`, e o `gerar_armas.py` não a sobrescreve).
+  `../m4a1/texturas.py`. Com `VARIANTE=preta`, as mesmas classes ficam pretas.
+- `config.py`: o que é só da Guardiã: origem, peças de cada nó, variantes (id e descrição).
+- `gerar.py` e `jogo.py`: chamam `../m4a1/fabrica.py`, que é igual para toda arma refeita.
+  `gerar` monta, desdobra, assa e salva `guardia.blend` (um grupo de textura que já existe
+  em `saida/tex` não é assado de novo; `REASSAR=A,B` força). `jogo` põe as peças nos nós de
+  `esqueleto.json`, grava as animações, mede os pontos `ref_*`, faz a versão leve e atualiza
+  o `catalogo.json` (a arma fica com `"gerador": "guardia/jogo.py"`, e o `gerar_armas.py`
+  não a sobrescreve).
 - `esqueleto.json`: os nós (posições) e as animações da Guardiã antiga, tirados do GLB que
-  o `arma14_guardia.py` gerava. É o que garante que nada muda para o jogo.
+  o `arma14_guardia.py` gerava (`../m4a1/tirar_esqueleto.py`). É o que garante que nada muda
+  para o jogo.
 - `ver.py`: renders rápidos só da forma, sem textura.
 
 ## Para as próximas armas
 
-O caminho que este piloto deixa pronto: copiar esta pasta, trocar `modelo.py`, tirar o
-`esqueleto.json` do GLB antigo da arma e rodar os três comandos. As primitivas, os
-materiais, o bake, a versão leve e a troca no catálogo já estão resolvidos.
+Copiar `config.py`, `gerar.py`, `jogo.py` e `materiais.py` para a pasta da arma nova,
+escrever o `modelo.py`, tirar o `esqueleto.json` do GLB antigo ANTES de sobrescrever
+(`python3 ../m4a1/tirar_esqueleto.py ../armas/<id>.glb esqueleto.json`) e rodar os comandos
+acima. As primitivas, os materiais, o bake, a versão leve e a troca no catálogo já estão
+resolvidos na fábrica.

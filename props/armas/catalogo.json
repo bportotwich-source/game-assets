@@ -11671,15 +11671,15 @@
     "armazem",
     "loja_caca"
    ],
-   "descricao": "Lâmina de 18 cm de aço escurecido com ponta recortada, fio liso e serrilha perto do cabo para cortar corda. Cabo de borracha com cavas e pomo com quebra-vidro. Não faz barulho e não gasta munição, mas é preciso chegar muito perto.",
+   "descricao": "Lâmina de 18 cm de aço escurecido com ponta recortada, fio liso e serrilha perto do cabo para cortar corda. Cabo pontilhado com cavas e pomo com quebra-vidro. Não faz barulho e não gasta munição, mas é preciso chegar muito perto. Modelo detalhado, com texturas assadas (desbaste, fio polido, sulco, gravações).",
    "arquivo": "armas/faca_combate.glb",
    "tamanho_m": [
-    0.026,
+    0.035,
     0.054,
-    0.325
+    0.354
    ],
-   "triangulos": 24284,
-   "kb": 1434.1,
+   "triangulos": 15045,
+   "kb": 1841.0,
    "encaixes": [
     {
      "no": "cinto",
@@ -11766,7 +11766,11 @@
      ],
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     }
-   ]
+   ],
+   "gerador": "faca/jogo.py",
+   "arquivo_leve": "armas/faca_combate_leve.glb",
+   "triangulos_leve": 3000,
+   "kb_leve": 624.2
   },
   {
    "id": "facao",

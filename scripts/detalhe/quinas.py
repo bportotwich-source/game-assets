@@ -5,7 +5,8 @@
 Quina = aresta em pé, de fora (convexa), a 90 graus, com pelo menos 40 cm, em material de alvenaria ou
 madeira lisa. Ela só é arredondada se estiver à mostra em TODOS os lugares onde a peça aparece no
 building_layout.json: se outra peça continua a mesma face depois da aresta (módulo vizinho), a aresta
-fica viva, senão abriria um sulco na emenda. Alvenaria leva raio de 10 mm em 3 passos; madeira, 4 mm em 2.
+fica viva, senão abriria um sulco na emenda. Alvenaria leva chanfro de 10 mm; madeira, 4 mm. É um passo só,
+com as normais saindo do centro do arco, então a quina sombreia como redonda quase sem custo de triângulos.
 
 Mantém nós, materiais e UV. O nó `molduras` não é tocado. Rodar de novo não muda nada (não sobra aresta
 viva que passe no teste). Precisa de bpy, trimesh e rtree.
@@ -94,8 +95,12 @@ def _bisel(g, cadeias, raio, passos):
         # Na faixa nova as duas faces vizinhas chegam com o mesmo u: sem isto a textura vira um risco.
         # O u segue pela largura da faixa, na escala dos kits (UV = metros / 2).
         for face in res['faces']:
+            fn = face.normal
+            if abs(fn.y) > 0.05: continue
             c = face.calc_center_median()
             x, z, _, _, n1, n2 = min(cadeias, key=lambda k: (k[0] - c.x) ** 2 + (k[1] - c.z) ** 2)
+            # Só a faixa: as faces vizinhas (mesma normal de n1 ou n2) ficam com a UV que tinham.
+            if max(abs(fn.x * n1[0] + fn.z * n1[2]), abs(fn.x * n2[0] + fn.z * n2[2])) > 0.995: continue
             nb = n1 + n2; t = np.array([nb[2], 0.0, -nb[0]]); t /= np.linalg.norm(t)
             for lp in face.loops:
                 co = lp.vert.co
@@ -112,6 +117,33 @@ def _bisel(g, cadeias, raio, passos):
     if uv is not None:
         UV = np.zeros(nl * 2); me.uv_layers[0].data.foreach_get('uv', UV); UV = UV.reshape(-1, 2)
     bpy.data.meshes.remove(me)
+    # Normais: na faixa elas saem do centro do arco (a quina sombreia como redonda mesmo com um passo só);
+    # nas faces vizinhas ficam retas, senão a parede inteira ganharia um degradê.
+    tri = V[F]; fnn = np.cross(tri[:, 1] - tri[:, 0], tri[:, 2] - tri[:, 0])
+    fnn /= np.maximum(np.linalg.norm(fnn, axis=1, keepdims=True), 1e-12); cen = tri.mean(axis=1)
+    faixa = np.zeros(len(F), bool)
+    cx = np.array([[k[0], k[1]] for k in cadeias])
+    for i in np.nonzero(np.abs(fnn[:, 1]) < 0.05)[0]:
+        d2 = ((cx - cen[i][[0, 2]]) ** 2).sum(axis=1); j = int(d2.argmin())
+        if d2[j] > (raio * 1.5) ** 2: continue
+        x, z, y0, y1, n1, n2 = cadeias[j]
+        if not (y0 - 1e-3 <= cen[i][1] <= y1 + 1e-3): continue
+        if max(abs(fnn[i] @ n1), abs(fnn[i] @ n2)) > 0.995: continue
+        faixa[i] = True
+        cc = np.array([x, z]) - raio * (n1 + n2)[[0, 2]]
+        for l in F[i]:
+            r = V[l][[0, 2]] - cc; r /= max(np.linalg.norm(r), 1e-12); nor[l] = (r[0], 0.0, r[1])
+    if faixa.any():
+        chave = lambda P: {tuple(q) for q in np.round(P, 4)}
+        borda = chave(V[F[faixa]].reshape(-1, 3))
+        for i in np.nonzero(~faixa)[0]:
+            for l in F[i]:
+                if tuple(np.round(V[l], 4)) in borda: nor[l] = fnn[i]
+    # Um vértice por posição + normal + UV, e não um por canto de triângulo.
+    cols = [np.round(V, 5), np.round(nor, 3)] + ([np.round(UV, 5)] if UV is not None else [])
+    _, prim, inv = np.unique(np.hstack(cols), axis=0, return_index=True, return_inverse=True)
+    V, nor, F = V[prim], nor[prim], inv.reshape(-1)[F]
+    if UV is not None: UV = UV[prim]
     novo = trimesh.Trimesh(V, F, vertex_normals=nor, process=False)
     novo.visual = TextureVisuals(uv=UV, material=g.visual.material)
     return novo
@@ -155,7 +187,7 @@ def kit(pasta, so_contar=False):
             total += len(boas); print(f'  {nome} [{mat}]: {len(boas)} de {len(cad)}')
             if so_contar: continue
             madeira = any(s in mat for s in MADEIRA)
-            novo = _bisel(g, boas, 0.004 if madeira else 0.010, 2 if madeira else 3)
+            novo = _bisel(g, boas, 0.004 if madeira else 0.010, 1)
             if novo is not None:
                 sc.geometry[gname] = novo; mudou = True
         if mudou:

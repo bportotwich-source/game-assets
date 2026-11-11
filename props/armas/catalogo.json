@@ -388,15 +388,15 @@
     "motel",
     "quartel"
    ],
-   "descricao": "Revólver de 6 tiros com tambor que abre de lado. Não engasga nunca e é fácil de achar em casas, mas recarrega devagar sem o carregador rápido.",
+   "descricao": "Revólver de 6 tiros com tambor que abre de lado. Não engasga nunca e é fácil de achar em casas, mas recarrega devagar sem o carregador rápido. Modelo detalhado, com texturas assadas (aço azulado gasto nas arestas, talas de nogueira quadriculadas, gravações).",
    "arquivo": "armas/revolver_38.glb",
    "tamanho_m": [
     0.039,
     0.133,
     0.217
    ],
-   "triangulos": 44096,
-   "kb": 2789.0,
+   "triangulos": 31972,
+   "kb": 3425.2,
    "partes": [
     {
      "no": "punho",
@@ -639,7 +639,7 @@
       0.0,
       0.0
      ],
-     "inclinacao_graus": 9.6,
+     "inclinacao_graus": 9.7,
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     },
     {
@@ -647,8 +647,8 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.029,
-      -0.0424
+      0.0302,
+      -0.0425
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
     },
@@ -656,7 +656,7 @@
      "no": "ref_guarda_mao",
      "pai": "revolver_38",
      "posicao_m": [
-      -0.0168,
+      -0.0166,
       -0.012,
       0.004
      ],
@@ -692,7 +692,11 @@
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "revolver/jogo.py",
+   "arquivo_leve": "armas/revolver_38_leve.glb",
+   "triangulos_leve": 6000,
+   "kb_leve": 963.7
   },
   {
    "id": "espingarda_12",

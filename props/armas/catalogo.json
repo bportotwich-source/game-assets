@@ -10553,15 +10553,15 @@
     "galeria",
     "armazem"
    ],
-   "descricao": "Arco desmontável de punho de nogueira laminada e braços recurvos (40 lb). Quase não faz barulho, a flecha pode ser recuperada (70%) e mata zumbi com um tiro na cabeça. Puxar e segurar cansa: não dá para manter mirado muito tempo.",
+   "descricao": "Arco desmontável de punho de madeira laminada e braços recurvos de fibra com miolo de bordo (40 lb). Quase não faz barulho, a flecha pode ser recuperada (70%) e mata zumbi com um tiro na cabeça. Puxar e segurar cansa: não dá para manter mirado muito tempo. Modelo detalhado, com texturas assadas (laminado do punho, corda torcida, gravações).",
    "arquivo": "armas/arco_recurvo.glb",
    "tamanho_m": [
-    0.043,
-    1.463,
-    0.734
+    0.041,
+    1.454,
+    0.735
    ],
-   "triangulos": 37072,
-   "kb": 2130.4,
+   "triangulos": 30638,
+   "kb": 2356.1,
    "partes": [
     {
      "no": "braco_cima",
@@ -10780,7 +10780,7 @@
      "no": "ref_corda",
      "pai": "flecha",
      "posicao_m": [
-      -0.0,
+      0.0,
       0.052,
       0.182
      ],
@@ -10806,7 +10806,11 @@
      ],
      "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
     }
-   ]
+   ],
+   "gerador": "recurvo/jogo.py",
+   "arquivo_leve": "armas/arco_recurvo_leve.glb",
+   "triangulos_leve": 6000,
+   "kb_leve": 772.3
   },
   {
    "id": "arco_composto",

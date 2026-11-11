@@ -11928,15 +11928,15 @@
     "loja_caca",
     "armazem"
    ],
-   "descricao": "Cabeça e espiga numa peça só de aço escurecido: fio curvo com barba de um lado e ponta do outro para arrombar portas e janelas. Cabo com talas e cordão enrolado (dá para desenrolar e usar o cordão). Bate mais forte que o facão, mas alcança menos.",
+   "descricao": "Cabeça e espiga numa peça só de aço escurecido: fio curvo com barba de um lado e ponta do outro para arrombar portas e janelas. Cabo com talas e cordão enrolado (dá para desenrolar e usar o cordão). Bate mais forte que o facão, mas alcança menos. Modelo detalhado, com texturas assadas (aço gasto nas quinas, fio polido, voltas do cordão).",
    "arquivo": "armas/machadinha_tatica.glb",
    "tamanho_m": [
-    0.029,
-    0.388,
-    0.181
+    0.03,
+    0.391,
+    0.176
    ],
-   "triangulos": 38626,
-   "kb": 1820.3,
+   "triangulos": 17225,
+   "kb": 1296.9,
    "encaixes": [
     {
      "no": "capa",
@@ -12028,7 +12028,11 @@
      ],
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     }
-   ]
+   ],
+   "gerador": "machadinha/jogo.py",
+   "arquivo_leve": "armas/machadinha_tatica_leve.glb",
+   "triangulos_leve": 3998,
+   "kb_leve": 619.8
   },
   {
    "id": "lanca_improvisada",

@@ -21,6 +21,12 @@ MATERIAIS = {
     'plaster':  ('reboco_claro', 1024, 'Reboco pintado claro, com trincas finas'),
     'cap':      ('pedra_clara', 1024, 'Pedra clara de capa e peitoril'),
     'tinta':    ('tinta_creme', 1024, 'Madeira pintada de creme, para molduras, caixilhos e portas'),
+    'siding_w': ('tabua_branca', 2048, 'Tábua de fachada pintada de branco, para receber a cor de cada casa'),
+    'render':   ('reboco_externo', 2048, 'Reboco de fachada claro, com manchas de chuva, para receber a cor de cada casa'),
+    'rooftile': ('telha_barro', 2048, 'Telha plana de barro, fiadas de 20 cm'),
+    'ashlar':   ('cantaria', 2048, 'Pedra aparelhada clara, blocos de 50 x 25 cm'),
+    'block':    ('bloco', 1024, 'Bloco de concreto aparente, 40 x 20 cm'),
+    'concrete': ('concreto', 1024, 'Concreto liso de calçada, soleira e base'),
 }
 QUALIDADE = {'albedo': 90, 'orm': 88, 'normal': 94}
 IMPORT = '''[remap]
@@ -42,7 +48,13 @@ def main():
     origem = sys.argv[1]
     os.makedirs(SAIDA, exist_ok=True)
     lib = {}
+    arq = os.path.join(SAIDA, 'materiais.json')
+    antigo = json.load(open(arq))['materiais'] if os.path.exists(arq) else {}
     for fonte, (nome, lado, desc) in MATERIAIS.items():
+        if not os.path.exists(os.path.join(origem, f'{fonte}_cor.png')):      # não assado nesta pasta: mantém o que já está
+            if nome in antigo:
+                lib[nome] = antigo[nome]
+            continue
         for tipo_fonte, tipo in (('cor', 'albedo'), ('normal', 'normal'), ('orm', 'orm')):
             im = Image.open(os.path.join(origem, f'{fonte}_{tipo_fonte}.png')).convert('RGB')
             if im.width != lado:
@@ -50,7 +62,9 @@ def main():
             dst = os.path.join(SAIDA, f'{nome}_{tipo}.webp')
             im.save(dst, 'WEBP', quality=QUALIDADE[tipo], method=6)
             open(dst + '.import', 'w').write(IMPORT % (1 if tipo == 'normal' else 0))
-        lib[nome] = dict(descricao=desc, lado_m=2.0, pixels=lado, origem=fonte)
+            if tipo == 'albedo':
+                media = [round(v / 255, 3) for v in im.resize((1, 1), Image.BOX).getpixel((0, 0))]
+        lib[nome] = dict(descricao=desc, lado_m=2.0, pixels=lado, origem=fonte, cor_media=media)
     json.dump(dict(gerado_por='scripts/materiais/publicar.py', convencao='ladrilho de 2 m que emenda nos quatro lados; UV em metros / 2, igual às peças dos kits; normal OpenGL; ORM = oclusão, rugosidade, metálico', materiais=lib),
               open(os.path.join(SAIDA, 'materiais.json'), 'w'), ensure_ascii=False, indent=1)
     mem = sum(v['pixels'] ** 2 * 2 * 4 / 3 for v in lib.values()) / 1048576

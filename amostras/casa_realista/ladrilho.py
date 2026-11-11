@@ -11,6 +11,8 @@ from lib import *
 SAIDA = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), 'saida', 'ladrilho')
 PPM = int(sys.argv[2]) if len(sys.argv) > 2 else 1024
 SO = [g for g in os.environ.get('SO', '').split(',') if g]
+PLANOS = {'shingles': 'telha_l', 'cap': 'pedra_l', 'tinta': 'tinta_l', 'render': 'reboco_ext_l', 'rooftile': 'telha_barro_l',
+          'ashlar': 'cantaria_l', 'block': 'bloco_l', 'concrete': 'concreto_l'}
 T, S = 2.0, 0.25                    # ladrilho e sobra
 D = T + S
 
@@ -27,11 +29,11 @@ def uv_plano(o, f):
 
 
 def painel(nome):
-    if nome == 'siding':        # tábuas em cunha como as do kit: fiadas de 0,2 m a partir de 0,12 m
+    if nome in ('siding', 'siding_w'):        # tábuas em cunha como as do kit: fiadas de 0,2 m a partir de 0,12 m
         L = []
         for k in range(-1, 12):
             yb = 0.12 + k * 0.2; yt = yb + 0.23
-            L.append(veio(extr([(0.0, yb), (0.024, yb), (0.0245, yb + 0.004), (0.008, yt), (0.0, yt)], -0.2, D + 0.2, 'tabua_l', 'zy'), 'x'))
+            L.append(veio(extr([(0.0, yb), (0.024, yb), (0.0245, yb + 0.004), (0.008, yt), (0.0, yt)], -0.2, D + 0.2, 'tabua_l' if nome == 'siding' else 'tabua_branca_l', 'zy'), 'x'))
         o = join(L, nome)
         uv_plano(o, lambda c, n: (c[0] / D, c[1] / D) if n[2] > 0.5 else None)
     elif nome == 'brick':
@@ -40,8 +42,8 @@ def painel(nome):
     elif nome == 'plaster':
         o = box(-0.2, D + 0.2, -0.2, D + 0.2, -0.1, 0.0, 'reboco_l')
         uv_plano(o, lambda c, n: (c[0] / D, c[1] / D) if n[2] > 0.5 else None)
-    elif nome in ('shingles', 'cap', 'tinta'):
-        o = box(-0.2, D + 0.2, -0.2, D + 0.2, -0.1, 0.0, {'shingles': 'telha_l', 'cap': 'pedra_l', 'tinta': 'tinta_l'}[nome])
+    elif nome in PLANOS:
+        o = box(-0.2, D + 0.2, -0.2, D + 0.2, -0.1, 0.0, PLANOS[nome])
         uv_plano(o, lambda c, n: (c[0] / D, c[1] / D) if n[2] > 0.5 else None)
     else:                       # floor e deck: plano horizontal, tábuas ao longo de U como nas texturas do kit
         o = box(-0.2, D + 0.2, -0.1, 0.0, -D - 0.2, 0.2, 'assoalho_l' if nome == 'floor' else 'deck_l')
@@ -65,7 +67,7 @@ def fundir(a):
 
 
 def main():
-    for nome in ('siding', 'brick', 'plaster', 'floor', 'deck', 'shingles', 'cap', 'tinta'):
+    for nome in ('siding', 'brick', 'plaster', 'floor', 'deck', 'shingles', 'cap', 'tinta', 'siding_w', 'render', 'rooftile', 'ashlar', 'block', 'concrete'):
         if SO and nome not in SO:
             continue
         bpy.ops.wm.read_factory_settings(use_empty=True)

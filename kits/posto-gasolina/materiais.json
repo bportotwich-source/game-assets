@@ -1,0 +1,34 @@
+{
+ "kit": "posto-gasolina",
+ "gerado_por": "scripts/materiais/mapear.py",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "block": {
+   "material": "bloco"
+  },
+  "concrete": {
+   "material": "concreto",
+   "sem_uv": true
+  },
+  "door": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.441,
+    0.635,
+    0.902
+   ]
+  },
+  "frame": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "plaster": {
+   "material": "reboco_claro"
+  },
+  "trim": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  }
+ }
+}

@@ -1,0 +1,51 @@
+{
+ "kit": "predio-mansarda",
+ "gerado_por": "scripts/materiais/mapear.py",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "ashlar": {
+   "material": "cantaria"
+  },
+  "door": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.508,
+    0.593,
+    0.763
+   ]
+  },
+  "door_b": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.818,
+    0.507,
+    0.513
+   ]
+  },
+  "frame": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "plaster": {
+   "material": "reboco_claro"
+  },
+  "rustic": {
+   "material": "cantaria",
+   "cor": [
+    1.0,
+    1.0,
+    0.911
+   ]
+  },
+  "sash": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "trim": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  }
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "kit": "supermercado",
+ "gerado_por": "scripts/materiais/mapear.py",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "brick": {
+   "material": "tijolo_vermelho"
+  },
+  "concrete": {
+   "material": "concreto",
+   "sem_uv": true
+  },
+  "coping": {
+   "material": "pedra_clara",
+   "sem_uv": true
+  },
+  "door": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.71,
+    0.749,
+    0.817
+   ]
+  },
+  "frame": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "frame2": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.518,
+    0.68,
+    0.627
+   ]
+  },
+  "plaster": {
+   "material": "reboco_claro"
+  },
+  "stone": {
+   "material": "cantaria"
+  },
+  "trim": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  }
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "kit": "delegacia",
+ "gerado_por": "scripts/materiais/mapear.py",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "ashlar": {
+   "material": "cantaria"
+  },
+  "brick": {
+   "material": "tijolo_vermelho"
+  },
+  "concrete": {
+   "material": "concreto"
+  },
+  "coping": {
+   "material": "pedra_clara",
+   "sem_uv": true
+  },
+  "door": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.441,
+    0.557,
+    0.536
+   ]
+  },
+  "door_int": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "floor": {
+   "material": "assoalho"
+  },
+  "frame": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "plaster": {
+   "material": "reboco_claro"
+  },
+  "plinth": {
+   "material": "concreto",
+   "cor": [
+    0.716,
+    0.707,
+    0.683
+   ]
+  },
+  "sash": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "stone2": {
+   "material": "cantaria",
+   "cor": [
+    0.934,
+    0.912,
+    0.889
+   ]
+  },
+  "trim": {
+   "material": "pedra_clara"
+  }
+ }
+}

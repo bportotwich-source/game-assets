@@ -1,0 +1,31 @@
+{
+ "kit": "clinica",
+ "gerado_por": "scripts/materiais/mapear.py",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "brick": {
+   "material": "tijolo_vermelho"
+  },
+  "concrete": {
+   "material": "concreto"
+  },
+  "door_int": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "frame": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "plaster": {
+   "material": "reboco_claro"
+  },
+  "precast": {
+   "material": "concreto"
+  },
+  "trim": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  }
+ }
+}

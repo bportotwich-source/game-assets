@@ -1,6 +1,6 @@
 # Materiais realistas compartilhados
 
-Oito materiais de casa feitos no mesmo método da M4A1 (material procedural no Blender, assado em cor, relevo e ORM) e preparados para emendar sozinhos a cada 2 m. Ficam aqui, uma vez só, e qualquer kit pode usar. As peças dos kits não mudam: a troca é feita no Godot, pelo nome do material.
+Catorze materiais de casa feitos no mesmo método da M4A1 (material procedural no Blender, assado em cor, relevo e ORM) e preparados para emendar sozinhos a cada 2 m. Ficam aqui, uma vez só, e qualquer kit pode usar. As peças dos kits não mudam: a troca é feita no Godot, pelo nome do material.
 
 | Material | Lado | O que é |
 |---|---|---|
@@ -12,12 +12,18 @@ Oito materiais de casa feitos no mesmo método da M4A1 (material procedural no B
 | `reboco_claro` | 1024 px | Reboco pintado claro, trincas finas |
 | `pedra_clara` | 1024 px | Pedra de capa e peitoril |
 | `tinta_creme` | 1024 px | Madeira pintada, para molduras, caixilhos e portas |
+| `tabua_branca` | 2048 px | Tábua de fachada branca, que recebe a cor de cada casa |
+| `reboco_externo` | 2048 px | Reboco de fachada claro, que recebe a cor de cada casa |
+| `telha_barro` | 2048 px | Telha plana de barro |
+| `cantaria` | 2048 px | Pedra aparelhada clara, blocos de 50 × 25 cm |
+| `bloco` | 1024 px | Bloco de concreto aparente |
+| `concreto` | 1024 px | Concreto liso de calçada, soleira e base |
 
-Cada material tem `_albedo.webp`, `_normal.webp` (OpenGL, igual ao Godot) e `_orm.webp` (R oclusão, G rugosidade, B metálico). O ladrilho cobre 2 × 2 m, a mesma medida das UVs das peças (metros / 2). Os oito juntos ocupam cerca de 61 MB de memória de vídeo, valor calculado pelo formato comprimido, e esse custo é o mesmo com uma casa ou com cem.
+Cada material tem `_albedo.webp`, `_normal.webp` (OpenGL, igual ao Godot) e `_orm.webp` (R oclusão, G rugosidade, B metálico). O ladrilho cobre 2 × 2 m, a mesma medida das UVs das peças (metros / 2). Os catorze juntos ocupam cerca de 109 MB de memória de vídeo, valor calculado pelo formato comprimido, e esse custo é o mesmo com uma casa ou com cem.
 
 ## Usar num kit
 
-1. Criar `kits/<kit>/materiais.json` dizendo qual material da peça vira qual material daqui (ver `kits/bangalo/materiais.json`). `sem_uv` projeta o ladrilho pelas três faces, para peças sem UV. `cor` multiplica a cor do ladrilho.
+1. Criar `kits/<kit>/materiais.json` com `python3 scripts/materiais/mapear.py <kit>`: ele decide pelo nome do material nas peças e guarda a cor que o kit usa hoje como tom por cima do ladrilho. Dá para ajustar à mão depois (o do bangalô é feito à mão). `sem_uv` projeta o ladrilho pelas três faces, para peças sem UV. `cor` multiplica a cor do ladrilho.
 2. No Godot, antes do acabamento por cômodo:
 
 ```gdscript
@@ -26,7 +32,7 @@ var trocados := Realista.aplicar(predio, "bangalo")
 Realista.ligar(trocados, false)   # volta ao original
 ```
 
-No visitar, a tecla R liga e desliga. Hoje só o bangalô tem `materiais.json`.
+No visitar, a tecla R liga e desliga. Os 13 kits do jogo têm `materiais.json`.
 
 ## Refazer ou criar um material
 
@@ -39,4 +45,4 @@ Os `.import` desta pasta vão para o repositório de propósito: são eles que m
 
 ## O que ainda não está aqui
 
-Quinas arredondadas, portas e janelas em relevo e sujeira própria de cada parede dependem de mexer nas peças e ficam para a etapa seguinte. Variações de cor (tábua azul, tijolo amarelo) entram como novos materiais conforme os outros kits forem usando.
+Quinas arredondadas, portas e janelas em relevo e sujeira própria de cada parede dependem de mexer nas peças e ficam para a etapa seguinte. Metal, vidro, esmalte e pisos frios ainda usam o material simples de cada kit.

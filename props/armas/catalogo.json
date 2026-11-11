@@ -4057,15 +4057,15 @@
     "quartel"
    ],
    "estojo_s": 0.02,
-   "descricao": "O mesmo fuzil todo preto e bem usado (pintura gasta, riscos, ferrugem e um rabisco na chapa): punho e carregador de polímero, coronha vazada, guarda-mão de fendas com tiras de borracha, tampa com trilho e mira reflexa, supressor e lanterna.",
+   "descricao": "O mesmo fuzil todo preto e bem usado (pintura gasta, riscos e um recado riscado na chapa): punho e carregador de polímero, coronha vazada, guarda-mão de fendas com tiras de borracha, tampa com trilho e mira reflexa, supressor e lanterna. Modelo detalhado, com texturas assadas (desgaste nas arestas, gravações).",
    "arquivo": "armas/fuzil_762_tatico.glb",
    "tamanho_m": [
-    0.043,
-    0.277,
+    0.051,
+    0.276,
     0.666
    ],
-   "triangulos": 47772,
-   "kb": 3378.1,
+   "triangulos": 35499,
+   "kb": 3627.9,
    "partes": [
     {
      "no": "tampa",
@@ -4533,7 +4533,7 @@
       0.0,
       0.0
      ],
-     "inclinacao_graus": 17.9,
+     "inclinacao_graus": 15.6,
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     },
     {
@@ -4541,8 +4541,8 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.0504,
-      -0.0661
+      0.0531,
+      -0.0663
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
     },
@@ -4560,9 +4560,9 @@
      "no": "ref_coronha",
      "pai": "fuzil_762_tatico",
      "posicao_m": [
-      -0.0,
+      0.0,
       0.022,
-      0.3765
+      0.375
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     },
@@ -4591,12 +4591,16 @@
      "pai": "carregador",
      "posicao_m": [
       0.0,
-      -0.12,
-      -0.1574
+      -0.1178,
+      -0.173
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "brasa/jogo.py",
+   "arquivo_leve": "armas/fuzil_762_tatico_leve.glb",
+   "triangulos_leve": 6000,
+   "kb_leve": 919.3
   },
   {
    "id": "smg_9mm",
@@ -16272,15 +16276,16 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Tampa do receptor reforçada, travada na frente e atrás, com trilho em cima para mira ou luneta (encaixe_mira_tampa).",
+   "descricao": "Tampa do receptor reforçada, travada na frente, com trilho em cima para mira ou luneta (encaixe_mira_tampa). Modelo detalhado, do Brasa 7,62 refeito.",
    "arquivo": "acessorios/tampa_trilho_ak.glb",
    "tamanho_m": [
-    0.023,
+    0.029,
     0.028,
-    0.232
+    0.25
    ],
-   "triangulos": 2620,
-   "kb": 123.9
+   "triangulos": 3324,
+   "kb": 395.8,
+   "gerador": "brasa/jogo.py"
   },
   {
    "id": "coronha_polimero_ak",
@@ -17035,15 +17040,15 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Coronha fixa de polímero com o miolo vazado em triângulo, apoio de rosto reto, soleira de borracha e furo de bandoleira.",
+   "descricao": "Coronha fixa de polímero com o miolo vazado em triângulo, apoio de rosto com ranhuras, soleira de borracha e passagem de bandoleira. Modelo detalhado, do Brasa 7,62 refeito.",
    "arquivo": "acessorios/coronha_esqueleto_ak.glb",
    "tamanho_m": [
     0.034,
     0.145,
-    0.32
+    0.318
    ],
-   "triangulos": 1932,
-   "kb": 109.0,
+   "triangulos": 7086,
+   "kb": 493.6,
    "encaixes": [
     {
      "no": "ombro",
@@ -17064,11 +17069,12 @@
      "posicao_m": [
       0.0,
       -0.063,
-      0.3135
+      0.312
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
-   ]
+   ],
+   "gerador": "brasa/jogo.py"
   },
   {
    "id": "guarda_mao_fendas_ak",
@@ -17085,15 +17091,16 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Guarda-mão de polímero com fendas de encaixe, trilho curto embaixo e do lado direito (empunhadura e lanterna) e tampa do tubo de gás com janelas.",
+   "descricao": "Guarda-mão de polímero com fendas de encaixe, trilho curto embaixo e do lado direito (empunhadura e lanterna) e tampa do tubo de gás com janelas. Modelo detalhado, do Brasa 7,62 refeito.",
    "arquivo": "acessorios/guarda_mao_fendas_ak.glb",
    "tamanho_m": [
-    0.042,
-    0.073,
-    0.192
+    0.043,
+    0.075,
+    0.195
    ],
-   "triangulos": 9038,
-   "kb": 425.5
+   "triangulos": 9024,
+   "kb": 763.0,
+   "gerador": "brasa/jogo.py"
   },
   {
    "id": "mira_reflexa",
@@ -17173,15 +17180,16 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Tampa do receptor reforçada, travada na frente e atrás, com trilho em cima para mira ou luneta (encaixe_mira_tampa). Peça usada, com a pintura gasta.",
+   "descricao": "Tampa do receptor reforçada, travada na frente, com trilho em cima para mira ou luneta (encaixe_mira_tampa). Peça usada, com a pintura gasta. Modelo detalhado, do Brasa 7,62 refeito.",
    "arquivo": "acessorios/tampa_trilho_ak_gasto.glb",
    "tamanho_m": [
-    0.023,
+    0.029,
     0.028,
-    0.232
+    0.25
    ],
-   "triangulos": 2620,
-   "kb": 198.6
+   "triangulos": 3324,
+   "kb": 411.1,
+   "gerador": "brasa/jogo.py"
   },
   {
    "id": "mira_reflexa_gasto",
@@ -17239,15 +17247,16 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Guarda-mão de polímero com fendas de encaixe, trilho curto embaixo e do lado direito (empunhadura e lanterna) e tampa do tubo de gás com janelas. Peça usada, com a pintura gasta.",
+   "descricao": "Guarda-mão de polímero com fendas de encaixe, trilho curto embaixo e do lado direito (empunhadura e lanterna) e tampa do tubo de gás com janelas. Peça usada, com a pintura gasta. Modelo detalhado, do Brasa 7,62 refeito.",
    "arquivo": "acessorios/guarda_mao_fendas_ak_gasto.glb",
    "tamanho_m": [
-    0.042,
-    0.073,
-    0.192
+    0.043,
+    0.075,
+    0.195
    ],
-   "triangulos": 9038,
-   "kb": 661.8
+   "triangulos": 9024,
+   "kb": 778.9,
+   "gerador": "brasa/jogo.py"
   },
   {
    "id": "coronha_esqueleto_ak_gasto",
@@ -17265,15 +17274,15 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Coronha fixa de polímero com o miolo vazado em triângulo, apoio de rosto reto, soleira de borracha e furo de bandoleira. Peça usada, com a pintura gasta.",
+   "descricao": "Coronha fixa de polímero com o miolo vazado em triângulo, apoio de rosto com ranhuras, soleira de borracha e passagem de bandoleira. Peça usada, com a pintura gasta. Modelo detalhado, do Brasa 7,62 refeito.",
    "arquivo": "acessorios/coronha_esqueleto_ak_gasto.glb",
    "tamanho_m": [
     0.034,
     0.145,
-    0.32
+    0.318
    ],
-   "triangulos": 1932,
-   "kb": 157.5,
+   "triangulos": 7086,
+   "kb": 501.2,
    "encaixes": [
     {
      "no": "ombro",
@@ -17294,11 +17303,12 @@
      "posicao_m": [
       0.0,
       -0.063,
-      0.3135
+      0.312
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
-   ]
+   ],
+   "gerador": "brasa/jogo.py"
   },
   {
    "id": "supressor_762_gasto",

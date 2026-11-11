@@ -6,14 +6,20 @@ bpy.ops.wm.open_mainfile(filepath=sys.argv[1])
 # FOTO_ACESSORIOS=pasta com coronha/, guarda_mao/ e freio/ (saídas do gerar.py): monta os três nos encaixes
 import os
 _AC = os.environ.get('FOTO_ACESSORIOS')
-if _AC:
-    for nome, raiz, pos in (('coronha', 'coronha_brasa', (0, -0.063, 0.085)), ('guarda_mao', 'guarda_mao_brasa', (0, 0.208, 0.084)),
-                            ('freio', 'freio_brasa', (0, 0.588, 0.084))):
-        with bpy.data.libraries.load(os.path.join(_AC, nome, raiz + '.blend')) as (de, para):
-            para.objects = list(de.objects)
-        for o in para.objects:
-            bpy.context.scene.collection.objects.link(o)
-        bpy.data.objects[raiz].location = pos
+_POS = {'coronha': (0, -0.063, 0.085), 'guarda_mao': (0, 0.208, 0.084), 'freio': (0, 0.588, 0.084), 'tampa': (0, 0.161, 0.096)}
+_blends = [os.path.join(_AC, n, r + '.blend') for n, r in (('coronha', 'coronha_brasa'), ('guarda_mao', 'guarda_mao_brasa'), ('freio', 'freio_brasa'))] if _AC else []
+# FOTO_MONTAR=a.blend,b.blend: outros acessórios (o encaixe sai do nome do arquivo: coronha, guarda_mao, freio ou tampa)
+_blends += [b for b in os.environ.get('FOTO_MONTAR', '').split(',') if b]
+for b in _blends:
+    raiz = os.path.basename(b)[:-6]
+    with bpy.data.libraries.load(b) as (de, para):
+        para.objects = list(de.objects)
+    for o in para.objects:
+        bpy.context.scene.collection.objects.link(o)
+    bpy.data.objects[raiz].location = next(v for k, v in _POS.items() if raiz.startswith(k))
+    if raiz.startswith('tampa') and bpy.data.objects.get('tampa'):                # a tampa com trilho entra no lugar da tampa do fuzil
+        for o in [bpy.data.objects['tampa']] + list(bpy.data.objects['tampa'].children_recursive):
+            o.hide_render = True
 sc = bpy.context.scene
 sc.render.engine = 'CYCLES'; sc.cycles.samples = 48; sc.cycles.use_denoising = True
 w = bpy.data.worlds.new('w'); sc.world = w; w.use_nodes = True

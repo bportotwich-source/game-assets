@@ -30,8 +30,13 @@ CAR_U, CAR_V = 92.0, -24.0         # topo do carregador (centro)
 V_GAS = 24.0                       # eixo do tubo de gás
 V_MIRA = 42.5                      # ponta da massa = fundo do entalhe da alça
 DU_CABO, DV_CABO = 6.0, 26.5       # o punho arredondado da Mutirão no lugar do punho deste fuzil
-ACO = 'aco_brasa'
+VARIANTE = os.environ.get('VARIANTE', '')       # 'tatico' (fuzil preto e usado) ou 'gasto' (acessórios usados)
+USADO = VARIANTE in ('tatico', 'gasto')
+ACO = 'aco_brasa_gasto' if USADO else 'aco_brasa'
+POLIM = 'polim_gasto' if USADO else 'polim'
+ANOD = 'anod_gasto' if USADO else 'anod'
 MADEIRA = 'madeira_brasa'
+PIC = [(7.85, 0), (10.6, -2.75), (7.9, -5.5), (-7.9, -5.5), (-10.6, -2.75), (-7.85, 0)]   # perfil do trilho (x, y a partir da face de fora)
 
 
 def pl(g):
@@ -88,6 +93,14 @@ def corpo_u(perfil, larg, mat, e=2.5, n=120, voltas=56):
     return loft(aneis, mat)
 
 
+def trilho_em(u0, u1, mat, f):
+    """Trilho de encaixe ao longo de u; f(x, y) leva o perfil (x de lado, y = 0 na face de fora) para (w, v)."""
+    t = extr([f(x, y) for (x, y) in PIC], u0, u1, mat, plane='wv')
+    n = int((u1 - u0 - 6) / 10.008)
+    cut(t, [extr([f(-12, -3), f(12, -3), f(12, 2.5), f(-12, 2.5)], u - 5.23, u, mat, plane='wv') for u in [u1 - 4.0 - i * 10.008 for i in range(n)]])
+    return bevel(t, 0.35, 1, 40)
+
+
 def rebite(u, v, s, r=2.1, h=1.2, mat=ACO, w=KW):
     """Cabeça de rebite (ou de pino) no lado s do receptor."""
     return lathe([(-0.5, r), (h * 0.55, r * 0.86), (h * 0.9, r * 0.5), (h, 0)], mat, n=14, c0=(u, v, s * w), eixo=(0, 0, s))
@@ -141,6 +154,8 @@ def receptor():
     # gravações (esquerda) e marcas do seletor (direita)
     o.append(texto('BRASA 7,62', 3.0, 118, 4.2, -(KW + 0.02)))
     o.append(texto('RC 762031 · RECOMEÇO', 1.7, 118, 0.6, -(KW + 0.02)))
+    if VARIANTE == 'tatico':                                                                   # riscado à faca por um sobrevivente
+        o.append(texto('NÃO DESISTA', 4.6, 40, -21.5, -(KW + 0.02)))
     o.append(texto('AUTO', 2.3, 47, -7.6, KW + 0.02, lado=1))
     o.append(texto('SEMI', 2.3, 47, -19.0, KW + 0.02, lado=1))
     f = parte('receptor', o, origem=(40, -6, 0), grupo='A', suave=30)
@@ -153,7 +168,7 @@ def receptor():
         x = CABO.intersection(LineString([(-200, v), (120, v)])).bounds
         pts = superelipse((x[2] - x[0]) / 2, meia_largura(v), n=40, e=2.3, cx=(x[0] + x[2]) / 2 + DU_CABO)
         aneis.append([P(u, v + DV_CABO, w) for (u, w) in pts])
-    g = bevel(loft(aneis, 'baquelite_grip'), 1.2, 2, 50)
+    g = bevel(loft(aneis, 'polim_brasa_grip' if VARIANTE == 'tatico' else 'baquelite_grip'), 1.2, 2, 50)
     pf = lathe([(0, 0), (0, 4.2), (1.2, 4.2), (1.8, 3.4), (1.8, 0)], 'inox', n=18, c0=(-51 + DU_CABO, -155.2 + DV_CABO, 0), eixo=(0, -1, 0))
     fenda = box(-55.5 + DU_CABO, -46.5 + DU_CABO, -158 + DV_CABO, -156.3 + DV_CABO, -0.7, 0.7, 'inox')
     cut(pf, [fenda])
@@ -161,9 +176,10 @@ def receptor():
     return f
 
 
-def tampa():
+def tampa(com_trilho=False):
     """Tampa do receptor: chapa em arco com nervuras atravessadas, janela de ejeção à direita e o
-    botão do retém atrás. Vai de trás do receptor até o bloco da alça."""
+    botão do retém atrás. Vai de trás do receptor até o bloco da alça. com_trilho: no lugar das
+    nervuras, um trilho de mira em cima, com a trava da frente (acessório tampa_trilho_ak)."""
     sec = Polygon([(11.3, KT - 2)] + [(11.3 * math.cos(t), 15.0 + (TOPO - 15.0) * math.sin(t)) for t in [math.pi * i / 28 for i in range(29)]]
                   + [(-11.3, KT - 2)]).buffer(0)
     X0, X1 = KX0 + 2, KX1 + 4
@@ -171,8 +187,14 @@ def tampa():
     cut(t, [extr(pl(sec.buffer(-2.0, quad_segs=4)), X0 + 2.5, X1 + 5, ACO, plane='wv'),
             solido(arred([(27, KT - 4), (KX1 - 17, KT - 4), (KX1 - 17, 23.5), (37, 23.5), (27, 19)], 2.5, 4), 3.5, 30, ACO)])
     o = [bevel(t, 0.5, 2, 34)]
+    if com_trilho:
+        o.append(bevel(box(X0 + 4, KX1 - 24, TOPO - 5.0, TOPO + 0.2, -9.6, 9.6, ACO), 0.6, 1, 40))             # mesa do trilho
+        o.append(trilho_em(X0 + 6, KX1 - 28, ANOD, lambda x, y: (x, TOPO + 5.5 + y)))
+        o.append(bevel(solido(arred([(KX1 - 30, KT + 3), (KX1 - 10, KT + 3), (KX1 - 10, TOPO + 1.8), (KX1 - 30, TOPO + 1.8)], 1.8, 4), -12.9, 12.9, ACO), 0.6, 2, 40))   # trava da frente
+        for s in (-1, 1):
+            o.append(lathe([(-0.5, 2.6), (1.0, 2.6), (1.5, 2.0), (1.5, 0)], 'inox', n=14, c0=(KX1 - 20, KT + 12, s * 12.9), eixo=(0, 0, s)))
     u = X0 + 30
-    while u + 7 < X1 - 30:                                                                    # nervuras estampadas
+    while not com_trilho and u + 7 < X1 - 30:                                                 # nervuras estampadas
         n = extr(pl(sec.buffer(1.7, quad_segs=6)), u, u + 6, ACO, plane='wv')
         cut(n, [box(u - 2, u + 9, -10, 17.0, -30, 30, ACO)])
         o.append(bevel(n, 0.7, 2, 40))
@@ -236,9 +258,11 @@ def cartucho(c0, mat='laca_verde'):
             lathe([(38.4, 0), (38.4, 3.9), (43, 3.9), (50.5, 3.3), (54.5, 1.8), (56.2, 0.5), (56.3, 0)], 'cobre', n=18, c0=c0)]
 
 
-def carregador():
+def carregador(grade=False):
     """Carregador curvo de aço de 30: nervura comprida estampada de cada lado, costura atrás,
-    gancho na frente, trava atrás, chapa de base e um cartucho à vista."""
+    gancho na frente, trava atrás, chapa de base e um cartucho à vista.
+    grade=True: de polímero, com quadros rebaixados dos lados (o do fuzil tático)."""
+    ACO = POLIM if grade else globals()['ACO']
     R, G = 240.0, 28.0
     cx, cy = CAR_U + R, CAR_V
     fi = 200.0 / R
@@ -252,9 +276,19 @@ def carregador():
     for s in (-1, 1):                                                                         # degrau da parte que entra no poço
         a, b = lados(s, 9.7, 14)
         cs.append(box(CAR_U - G - 2, CAR_U + G + 2, CAR_V - 1.5, CAR_V + 20, a, b, ACO))
+    if grade:                                                                                 # quadros rebaixados (grade)
+        nl = 6
+        dt = (fi - 0.10) / nl
+        for s in (-1, 1):
+            a, b = lados(s, 9.9, 14)
+            for i in range(nl):
+                for (ra, rb) in ((R - G + 4.5, R - 2.2), (R + 2.2, R + G - 4.5)):
+                    tt = [math.pi + 0.07 + i * dt + 0.010 + (dt - 0.020) * k / 3 for k in range(4)]
+                    q = Polygon([em(ra, t) for t in tt] + [em(rb, t) for t in tt[::-1]])
+                    cs.append(solido(arred(q, 2.0, 2), a, b, ACO))
     cut(c, cs)
-    o = [bevel(c, 0.7, 2, 34)]
-    for s in (-1, 1):
+    o = [bevel(c, 0.7, 1 if grade else 2, 34)]
+    for s in (() if grade else (-1, 1)):
         a, b = lados(s, 11.0, 13.1)
         t2 = [math.pi + 0.07 + (fi - 0.14) * i / 30 for i in range(31)]
         nerv = LineString([em(R + 6, t) for t in t2]).buffer(4.6, quad_segs=5)
@@ -262,8 +296,9 @@ def carregador():
         for k in range(3):                                                                    # três nervuras curtas embaixo
             t0 = math.pi + fi - 0.07 - k * 0.075
             o.append(bevel(solido(LineString([em(R - 20, t0), em(R - 6, t0)]).buffer(2.2, quad_segs=4), a, b - 0.5, ACO), 0.6, 1, 40))
-    costura = LineString([em(R + G, t) for t in th[2:-2]]).buffer(1.6, quad_segs=3)
-    o.append(solido(costura.intersection(perfil.buffer(3)), -3.0, 3.0, ACO))
+    if not grade:
+        costura = LineString([em(R + G, t) for t in th[2:-2]]).buffer(1.6, quad_segs=3)
+        o.append(solido(costura.intersection(perfil.buffer(3)), -3.0, 3.0, ACO))
     o.append(bevel(solido(arred([(CAR_U + G - 1, CAR_V + 2), (CAR_U + G + 6, CAR_V + 2), (CAR_U + G + 6, CAR_V - 7), (CAR_U + G - 1, CAR_V - 11)], 1.2, 4),
                           -5.5, 5.5, ACO), 0.5, 1, 40))                                       # gancho da frente
     o.append(bevel(solido(arred([(CAR_U - G - 4.5, CAR_V - 4), (CAR_U - G + 1, CAR_V - 4), (CAR_U - G + 1, CAR_V - 12), (CAR_U - G - 4.5, CAR_V - 9)], 1.0, 4),
@@ -278,7 +313,7 @@ def carregador():
     o.append(lathe([(0, 3.2), (1.4, 3.2), (1.9, 2.4), (1.9, 0)], 'fosf', n=14, c0=(*pt(-6, 4.2), 0), eixo=(nn[0], nn[1], 0)))   # botão da base
     for s in (-1, 1):                                                                         # lábios
         a, b = lados(s, 4.6, 8.0)
-        o.append(box(CAR_U - G + 3, CAR_U + G - 6, CAR_V + 7.0, CAR_V + 11.4, a, b, ACO))
+        o.append(box(CAR_U - G + 3, CAR_U + G - 6, CAR_V + 7.0, CAR_V + 11.4, a, b, globals()['ACO']))
     o += cartucho((CAR_U - G + 1.5, CAR_V + 6.8, 1.2))
     return parte('carregador', o, origem=(CAR_U, CAR_V, 0), grupo='B', suave=36)
 
@@ -445,11 +480,66 @@ def freio():
     return parte('freio', [bevel(c, 0.4, 1, 34)], origem=(U0, 0, 0), grupo='A', suave=34)
 
 
+def coronha_esqueleto():
+    """Coronha fixa de polímero com o miolo vazado em triângulo, apoio de rosto com ranhuras,
+    soleira de borracha e passagem da bandoleira. Origem em (KX0 - 6, 1)."""
+    E = KX0 - 6
+    fora = arred([(E, 14), (E - 40, 14), (E - 285, 7), (E - 296, 5), (E - 298, -121), (E - 290, -129), (E - 270, -127), (E - 50, -45),
+                  (E - 12, -36), (E, -35)], 2.5, 5)
+    vao = arred([(E - 75, -5), (E - 262, -5), (E - 262, -97), (E - 85, -35)], 6.0, 6)
+    c = solido(fora.difference(vao), -15.5, 15.5, POLIM)
+    cs = [solido(arred([(E - 287, -56), (E - 273, -56), (E - 273, -37), (E - 287, -37)], 3.0, 5), -30, 30, POLIM)]      # passagem da bandoleira
+    for s in (-1, 1):                                                                         # ranhuras do apoio de rosto
+        a, b = lados(s, 13.9, 20)
+        for i in range(7):
+            u = E - 232 + i * 24.0
+            cs.append(solido(capsula(u, u + 15, 4.6 + (u - (E - 232)) * 0.022, 2.0), a, b, POLIM))
+    cut(c, cs)
+    o = [bevel(c, 2.2, 2, 40)]
+    sol = solido(arred([(E - 312, 7), (E - 296.5, 7), (E - 296.5, -131), (E - 312, -131)], 5.0, 5), -17.0, 17.0, 'borracha')
+    cut(sol, [box(E - 316, E - 310.4, v, v + 3.0, -15, 15, 'borracha') for v in range(-121, 0, 8)])
+    o.append(bevel(sol, 0.8, 2, 40))
+    o.append(bevel(solido(arred([(E - 1, -37), (E + 6, -37), (E + 6, 12.4), (E - 1, 12.4)], 1.5, 4), -13.4, 13.4, ACO), 0.6, 2, 40))   # chapa de encaixe
+    return parte('coronha', o, origem=(E, 1, 0), grupo='A', suave=34)
+
+
+def guarda_mao_fendas():
+    """Guarda-mão de polímero com fendas de encaixe, trilho curto embaixo e do lado direito, e
+    tampa do tubo de gás com janelas e capa de metal na ponta. Origem em (190, 0)."""
+    perfil = arred([(199, -28.5), (250, -30.5), (360, -30.5), (386, -28.5), (391, -16), (391, 12), (198, 12), (195, -16)], 4.0, 5)
+    b = corpo_u(perfil, lambda u: 18.5, POLIM, e=3.6, n=40, voltas=40)
+    cs = [cyl((150, 0, 0), (450, 0, 0), 9.8, POLIM, n=40), box(150, 450, 0, 40, -9.8, 9.8, POLIM),
+          cyl((150, -11.5, 0), (450, -11.5, 0), 3.4, POLIM, n=16), box(150, 450, 11.2, 40, -40, 40, POLIM)]
+    for u0 in (215, 262, 309):                                                                # fendas dos lados
+        cs.append(solido(capsula(u0 + 4, u0 + 32, -12.0, 4.0), -30, 30, POLIM))
+    for u0 in (215, 250):                                                                     # fendas de baixo
+        cs.append(solido(capsula(u0 + 3, u0 + 25, 0.0, 3.6), -50, -20, POLIM, plane='uw'))
+    cut(b, cs)
+    o = [bevel(b, 0.8, 1, 34)]
+    o.append(bevel(box(287, 384, -32.6, -29.0, -8.0, 8.0, ANOD), 0.5, 1, 40))                  # trilho de baixo
+    o.append(trilho_em(285, 386, ANOD, lambda x, y: (x, -37.5 - y)))
+    o.append(bevel(box(312, 384, -6.5, 9.5, 16.5, 19.6, ANOD), 0.5, 1, 40))                    # trilho da direita
+    o.append(trilho_em(310, 386, ANOD, lambda x, y: (24.5 + y, 1.5 + x)))
+    sec = Polygon(ret_arred(-12.6, 12.6, 12.4, 36.2, 6.5, 6))                                  # tampa do tubo de gás
+    c = extr(pl(sec), 205, 385, POLIM, plane='wv')
+    cut(c, [cyl((150, V_GAS, 0), (450, V_GAS, 0), 8.9, POLIM, n=32), box(150, 450, 0, 17.5, -8.0, 8.0, POLIM)] +
+           [solido(capsula(u0 + 4, u0 + 36, 25.0, 4.0), -30, 30, POLIM) for u0 in (232, 288)])
+    o.append(bevel(c, 0.8, 1, 34))
+    cp = extr(pl(sec.buffer(1.6, quad_segs=6)), 372, 386, ANOD, plane='wv')                    # capa de metal da ponta
+    cut(cp, [cyl((150, V_GAS, 0), (450, V_GAS, 0), 8.9, ANOD, n=32), box(150, 450, 0, 17.5, -8.0, 8.0, ANOD)])
+    o.append(bevel(cp, 0.5, 1, 40))
+    return parte('guarda_mao', o, origem=(190, 0, 0), grupo='A', suave=34)
+
+
+def tampa_trilho():
+    return tampa(com_trilho=True)
+
+
 def montar():
     receptor()
     tampa()
     ferrolho()
     seletor()
     gatilho()
-    carregador()
+    carregador(grade=VARIANTE == 'tatico')
     cano()

@@ -7,7 +7,7 @@ import bpy
 from mathutils import Vector
 
 CORES = {'aco_polido': (0.45, 0.45, 0.45), 'polim_esp_grip': (0.26, 0.26, 0.27), 'tinta_vermelha': (0.7, 0.05, 0.05), 'fosf': (0.07, 0.07, 0.07),
-         'anod': (0.12, 0.12, 0.13), 'fosf_escuro': (0.16, 0.16, 0.16), 'borracha': (0.05, 0.05, 0.05), 'polim_claro': (0.3, 0.4, 0.25),
+         'anod': (0.12, 0.12, 0.13), 'anod_tubo': (0.2, 0.2, 0.21), 'fosf_escuro': (0.16, 0.16, 0.16), 'borracha': (0.05, 0.05, 0.05), 'polim_claro': (0.3, 0.4, 0.25),
          'aco_cano': (0.3, 0.3, 0.3), 'polim': (0.13, 0.13, 0.13), 'inox': (0.5, 0.5, 0.5), 'latao': (0.8, 0.6, 0.2), 'cobre': (0.7, 0.35, 0.2),
          'tinta': (0.85, 0.85, 0.85), 'tinta_branca': (0.9, 0.9, 0.9), 'tinta_preta': (0.02, 0.02, 0.02)}
 C = Vector((0, 0.33, -0.065))
@@ -44,6 +44,9 @@ if __name__ == '__main__':
     import modelo
     from lib import PARTES
     modelo.montar()
+    if os.environ.get('CORONHA'):
+        import coronha
+        coronha.montar()
     for o in PARTES:
         print(f"{o.name:22s} {sum(len(p.vertices) - 2 for p in o.data.polygons):6d}")
     print('peças', len(PARTES), 'tris', sum(sum(len(p.vertices) - 2 for p in o.data.polygons) for o in PARTES), f'{time.time() - t:.0f}s')

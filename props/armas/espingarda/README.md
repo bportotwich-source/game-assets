@@ -42,3 +42,11 @@ python3 foto.py saida/mutirao.blend fotos/mutirao esq 34d perto   # renders de c
 - `esqueleto.json` e `esqueleto_curta.json`: os nós e as animações das espingardas antigas
   (`../m4a1/tirar_esqueleto.py`), que garantem que nada muda para o jogo.
 - `ver.py`: renders rápidos só da forma, sem textura.
+
+## Miras e coronha
+
+- Alça de anel no fundo do trilho e massa de mira com poste, ponto branco e orelhas perto da boca. A linha de visada
+  (nó `mira_ferro`) passa pelo centro do anel, 11 mm acima do trilho, para o modo de mira do jogo ter referência.
+- A coronha retrátil que vem na arma (acessório `coronha_retratil_12`) está em `coronha.py`: é a coronha da M4A1 levada
+  para o encaixe da espingarda, com o tubo entrando no receptor. `python3 gerar.py 1024 saida_coronha coronha` e
+  `python3 jogo.py saida_coronha coronha` (rodar antes do `jogo.py` da arma, que mede o ponto do ombro pela coronha).

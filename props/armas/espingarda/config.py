@@ -27,3 +27,18 @@ CFG = dict(
                   'Versão de cano curto e só punho, com freio dentado na boca: boa para arrombar portas e lutar dentro de casa. '
                   'Espalha mais os bagos e coice forte; aceita coronha.' + _FIM),
     })
+
+
+def montar_coronha():
+    import materiais, coronha
+    coronha.montar()
+
+
+# a coronha retrátil que vem na Mutirão (acessório coronha_retratil_12): python3 gerar.py 1024 saida_coronha coronha
+CFG_CORONHA = dict(
+    nome='coronha_mutirao', montar=montar_coronha, gerador='espingarda/jogo.py', id='coronha_retratil_12',
+    origem=(-35, -4, 0),             # encaixe_coronha
+    esqueleto=json.load(open(os.path.join(AQUI, 'esqueleto_coronha.json'), encoding='utf-8')),
+    nos={None: ['tubo_coronha'], 'soleira': ['coronha_corpo', 'trava_coronha', 'zarelho_traseiro']},
+    descricao='Tubo com coronha de polímero que corre em 5 posições (nó "soleira", animações estender/recolher). '
+              'Segura o coice no ombro. Modelo detalhado, com texturas assadas.')

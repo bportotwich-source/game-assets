@@ -7,10 +7,14 @@ uma. O trabalho é de ../m4a1/fabrica.py; o que é da Mutirão está em config.p
 
 uso: python3 jogo.py saida [webp|jpg]               (saida = pasta do gerar.py)
      VARIANTE=curta python3 jogo.py saida_curta     (rodar o gerar.py com a mesma variável)
+     python3 jogo.py saida_coronha coronha          (acessórios/coronha_retratil_12.glb)
 """
 import sys
-from config import CFG
+from config import CFG, CFG_CORONHA
 import fabrica
 
 if __name__ == '__main__':
-    fabrica.jogo(CFG, *sys.argv[1:3])
+    if sys.argv[2:3] == ['coronha']:
+        fabrica.acessorio(CFG_CORONHA, sys.argv[1])
+    else:
+        fabrica.jogo(CFG, *sys.argv[1:3])

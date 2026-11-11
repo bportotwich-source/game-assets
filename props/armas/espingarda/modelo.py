@@ -29,6 +29,8 @@ F0 = 292.0 if CURTA else 295.0                # telha: trás
 FL = 155.0 if CURTA else 180.0                # telha: comprimento
 HS0, HS1 = RX1 + 40.0, XM - (130.0 if CURTA else 170.0)     # protetor de calor
 P_GAT = (41.0, -50.0)
+V_MIRA = RY1 + 5.5 + 11.0          # altura da linha de visada (centro do anel da alça, topo do poste da massa)
+U_ALCA = RX0 + 17.0                # alça de anel, no fundo do trilho
 PIC = [(7.85, 0), (10.6, -2.75), (7.9, -5.5), (-7.9, -5.5), (-10.6, -2.75), (-7.85, 0)]   # perfil do trilho (x, y a partir do topo)
 
 
@@ -79,7 +81,7 @@ def receptor():
     sec = [(RW, RY0 - 1), (RW, RY1 - 3.5), (RW - 3.5, RY1)]
     sec = sec + [(-w, v) for (w, v) in reversed(sec)]
     c = extr(sec, RX0 - 1, RX1 + 1, M_, plane='wv')
-    perfil = arred([(RX0, 4), (RX0 + 11, RY1), (RX1, RY1), (RX1, -30), (RX1 - 13, RY0), (RX0, RY0)], 2.2, 4)
+    perfil = arred([(RX0, 12), (RX0 + 5, RY1), (RX1, RY1), (RX1, -30), (RX1 - 13, RY0), (RX0, RY0)], 2.2, 4)
     cut(c, solido(perfil, -30, 30, M_), op='INTERSECT')
     pd = arred([(-24, -40), (112, -40), (112, -18.5), (108, -14.5), (-18, -14.5), (-24, -20)], 3.0, 4)
     pe = arred([(-24, -40), (170, -40), (185, -30), (185, 9), (-12, 9), (-24, 0)], 4.0, 4)
@@ -108,6 +110,11 @@ def receptor():
     t = extr([(x, RY1 + 5.5 + y) for (x, y) in PIC], RX0 + 6, RX1 - 6, M_, plane='wv')
     cut(t, [box(u - 5.23, u, RY1 + 2.5, RY1 + 8, -12, 12, M_) for u in [192.0 - i * 10.008 for i in range(22)]])
     o.append(bevel(t, 0.35, 1, 40))
+    # alça de anel em cima do trilho (a linha de visada passa pelo centro do anel, v = V_MIRA)
+    ba = solido(arred([(-12.6, 18.6), (12.6, 18.6), (12.6, 24.0), (8.5, 26.5), (-8.5, 26.5), (-12.6, 24.0)], 0.8, 3), U_ALCA - 9, U_ALCA + 9, 'fosf', plane='wv')
+    o.append(bevel(ba, 0.4, 1, 40))
+    o.append(bevel(tubo(U_ALCA - 3.2, U_ALCA + 3.2, 9.6, 6.0, 'fosf', v=V_MIRA, n=40), 0.5, 2, 40))
+    o.append(cyl((U_ALCA, 21.4, 12.4), (U_ALCA, 21.4, 14.6), 2.7, 'inox', n=14))
     # alojamento do gatilho e guarda-mato (polímero)
     cx = arred([(RX0 + 1, RY0 + 1), (88, RY0 + 1), (88, -52), (82, -56.5), (0, -56.5), (RX0 + 1, -52)], 1.5, 3)
     al = solido(cx, -12.8, 12.8, 'polim')
@@ -147,13 +154,17 @@ def receptor():
 def cano(pai):
     prof = [(RX1 - 6, RA), (RX1 - 6, 12.8), (RX1 + 34, 12.8), (RX1 + 50, RB), (XM - 1.5, RB), (XM, RB - 1.2), (XM, RA + 0.6), (XM - 2.0, RA)]
     o = [lathe(prof, 'aco_cano', n=48, anel=True)]
-    base = solido(arred([(XM - 18, RB - 1), (XM - 6, RB - 1), (XM - 7, RB + 2.2), (XM - 16, RB + 2.2)], 0.8, 3), -1.8, 1.8, 'aco_cano')   # base da massa
-    o.append(bevel(base, 0.3, 1, 40))
-    bm = bmesh.new()
-    bmesh.ops.create_uvsphere(bm, u_segments=14, v_segments=8, radius=1.9 * MM)
-    for v in bm.verts:
-        v.co += P(XM - 11.5, RB + 3.5, 0)
-    o.append(_obj('conta', bm, 'latao'))                                                           # conta de latão
+    # massa de mira: abraçadeira, rampa, poste com ponto branco e orelhas de proteção
+    u0, u1 = XM - 56.0, XM - 38.0
+    o.append(bevel(tubo(u0, u1, RB + 2.6, RB - 0.5, 'fosf', n=40), 0.4, 1, 40))
+    ms = solido(Polygon([(u0, RB + 1.2), (u1, RB + 1.2), (u1, 22.0), (u0 + 7, 22.0), (u0, RB + 5.5)]), -9.6, 9.6, 'fosf')
+    juntar = [box(u0 + 9.5, u0 + 13.0, 20.0, V_MIRA, -1.8, 1.8, 'fosf')]
+    for s in (-1, 1):
+        a, b = lados(s, 7.0, 9.6)
+        juntar.append(solido(Polygon([(u0 + 6, 20.0), (u1, 20.0), (u1, V_MIRA + 3.5), (u0 + 13, V_MIRA + 3.5), (u0 + 6, V_MIRA - 5)]), a, b, 'fosf'))
+    cut(ms, juntar, op='UNION')
+    o.append(bevel(ms, 0.4, 1, 40))
+    o.append(cyl((u0 + 9.5 - 0.15, V_MIRA - 2.2, 0), (u0 + 9.6, V_MIRA - 2.2, 0), 1.3, 'tinta_branca', n=14))
     # tubo do carregador, abraçadeira em 8 e olhal da bandoleira
     o.append(lathe([(RX1 - 10, 0), (RX1 - 10, TR), (XT, TR), (XT, 0)], 'aco_cano', n=48, c0=(0, TY, 0)))
     oito = unary_union([Point(0, 0).buffer(RB + 2.8, 12), Point(0, TY).buffer(TR + 1.4, 12), caixa2d(-7.5, TY, 7.5, 0)])

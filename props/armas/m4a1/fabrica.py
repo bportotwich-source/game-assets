@@ -331,3 +331,31 @@ def jogo(cfg, saida, fmt='webp'):
     json.dump(cat, open(arq_cat, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f"{ID} {r['triangulos']} tris {r['kb']} KB {r['tamanho_m']}  leve {tris_l} tris {r['kb_leve']} KB {tam_l}")
     print('  '.join(f"{p['no'][4:]}{p['posicao_m']}" for p in s))
+
+
+def acessorio(cfg, saida, fmt='webp'):
+    """GLB de um acessório refeito (cfg['id'] em acessorios/), com os nós e as animações do antigo
+    (cfg['esqueleto']) e o registro no catálogo. Sem versão leve."""
+    ID = cfg['id']
+    montar_cena(cfg, ID, os.path.join(saida, f"{cfg['nome']}.blend"))
+    tmp = os.path.join(saida, f'{ID}_sem_tex.glb')
+    bpy.ops.object.select_all(action='SELECT')
+    bpy.ops.export_scene.gltf(filepath=tmp, **EXPORTAR)
+    arq = os.path.join(ARMAS, 'acessorios', f'{ID}.glb')
+    empacotar.main(tmp, os.path.join(saida, 'tex'), arq, fmt)
+    animar(cfg, ID, arq)
+    arq_cat = os.path.join(ARMAS, 'catalogo.json')
+    cat = json.load(open(arq_cat, encoding='utf-8'))
+    r = next(x for x in cat['acessorios'] if x['id'] == ID)
+    r['tamanho_m'], r['triangulos'] = medir(arq)
+    r.update(gerador=cfg['gerador'], descricao=cfg.get('descricao', r['descricao']))
+    pos = {n['no']: n['posicao'] for n in cfg['esqueleto']['nos']}
+    for e in r.get('encaixes', []):                    # os encaixes do acessório seguem os nós novos
+        if e['no'] in pos:
+            e['posicao_m'] = pos[e['no']]
+    s = pontos_ref.aplicar_item(r, 'acessorios', {x['id']: x for x in cat['acessorios']})
+    r['kb'] = round(os.path.getsize(arq) / 1024, 1)
+    json.dump(cat, open(arq_cat, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    print(f"{ID} {r['triangulos']} tris {r['kb']} KB {r['tamanho_m']}")
+    if s:
+        print('  '.join(f"{p['no'][4:]}{p['posicao_m']}" for p in s))

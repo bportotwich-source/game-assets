@@ -737,15 +737,15 @@
    "recarga_por_cartucho": true,
    "estojo_s": 0.36,
    "bagos": 9,
-   "descricao": "Espingarda de bombeamento com coronha retrátil, punho de pistola, protetor de calor e trilho. 5 no tubo; a curta distância derruba qualquer zumbi, mas o estrondo chama tudo num raio de 110 m. Recarrega um cartucho por vez.",
+   "descricao": "Espingarda de bombeamento com coronha retrátil, punho de pistola, protetor de calor e trilho. 5 no tubo; a curta distância derruba qualquer zumbi, mas o estrondo chama tudo num raio de 110 m. Recarrega um cartucho por vez. Modelo detalhado, com texturas assadas (desgaste nas arestas, pontilhado no punho, gravações).",
    "arquivo": "armas/espingarda_12.glb",
    "tamanho_m": [
-    0.045,
-    0.179,
-    0.787
+    0.044,
+    0.199,
+    0.788
    ],
-   "triangulos": 71388,
-   "kb": 3616.5,
+   "triangulos": 52271,
+   "kb": 4258.7,
    "partes": [
     {
      "no": "gatilho",
@@ -1090,7 +1090,7 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.0264,
+      0.0275,
       -0.0741
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
@@ -1100,8 +1100,8 @@
      "pai": "telha",
      "posicao_m": [
       0.0,
-      0.0382,
-      -0.4172
+      0.0377,
+      -0.418
      ],
      "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
     },
@@ -1109,9 +1109,9 @@
      "no": "ref_coronha",
      "pai": "espingarda_12",
      "posicao_m": [
-      -0.0,
-      0.0369,
-      0.2762
+      0.0,
+      0.0274,
+      0.2544
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     },
@@ -1120,8 +1120,8 @@
      "pai": "espingarda_12",
      "posicao_m": [
       0.0,
-      0.1125,
-      -0.008
+      0.1235,
+      -0.015
      ],
      "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
     },
@@ -1145,7 +1145,11 @@
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "espingarda/jogo.py",
+   "arquivo_leve": "armas/espingarda_12_leve.glb",
+   "triangulos_leve": 6000,
+   "kb_leve": 845.0
   },
   {
    "id": "espingarda_12_curta",
@@ -1183,15 +1187,15 @@
    "recarga_por_cartucho": true,
    "estojo_s": 0.36,
    "bagos": 9,
-   "descricao": "Versão de cano curto e só punho, com freio dentado na boca: boa para arrombar portas e lutar dentro de casa. Espalha mais os bagos e coice forte; aceita coronha.",
+   "descricao": "Versão de cano curto e só punho, com freio dentado na boca: boa para arrombar portas e lutar dentro de casa. Espalha mais os bagos e coice forte; aceita coronha. Modelo detalhado, com texturas assadas (desgaste nas arestas, pontilhado no punho, gravações).",
    "arquivo": "armas/espingarda_12_curta.glb",
    "tamanho_m": [
-    0.045,
-    0.179,
-    0.635
+    0.044,
+    0.199,
+    0.636
    ],
-   "triangulos": 65262,
-   "kb": 3329.5,
+   "triangulos": 47965,
+   "kb": 4044.2,
    "partes": [
     {
      "no": "gatilho",
@@ -1515,7 +1519,7 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.0264,
+      0.0275,
       -0.0741
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
@@ -1525,7 +1529,7 @@
      "pai": "telha",
      "posicao_m": [
       0.0,
-      0.0382,
+      0.0377,
       -0.4025
      ],
      "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
@@ -1535,8 +1539,8 @@
      "pai": "espingarda_12_curta",
      "posicao_m": [
       0.0,
-      0.1125,
-      -0.008
+      0.1235,
+      -0.015
      ],
      "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
     },
@@ -1560,7 +1564,11 @@
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "espingarda/jogo.py",
+   "arquivo_leve": "armas/espingarda_12_curta_leve.glb",
+   "triangulos_leve": 6000,
+   "kb_leve": 854.7
   },
   {
    "id": "carabina_308",
@@ -13941,15 +13949,15 @@
     "quartel",
     "delegacia"
    ],
-   "descricao": "Tubo com coronha de polímero que corre em 5 posições (nó \"soleira\", animações estender/recolher). Segura o coice no ombro.",
+   "descricao": "Tubo com coronha de polímero que corre em 5 posições (nó \"soleira\", animações estender/recolher). Segura o coice no ombro. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/coronha_retratil_12.glb",
    "tamanho_m": [
-    0.043,
-    0.148,
-    0.277
+    0.039,
+    0.154,
+    0.264
    ],
-   "triangulos": 15612,
-   "kb": 736.4,
+   "triangulos": 4478,
+   "kb": 492.4,
    "partes": [
     {
      "no": "soleira",
@@ -13970,9 +13978,9 @@
      "tipo": "efeito",
      "pai": "soleira",
      "posicao_m": [
-      -0.0,
+      0.0,
       -0.05,
-      0.276
+      0.2515
      ],
      "descricao": "ponto da soleira que encosta no ombro"
     }
@@ -13995,12 +14003,13 @@
      "pai": "coronha_retratil_12",
      "posicao_m": [
       0.0,
-      -0.0491,
-      0.2742
+      -0.0586,
+      0.2524
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
-   ]
+   ],
+   "gerador": "espingarda/jogo.py"
   },
   {
    "id": "coronha_fixa_12",

@@ -11257,15 +11257,15 @@
     "armazem",
     "loja_caca"
    ],
-   "descricao": "Besta de 165 lb com braços recurvos e coronha esqueletada: atira forte e quase sem barulho, e pode ficar armada esperando (sem cansar o braço). Armar é lento: pé no estribo e puxar com as duas mãos. Mantenha os dedos embaixo das abas do guarda-mão.",
+   "descricao": "Besta de 165 lb com braços recurvos de fibra e coronha esqueletada: atira forte e quase sem barulho, e pode ficar armada esperando (sem cansar o braço). Armar é lento: pé no estribo e puxar com as duas mãos. Mantenha os dedos embaixo das abas do guarda-mão. Modelo detalhado, com texturas assadas (polímero verde-oliva, alumínio, corda torcida, gravações).",
    "arquivo": "armas/besta_recurva.glb",
    "tamanho_m": [
-    0.505,
-    0.19,
-    1.03
+    0.506,
+    0.187,
+    1.029
    ],
-   "triangulos": 28242,
-   "kb": 1488.2,
+   "triangulos": 37220,
+   "kb": 3724.4,
    "partes": [
     {
      "no": "braco_dir",
@@ -11576,7 +11576,7 @@
       0.0,
       0.0
      ],
-     "inclinacao_graus": 14.6,
+     "inclinacao_graus": 14.7,
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     },
     {
@@ -11604,8 +11604,8 @@
      "pai": "besta_recurva",
      "posicao_m": [
       0.0,
-      0.0359,
-      0.3835
+      0.0352,
+      0.3829
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     },
@@ -11613,7 +11613,7 @@
      "no": "ref_mira",
      "pai": "besta_recurva",
      "posicao_m": [
-      -0.0,
+      0.0,
       0.143,
       0.026
      ],
@@ -11639,7 +11639,11 @@
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "besta/jogo.py",
+   "arquivo_leve": "armas/besta_recurva_leve.glb",
+   "triangulos_leve": 6000,
+   "kb_leve": 960.0
   },
   {
    "id": "faca_combate",

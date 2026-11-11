@@ -9140,8 +9140,8 @@
      "pai": "fuzil_308_precisao",
      "posicao_m": [
       0.0,
-      0.0434,
-      0.3034
+      0.0508,
+      0.3075
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     },
@@ -9691,8 +9691,8 @@
      "pai": "fuzil_308_precisao_curto",
      "posicao_m": [
       0.0,
-      0.0434,
-      0.3034
+      0.0508,
+      0.3075
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     },
@@ -18162,15 +18162,15 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Coronha fixa alta, verde-oliva, com apoio de rosto que sobe e monopé de rosca: deixa o fuzil quieto deitado. Serve no tubo de qualquer fuzil.",
+   "descricao": "Coronha fixa alta, verde-oliva, com apoio de rosto que sobe e monopé de rosca: deixa o fuzil quieto deitado. Serve no tubo de qualquer fuzil. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/coronha_precisao_ar.glb",
    "tamanho_m": [
-    0.044,
-    0.151,
-    0.276
+    0.043,
+    0.154,
+    0.282
    ],
-   "triangulos": 20888,
-   "kb": 989.1,
+   "triangulos": 10288,
+   "kb": 697.5,
    "partes": [
     {
      "no": "apoio_face",
@@ -18212,12 +18212,13 @@
      "pai": "coronha_precisao_ar",
      "posicao_m": [
       0.0,
-      -0.0566,
-      0.2759
+      -0.0492,
+      0.28
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
-   ]
+   ],
+   "gerador": "atalaia/jogo.py"
   },
   {
    "id": "coronha_precisao_ar_preta",
@@ -18237,15 +18238,15 @@
     "quartel",
     "delegacia"
    ],
-   "descricao": "A mesma coronha de precisão, em polímero preto.",
+   "descricao": "A mesma coronha de precisão, em polímero preto. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/coronha_precisao_ar_preta.glb",
    "tamanho_m": [
-    0.044,
-    0.151,
-    0.276
+    0.043,
+    0.154,
+    0.282
    ],
-   "triangulos": 20888,
-   "kb": 989.2,
+   "triangulos": 10288,
+   "kb": 731.6,
    "partes": [
     {
      "no": "apoio_face",
@@ -18287,12 +18288,13 @@
      "pai": "coronha_precisao_ar_preta",
      "posicao_m": [
       0.0,
-      -0.0566,
-      0.2759
+      -0.0492,
+      0.28
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
-   ]
+   ],
+   "gerador": "atalaia/jogo.py"
   },
   {
    "id": "luneta_5_25",

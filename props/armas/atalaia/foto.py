@@ -19,9 +19,9 @@ for i, (p, e, s) in enumerate((((-0.5, 0.3, 0.8), 28, 0.6), ((0.7, -0.3, 0.5), 1
 cd = bpy.data.cameras.new('cam'); cam = bpy.data.objects.new('cam', cd); sc.collection.objects.link(cam); sc.camera = cam
 cd.type = 'ORTHO'
 sc.view_settings.view_transform = 'Standard'
-C = Vector((0, 0.36, 0.025))     # centro aproximado depois da origem no punho
+C = Vector((0, -0.14, -0.045)) if 'coronha' in sys.argv[1] else Vector((0, 0.36, 0.025))     # centro aproximado depois da origem no punho
 R = (1600, 1100)
-V = {'esq': ((-2, 0, 0), (0, 0, 0), 0.86, R), 'dir': ((2, 0, 0), (0, 0, 0), 0.86, R),
+V = {'cor': ((-2, 0, 0), (0, 0, 0), 0.42, R), 'cor34': ((1.4, -1.2, 0.8), (0, 0, 0), 0.42, R), 'esq': ((-2, 0, 0), (0, 0, 0), 0.86, R), 'dir': ((2, 0, 0), (0, 0, 0), 0.86, R),
      '34': ((-1.2, 1.4, 0.7), (0, 0, 0), 0.86, R), '34d': ((1.3, -1.2, 0.8), (0, 0, 0), 0.86, R),
      'cima': ((-0.3, 0, 2), (0, 0, 0.03), 0.86, (1600, 700)), 'perto': ((-1.5, -0.9, 0.7), (0, -0.27, 0.05), 0.30, R),
      'cabo': ((-2, 0.3, -0.2), (0, -0.02, 0.03), 0.34, R), 'boca': ((-0.9, 1.6, 0.4), (0, 0.28, 0.07), 0.30, R)}

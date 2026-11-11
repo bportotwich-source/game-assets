@@ -14,7 +14,7 @@ punho não é aumentado (é o mesmo punho dos outros fuzis), só acompanha o rec
 import sys, os, math
 import bpy
 from mathutils import Matrix, Vector
-from shapely.geometry import Polygon
+from shapely.geometry import Polygon, Point
 from lib import *
 import modelo as m4          # ../m4a1/modelo.py (este arquivo não se chama modelo.py para não o esconder)
 import acessorios as m4ac
@@ -149,3 +149,60 @@ def montar():
                 if m and m.name in VERDE:
                     o.data.materials[i] = M(VERDE[m.name])
     bpy.context.view_layer.update()
+
+
+# ------------------------------------------------------------------ coronha de precisão (acessório)
+def _pl(g):
+    return [(float(x), float(y)) for x, y in list(g.exterior.coords)[:-1]]
+
+
+def _arred(pts, r, n=6):
+    g = pts if hasattr(pts, 'exterior') else Polygon(pts)
+    return g.buffer(-r, quad_segs=n).buffer(2 * r, quad_segs=n).buffer(-r, quad_segs=n)
+
+
+def coronha():
+    """Coronha de precisão fixa (coronha_precisao_ar): corpo alto vazado, apoio de rosto que sobe
+    em duas hastes, soleira de borracha regulável e monopé de rosca. Origem no encaixe (u=0),
+    a coronha vai para trás (u negativo). VARIANTE=preta é a de polímero preto."""
+    pol = 'polim' if VARIANTE == 'preta' else 'verde_polim'
+    o = [lathe([(2, 12), (2, 19.2), (-1, 20.2), (-9, 20.2), (-9, 12)], 'fosf', n=36, lobes=0.06, lobe_min=19, anel=True)]     # porca do tubo
+    perfil = _arred([(-7, 15), (-84, 16), (-86, 9.5), (-212, 9.5), (-214, 16), (-256, 17), (-256, -114), (-234, -114), (-200, -80),
+                     (-120, -51), (-50, -39), (-7, -27)], 5.0, 6)
+    furo = _arred([(-76, -28), (-188, -22), (-212, -48), (-196, -68), (-150, -51), (-100, -38)], 7.0, 6)
+    c = extr(_pl(perfil), -17.5, 17.5, pol)
+    cortes = [extr(_pl(furo), -30, 30, pol),
+              cyl((-246, -104, -30), (-246, -104, 30), 4.6, pol, n=20)]                         # passador da bandoleira
+    for s in (-1, 1):                                                                           # painéis rebaixados dos lados
+        a, b = sorted((s * 15.6, s * 30))
+        cortes.append(extr(_pl(_arred([(-14, 8), (-76, 9), (-76, -20), (-14, -20)], 4.0, 5)), a, b, pol))
+        cortes.append(extr(_pl(_arred([(-222, 4), (-250, 5), (-250, -92), (-226, -92), (-222, -60)], 4.0, 5)), a, b, pol))
+    cut(c, cortes)
+    o.append(bevel(c, 3.6, 4, 40))
+    for s in (-1, 1):
+        o.append(cyl((-150, -4, s * 17.0), (-150, -4, s * 21.0), 7.0, 'serr', n=28, lobes=0.07))      # roda do apoio de rosto
+        o.append(cyl((-150, -4, s * 20.8), (-150, -4, s * 21.6), 3.0, 'inox', n=16))
+        o.append(cyl((-238, -20, s * 15.2), (-238, -20, s * 19.4), 6.4, 'serr', n=28, lobes=0.07))    # roda da soleira
+    corpo = parte('corpo_coronha', o, origem=(0, 0, 0), grupo='C', suave=40)
+
+    # espaçador e soleira
+    chapa = extr(_pl(_arred([(-256, 17), (-262, 17), (-262, -114), (-256, -114)], 1.2, 3)), -16.5, 16.5, 'fosf')
+    sol = extr(_pl(_arred([(-262, 18), (-276, 16), (-280, -40), (-279, -114), (-262, -116)], 3.5, 5)), -17.5, 17.5, 'borracha')
+    cut(sol, [box(-290, (-276 - 4 * (16 - v) / 56 if v > -40 else -279.8) + 1.6, v - 2.4, v, -15, 15, 'borracha') for v in range(8, -108, -6)])
+    parte('soleira_coronha', [bevel(chapa, 0.6, 1, 40), bevel(sol, 2.4, 3, 40),
+                              cyl((-250, -2, 0), (-263, -2, 0), 3.2, 'inox', n=14), cyl((-250, -84, 0), (-263, -84, 0), 3.2, 'inox', n=14)],
+          origem=(-262, -50, 0), pai=corpo, grupo='C', suave=40)
+    # monopé de rosca
+    parte('monope_coronha', [cyl((-220, -92, 0), (-220, -104, 0), 6.0, 'fosf', n=20),
+                             cyl((-220, -100, 0), (-220, -119, 0), 9.4, 'serr', n=32, lobes=0.06),
+                             cyl((-220, -119, 0), (-220, -124, 0), 8.8, 'borracha', n=24)],
+          origem=(-220, -100, 0), pai=corpo, grupo='C')
+    # apoio de rosto (nó apoio_face: sobe 15 mm)
+    sec = [(15.2, 10.5), (15.2, 20), (13.6, 25), (9.5, 28.6), (4, 30), (-4, 30), (-9.5, 28.6), (-13.6, 25), (-15.2, 20), (-15.2, 10.5)]
+    ap = extr(sec, -210, -90, pol, plane='wv')
+    bevel(ap, 2.2, 3, 40)
+    parte('apoio_rosto', [ap] + [cyl((u, -8, 0), (u, 12, 0), 3.4, 'inox', n=16) for u in (-116, -184)],
+          origem=(-150, 10, 0), pai=corpo, grupo='C', suave=40)
+    for q in PARTES:
+        q['grupo'] = 'C'
+    return corpo

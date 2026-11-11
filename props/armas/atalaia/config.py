@@ -12,6 +12,11 @@ def montar():
     montagem.montar()
 
 
+def montar_coronha():
+    import materiais, montagem
+    montagem.coronha()
+
+
 def _jogo(u, v, w=0.0):
     """Ponto do fuzil pronto (mm; u frente, v cima, w direita) nas coordenadas do jogo (m), com a origem no punho."""
     return [round(w / 1000, 4), round((v + 100) / 1000, 4), round(-(u + 40) / 1000, 4)]
@@ -55,3 +60,15 @@ CFG = dict(
         'curto': ('fuzil_308_precisao_curto',
                   'O mesmo fuzil com cano e guarda-mão curtos: mais fácil de virar dentro de casa, um pouco menos preciso de longe.' + _FIM),
     })
+
+# coronha de precisão (acessórios coronha_precisao_ar e coronha_precisao_ar_preta)
+_PRETA = VARIANTE == 'preta'
+CFG_CORONHA = dict(
+    nome='coronha_atalaia_preta' if _PRETA else 'coronha_atalaia', montar=montar_coronha, gerador='atalaia/jogo.py',
+    id='coronha_precisao_ar_preta' if _PRETA else 'coronha_precisao_ar',
+    origem=(0, 0, 0),                # encaixe_coronha
+    esqueleto=json.load(open(os.path.join(AQUI, 'esqueleto_coronha.json'), encoding='utf-8')),
+    nos={None: ['corpo_coronha', 'soleira_coronha', 'monope_coronha'], 'apoio_face': ['apoio_rosto']},
+    descricao=('A mesma coronha de precisão, em polímero preto. ' if _PRETA else
+               'Coronha fixa alta, verde-oliva, com apoio de rosto que sobe e monopé de rosca: deixa o fuzil quieto deitado. '
+               'Serve no tubo de qualquer fuzil. ') + 'Modelo detalhado, com texturas assadas.')

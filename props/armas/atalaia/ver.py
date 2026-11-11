@@ -10,8 +10,8 @@ CORES = {'verde_anod': (0.2, 0.24, 0.12), 'verde_polim': (0.17, 0.21, 0.11), 've
          'anod': (0.12, 0.12, 0.13), 'anod_tubo': (0.2, 0.2, 0.21), 'fosf_escuro': (0.16, 0.16, 0.16), 'borracha': (0.05, 0.05, 0.05), 'polim_claro': (0.3, 0.4, 0.25),
          'aco_cano': (0.3, 0.3, 0.3), 'polim': (0.13, 0.13, 0.13), 'inox': (0.5, 0.5, 0.5), 'latao': (0.8, 0.6, 0.2), 'cobre': (0.7, 0.35, 0.2),
          'tinta': (0.85, 0.85, 0.85), 'tinta_branca': (0.9, 0.9, 0.9), 'tinta_preta': (0.02, 0.02, 0.02)}
-C = Vector((0, 0.3, -0.03))
-VISTAS = {'esq': ((-2, 0, 0), 0.9, (1600, 1100)), 'dir': ((2, 0, 0), 0.9, (1600, 1100)), '34': ((-0.8, 1.4, 0.7), 0.9, (1600, 1100)),
+C = Vector((0, 0.3, -0.03)) if not os.environ.get("CORONHA") else Vector((0, -0.14, -0.045))
+VISTAS = {'cor': ((-2, 0, 0), 0.42, (1600, 1100)), 'cor34': ((1.4, -1.2, 0.8), 0.42, (1600, 1100)), 'cort': ((-0.9, -1.6, 0.6), 0.42, (1600, 1100)), 'esq': ((-2, 0, 0), 0.9, (1600, 1100)), 'dir': ((2, 0, 0), 0.9, (1600, 1100)), '34': ((-0.8, 1.4, 0.7), 0.9, (1600, 1100)),
           '34d': ((1.3, -0.8, 0.8), 0.9, (1600, 1100)), 'cima': ((0, 0, 2), 0.8, (1600, 500)), 'frente': ((0.5, 2, 0.3), 0.22, (1200, 1100)),
           'tras': ((-0.5, -2, 0.5), 0.22, (1200, 1100)), 'baixo': ((-0.6, 0.3, -2), 0.8, (1600, 1000))}
 
@@ -43,7 +43,7 @@ if __name__ == '__main__':
     bpy.ops.wm.read_factory_settings(use_empty=True)
     import montagem as modelo
     from lib import PARTES
-    modelo.montar()
+    modelo.coronha() if os.environ.get('CORONHA') else modelo.montar()
     for o in PARTES:
         print(f"{o.name:22s} {sum(len(p.vertices) - 2 for p in o.data.polygons):6d}")
     print('peças', len(PARTES), 'tris', sum(sum(len(p.vertices) - 2 for p in o.data.polygons) for o in PARTES), f'{time.time() - t:.0f}s')

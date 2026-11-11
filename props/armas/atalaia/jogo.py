@@ -6,10 +6,14 @@ mira_ferro) e as mesmas animações, lidos de esqueleto[_curto].json, mais a ver
 
 uso: python3 jogo.py saida [webp|jpg]               (saida = pasta do gerar.py)
      VARIANTE=curto python3 jogo.py saida_curto
+     python3 jogo.py saida_coronha coronha          (acessorios/coronha_precisao_ar.glb; VARIANTE=preta para a preta)
 """
 import sys
-from config import CFG
+from config import CFG, CFG_CORONHA
 import fabrica
 
 if __name__ == '__main__':
-    fabrica.jogo(CFG, *sys.argv[1:3])
+    if sys.argv[2:3] == ['coronha']:
+        fabrica.acessorio(CFG_CORONHA, sys.argv[1])
+    else:
+        fabrica.jogo(CFG, *sys.argv[1:3])

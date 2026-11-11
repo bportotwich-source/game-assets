@@ -10,6 +10,10 @@ texturas.CLASSES.update({
     'madeira_brasa':  ((0.070, 0.020, 0.007), 0.40, 0.0, (0.360, 0.130, 0.042), 0.36, 0.0, 0.55, 0.80, 1.5),   # laminado envernizado (a cor cheia vem do relevo)
     'baquelite_grip': ((0.085, 0.022, 0.012), 0.34, 0.0, (0.260, 0.085, 0.035), 0.30, 0.0, 0.60, 0.50, 1.4),
     'laca_verde':     ((0.070, 0.085, 0.040), 0.42, 0.60, (0.30, 0.30, 0.29), 0.30, 1.0, 0.50, 0.30, 0.8),     # estojo de aço laqueado
+    'aco_brasa_gasto': ((0.036, 0.034, 0.034), 0.52, 0.80, (0.33, 0.32, 0.31), 0.34, 1.0, 2.00, 0.45, 1.9),    # o mesmo aço, bem usado
+    'polim_gasto':     ((0.024, 0.024, 0.024), 0.62, 0.0, (0.085, 0.083, 0.078), 0.44, 0.0, 1.50, 1.00, 1.9),
+    'anod_gasto':      ((0.036, 0.038, 0.036), 0.50, 0.75, (0.32, 0.33, 0.34), 0.32, 1.0, 1.80, 0.30, 1.6),
+    'polim_brasa_grip': ((0.022, 0.022, 0.022), 0.62, 0.0, (0.075, 0.074, 0.070), 0.42, 0.0, 1.20, 1.00, 1.8),
     'tinta_branca':   ((0.80, 0.80, 0.76), 0.60, 0.0, None, 0, 0, 0, 0, 0),
 })
 DV_CABO = 0.0265
@@ -66,4 +70,5 @@ def laminado(nt, pos, geo):
 
 
 texturas.RELEVO['baquelite_grip'] = quadriculado
+texturas.RELEVO['polim_brasa_grip'] = quadriculado
 texturas.RELEVO['madeira_brasa'] = laminado

@@ -8658,15 +8658,15 @@
    "recarga_vazia_s": 2.8,
    "durabilidade": 3500,
    "estojo_s": 0.02,
-   "descricao": "Fuzil semiautomático .308 de cano longo, verde-oliva, com guarda-mão octogonal, coronha de precisão e luneta 5-25×. Acerta zumbi a 200 m e dá tiros seguidos sem mexer no ferrolho. Pesado e muito barulhento sem supressor.",
+   "descricao": "Fuzil semiautomático .308 de cano longo e pesado, verde-oliva, com guarda-mão octogonal, coronha de precisão e luneta 5-25×. Acerta zumbi a 200 m e dá tiros seguidos sem mexer no ferrolho. Pesado e muito barulhento sem supressor. Modelo detalhado, feito com as peças da M4A1 aumentadas e texturas assadas.",
    "arquivo": "armas/fuzil_308_precisao.glb",
    "tamanho_m": [
-    0.05,
-    0.188,
-    0.78
+    0.064,
+    0.214,
+    0.782
    ],
-   "triangulos": 44312,
-   "kb": 2105.8,
+   "triangulos": 26158,
+   "kb": 3368.1,
    "partes": [
     {
      "no": "punho",
@@ -9112,7 +9112,7 @@
       0.0,
       0.0
      ],
-     "inclinacao_graus": 17.3,
+     "inclinacao_graus": 16.6,
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     },
     {
@@ -9120,8 +9120,8 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.0434,
-      -0.0821
+      0.0377,
+      -0.0801
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
     },
@@ -9140,8 +9140,8 @@
      "pai": "fuzil_308_precisao",
      "posicao_m": [
       0.0,
-      0.0404,
-      0.2659
+      0.0508,
+      0.3075
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     },
@@ -9150,8 +9150,8 @@
      "pai": "fuzil_308_precisao",
      "posicao_m": [
       0.0,
-      0.146,
-      -0.028
+      0.1525,
+      0.005
      ],
      "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
     },
@@ -9170,12 +9170,16 @@
      "pai": "carregador",
      "posicao_m": [
       0.0,
-      -0.0254,
-      -0.1696
+      -0.0559,
+      -0.1562
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "atalaia/jogo.py",
+   "arquivo_leve": "armas/fuzil_308_precisao_leve.glb",
+   "triangulos_leve": 5999,
+   "kb_leve": 931.7
   },
   {
    "id": "fuzil_308_precisao_curto",
@@ -9205,15 +9209,15 @@
    "recarga_vazia_s": 2.8,
    "durabilidade": 3500,
    "estojo_s": 0.02,
-   "descricao": "O mesmo fuzil com cano e guarda-mão curtos: mais fácil de virar dentro de casa, um pouco menos preciso de longe.",
+   "descricao": "O mesmo fuzil com cano e guarda-mão curtos: mais fácil de virar dentro de casa, um pouco menos preciso de longe. Modelo detalhado, feito com as peças da M4A1 aumentadas e texturas assadas.",
    "arquivo": "armas/fuzil_308_precisao_curto.glb",
    "tamanho_m": [
-    0.05,
-    0.188,
-    0.61
+    0.064,
+    0.214,
+    0.612
    ],
-   "triangulos": 40836,
-   "kb": 1943.1,
+   "triangulos": 23774,
+   "kb": 3153.3,
    "partes": [
     {
      "no": "punho",
@@ -9659,7 +9663,7 @@
       0.0,
       0.0
      ],
-     "inclinacao_graus": 17.3,
+     "inclinacao_graus": 16.6,
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     },
     {
@@ -9667,8 +9671,8 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.0434,
-      -0.0821
+      0.0377,
+      -0.0801
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
     },
@@ -9687,8 +9691,8 @@
      "pai": "fuzil_308_precisao_curto",
      "posicao_m": [
       0.0,
-      0.0404,
-      0.2659
+      0.0508,
+      0.3075
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     },
@@ -9697,8 +9701,8 @@
      "pai": "fuzil_308_precisao_curto",
      "posicao_m": [
       0.0,
-      0.146,
-      -0.028
+      0.1525,
+      0.005
      ],
      "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
     },
@@ -9717,12 +9721,16 @@
      "pai": "carregador",
      "posicao_m": [
       0.0,
-      -0.0254,
-      -0.1696
+      -0.0559,
+      -0.1562
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "atalaia/jogo.py",
+   "arquivo_leve": "armas/fuzil_308_precisao_curto_leve.glb",
+   "triangulos_leve": 5999,
+   "kb_leve": 927.9
   },
   {
    "id": "pistola_guardia_9mm",
@@ -18154,15 +18162,15 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Coronha fixa alta, verde-oliva, com apoio de rosto que sobe e monopé de rosca: deixa o fuzil quieto deitado. Serve no tubo de qualquer fuzil.",
+   "descricao": "Coronha fixa alta, verde-oliva, com apoio de rosto que sobe e monopé de rosca: deixa o fuzil quieto deitado. Serve no tubo de qualquer fuzil. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/coronha_precisao_ar.glb",
    "tamanho_m": [
-    0.044,
-    0.151,
-    0.276
+    0.043,
+    0.154,
+    0.282
    ],
-   "triangulos": 20888,
-   "kb": 989.1,
+   "triangulos": 10288,
+   "kb": 697.5,
    "partes": [
     {
      "no": "apoio_face",
@@ -18204,12 +18212,13 @@
      "pai": "coronha_precisao_ar",
      "posicao_m": [
       0.0,
-      -0.0566,
-      0.2759
+      -0.0492,
+      0.28
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
-   ]
+   ],
+   "gerador": "atalaia/jogo.py"
   },
   {
    "id": "coronha_precisao_ar_preta",
@@ -18229,15 +18238,15 @@
     "quartel",
     "delegacia"
    ],
-   "descricao": "A mesma coronha de precisão, em polímero preto.",
+   "descricao": "A mesma coronha de precisão, em polímero preto. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/coronha_precisao_ar_preta.glb",
    "tamanho_m": [
-    0.044,
-    0.151,
-    0.276
+    0.043,
+    0.154,
+    0.282
    ],
-   "triangulos": 20888,
-   "kb": 989.2,
+   "triangulos": 10288,
+   "kb": 731.6,
    "partes": [
     {
      "no": "apoio_face",
@@ -18279,12 +18288,13 @@
      "pai": "coronha_precisao_ar_preta",
      "posicao_m": [
       0.0,
-      -0.0566,
-      0.2759
+      -0.0492,
+      0.28
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
-   ]
+   ],
+   "gerador": "atalaia/jogo.py"
   },
   {
    "id": "luneta_5_25",

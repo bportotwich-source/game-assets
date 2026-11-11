@@ -131,7 +131,7 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Balança de balcão (`balanca_correio`) | 9 | Correios | 0,36 × 0,32 × 0,30 | - | - | - | 404 |
 | Escaninho de triagem de cartas (`estante_triagem`) | 9 | Correios | 1,84 × 1,63 × 0,66 | 3 espaços: papel, pistas, chaves | - | - | 1000 |
 | Mesa com máquina de escrever (`mesa_maquina_escrever`) | 9 | Delegacia | 1,40 × 1,06 × 0,78 | 3 espaços: papel, chaves, armas | gaveta_1 | - | 2308 |
-| Armário de armas (`armario_armas`) | 9 | Delegacia | 1,00 × 1,90 × 0,50 | 6 espaços: armas, municao | porta_esq, porta_dir | barricada | 1268 |
+| Armário de armas de aço (`armario_armas`) | 9 | Delegacia | 1,02 × 1,90 × 0,52 | 16 espaços: armas, municao | porta_esq, porta_dir | barricada | 12581 |
 | Quadro de procurados e avisos (`quadro_procurados`) | 9 | Delegacia | 1,20 × 0,90 × 0,04 | - | - | - | 488 |
 | Banco de espera (3 lugares) (`banco_espera`) | 9 | Delegacia | 1,90 × 0,86 × 0,53 | - | - | sentar | 352 |
 | Cadeira de rodas (`cadeira_rodas`) | 9 | Saúde | 0,67 × 1,00 × 0,90 | - | - | sentar | 2180 |

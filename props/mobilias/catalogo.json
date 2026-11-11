@@ -4314,7 +4314,7 @@
   },
   {
    "id": "armario_armas",
-   "nome": "Armário de armas",
+   "nome": "Armário de armas de aço",
    "grupo": "mobilias",
    "categoria": "delegacia",
    "montagem": "floor",
@@ -4324,7 +4324,7 @@
     "quartel"
    ],
    "conteiner": true,
-   "slots": 6,
+   "slots": 16,
    "saque": [
     "armas",
     "municao"
@@ -4335,19 +4335,19 @@
    "barricada": true,
    "arquivo": "mobilias/armario_armas.glb",
    "tamanho_m": [
-    1.0,
+    1.017,
     1.9,
-    0.5
+    0.515
    ],
-   "triangulos": 1268,
-   "kb": 120.4,
+   "triangulos": 12581,
+   "kb": 1964.1,
    "partes": [
     {
      "no": "porta_esq",
      "origem": [
       -0.5,
       0,
-      0.232
+      0.217
      ],
      "tipo": "porta",
      "eixo": "y",
@@ -4358,12 +4358,199 @@
      "origem": [
       0.5,
       0,
-      0.232
+      0.217
      ],
      "tipo": "porta",
      "eixo": "y",
      "abre_graus": 110
     }
+   ],
+   "gerador": "moveis_realistas/armario_armas/gerar.py",
+   "grade": [
+    16,
+    6
+   ],
+   "vagas_armas": [
+    {
+     "tipo": "longa",
+     "parte": 0,
+     "pos": [
+      -0.36,
+      0.136,
+      -0.09
+     ],
+     "apoio": [
+      0.757,
+      -0.15
+     ],
+     "giro_graus": 55,
+     "comprimento_max_m": 1.14
+    },
+    {
+     "tipo": "longa",
+     "parte": 0,
+     "pos": [
+      -0.18,
+      0.136,
+      -0.09
+     ],
+     "apoio": [
+      0.757,
+      -0.15
+     ],
+     "giro_graus": 55,
+     "comprimento_max_m": 1.14
+    },
+    {
+     "tipo": "longa",
+     "parte": 1,
+     "pos": [
+      0.0,
+      0.136,
+      -0.09
+     ],
+     "apoio": [
+      0.757,
+      -0.15
+     ],
+     "giro_graus": 55,
+     "comprimento_max_m": 1.14
+    },
+    {
+     "tipo": "longa",
+     "parte": 1,
+     "pos": [
+      0.18,
+      0.136,
+      -0.09
+     ],
+     "apoio": [
+      0.757,
+      -0.15
+     ],
+     "giro_graus": 55,
+     "comprimento_max_m": 1.14
+    },
+    {
+     "tipo": "longa",
+     "parte": 1,
+     "pos": [
+      0.36,
+      0.136,
+      -0.09
+     ],
+     "apoio": [
+      0.757,
+      -0.15
+     ],
+     "giro_graus": 55,
+     "comprimento_max_m": 1.14
+    },
+    {
+     "tipo": "curta",
+     "parte": 0,
+     "pos": [
+      -0.36,
+      1.3099999999999998,
+      -0.005
+     ],
+     "comprimento_max_m": 0.36
+    },
+    {
+     "tipo": "curta",
+     "parte": 0,
+     "pos": [
+      -0.12,
+      1.3099999999999998,
+      -0.005
+     ],
+     "comprimento_max_m": 0.36
+    },
+    {
+     "tipo": "curta",
+     "parte": 1,
+     "pos": [
+      0.12,
+      1.3099999999999998,
+      -0.005
+     ],
+     "comprimento_max_m": 0.36
+    },
+    {
+     "tipo": "curta",
+     "parte": 1,
+     "pos": [
+      0.36,
+      1.3099999999999998,
+      -0.005
+     ],
+     "comprimento_max_m": 0.36
+    },
+    {
+     "tipo": "prateleira",
+     "parte": 0,
+     "pos": [
+      -0.4,
+      1.6099999999999999,
+      -0.03
+     ],
+     "largura_max_m": 0.15
+    },
+    {
+     "tipo": "prateleira",
+     "parte": 0,
+     "pos": [
+      -0.24,
+      1.6099999999999999,
+      -0.03
+     ],
+     "largura_max_m": 0.15
+    },
+    {
+     "tipo": "prateleira",
+     "parte": 0,
+     "pos": [
+      -0.08,
+      1.6099999999999999,
+      -0.03
+     ],
+     "largura_max_m": 0.15
+    },
+    {
+     "tipo": "prateleira",
+     "parte": 1,
+     "pos": [
+      0.08,
+      1.6099999999999999,
+      -0.03
+     ],
+     "largura_max_m": 0.15
+    },
+    {
+     "tipo": "prateleira",
+     "parte": 1,
+     "pos": [
+      0.24,
+      1.6099999999999999,
+      -0.03
+     ],
+     "largura_max_m": 0.15
+    },
+    {
+     "tipo": "prateleira",
+     "parte": 1,
+     "pos": [
+      0.4,
+      1.6099999999999999,
+      -0.03
+     ],
+     "largura_max_m": 0.15
+    }
+   ],
+   "aceita": [
+    "armas",
+    "municao",
+    "acessorios"
    ]
   },
   {

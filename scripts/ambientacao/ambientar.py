@@ -10,7 +10,8 @@ Regras de posicao:
   muro    pendurado na parede (itens montagem=wall), na altura sugerida
 Nenhum item fica na frente de uma porta (faixa de 0,9 m), nem em cima de outro, nem atravessa parede.
 
-Uso: python3 scripts/ambientacao/ambientar.py [kit ...]     (sem argumentos: todos os kits de kits.json)
+Uso: python3 scripts/ambientacao/ambientar.py [kit ...] [--forcar]     (sem argumentos: todos os kits de kits.json)
+Kit com "editado_a_mao" no ambientacao.json (salvo pelo Modo Mobiliar) fica como está, a não ser com --forcar.
 """
 import json, math, os, sys
 import numpy as np
@@ -404,7 +405,12 @@ def ambientar(kit, cfg, semente=0):
 
 def main(kits):
     cfgs = json.load(open(os.path.join(os.path.dirname(__file__), 'kits.json'), encoding='utf-8'))
+    forcar = '--forcar' in kits; kits = [k for k in kits if k != '--forcar']
     for k in kits or [k for k in cfgs if not k.startswith('_')]:
+        arq = os.path.join(RAIZ, 'kits', k, 'ambientacao.json')
+        # arrumado a mão no Modo Mobiliar do GameAssets.exe: não sorteia por cima (só com --forcar)
+        if not forcar and os.path.exists(arq) and json.load(open(arq, encoding='utf-8')).get('editado_a_mao'):
+            print(f'{k}: arrumado a mão, mantido (use --forcar para sortear de novo)'); continue
         res, itens, resumo = ambientar(k, cfgs[k])
         out = dict(kit=k, gerado_por='scripts/ambientacao/ambientar.py', convencao='pos em metros no espaço do prédio (mesmo do building_layout.json); rotY em graus; '
                    'itens de parede (montagem wall) têm o pivô na face de trás, já na altura sugerida', niveis={a['andar']: a['y'] for a in res['andares']}, comodos=resumo, itens=itens)

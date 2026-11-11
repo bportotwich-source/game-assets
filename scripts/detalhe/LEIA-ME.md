@@ -32,3 +32,7 @@ O `building_assembled.glb` (prévia do prédio inteiro) não é refeito por este
 ## Folhas de porta lisas (`portas.py`)
 
 `python3 scripts/detalhe/portas.py kits/<kit>/pieces/door_leaf_x.glb` troca uma folha que era só uma caixa por uma folha com almofadas em relevo, maçaneta e dobradiças, com a mesma largura, altura, pivô e materiais. Folha que já tem relevo é pulada. Já aplicado no diner, no posto e na porta de aço do supermercado; se o `gerar_kit.py` desses kits rodar de novo, rode o script outra vez.
+
+## Quinas arredondadas (`quinas.py`)
+
+`python3 scripts/detalhe/quinas.py kits/<kit>` arredonda as arestas em pé, de fora, a 90 graus (alvenaria 10 mm, madeira 4 mm; um chanfro só, com normais de arco, que sombreia como redondo), direto nos GLB das peças. Uma aresta só muda se estiver à mostra em todos os lugares onde a peça aparece no `building_layout.json`; emenda entre módulos fica viva. Nós, materiais e UV são mantidos e o nó `molduras` não é tocado. `--so-contar` só lista. Precisa de `bpy` e `rtree`. Já aplicado nos 13 kits do jogo.

@@ -11799,15 +11799,15 @@
     "loja_caca",
     "galpao"
    ],
-   "descricao": "Lâmina de 34 cm de aço carbono escurecido que alarga na ponta para pesar no golpe. Talas de madeira com rebites de latão e fiel de couro. Alcança mais que a faca e abre caminho no mato, mas o golpe é mais lento.",
+   "descricao": "Lâmina de 34 cm de aço carbono escurecido que alarga na ponta para pesar no golpe. Talas de madeira com rebites de latão e fiel de couro. Alcança mais que a faca e abre caminho no mato, mas o golpe é mais lento. Modelo detalhado, com texturas assadas (aço gasto, fio polido, veio da madeira).",
    "arquivo": "armas/facao.glb",
    "tamanho_m": [
-    0.027,
-    0.082,
-    0.493
+    0.03,
+    0.084,
+    0.494
    ],
-   "triangulos": 20562,
-   "kb": 1374.1,
+   "triangulos": 11762,
+   "kb": 1194.1,
    "encaixes": [
     {
      "no": "cinto",
@@ -11894,7 +11894,11 @@
      ],
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     }
-   ]
+   ],
+   "gerador": "facao/jogo.py",
+   "arquivo_leve": "armas/facao_leve.glb",
+   "triangulos_leve": 3000,
+   "kb_leve": 629.6
   },
   {
    "id": "machadinha_tatica",

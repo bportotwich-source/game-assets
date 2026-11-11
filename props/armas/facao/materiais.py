@@ -12,7 +12,7 @@ from texturas import _n, _math, _smooth, _noise
 
 # classe: cor base, rugosidade, metal, cor gasta, rug. gasta, metal gasto, quanto desgaste, grão, sujeira
 texturas.CLASSES.update({
-    'aco_facao':     ((0.040, 0.040, 0.042), 0.50, 0.80, (0.36, 0.35, 0.34), 0.34, 1.0, 0.0, 0.40, 1.6),     # aço carbono escurecido (sem desgaste de quina: a lâmina é fina demais para o bake)
+    'aco_facao':     ((0.060, 0.060, 0.063), 0.52, 0.35, (0.36, 0.35, 0.34), 0.34, 1.0, 0.0, 0.40, 1.6),     # aço carbono escurecido (sem desgaste de quina: a lâmina é fina demais para o bake)
     'madeira_facao': ((0.085, 0.036, 0.015), 0.50, 0.0, (0.200, 0.105, 0.050), 0.48, 0.0, 0.30, 1.00, 1.6),
     'couro_escuro':  ((0.030, 0.017, 0.010), 0.60, 0.0, (0.090, 0.055, 0.030), 0.55, 0.0, 0.0, 1.00, 0.0),
 })

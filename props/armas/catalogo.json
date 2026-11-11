@@ -10856,15 +10856,15 @@
     "armazem",
     "loja_caca"
    ],
-   "descricao": "Arco de punho de alumínio usinado com polias excêntricas (60 lb, alívio de 80%): a flecha sai mais rápida e reta que no recurvo, e segurar puxado quase não cansa. Mira de pinos e visor na corda. Polias e cabos precisam de cuidado: corda gasta arrebenta.",
+   "descricao": "Arco de punho de alumínio usinado com polias excêntricas (60 lb, alívio de 80%): a flecha sai mais rápida e reta que no recurvo, e segurar puxado quase não cansa. Mira de pinos e visor na corda. Polias e cabos precisam de cuidado: corda gasta arrebenta. Modelo detalhado, com texturas assadas (treliça usinada, corda e cabos torcidos, gravações).",
    "arquivo": "armas/arco_composto.glb",
    "tamanho_m": [
-    0.065,
+    0.066,
     0.864,
     0.782
    ],
-   "triangulos": 75930,
-   "kb": 3555.0,
+   "triangulos": 52667,
+   "kb": 5029.9,
    "partes": [
     {
      "no": "braco_cima",
@@ -11192,7 +11192,7 @@
      "no": "ref_corda",
      "pai": "laco_d",
      "posicao_m": [
-      -0.0,
+      0.0,
       0.06,
       0.1985
      ],
@@ -11202,7 +11202,7 @@
      "no": "ref_mira",
      "pai": "arco_composto",
      "posicao_m": [
-      -0.0,
+      0.0,
       0.132,
       0.5669
      ],
@@ -11218,7 +11218,11 @@
      ],
      "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
     }
-   ]
+   ],
+   "gerador": "composto/jogo.py",
+   "arquivo_leve": "armas/arco_composto_leve.glb",
+   "triangulos_leve": 5976,
+   "kb_leve": 1243.2
   },
   {
    "id": "besta_recurva",

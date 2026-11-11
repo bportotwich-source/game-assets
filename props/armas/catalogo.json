@@ -8402,15 +8402,15 @@
     "estacao"
    ],
    "estojo_s": 0.7,
-   "descricao": "Pistola de sinal de alumínio laranja, um tiro por vez. Não é arma: o sinal sobe uns 80 m e brilha 7 s. Vermelho pede socorro; verde chama sobreviventes para a sua posição, mas os zumbis também veem. De perto, o cartucho queima o alvo.",
+   "descricao": "Pistola de sinal de alumínio laranja, um tiro por vez. Não é arma: o sinal sobe uns 80 m e brilha 7 s. Vermelho pede socorro; verde chama sobreviventes para a sua posição, mas os zumbis também veem. De perto, o cartucho queima o alvo. Modelo detalhado, com texturas assadas (desgaste nas arestas, quadriculado nas talas, gravações).",
    "arquivo": "armas/pistola_sinalizadora.glb",
    "tamanho_m": [
-    0.03,
-    0.152,
+    0.032,
+    0.145,
     0.21
    ],
-   "triangulos": 40260,
-   "kb": 2071.3,
+   "triangulos": 19599,
+   "kb": 2623.0,
    "partes": [
     {
      "no": "cano",
@@ -8571,7 +8571,7 @@
       0.0,
       0.0
      ],
-     "inclinacao_graus": 22.5,
+     "inclinacao_graus": 21.5,
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     },
     {
@@ -8579,8 +8579,8 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.0194,
-      -0.0601
+      0.0202,
+      -0.06
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
     },
@@ -8588,7 +8588,7 @@
      "no": "ref_guarda_mao",
      "pai": "pistola_sinalizadora",
      "posicao_m": [
-      -0.0142,
+      -0.0154,
       -0.012,
       0.004
      ],
@@ -8624,7 +8624,11 @@
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "sinalizadora/jogo.py",
+   "arquivo_leve": "armas/pistola_sinalizadora_leve.glb",
+   "triangulos_leve": 4000,
+   "kb_leve": 746.8
   },
   {
    "id": "fuzil_308_precisao",

@@ -7593,15 +7593,15 @@
    "recarga_vazia_s": 2.6,
    "recuo": 0.06,
    "durabilidade": 5000,
-   "descricao": "Rifle leve de ferrolho na coronha de nogueira, com luneta 4× pequena. Para caça pequena (coelho, pombo): barulho baixo e munição barata e fácil de achar. Mata zumbi só com tiro na cabeça. Com o supressor quase não se ouve.",
+   "descricao": "Rifle leve de ferrolho na coronha de nogueira, com luneta 4× pequena. Para caça pequena (coelho, pombo): barulho baixo e munição barata e fácil de achar. Mata zumbi só com tiro na cabeça. Com o supressor quase não se ouve. Modelo detalhado, com texturas assadas (desgaste nas arestas, gravações).",
    "arquivo": "armas/rifle_22.glb",
    "tamanho_m": [
-    0.069,
-    0.143,
+    0.063,
+    0.149,
     0.929
    ],
-   "triangulos": 43282,
-   "kb": 2891.3,
+   "triangulos": 35217,
+   "kb": 2952.6,
    "partes": [
     {
      "no": "gatilho",
@@ -7903,8 +7903,8 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.0144,
-      -0.0561
+      0.018,
+      -0.0563
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
     },
@@ -7923,8 +7923,8 @@
      "pai": "rifle_22",
      "posicao_m": [
       0.0,
-      0.0125,
-      0.2707
+      0.0108,
+      0.2706
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     },
@@ -7953,12 +7953,16 @@
      "pai": "carregador",
      "posicao_m": [
       0.0,
-      0.0395,
+      0.0364,
       -0.104
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "pardal/jogo.py",
+   "arquivo_leve": "armas/rifle_22_leve.glb",
+   "triangulos_leve": 5999,
+   "kb_leve": 816.8
   },
   {
    "id": "rifle_22_sintetico",
@@ -7991,15 +7995,15 @@
    "recarga_vazia_s": 2.6,
    "recuo": 0.06,
    "durabilidade": 5000,
-   "descricao": "O mesmo rifle numa coronha preta de polímero que não liga para chuva. Vem só com as miras de ferro.",
+   "descricao": "O mesmo rifle numa coronha preta de polímero que não liga para chuva. Vem só com as miras de ferro. Modelo detalhado, com texturas assadas (desgaste nas arestas, gravações).",
    "arquivo": "armas/rifle_22_sintetico.glb",
    "tamanho_m": [
-    0.069,
-    0.143,
+    0.063,
+    0.149,
     0.929
    ],
-   "triangulos": 43282,
-   "kb": 2130.6,
+   "triangulos": 35217,
+   "kb": 2876.7,
    "partes": [
     {
      "no": "gatilho",
@@ -8301,8 +8305,8 @@
      "pai": "gatilho",
      "posicao_m": [
       0.0,
-      0.0144,
-      -0.0561
+      0.018,
+      -0.0563
      ],
      "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
     },
@@ -8321,8 +8325,8 @@
      "pai": "rifle_22_sintetico",
      "posicao_m": [
       0.0,
-      0.0125,
-      0.2707
+      0.0108,
+      0.2706
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     },
@@ -8351,12 +8355,16 @@
      "pai": "carregador",
      "posicao_m": [
       0.0,
-      0.0395,
+      0.0364,
       -0.104
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "gerador": "pardal/jogo.py",
+   "arquivo_leve": "armas/rifle_22_sintetico_leve.glb",
+   "triangulos_leve": 5999,
+   "kb_leve": 776.5
   },
   {
    "id": "pistola_sinalizadora",
@@ -17999,15 +18007,15 @@
    "peso_kg": 0.01,
    "raridade": "comum",
    "modificadores": {},
-   "descricao": "Alça de lâmina com entalhe em U, presa no cano. Deita para trás quando há luneta. Vem no rifle .22.",
+   "descricao": "Alça de lâmina com entalhe em U, presa no cano por uma sela. Deita para trás quando há luneta. Vem no rifle .22. Modelo detalhado, do Pardal .22 refeito.",
    "arquivo": "acessorios/alca_cano_22.glb",
    "tamanho_m": [
-    0.015,
+    0.013,
     0.016,
-    0.02
+    0.018
    ],
-   "triangulos": 412,
-   "kb": 22.3,
+   "triangulos": 580,
+   "kb": 75.0,
    "partes": [
     {
      "no": "lamina",
@@ -18029,7 +18037,8 @@
      "laco": false,
      "descricao": "deita a alça"
     }
-   }
+   },
+   "gerador": "pardal/jogo.py"
   },
   {
    "id": "protetor_rosca_22",
@@ -18040,15 +18049,16 @@
    "peso_kg": 0.01,
    "raridade": "comum",
    "modificadores": {},
-   "descricao": "Capinha recartilhada que protege a rosca da boca. Vem no rifle.",
+   "descricao": "Capinha recartilhada que protege a rosca da boca. Vem no rifle. Modelo detalhado, do Pardal .22 refeito.",
    "arquivo": "acessorios/protetor_rosca_22.glb",
    "tamanho_m": [
     0.018,
     0.018,
     0.013
    ],
-   "triangulos": 720,
-   "kb": 44.5
+   "triangulos": 672,
+   "kb": 80.9,
+   "gerador": "pardal/jogo.py"
   },
   {
    "id": "supressor_22",

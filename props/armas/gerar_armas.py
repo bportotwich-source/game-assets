@@ -1118,8 +1118,14 @@ def main(ids):
     if os.path.exists(arq):                                        # itens de outro gerador (campo "gerador") ficam sempre
         velho = json.load(open(arq, encoding='utf-8'))
         cat = {g: [r for r in velho.get(g, []) if (r['id'] not in ids if ids else r.get('gerador'))] for g in grupos}
+    outros = {r['id']: r['gerador'] for g in grupos for r in cat[g] if r.get('gerador')} if not ids else \
+             {r['id']: r['gerador'] for g in grupos for r in velho.get(g, []) if r.get('gerador')} if os.path.exists(arq) else {}
     for id_, it in REG.items():
         if ids and id_ not in ids: continue
+        if id_ in outros:                                          # refeita por outro gerador (ex.: guardia/jogo.py): não sobrescreve
+            print(f"{id_:30s} fica com o modelo de {outros[id_]}")
+            if ids: cat[it['grupo']].append(next(r for r in velho[it['grupo']] if r['id'] == id_))
+            continue
         r = exportar(it, AQUI); cat[it['grupo']].append(r)
         print(f"{id_:30s} {r['triangulos']:7d} tris {r['kb']:7.1f} KB  {r['tamanho_m']}")
     ordem = list(REG)

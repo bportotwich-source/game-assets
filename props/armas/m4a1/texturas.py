@@ -26,6 +26,7 @@ CLASSES = {
     'borracha':    ((0.014, 0.014, 0.014), 0.86, 0.0, (0.040, 0.040, 0.040), 0.70, 0.0, 0.50, 1.00, 1.5),
     'rotulo':      ((0.72, 0.50, 0.03), 0.50, 0.0, (0.62, 0.50, 0.20), 0.50, 0.0, 0.30, 0.20, 0.8),
 }
+RELEVO = {}                      # classe -> função(nt, posição, geometria) -> (altura, topo, fundo)
 GRIP = dict(T=(-0.160, -0.056), B=(-0.207, -0.146))        # eixo do punho (u, v) em metros
 
 
@@ -171,6 +172,12 @@ def montar_material(m, nome):
             cor = _mix(nt, _math(nt, 'MULTIPLY', topo, 0.5), cor, cg)
             r = _mixf(nt, _math(nt, 'MULTIPLY', topo, 0.6), r, rg)
             fundo = _math(nt, 'MULTIPLY', _math(nt, 'SUBTRACT', 1.0, _smooth(nt, pir, 0.0, 0.2)), masc)
+            S['ao_extra'] = _math(nt, 'SUBTRACT', 1.0, _math(nt, 'MULTIPLY', fundo, 0.45))
+        if nome in RELEVO:               # relevo próprio da classe (outras armas): altura (m), topo e fundo (0..1)
+            h, topo, fundo = RELEVO[nome](nt, pos, geo)
+            alt = _math(nt, 'ADD', alt, h)
+            cor = _mix(nt, _math(nt, 'MULTIPLY', topo, 0.5), cor, cg)
+            r = _mixf(nt, _math(nt, 'MULTIPLY', topo, 0.6), r, rg)
             S['ao_extra'] = _math(nt, 'SUBTRACT', 1.0, _math(nt, 'MULTIPLY', fundo, 0.45))
         ao2 = _n(nt, 'ShaderNodeAmbientOcclusion', inside=False, only_local=True, samples=16)
         ao2.inputs['Distance'].default_value = 0.03

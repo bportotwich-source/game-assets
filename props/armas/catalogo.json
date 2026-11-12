@@ -12537,15 +12537,15 @@
     "garagem",
     "abrigo"
    ],
-   "descricao": "Garrafa de vidro com combustível e um pano enfiado no gargalo, amarrado com barbante. Acenda o pano e jogue: quebra ao bater e deixa uma poça de fogo por alguns segundos. Ilumina a noite, mas chama atenção.",
+   "descricao": "Garrafa de vidro com combustível e um pano enfiado no gargalo, amarrado com barbante. Acenda o pano e jogue: quebra ao bater e deixa uma poça de fogo por alguns segundos. Ilumina a noite, mas chama atenção. Modelo detalhado, com texturas assadas.",
    "arquivo": "armas/coquetel_molotov.glb",
    "tamanho_m": [
-    0.067,
-    0.266,
-    0.067
+    0.068,
+    0.263,
+    0.068
    ],
-   "triangulos": 6964,
-   "kb": 335.0,
+   "triangulos": 2902,
+   "kb": 303.9,
    "partes": [
     {
      "no": "pavio",
@@ -12622,7 +12622,11 @@
      ],
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     }
-   ]
+   ],
+   "gerador": "arremessaveis/jogo.py",
+   "arquivo_leve": "armas/coquetel_molotov_leve.glb",
+   "triangulos_leve": 1800,
+   "kb_leve": 339.5
   },
   {
    "id": "bomba_pregos",
@@ -12655,15 +12659,15 @@
     "abrigo",
     "garagem"
    ],
-   "descricao": "Lata vazia fechada com fita, cheia de pregos por dentro e por fora, com um pavio verde na tampa. Acenda, jogue e corra: estoura 4 s depois e derruba um grupo, mas o estrondo atrai tudo num raio grande.",
+   "descricao": "Lata vazia fechada com fita, cheia de pregos por dentro e por fora, com um pavio verde na tampa. Acenda, jogue e corra: estoura 4 s depois e derruba um grupo, mas o estrondo atrai tudo num raio grande. Modelo detalhado, com texturas assadas.",
    "arquivo": "armas/bomba_pregos.glb",
    "tamanho_m": [
-    0.083,
-    0.152,
-    0.083
+    0.084,
+    0.151,
+    0.084
    ],
-   "triangulos": 5912,
-   "kb": 283.5,
+   "triangulos": 3600,
+   "kb": 565.5,
    "partes": [
     {
      "no": "pavio",
@@ -12723,7 +12727,11 @@
      ],
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     }
-   ]
+   ],
+   "gerador": "arremessaveis/jogo.py",
+   "arquivo_leve": "armas/bomba_pregos_leve.glb",
+   "triangulos_leve": 2400,
+   "kb_leve": 531.1
   },
   {
    "id": "isca_sonora",
@@ -12752,15 +12760,15 @@
     "hotel",
     "abrigo"
    ],
-   "descricao": "Despertador de corda com duas campainhas. Dê corda, jogue longe e ele toca por uns 20 s: os zumbis vão atrás do barulho. Dá para pegar de volta e usar de novo, se ninguém pisar nele.",
+   "descricao": "Despertador de corda com duas campainhas. Dê corda, jogue longe e ele toca por uns 20 s: os zumbis vão atrás do barulho. Dá para pegar de volta e usar de novo, se ninguém pisar nele. Modelo detalhado, com texturas assadas.",
    "arquivo": "armas/isca_sonora.glb",
    "tamanho_m": [
-    0.047,
-    0.132,
-    0.108
+    0.052,
+    0.133,
+    0.103
    ],
-   "triangulos": 4820,
-   "kb": 231.7,
+   "triangulos": 3764,
+   "kb": 564.6,
    "partes": [
     {
      "no": "ponteiro_horas",
@@ -12861,7 +12869,11 @@
      ],
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     }
-   ]
+   ],
+   "gerador": "arremessaveis/jogo.py",
+   "arquivo_leve": "armas/isca_sonora_leve.glb",
+   "triangulos_leve": 2400,
+   "kb_leve": 434.7
   },
   {
    "id": "fuzil_m4a1",

@@ -14,7 +14,7 @@ Ingredientes são ids do loot (`props/loot/catalogo.json`); estações e constru
 | Barricada de tábuas para porta (`barricada_porta`) | 5 | 6× Tábua de madeira (`tabua`), 1× Caixa de pregos (`caixa_pregos`) | Martelo de unha (`martelo`) | - | - |
 | Colchão no chão (`colchao_chao`) | 5 | 1× colchão tirado de uma cama | à mão | - | - |
 | Fogueira de pedras (`fogueira`) | 5 | 3× Feixe de lenha (`lenha`), 10× Punhado de pedras (`pedras`) | à mão | - | - |
-| Baú de madeira com cadeado (`bau_madeira`) | 14 | 5× Tábua de madeira (`tabua`), 1× Par de dobradiças (`dobradicas`), 1× Caixa de pregos (`caixa_pregos`) | Martelo de unha (`martelo`) | Bancada de carpintaria de cavaletes (`bancada_carpintaria`) | - |
+| Baú de madeira com cadeado (`bau_madeira`) | 14 | 5× Tábua de madeira (`tabua`), 1× Par de dobradiças (`dobradicas`), 1× Caixa de pregos (`caixa_pregos`) | Martelo de unha (`martelo`) | Bancada de carpintaria com morsa (`bancada_carpintaria`) | - |
 | Lenheiro coberto (`lenheiro`) | 14 | 6× Tábua de madeira (`tabua`), 2× Chapa de metal ondulada (`chapa_metal`), 1× Caixa de pregos (`caixa_pregos`) | Martelo de unha (`martelo`) | - | - |
 | Prateleira de tábuas e tijolos (`prateleira_improvisada`) | 14 | 3× Tábua de madeira (`tabua`), 6× Tijolos (`tijolo`) | à mão | - | - |
 | Suporte de parede para armas (`rack_armas_parede`) | 14 | 2× Tábua de madeira (`tabua`), 1× Cano de ferro (`cano_metal`), 1× Caixa de pregos (`caixa_pregos`) | Martelo de unha (`martelo`) | - | - |
@@ -47,11 +47,11 @@ Ingredientes são ids do loot (`props/loot/catalogo.json`); estações e constru
 | Cavalete de serrar lenha (`cavalete_serra`) | 11 | 3× Tábua de madeira (`tabua`), 1× Caixa de pregos (`caixa_pregos`) | à mão | - | - |
 | Espantalho (`espantalho`) | 11 | 1× Pilha de roupas dobradas (`roupas`), 2× palha (fardo de feno), 1× Tábua de madeira (`tabua`) | à mão | - | - |
 | Galinheiro de tela (`galinheiro`) | 11 | 6× Tábua de madeira (`tabua`), 0× Rolo de arame farpado (`arame_farpado`), 2× Chapa de metal ondulada (`chapa_metal`), 1× Caixa de pregos (`caixa_pregos`) | à mão | - | - |
-| Armário de armas de madeira com tela (`armario_armas_abrigo`) | 14 | 8× Tábua de madeira (`tabua`), 1× Caixa de pregos (`caixa_pregos`), 1× Par de dobradiças (`dobradicas`), 1× Corrente com cadeado (`corrente_cadeado`), 1× Rolo de arame liso (`arame_liso`) | Martelo de unha (`martelo`) | Bancada de carpintaria de cavaletes (`bancada_carpintaria`) | - |
-| Estante de despensa com caixotes (`despensa`) | 14 | 10× Tábua de madeira (`tabua`), 1× Caixa de pregos (`caixa_pregos`) | Martelo de unha (`martelo`) | Bancada de carpintaria de cavaletes (`bancada_carpintaria`) | - |
+| Armário de armas de madeira com tela (`armario_armas_abrigo`) | 14 | 8× Tábua de madeira (`tabua`), 1× Caixa de pregos (`caixa_pregos`), 1× Par de dobradiças (`dobradicas`), 1× Corrente com cadeado (`corrente_cadeado`), 1× Rolo de arame liso (`arame_liso`) | Martelo de unha (`martelo`) | Bancada de carpintaria com morsa (`bancada_carpintaria`) | - |
+| Estante de despensa com caixotes (`despensa`) | 14 | 10× Tábua de madeira (`tabua`), 1× Caixa de pregos (`caixa_pregos`) | Martelo de unha (`martelo`) | Bancada de carpintaria com morsa (`bancada_carpintaria`) | - |
 | Colete de placas de sucata (`colete_sucata`) | 15 | 1× Chapa de metal ondulada (`chapa_metal`), 2× Retalho de couro (`couro`), 1× Pote de parafusos e porcas (`pote_parafusos`), 1× Rolo de corda (`corda`) | Martelo de unha (`martelo`) | Bancada de trabalho com morsa (`bancada_trabalho`) | 240 s |
 | Alambique de panela (`alambique`) | 16 | 1× Panela com tampa (`panela`), 1× Cano de PVC (`tubo_pvc`), 1× Cano de ferro (`cano_metal`), 1× Tambor de 200 L (`tambor_200l`), 6× Tijolos (`tijolo`) | Chave inglesa (`chave_inglesa`) | - | - |
-| Bancada de carpintaria de cavaletes (`bancada_carpintaria`) | 16 | 6× Tábua de madeira (`tabua`), 1× Caixa de pregos (`caixa_pregos`) | Serrote (`serrote`) | - | - |
+| Bancada de carpintaria com morsa (`bancada_carpintaria`) | 16 | 6× Tábua de madeira (`tabua`), 1× Caixa de pregos (`caixa_pregos`) | Serrote (`serrote`) | - | - |
 | Cama de pallet com colchão (`cama_pallet`) | 16 | 2× Pallet de madeira (`pallet`), 1× Colchão no chão (`colchao_chao`) | à mão | - | - |
 | Composteira de pallets (`composteira`) | 16 | 3× Pallet de madeira (`pallet`), 1× Rolo de arame liso (`arame_liso`) | à mão | - | - |
 | Defumador de tábuas (`defumador`) | 16 | 8× Tábua de madeira (`tabua`), 1× Chapa de metal ondulada (`chapa_metal`), 1× Caixa de pregos (`caixa_pregos`), 4× Tijolos (`tijolo`) | Martelo de unha (`martelo`) | - | - |
@@ -65,7 +65,7 @@ Ingredientes são ids do loot (`props/loot/catalogo.json`); estações e constru
 | Chapa de seteira para janela (`seteira`) | 17 | 2× Chapa de metal ondulada (`chapa_metal`), 2× Tábua de madeira (`tabua`), 1× Pote de parafusos e porcas (`pote_parafusos`) | Chave inglesa (`chave_inglesa`) | - | - |
 | Grade de janela de vergalhão (`grade_janela`) | 17 | 3× Cano de ferro (`cano_metal`), 4× Punhado de sucata (`sucata_metal`), 1× Pote de parafusos e porcas (`pote_parafusos`) | Chave inglesa (`chave_inglesa`) | Forja de tambor com fole (`forja_tambor`) | - |
 | Parede de sacos de areia (`parede_sacos`) | 17 | 12× Saco de areia (`saco_areia`) | Pá (`pa`) | - | - |
-| Porta reforçada com chapa (`porta_reforcada`) | 17 | 2× Chapa de metal ondulada (`chapa_metal`), 3× Tábua de madeira (`tabua`), 1× Pote de parafusos e porcas (`pote_parafusos`), 1× Corrente com cadeado (`corrente_cadeado`) | Chave inglesa (`chave_inglesa`) | Bancada de carpintaria de cavaletes (`bancada_carpintaria`) | - |
+| Porta reforçada com chapa (`porta_reforcada`) | 17 | 2× Chapa de metal ondulada (`chapa_metal`), 3× Tábua de madeira (`tabua`), 1× Pote de parafusos e porcas (`pote_parafusos`), 1× Corrente com cadeado (`corrente_cadeado`) | Chave inglesa (`chave_inglesa`) | Bancada de carpintaria com morsa (`bancada_carpintaria`) | - |
 | Sino de alarme de botijão (`sino_alarme`) | 17 | 3× Tábua de madeira (`tabua`), 1× Corrente com cadeado (`corrente_cadeado`), 1× Cano de ferro (`cano_metal`) | Serrote (`serrote`) | - | - |
 
 ### Fase 3 · Assentamento
@@ -84,7 +84,7 @@ Ingredientes são ids do loot (`props/loot/catalogo.json`); estações e constru
 | Estufa de cano e plástico (`estufa`) | 18 | 8× Cano de PVC (`tubo_pvc`), 2× Rolo de plástico transparente (`rolo_plastico`), 6× Tábua de madeira (`tabua`), 10× terra (cavar com pá) | Pá (`pa`) | - | - |
 | Latrina de tábuas com fossa (`latrina`) | 18 | 10× Tábua de madeira (`tabua`), 1× Caixa de pregos (`caixa_pregos`), 1× Chapa de metal ondulada (`chapa_metal`) | Pá (`pa`) | - | - |
 | Maca de campanha dobrável (`maca_campanha`) | 18 | 3× Cano de ferro (`cano_metal`), 1× Lona dobrada (`lona`), 1× Rolo de corda (`corda`) | Chave inglesa (`chave_inglesa`) | Mesa de costura com máquina manual (`bancada_costura`) | - |
-| Mesa comprida do refeitório com bancos (`mesa_refeitorio`) | 18 | 10× Tábua de madeira (`tabua`), 1× Caixa de pregos (`caixa_pregos`) | Martelo de unha (`martelo`) | Bancada de carpintaria de cavaletes (`bancada_carpintaria`) | - |
+| Mesa comprida do refeitório com bancos (`mesa_refeitorio`) | 18 | 10× Tábua de madeira (`tabua`), 1× Caixa de pregos (`caixa_pregos`) | Martelo de unha (`martelo`) | Bancada de carpintaria com morsa (`bancada_carpintaria`) | - |
 | Painéis solares no cavalete com baterias (`painel_solar`) | 18 | 4× Feixe de lenha (`lenha`), 2× Rolo de fio elétrico (`fio_eletrico`), 2× Bateria de carro (`bateria_carro`), 1× Placa de circuito (`placa_circuito`), 2× Tábua de madeira (`tabua`) | Chave inglesa (`chave_inglesa`) | Bancada de eletrônica (`bancada_eletronica`) | - |
 | Panelão no tripé sobre fogueira (`panelao_tripe`) | 18 | 3× Feixe de lenha (`lenha`), 1× Corrente com cadeado (`corrente_cadeado`), 8× Punhado de pedras (`pedras`), 4× Punhado de sucata (`sucata_metal`) | Martelo de unha (`martelo`) | Forja de tambor com fole (`forja_tambor`) | - |
 | Poço de pedra com sarilho (`poco_sarilho`) | 18 | 24× Punhado de pedras (`pedras`), 2× Saco de cimento 25 kg (`cimento`), 4× Feixe de lenha (`lenha`), 1× Rolo de corda (`corda`), 1× Chapa de metal ondulada (`chapa_metal`) | Pá (`pa`) | - | - |
@@ -96,7 +96,7 @@ Ingredientes são ids do loot (`props/loot/catalogo.json`); estações e constru
 | Item | Lote | Ingredientes | Ferramenta | Estação | Tempo |
 |---|---|---|---|---|---|
 | Banca de feira com toldo (`banca_feira`) | 19 | 6× Tábua de madeira (`tabua`), 1× Lona dobrada (`lona`), 4× Feixe de lenha (`lenha`), 1× Caixa de pregos (`caixa_pregos`) | Martelo de unha (`martelo`) | - | - |
-| Estação de tratamento de água em tambores (`tratamento_agua`) | 19 | 3× Tambor de 200 L (`tambor_200l`), 6× Cano de PVC (`tubo_pvc`), 6× Punhado de pedras (`pedras`), 4× Saco de carvão (`carvao`), 6× Tábua de madeira (`tabua`) | Chave inglesa (`chave_inglesa`) | Bancada de carpintaria de cavaletes (`bancada_carpintaria`) | - |
+| Estação de tratamento de água em tambores (`tratamento_agua`) | 19 | 3× Tambor de 200 L (`tambor_200l`), 6× Cano de PVC (`tubo_pvc`), 6× Punhado de pedras (`pedras`), 4× Saco de carvão (`carvao`), 6× Tábua de madeira (`tabua`) | Chave inglesa (`chave_inglesa`) | Bancada de carpintaria com morsa (`bancada_carpintaria`) | - |
 | Forno de barro comunitário (`forno_comunitario`) | 19 | 30× Tijolos (`tijolo`), 8× terra (cavar com pá), 2× palha (fardo de feno), 1× Cano de ferro (`cano_metal`) | Pá (`pa`) | - | - |
 | Memorial aos que se foram (`memorial`) | 19 | 6× Tábua de madeira (`tabua`), 10× Punhado de pedras (`pedras`), 2× Vela e caixa de fósforos (`vela_fosforos`) | Martelo de unha (`martelo`) | - | - |
 | Módulo de muralha de blocos com passarela (`muralha_concreto`) | 19 | 4× Saco de cimento 25 kg (`cimento`), 20× Tijolos (`tijolo`), 2× Cano de ferro (`cano_metal`), 1× Rolo de arame farpado (`arame_farpado`), 4× Tábua de madeira (`tabua`) | Pá (`pa`) | - | - |
@@ -117,7 +117,7 @@ Ingredientes são ids do loot (`props/loot/catalogo.json`); estações e constru
 | Estação | Fase | Fabrica | Produz sozinha (com um morador) |
 |---|---|---|---|
 | Alambique de panela (`alambique`) | 2 | - | 1× Garrafa de álcool 70 % (`alcool`) a cada 90 min, gastando 3 comida, 1 lenha |
-| Bancada de carpintaria de cavaletes (`bancada_carpintaria`) | 2 | Armário de armas de madeira com tela, Estante de despensa com caixotes, Baú de madeira com cadeado, Porta reforçada com chapa, Mesa comprida do refeitório com bancos, Estação de tratamento de água em tambores | - |
+| Bancada de carpintaria com morsa (`bancada_carpintaria`) | 2 | Armário de armas de madeira com tela, Estante de despensa com caixotes, Baú de madeira com cadeado, Porta reforçada com chapa, Mesa comprida do refeitório com bancos, Estação de tratamento de água em tambores | - |
 | Mesa de costura com máquina manual (`bancada_costura`) | 2 | Maca de campanha dobrável | - |
 | Composteira de pallets (`composteira`) | 2 | - | 1× Saco de adubo de composto (`adubo`) a cada 1440 min, gastando 4 restos de comida |
 | Defumador de tábuas (`defumador`) | 2 | - | 4× Peça de carne defumada (`carne_defumada`) a cada 240 min, gastando 4 carne crua, 1 lenha |

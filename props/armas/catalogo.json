@@ -12259,15 +12259,15 @@
     "escolinha",
     "abrigo"
    ],
-   "descricao": "Taco de madeira com uns vinte pregos batidos na parte grossa, alguns entortados, e pega de fita isolante. Bate bem mais que o taco e rasga, mas às vezes prende no alvo e precisa ser arrancado. Feito na bancada com uma caixa de pregos.",
+   "descricao": "Taco de madeira com uns vinte pregos batidos na parte grossa, alguns entortados, e pega de fita isolante. Bate bem mais que o taco e rasga, mas às vezes prende no alvo e precisa ser arrancado. Feito na bancada com uma caixa de pregos. Modelo detalhado, com texturas assadas (veio, mossas, fita enrolada).",
    "arquivo": "armas/bastao_pregos.glb",
    "tamanho_m": [
-    0.138,
-    0.14,
+    0.133,
+    0.129,
     0.841
    ],
-   "triangulos": 13016,
-   "kb": 803.1,
+   "triangulos": 12308,
+   "kb": 990.3,
    "encaixes": [
     {
      "no": "mao_cima",
@@ -12356,7 +12356,11 @@
      ],
      "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
     }
-   ]
+   ],
+   "gerador": "bastao/jogo.py",
+   "arquivo_leve": "armas/bastao_pregos_leve.glb",
+   "triangulos_leve": 4000,
+   "kb_leve": 392.9
   },
   {
    "id": "bastao_arame",
@@ -12394,15 +12398,15 @@
     "escolinha",
     "abrigo"
    ],
-   "descricao": "Taco de madeira com arame farpado enrolado na parte grossa, pontas amarradas e torcidas, e pega de fita isolante. Rasga e faz sangrar; prende menos que o de pregos, mas o arame afrouxa e quebra antes. Feito na bancada com um rolo de arame farpado.",
+   "descricao": "Taco de madeira com arame farpado enrolado na parte grossa, pontas amarradas e torcidas, e pega de fita isolante. Rasga e faz sangrar; prende menos que o de pregos, mas o arame afrouxa e quebra antes. Feito na bancada com um rolo de arame farpado. Modelo detalhado, com texturas assadas (veio, mossas, fita enrolada).",
    "arquivo": "armas/bastao_arame.glb",
    "tamanho_m": [
     0.088,
-    0.097,
+    0.098,
     0.841
    ],
-   "triangulos": 43254,
-   "kb": 2220.2,
+   "triangulos": 33968,
+   "kb": 3732.0,
    "encaixes": [
     {
      "no": "mao_cima",
@@ -12491,7 +12495,11 @@
      ],
      "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
     }
-   ]
+   ],
+   "gerador": "bastao/jogo.py",
+   "arquivo_leve": "armas/bastao_arame_leve.glb",
+   "triangulos_leve": 3824,
+   "kb_leve": 1419.9
   },
   {
    "id": "coquetel_molotov",

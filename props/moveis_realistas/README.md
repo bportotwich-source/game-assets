@@ -99,3 +99,19 @@ Nós: `corpo`, `armacao`, `ferragens`, `tampa` (origem no eixo das dobradiças, 
 dentro. No jogo é o maior contêiner: uma grade só de **12 × 8** (96 espaços), construído na forja de tambor com
 4 chapas de metal, 2 canos, 1 par de dobradiças e 1 corrente com cadeado, com martelo (fase 2).
 A chapa ondulada sai de `modelo._ondulada` e serve para outras peças.
+
+## Mesa de costura com máquina manual (`bancada_costura`)
+
+1,11 × 1,13 × 0,61 m, 13,0 mil triângulos, 3 conjuntos de textura (mesa e quadro 2048; máquina 2048; panos, carretéis e
+miudezas 1024). Mesa de pés torneados com gavetinha fixa, máquina de costura de ferro esmaltado com volante e manivela
+(sem marca), quadro de linhas atrás com os carretéis, panos dobrados, tesoura, alfineteiro, fita métrica, lata de
+botões e um cesto de vime com rolos de pano embaixo. Nós: `mesa`, `tampo`, `maquina`, `linhas`, `miudezas`, `cesto`.
+Classes novas: `esmalte_preto`, `dourado`, `pano_*` (trama por textura) e `vime`.
+
+## Mesa de enfermaria improvisada (`mesa_enfermaria`)
+
+2,44 × 1,82 × 0,72 m, 8,6 mil triângulos, 3 conjuntos de textura (cavaletes, tábuas e caixote 2048; colchão e roupa de
+cama 1024; soro e miudezas 1024). Tábuas sobre dois cavaletes, colchão de listras, lençol, cobertor de lã e travesseiro,
+um frasco de soro pendurado num pau amarrado à cabeceira e um caixote-criado com cruz vermelha: bacia de ágata, frascos,
+ataduras e bandeja de instrumentos. Nós: `estrado`, `caixote`, `cama`, `soro`, `miudezas`.
+Atenção: `lib.lathe` fecha as pontas do perfil no eixo; um anel solto vira tampa (foi o que escondeu a bacia).

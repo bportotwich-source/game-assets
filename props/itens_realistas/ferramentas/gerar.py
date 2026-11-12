@@ -13,7 +13,8 @@ from PIL import Image
 
 PROPS = os.path.dirname(os.path.dirname(AQUI))
 GERADOR = 'itens_realistas/ferramentas/gerar.py'
-TEXTURA = {'martelo': 512, 'machado': 1024, 'serrote': 1024, 'tabua': 1024, 'caixa_pregos': 512}   # lado da textura no GLB
+TEXTURA = {'martelo': 512, 'machado': 1024, 'serrote': 1024, 'tabua': 1024, 'caixa_pregos': 512,
+           'cano_metal': 512, 'chapa_metal': 1024, 'sucata_metal': 512}   # lado da textura no GLB
 
 
 def medir(arq):

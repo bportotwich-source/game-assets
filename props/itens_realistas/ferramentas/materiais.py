@@ -10,5 +10,22 @@ forja = municao.forja
 # classe: cor base, rugosidade, metal, cor gasta, rug. gasta, metal gasto, quanto desgaste, grão, sujeira
 texturas.CLASSES.update({
     'prego':    ((0.330, 0.330, 0.340), 0.42, 1.0, (0.330, 0.330, 0.340), 0.42, 1.0, 0.0, 0.40, 0.8),     # miúdo: sem desgaste de quina
+    'zinco':    ((0.360, 0.380, 0.390), 0.46, 1.0, (0.520, 0.540, 0.550), 0.36, 1.0, 0.5, 0.50, 1.6),     # chapa galvanizada que enferruja
     'etiqueta': ((0.640, 0.600, 0.480), 0.80, 0.0, (0.640, 0.600, 0.480), 0.80, 0.0, 0.0, 0.30, 0.4),
 })
+
+
+def _zinco(nt, pos, S, nome):
+    """Chapa galvanizada velha: ferrugem em manchas esticadas ao longo das ondas, zinco fosco no resto."""
+    f = forja
+    x, y, z = f._xyz(nt, pos)
+    risco = f._noise(nt, f._vec(nt, x, y, z, 0.10, 1.0, 1.0), 14.0, 3.0, 0.6)       # x do Blender = comprimento da chapa
+    mancha = f._noise(nt, pos, 7.0, 4.0, 0.62)
+    fr = f._smooth(nt, f._math(nt, 'ADD', f._math(nt, 'MULTIPLY', mancha, 0.55), f._math(nt, 'MULTIPLY', risco, 0.45)), 0.47, 0.60)
+    ferr = f._mix(nt, f._smooth(nt, f._noise(nt, pos, 90.0, 3.0, 0.6), 0.3, 0.7), (0.200, 0.075, 0.028), (0.085, 0.036, 0.018))
+    S['cor'] = f._mix(nt, fr, S['cor'], ferr)
+    S['rug'] = f._mixf(nt, fr, S['rug'], 0.90)
+    S['met'] = f._mixf(nt, fr, S['met'], 0.15)
+
+
+forja.VELHO['zinco'] = _zinco

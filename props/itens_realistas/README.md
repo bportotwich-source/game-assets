@@ -40,9 +40,12 @@ Ferramentas e materiais de craft, no mesmo tamanho, posição e ponto de pega do
 | Serrote | `serrote` | lâmina com dentes de verdade, punho fechado de madeira com três rebites |
 | Tábua | `tabua` | cantos gastos, uma ponta lascada, pregos velhos |
 | Caixa de pregos | `caixa_pregos` | caixa de papelão aberta com etiqueta e os pregos dentro |
+| Cano de ferro | `cano_metal` | tubo oco com rosca numa ponta e luva na outra |
+| Chapa de metal ondulada | `chapa_metal` | zinco com ferrugem ao longo das ondas, canto dobrado, parafusos de telhado |
+| Punhado de sucata | `sucata_metal` | cantoneira, chapa recortada, toco de cano, vergalhão, mola, parafuso, porcas e arruelas |
 
 ```
 python3 ferramentas/ver.py formas.png                    # confere as formas, sem assar
-python3 ferramentas/gerar.py todas 2048 /tmp/ferr        # assa e grava os 5 GLBs em props/loot (~8 min)
+python3 ferramentas/gerar.py todas 2048 /tmp/ferr        # assa e grava os 8 GLBs em props/loot (~12 min)
 python3 ferramentas/foto.py foto.png ../loot/martelo.glb ../loot/machado.glb
 ```

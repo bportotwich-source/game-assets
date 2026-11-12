@@ -171,4 +171,93 @@ def caixa_pregos():
     return raiz
 
 
-FORMAS = {'martelo': martelo, 'machado': machado, 'serrote': serrote, 'tabua': tabua, 'caixa_pregos': caixa_pregos}
+# ------------------------------------------------------------------ cano de ferro
+def cano_metal():
+    Y, R, RI = 21.0, 17.0, 13.6
+    X0 = -375.0
+    rosca = []
+    t = 3.0
+    while t < 34:                                  # rosca cortada na ponta livre
+        rosca += [(t, R - 1.3), (t + 1.3, R - 0.1)]
+        t += 2.6
+    prof = [(0, RI), (0, R - 1.6), (1.5, R - 1.2)] + rosca + [(36, R), (722, R), (722, RI)]
+    tubo = lib.lathe(prof, 'ferro_preto', n=20, c0=G(X0, Y, 0), eixo=G(1, 0, 0), anel=True)
+    # luva rosqueada na outra ponta, com as duas bordas reforçadas
+    luva = lib.lathe([(0, RI + 1.5), (0, 20.2), (1.5, 21), (8, 21), (9.5, 19.6), (40.5, 19.6), (42, 21), (48.5, 21), (50, 20.2), (50, RI + 1.5)],
+                     'aco_ferramenta', n=20, c0=G(325, Y, 0), eixo=G(1, 0, 0), anel=True)
+    raiz = parte('cano', [tubo], origem=G(0, 0, 0), grupo='A')
+    parte('luva', [luva], origem=G(0, 0, 0), pai=raiz, grupo='A')
+    return raiz
+
+
+# ------------------------------------------------------------------ chapa de metal ondulada
+def chapa_metal():
+    L, P_, PASSO, ALT, ESP = 900.0, 600.0, 75.0, 8.5, 0.9
+
+    def alto(x, z):
+        y = ALT + ALT * math.sin(2 * math.pi * (z + 300) / PASSO - math.pi / 2)
+        y += 2.5 * math.sin(x / 170.0 + z / 240.0)                                       # chapa velha: empenada
+        a, b = max(0.0, (x - 190) / 260), max(0.0, (z - 20) / 280)
+        y += 66.0 * (a * b) ** 1.6                                                       # canto dobrado para cima
+        return y + 2.6
+    xs = [-L / 2 + L * i / 12 for i in range(13)]
+    zs = [-P_ / 2 + P_ * k / 48 for k in range(49)]
+    aneis = []
+    for x in xs:
+        cima = [(x, alto(x, z), z) for z in zs]
+        baixo = [(x, y - ESP, z) for (x, y, z) in reversed(cima)]
+        aneis.append([lib.P(*G(*p)) for p in cima + baixo])
+    ch = lib.loft(aneis, 'zinco')
+    p = []
+    for (x, z) in ((-410, -262), (-410, 38), (-410, 188), (-60, -262), (-60, 113), (330, -187)):   # parafusos de telhado com arruela
+        y = alto(x, z)
+        p.append(cil((x, y - 0.2, z), (x, y + 1.0, z), 7.5, 'borracha', n=12))
+        p.append(cil((x, y + 1.0, z), (x, y + 4.2, z), 4.6, 'prego', n=6))
+    raiz = parte('chapa', [ch], origem=G(0, 0, 0), grupo='A', suave=60)
+    parte('parafusos', p, origem=G(0, 0, 0), pai=raiz, grupo='A')
+    return raiz
+
+
+# ------------------------------------------------------------------ punhado de sucata
+def _girar(o, ang, cx=0.0, cz=0.0):
+    """Gira a peça em volta do eixo vertical que passa por (cx, cz)."""
+    c, s = math.cos(math.radians(ang)), math.sin(math.radians(ang))
+    return _mexer(o, lambda x, y, z: (cx + (x - cx) * c - (z - cz) * s, y, cz + (x - cx) * s + (z - cz) * c))
+
+
+def _porca(x, y, z, r=7.0, h=6.0, mat='aco_ferramenta'):
+    o = lib.lathe([(0, r * 0.52), (0, r - 0.8), (0.8, r), (h - 0.8, r), (h, r - 0.8), (h, r * 0.52)], mat, n=6, c0=G(x, y, z), eixo=G(0, 1, 0), anel=True)
+    return o
+
+
+def sucata_metal():
+    p = []
+    # cantoneira cortada, deitada
+    c = bevel(perfil([(-19, 0), (19, 0), (19, 3.2), (-15.8, 3.2), (-15.8, 36), (-19, 36)], -128, 40, 'ferrugem'), 0.6, 1)
+    cut(c, [cil((-100, 18, -30), (-100, 18, 0), 4.5, 'ferrugem', n=10), cil((10, 18, -30), (10, 18, 0), 4.5, 'ferrugem', n=10)])
+    p.append(_girar(_mexer(c, lambda x, y, z: (x, y, z - 38)), -4, -40, -40))
+    # chapa recortada e amassada, com furos
+    ch = planta([(-70, -22), (62, -30), (78, 14), (30, 34), (-20, 26), (-74, 30)], 0, 2.0, 'zinco')
+    cut(ch, [cil((-40, -5, 0), (-40, 8, 0), 6, 'zinco', n=10), cil((30, -5, -6), (30, 8, -6), 6, 'zinco', n=10)])
+    _mexer(ch, lambda x, y, z: (x, y + 0.2 + 0.0016 * (x + 20) ** 2 + 0.004 * max(0.0, z) ** 2, z))
+    p.append(_girar(_mexer(ch, lambda x, y, z: (x + 52, y, z + 20)), 12, 52, 20))
+    # toco de cano
+    t = lib.lathe([(0, 9.5), (0, 13), (72, 13), (72, 9.5)], 'ferro_preto', n=14, c0=G(-120, 13, 22), eixo=G(1, 0, 0), anel=True)
+    p.append(_girar(t, 17, -84, 22))
+    # vergalhão torto
+    p.append(lib.fio(lib.caminho_arred([G(-30, 5.2, 50), G(40, 5.2, 58), G(96, 5.2, 46), G(136, 12, 20)], 14.0, n=4, fechado=False), 4.6, 'ferrugem', fechado=False, res=2))
+    # mola de válvula, parafuso, porcas e arruelas soltas
+    mola = [G(104 + 9 * math.cos(a), 3 + 26 * a / (2 * math.pi * 6.5) , -34 + 9 * math.sin(a)) for a in [2 * math.pi * k / 10 for k in range(66)]]
+    p.append(lib.fio(mola, 1.5, 'aco_ferramenta', fechado=False, res=1))
+    p.append(cil((60, 5, -50), (112, 5, -58), 4.0, 'ferro_preto', n=10))
+    p.append(cil((54, 5, -49.1), (60, 5, -50), 8.0, 'ferro_preto', n=6))
+    p.append(_porca(126, 0, 44, 8.5, 7))
+    p.append(_porca(-136, 0, 54, 7, 6, 'ferrugem'))
+    p.append(_porca(-6, 2.2, 6, 6.5, 5.5))
+    for (x, z, r, mat) in ((-112, -8, 11, 'aco_ferramenta'), (134, -8, 9, 'ferrugem'), (20, 44, 12, 'cobre_velho')):
+        p.append(lib.lathe([(0, r * 0.45), (0, r), (1.6, r), (1.6, r * 0.45)], mat, n=14, c0=G(x, 0, z), eixo=G(0, 1, 0), anel=True))
+    return parte('sucata', p, origem=G(0, 0, 0), grupo='A')
+
+
+FORMAS = {'martelo': martelo, 'machado': machado, 'serrote': serrote, 'tabua': tabua, 'caixa_pregos': caixa_pregos,
+          'cano_metal': cano_metal, 'chapa_metal': chapa_metal, 'sucata_metal': sucata_metal}

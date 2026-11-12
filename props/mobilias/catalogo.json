@@ -1415,12 +1415,12 @@
    "estacao": "bancada (receitas de armas, barricadas e reparos)",
    "arquivo": "mobilias/bancada_trabalho.glb",
    "tamanho_m": [
-    1.8,
+    1.823,
     1.75,
-    0.757
+    0.741
    ],
-   "triangulos": 4724,
-   "kb": 422.0,
+   "triangulos": 15336,
+   "kb": 3939.6,
    "partes": [
     {
      "no": "gaveta",
@@ -1436,7 +1436,8 @@
       0.35
      ]
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/bancada_trabalho/gerar.py"
   },
   {
    "id": "fogareiro",

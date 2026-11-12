@@ -221,6 +221,8 @@ def leve(cfg, ID, blend, pasta_tex, res=1024):
     from PIL import Image
     bpy.ops.wm.open_mainfile(filepath=blend)
     raiz = bpy.data.objects[cfg['nome']]
+    for o in [o for o in bpy.data.objects if o.type == 'MESH' and o.name in cfg.get('fora_leve', ())]:
+        bpy.data.objects.remove(o)                     # vidro transparente não entra na leve (taparia o que está atrás)
     malhas = [o for o in bpy.data.objects if o.type == 'MESH']
     bpy.ops.object.select_all(action='DESELECT')
     for o in malhas:
@@ -338,6 +340,8 @@ def jogo(cfg, saida, fmt='webp'):
     arq = os.path.join(ARMAS, 'armas', f'{ID}.glb')
     empacotar.main(tmp, tex, arq, fmt)
     animar(cfg, ID, arq)
+    if cfg.get('lisos'):                               # peças de material liso, sem textura: vidro de garrafa, de relógio
+        materiais_lisos(arq, {f'{ID}_{p}': m for p, m in cfg['lisos'].items()})
     leve(cfg, ID, blend, tex)
     tmp = os.path.join(saida, f'{ID}_leve_sem_tex.glb')
     bpy.ops.object.select_all(action='SELECT')

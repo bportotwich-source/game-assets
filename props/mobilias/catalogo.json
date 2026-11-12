@@ -10409,6 +10409,125 @@
    ],
    "triangulos": 4972,
    "kb": 616.7
+  },
+  {
+   "id": "caixote_grande",
+   "nome": "Caixote grande de tábuas",
+   "grupo": "mobilias",
+   "categoria": "armazenamento",
+   "montagem": "floor",
+   "lote": 20,
+   "comodos": [
+    "abrigo",
+    "armazem",
+    "fazenda",
+    "serraria",
+    "garagem"
+   ],
+   "conteiner": true,
+   "slots": 30,
+   "grade": [
+    10,
+    6
+   ],
+   "saque": [
+    "ferramentas",
+    "materiais",
+    "comida"
+   ],
+   "aceita": [],
+   "barricada": true,
+   "fase": 1,
+   "constroi": {
+    "tabua": 8,
+    "caixa_pregos": 2,
+    "dobradicas": 1
+   },
+   "ferramenta": "martelo",
+   "estacao": "estoque grande da base (60 espaços; o que está dentro conta nas receitas quando a base é sua)",
+   "arquivo": "mobilias/caixote_grande.glb",
+   "tamanho_m": [
+    1.528,
+    0.688,
+    0.776
+   ],
+   "triangulos": 9431,
+   "kb": 2652.9,
+   "gerador": "moveis_realistas/caixote_grande/gerar.py",
+   "partes": [
+    {
+     "no": "tampa",
+     "origem": [
+      0,
+      0.64,
+      -0.366
+     ],
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -100
+    }
+   ]
+  },
+  {
+   "id": "bau_aco",
+   "nome": "Baú de aço com cadeado",
+   "grupo": "mobilias",
+   "categoria": "armazenamento",
+   "montagem": "floor",
+   "lote": 20,
+   "comodos": [
+    "abrigo",
+    "armazem",
+    "garagem",
+    "quartel",
+    "fabrica"
+   ],
+   "conteiner": true,
+   "slots": 48,
+   "grade": [
+    12,
+    8
+   ],
+   "saque": [
+    "ferramentas",
+    "materiais",
+    "armas",
+    "municao"
+   ],
+   "aceita": [],
+   "barricada": true,
+   "fase": 2,
+   "constroi": {
+    "chapa_metal": 4,
+    "cano_metal": 2,
+    "dobradicas": 1,
+    "corrente_cadeado": 1
+   },
+   "ferramenta": "martelo",
+   "estacao_obra": "forja_tambor",
+   "estacao": "estoque grande da base (96 espaços; o que está dentro conta nas receitas quando a base é sua)",
+   "arquivo": "mobilias/bau_aco.glb",
+   "tamanho_m": [
+    1.581,
+    0.688,
+    0.751
+   ],
+   "triangulos": 14012,
+   "kb": 3648.2,
+   "gerador": "moveis_realistas/bau_aco/gerar.py",
+   "partes": [
+    {
+     "no": "tampa",
+     "origem": [
+      0,
+      0.622,
+      -0.362
+     ],
+     "tipo": "tampa",
+     "eixo": "x",
+     "abre_graus": -100
+    }
+   ]
   }
  ]
 }

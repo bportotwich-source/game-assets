@@ -78,3 +78,24 @@ pranchas com chapa de bater, morsa de ferro fundido com base giratória, painel 
 classe `eucatex`) com martelo, arco de serra, alicate, chaves combinadas e chaves de fenda, e embaixo a caixa de
 ferramentas, um galão e um rolo de fio. Nós: `estrutura`, `painel`, `tampo`, `gaveta` (desliza 0,35 m para a frente,
 como no catálogo), `morsa`, `ferramentas`, `prateleira`.
+
+
+## Caixote grande de tábuas (`caixote_grande`)
+
+1,53 × 0,69 × 0,78 m, 9,4 mil triângulos, 3 conjuntos de textura (corpo 2048; tampa 1024; ferragens e alças 1024).
+Caixa de guardar grande feita à mão: tábuas pregadas em sarrafos, três patins embaixo, tampa de cinco tábuas com três
+travessas, duas dobradiças de cinta, aldrava na frente, alças de corda nos lados e ESTOQUE pintado na frente.
+Oco por dentro. Nós: `corpo`, `letreiro`, `ferragens`, `alcas`, `tampa` (origem na dobradiça de trás, abre −100° em x)
+com `tampa_ferragens` dentro. No jogo é um contêiner de uma grade só de **10 × 6** (60 espaços), construído com
+8 tábuas, 2 caixas de pregos e 1 par de dobradiças, com martelo, sem bancada (fase 1).
+
+## Baú de aço com cadeado (`bau_aco`)
+
+1,58 × 0,69 × 0,75 m, 14,0 mil triângulos, 3 conjuntos de textura (chapas onduladas e fundo 2048; armação e tampa 2048;
+ferragens 1024). Armação de cantoneira rebitada, pintada de amarelo de obra e lascada, fechada com chapa ondulada
+galvanizada (classe `zinco`: ferrugem escorrida e pé comido), dois patins de tubo, tampa de chapa com aba e nervuras,
+três dobradiças, alças de vergalhão e porta-cadeado com o cadeado de latão pendurado. Oco por dentro.
+Nós: `corpo`, `armacao`, `ferragens`, `tampa` (origem no eixo das dobradiças, abre −100° em x) com `tampa_ferragens`
+dentro. No jogo é o maior contêiner: uma grade só de **12 × 8** (96 espaços), construído na forja de tambor com
+4 chapas de metal, 2 canos, 1 par de dobradiças e 1 corrente com cadeado, com martelo (fase 2).
+A chapa ondulada sai de `modelo._ondulada` e serve para outras peças.

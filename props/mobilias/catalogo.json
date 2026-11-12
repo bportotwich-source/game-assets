@@ -8652,24 +8652,30 @@
    "aquece": true,
    "arquivo": "mobilias/fogao_tambor.glb",
    "tamanho_m": [
-    1.217,
+    1.517,
     2.4,
-    0.67
+    0.596
    ],
-   "triangulos": 4012,
-   "kb": 348.3,
+   "triangulos": 6476,
+   "kb": 2400.2,
    "partes": [
     {
      "no": "porta_fornalha",
      "origem": [
       -0.445,
-      0.41000000000000003,
+      0.412,
       0.13
      ],
      "tipo": "porta",
      "eixo": "y",
      "abre_graus": -100
     }
+   ],
+   "gerador": "moveis_realistas/fogao_tambor/gerar.py",
+   "ponto_fogo": [
+    0.0,
+    0.392,
+    0.0
    ]
   },
   {
@@ -8707,12 +8713,12 @@
    },
    "arquivo": "mobilias/defumador.glb",
    "tamanho_m": [
-    0.9,
-    1.82,
-    0.86
+    0.952,
+    1.846,
+    0.92
    ],
-   "triangulos": 7328,
-   "kb": 651.4,
+   "triangulos": 11884,
+   "kb": 2913.6,
    "partes": [
     {
      "no": "porta",
@@ -8725,6 +8731,12 @@
      "eixo": "y",
      "abre_graus": -110
     }
+   ],
+   "gerador": "moveis_realistas/defumador/gerar.py",
+   "ponto_fogo": [
+    0.0,
+    0.09,
+    0.15
    ]
   },
   {

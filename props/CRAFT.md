@@ -34,6 +34,7 @@ Ingredientes são ids do loot (`props/loot/catalogo.json`); estações e constru
 | Tocha de pano e álcool (`tocha`) | 15 | 1× Feixe de lenha (`lenha`), 1× Trapos amarrados (`trapos`), 1× Garrafa de álcool 70 % (`alcool`) | à mão | mao | 20 s |
 | Vara de pesca improvisada (`vara_pesca`) | 15 | 1× Feixe de lenha (`lenha`), 1× Carretel de linha e anzóis (`linha_pesca`) | Faca de cozinha (`faca_cozinha`) | mao | 45 s |
 | Tábua de pregos (`tabua_pregos`) | 17 | 1× Tábua de madeira (`tabua`), 1× Caixa de pregos (`caixa_pregos`) | Martelo de unha (`martelo`) | - | - |
+| Caixote grande de tábuas (`caixote_grande`) | 20 | 8× Tábua de madeira (`tabua`), 2× Caixa de pregos (`caixa_pregos`), 1× Par de dobradiças (`dobradicas`) | Martelo de unha (`martelo`) | - | - |
 
 ### Fase 2 · Abrigo
 
@@ -67,6 +68,7 @@ Ingredientes são ids do loot (`props/loot/catalogo.json`); estações e constru
 | Parede de sacos de areia (`parede_sacos`) | 17 | 12× Saco de areia (`saco_areia`) | Pá (`pa`) | - | - |
 | Porta reforçada com chapa (`porta_reforcada`) | 17 | 2× Chapa de metal ondulada (`chapa_metal`), 3× Tábua de madeira (`tabua`), 1× Pote de parafusos e porcas (`pote_parafusos`), 1× Corrente com cadeado (`corrente_cadeado`) | Chave inglesa (`chave_inglesa`) | Bancada de carpintaria com morsa (`bancada_carpintaria`) | - |
 | Sino de alarme de botijão (`sino_alarme`) | 17 | 3× Tábua de madeira (`tabua`), 1× Corrente com cadeado (`corrente_cadeado`), 1× Cano de ferro (`cano_metal`) | Serrote (`serrote`) | - | - |
+| Baú de aço com cadeado (`bau_aco`) | 20 | 4× Chapa de metal ondulada (`chapa_metal`), 2× Cano de ferro (`cano_metal`), 1× Par de dobradiças (`dobradicas`), 1× Corrente com cadeado (`corrente_cadeado`) | Martelo de unha (`martelo`) | Forja de tambor com fole (`forja_tambor`) | - |
 
 ### Fase 3 · Assentamento
 
@@ -122,7 +124,7 @@ Ingredientes são ids do loot (`props/loot/catalogo.json`); estações e constru
 | Composteira de pallets (`composteira`) | 2 | - | 1× Saco de adubo de composto (`adubo`) a cada 1440 min, gastando 4 restos de comida |
 | Defumador de tábuas (`defumador`) | 2 | - | 4× Peça de carne defumada (`carne_defumada`) a cada 240 min, gastando 4 carne crua, 1 lenha |
 | Filtro de água em barril (`filtro_barril`) | 2 | - | 1× Galão de água 5 L (`galao_agua`) a cada 60 min, gastando 5 agua suja |
-| Forja de tambor com fole (`forja_tambor`) | 2 | Grade de janela de vergalhão, Panelão no tripé sobre fogueira, Cata-vento de bomba d'água em torre, Portão principal de chapa com guarita | - |
+| Forja de tambor com fole (`forja_tambor`) | 2 | Grade de janela de vergalhão, Panelão no tripé sobre fogueira, Cata-vento de bomba d'água em torre, Portão principal de chapa com guarita, Baú de aço com cadeado | - |
 | Bancada de eletrônica (`bancada_eletronica`) | 3 | Holofote em poste com bateria, Painéis solares no cavalete com baterias, Torre de rádio da comunidade, Poste de luz restaurado, Subestação religada, Turbina eólica pequena no mastro | - |
 | Cata-vento de bomba d'água em torre (`cata_vento`) | 3 | - | 2× Galão de água 5 L (`galao_agua`) a cada 60 min, gastando  |
 | Coelheira de tábuas e tela (`coelheira`) | 3 | - | 2× Carne crua embrulhada (`carne_crua`) a cada 2880 min, gastando 2 restos de comida, 1 palha |
@@ -150,10 +152,10 @@ Ingredientes são ids do loot (`props/loot/catalogo.json`); estações e constru
 | Rolo de arame liso (`arame_liso`) | 1 | 1×1 | 1,0 kg | armazem, fazenda, serraria, garagem, casa_de_campo | - | Armadilha de laço, Armário de armas de madeira com tela, Caneca de lata com alça de arame, Cavalo de frisa de estacas, Coelheira de tábuas e tela, Composteira de pallets, Kit de reparo improvisado, Torre de rádio da comunidade |
 | Trapos amarrados (`trapos`) | 1 | 1×1 | 0,3 kg | casas, lavanderia, hotel, motel, garagem | desmontar Pilha de roupas dobradas (`roupas`) (3), desmontar Cama de solteiro (`cama_solteiro`) (2), desmontar Cama de casal (`cama_casal`) (3) | Bolsa de cintura de pano, Capacete de panela acolchoado, Curativo de pano fervido, Filtro de água de garrafa, Filtro de água em barril, Kit de acender fogo, Kit de reparo improvisado, Lamparina de lata, Mesa de enfermaria improvisada, Mochila de lona improvisada, Tala de tábua e pano, Tocha de pano e álcool |
 | Cano de PVC (`tubo_pvc`) | 2 | 4×1 | 0,6 kg | casas, armazem, fabrica, piscina, fazenda | - | Alambique de panela, Estação de tratamento de água em tambores, Estufa de cano e plástico, Filtro de água em barril, Tanque de lavar de cimento |
-| Corrente com cadeado (`corrente_cadeado`) | 2 | 2×1 | 2,2 kg | garagem, armazem, delegacia, estacao, parque_trailers | - | Armário de armas de madeira com tela, Panelão no tripé sobre fogueira, Porta reforçada com chapa, Portão principal de chapa com guarita, Sino de alarme de botijão |
+| Corrente com cadeado (`corrente_cadeado`) | 2 | 2×1 | 2,2 kg | garagem, armazem, delegacia, estacao, parque_trailers | - | Armário de armas de madeira com tela, Baú de aço com cadeado, Panelão no tripé sobre fogueira, Porta reforçada com chapa, Portão principal de chapa com guarita, Sino de alarme de botijão |
 | Lata de cola de contato (`cola_contato`) | 2 | 1×1 | 0,3 kg | casas, garagem, serraria, escolinha | - | cola couro, borracha e madeira: proteções, reparo de botas e mochila |
 | Molas e engrenagens (`engrenagens`) | 2 | 1×1 | 0,6 kg | fabrica, garagem, relojoaria, casas | desmontar Relógio de parede parado (`relogio_parede`) (2), desmontar Máquina de lavar (`maquina_lavar`) (3), desmontar Vitrola com discos (`vitrola`) (2) | Cata-vento de bomba d'água em torre |
-| Par de dobradiças (`dobradicas`) | 2 | 1×1 | 0,4 kg | casas, garagem, serraria, armazem | desmontar Guarda-roupa 2 portas (`guarda_roupa`) (2), desmontar Armário aéreo de cozinha (`armario_aereo`) (2) | Armário de armas de madeira com tela, Baú de madeira com cadeado, Portão principal de chapa com guarita |
+| Par de dobradiças (`dobradicas`) | 2 | 1×1 | 0,4 kg | casas, garagem, serraria, armazem | desmontar Guarda-roupa 2 portas (`guarda_roupa`) (2), desmontar Armário aéreo de cozinha (`armario_aereo`) (2) | Armário de armas de madeira com tela, Baú de aço com cadeado, Baú de madeira com cadeado, Caixote grande de tábuas, Portão principal de chapa com guarita |
 | Peça de carne defumada (`carne_defumada`) | 2 | 1×1 | 0,6 kg | abrigo, fazenda | fazer Defumador de tábuas (`defumador`) (4) | fome -40; dura 10 dias sem estragar |
 | Retalho de couro (`couro`) | 2 | 2×1 | 0,5 kg | casas, fazenda, mansao, concessionaria, cinema | desmontar Poltrona (`poltrona`) (2), desmontar Sofá 3 lugares (`sofa`) (3), desmontar Mesa de booth com dois sofás (`mesa_booth`) (2) | Colete de placas de sucata, Forja de tambor com fole |
 | Rolo de fio elétrico (`fio_eletrico`) | 2 | 1×1 | 0,8 kg | casas, fabrica, garagem, cinema, hotel | desmontar Cordão de luzes (`cordao_luzes`) (1), desmontar Abajur (`abajur`) (1) | Bancada de eletrônica, Holofote em poste com bateria, Painéis solares no cavalete com baterias, Poste de luz restaurado, Subestação religada, Torre de rádio da comunidade, Turbina eólica pequena no mastro |
@@ -174,10 +176,12 @@ Ingredientes são ids do loot (`props/loot/catalogo.json`); estações e constru
 | Baú de madeira com cadeado (`bau_madeira`) | 1 | tudo | 8×5 | - | - | - |
 | Caixa de ferramentas de metal (`caixa_ferramentas`) | 1 | ferramentas, materiais, armas | 4×2 | - | - | - |
 | Caixa organizadora empilhável (`caixa_organizadora`) | 1 | tudo | 4×3 | - | - | - |
+| Caixote grande de tábuas (`caixote_grande`) | 1 | tudo | 10×6 | - | - | - |
 | Lenheiro coberto (`lenheiro`) | 1 | - | - | - | - | até 30 × Feixe de lenha (`lenha`) |
 | Prateleira de tábuas e tijolos (`prateleira_improvisada`) | 1 | tudo | 6×3 | - | 3 | - |
 | Suporte de parede para armas (`rack_armas_parede`) | 1 | - | - | 4 longa, 3 branca | - | - |
 | Armário de armas de madeira com tela (`armario_armas_abrigo`) | 2 | armas, municao, acessorios | 6×4 | 6 longa, 4 curta, 3 branca | 1 | - |
+| Baú de aço com cadeado (`bau_aco`) | 2 | tudo | 12×8 | - | - | - |
 | Caixote militar verde (`caixa_militar`) | 2 | tudo | 6×4 | - | - | - |
 | Cofre de armas de aço (`cofre_armas`) | 2 | armas, municao, acessorios, remedios | 6×5 | 6 longa, 4 curta | 1 | - |
 | Estante aramada com rodinhas (`estante_aramada`) | 2 | tudo | 6×4 | - | 4 | - |

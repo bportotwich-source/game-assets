@@ -276,6 +276,8 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Forno de barro comunitário (`forno_comunitario`) | 19 | Vila e cidade | 2,23 × 1,87 × 1,76 | - | - | - | 18424 |
 | Placa de boas-vindas da vila (`placa_boas_vindas`) | 19 | Vila e cidade | 2,70 × 2,36 × 1,03 | - | - | - | 6544 |
 | Memorial aos que se foram (`memorial`) | 19 | Vila e cidade | 3,04 × 2,13 × 0,93 | - | - | - | 4972 |
+| Caixote grande de tábuas (`caixote_grande`) | 20 | Armazenamento do abrigo | 1,53 × 0,69 × 0,78 | 30 espaços: ferramentas, materiais, comida | tampa | barricada | 9431 |
+| Baú de aço com cadeado (`bau_aco`) | 20 | Armazenamento do abrigo | 1,58 × 0,69 × 0,75 | 48 espaços: ferramentas, materiais, armas, municao | tampa | barricada | 14012 |
 
 ## Loot
 

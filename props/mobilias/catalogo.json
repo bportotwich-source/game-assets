@@ -8780,12 +8780,13 @@
    },
    "arquivo": "mobilias/filtro_barril.glb",
    "tamanho_m": [
-    0.604,
-    1.26,
-    0.872
+    0.661,
+    1.11,
+    0.807
    ],
-   "triangulos": 8952,
-   "kb": 697.1
+   "triangulos": 6368,
+   "kb": 1996.8,
+   "gerador": "moveis_realistas/filtro_barril/gerar.py"
   },
   {
    "id": "bancada_eletronica",
@@ -8851,17 +8852,18 @@
    "ponto_uso": [
     0.0,
     0.0,
-    0.6
+    0.65
    ],
    "estacao": "recarga (cápsulas vazias + pólvora + chumbo viram munição; 1 erro em 20 dá tiro falho)",
    "arquivo": "mobilias/bancada_municao.glb",
    "tamanho_m": [
-    1.2,
-    1.27,
-    0.6
+    1.211,
+    1.351,
+    0.647
    ],
-   "triangulos": 3036,
-   "kb": 210.7
+   "triangulos": 13975,
+   "kb": 2915.4,
+   "gerador": "moveis_realistas/bancada_municao/gerar.py"
   },
   {
    "id": "alambique",
@@ -8898,12 +8900,23 @@
    },
    "arquivo": "mobilias/alambique.glb",
    "tamanho_m": [
-    1.49,
-    0.88,
-    0.592
+    1.347,
+    1.01,
+    0.647
    ],
-   "triangulos": 6704,
-   "kb": 379.7
+   "triangulos": 7416,
+   "kb": 2510.8,
+   "gerador": "moveis_realistas/alambique/gerar.py",
+   "ponto_uso": [
+    -0.43,
+    0.0,
+    0.7
+   ],
+   "ponto_fogo": [
+    -0.43,
+    0.09,
+    0.03
+   ]
   },
   {
    "id": "composteira",

@@ -14459,12 +14459,12 @@
    "descricao": "Luneta de 30 mm com objetiva de 44 mm, anel de aumento com alavanca, torres recartilhadas e ajuste lateral. Vê zumbis a 300 m, mas o campo de visão fechado deixa o resto cego.",
    "arquivo": "acessorios/luneta_3_9.glb",
    "tamanho_m": [
-    0.058,
-    0.072,
-    0.35
+    0.057,
+    0.073,
+    0.351
    ],
-   "triangulos": 6512,
-   "kb": 348.1,
+   "triangulos": 9954,
+   "kb": 1005.1,
    "encaixes": [
     {
      "no": "olho",
@@ -14477,7 +14477,28 @@
      ],
      "descricao": "ocular: linha de visada (afastar o olho uns 9 cm)"
     }
-   ]
+   ],
+   "gerador": "lunetas/jogo.py",
+   "optica": {
+    "tipo": "luneta",
+    "aumento": [
+     3,
+     9
+    ],
+    "ocular_m": [
+     0.0,
+     0.034,
+     0.1693
+    ],
+    "raio_ocular_m": 0.017,
+    "objetiva_m": [
+     0.0,
+     0.034,
+     -0.1693
+    ],
+    "reticulo": "cruz",
+    "iluminado": true
+   }
   },
   {
    "id": "luneta_4x",
@@ -14506,12 +14527,12 @@
    "descricao": "Luneta simples de caça de 1 polegada, com tampas nas torres. Robusta e leve.",
    "arquivo": "acessorios/luneta_4x.glb",
    "tamanho_m": [
-    0.048,
+    0.052,
     0.064,
-    0.28
+    0.281
    ],
-   "triangulos": 5172,
-   "kb": 260.4,
+   "triangulos": 8843,
+   "kb": 889.6,
    "encaixes": [
     {
      "no": "olho",
@@ -14524,7 +14545,28 @@
      ],
      "descricao": "ocular: linha de visada (afastar o olho uns 9 cm)"
     }
-   ]
+   ],
+   "gerador": "lunetas/jogo.py",
+   "optica": {
+    "tipo": "luneta",
+    "aumento": [
+     4,
+     4
+    ],
+    "ocular_m": [
+     0.0,
+     0.028,
+     0.1343
+    ],
+    "raio_ocular_m": 0.0145,
+    "objetiva_m": [
+     0.0,
+     0.028,
+     -0.1343
+    ],
+    "reticulo": "cruz",
+    "iluminado": false
+   }
   },
   {
    "id": "bipe",
@@ -14919,12 +14961,12 @@
    "descricao": "Luneta curta de aumento variável: em 1× serve para perto, em 6× para longe.",
    "arquivo": "acessorios/luneta_1_6.glb",
    "tamanho_m": [
-    0.058,
-    0.066,
-    0.265
+    0.075,
+    0.073,
+    0.266
    ],
-   "triangulos": 6512,
-   "kb": 348.1,
+   "triangulos": 10347,
+   "kb": 1074.8,
    "encaixes": [
     {
      "no": "olho",
@@ -14937,7 +14979,28 @@
      ],
      "descricao": "ocular: linha de visada (afastar o olho uns 9 cm)"
     }
-   ]
+   ],
+   "gerador": "lunetas/jogo.py",
+   "optica": {
+    "tipo": "luneta",
+    "aumento": [
+     1,
+     6
+    ],
+    "ocular_m": [
+     0.0,
+     0.028,
+     0.1293
+    ],
+    "raio_ocular_m": 0.017,
+    "objetiva_m": [
+     0.0,
+     0.028,
+     -0.1243
+    ],
+    "reticulo": "cruz",
+    "iluminado": true
+   }
   },
   {
    "id": "alca_rebativel",
@@ -18026,12 +18089,12 @@
    "descricao": "Luneta fina e curta de rifle de caça pequena: 4× fixa, retículo de cruz fina.",
    "arquivo": "acessorios/luneta_4x_22.glb",
    "tamanho_m": [
-    0.045,
-    0.062,
-    0.236
+    0.043,
+    0.056,
+    0.237
    ],
-   "triangulos": 5172,
-   "kb": 260.5,
+   "triangulos": 8706,
+   "kb": 870.1,
    "encaixes": [
     {
      "no": "olho",
@@ -18044,7 +18107,28 @@
      ],
      "descricao": "ocular: linha de visada (afastar o olho uns 9 cm)"
     }
-   ]
+   ],
+   "gerador": "lunetas/jogo.py",
+   "optica": {
+    "tipo": "luneta",
+    "aumento": [
+     4,
+     4
+    ],
+    "ocular_m": [
+     0.0,
+     0.028,
+     0.1123
+    ],
+    "raio_ocular_m": 0.013,
+    "objetiva_m": [
+     0.0,
+     0.028,
+     -0.1123
+    ],
+    "reticulo": "cruz",
+    "iluminado": false
+   }
   },
   {
    "id": "alca_cano_22",
@@ -18357,12 +18441,12 @@
    "descricao": "Luneta comprida de objetiva grande, torres altas e regulagem lateral de foco. Ruim para perto: em 5× já não dá para ver dentro de uma sala.",
    "arquivo": "acessorios/luneta_5_25.glb",
    "tamanho_m": [
-    0.062,
-    0.074,
-    0.41
+    0.079,
+    0.081,
+    0.411
    ],
-   "triangulos": 6528,
-   "kb": 348.9,
+   "triangulos": 10378,
+   "kb": 1038.1,
    "encaixes": [
     {
      "no": "olho",
@@ -18375,7 +18459,28 @@
      ],
      "descricao": "ocular: linha de visada (afastar o olho uns 9 cm)"
     }
-   ]
+   ],
+   "gerador": "lunetas/jogo.py",
+   "optica": {
+    "tipo": "luneta",
+    "aumento": [
+     5,
+     25
+    ],
+    "ocular_m": [
+     0.0,
+     0.034,
+     0.1993
+    ],
+    "raio_ocular_m": 0.0181,
+    "objetiva_m": [
+     0.0,
+     0.034,
+     -0.1993
+    ],
+    "reticulo": "cruz",
+    "iluminado": true
+   }
   },
   {
    "id": "carregador_ar10_20",
@@ -18851,12 +18956,12 @@
    "descricao": "Luneta curta de 3× com retículo de vários pontos (um para cada distância: o virote cai bem mais que uma bala) e iluminação vermelha.",
    "arquivo": "acessorios/luneta_besta.glb",
    "tamanho_m": [
-    0.046,
-    0.064,
-    0.21
+    0.047,
+    0.059,
+    0.211
    ],
-   "triangulos": 5408,
-   "kb": 272.4,
+   "triangulos": 8921,
+   "kb": 897.4,
    "encaixes": [
     {
      "no": "olho",
@@ -18869,7 +18974,28 @@
      ],
      "descricao": "ocular: linha de visada (afastar o olho uns 9 cm)"
     }
-   ]
+   ],
+   "gerador": "lunetas/jogo.py",
+   "optica": {
+    "tipo": "luneta",
+    "aumento": [
+     3,
+     3
+    ],
+    "ocular_m": [
+     0.0,
+     0.028,
+     0.0993
+    ],
+    "raio_ocular_m": 0.013,
+    "objetiva_m": [
+     0.0,
+     0.028,
+     -0.0993
+    ],
+    "reticulo": "besta",
+    "iluminado": true
+   }
   },
   {
    "id": "estribo_besta",

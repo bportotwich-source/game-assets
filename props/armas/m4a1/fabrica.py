@@ -349,6 +349,8 @@ def acessorio(cfg, saida, fmt='webp'):
     r = next(x for x in cat['acessorios'] if x['id'] == ID)
     r['tamanho_m'], r['triangulos'] = medir(arq)
     r.update(gerador=cfg['gerador'], descricao=cfg.get('descricao', r['descricao']))
+    if cfg.get('optica'):                              # miras e lunetas: onde ficam as lentes (o jogo desenha o zoom por elas)
+        r['optica'] = cfg['optica']
     pos = {n['no']: n['posicao'] for n in cfg['esqueleto']['nos']}
     for e in r.get('encaixes', []):                    # os encaixes do acessório seguem os nós novos
         if e['no'] in pos:

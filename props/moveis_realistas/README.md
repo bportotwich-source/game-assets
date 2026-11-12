@@ -134,3 +134,33 @@ de cinta e ferrolho, varas por dentro com mantas de carne penduradas, cinza, toc
 Nós: `base`, `caixa`, `telhado`, `porta` (origem na dobradiça, abre −110° em y), `dentro`, `fogo`, `brasa` (emissiva).
 Classes novas: `fumo_x/_y/_z` (tábua com fuligem que sobe com a altura), `zinco` ondulado por textura, `carne_seca`,
 `cinza_fogo`.
+## Filtro de água em barril (`filtro_barril`)
+
+0,66 × 1,11 × 0,81 m, 6,4 mil triângulos, 2 conjuntos de textura (blocos, tábuas, tambor e letreiro 2048; pano, corda,
+torneira, mangueira e galão 1024). Tambor de 200 L em pé sobre dois blocos de concreto e três tábuas, a boca coberta por
+um pano amarrado com duas voltas de corda de sisal (encardido no meio, por onde entra a água suja), ÁGUA FILTRADA pintado
+a pincel, torneira de latão num cano de PVC marrom, mangueira de nível presa com abraçadeiras e um galão de 5 L aparando
+a água. Nós: `estrado`, `tambor`, `letreiro`, `pano`, `torneira`, `galao`. Classes novas: `tambor_agua` (envelhecimento em
+`materiais.tambor_velho(pé)`: ferrugem, pé comido e calcário escorrendo da boca), `bloco`, `pvc`, `sisal`, `pano_filtro`.
+`modelo._sem_tampas` tira as tampas que o `lib.lathe` põe nas pontas (para folhas abertas, como o pano).
+No jogo é estação que produz sozinha: 5 garrafas de água da chuva viram 1 galão de água a cada hora.
+
+## Alambique de panela (`alambique`)
+
+1,35 × 1,01 × 0,65 m, 7,4 mil triângulos, 2 conjuntos de textura (fornalha de tijolos e tambor 2048; panela, cano de cobre, garrafas e brasa 1024).
+Fornalha de tijolos aberta na frente com lenha, panelão de alumínio tisnado com a tampa vedada de barro e um termômetro,
+capacete e cano de cobre com azinhavre que sobe, atravessa e desce em serpentina na água de um tambor de 200 L, ladrão de
+PVC, e a saída embaixo pingando num garrafão, com três garrafas arrolhadas ao lado. Nós: `fornalha`, `tambor`, `panela`,
+`serpentina`, `garrafas`, `brasa` (brilha sozinha; o jogo só a mostra enquanto há o que destilar). `ponto_fogo` e `ponto_uso`
+ficam na boca da fornalha. Classes novas: `panela_alu`, `cobre_velho`, `agua_tambor`, `vidro_verde`, `pinga`, `rolha`.
+
+## Mesa de recarga de munição (`bancada_municao`)
+
+1,21 × 1,35 × 0,65 m, 14,0 mil triângulos, 3 conjuntos de textura (estrutura e tampo 2048; prensa, balança e cápsulas 1024; latas, caixas,
+chumbo, luminária, prateleira, caixote e balde 1024). Bancada alta de caibros e pranchas com painel e prateleira atrás,
+prensa de recarga de ferro fundido vermelho com alavanca, balança de pólvora de braço, bloco de madeira com as cápsulas em
+pé (as três primeiras filas já com projétil), lata de PÓLVORA, caixinhas de espoleta, lingotes de chumbo, concha e molde,
+tabela de cargas pregada no painel, luminária de garra; na prateleira latas, caixas de munição, cartuchos de espingarda e
+o manual; embaixo um caixote de MUNIÇÃO e um balde de cápsulas vazias. Nós: `estrutura`, `tampo`, `prensa`, `balanca`,
+`capsulas`, `miudezas`, `prateleira`, `embaixo`. Classes novas: `papelao`, `caixa_verde`, `caixa_azul`, `papel` (pautado e
+escrito por textura), `cartucho`, `latao_fosco`, `letra_preta`. `modelo._letra_curva` pinta um letreiro numa lata redonda.

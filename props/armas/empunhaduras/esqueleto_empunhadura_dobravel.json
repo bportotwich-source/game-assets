@@ -1,0 +1,72 @@
+{
+"origem": "empunhadura_dobravel.glb",
+"nos": [
+{
+"no": "haste",
+"pai": null,
+"posicao": [
+-0.0,
+-0.0075,
+0.012
+]
+}
+],
+"animacoes": [
+{
+"nome": "dobrar",
+"faixas": [
+{
+"no": "haste",
+"caminho": "rotation",
+"interp": "LINEAR",
+"t": [
+0.0,
+0.3
+],
+"v": [
+[
+0.0,
+0.0,
+0.0,
+1.0
+],
+[
+0.707107,
+0.0,
+0.0,
+0.707107
+]
+]
+}
+]
+},
+{
+"nome": "abrir",
+"faixas": [
+{
+"no": "haste",
+"caminho": "rotation",
+"interp": "LINEAR",
+"t": [
+0.0,
+0.3
+],
+"v": [
+[
+0.707107,
+0.0,
+0.0,
+0.707107
+],
+[
+0.0,
+0.0,
+0.0,
+1.0
+]
+]
+}
+]
+}
+]
+}

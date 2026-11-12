@@ -13526,8 +13526,9 @@
     0.018,
     0.014
    ],
-   "triangulos": 640,
-   "kb": 31.1
+   "triangulos": 1536,
+   "kb": 163.8,
+   "gerador": "bocas/jogo.py"
   },
   {
    "id": "supressor_9mm",
@@ -14238,11 +14239,12 @@
    "arquivo": "acessorios/freio_rompimento_12.glb",
    "tamanho_m": [
     0.03,
-    0.03,
+    0.031,
     0.061
    ],
-   "triangulos": 1252,
-   "kb": 60.6
+   "triangulos": 2140,
+   "kb": 203.3,
+   "gerador": "bocas/jogo.py"
   },
   {
    "id": "lanterna_cano_12",
@@ -14651,8 +14653,9 @@
     0.022,
     0.018
    ],
-   "triangulos": 832,
-   "kb": 50.5
+   "triangulos": 1536,
+   "kb": 163.8,
+   "gerador": "bocas/jogo.py"
   },
   {
    "id": "freio_boca_308",
@@ -14678,8 +14681,9 @@
     0.024,
     0.08
    ],
-   "triangulos": 1360,
-   "kb": 64.8
+   "triangulos": 1396,
+   "kb": 131.3,
+   "gerador": "bocas/jogo.py"
   },
   {
    "id": "supressor_308",
@@ -15014,12 +15018,12 @@
    "descricao": "Alça de furo (ferro) que rebate para não atrapalhar a luneta. Vem no fuzil.",
    "arquivo": "acessorios/alca_rebativel.glb",
    "tamanho_m": [
-    0.027,
-    0.03,
+    0.034,
+    0.032,
     0.024
    ],
-   "triangulos": 862,
-   "kb": 47.9,
+   "triangulos": 1100,
+   "kb": 310.2,
    "partes": [
     {
      "no": "lamina",
@@ -15041,7 +15045,8 @@
      "laco": false,
      "descricao": "rebate a mira"
     }
-   }
+   },
+   "gerador": "miras/jogo.py"
   },
   {
    "id": "massa_rebativel",
@@ -15055,12 +15060,12 @@
    "descricao": "Massa de mira com ponta branca, rebatível. Vem no fuzil.",
    "arquivo": "acessorios/massa_rebativel.glb",
    "tamanho_m": [
-    0.027,
-    0.029,
+    0.034,
+    0.031,
     0.024
    ],
-   "triangulos": 648,
-   "kb": 34.3,
+   "triangulos": 788,
+   "kb": 283.8,
    "partes": [
     {
      "no": "lamina",
@@ -15082,7 +15087,8 @@
      "laco": false,
      "descricao": "rebate a mira"
     }
-   }
+   },
+   "gerador": "miras/jogo.py"
   },
   {
    "id": "empunhadura_vertical",
@@ -15283,8 +15289,9 @@
     0.021,
     0.061
    ],
-   "triangulos": 782,
-   "kb": 37.7
+   "triangulos": 1844,
+   "kb": 171.3,
+   "gerador": "bocas/jogo.py"
   },
   {
    "id": "compensador_556",
@@ -15591,11 +15598,11 @@
    "arquivo": "acessorios/lanterna_compacta.glb",
    "tamanho_m": [
     0.033,
-    0.026,
+    0.029,
     0.076
    ],
-   "triangulos": 2104,
-   "kb": 108.6,
+   "triangulos": 3441,
+   "kb": 448.9,
    "encaixes": [
     {
      "no": "feixe",
@@ -15608,7 +15615,8 @@
      ],
      "descricao": "SpotLight3D aqui (-Z)"
     }
-   ]
+   ],
+   "gerador": "lanterna/jogo.py"
   },
   {
    "id": "empunhadura_curta",
@@ -15788,8 +15796,8 @@
     0.047,
     0.053
    ],
-   "triangulos": 6808,
-   "kb": 321.0,
+   "triangulos": 2144,
+   "kb": 421.6,
    "pontos_ref": [
     {
      "no": "ref_guarda_mao",
@@ -15801,7 +15809,8 @@
      ],
      "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
     }
-   ]
+   ],
+   "gerador": "empunhaduras/jogo.py"
   },
   {
    "id": "coronha_retratil_ar_tan",
@@ -15905,8 +15914,9 @@
     0.044,
     0.176
    ],
-   "triangulos": 4076,
-   "kb": 206.3
+   "triangulos": 2968,
+   "kb": 363.9,
+   "gerador": "bocas/jogo.py"
   },
   {
    "id": "carregador_556_30_tan",
@@ -16754,8 +16764,8 @@
     0.076,
     0.036
    ],
-   "triangulos": 10404,
-   "kb": 551.6,
+   "triangulos": 2000,
+   "kb": 405.0,
    "pontos_ref": [
     {
      "no": "ref_guarda_mao",
@@ -16763,11 +16773,12 @@
      "posicao_m": [
       0.0,
       -0.038,
-      -0.0001
+      0.001
      ],
      "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
     }
-   ]
+   ],
+   "gerador": "empunhaduras/jogo.py"
   },
   {
    "id": "empunhadura_reta_tan",
@@ -17246,8 +17257,8 @@
     0.059,
     0.068
    ],
-   "triangulos": 2072,
-   "kb": 101.5,
+   "triangulos": 2090,
+   "kb": 324.2,
    "encaixes": [
     {
      "no": "olho",
@@ -17260,7 +17271,22 @@
      ],
      "descricao": "linha de visada"
     }
-   ]
+   ],
+   "gerador": "miras/jogo.py",
+   "optica": {
+    "tipo": "ponto",
+    "aumento": [
+     1,
+     1
+    ],
+    "ocular_m": [
+     0.0,
+     0.033,
+     -0.0261
+    ],
+    "raio_ocular_m": 0.0139,
+    "iluminado": true
+   }
   },
   {
    "id": "elastico_ak",
@@ -17281,10 +17307,11 @@
    "tamanho_m": [
     0.043,
     0.07,
-    0.025
+    0.024
    ],
-   "triangulos": 640,
-   "kb": 31.0
+   "triangulos": 1536,
+   "kb": 159.6,
+   "gerador": "apetrechos/jogo.py"
   },
   {
    "id": "tampa_trilho_ak_gasto",
@@ -17335,8 +17362,8 @@
     0.059,
     0.068
    ],
-   "triangulos": 2072,
-   "kb": 172.1,
+   "triangulos": 2090,
+   "kb": 347.1,
    "encaixes": [
     {
      "no": "olho",
@@ -17349,7 +17376,22 @@
      ],
      "descricao": "linha de visada"
     }
-   ]
+   ],
+   "gerador": "miras/jogo.py",
+   "optica": {
+    "tipo": "ponto",
+    "aumento": [
+     1,
+     1
+    ],
+    "ocular_m": [
+     0.0,
+     0.033,
+     -0.0261
+    ],
+    "raio_ocular_m": 0.0139,
+    "iluminado": true
+   }
   },
   {
    "id": "guarda_mao_fendas_ak_gasto",
@@ -17453,8 +17495,9 @@
     0.045,
     0.196
    ],
-   "triangulos": 2752,
-   "kb": 210.8
+   "triangulos": 2888,
+   "kb": 362.9,
+   "gerador": "bocas/jogo.py"
   },
   {
    "id": "lanterna_compacta_gasto",
@@ -17483,11 +17526,11 @@
    "arquivo": "acessorios/lanterna_compacta_gasto.glb",
    "tamanho_m": [
     0.033,
-    0.026,
+    0.029,
     0.076
    ],
-   "triangulos": 2104,
-   "kb": 168.5,
+   "triangulos": 3441,
+   "kb": 468.0,
    "encaixes": [
     {
      "no": "feixe",
@@ -17500,7 +17543,8 @@
      ],
      "descricao": "SpotLight3D aqui (-Z)"
     }
-   ]
+   ],
+   "gerador": "lanterna/jogo.py"
   },
   {
    "id": "carregador_762_30_grade_gasto",
@@ -17619,11 +17663,11 @@
    "arquivo": "acessorios/empunhadura_dobravel.glb",
    "tamanho_m": [
     0.026,
-    0.083,
-    0.042
+    0.077,
+    0.041
    ],
-   "triangulos": 8600,
-   "kb": 433.4,
+   "triangulos": 2232,
+   "kb": 456.5,
    "partes": [
     {
      "no": "haste",
@@ -17657,12 +17701,13 @@
      "pai": "empunhadura_dobravel",
      "posicao_m": [
       0.0,
-      -0.0415,
-      0.0111
+      -0.037,
+      0.0123
      ],
      "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
     }
-   ]
+   ],
+   "gerador": "empunhaduras/jogo.py"
   },
   {
    "id": "supressor_9mm_tan",
@@ -18850,12 +18895,13 @@
    "descricao": "Cabeça de garras com gatilho de dedo indicador e fita de pulso: engata no laço D, a puxada vem do braço e o disparo é limpo.",
    "arquivo": "acessorios/soltador_pulso.glb",
    "tamanho_m": [
-    0.048,
-    0.039,
-    0.164
+    0.047,
+    0.038,
+    0.167
    ],
-   "triangulos": 2092,
-   "kb": 129.8
+   "triangulos": 2764,
+   "kb": 289.0,
+   "gerador": "apetrechos/jogo.py"
   },
   {
    "id": "mira_pinos_luz",
@@ -18879,12 +18925,12 @@
    "descricao": "Aro com 5 pinos de fibra (10, 20, 30, 40 e 50 m), luz que acende os pinos no escuro e nível de bolha embaixo para não entortar o arco.",
    "arquivo": "acessorios/mira_pinos_luz.glb",
    "tamanho_m": [
-    0.058,
-    0.088,
+    0.059,
+    0.089,
     0.107
    ],
-   "triangulos": 10148,
-   "kb": 483.9,
+   "triangulos": 6392,
+   "kb": 768.5,
    "encaixes": [
     {
      "no": "olho",
@@ -18897,7 +18943,8 @@
      ],
      "descricao": "olho atrás do visor da corda: centralize o aro no visor; pino de cima 10 m ... de baixo 50 m"
     }
-   ]
+   ],
+   "gerador": "miras/jogo.py"
   },
   {
    "id": "aljava_composto",
@@ -19016,12 +19063,13 @@
    "descricao": "Alça de aço com sapata de borracha na frente da besta: pé dentro, ponta no chão, e dá para armar bem mais rápido.",
    "arquivo": "acessorios/estribo_besta.glb",
    "tamanho_m": [
-    0.176,
+    0.175,
     0.062,
     0.16
    ],
-   "triangulos": 5056,
-   "kb": 239.8
+   "triangulos": 3420,
+   "kb": 185.4,
+   "gerador": "apetrechos/jogo.py"
   },
   {
    "id": "bainha_cinto_faca",
@@ -20026,12 +20074,13 @@
    "descricao": "Haste de fibra com ponta de 3 lâminas: corta fundo, mas a ponta pode quebrar ao recuperar. Pivô no entalhe (ponto que encosta na corda).",
    "arquivo": "municao/flecha_caca.glb",
    "tamanho_m": [
-    0.029,
-    0.027,
+    0.028,
+    0.028,
     0.732
    ],
-   "triangulos": 662,
-   "kb": 35.2
+   "triangulos": 1246,
+   "kb": 99.3,
+   "gerador": "flechas/jogo.py"
   },
   {
    "id": "flecha_prego",
@@ -20052,12 +20101,13 @@
    "descricao": "Prego amarrado na ponta com fita: fácil de fazer na bancada, erra mais e quebra fácil. Pivô no entalhe (ponto que encosta na corda).",
    "arquivo": "municao/flecha_prego.glb",
    "tamanho_m": [
-    0.029,
     0.025,
+    0.029,
     0.758
    ],
-   "triangulos": 1610,
-   "kb": 79.7
+   "triangulos": 938,
+   "kb": 82.2,
+   "gerador": "flechas/jogo.py"
   },
   {
    "id": "flecha_campo",
@@ -20078,12 +20128,13 @@
    "descricao": "Ponta de aço simples: entra menos, mas quase sempre dá para usar de novo. Pivô no entalhe (ponto que encosta na corda).",
    "arquivo": "municao/flecha_campo.glb",
    "tamanho_m": [
-    0.029,
-    0.025,
+    0.024,
+    0.028,
     0.724
    ],
-   "triangulos": 638,
-   "kb": 34.1
+   "triangulos": 1110,
+   "kb": 73.6,
+   "gerador": "flechas/jogo.py"
   },
   {
    "id": "flecha_carbono",
@@ -20104,12 +20155,13 @@
    "descricao": "Haste de carbono com ponta de 3 lâminas e nock luminoso (acende no disparo: fácil de achar no mato). Serve nos dois arcos. Pivô no entalhe (ponto que encosta na corda).",
    "arquivo": "municao/flecha_carbono.glb",
    "tamanho_m": [
-    0.022,
+    0.024,
     0.022,
     0.766
    ],
-   "triangulos": 866,
-   "kb": 46.4
+   "triangulos": 1246,
+   "kb": 96.5,
+   "gerador": "flechas/jogo.py"
   },
   {
    "id": "flecha_carbono_campo",
@@ -20130,12 +20182,13 @@
    "descricao": "Ponta de campo simples: quase sempre volta inteira. Serve nos dois arcos. Pivô no entalhe (ponto que encosta na corda).",
    "arquivo": "municao/flecha_carbono_campo.glb",
    "tamanho_m": [
-    0.02,
     0.018,
+    0.021,
     0.756
    ],
-   "triangulos": 766,
-   "kb": 41.0
+   "triangulos": 1110,
+   "kb": 73.1,
+   "gerador": "flechas/jogo.py"
   },
   {
    "id": "virote_caca",
@@ -20157,11 +20210,12 @@
    "arquivo": "municao/virote_caca.glb",
    "tamanho_m": [
     0.024,
-    0.021,
+    0.024,
     0.462
    ],
-   "triangulos": 882,
-   "kb": 44.5
+   "triangulos": 1178,
+   "kb": 104.0,
+   "gerador": "flechas/jogo.py"
   },
   {
    "id": "virote_campo",
@@ -20182,12 +20236,13 @@
    "descricao": "Ponta simples de aço: quase sempre dá para usar de novo. Pivô na nock (ponto que encosta na corda).",
    "arquivo": "municao/virote_campo.glb",
    "tamanho_m": [
-    0.024,
-    0.021,
+    0.023,
+    0.02,
     0.45
    ],
-   "triangulos": 846,
-   "kb": 44.6
+   "triangulos": 1042,
+   "kb": 91.6,
+   "gerador": "flechas/jogo.py"
   },
   {
    "id": "virote_prego",
@@ -20209,11 +20264,12 @@
    "arquivo": "municao/virote_prego.glb",
    "tamanho_m": [
     0.024,
-    0.021,
+    0.023,
     0.472
    ],
-   "triangulos": 1950,
-   "kb": 97.2
+   "triangulos": 870,
+   "kb": 87.8,
+   "gerador": "flechas/jogo.py"
   }
  ],
  "efeitos": [

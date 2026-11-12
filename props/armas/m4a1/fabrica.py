@@ -172,6 +172,31 @@ def animar(cfg, ID, arq):
     empacotar.gravar_glb(arq, j, bin_)
 
 
+VIDRO = {'name': 'vidro', 'alphaMode': 'BLEND', 'doubleSided': True,
+         'pbrMetallicRoughness': {'baseColorFactor': [0.667, 0.804, 0.765, 0.102], 'metallicFactor': 0.0, 'roughnessFactor': 0.05}}
+
+
+def aceso(nome, cor):
+    """Material liso que brilha sozinho (fibra óptica, lâmpada)."""
+    return {'name': nome, 'emissiveFactor': list(cor), 'pbrMetallicRoughness': {'baseColorFactor': [*cor, 1.0], 'metallicFactor': 0.0, 'roughnessFactor': 0.3}}
+
+
+def materiais_lisos(arq, malhas):
+    """Troca o material assado das malhas dadas ({malha: material glTF}) por um liso: vidro transparente
+    (lente de mira de ponto, vê-se através) ou peça acesa."""
+    j, bin_ = empacotar.ler_glb(arq)
+    achadas = set()
+    for m in j['meshes']:
+        if m.get('name') in malhas:
+            j['materials'].append(dict(malhas[m['name']]))
+            for p in m['primitives']:
+                p['material'] = len(j['materials']) - 1
+                p['attributes'] = {k: v for k, v in p['attributes'].items() if not k.startswith('TEXCOORD') and k != 'TANGENT'}
+            achadas.add(m['name'])
+    assert achadas == set(malhas), (set(malhas) - achadas, [m.get('name') for m in j['meshes']])
+    empacotar.gravar_glb(arq, j, bin_)
+
+
 # ------------------------------------------------------------------ versão leve
 def _emissor(m, sufixo):
     """Liga a textura <sufixo> do material ao emissor (para assar cor e ORM da malha detalhada na leve)."""
@@ -337,16 +362,21 @@ def acessorio(cfg, saida, fmt='webp'):
     """GLB de um acessório refeito (cfg['id'] em acessorios/), com os nós e as animações do antigo
     (cfg['esqueleto']) e o registro no catálogo. Sem versão leve."""
     ID = cfg['id']
+    G = cfg.get('grupo', 'acessorios')                 # 'municao' para flechas e virotes soltos
     montar_cena(cfg, ID, os.path.join(saida, f"{cfg['nome']}.blend"))
     tmp = os.path.join(saida, f'{ID}_sem_tex.glb')
     bpy.ops.object.select_all(action='SELECT')
     bpy.ops.export_scene.gltf(filepath=tmp, **EXPORTAR)
-    arq = os.path.join(ARMAS, 'acessorios', f'{ID}.glb')
+    arq = os.path.join(ARMAS, G, f'{ID}.glb')
     empacotar.main(tmp, os.path.join(saida, 'tex'), arq, fmt)
     animar(cfg, ID, arq)
+    lisos = {p: VIDRO for p in cfg.get('vidro', [])}
+    lisos.update(cfg.get('lisos', {}))                 # peças de material liso, sem textura: vidro, fibra acesa
+    if lisos:
+        materiais_lisos(arq, {f'{ID}_{p}': m for p, m in lisos.items()})
     arq_cat = os.path.join(ARMAS, 'catalogo.json')
     cat = json.load(open(arq_cat, encoding='utf-8'))
-    r = next(x for x in cat['acessorios'] if x['id'] == ID)
+    r = next(x for x in cat[G] if x['id'] == ID)
     r['tamanho_m'], r['triangulos'] = medir(arq)
     r.update(gerador=cfg['gerador'], descricao=cfg.get('descricao', r['descricao']))
     if cfg.get('optica'):                              # miras e lunetas: onde ficam as lentes (o jogo desenha o zoom por elas)
@@ -355,7 +385,7 @@ def acessorio(cfg, saida, fmt='webp'):
     for e in r.get('encaixes', []):                    # os encaixes do acessório seguem os nós novos
         if e['no'] in pos:
             e['posicao_m'] = pos[e['no']]
-    s = pontos_ref.aplicar_item(r, 'acessorios', {x['id']: x for x in cat['acessorios']})
+    s = pontos_ref.aplicar_item(r, G, {x['id']: x for x in cat[G]}) if G == 'acessorios' else None
     r['kb'] = round(os.path.getsize(arq) / 1024, 1)
     json.dump(cat, open(arq_cat, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f"{ID} {r['triangulos']} tris {r['kb']} KB {r['tamanho_m']}")

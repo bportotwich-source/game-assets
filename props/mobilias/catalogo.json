@@ -8527,12 +8527,13 @@
    "estacao": "costura (roupas, mochilas, coletes acolchoados, sacos e lona de barraca)",
    "arquivo": "mobilias/bancada_costura.glb",
    "tamanho_m": [
-    1.1,
-    1.12,
-    0.6
+    1.113,
+    1.134,
+    0.606
    ],
-   "triangulos": 2352,
-   "kb": 360.9
+   "triangulos": 12992,
+   "kb": 3679.2,
+   "gerador": "moveis_realistas/bancada_costura/gerar.py"
   },
   {
    "id": "mesa_enfermaria",
@@ -8564,12 +8565,13 @@
    "estacao": "enfermaria (curativos melhores, tala, remédio de ervas; morador ferido se recupera 2× mais rápido deitado aqui)",
    "arquivo": "mobilias/mesa_enfermaria.glb",
    "tamanho_m": [
-    2.42,
-    0.925,
-    0.66
+    2.44,
+    1.82,
+    0.723
    ],
-   "triangulos": 4908,
-   "kb": 460.5
+   "triangulos": 8384,
+   "kb": 2685.2,
+   "gerador": "moveis_realistas/mesa_enfermaria/gerar.py"
   },
   {
    "id": "forja_tambor",

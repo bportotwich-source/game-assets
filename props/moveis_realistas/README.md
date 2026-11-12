@@ -69,3 +69,12 @@ de bornes, rádio de válvulas aberto, placa de circuito com trilhas, ferro de s
 as pontas, carretéis de fio, gaveteiro de pecinhas, luminária, chaves e alicate. Nós: `estrutura`, `tampo`, `bateria`,
 `ferramentas`.
 
+
+## Bancada de trabalho com morsa (`bancada_trabalho`)
+
+1,82 × 1,75 × 0,74 m, 15,3 mil triângulos, 3 conjuntos de textura (estrutura e painel 2048; tampo, gaveta e morsa 2048;
+ferramentas e prateleira 1024). A bancada de oficina das garagens: cantoneira pintada com ferrugem, tampo de três
+pranchas com chapa de bater, morsa de ferro fundido com base giratória, painel perfurado (os furos são da textura,
+classe `eucatex`) com martelo, arco de serra, alicate, chaves combinadas e chaves de fenda, e embaixo a caixa de
+ferramentas, um galão e um rolo de fio. Nós: `estrutura`, `painel`, `tampo`, `gaveta` (desliza 0,35 m para a frente,
+como no catálogo), `morsa`, `ferramentas`, `prateleira`.

@@ -8594,7 +8594,7 @@
    "ponto_uso": [
     0.0,
     0.0,
-    0.7
+    0.75
    ],
    "estacao": "forja (aço vira lâmina, ponta de lança, ferradura e pregos; precisa de carvão)",
    "usa": "carvao",
@@ -8602,12 +8602,18 @@
    "ruido_m": 25,
    "arquivo": "mobilias/forja_tambor.glb",
    "tamanho_m": [
-    2.011,
-    0.678,
-    0.613
+    2.08,
+    0.817,
+    0.603
    ],
-   "triangulos": 3640,
-   "kb": 537.5
+   "triangulos": 6944,
+   "kb": 2707.2,
+   "gerador": "moveis_realistas/forja_tambor/gerar.py",
+   "ponto_fogo": [
+    0.0,
+    0.724,
+    0.0
+   ]
   },
   {
    "id": "fogao_tambor",

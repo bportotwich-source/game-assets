@@ -8467,7 +8467,7 @@
   },
   {
    "id": "bancada_carpintaria",
-   "nome": "Bancada de carpintaria de cavaletes",
+   "nome": "Bancada de carpintaria com morsa",
    "grupo": "mobilias",
    "categoria": "oficina",
    "montagem": "floor",
@@ -8488,17 +8488,18 @@
    "ponto_uso": [
     0.0,
     0.0,
-    0.75
+    0.85
    ],
    "estacao": "carpintaria (tábuas viram móveis, barricadas reforçadas, cabos de ferramenta e flechas)",
    "arquivo": "mobilias/bancada_carpintaria.glb",
    "tamanho_m": [
-    2.229,
-    1.0,
-    0.938
+    2.04,
+    1.13,
+    0.828
    ],
-   "triangulos": 3044,
-   "kb": 373.1
+   "triangulos": 8788,
+   "kb": 3274.1,
+   "gerador": "moveis_realistas/bancada_carpintaria/gerar.py"
   },
   {
    "id": "bancada_costura",

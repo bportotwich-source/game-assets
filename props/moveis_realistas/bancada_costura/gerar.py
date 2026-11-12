@@ -35,7 +35,8 @@ def main(res=2048, saida=os.path.join(AQUI, 'saida')):
     cat = json.load(open(arq_cat, encoding='utf-8'))
     r = next(x for x in cat['itens'] if x['id'] == ID)
     r.update(tamanho_m=tam, triangulos=tris, kb=round(os.path.getsize(arq) / 1024, 1),
-             gerador='moveis_realistas/bancada_costura/gerar.py', ponto_uso=[0.0, 0.0, 0.6])
+             gerador='moveis_realistas/bancada_costura/gerar.py', ponto_uso=[0.0, 0.0, 0.6],
+             constroi={'tabua': 4, 'caixa_pregos': 1, 'engrenagens': 1, 'sucata_metal': 2}, ferramenta='martelo')
     json.dump(cat, open(arq_cat, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f"{ID} {tris} tris {r['kb']} KB {tam}")
 

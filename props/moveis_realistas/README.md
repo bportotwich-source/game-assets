@@ -115,3 +115,22 @@ cama 1024; soro e miudezas 1024). Tábuas sobre dois cavaletes, colchão de list
 um frasco de soro pendurado num pau amarrado à cabeceira e um caixote-criado com cruz vermelha: bacia de ágata, frascos,
 ataduras e bandeja de instrumentos. Nós: `estrado`, `caixote`, `cama`, `soro`, `miudezas`.
 Atenção: `lib.lathe` fecha as pontas do perfil no eixo; um anel solto vira tampa (foi o que escondeu a bacia).
+
+## Fogão a lenha de tambor (`fogao_tambor`)
+
+1,52 × 2,40 × 0,60 m, 6,5 mil triângulos, 3 conjuntos de textura (tambor e chaminé 2048; chapa, porta e panelas 1024;
+lenha e brasa 1024). Tambor de 200 litros deitado em berços de aço sobre pés de tijolo, chapa de cozinhar com duas
+bocas de tampa, porta da fornalha com frestas que brilham, chaminé de tubo emendado até 2,4 m com chapéu, panela de
+alumínio, chaleira de ágata azul, atiçador e lenha empilhada ao lado. Nós: `tambor`, `chamine`, `chapa`,
+`porta_fornalha` (origem na dobradiça, abre −100° em y), `panelas`, `lenha` e `brasa` (emissiva, some com o fogo
+apagado). `ponto_fogo` no catálogo. Classes novas: `chamine`, `aluminio`, `chapa_fogao`.
+
+## Defumador de tábuas (`defumador`)
+
+0,95 × 1,85 × 0,92 m, 11,9 mil triângulos, 3 conjuntos de textura (base e caixa 2048; telhado e porta 2048; carne,
+cinza e brasa 1024). Base de tijolo com a boca do fogo na frente e verga de aço, caixa de tábuas com frestas
+enegrecida de baixo para cima, telhado de duas águas de zinco ondulado, porta de tábuas com travessa em Z, dobradiças
+de cinta e ferrolho, varas por dentro com mantas de carne penduradas, cinza, tocos queimados e brasa.
+Nós: `base`, `caixa`, `telhado`, `porta` (origem na dobradiça, abre −110° em y), `dentro`, `fogo`, `brasa` (emissiva).
+Classes novas: `fumo_x/_y/_z` (tábua com fuligem que sobe com a altura), `zinco` ondulado por textura, `carne_seca`,
+`cinza_fogo`.

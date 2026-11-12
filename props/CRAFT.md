@@ -123,7 +123,7 @@ Ingredientes são ids do loot (`props/loot/catalogo.json`); estações e constru
 | Mesa de costura com máquina manual (`bancada_costura`) | 2 | Maca de campanha dobrável | - |
 | Composteira de pallets (`composteira`) | 2 | - | 1× Saco de adubo de composto (`adubo`) a cada 1440 min, gastando 4 restos de comida |
 | Defumador de tábuas (`defumador`) | 2 | - | 4× Peça de carne defumada (`carne_defumada`) a cada 240 min, gastando 4 carne crua, 1 lenha |
-| Filtro de água em barril (`filtro_barril`) | 2 | - | 1× Galão de água 5 L (`galao_agua`) a cada 60 min, gastando 5 agua suja |
+| Filtro de água em barril (`filtro_barril`) | 2 | - | 1× Galão de água 5 L (`galao_agua`) a cada 60 min, gastando 5 agua suja, 1 galao vazio |
 | Forja de tambor com fole (`forja_tambor`) | 2 | Grade de janela de vergalhão, Panelão no tripé sobre fogueira, Cata-vento de bomba d'água em torre, Portão principal de chapa com guarita, Baú de aço com cadeado | - |
 | Bancada de eletrônica (`bancada_eletronica`) | 3 | Holofote em poste com bateria, Painéis solares no cavalete com baterias, Torre de rádio da comunidade, Poste de luz restaurado, Subestação religada, Turbina eólica pequena no mastro | - |
 | Cata-vento de bomba d'água em torre (`cata_vento`) | 3 | - | 2× Galão de água 5 L (`galao_agua`) a cada 60 min, gastando  |

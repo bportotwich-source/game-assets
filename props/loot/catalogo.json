@@ -147,11 +147,12 @@
    "arquivo": "loot/garrafa_agua.glb",
    "tamanho_m": [
     0.091,
-    0.32,
+    0.318,
     0.091
    ],
-   "triangulos": 4616,
-   "kb": 264.1
+   "triangulos": 6876,
+   "kb": 250.9,
+   "gerador": "itens_realistas/agua/gerar.py"
   },
   {
    "id": "galao_agua",
@@ -173,12 +174,17 @@
    "efeito": "sede -40 por uso, 5 usos",
    "arquivo": "loot/galao_agua.glb",
    "tamanho_m": [
-    0.192,
-    0.328,
-    0.15
+    0.17,
+    0.33,
+    0.17
    ],
-   "triangulos": 520,
-   "kb": 27.0
+   "triangulos": 3912,
+   "kb": 169.6,
+   "gerador": "itens_realistas/agua/gerar.py",
+   "estados": {
+    "suja": "loot/galao_agua_suja.glb",
+    "galao_vazio": "loot/galao_vazio.glb"
+   }
   },
   {
    "id": "kit_medico",
@@ -879,8 +885,13 @@
     0.292,
     0.071
    ],
-   "triangulos": 832,
-   "kb": 64.7
+   "triangulos": 2040,
+   "kb": 112.9,
+   "gerador": "itens_realistas/agua/gerar.py",
+   "estados": {
+    "agua_suja": "loot/garrafa_vidro_agua_suja.glb",
+    "agua_limpa": "loot/garrafa_vidro_agua_limpa.glb"
+   }
   },
   {
    "id": "panela",
@@ -1564,12 +1575,13 @@
    ],
    "arquivo": "loot/cantil.glb",
    "tamanho_m": [
-    0.176,
-    0.176,
-    0.268
+    0.13,
+    0.227,
+    0.068
    ],
-   "triangulos": 2268,
-   "kb": 109.6
+   "triangulos": 1488,
+   "kb": 112.7,
+   "gerador": "itens_realistas/agua/gerar.py"
   },
   {
    "id": "saco_dormir",
@@ -2488,12 +2500,17 @@
    "efeito": "filtro de água, coletor, armadilha de garrafa e isca",
    "arquivo": "loot/garrafa_pet.glb",
    "tamanho_m": [
-    0.324,
+    0.322,
     0.11,
     0.11
    ],
-   "triangulos": 3024,
-   "kb": 143.6
+   "triangulos": 2396,
+   "kb": 113.8,
+   "gerador": "itens_realistas/agua/gerar.py",
+   "estados": {
+    "agua_suja": "loot/garrafa_pet_agua_suja.glb",
+    "agua_limpa": "loot/garrafa_pet_agua_limpa.glb"
+   }
   },
   {
    "id": "lata_vazia",
@@ -3178,11 +3195,16 @@
    "arquivo": "loot/caneca_lata.glb",
    "tamanho_m": [
     0.12,
-    0.12,
-    0.089
+    0.089,
+    0.079
    ],
-   "triangulos": 3676,
-   "kb": 175.6
+   "triangulos": 3756,
+   "kb": 239.1,
+   "gerador": "itens_realistas/agua/gerar.py",
+   "estados": {
+    "agua_suja": "loot/caneca_lata_agua_suja.glb",
+    "agua_limpa": "loot/caneca_lata_agua_limpa.glb"
+   }
   },
   {
    "id": "curativo_improvisado",

@@ -164,3 +164,18 @@ tabela de cargas pregada no painel, luminária de garra; na prateleira latas, ca
 o manual; embaixo um caixote de MUNIÇÃO e um balde de cápsulas vazias. Nós: `estrutura`, `tampo`, `prensa`, `balanca`,
 `capsulas`, `miudezas`, `prateleira`, `embaixo`. Classes novas: `papelao`, `caixa_verde`, `caixa_azul`, `papel` (pautado e
 escrito por textura), `cartucho`, `latao_fosco`, `letra_preta`. `modelo._letra_curva` pinta um letreiro numa lata redonda.
+
+## Energia da base: gerador, banco de baterias, carregador de pilhas e lâmpada no poste
+
+Quatro peças do degrau 3 do Recomeço (primeira eletricidade). Os números de energia ficam no catálogo
+(`energia_w`, `tanque_l`, `litros_h`, `ruido_m`, `bateria_wh`, `consumo_w`, `luz_m`, `ponto_luz`) e o jogo os lê em
+`jogo/sistemas/energia.gd`.
+
+| id | medidas | triângulos | texturas | o que é |
+|---|---|---|---|---|
+| `gerador` | 0,69 × 0,55 × 0,55 m | 6,2 mil | 2 × 1024 | Gerador portátil a gasolina: quadro de tubo com pés de borracha, tanque vermelho com tampa, medidor e letreiro GASOLINA, motor de um cilindro com aletas, partida de corda, alternador, escape e painel com duas tomadas, voltímetro e chave. Substitui o gerador simples do lote 4 (mesmo id e medidas). Nós: `estrutura`, `tanque`, `motor`, `painel`. 2000 W, tanque de 20 L, 2,5 L/h, barulho a 35 m. |
+| `banco_baterias` | 0,82 × 0,93 × 0,39 m | 5,5 mil | 2 × 1024 | Estante de tábuas com telhadinho, duas baterias de carro de 12 V ligadas por cabos vermelho e preto, controlador de CARGA com mostrador e três luzes, chave-faca e barra de bornes. Nós: `estrutura`, `baterias`, `quadro`. Guarda 1200 Wh. |
+| `carregador_pilhas` | 0,52 × 0,75 × 0,32 m | 3,5 mil | 1 × 1024 | Mesinha de pinho com o carregador de quatro baias (pilhas dentro, luzes de carga), fonte, copo com pilhas, pilhas soltas e um rolo de fio na prateleira de baixo. Nós: `estrutura`, `carregador`. Estação elétrica de 50 W. |
+| `lampada_poste` | 0,66 × 1,90 × 0,74 m | 2,8 mil | 1 × 1024 | Caibro em pé numa cruzeta com quatro mãos-francesas, braço com o refletor de lata e a lâmpada pendurada, interruptor e fio grampeado até um rolo no pé. Nós: `poste`, `luminaria`. `ponto_luz` é o centro da lâmpada. 60 W, ilumina 8 m. |
+
+A mesa de costura (`bancada_costura`) ganhou receita de construção (4 tábuas, 1 caixa de pregos, 1 engrenagens, 2 sucatas; martelo).

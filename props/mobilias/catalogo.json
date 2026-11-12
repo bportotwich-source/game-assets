@@ -1513,25 +1513,41 @@
    "id": "gerador",
    "nome": "Gerador portátil a gasolina",
    "grupo": "mobilias",
-   "categoria": "oficina",
+   "categoria": "energia",
    "montagem": "floor",
    "lote": 4,
    "comodos": [
     "posto",
     "quartel",
-    "garagem"
+    "garagem",
+    "abrigo"
    ],
-   "estacao": "gerador (energia, faz barulho)",
+   "estacao": "energia (2000 W ligado e com gasolina: 20 L dão 8 h; o barulho chama zumbis de até 35 m)",
    "usa": "combustivel",
    "peso_kg": 45.0,
    "arquivo": "mobilias/gerador.glb",
    "tamanho_m": [
-    0.684,
-    0.565,
-    0.528
+    0.688,
+    0.554,
+    0.552
    ],
-   "triangulos": 3332,
-   "kb": 162.1
+   "triangulos": 6240,
+   "kb": 629.5,
+   "fase": 3,
+   "energia_w": 2000,
+   "tanque_l": 20,
+   "litros_h": 2.5,
+   "ruido_m": 35,
+   "constroi": {
+    "motor_eletrico": 1,
+    "peca_motor": 2,
+    "chapa_metal": 2,
+    "cano_metal": 1,
+    "fio_eletrico": 1
+   },
+   "ferramenta": "chave_inglesa",
+   "estacao_obra": "forja_tambor",
+   "gerador": "moveis_realistas/gerador/gerar.py"
   },
   {
    "id": "tambor_200l",
@@ -8516,6 +8532,13 @@
     "galeria",
     "hotel"
    ],
+   "constroi": {
+    "tabua": 4,
+    "caixa_pregos": 1,
+    "engrenagens": 1,
+    "sucata_metal": 2
+   },
+   "ferramenta": "martelo",
    "fase": 2,
    "trabalha": 1,
    "ponto_uso": [
@@ -10557,6 +10580,116 @@
      "abre_graus": -100
     }
    ]
+  },
+  {
+   "id": "banco_baterias",
+   "nome": "Banco de baterias",
+   "grupo": "mobilias",
+   "categoria": "energia",
+   "montagem": "floor",
+   "lote": 20,
+   "comodos": [
+    "abrigo",
+    "garagem",
+    "oficina"
+   ],
+   "fase": 3,
+   "bateria_wh": 1200,
+   "constroi": {
+    "bateria_carro": 2,
+    "tabua": 3,
+    "fio_eletrico": 1,
+    "caixa_pregos": 1
+   },
+   "ferramenta": "chave_inglesa",
+   "estacao": "energia (guarda 1200 Wh: a sobra do gerador fica para a noite, com ele desligado e em silêncio)",
+   "arquivo": "mobilias/banco_baterias.glb",
+   "tamanho_m": [
+    0.82,
+    0.93,
+    0.389
+   ],
+   "triangulos": 5450,
+   "kb": 883.9,
+   "gerador": "moveis_realistas/banco_baterias/gerar.py"
+  },
+  {
+   "id": "carregador_pilhas",
+   "nome": "Carregador de pilhas",
+   "grupo": "mobilias",
+   "categoria": "energia",
+   "montagem": "floor",
+   "lote": 20,
+   "comodos": [
+    "abrigo",
+    "oficina"
+   ],
+   "fase": 3,
+   "usa": "energia",
+   "consumo_w": 50,
+   "trabalha": 1,
+   "ponto_uso": [
+    0.0,
+    0.0,
+    0.55
+   ],
+   "constroi": {
+    "placa_circuito": 1,
+    "fio_eletrico": 1,
+    "sucata_metal": 1,
+    "tabua": 2
+   },
+   "ferramenta": "chave_inglesa",
+   "estacao_obra": "bancada_eletronica",
+   "estacao": "carregador (com energia, pilhas gastas voltam a ser pilhas boas)",
+   "arquivo": "mobilias/carregador_pilhas.glb",
+   "tamanho_m": [
+    0.522,
+    0.747,
+    0.32
+   ],
+   "triangulos": 3524,
+   "kb": 540.5,
+   "gerador": "moveis_realistas/carregador_pilhas/gerar.py"
+  },
+  {
+   "id": "lampada_poste",
+   "nome": "Lâmpada improvisada no poste",
+   "grupo": "mobilias",
+   "categoria": "energia",
+   "montagem": "floor",
+   "lote": 20,
+   "comodos": [
+    "abrigo",
+    "rua"
+   ],
+   "fase": 3,
+   "usa": "energia",
+   "consumo_w": 60,
+   "luz_m": 8,
+   "ponto_luz": [
+    0.0,
+    1.64,
+    0.3
+   ],
+   "colisao": "nenhuma",
+   "constroi": {
+    "tabua": 2,
+    "fio_eletrico": 1,
+    "lata_vazia": 1,
+    "fita_adesiva": 1
+   },
+   "ferramenta": "martelo",
+   "estacao": "iluminação (acende 8 m em volta enquanto a rede da base tem energia)",
+   "arquivo": "mobilias/lampada_poste.glb",
+   "tamanho_m": [
+    0.662,
+    1.9,
+    0.742
+   ],
+   "triangulos": 2780,
+   "kb": 541.6,
+   "gerador": "moveis_realistas/lampada_poste/gerar.py"
   }
  ]
 }

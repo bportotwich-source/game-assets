@@ -1837,19 +1837,20 @@
    "estacao": "fogueira (cozinhar, ferver água, luz e calor; a luz atrai zumbis à noite)",
    "luz_m": 8,
    "ponto_fogo": [
-    0,
+    0.0,
     0.12,
-    0
+    0.0
    ],
    "usa": "lenha",
    "arquivo": "mobilias/fogueira.glb",
    "tamanho_m": [
-    0.879,
-    0.446,
-    0.846
+    0.952,
+    0.44,
+    0.903
    ],
-   "triangulos": 8200,
-   "kb": 696.0
+   "triangulos": 7588,
+   "kb": 1840.0,
+   "gerador": "moveis_realistas/fogueira/gerar.py"
   },
   {
    "id": "colchao_chao",
@@ -8796,19 +8797,20 @@
    "ponto_uso": [
     0.0,
     0.0,
-    0.6
+    0.75
    ],
    "sentar": true,
    "usa": "energia",
    "estacao": "eletrônica (rádio de longo alcance, holofote, alarme elétrico, carregador de pilhas; desbloqueia o marco da torre de rádio)",
    "arquivo": "mobilias/bancada_eletronica.glb",
    "tamanho_m": [
-    1.5,
-    1.286,
-    0.64
+    1.518,
+    1.293,
+    0.621
    ],
-   "triangulos": 4820,
-   "kb": 291.1
+   "triangulos": 12884,
+   "kb": 2950.5,
+   "gerador": "moveis_realistas/bancada_eletronica/gerar.py"
   },
   {
    "id": "bancada_municao",

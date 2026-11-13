@@ -8,7 +8,7 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 |---|---|---|---|---|---|---|---|
 | Geladeira duplex (`geladeira`) | 1 | Cozinha | 0,70 × 1,76 × 0,71 | 12 espaços: comida, agua, remedios | porta_geladeira, porta_freezer | barricada | 1780 |
 | Fogão 4 bocas (`fogao`) | 1 | Cozinha | 0,56 × 0,98 × 0,64 | 4 espaços: comida, utensilios | gaveta, porta_forno | - | 4784 |
-| Balcão com pia (`balcao_pia`) | 1 | Cozinha | 1,22 × 1,23 × 0,63 | 6 espaços: utensilios, limpeza, ferramentas | porta_esq, porta_dir | - | 2408 |
+| Balcão com pia (`balcao_pia`) | 1 | Cozinha | 1,22 × 1,19 × 0,63 | 6 espaços: utensilios, limpeza, ferramentas | porta_esq, porta_dir | - | 3912 |
 | Estante de aço (5 prateleiras) (`estante_metal`) | 1 | Depósito | 1,02 × 1,90 × 0,42 | 10 espaços: ferramentas, materiais, comida | - | - | 5264 |
 | Guarda-roupa de 2 portas (`guarda_roupa`) | 1 | Quarto | 1,05 × 2,00 × 0,61 | 10 espaços: roupas, tecido, mochila | porta_esq, porta_dir, gaveta | barricada | 9912 |
 | Cômoda de 3 gavetas (`comoda`) | 1 | Quarto | 0,93 × 0,85 × 0,47 | 6 espaços: roupas, remedios, pilhas | gaveta_1, gaveta_2, gaveta_3 | - | 9496 |
@@ -20,7 +20,7 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Sofá 3 lugares (`sofa`) | 1 | Sala | 1,93 × 0,88 × 0,86 | 2 espaços: moedas, pilhas | - | barricada, dormir, sentar | 9692 |
 | Armário de banheiro com espelho (`armario_banheiro`) | 1 | Banheiro | 0,52 × 0,70 × 0,17 | 4 espaços: remedios, higiene | porta_espelho | - | 348 |
 | Caixote de madeira (`caixa_madeira`) | 1 | Depósito | 0,84 × 0,56 × 0,64 | 8 espaços: comida, materiais, ferramentas, armas | tampa | barricada | 1972 |
-| Armário aéreo de cozinha (`armario_aereo`) | 2 | Cozinha | 0,82 × 0,64 × 0,37 | 6 espaços: comida, utensilios | porta_esq, porta_dir | - | 912 |
+| Armário aéreo de cozinha (`armario_aereo`) | 2 | Cozinha | 0,82 × 0,64 × 0,38 | 6 espaços: comida, utensilios | porta_esq, porta_dir | - | 2108 |
 | Pia de coluna (`pia_banheiro`) | 2 | Banheiro | 0,54 × 1,00 × 0,45 | - | - | - | 2780 |
 | Vaso sanitário com caixa (`vaso_sanitario`) | 2 | Banheiro | 0,40 × 0,81 × 0,63 | 1 espaços: remedios, moedas | assento, tampa_caixa | - | 2940 |
 | Banheira (`banheira`) | 2 | Banheiro | 1,60 × 0,62 × 0,74 | - | - | - | 798 |

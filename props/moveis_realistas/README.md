@@ -338,3 +338,18 @@ Refazer: `python3 moveis_realistas/loja/gerar.py todas 2048 /tmp/saida`.
 | `frigobar` | 0,48 × 0,55 × 0,55 m | 3,9 mil | 2 × 1024 | Minibar de hotel folheado de nogueira com puxador e plaqueta de latão, caixa interna branca, prateleira de arame, latas, garrafas e chocolate; porta com gaxeta e garrafinhas; grade e compressor atrás. |
 
 Classes novas: `assento_azul`, `aco_banco`, `liner_branco`, `chocolate` (e `capa_*`, `papel_livro` repetidas da sala). Refazer: `python3 moveis_realistas/servicos/gerar.py todas 2048 /tmp/saida`.
+
+## Sinais de saque, pilha de livros e tambor (`sinais/`: `cacos_vidro`, `louca_quebrada`, `papeis_espalhados`, `cadeira_quebrada`, `pilha_livros`, `tambor_200l`)
+
+`sinais/materiais.py` encadeia `servicos/materiais.py`. A cadeira quebrada é a `cadeira` realista de `sala/modelo.py` caída de lado, sem o pé da frente da direita (que fica solto no chão).
+
+| id | medidas | triângulos | texturas | o que tem |
+|---|---|---|---|---|
+| `tambor_200l` | 0,59 × 0,89 × 0,59 m | 2,5 mil | 1 × 1024 | Tambor de aço azul com aros de rolagem, frisos, bujões na tampa, ferrugem subindo da base e escorrido. |
+| `cacos_vidro` | 0,98 × 0,03 × 0,81 m | 0,9 mil | 1 × 512 | 55 cacos espalhados e o canto do caixilho branco com um pedaço de vidro preso. |
+| `louca_quebrada` | 0,78 × 0,07 × 0,60 m | 1,1 mil | 1 × 512 | Pedaços de prato com friso azul, lascas e a xícara deitada com a asa solta ao lado. |
+| `papeis_espalhados` | 0,98 × 0,02 × 0,95 m | 1,3 mil | 1 × 1024 | 14 folhas A4 com a ponta levantada, linhas de texto e carimbo azul, e uma pasta parda. |
+| `cadeira_quebrada` | 1,43 × 0,42 × 0,48 m | 3,6 mil | 1 × 1024 | A cadeira de nogueira com assento verde, caída de lado, com o toco lascado e o pé solto no chão. |
+| `pilha_livros` | 0,50 × 0,25 × 0,34 m | 0,7 mil | 1 × 512 | Sete livros deitados empilhados meio tortos e um caído ao lado. |
+
+Classes novas: `lasca`, `pasta_parda`, `carimbo_azul` (e `estofado_verde`, `tacha` repetidas da sala). Refazer: `python3 moveis_realistas/sinais/gerar.py todas 2048 /tmp/saida`.

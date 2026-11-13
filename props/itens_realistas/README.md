@@ -59,6 +59,28 @@ python3 comida/gerar.py todas 2048 /tmp/comida           # assa e grava os 15 GL
 
 O bake fica guardado na pasta de saída: depois de mudar um modelo, apague `<saída>/<forma>` antes de gerar de novo.
 
+## remedios/
+
+Remédios, no mesmo lugar e tamanho próximo dos antigos. Usa as classes e as funções de `comida/`.
+
+| Item | Arquivo | O que tem |
+|---|---|---|
+| Kit de primeiros socorros | `kit_medico` | maleta de plástico vermelha com cruz, junta da tampa, dois fechos, alça e dobradiças |
+| Frasco de comprimidos | `frasco_remedio` | frasco laranja com rótulo e tampa branca estriada |
+| Rolo de atadura | `atadura` | rolo de gaze com as voltas à mostra, ponta solta e presilha de metal |
+| Seringa com antibiótico | `seringa` | corpo graduado com o remédio dentro, êmbolo, aba de dedo e agulha |
+| Lata de costura | `kit_costura` | lata aberta forrada, com carretéis, alfineteiro, tesoura, fita métrica, botões e dedal |
+| Garrafa de álcool 70 % | `alcool` | garrafa oval de plástico com rótulo e tampa vermelha de bico |
+| Curativo de pano fervido | `curativo_improvisado` | três panos dobrados amarrados com uma tira |
+| Tala de tábua e pano | `tala_improvisada` | duas tábuas com três amarras de pano, acolchoado e rolo de tira |
+| Maço de ervas | `ervas` | talos amarrados com barbante e folhas em lança (item só do jogo: grava o GLB, sem registro no catálogo) |
+| Remédio de ervas | `remedio_ervas` | vidro verde com rolha, cordão e rótulo de papel (`estados` do `frasco_remedio`) |
+
+```
+python3 remedios/ver.py formas.png seringa                 # confere as formas, sem assar
+python3 remedios/gerar.py todas 1024 /tmp/remedios         # assa e grava os 10 GLBs em props/loot (~10 min)
+```
+
 ## ferramentas/
 
 Ferramentas e materiais de craft, no mesmo tamanho, posição e ponto de pega dos antigos (o jogo não muda):

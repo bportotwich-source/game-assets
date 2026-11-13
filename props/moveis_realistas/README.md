@@ -284,3 +284,16 @@ Classes novas: `foto_papel`, `foto_sombra`, `foto_meio`, `foto_pele`, `passepart
 `folha_seca`, `ceramica_azul`, `cupula`, `vidro_lampada`. Sem vidro na frente do quadro e do relógio (os antigos tinham uma
 placa transparente). Refazer: `python3 moveis_realistas/decoracao/gerar.py todas 2048 /tmp/saida`.
 
+## Escritório e TV (`escritorio/`: `mesa_escritorio`, `rack_tv`, `tv_tubo`, `calendario_parede`)
+
+`escritorio/materiais.py` encadeia `decoracao/materiais.py`. Mesmos nós que abrem dos antigos (`gaveta`; `porta_esq`).
+
+| id | medidas | triângulos | texturas | o que tem |
+|---|---|---|---|---|
+| `mesa_escritorio` | 1,40 × 1,14 × 0,72 m | 9,0 mil | 2 × 1024 | Tampo de fórmica, pés de painel de aço, monitor de tubo bege, teclado com as teclas uma a uma, mouse, papéis e porta-lápis; `gaveta` de aço com resma, grampeador e pilhas. |
+| `rack_tv` | 1,40 × 1,18 × 0,46 m | 2,9 mil | 2 × 1024 | Rack de nogueira com pés palito, videocassete, fitas e caixa no lado aberto, TV de tela plana em cima; `porta_esq` almofadada com puxador de botão. |
+| `tv_tubo` | 0,66 × 0,85 × 0,64 m | 1,9 mil | 1 × 1024 | Gabinete de madeira com pés, tela com trincas saindo da pancada, botões giratórios, grade do alto-falante, costas do tubo e antena de dois braços. |
+| `calendario_parede` | 0,30 × 0,45 × 0,02 m | 1,6 mil | 1 × 1024 | Folha de outubro com paisagem, dias 1 a 16 riscados e o 17 circulado (o dia do surto), pendurada num prego. |
+
+Classes novas: `aco_mesa`, `formica`, `tecla`, `vidro_caco`, `cal_*`. Refazer: `python3 moveis_realistas/escritorio/gerar.py todas 2048 /tmp/saida`.
+

@@ -14,7 +14,8 @@ from PIL import Image
 PROPS = os.path.dirname(os.path.dirname(AQUI))
 GERADOR = 'itens_realistas/comida/gerar.py'
 TEXTURA = {'lata_feijao': 512, 'lata_milho': 512, 'lata_sardinha': 512, 'pacote_arroz': 1024, 'caixa_cereal': 1024,
-           'caixa_leite': 512, 'salgadinho': 1024, 'barra_chocolate': 512, 'arroz_cozido': 512}   # lado da textura no GLB
+           'caixa_leite': 512, 'salgadinho': 1024, 'barra_chocolate': 512, 'arroz_cozido': 512,
+           'saco_farinha': 1024, 'pao_velho': 1024, 'pao_caseiro': 512, 'carne_crua': 1024, 'carne_defumada': 512, 'cesto_legumes': 1024}   # lado da textura no GLB
 ESTADO_DE = {'arroz_cozido': ('pacote_arroz', 'cozido')}
 
 

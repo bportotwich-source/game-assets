@@ -1014,12 +1014,13 @@
    "efeito": "padaria da base: rende 20 pães",
    "arquivo": "loot/saco_farinha.glb",
    "tamanho_m": [
-    0.3,
-    0.12,
-    0.51
+    0.296,
+    0.118,
+    0.506
    ],
-   "triangulos": 1656,
-   "kb": 163.5
+   "triangulos": 4426,
+   "kb": 455.8,
+   "gerador": "itens_realistas/comida/gerar.py"
   },
   {
    "id": "saco_sementes",
@@ -1852,12 +1853,13 @@
    "efeito": "fome -15; endurece em 3 dias (ainda comível na sopa)",
    "arquivo": "loot/pao_velho.glb",
    "tamanho_m": [
-    0.239,
-    0.12,
-    0.49
+    0.242,
+    0.117,
+    0.384
    ],
-   "triangulos": 1560,
-   "kb": 75.7
+   "triangulos": 9861,
+   "kb": 552.1,
+   "gerador": "itens_realistas/comida/gerar.py"
   },
   {
    "id": "macaco_jacare",
@@ -3675,12 +3677,13 @@
    ],
    "arquivo": "loot/carne_defumada.glb",
    "tamanho_m": [
-    0.182,
-    0.074,
-    0.104
+    0.179,
+    0.076,
+    0.112
    ],
-   "triangulos": 4512,
-   "kb": 260.6
+   "triangulos": 2920,
+   "kb": 234.0,
+   "gerador": "itens_realistas/comida/gerar.py"
   },
   {
    "id": "adubo",
@@ -3748,11 +3751,12 @@
    "arquivo": "loot/carne_crua.glb",
    "tamanho_m": [
     0.26,
-    0.072,
-    0.201
+    0.047,
+    0.2
    ],
-   "triangulos": 1620,
-   "kb": 114.8
+   "triangulos": 7904,
+   "kb": 536.5,
+   "gerador": "itens_realistas/comida/gerar.py"
   },
   {
    "id": "cesto_legumes",
@@ -3783,11 +3787,12 @@
    "arquivo": "loot/cesto_legumes.glb",
    "tamanho_m": [
     0.367,
-    0.348,
+    0.333,
     0.367
    ],
-   "triangulos": 2224,
-   "kb": 137.5
+   "triangulos": 11976,
+   "kb": 1412.0,
+   "gerador": "itens_realistas/comida/gerar.py"
   },
   {
    "id": "rolo_plastico",
@@ -3851,11 +3856,12 @@
    "arquivo": "loot/pao_caseiro.glb",
    "tamanho_m": [
     0.109,
-    0.08,
-    0.18
+    0.081,
+    0.176
    ],
-   "triangulos": 420,
-   "kb": 21.5
+   "triangulos": 5900,
+   "kb": 272.7,
+   "gerador": "itens_realistas/comida/gerar.py"
   }
  ]
 }

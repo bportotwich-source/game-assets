@@ -45,10 +45,16 @@ desenho próprio, sem marcas, com os dizeres em português:
 | Pacote de salgadinho | `salgadinho` | saco metalizado estufado com as soldas prateadas |
 | Barra de chocolate | `barra_chocolate` | luva de papel, papel alumínio rasgado numa ponta e os tabletes à mostra |
 | Tigela de arroz cozido | `arroz_cozido` | tigela esmaltada de friso azul; é o pacote de arroz depois da panela (`estados` do `pacote_arroz`) |
+| Saco de farinha 5 kg | `saco_farinha` | saco de papel cheio, faixa azul impressa e as duas bocas costuradas com barbante |
+| Saco de pão francês | `pao_velho` | saco de papel pardo de padaria com a boca aberta e cinco pães com o corte em cima |
+| Pão caseiro | `pao_caseiro` | filão com quatro talhos abertos e a casca manchada do forno |
+| Carne crua embrulhada | `carne_crua` | bife com capa de gordura e marmoreio sobre o papel de açougue aberto |
+| Carne defumada | `carne_defumada` | peça escura amarrada com barbante em gomos, ponta cortada e laço de pendurar |
+| Cesto de legumes | `cesto_legumes` | cesto de vime com alça trançada e forro de pano, alface, tomates e cenouras com rama |
 
 ```
 python3 comida/ver.py formas.png lata_feijao             # confere as formas, sem assar
-python3 comida/gerar.py todas 2048 /tmp/comida           # assa e grava os 9 GLBs em props/loot (~20 min)
+python3 comida/gerar.py todas 2048 /tmp/comida           # assa e grava os 15 GLBs em props/loot (~30 min)
 ```
 
 O bake fica guardado na pasta de saída: depois de mudar um modelo, apague `<saída>/<forma>` antes de gerar de novo.

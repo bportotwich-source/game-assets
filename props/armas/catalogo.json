@@ -13826,15 +13826,16 @@
    "raridade": "comum",
    "valor_troca": 8,
    "modificadores": {},
-   "descricao": "Carregador padrão da pistola, 15 tiros.",
+   "descricao": "Carregador padrão da pistola, 15 tiros. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_9mm.glb",
    "tamanho_m": [
     0.026,
-    0.125,
-    0.072
+    0.119,
+    0.068
    ],
-   "triangulos": 1192,
-   "kb": 60.9
+   "triangulos": 3598,
+   "kb": 411.9,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "carregador_9mm_estendido",
@@ -13854,15 +13855,16 @@
     "quartel",
     "galeria"
    ],
-   "descricao": "Mais 9 tiros, mas sai pelo fundo do punho e deixa a recarga um pouco mais lenta.",
+   "descricao": "Mais 9 tiros, mas sai pelo fundo do punho e deixa a recarga um pouco mais lenta. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_9mm_estendido.glb",
    "tamanho_m": [
     0.026,
-    0.163,
-    0.084
+    0.156,
+    0.08
    ],
-   "triangulos": 1386,
-   "kb": 70.1
+   "triangulos": 3604,
+   "kb": 392.0,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "carregador_rapido_38",
@@ -13883,15 +13885,16 @@
     "motel",
     "casas"
    ],
-   "descricao": "Segura 6 cartuchos na posição das câmaras: encosta, gira o botão e os 6 entram de uma vez.",
+   "descricao": "Segura 6 cartuchos na posição das câmaras: encosta, gira o botão e os 6 entram de uma vez. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_rapido_38.glb",
    "tamanho_m": [
-    0.037,
-    0.037,
-    0.062
+    0.035,
+    0.036,
+    0.061
    ],
-   "triangulos": 4484,
-   "kb": 222.6
+   "triangulos": 6140,
+   "kb": 642.6,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "mira_ponto_vermelho_revolver",
@@ -14122,15 +14125,15 @@
     "armazem",
     "casas"
    ],
-   "descricao": "Coronha inteiriça com soleira de borracha e porta-bandoleira. Mais pesada e firme que a retrátil.",
+   "descricao": "Coronha fixa inteiriça de polímero para a espingarda, com soleira de borracha nervurada e zarelho da bandoleira. Mais pesada e firme que a retrátil. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/coronha_fixa_12.glb",
    "tamanho_m": [
-    0.041,
-    0.159,
-    0.335
+    0.037,
+    0.15,
+    0.351
    ],
-   "triangulos": 20172,
-   "kb": 948.3,
+   "triangulos": 12134,
+   "kb": 632.1,
    "encaixes": [
     {
      "no": "ombro",
@@ -14150,12 +14153,13 @@
      "pai": "coronha_fixa_12",
      "posicao_m": [
       0.0,
-      -0.0527,
-      0.3351
+      -0.0506,
+      0.3389
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
-   ]
+   ],
+   "gerador": "coronhas/jogo.py"
   },
   {
    "id": "tampa_tubo_12",
@@ -14741,15 +14745,16 @@
     "quartel",
     "delegacia"
    ],
-   "descricao": "Carregador de caixa de 10 tiros.",
+   "descricao": "Carregador de caixa de polímero de 10 tiros, lábios de aço e canaletas de pega. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_308_10.glb",
    "tamanho_m": [
     0.026,
-    0.097,
+    0.096,
     0.085
    ],
-   "triangulos": 1076,
-   "kb": 55.6
+   "triangulos": 2462,
+   "kb": 407.7,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "carregador_308_5",
@@ -14767,15 +14772,16 @@
     "casa_de_campo",
     "armazem"
    ],
-   "descricao": "Carregador curto de 5 tiros (quase rente à coronha).",
+   "descricao": "Carregador curto de 5 tiros (quase rente à coronha). Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_308_5.glb",
    "tamanho_m": [
     0.026,
     0.057,
     0.085
    ],
-   "triangulos": 1004,
-   "kb": 52.2
+   "triangulos": 1564,
+   "kb": 338.2,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "coronha_retratil_ar",
@@ -14873,15 +14879,15 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Coronha inteiriça de polímero com soleira de borracha.",
+   "descricao": "Coronha fixa inteiriça de polímero, comprida e firme, com painéis rebaixados dos lados, porta do compartimento e soleira de borracha nervurada. Mais pesada que a retrátil. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/coronha_fixa_ar.glb",
    "tamanho_m": [
-    0.041,
-    0.159,
-    0.335
+    0.037,
+    0.15,
+    0.351
    ],
-   "triangulos": 20172,
-   "kb": 948.3,
+   "triangulos": 12134,
+   "kb": 632.1,
    "encaixes": [
     {
      "no": "ombro",
@@ -14901,12 +14907,13 @@
      "pai": "coronha_fixa_ar",
      "posicao_m": [
       0.0,
-      -0.0527,
-      0.3351
+      -0.0506,
+      0.3389
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
-   ]
+   ],
+   "gerador": "coronhas/jogo.py"
   },
   {
    "id": "mira_holografica",
@@ -15375,15 +15382,16 @@
     "quartel",
     "delegacia"
    ],
-   "descricao": "Carregador curvo de polímero, 30 tiros.",
+   "descricao": "Carregador curvo de polímero de 30, com painéis de pega e base larga. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_556_30.glb",
    "tamanho_m": [
-    0.024,
-    0.192,
-    0.094
+    0.026,
+    0.198,
+    0.084
    ],
-   "triangulos": 4468,
-   "kb": 213.7
+   "triangulos": 2128,
+   "kb": 354.7,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "tambor_556_60",
@@ -15403,15 +15411,16 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Tambor de 60 com o eixo ao longo do cano e tampa abaulada na frente: o dobro de tiros, mas pesado e lento para trocar.",
+   "descricao": "Tambor de 60 com o eixo ao longo do cano e tampa nervurada na frente: o dobro de tiros, mas pesado e lento para trocar. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/tambor_556_60.glb",
    "tamanho_m": [
     0.106,
-    0.156,
-    0.105
+    0.171,
+    0.086
    ],
-   "triangulos": 4980,
-   "kb": 237.7
+   "triangulos": 2236,
+   "kb": 338.8,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "tambor_556_60_tatico",
@@ -15431,15 +15440,16 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Tambor de 60 com janela na tampa para ver quantos sobram, abas de pega e alavanca para carregar sem dar corda.",
+   "descricao": "Tambor de 60 com janela na tampa para ver quantos sobram, abas de pega e alavanca para carregar sem dar corda. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/tambor_556_60_tatico.glb",
    "tamanho_m": [
-    0.102,
-    0.174,
-    0.1
+    0.12,
+    0.171,
+    0.089
    ],
-   "triangulos": 6396,
-   "kb": 305.7
+   "triangulos": 3983,
+   "kb": 490.2,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "carregador_556_60",
@@ -15459,15 +15469,16 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Carregador longo de alumínio com quatro fileiras: 60 tiros num pente só. Mais leve que o tambor, mas bate no chão quando deitado.",
+   "descricao": "Carregador longo de alumínio de quatro fileiras: 60 tiros num pente só, com janelas de contagem. Mais leve que o tambor, mas bate no chão quando deitado. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_556_60.glb",
    "tamanho_m": [
-    0.039,
-    0.262,
-    0.113
+    0.042,
+    0.272,
+    0.116
    ],
-   "triangulos": 13840,
-   "kb": 653.8
+   "triangulos": 2765,
+   "kb": 356.4,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "modulo_laser",
@@ -15945,15 +15956,16 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Carregador curvo de polímero caramelo, 30 tiros.",
+   "descricao": "Carregador curvo de polímero caramelo de 30, com painéis de pega e base larga. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_556_30_tan.glb",
    "tamanho_m": [
-    0.024,
-    0.192,
-    0.094
+    0.026,
+    0.198,
+    0.084
    ],
-   "triangulos": 4468,
-   "kb": 213.7
+   "triangulos": 2128,
+   "kb": 309.4,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "coronha_madeira_ak",
@@ -16026,15 +16038,15 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Coronha de tubo de aço com soleira de borracha que dobra para a esquerda (nó \"dobra\", animações dobrar/abrir).",
+   "descricao": "Coronha de tubos de aço soldados com soleira de borracha, que dobra para a esquerda na dobradiça (nó \"dobra\", animações dobrar/abrir). Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/coronha_rebativel_ak.glb",
    "tamanho_m": [
     0.034,
-    0.133,
-    0.318
+    0.123,
+    0.32
    ],
-   "triangulos": 2772,
-   "kb": 133.5,
+   "triangulos": 3392,
+   "kb": 400.7,
    "partes": [
     {
      "no": "dobra",
@@ -16056,9 +16068,9 @@
      "tipo": "efeito",
      "pai": "dobra",
      "posicao_m": [
-      -0.0,
+      0.0135,
       -0.05,
-      0.312
+      0.3
      ],
      "descricao": "ponto da soleira que encosta no ombro"
     }
@@ -16081,12 +16093,13 @@
      "pai": "coronha_rebativel_ak",
      "posicao_m": [
       0.0,
-      -0.058,
-      0.312
+      -0.0515,
+      0.314
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
-   ]
+   ],
+   "gerador": "coronhas/jogo.py"
   },
   {
    "id": "freio_ak",
@@ -16264,15 +16277,16 @@
     "delegacia",
     "fabrica"
    ],
-   "descricao": "Carregador curvo de aço, 30 tiros.",
+   "descricao": "Carregador curvo de aço de 30, com nervuras estampadas e um cartucho à vista. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_762_30.glb",
    "tamanho_m": [
     0.026,
-    0.211,
-    0.135
+    0.215,
+    0.134
    ],
-   "triangulos": 7600,
-   "kb": 359.0
+   "triangulos": 7986,
+   "kb": 587.8,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "carregador_762_40",
@@ -16291,15 +16305,16 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Carregador longo de polímero preto, 40 tiros.",
+   "descricao": "Carregador longo de polímero preto, 40 tiros, com quadros em relevo dos lados. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_762_40.glb",
    "tamanho_m": [
     0.026,
-    0.247,
-    0.173
+    0.254,
+    0.179
    ],
-   "triangulos": 7600,
-   "kb": 359.7
+   "triangulos": 8982,
+   "kb": 840.2,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "tambor_762_75",
@@ -16319,15 +16334,16 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Tambor de 75 com chave de corda na frente: muito tiro, muito peso.",
+   "descricao": "Tambor de 75 com chave de corda na frente e janela de contagem: muito tiro, muito peso. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/tambor_762_75.glb",
    "tamanho_m": [
     0.12,
-    0.172,
-    0.131
+    0.2,
+    0.116
    ],
-   "triangulos": 4800,
-   "kb": 227.7
+   "triangulos": 7286,
+   "kb": 696.7,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "guarda_mao_madeira_ak",
@@ -16445,15 +16461,15 @@
     "quartel",
     "fabrica"
    ],
-   "descricao": "Coronha fixa de polímero preto com rebaixo dos lados (mais leve que a de madeira) e soleira de borracha.",
+   "descricao": "Coronha fixa de polímero preto no desenho da de madeira, com painel rebaixado dos lados (mais leve) e soleira de borracha. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/coronha_polimero_ak.glb",
    "tamanho_m": [
-    0.041,
-    0.159,
-    0.346
+    0.04,
+    0.144,
+    0.351
    ],
-   "triangulos": 17572,
-   "kb": 826.4,
+   "triangulos": 10950,
+   "kb": 631.9,
    "encaixes": [
     {
      "no": "ombro",
@@ -16473,12 +16489,13 @@
      "pai": "coronha_polimero_ak",
      "posicao_m": [
       0.0,
-      -0.0817,
-      0.3404
+      -0.059,
+      0.345
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
-   ]
+   ],
+   "gerador": "coronhas/jogo.py"
   },
   {
    "id": "coronha_retratil_ak",
@@ -16497,15 +16514,15 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Adaptador de aço que recebe o tubo e a coronha retrátil de 5 posições (a mesma do fuzil 5,56). Nó \"soleira\", animações estender/recolher.",
+   "descricao": "Adaptador de aço que recebe o tubo e a coronha retrátil de 5 posições (a mesma do fuzil 5,56). Nó \"soleira\", animações estender/recolher. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/coronha_retratil_ak.glb",
    "tamanho_m": [
-    0.043,
-    0.148,
-    0.312
+    0.04,
+    0.154,
+    0.29
    ],
-   "triangulos": 16096,
-   "kb": 759.1,
+   "triangulos": 7826,
+   "kb": 671.1,
    "partes": [
     {
      "no": "soleira",
@@ -16526,9 +16543,9 @@
      "tipo": "efeito",
      "pai": "soleira",
      "posicao_m": [
-      -0.0,
+      0.0,
       -0.05,
-      0.308
+      0.2525
      ],
      "descricao": "ponto da soleira que encosta no ombro"
     }
@@ -16551,12 +16568,13 @@
      "pai": "coronha_retratil_ak",
      "posicao_m": [
       0.0,
-      -0.0491,
-      0.3062
+      -0.0586,
+      0.2844
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
-   ]
+   ],
+   "gerador": "coronhas/jogo.py"
   },
   {
    "id": "compensador_ak",
@@ -16836,7 +16854,7 @@
    "grupo": "acessorios",
    "categoria": "coronha",
    "encaixe": "coronha_ar",
-   "descricao": "Coronha leve de polímero com parte de baixo vazada e soleira de borracha; corre no tubo em 5 posições.",
+   "descricao": "Coronha leve de polímero com o quadro de baixo vazado e soleira de borracha; corre no tubo em 5 posições (nó \"soleira\", animações estender/recolher). Modelo detalhado, com texturas assadas.",
    "peso_kg": 0.3,
    "raridade": "raro",
    "valor_troca": 28,
@@ -16851,11 +16869,11 @@
    "arquivo": "acessorios/coronha_leve_ar.glb",
    "tamanho_m": [
     0.04,
-    0.144,
-    0.261
+    0.141,
+    0.276
    ],
-   "triangulos": 14554,
-   "kb": 679.8,
+   "triangulos": 6948,
+   "kb": 603.4,
    "partes": [
     {
      "no": "soleira",
@@ -16901,12 +16919,13 @@
      "pai": "coronha_leve_ar",
      "posicao_m": [
       0.0,
-      -0.0481,
-      0.2635
+      -0.0523,
+      0.264
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
-   ]
+   ],
+   "gerador": "coronhas/jogo.py"
   },
   {
    "id": "coronha_leve_ar_tan",
@@ -16914,7 +16933,7 @@
    "grupo": "acessorios",
    "categoria": "coronha",
    "encaixe": "coronha_ar",
-   "descricao": "A mesma coronha leve, em caramelo.",
+   "descricao": "A mesma coronha leve vazada, em polímero caramelo; corre no tubo em 5 posições. Modelo detalhado, com texturas assadas.",
    "peso_kg": 0.3,
    "raridade": "raro",
    "valor_troca": 28,
@@ -16929,11 +16948,11 @@
    "arquivo": "acessorios/coronha_leve_ar_tan.glb",
    "tamanho_m": [
     0.04,
-    0.144,
-    0.261
+    0.141,
+    0.276
    ],
-   "triangulos": 14554,
-   "kb": 679.8,
+   "triangulos": 6948,
+   "kb": 590.5,
    "partes": [
     {
      "no": "soleira",
@@ -16979,12 +16998,13 @@
      "pai": "coronha_leve_ar_tan",
      "posicao_m": [
       0.0,
-      -0.0481,
-      0.2635
+      -0.0523,
+      0.264
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
-   ]
+   ],
+   "gerador": "coronhas/jogo.py"
   },
   {
    "id": "coronha_leve_ak",
@@ -16992,7 +17012,7 @@
    "grupo": "acessorios",
    "categoria": "coronha",
    "encaixe": "coronha_ak",
-   "descricao": "Adaptador de aço com a coronha leve vazada.",
+   "descricao": "Adaptador de aço que recebe o tubo de 5 posições, com a coronha leve vazada (nó \"soleira\"). Modelo detalhado, com texturas assadas.",
    "peso_kg": 0.3,
    "raridade": "raro",
    "valor_troca": 28,
@@ -17007,11 +17027,11 @@
    "arquivo": "acessorios/coronha_leve_ak.glb",
    "tamanho_m": [
     0.04,
-    0.144,
-    0.301
+    0.141,
+    0.302
    ],
-   "triangulos": 15038,
-   "kb": 704.9,
+   "triangulos": 9844,
+   "kb": 736.5,
    "partes": [
     {
      "no": "soleira",
@@ -17034,7 +17054,7 @@
      "posicao_m": [
       -0.0,
       -0.05,
-      0.294
+      0.262
      ],
      "descricao": "ponto da soleira que encosta no ombro"
     }
@@ -17057,12 +17077,13 @@
      "pai": "coronha_leve_ak",
      "posicao_m": [
       0.0,
-      -0.0481,
-      0.2955
+      -0.0523,
+      0.296
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
-   ]
+   ],
+   "gerador": "coronhas/jogo.py"
   },
   {
    "id": "coronha_leve_ak_tan",
@@ -17070,7 +17091,7 @@
    "grupo": "acessorios",
    "categoria": "coronha",
    "encaixe": "coronha_ak",
-   "descricao": "Adaptador com a coronha leve caramelo.",
+   "descricao": "Adaptador de aço com a coronha leve vazada em caramelo (nó \"soleira\"). Modelo detalhado, com texturas assadas.",
    "peso_kg": 0.3,
    "raridade": "raro",
    "valor_troca": 28,
@@ -17085,11 +17106,11 @@
    "arquivo": "acessorios/coronha_leve_ak_tan.glb",
    "tamanho_m": [
     0.04,
-    0.144,
-    0.301
+    0.141,
+    0.302
    ],
-   "triangulos": 15038,
-   "kb": 705.0,
+   "triangulos": 9844,
+   "kb": 726.3,
    "partes": [
     {
      "no": "soleira",
@@ -17112,7 +17133,7 @@
      "posicao_m": [
       -0.0,
       -0.05,
-      0.294
+      0.262
      ],
      "descricao": "ponto da soleira que encosta no ombro"
     }
@@ -17135,12 +17156,13 @@
      "pai": "coronha_leve_ak_tan",
      "posicao_m": [
       0.0,
-      -0.0481,
-      0.2955
+      -0.0523,
+      0.296
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     }
-   ]
+   ],
+   "gerador": "coronhas/jogo.py"
   },
   {
    "id": "carregador_762_30_grade",
@@ -17156,15 +17178,16 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Carregador preto de polímero com quadros em relevo dos lados: mais leve que o de aço.",
+   "descricao": "Carregador preto de polímero com quadros em relevo dos lados: mais leve que o de aço. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_762_30_grade.glb",
    "tamanho_m": [
     0.026,
-    0.211,
-    0.135
+    0.215,
+    0.134
    ],
-   "triangulos": 12552,
-   "kb": 591.1
+   "triangulos": 7478,
+   "kb": 744.7,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "coronha_esqueleto_ak",
@@ -17572,15 +17595,16 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Carregador preto de polímero com quadros em relevo dos lados: mais leve que o de aço. Peça usada, com a pintura gasta.",
+   "descricao": "Carregador preto de polímero com quadros em relevo dos lados: mais leve que o de aço. Peça usada, com a pintura gasta. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_762_30_grade_gasto.glb",
    "tamanho_m": [
     0.026,
-    0.211,
-    0.135
+    0.215,
+    0.134
    ],
-   "triangulos": 12552,
-   "kb": 886.8
+   "triangulos": 7478,
+   "kb": 755.1,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "carregador_smg_20",
@@ -17596,15 +17620,16 @@
    "modificadores": {
     "recarga_s": 0.95
    },
-   "descricao": "Curto: fica rente ao fundo do punho, a arma cabe em qualquer bolso de mochila.",
+   "descricao": "Curto: fica rente ao fundo do punho, a arma cabe em qualquer bolso de mochila. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_smg_20.glb",
    "tamanho_m": [
     0.025,
-    0.126,
-    0.056
+    0.125,
+    0.05
    ],
-   "triangulos": 1624,
-   "kb": 80.4
+   "triangulos": 3972,
+   "kb": 476.3,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "carregador_smg_30",
@@ -17617,15 +17642,16 @@
    "peso_kg": 0.13,
    "raridade": "incomum",
    "valor_troca": 12,
-   "descricao": "Carregador padrão de 30. Vem na arma.",
+   "descricao": "Carregador padrão de 30. Vem na arma. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_smg_30.glb",
    "tamanho_m": [
     0.025,
-    0.156,
-    0.06
+    0.155,
+    0.055
    ],
-   "triangulos": 1672,
-   "kb": 82.7
+   "triangulos": 3992,
+   "kb": 471.6,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "carregador_smg_40",
@@ -17644,15 +17670,16 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Comprido: 40 tiros, mas atrapalha deitar no chão.",
+   "descricao": "Comprido: 40 tiros, mas atrapalha deitar no chão. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_smg_40.glb",
    "tamanho_m": [
     0.025,
-    0.192,
-    0.065
+    0.19,
+    0.06
    ],
-   "triangulos": 1768,
-   "kb": 87.2
+   "triangulos": 3976,
+   "kb": 473.3,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "empunhadura_dobravel",
@@ -18060,15 +18087,16 @@
    "modificadores": {
     "recarga_s": 0.95
    },
-   "descricao": "Carregador curto de pistola: some dentro do poço, a arma fica baixa.",
+   "descricao": "Carregador curto de pistola: some dentro do poço, a arma fica baixa. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_ciclone_17.glb",
    "tamanho_m": [
     0.026,
-    0.115,
-    0.07
+    0.117,
+    0.065
    ],
-   "triangulos": 1480,
-   "kb": 73.6
+   "triangulos": 3705,
+   "kb": 446.5,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "carregador_ciclone_30",
@@ -18081,15 +18109,16 @@
    "peso_kg": 0.14,
    "raridade": "incomum",
    "valor_troca": 12,
-   "descricao": "Carregador longo de 30. Vem na arma.",
+   "descricao": "Carregador longo de 30. Vem na arma. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_ciclone_30.glb",
    "tamanho_m": [
     0.026,
-    0.176,
-    0.09
+    0.174,
+    0.084
    ],
-   "triangulos": 1672,
-   "kb": 82.7
+   "triangulos": 4082,
+   "kb": 447.3,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "tambor_ciclone_50",
@@ -18109,15 +18138,16 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Tambor de 50 tiros com botão de corda do lado e janelinha de contagem. Pesa e demora para trocar, mas segura uma horda.",
+   "descricao": "Tambor de 50 tiros com botão de corda do lado e janelinha de contagem. Pesa e demora para trocar, mas segura uma horda. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/tambor_ciclone_50.glb",
    "tamanho_m": [
-    0.092,
-    0.195,
-    0.089
+    0.099,
+    0.167,
+    0.087
    ],
-   "triangulos": 2116,
-   "kb": 109.0
+   "triangulos": 6181,
+   "kb": 582.9,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "luneta_4x_22",
@@ -18288,15 +18318,16 @@
    "municao": "municao_22",
    "peso_kg": 0.05,
    "raridade": "comum",
-   "descricao": "Carregador rotativo curto, quase rente à coronha. A janela de trás mostra quantos cartuchos sobram.",
+   "descricao": "Carregador rotativo curto, quase rente à coronha. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_22_10.glb",
    "tamanho_m": [
-    0.025,
-    0.035,
+    0.026,
+    0.039,
     0.041
    ],
-   "triangulos": 1228,
-   "kb": 62.5
+   "triangulos": 1662,
+   "kb": 439.6,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "carregador_22_25",
@@ -18312,15 +18343,16 @@
    "modificadores": {
     "recarga_s": 1.1
    },
-   "descricao": "Caixa comprida de 25 tiros. Atrapalha deitar o rifle no chão, mas dá para limpar um quintal sem recarregar.",
+   "descricao": "Caixa comprida de 25 tiros com fenda de contagem. Atrapalha deitar o rifle no chão, mas dá para limpar um quintal sem recarregar. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_22_25.glb",
    "tamanho_m": [
-    0.024,
-    0.119,
-    0.045
+    0.026,
+    0.112,
+    0.038
    ],
-   "triangulos": 1096,
-   "kb": 53.3
+   "triangulos": 2545,
+   "kb": 448.8,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "coronha_precisao_ar",
@@ -18550,15 +18582,16 @@
    "peso_kg": 0.2,
    "raridade": "raro",
    "valor_troca": 20,
-   "descricao": "Carregador de polímero de 20 tiros .308 com janelinhas de contagem. Não serve na carabina de ferrolho.",
+   "descricao": "Carregador de polímero de 20 tiros .308 com janelinhas de contagem atrás. Não serve na carabina de ferrolho. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_ar10_20.glb",
    "tamanho_m": [
-    0.027,
-    0.134,
-    0.079
+    0.029,
+    0.157,
+    0.074
    ],
-   "triangulos": 5196,
-   "kb": 249.5
+   "triangulos": 2928,
+   "kb": 413.5,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "carregador_ar10_10",
@@ -18574,15 +18607,16 @@
    "modificadores": {
     "recarga_s": 0.95
    },
-   "descricao": "Carregador curto de 10: o fuzil fica mais baixo para atirar deitado.",
+   "descricao": "Carregador curto de 10: o fuzil fica mais baixo para atirar deitado. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_ar10_10.glb",
    "tamanho_m": [
-    0.027,
-    0.08,
-    0.079
+    0.029,
+    0.098,
+    0.073
    ],
-   "triangulos": 4688,
-   "kb": 225.7
+   "triangulos": 1808,
+   "kb": 324.1,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "talas_guardia",
@@ -18685,15 +18719,16 @@
    "raridade": "incomum",
    "valor_troca": 10,
    "modificadores": {},
-   "descricao": "Carregador de aço de 17 tiros com base cor de areia (vem na Guardiã).",
+   "descricao": "Carregador de aço de 17 tiros com base cor de areia (vem na Guardiã). Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_guardia_17.glb",
    "tamanho_m": [
     0.025,
-    0.129,
-    0.073
+    0.124,
+    0.071
    ],
-   "triangulos": 1078,
-   "kb": 54.8
+   "triangulos": 3572,
+   "kb": 397.6,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "carregador_guardia_20",
@@ -18713,15 +18748,16 @@
     "quartel",
     "delegacia"
    ],
-   "descricao": "Carregador de 20 com luva de polímero que continua o cabo (sobra embaixo e dá apoio ao dedinho).",
+   "descricao": "Carregador de 20 com luva de polímero que continua o cabo (sobra embaixo e dá apoio ao dedinho). Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/carregador_guardia_20.glb",
    "tamanho_m": [
-    0.028,
-    0.146,
-    0.078
+    0.025,
+    0.139,
+    0.076
    ],
-   "triangulos": 1228,
-   "kb": 61.8
+   "triangulos": 5200,
+   "kb": 504.6,
+   "gerador": "carregadores/jogo.py"
   },
   {
    "id": "coldre_guardia",

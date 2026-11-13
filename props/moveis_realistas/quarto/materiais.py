@@ -84,3 +84,30 @@ for _e in 'xyz':
         madeira.COR[_p + _e] = _c(_p + _e)
         texturas.RELEVO[_p + _e] = madeira.relevo_madeira(_p + _e)
         forja.VELHO[_p + _e] = _v
+
+
+# ---------------------------------------------------------------- roupa de cama
+# colchão, lençol e fronha vêm da mesa de enfermaria; aqui entram as colchas de casa (matelassê em losangos)
+
+
+def _colcha(nt, pos, S, nome):
+    forja.VELHO['pano_cru'](nt, pos, S, nome)                 # trama e dobras do pano
+    x, y, z = forja._xyz(nt, pos)
+    linha = None
+    for sinal in (1.0, -1.0):
+        f = _math(nt, 'FRACT', _math(nt, 'DIVIDE', _math(nt, 'ADD', _math(nt, 'ADD', x, _math(nt, 'MULTIPLY', y, sinal)), 20.0), 0.16))
+        l = _math(nt, 'SUBTRACT', 1.0, _smooth(nt, _math(nt, 'ABSOLUTE', _math(nt, 'SUBTRACT', f, 0.5)), 0.0, 0.06))
+        linha = l if linha is None else _math(nt, 'MAXIMUM', linha, l)
+    S['alt'] = _math(nt, 'SUBTRACT', S['alt'], _math(nt, 'MULTIPLY', linha, 0.0035))
+    S['cor'] = _mix(nt, _math(nt, 'MULTIPLY', linha, 0.45), S['cor'], (0.020, 0.012, 0.012))
+    po = _math(nt, 'MULTIPLY', _cima(nt), _math(nt, 'MULTIPLY', _smooth(nt, _noise(nt, pos, 5.0, 4.0, 0.6), 0.35, 0.75), 0.30))
+    S['cor'] = _mix(nt, po, S['cor'], (0.300, 0.270, 0.230))
+
+
+def _pano_cls(cor):
+    claro = tuple(min(1.0, c * 1.5 + 0.03) for c in cor)
+    return (cor, 0.92, 0.0, claro, 0.90, 0.0, 0.50, 1.20, 1.6)
+
+
+texturas.CLASSES.update(colcha_vinho=_pano_cls((0.200, 0.028, 0.034)), colcha_azul=_pano_cls((0.045, 0.085, 0.170)))
+forja.VELHO.update(colcha_vinho=_colcha, colcha_azul=_colcha)

@@ -16,8 +16,10 @@ from PIL import Image
 PROPS = os.path.dirname(os.path.dirname(AQUI))
 GERADOR = 'moveis_realistas/quarto/gerar.py'
 # lado da textura de cada grupo dentro do GLB
-TEXTURA = {'comoda': {'A': 2048, 'B': 1024}, 'criado_mudo': {'A': 1024}, 'guarda_roupa': {'A': 2048, 'B': 1024, 'C': 2048}}
-NOME = {'comoda': 'Cômoda de 3 gavetas', 'criado_mudo': 'Criado-mudo', 'guarda_roupa': 'Guarda-roupa de 2 portas'}
+TEXTURA = {'comoda': {'A': 2048, 'B': 1024}, 'criado_mudo': {'A': 1024}, 'guarda_roupa': {'A': 2048, 'B': 1024, 'C': 2048},
+           'cama_casal': {'A': 2048, 'B': 2048}, 'cama_solteiro': {'A': 2048, 'B': 2048}}
+NOME = {'comoda': 'Cômoda de 3 gavetas', 'criado_mudo': 'Criado-mudo', 'guarda_roupa': 'Guarda-roupa de 2 portas',
+        'cama_casal': 'Cama de casal', 'cama_solteiro': 'Cama de solteiro'}
 PARTES = {
     'comoda': [dict(no=f'gaveta_{i}', origem=[0, 0, 0], tipo='gaveta', desliza=[0, 0, 0.3]) for i in (1, 2, 3)],
     'criado_mudo': [dict(no='gaveta', origem=[0, 0, 0], tipo='gaveta', desliza=[0, 0, 0.26])],
@@ -43,7 +45,9 @@ def gerar(forma, res=2048, saida=os.path.join(AQUI, 'saida')):
     arq_cat = os.path.join(PROPS, 'mobilias', 'catalogo.json')
     cat = json.load(open(arq_cat, encoding='utf-8'))
     r = next(x for x in cat['itens'] if x['id'] == forma)
-    r.update(nome=NOME[forma], tamanho_m=tam, triangulos=tris, kb=round(os.path.getsize(arq) / 1024, 1), gerador=GERADOR, partes=PARTES[forma])
+    r.update(nome=NOME[forma], tamanho_m=tam, triangulos=tris, kb=round(os.path.getsize(arq) / 1024, 1), gerador=GERADOR)
+    if forma in PARTES:
+        r['partes'] = PARTES[forma]
     json.dump(cat, open(arq_cat, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f"{forma} {tris} tris {r['kb']} KB {tam}")
 

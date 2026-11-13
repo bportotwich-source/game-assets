@@ -311,3 +311,17 @@ Classes novas: `aco_mesa`, `formica`, `tecla`, `vidro_caco`, `cal_*`. Refazer: `
 Classes novas: `plastico_verde`, `saco_lixo`, `mala_azul`, `forro_mala`, `roupa_*`, `jeans`, `giz_*`, `folha_sulfite`, `fita_crepe`.
 Refazer: `python3 moveis_realistas/diversos/gerar.py todas 2048 /tmp/saida`.
 
+
+## Loja, vestiário e lanchonete (`loja/`: `gondola`, `balcao_caixa`, `armario_vestiario`, `banqueta_giratoria`)
+
+`loja/materiais.py` encadeia `diversos/materiais.py`. Mesmos nós que abrem dos antigos (`gaveta_dinheiro`, `porta_1..3`).
+
+| id | medidas | triângulos | texturas | o que tem |
+|---|---|---|---|---|
+| `gondola` | 1,00 × 1,65 × 0,89 m | 14 mil | 2 × 1024 | Módulo dupla face de chapa pintada: montantes com cremalheira nas pontas (dois módulos lado a lado fecham um montante), painéis de fundo com vinco, 3 prateleiras por lado em mãos-francesas, canaletas amarelas de preço com etiquetas, rodapé e pés niveladores; sobras de latas, caixas e garrafas espalhadas. |
+| `balcao_caixa` | 1,84 × 1,15 × 0,64 m | 9 mil | 2 × 1024 | Balcão de fórmica branca com cantoneiras, tampo de granito, esteira com roletes e bastão divisor, balança e leitor de código, registradora bege com teclado e visor, visor do cliente no poste, impressora de cupom; nicho com maços de sacolas; `gaveta_dinheiro` com notas presas e moedas. |
+| `armario_vestiario` | 0,90 × 1,85 × 0,54 m | 5,3 mil | 2 × 1024 | Armário de aço cinza-verde de 3 portas com venezianas estampadas, puxador de alavanca, plaquetas numeradas, porta-etiqueta e cadeado na 2; dentro: prateleira, varão com ganchos, toalha, mochila e botas. |
+| `banqueta_giratoria` | 0,41 × 0,79 × 0,41 m | 4,6 mil | 1 × 1024 | Banqueta de lanchonete cromada: base de cúpula, coluna, anel de pés com 3 raios, aro frisado com tachas e assento de vinil vermelho com vivo e costuras. |
+
+Classes novas: `gondola_branca`, `etiqueta_amarela`, `laminado_branco`, `granito`, `armario_verde`, `cromo`, `vinil_vermelho`, `sacola`, `cedula_*`, `vidro_visor`.
+Refazer: `python3 moveis_realistas/loja/gerar.py todas 2048 /tmp/saida`.

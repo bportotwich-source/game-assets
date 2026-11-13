@@ -13,8 +13,8 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Guarda-roupa de 2 portas (`guarda_roupa`) | 1 | Quarto | 1,05 × 2,00 × 0,61 | 10 espaços: roupas, tecido, mochila | porta_esq, porta_dir, gaveta | barricada | 9912 |
 | Cômoda de 3 gavetas (`comoda`) | 1 | Quarto | 0,93 × 0,85 × 0,47 | 6 espaços: roupas, remedios, pilhas | gaveta_1, gaveta_2, gaveta_3 | - | 9496 |
 | Criado-mudo (`criado_mudo`) | 1 | Quarto | 0,47 × 0,56 × 0,42 | 3 espaços: remedios, pilhas, livros | gaveta | - | 3956 |
-| Cama de casal (`cama_casal`) | 1 | Quarto | 1,48 × 1,05 × 1,98 | - | - | dormir | 11820 |
-| Cama de solteiro (`cama_solteiro`) | 1 | Quarto | 0,98 × 1,05 × 1,98 | - | - | dormir | 10076 |
+| Cama de casal (`cama_casal`) | 1 | Quarto | 1,49 × 1,05 × 1,99 | - | - | dormir | 11976 |
+| Cama de solteiro (`cama_solteiro`) | 1 | Quarto | 0,99 × 1,05 × 1,99 | - | - | dormir | 9416 |
 | Mesa de jantar (`mesa_jantar`) | 1 | Sala | 1,40 × 0,76 × 0,80 | - | - | barricada | 1820 |
 | Cadeira de madeira (`cadeira`) | 1 | Sala | 0,42 × 0,95 × 0,48 | - | - | sentar | 1872 |
 | Sofá 3 lugares (`sofa`) | 1 | Sala | 1,93 × 0,88 × 0,87 | 2 espaços: moedas, pilhas | - | barricada, dormir, sentar | 12624 |

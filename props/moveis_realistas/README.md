@@ -193,10 +193,15 @@ que abrem são os mesmos dos móveis antigos, então a ambientação dos kits e 
 | `comoda` | 0,93 × 0,85 × 0,47 m | 9,5 mil | corpo 2048, gavetas 1024 | `gaveta_1`, `gaveta_2`, `gaveta_3` (deslizam 0,30 m) |
 | `criado_mudo` | 0,47 × 0,56 × 0,42 m | 4,0 mil | 1 × 1024 | `gaveta` (desliza 0,26 m); nicho aberto embaixo, pés torneados |
 | `guarda_roupa` | 1,05 × 2,00 × 0,61 m | 9,9 mil | corpo 2048, dentro 1024, portas e gaveta 2048 | `porta_esq`, `porta_dir` (origem na quina de fora, ±105° em y), `gaveta` (0,40 m) |
+| `cama_casal` | 1,49 × 1,05 × 1,99 m | 12,0 mil | madeira 2048, roupa de cama 2048 | nenhum (nós `estrutura` e `roupa_de_cama`) |
+| `cama_solteiro` | 0,99 × 1,05 × 1,99 m | 9,4 mil | madeira 2048, roupa de cama 2048 | nenhum |
 
 O guarda-roupa tem cornija em degraus, portas de duas almofadas com dobradiças e botões de latão, e dentro (nó
 `dentro`) o maleiro, o varão e quatro cabides vazios. Refazer: `python3 moveis_realistas/quarto/gerar.py todas 2048 /tmp/saida`
 (cerca de 16 min; `gerar.py comoda` faz uma só; apague `<saída>/<forma>` depois de mudar o modelo). Fotos:
 `python3 quarto/ver.py x.png comoda [aberto]` (formas) e `python3 quarto/foto.py x.png comoda [aberto]` (GLB pronto).
+As camas têm cabeceira de almofadas com chapéu em arco, pés com pináculo torneado, longarinas com rosetas de latão,
+estrado, colchão de listras, lençol dobrado sobre a colcha de matelassê (`colcha_vinho` na de casal, `colcha_azul` na de
+solteiro) e travesseiros. O pano sai de `_coberta` (folha amarrotada que cai pelas bordas) e `_travesseiro`.
 Os próximos móveis de madeira de casa devem usar as mesmas classes e os ajudantes de `quarto/modelo.py`
 (`_gaveta`, `_puxador`, `_fechadura`, `_almofada_lado`, `_tampo`, `_saia`).

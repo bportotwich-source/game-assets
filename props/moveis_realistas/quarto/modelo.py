@@ -230,4 +230,162 @@ def guarda_roupa():
     parte('gaveta', g, origem=G(0, 0, 0), grupo='C')
 
 
-FORMAS = {'comoda': comoda, 'criado_mudo': criado_mudo, 'guarda_roupa': guarda_roupa}
+# ------------------------------------------------------------------ camas
+def _malha(pontos, nu, nv, mat, esp=0.0):
+    """Folha de pano: pontos[i][j] = (x, y, z) do jogo, em grade nu x nv; esp > 0 dá espessura (mm)."""
+    import bmesh, bpy
+    bm = bmesh.new()
+    vs = [[bm.verts.new(lib.P(*G(*pontos[i][j]))) for j in range(nv)] for i in range(nu)]
+    for i in range(nu - 1):
+        for j in range(nv - 1):
+            bm.faces.new((vs[i][j], vs[i + 1][j], vs[i + 1][j + 1], vs[i][j + 1]))
+    o = lib._obj('pano', bm, mat)
+    if esp:
+        m = o.modifiers.new('s', 'SOLIDIFY')
+        m.thickness = esp * lib.MM
+        m.offset = -1.0
+        with lib._ativo(o):
+            bpy.ops.object.modifier_apply(modifier=m.name)
+    return o
+
+
+def _cai(d, r=28.0):
+    """Pano que passa da borda do colchão: d mm além da borda -> (quanto sai, quanto desce)."""
+    if d <= 0:
+        return 0.0, 0.0
+    if d < r * math.pi / 2:
+        return r * math.sin(d / r), r * (1 - math.cos(d / r))
+    return r, r + d - r * math.pi / 2
+
+
+def _coberta(x0, x1, z0, z1, y, queda, mat, amp=9.0, semente=0.0, passo=45.0, queda_pe=None):
+    """Coberta estendida do z0 (lado da cabeceira, sem cair) até o pé, caindo `queda` mm nos lados e no pé, amarrotada."""
+    from mathutils import noise, Vector
+    nu = int((x1 - x0 + 2 * queda) / passo) + 1
+    qp = queda if queda_pe is None else queda_pe
+    nv = int((z1 - z0 + qp) / passo) + 1
+    pts = []
+    for i in range(nu):
+        s = x0 - queda + (x1 - x0 + 2 * queda) * i / (nu - 1)
+        linha = []
+        for j in range(nv):
+            t = z0 + (z1 - z0 + qp) * j / (nv - 1)
+            ex, dx = _cai(x0 - s) if s < x0 else _cai(s - x1)
+            ez, dz = _cai(t - z1)
+            x = min(max(s, x0), x1) + (ex if s > x1 else -ex)
+            z = min(t, z1) + ez
+            ruga = noise.noise(Vector((s / 230.0 + semente, t / 230.0, 0.3))) * amp + noise.noise(Vector((s / 70.0, t / 70.0 + semente, 1.7))) * amp * 0.35
+            caido = max(dx, dz)
+            if caido > 30:                                   # na parte que cai, as rugas viram pregas para fora e a barra fica irregular
+                x += (1 if s > x1 else -1 if s < x0 else 0) * (abs(ruga) * 1.6)
+                z += (abs(ruga) * 1.6) if t > z1 else 0
+                yy = y - caido + ruga * 0.6
+            else:
+                yy = y - caido + ruga + amp * 0.8
+            linha.append((x, yy, z))
+        pts.append(linha)
+    return _malha(pts, nu, nv, mat, esp=7.0)
+
+
+def _travesseiro(cx, cy, cz, a, b, h, mat='fronha', incl=0.0, giro=0.0, semente=0.0, n=14):
+    """Travesseiro: duas folhas costuradas na beirada, cheias no meio. a, b = meia largura (x) e meio comprimento (z)."""
+    from mathutils import noise, Vector
+    import bmesh
+    bm = bmesh.new()
+    ci, si, cg, sg = math.cos(incl), math.sin(incl), math.cos(giro), math.sin(giro)
+    folhas = []
+    for lado in (1, -1):
+        f = []
+        for i in range(n + 1):
+            u = -1 + 2 * i / n
+            linha = []
+            for j in range(n + 1):
+                w = -1 + 2 * j / n
+                cheio = ((1 - abs(u) ** 2.6) * (1 - abs(w) ** 2.6)) ** 0.42
+                puxa = 1 + 0.05 * abs(u * w) ** 2                      # as pontas esticam
+                x, z = a * u * puxa * (1 - 0.06 * (1 - abs(w))), b * w * puxa * (1 - 0.06 * (1 - abs(u)))
+                yy = lado * h * cheio * (1.0 if lado > 0 else 0.55) + noise.noise(Vector((u * 2.2 + semente, w * 2.2, lado))) * h * 0.10 * cheio
+                yy, z = yy * ci - z * si, yy * si + z * ci
+                x, z = x * cg + z * sg, -x * sg + z * cg
+                linha.append(bm.verts.new(lib.P(*G(cx + x, cy + yy, cz + z))))
+            f.append(linha)
+        folhas.append(f)
+        for i in range(n):
+            for j in range(n):
+                q = (f[i][j], f[i + 1][j], f[i + 1][j + 1], f[i][j + 1])
+                bm.faces.new(q if lado > 0 else q[::-1])
+    return lib._obj('travesseiro', bm, mat)
+
+
+def _cama(wc, lc, colcha):
+    """Cama com a cabeceira em -z. wc x lc = colchão. As mesmas medidas de fora das camas antigas."""
+    X, ZH, ZP = wc / 2 + 52, -lc / 2 - 52, lc / 2 + 52
+    HC, HP = 960, 540                                         # topo dos pés da cabeceira e da peseira (sem o pináculo)
+    m = []
+    for z, h in ((ZH + 35, HC), (ZP - 35, HP)):
+        for s in (-1, 1):
+            x = s * (X - 35)
+            m.append(caixa(x - 35, x + 35, 60, h, z - 35, z + 35, N + 'y', 3.0))
+            m.append(_torno([(0, 0), (22, 0), (27, 8), (27, 22), (33, 40), (35, 60)], N + 'y', x, 0, z, n=16))                         # pé torneado
+            m.append(_torno([(30, 0), (38, 6), (38, 14), (24, 22), (20, 34), (30, 50), (33, 64), (26, 80), (10, 88), (0, 90)], N + 'y', x, h, z, n=16))   # pináculo
+    # cabeceira: travessa de baixo, três almofadas e o chapéu em arco
+    z0, z1 = ZH + 20, ZH + 50
+    xi = X - 70
+    arco = [(-xi, 800)] + [(xi * math.cos(math.radians(t)), 800 + 130 * math.sin(math.radians(t)) ** 0.8) for t in range(170, 9, -10)] + [(xi, 800)]
+    m.append(frente([(-xi, 720), (xi, 720)] + arco[::-1], z0, z1, N + 'x', 3.0))
+    m.append(caixa(-xi, xi, 330, 420, z0, z1, N + 'x', 2.0))
+    nm = 2 if wc > 1200 else 1
+    xs = [-xi + (2 * xi) * k / (nm + 1) for k in range(nm + 2)]
+    for k, xm in enumerate(xs):
+        la = 40 if 0 < k < len(xs) - 1 else 0
+        if la:
+            m.append(caixa(xm - la, xm + la, 420, 720, z0, z1, N + 'y', 2.0))
+    for xa, xb in zip(xs, xs[1:]):
+        m.append(caixa(xa + 20, xb - 20, 410, 730, z0 + 9, z1 - 9, N + 'y'))
+        al = caixa(xa + 62, xb - 62, 444, 696, z0 + 6, z1 - 3, N + 'y')
+        bevel(al, 8.0, seg=1, ang=60)
+        m.append(al)
+    # peseira: uma almofada deitada
+    z0, z1 = ZP - 38, ZP - 10
+    m += [caixa(-xi, xi, 250, 330, z0, z1, N + 'x', 2.0), caixa(-xi, xi, 440, 520, z0, z1, N + 'x', 3.0),
+          caixa(-xi, xi, 320, 450, z0 + 9, z1 - 9, N + 'x')]
+    al = caixa(-xi + 40, xi - 40, 348, 422, z0 + 3, z1 - 6, N + 'x')
+    bevel(al, 8.0, seg=1, ang=60)
+    m.append(al)
+    # longarinas com as rosetas dos parafusos, sarrafo de apoio e estrado
+    for s in (-1, 1):
+        xa, xb = sorted((s * (X - 48), s * (X - 22)))
+        m.append(caixa(xa, xb, 250, 420, ZH + 70, ZP - 70, N + 'z', 2.5))
+        xc, xd = sorted((s * (X - 48), s * (X - 72)))
+        m.append(caixa(xc, xd, 300, 330, ZH + 70, ZP - 70, F + 'z', 1.0))
+        for z in (ZH + 110, ZP - 110):
+            m.append(_torno([(0, 0), (17, 0), (15, 3), (7, 5), (0, 6)], 'latao_puxador', s * (X - 22), 345, z, n=14, eixo=(s, 0, 0)))
+    for k in range(9):
+        z = ZH + 150 + (ZP - ZH - 300) * k / 8
+        m.append(caixa(-X + 72, X - 72, 330, 350, z - 45, z + 45, F + 'x', 1.0))
+    parte('estrutura', m, origem=G(0, 0, 0), grupo='A')
+    # colchão, lençol, coberta puxada até perto dos travesseiros, dobra do lençol e travesseiros
+    yc = 520
+    zf = lc / 2 - 22                                          # pé do colchão (sobra folga para a coberta até a peseira)
+    r = [caixa(-wc / 2, wc / 2, 350, yc, -lc / 2, zf, 'colchao', 30.0),
+         caixa(-wc / 2 - 4, wc / 2 + 4, 400, yc + 5, -lc / 2 - 4, zf + 4, 'lencol', 28.0)]
+    zc = -lc / 2 + 560
+    r.append(_coberta(-wc / 2 - 6, wc / 2 + 6, zc, zf + 5, yc + 8, 112, colcha, semente=wc / 100.0, queda_pe=60))
+    r.append(_coberta(-wc / 2 - 12, wc / 2 + 12, zc - 30, zc + 150, yc + 36, 100, 'lencol', amp=4.0, semente=3.0 + wc / 100.0, queda_pe=0))   # o lençol dobrado por cima
+    nt = 2 if wc > 1200 else 1
+    for k in range(nt):
+        x = (k - (nt - 1) / 2) * (wc / nt)
+        r.append(_travesseiro(x + (12 if k else -8), yc + 58, -lc / 2 + 235 + 25 * k, min(330, wc / nt / 2 - 35), 205, 62,
+                              incl=-0.10, giro=0.05 - 0.13 * k, semente=k * 5.0 + wc / 300.0))
+    parte('roupa_de_cama', r, origem=G(0, 0, 0), grupo='B')
+
+
+def cama_casal():
+    _cama(1380, 1880, 'colcha_vinho')
+
+
+def cama_solteiro():
+    _cama(880, 1880, 'colcha_azul')
+
+
+FORMAS = {'comoda': comoda, 'criado_mudo': criado_mudo, 'guarda_roupa': guarda_roupa, 'cama_casal': cama_casal, 'cama_solteiro': cama_solteiro}

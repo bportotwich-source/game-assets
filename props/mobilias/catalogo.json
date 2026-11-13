@@ -1032,11 +1032,12 @@
    "arquivo": "mobilias/gondola.glb",
    "tamanho_m": [
     1.0,
-    1.65,
-    0.88
+    1.651,
+    0.886
    ],
-   "triangulos": 1568,
-   "kb": 77.7
+   "triangulos": 14192,
+   "kb": 1538.2,
+   "gerador": "moveis_realistas/loja/gerar.py"
   },
   {
    "id": "balcao_caixa",
@@ -1066,8 +1067,8 @@
     1.15,
     0.64
    ],
-   "triangulos": 1064,
-   "kb": 206.6,
+   "triangulos": 8984,
+   "kb": 995.8,
    "partes": [
     {
      "no": "gaveta_dinheiro",
@@ -1083,7 +1084,8 @@
       0.25
      ]
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/loja/gerar.py"
   },
   {
    "id": "freezer_horizontal",
@@ -1325,12 +1327,12 @@
    ],
    "arquivo": "mobilias/armario_vestiario.glb",
    "tamanho_m": [
-    0.9,
+    0.901,
     1.85,
-    0.52
+    0.54
    ],
-   "triangulos": 984,
-   "kb": 28.4,
+   "triangulos": 5308,
+   "kb": 765.5,
    "partes": [
     {
      "no": "porta_1",
@@ -1365,7 +1367,8 @@
      "eixo": "y",
      "abre_graus": -105
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/loja/gerar.py"
   },
   {
    "id": "maca",
@@ -5023,12 +5026,13 @@
    "colisao": "caixa",
    "arquivo": "mobilias/banqueta_giratoria.glb",
    "tamanho_m": [
-    0.409,
-    0.79,
-    0.409
+    0.408,
+    0.792,
+    0.408
    ],
-   "triangulos": 1172,
-   "kb": 56.8
+   "triangulos": 4604,
+   "kb": 559.2,
+   "gerador": "moveis_realistas/loja/gerar.py"
   },
   {
    "id": "mesa_booth",

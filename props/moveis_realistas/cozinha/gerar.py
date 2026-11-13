@@ -1,4 +1,4 @@
-"""Gera os móveis de cozinha (balcão com pia, armário aéreo): modelo, UVs, bake das texturas e o GLB do jogo
+"""Gera os móveis de cozinha (balcão com pia, armário aéreo, geladeira, fogão): modelo, UVs, bake das texturas e o GLB do jogo
 em props/mobilias, e atualiza o registro em props/mobilias/catalogo.json (medidas, partes que abrem e
 "gerador", para o gerar_props.py não os refazer).
 
@@ -16,13 +16,18 @@ from PIL import Image
 PROPS = os.path.dirname(os.path.dirname(AQUI))
 GERADOR = 'moveis_realistas/cozinha/gerar.py'
 # lado da textura de cada grupo dentro do GLB
-TEXTURA = {'balcao_pia': {'A': 2048, 'B': 1024}, 'armario_aereo': {'A': 1024, 'B': 1024}}
-NOME = {'balcao_pia': 'Balcão com pia', 'armario_aereo': 'Armário aéreo de cozinha'}
+TEXTURA = {'balcao_pia': {'A': 2048, 'B': 1024}, 'armario_aereo': {'A': 1024, 'B': 1024},
+           'geladeira': {'A': 2048, 'B': 1024}, 'fogao': {'A': 2048, 'B': 1024}}
+NOME = {'balcao_pia': 'Balcão com pia', 'armario_aereo': 'Armário aéreo de cozinha', 'geladeira': 'Geladeira duplex', 'fogao': 'Fogão 4 bocas'}
 PARTES = {
     'balcao_pia': [{'no': 'porta_esq', 'origem': [-0.6, 0, 0.289], 'tipo': 'porta', 'eixo': 'y', 'abre_graus': -100},
                    {'no': 'porta_dir', 'origem': [0.6, 0, 0.289], 'tipo': 'porta', 'eixo': 'y', 'abre_graus': 100}],
     'armario_aereo': [{'no': 'porta_esq', 'origem': [-0.4, 0, 0.33], 'tipo': 'porta', 'eixo': 'y', 'abre_graus': -100},
                       {'no': 'porta_dir', 'origem': [0.4, 0, 0.33], 'tipo': 'porta', 'eixo': 'y', 'abre_graus': 100}],
+    'geladeira': [{'no': 'porta_geladeira', 'origem': [0.35, 0, 0.325], 'tipo': 'porta', 'eixo': 'y', 'abre_graus': 110},
+                  {'no': 'porta_freezer', 'origem': [0.35, 0, 0.325], 'tipo': 'porta', 'eixo': 'y', 'abre_graus': 110}],
+    'fogao': [{'no': 'gaveta', 'origem': [0, 0, 0], 'tipo': 'gaveta', 'desliza': [0, 0, 0.35]},
+              {'no': 'porta_forno', 'origem': [0, 0.17, 0.3], 'tipo': 'porta', 'eixo': 'x', 'abre_graus': 85}],
 }
 
 

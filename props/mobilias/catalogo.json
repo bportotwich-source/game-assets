@@ -1627,8 +1627,9 @@
     0.145,
     0.8
    ],
-   "triangulos": 1340,
-   "kb": 140.2
+   "triangulos": 3068,
+   "kb": 506.3,
+   "gerador": "moveis_realistas/servicos/gerar.py"
   },
   {
    "id": "barricada_porta",
@@ -3860,12 +3861,13 @@
    "modulo_m": 1.0,
    "arquivo": "mobilias/estante_biblioteca.glb",
    "tamanho_m": [
-    1.0,
+    1.04,
     2.25,
-    0.64
+    0.644
    ],
-   "triangulos": 2748,
-   "kb": 186.4
+   "triangulos": 10619,
+   "kb": 1964.6,
+   "gerador": "moveis_realistas/servicos/gerar.py"
   },
   {
    "id": "mesa_leitura",
@@ -4651,12 +4653,13 @@
    "vagas": 3,
    "arquivo": "mobilias/banco_espera.glb",
    "tamanho_m": [
-    1.9,
-    0.858,
-    0.53
+    1.92,
+    0.852,
+    0.528
    ],
-   "triangulos": 352,
-   "kb": 19.9
+   "triangulos": 2812,
+   "kb": 404.8,
+   "gerador": "moveis_realistas/servicos/gerar.py"
   },
   {
    "id": "cadeira_rodas",
@@ -5667,10 +5670,10 @@
    "tamanho_m": [
     0.48,
     0.55,
-    0.505
+    0.547
    ],
-   "triangulos": 964,
-   "kb": 102.7,
+   "triangulos": 3920,
+   "kb": 775.8,
    "partes": [
     {
      "no": "porta",
@@ -5683,7 +5686,8 @@
      "eixo": "y",
      "abre_graus": -105
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/servicos/gerar.py"
   },
   {
    "id": "quadro_horarios",

@@ -29,6 +29,30 @@ python3 agua/gerar.py todas 1024 /tmp/agua     # assa e grava os 14 GLBs em prop
 python3 agua/foto.py foto.png ../loot/galao_vazio.glb ../loot/galao_agua.glb
 ```
 
+## comida/
+
+Comida embalada, no mesmo tamanho e posição dos antigos (latas e caixas em pé, pacotes deitados). Rótulos de
+desenho próprio, sem marcas, com os dizeres em português:
+
+| Item | Arquivo | O que tem |
+|---|---|---|
+| Lata de feijão | `lata_feijao` | lata com recravação, argola de abrir e rótulo de papel marrom com faixa creme |
+| Lata de milho | `lata_milho` | lata baixa, rótulo verde com faixa amarela |
+| Lata de sardinha | `lata_sardinha` | lata retangular de cantos redondos, tampa estampada e argola |
+| Pacote de arroz | `pacote_arroz` | saco plástico cheio, soldas achatadas nas pontas, faixa azul |
+| Caixa de flocos de milho | `caixa_cereal` | caixa de papelão com a tigela na frente e tabela no verso e na lateral |
+| Caixa de leite | `caixa_leite` | longa vida de 1 L com as orelhas dobradas, solda em cima e tampa de rosca |
+| Pacote de salgadinho | `salgadinho` | saco metalizado estufado com as soldas prateadas |
+| Barra de chocolate | `barra_chocolate` | luva de papel, papel alumínio rasgado numa ponta e os tabletes à mostra |
+| Tigela de arroz cozido | `arroz_cozido` | tigela esmaltada de friso azul; é o pacote de arroz depois da panela (`estados` do `pacote_arroz`) |
+
+```
+python3 comida/ver.py formas.png lata_feijao             # confere as formas, sem assar
+python3 comida/gerar.py todas 2048 /tmp/comida           # assa e grava os 9 GLBs em props/loot (~20 min)
+```
+
+O bake fica guardado na pasta de saída: depois de mudar um modelo, apague `<saída>/<forma>` antes de gerar de novo.
+
 ## ferramentas/
 
 Ferramentas e materiais de craft, no mesmo tamanho, posição e ponto de pega dos antigos (o jogo não muda):

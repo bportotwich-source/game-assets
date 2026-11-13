@@ -531,7 +531,83 @@ def cesto_legumes():
     return raiz
 
 
+# ------------------------------------------------------------------ peixe (cru e assado) e carne assada
+def _peixe(corpo, dorso, barriga, nad, olho, grelha=None):
+    prof = [(0.0, 3), (0.03, 13), (0.10, 27), (0.25, 40), (0.45, 45), (0.65, 38), (0.80, 24), (0.92, 11), (1.0, 8)]
+
+    def alt(u):
+        for (a, ha), (b, hb) in zip(prof, prof[1:]):
+            if a <= u <= b:
+                return ha + (hb - ha) * (u - a) / (b - a)
+        return prof[-1][1]
+    X0, L, YC = -128.0, 216.0, 17.5
+    esp = lambda u: 17.0 * (alt(u) / 45.0) ** 0.8
+
+    def f(t, a):
+        u = t
+        return (X0 + L * u, YC + esp(u) * math.cos(a), alt(u) * math.sin(a) * (1.0 if math.sin(a) > 0 else 0.92) + 3.0)
+    o = _sup(f, 40, 24, corpo)
+    pintar(o, dorso, lambda c, n: -c[0] - 3.0 > 0.50 * alt((c[2] - X0) / L))
+    pintar(o, barriga, lambda c, n: -c[0] - 3.0 < -0.52 * alt((c[2] - X0) / L))
+    if grelha:
+        pintar(o, grelha, lambda c, n: n[1] > 0.25 and (c[2] + 300) % 31.0 < 6.5 and -80 < c[2] < 70)
+    Y0, Y1 = YC - 0.9, YC + 0.9
+    fins = [planta([(84, 3), (98, 14), (128, 44), (119, 3), (128, -38), (98, -8)], Y0, Y1, nad),                       # rabo
+            planta([(-62, 41), (-50, 56), (-34, 52), (-20, 60), (-4, 53), (10, 58), (24, 48), (40, 46), (52, 32), (30, 36), (-20, 44)][::-1], Y0, Y1, nad),   # dorsal
+            planta([(10, -34), (22, -52), (40, -44), (52, -24), (30, -30)], Y0, Y1, nad),                                  # anal
+            planta([(-70, -36), (-60, -52), (-44, -46), (-40, -34)], Y0, Y1, nad)]
+    up = lambda x: YC + esp((x - X0) / L)
+    fins.append(planta([(-66, -6), (-40, -16), (-30, -4), (-44, 2)], up(-50) - 0.4, up(-50) + 0.8, nad))                  # peitoral, deitada no flanco
+    ol = [cil((-104, up(-104) - 2.2, 12), (-104, up(-104) - 0.4, 12), 5.6, olho, n=12), cil((-104, up(-104) - 0.6, 12), (-104, up(-104) + 0.0, 12), 2.7, 'letra_preta', n=10)]
+    guelra = [lib.fio([G(-86 + 5 * math.sin(k / 3.0), up(-86) - 0.4 - 0.9 * abs(k - 4.5) ** 1.5 / 3, -22 + 6.5 * k) for k in range(10)], 0.7, dorso, fechado=False, res=1)]
+    raiz = parte('corpo', [o], origem=G(0, 0, 0), grupo='A', suave=60)
+    parte('nadadeiras', fins, origem=G(0, 0, 0), pai=raiz, grupo='A', suave=30)
+    parte('olho', ol + guelra, origem=G(0, 0, 0), pai=raiz, grupo='A', suave=40)
+    return raiz
+
+
+def peixe_cru():
+    return _peixe('peixe', 'peixe_dorso', 'peixe_barriga', 'peixe_nadadeira', 'peixe_olho')
+
+
+def peixe_assado():
+    return _peixe('peixe_tostado', 'peixe_tostado', 'peixe_tostado', 'assada', 'rot_branco', grelha='assada')
+
+
+def carne_assada():
+    borda = lambda a: 1 + 0.10 * math.sin(2 * a + 1.0) + 0.07 * math.sin(3 * a + 0.4) + 0.025 * math.sin(7 * a)
+    prof = [(0, 0.55), (1, 0.82), (4, 0.95), (9, 1.0), (24, 1.0), (30, 0.97), (33.5, 0.91)] + [(34.5 + 2.2 * (1 - e ** 2) ** 0.5, e) for e in (0.84, 0.74, 0.62, 0.50, 0.38, 0.26, 0.14, 0.02)]
+
+    def f(t, a):
+        y, e = prof[min(len(prof) - 1, int(round(t * (len(prof) - 1))))]
+        return (78 * borda(a) * e * math.sin(a), y, 50 * borda(a) * e * math.cos(a))
+    bife = _sup(f, len(prof), 56, 'assada')
+
+    def capa(c, n):
+        x, z = c[2], -c[0]
+        a = math.atan2(x / 78, z / 50) % (2 * math.pi)
+        return 0.25 < a < 2.5 and math.hypot(x / 78, z / 50) / borda(a) > 0.82
+    pintar(bife, 'gordura_tostada', capa)
+    marcas = []
+    for k in range(6):                                                                           # marcas da grelha
+        z0 = -34 + 13.5 * k
+        pts = []
+        for i in range(13):
+            x = -58 + 104 * i / 12
+            z = z0 + 0.35 * x
+            rho = math.hypot(x / 78, z / 50) / borda(math.atan2(x / 78, z / 50))
+            if rho < 0.80:
+                pts.append(G(x, 34.5 + 2.2 * (1 - rho * rho) ** 0.5 - 0.75, z))
+        if len(pts) > 2:
+            marcas.append(lib.fio(pts, 1.25, 'carvao', fechado=False, res=1))
+    osso = [lib.lathe([(0, 0), (0, 7), (30, 6.2), (40, 7), (46, 10.5), (52, 10), (55, 6), (55, 0)], 'osso', n=12, c0=G(-58, 15, -6), eixo=G(-0.96, 0.0, -0.28))]
+    raiz = parte('carne', [bife] + marcas, origem=G(0, 0, 0), grupo='A', suave=50)
+    parte('osso', osso, origem=G(0, 0, 0), pai=raiz, grupo='A', suave=50)
+    return raiz
+
+
 FORMAS = {'lata_feijao': lata_feijao, 'lata_milho': lata_milho, 'lata_sardinha': lata_sardinha, 'pacote_arroz': pacote_arroz,
           'caixa_cereal': caixa_cereal, 'caixa_leite': caixa_leite, 'salgadinho': salgadinho, 'barra_chocolate': barra_chocolate, 'arroz_cozido': arroz_cozido,
           'saco_farinha': saco_farinha, 'pao_velho': pao_velho, 'pao_caseiro': pao_caseiro, 'carne_crua': carne_crua,
-          'carne_defumada': carne_defumada, 'cesto_legumes': cesto_legumes}
+          'carne_defumada': carne_defumada, 'cesto_legumes': cesto_legumes,
+          'peixe_cru': peixe_cru, 'peixe_assado': peixe_assado, 'carne_assada': carne_assada}

@@ -297,3 +297,17 @@ placa transparente). Refazer: `python3 moveis_realistas/decoracao/gerar.py todas
 
 Classes novas: `aco_mesa`, `formica`, `tecla`, `vidro_caco`, `cal_*`. Refazer: `python3 moveis_realistas/escritorio/gerar.py todas 2048 /tmp/saida`.
 
+## Diversos (`diversos/`: `lixeira`, `mala_viagem`, `aquecedor`, `desenho_crianca`)
+
+`diversos/materiais.py` encadeia `escritorio/materiais.py`. Mesmos nós que abrem dos antigos (`tampa`).
+
+| id | medidas | triângulos | texturas | o que tem |
+|---|---|---|---|---|
+| `lixeira` | 0,62 × 1,04 × 0,88 m | 2,8 mil | 2 × 1024 | Lixeira de rua de plástico verde desbotado com nervuras, rodas e alça atrás, saco de lixo dentro; `tampa` levanta pela dobradiça de trás. |
+| `mala_viagem` | 0,76 × 0,29 × 0,47 m | 2,3 mil | 2 × 1024 | Mala de náilon azul com forro, alças, fechos de latão e roupas dobradas dentro; `tampa` abre pela costura de trás. |
+| `aquecedor` | 0,62 × 0,60 × 0,35 m | 3,7 mil | 1 × 1024 | Aquecedor a óleo de 9 elementos esmaltados, caixa de comando com dois botões e luz piloto, fio e pés com rodinhas. |
+| `desenho_crianca` | 0,30 × 0,23 m | 1,2 mil | 1 × 1024 | Folha presa com fita crepe: casa, sol, passarinhos e a família de palitos em giz de cera. |
+
+Classes novas: `plastico_verde`, `saco_lixo`, `mala_azul`, `forro_mala`, `roupa_*`, `jeans`, `giz_*`, `folha_sulfite`, `fita_crepe`.
+Refazer: `python3 moveis_realistas/diversos/gerar.py todas 2048 /tmp/saida`.
+

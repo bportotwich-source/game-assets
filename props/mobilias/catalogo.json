@@ -1000,12 +1000,13 @@
    "estacao": "calor (gasta energia)",
    "arquivo": "mobilias/aquecedor.glb",
    "tamanho_m": [
-    0.51,
-    0.6,
-    0.29
+    0.623,
+    0.599,
+    0.345
    ],
-   "triangulos": 6400,
-   "kb": 305.0
+   "triangulos": 3688,
+   "kb": 413.0,
+   "gerador": "moveis_realistas/diversos/gerar.py"
   },
   {
    "id": "gondola",
@@ -2021,12 +2022,12 @@
    ],
    "arquivo": "mobilias/lixeira.glb",
    "tamanho_m": [
-    0.61,
-    1.05,
-    0.838
+    0.622,
+    1.044,
+    0.882
    ],
-   "triangulos": 3060,
-   "kb": 148.3,
+   "triangulos": 2816,
+   "kb": 364.2,
    "partes": [
     {
      "no": "tampa",
@@ -2039,7 +2040,8 @@
      "eixo": "x",
      "abre_graus": -115
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/diversos/gerar.py"
   },
   {
    "id": "mala_viagem",
@@ -2065,12 +2067,12 @@
    "peso_kg": 4.0,
    "arquivo": "mobilias/mala_viagem.glb",
    "tamanho_m": [
-    0.752,
-    0.246,
-    0.519
+    0.762,
+    0.288,
+    0.468
    ],
-   "triangulos": 2696,
-   "kb": 250.6,
+   "triangulos": 2252,
+   "kb": 1034.8,
    "partes": [
     {
      "no": "tampa",
@@ -2083,7 +2085,8 @@
      "eixo": "x",
      "abre_graus": -105
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/diversos/gerar.py"
   },
   {
    "id": "pilha_sucata",
@@ -3245,12 +3248,13 @@
    "colisao": "nenhuma",
    "arquivo": "mobilias/desenho_crianca.glb",
    "tamanho_m": [
-    0.3,
-    0.23,
-    0.002
+    0.303,
+    0.234,
+    0.001
    ],
-   "triangulos": 24,
-   "kb": 38.0
+   "triangulos": 1184,
+   "kb": 351.1,
+   "gerador": "moveis_realistas/diversos/gerar.py"
   },
   {
    "id": "pilha_livros",

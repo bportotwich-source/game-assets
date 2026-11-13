@@ -205,3 +205,17 @@ estrado, colchão de listras, lençol dobrado sobre a colcha de matelassê (`col
 solteiro) e travesseiros. O pano sai de `_coberta` (folha amarrotada que cai pelas bordas) e `_travesseiro`.
 Os próximos móveis de madeira de casa devem usar as mesmas classes e os ajudantes de `quarto/modelo.py`
 (`_gaveta`, `_puxador`, `_fechadura`, `_almofada_lado`, `_tampo`, `_saia`).
+
+## Móveis de casa: sala (`sala/`: `cadeira`, `mesa_jantar`, `estante_livros`)
+
+O mesmo conjunto de nogueira dos móveis de quarto (`sala/modelo.py` carrega `quarto/modelo.py` e usa os ajudantes dele;
+`sala/materiais.py` encadeia `quarto/materiais.py`).
+
+| id | medidas | triângulos | texturas | o que tem |
+|---|---|---|---|---|
+| `cadeira` | 0,42 × 0,93 × 0,45 m | 3,4 mil | 1 × 1024 | Pés da frente torneados, pés de trás e montantes numa peça só deitada para trás, chapéu curvo, tábua central recortada, travessas e assento estofado verde com tachas. Nós: `armacao`, `assento`. |
+| `mesa_jantar` | 1,40 × 0,76 × 0,80 m | 4,3 mil | 1 × 2048 | Tampo de quatro tábuas de quina boleada, saias com cordão e quatro pés torneados em balaústre. |
+| `estante_livros` | 0,93 × 1,83 × 0,35 m | 12,5 mil | estante 2048, livros 1024 | Laterais de almofada, cornija, rodapé de mísula e cinco níveis de livros (nó `livros`, separado do nó `estante` para o jogo poder esconder): lombadas arredondadas com filetes dourados e etiquetas, vãos, livros tombados e pilhas deitadas. |
+
+Classes novas: `estofado_verde` (gasto no meio do assento), `capa_1..6`, `papel_livro`, `tacha`. Os livros saem de `_livro` e `_por`
+com semente fixa. Refazer: `python3 moveis_realistas/sala/gerar.py todas 2048 /tmp/saida`.

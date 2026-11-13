@@ -1,4 +1,4 @@
-"""Gera os móveis de sala (cadeira, mesa de jantar, estante de livros): modelo, UVs, bake das texturas e o GLB do jogo
+"""Gera os móveis de sala (cadeira, mesa de jantar, estante de livros, poltrona, sofá): modelo, UVs, bake das texturas e o GLB do jogo
 em props/mobilias, e atualiza o registro em props/mobilias/catalogo.json (medidas, partes que abrem e
 "gerador", para o gerar_props.py não os refazer).
 
@@ -16,8 +16,9 @@ from PIL import Image
 PROPS = os.path.dirname(os.path.dirname(AQUI))
 GERADOR = 'moveis_realistas/sala/gerar.py'
 # lado da textura de cada grupo dentro do GLB
-TEXTURA = {'cadeira': {'A': 1024}, 'mesa_jantar': {'A': 2048}, 'estante_livros': {'A': 2048, 'B': 1024}}
-NOME = {'cadeira': 'Cadeira de madeira', 'mesa_jantar': 'Mesa de jantar', 'estante_livros': 'Estante de livros'}
+TEXTURA = {'cadeira': {'A': 1024}, 'mesa_jantar': {'A': 2048}, 'estante_livros': {'A': 2048, 'B': 1024},
+           'poltrona': {'A': 1024}, 'sofa': {'A': 1024}}
+NOME = {'cadeira': 'Cadeira de madeira', 'mesa_jantar': 'Mesa de jantar', 'estante_livros': 'Estante de livros', 'poltrona': 'Poltrona', 'sofa': 'Sofá 3 lugares'}
 PARTES = {}
 
 

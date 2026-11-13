@@ -17,7 +17,7 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Cama de solteiro (`cama_solteiro`) | 1 | Quarto | 0,99 × 1,05 × 1,99 | - | - | dormir | 9416 |
 | Mesa de jantar (`mesa_jantar`) | 1 | Sala | 1,40 × 0,76 × 0,80 | - | - | barricada | 4284 |
 | Cadeira de madeira (`cadeira`) | 1 | Sala | 0,42 × 0,93 × 0,45 | - | - | sentar | 3400 |
-| Sofá 3 lugares (`sofa`) | 1 | Sala | 1,93 × 0,88 × 0,87 | 2 espaços: moedas, pilhas | - | barricada, dormir, sentar | 12624 |
+| Sofá 3 lugares (`sofa`) | 1 | Sala | 1,93 × 0,88 × 0,86 | 2 espaços: moedas, pilhas | - | barricada, dormir, sentar | 9692 |
 | Armário de banheiro com espelho (`armario_banheiro`) | 1 | Banheiro | 0,52 × 0,70 × 0,17 | 4 espaços: remedios, higiene | porta_espelho | - | 348 |
 | Caixote de madeira (`caixa_madeira`) | 1 | Depósito | 0,84 × 0,56 × 0,64 | 8 espaços: comida, materiais, ferramentas, armas | tampa | barricada | 1972 |
 | Armário aéreo de cozinha (`armario_aereo`) | 2 | Cozinha | 0,82 × 0,64 × 0,37 | 6 espaços: comida, utensilios | porta_esq, porta_dir | - | 912 |
@@ -26,7 +26,7 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Banheira (`banheira`) | 2 | Banheiro | 1,60 × 0,62 × 0,74 | - | - | - | 798 |
 | Estante de livros (`estante_livros`) | 2 | Sala | 0,93 × 1,83 × 0,34 | 8 espaços: livros | - | barricada | 12516 |
 | Rack com TV (`rack_tv`) | 2 | Sala | 1,40 × 1,18 × 0,45 | 3 espaços: pilhas, eletronicos | porta_esq | - | 912 |
-| Poltrona (`poltrona`) | 2 | Sala | 0,87 × 0,98 × 0,85 | 1 espaços: moedas | - | sentar | 6272 |
+| Poltrona (`poltrona`) | 2 | Sala | 0,87 × 0,98 × 0,85 | 1 espaços: moedas | - | sentar | 6352 |
 | Escrivaninha com luminária (`escrivaninha`) | 2 | Escritório | 1,20 × 1,19 × 0,62 | 4 espaços: livros, pilhas, remedios | gaveta_1, gaveta_2, gaveta_3, gaveta_centro | - | 2256 |
 | Berço (`berco`) | 2 | Quarto | 1,28 × 0,95 × 0,72 | 2 espaços: roupas, remedios | - | - | 4628 |
 | Máquina de lavar (`maquina_lavar`) | 2 | Lavanderia | 0,60 × 0,85 × 0,61 | 3 espaços: roupas, limpeza | gaveta_sabao, porta | barricada | 2340 |

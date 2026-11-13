@@ -15,8 +15,8 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Criado-mudo (`criado_mudo`) | 1 | Quarto | 0,47 × 0,56 × 0,42 | 3 espaços: remedios, pilhas, livros | gaveta | - | 3956 |
 | Cama de casal (`cama_casal`) | 1 | Quarto | 1,49 × 1,05 × 1,99 | - | - | dormir | 11976 |
 | Cama de solteiro (`cama_solteiro`) | 1 | Quarto | 0,99 × 1,05 × 1,99 | - | - | dormir | 9416 |
-| Mesa de jantar (`mesa_jantar`) | 1 | Sala | 1,40 × 0,76 × 0,80 | - | - | barricada | 1820 |
-| Cadeira de madeira (`cadeira`) | 1 | Sala | 0,42 × 0,95 × 0,48 | - | - | sentar | 1872 |
+| Mesa de jantar (`mesa_jantar`) | 1 | Sala | 1,40 × 0,76 × 0,80 | - | - | barricada | 4284 |
+| Cadeira de madeira (`cadeira`) | 1 | Sala | 0,42 × 0,93 × 0,45 | - | - | sentar | 3400 |
 | Sofá 3 lugares (`sofa`) | 1 | Sala | 1,93 × 0,88 × 0,87 | 2 espaços: moedas, pilhas | - | barricada, dormir, sentar | 12624 |
 | Armário de banheiro com espelho (`armario_banheiro`) | 1 | Banheiro | 0,52 × 0,70 × 0,17 | 4 espaços: remedios, higiene | porta_espelho | - | 348 |
 | Caixote de madeira (`caixa_madeira`) | 1 | Depósito | 0,84 × 0,56 × 0,64 | 8 espaços: comida, materiais, ferramentas, armas | tampa | barricada | 1972 |
@@ -24,7 +24,7 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Pia de coluna (`pia_banheiro`) | 2 | Banheiro | 0,54 × 1,00 × 0,45 | - | - | - | 2780 |
 | Vaso sanitário com caixa (`vaso_sanitario`) | 2 | Banheiro | 0,40 × 0,81 × 0,63 | 1 espaços: remedios, moedas | assento, tampa_caixa | - | 2940 |
 | Banheira (`banheira`) | 2 | Banheiro | 1,60 × 0,62 × 0,74 | - | - | - | 798 |
-| Estante de livros (`estante_livros`) | 2 | Sala | 0,93 × 1,83 × 0,34 | 8 espaços: livros | - | barricada | 7000 |
+| Estante de livros (`estante_livros`) | 2 | Sala | 0,93 × 1,83 × 0,34 | 8 espaços: livros | - | barricada | 12516 |
 | Rack com TV (`rack_tv`) | 2 | Sala | 1,40 × 1,18 × 0,45 | 3 espaços: pilhas, eletronicos | porta_esq | - | 912 |
 | Poltrona (`poltrona`) | 2 | Sala | 0,87 × 0,98 × 0,85 | 1 espaços: moedas | - | sentar | 6272 |
 | Escrivaninha com luminária (`escrivaninha`) | 2 | Escritório | 1,20 × 1,19 × 0,62 | 4 espaços: livros, pilhas, remedios | gaveta_1, gaveta_2, gaveta_3, gaveta_centro | - | 2256 |

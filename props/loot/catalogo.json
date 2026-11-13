@@ -952,12 +952,13 @@
    ],
    "arquivo": "loot/faca_cozinha.glb",
    "tamanho_m": [
-    0.33,
-    0.019,
-    0.037
+    0.329,
+    0.018,
+    0.045
    ],
-   "triangulos": 452,
-   "kb": 23.8
+   "triangulos": 1628,
+   "kb": 130.4,
+   "gerador": "itens_realistas/ferramentas/gerar.py"
   },
   {
    "id": "caixa_leite",
@@ -1263,12 +1264,13 @@
    ],
    "arquivo": "loot/facao.glb",
    "tamanho_m": [
-    0.64,
-    0.022,
-    0.052
+    0.646,
+    0.021,
+    0.049
    ],
-   "triangulos": 208,
-   "kb": 65.2
+   "triangulos": 1660,
+   "kb": 240.1,
+   "gerador": "itens_realistas/ferramentas/gerar.py"
   },
   {
    "id": "serrote",
@@ -1324,17 +1326,18 @@
    "efeito": "cava hortas, valas e covas; arma pesada",
    "pega": [
     -0.3,
-    0.02,
+    0.024,
     0
    ],
    "arquivo": "loot/pa.glb",
    "tamanho_m": [
     1.54,
-    0.039,
-    0.24
+    0.046,
+    0.236
    ],
-   "triangulos": 312,
-   "kb": 75.1
+   "triangulos": 2068,
+   "kb": 279.3,
+   "gerador": "itens_realistas/ferramentas/gerar.py"
   },
   {
    "id": "enxada",
@@ -1351,22 +1354,24 @@
    "dano": 28,
    "onde": [
     "armazem",
-    "casa_de_campo"
+    "casa_de_campo",
+    "garagem"
    ],
    "efeito": "prepara canteiros da horta (+50% colheita)",
    "pega": [
     -0.3,
-    0.018,
+    0.04,
     0
    ],
    "arquivo": "loot/enxada.glb",
    "tamanho_m": [
-    1.43,
-    0.04,
-    0.267
+    1.356,
+    0.186,
+    0.251
    ],
-   "triangulos": 140,
-   "kb": 66.5
+   "triangulos": 780,
+   "kb": 94.1,
+   "gerador": "itens_realistas/ferramentas/gerar.py"
   },
   {
    "id": "corda",

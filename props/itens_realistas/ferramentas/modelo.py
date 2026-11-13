@@ -1,5 +1,5 @@
 """Ferramentas e materiais de craft no nível realista: martelo de unha, machado, serrote, tábua e
-caixa de pregos. Desenho próprio, sem marcas.
+caixa de pregos, cano, chapa, sucata, pá, enxada, faca de cozinha e facão. Desenho próprio, sem marcas.
 
 Coordenadas do jogo em mm (base.py dos móveis): x = comprimento (cabeça da ferramenta em +x),
 y = para cima, z = frente. Cada item deitado no chão como o antigo, com o mesmo tamanho e a mesma
@@ -259,5 +259,160 @@ def sucata_metal():
     return parte('sucata', p, origem=G(0, 0, 0), grupo='A')
 
 
+# ------------------------------------------------------------------ pá de bico
+def _fita(pts, larg, y0, y1, mat):
+    """Fita de aço vista de cima: poligonal [(x, z)] com largura larg, de y0 a y1."""
+    esq, dir_ = [], []
+    for i, (x, z) in enumerate(pts):
+        a, b = pts[max(i - 1, 0)], pts[min(i + 1, len(pts) - 1)]
+        dx, dz = b[0] - a[0], b[1] - a[1]
+        d = math.hypot(dx, dz)
+        nx, nz = -dz / d, dx / d
+        esq.append((x + nx * larg / 2, z + nz * larg / 2))
+        dir_.append((x - nx * larg / 2, z - nz * larg / 2))
+    return planta(esq + dir_[::-1], y0, y1, mat)
+
+
+def _gume(secoes, mat, Y):
+    """Lâmina em fatias ao longo de x: [(x, z do dorso, z do começo do chanfro, z do fio, espessura)]."""
+    aneis = []
+    for (x, zs, zm, ze, e) in secoes:
+        pts = [(zs, e / 2), (zm, e * 0.42), (ze, 0.12), (ze, -0.12), (zm, -e * 0.42), (zs, -e / 2)]
+        aneis.append([lib.P(*G(x, Y + dy, z)) for (z, dy) in pts])
+    return lib.loft(aneis, mat)
+
+
+def pa():
+    Y = 24.0
+    cabo = _torno_x([(0, 0), (0, 17), (60, 17.5), (500, 18), (900, 19), (1040, 19), (1040, 0)], 'faia_x', -610, Y, n=18)
+    # punho em D: luva de aço, duas fitas abrindo em forquilha e a travessa de madeira rebitada
+    luva = lib.lathe([(0, 17), (0, 19.5), (2, 20.5), (70, 20.5), (78, 19), (78, 17)], 'aco_ferramenta', n=18, c0=G(-646, Y, 0), eixo=G(1, 0, 0), anel=True)
+    fer = [luva]
+    for s in (-1, 1):
+        fer.append(_fita([(-585, s * 19.5), (-628, s * 22), (-668, s * 52), (-688, s * 57.5), (-708, s * 57.5)][::s], 4.0, Y - 10, Y + 10, 'aco_ferramenta'))
+        fer.append(cil((-694, Y, s * 59.5), (-694, Y, s * 61.6), 5.5, 'aco_lamina', n=12))
+    trav = _torno_z([(0, 0), (0, 12.5), (4, 14.5), (55.5, 16.5), (107, 14.5), (111, 12.5), (111, 0)], 'faia_z', -694, Y, -55.5, n=16)
+
+    # lâmina de bico: costas no chão, abaulada, com os pisantes dobrados nos ombros
+    def meia(x):
+        if x < 510:
+            return 108.0 + 10.0 * min(1.0, (x - 478) / 20.0) ** 0.5
+        t = max(0.0, (x - 690) / 141.0)
+        return max(2.5, 118.0 * (1.0 - t ** 1.9))
+
+    def alto(x, z):
+        t = max(0.0, (x - 690) / 141.0)
+        h = meia(x)
+        return 3.4 + 7.0 * t * t + 30.0 * (1.0 - 0.45 * t) * (h / 118.0) ** 2 * (z / h) ** 2
+    aneis = []
+    for x in (478, 484, 495, 510, 540, 580, 620, 660, 690, 715, 740, 762, 782, 800, 814, 824, 830):
+        h = meia(x)
+        zs = [h * (k / 6.0 - 1.0) for k in range(13)]
+        cima = [(x, alto(x, z), z) for z in zs]
+        baixo = [(x, y - 2.4, z) for (x, y, z) in reversed(cima)]
+        aneis.append([lib.P(*G(*p)) for p in cima + baixo])
+    lam = lib.loft(aneis, 'ferro_preto')
+    pintar(lam, 'aco_lamina', lambda c, n: c[2] > 770.0)                      # ponta lixada de tanto cavar
+    # encaixe do cabo: tubo que achata e morre no meio da lâmina
+    enc = []
+    for (x, cy, ry, rz) in ((392, Y, 21.5, 21.5), (396, Y, 22.5, 22.5), (470, Y - 1, 21.5, 23), (520, 19, 16.5, 27), (570, 12.5, 10.5, 31),
+                            (620, 8.5, 6.0, 30), (670, 6.2, 3.2, 20), (715, 5.5, 1.4, 6)):
+        enc.append([lib.P(*G(x, cy + ry * math.sin(2 * math.pi * k / 16), rz * math.cos(2 * math.pi * k / 16))) for k in range(16)])
+    enc = lib.loft(enc, 'ferro_preto')
+    pis = []
+    for s in (-1, 1):
+        pis.append(lib.fio([G(481, alto(481, s * z) + 1.6, s * z) for z in (34, 50, 66, 82, 98, 112)], 3.4, 'ferro_preto', fechado=False, res=2))
+    reb = [cil((430, Y + 20.5, 0), (430, Y + 23.2, 0), 4.6, 'aco_lamina', n=10)]                  # rebite que prende o cabo
+    raiz = parte('cabo', [cabo, trav], origem=G(0, 0, 0), grupo='A')
+    parte('punho', fer, origem=G(0, 0, 0), pai=raiz, grupo='A')
+    parte('lamina', [lam, enc] + pis + reb, origem=G(0, 0, 0), pai=raiz, grupo='A', suave=40)
+    return raiz
+
+
+# ------------------------------------------------------------------ enxada
+def enxada():
+    FI = math.radians(20.0)                                # a lâmina fecha para o lado do cabo
+    sf, cf = math.sin(FI), math.cos(FI)
+    cabo = _torno_x([(0, 0), (0, 15), (5, 17), (700, 17), (1250, 18.5), (1330, 20), (1356, 20.5), (1356, 0)], 'faia_x', -700, 0, n=18)
+    olho = lib.lathe([(0, 19.5), (0, 26), (3, 28), (45, 28), (48, 26), (48, 19.5)], 'ferro_preto', n=20, c0=G(600, 0, 0), eixo=G(1, 0, 0), anel=True)
+
+    def fatias(secoes, mat):
+        aneis = []
+        for (s, hw, e, rec) in secoes:
+            cx, cz = 624 - s * sf - rec * cf, 20 + s * cf - rec * sf
+            aneis.append([lib.P(*G(cx + a * cf * e / 2, b * hw, cz + a * sf * e / 2)) for (a, b) in ((-1, -1), (1, -1), (1, 1), (-1, 1))])
+        return lib.loft(aneis, mat)
+    lam = bevel(fatias([(0, 22, 13, 0), (16, 30, 10, 0), (36, 66, 5.5, 0), (58, 86, 3.8, 0), (120, 90, 3.2, 0), (196, 93, 2.6, 0), (216, 93, 0.5, 0)], 'ferro_preto'), 1.0, 2)
+    pintar(lam, 'aco_lamina', lambda c, n: -c[0] > 20 + 186 * cf)                                # fio amolado na pedra
+    nerv = fatias([(0, 9, 12, 5), (60, 8, 7, 3.5), (118, 5, 2.5, 1.6)], 'ferro_preto')            # nervura de reforço nas costas
+    cunha = caixa(655.6, 657.2, -3, 3, -15, 15, 'aco_lamina')
+    pecas = [cabo, olho, lam, nerv, cunha]
+    # deitada: a ponta do cabo e a quina da lâmina tocam o chão, o cabo sobe até a cabeça
+    TILT = math.asin(77.0 / 1340.0)
+    ct, st = math.cos(TILT), math.sin(TILT)
+    for o in pecas:
+        _mexer(o, lambda x, y, z: (-700 + (x + 700) * ct - y * st, 16.0 + (x + 700) * st + y * ct, z))
+    raiz = parte('cabo', [cabo], origem=G(0, 0, 0), grupo='A')
+    parte('cabeca', [olho, lam, nerv, cunha], origem=G(0, 0, 0), pai=raiz, grupo='A')
+    return raiz
+
+
+# ------------------------------------------------------------------ faca de cozinha
+def _cabo_faca(contorno, Y, esp, mat, rebites, mat_reb, espiga='inox'):
+    """Cabo de faca de espiga inteira: duas talas rebitadas com o aço aparecendo no meio."""
+    c = _curva(contorno, 2)
+    p = [planta(c, Y - 1.3, Y + 1.3, espiga)]
+    for s in (-1, 1):
+        a, b = sorted((Y + s * 1.3, Y + s * esp))
+        p.append(bevel(planta([(x * 0.992, z * 0.985) for (x, z) in c], a, b, mat), 2.4, 2))
+    reb = [cil((x, Y - esp - 0.25, z), (x, Y + esp + 0.25, z), r, mat_reb, n=12) for (x, z, r) in rebites]
+    return p, reb
+
+
+def faca_cozinha():
+    Y = 9.3
+    sec = []
+    for k in range(21):
+        x = 200.0 * k / 20
+        zs = -19.0 if x < 110 else -19.0 + 17.5 * ((x - 110) / 90.0) ** 2.2
+        ze = 25.0 if x < 60 else 25.0 - 26.0 * ((x - 60) / 140.0) ** 1.8
+        ze = max(ze, zs + 0.6)
+        sec.append((x, zs, zs + 0.72 * (ze - zs), ze, 2.3 * (1.0 - 0.62 * x / 200.0)))
+    sec[-1] = (200.0, -1.3, -1.25, -1.2, 0.3)                                                    # ponta fechada
+    lam = _gume(sec, 'aco_lamina', Y)
+    gola = bevel(caixa(-11, 1.5, Y - 8.6, Y + 8.6, -20.0, 9.0, 'inox'), 2.2, 2)                    # gola forjada entre a lâmina e o cabo
+    talas, reb = _cabo_faca([(-9, -19.4), (-9, 8.4), (-38, 9.5), (-78, 6.5), (-104, 8.5), (-121, 12.5), (-129, 6), (-129, -14), (-121, -20.6), (-60, -20)],
+                            Y, 9.0, 'plastico_preto', [(-31, -5, 3.3), (-66, -6.5, 3.3), (-101, -5, 3.3)], 'inox')
+    raiz = parte('cabo', talas, origem=G(0, 0, 0), grupo='A')
+    parte('lamina', [lam], origem=G(0, 0, 0), pai=raiz, grupo='A', suave=25)
+    parte('ferragem', [gola] + reb, origem=G(0, 0, 0), pai=raiz, grupo='A')
+    return raiz
+
+
+# ------------------------------------------------------------------ facão
+def facao():
+    Y = 10.6
+    sec = []
+    xs = [-124.0 + 424.0 * k / 12 for k in range(13)] + [312, 324, 336, 346, 355, 362, 367, 371, 373.5]
+    for x in xs:
+        zs = -19.0 - 3.0 * (x + 124) / 498.0
+        ze = 17.0 + 10.5 * min(1.0, (x + 124) / 424.0) if x <= 300 else 27.5 - 47.0 * ((x - 300) / 73.5) ** 2.0
+        ze = max(ze, zs + 0.8)
+        sec.append((x, zs, max(zs + 0.3, ze - 9.5), ze, 2.7 * (1.0 - 0.35 * (x + 124) / 498.0)))
+    lam = _gume(sec, 'aco_ferramenta', Y)
+
+    def zm(x):
+        return next((s[2] for s in sec if s[0] >= x - 1e-6), sec[-1][2])
+    pintar(lam, 'aco_lamina', lambda c, n: abs(n[1]) < 0.985 and -c[0] > zm(c[2]) - 12.0 and -c[0] > -8.0)   # chanfro do fio, amolado
+    talas, reb = _cabo_faca([(-118, -21.5), (-118, 17.5), (-158, 15), (-214, 16), (-246, 20.5), (-262, 28), (-273, 22), (-273, -12), (-262, -22), (-190, -20.5)],
+                            Y, 10.4, 'imbuia_x', [(-140, -2, 3.6), (-190, -2.5, 3.6), (-240, -1, 3.6)], 'latao', espiga='aco_ferramenta')
+    furo = lib.lathe([(0, 2.6), (0, 4.4), (21.4, 4.4), (21.4, 2.6)], 'latao', n=12, c0=G(-262, Y - 10.7, 12), eixo=G(0, 1, 0), anel=True)   # ilhós do cordão
+    raiz = parte('cabo', talas, origem=G(0, 0, 0), grupo='A')
+    parte('lamina', [lam], origem=G(0, 0, 0), pai=raiz, grupo='A', suave=25)
+    parte('ferragem', reb + [furo], origem=G(0, 0, 0), pai=raiz, grupo='A')
+    return raiz
+
+
 FORMAS = {'martelo': martelo, 'machado': machado, 'serrote': serrote, 'tabua': tabua, 'caixa_pregos': caixa_pregos,
-          'cano_metal': cano_metal, 'chapa_metal': chapa_metal, 'sucata_metal': sucata_metal}
+          'cano_metal': cano_metal, 'chapa_metal': chapa_metal, 'sucata_metal': sucata_metal,
+          'pa': pa, 'enxada': enxada, 'faca_cozinha': faca_cozinha, 'facao': facao}

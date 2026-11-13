@@ -124,7 +124,7 @@ def arquivo_aco():
     X, Z0, ZF, H = 235, -310, 300, 1330
     AC = 'aco_arquivo'
     c = bevel(caixa(-X, X, 30, H, Z0, ZF, AC), 3.0, seg=2)
-    vaos = [60 + k * 312 for k in range(4)][::-1]                           # gaveta_1 é a de cima
+    vaos = [60 + k * 312 for k in range(4)]      # gaveta_1 é a de baixo, como no antigo
     for y0 in vaos:
         cut(c, caixa(-X + 18, X - 18, y0, y0 + 296, Z0 + 18, ZF + 5, AC))
     p = [c, caixa(-X + 6, X - 6, 0, 30, Z0 + 10, ZF - 30, 'borracha', 2.0)]

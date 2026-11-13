@@ -264,6 +264,6 @@ dos antigos.
 | `estante_metal` | 1,03 × 1,90 × 0,43 m | 2,2 mil | 2 × 1024 | Estante de cantoneira furada com 5 prateleiras de chapa dobrada, travessas e sapatas; nó `carga` com caixas guardadas. |
 | `caixa_madeira` | 0,85 × 0,56 × 0,65 m | 4,0 mil | 2 × 1024 | Caixote de tábuas com frestas, sarrafos de reforço e pregos; `tampa` de tábuas levanta pela dobra de trás. |
 | `caixa_papelao` | 0,50 × 0,37 × 0,40 m | 0,7 mil | 1 × 1024 | Caixa de mudança com fita parda e cantos amassados; as quatro abas (`aba_esq`, `aba_dir`, `aba_frente`, `aba_tras`) abrem uma a uma. |
-| `arquivo_aco` | 0,47 × 1,33 × 0,65 m | 2,4 mil | 2 × 1024 | Arquivo de chapa com 4 gavetas ocas (`gaveta_1` em cima), puxador embutido, porta-etiqueta e fechadura. |
+| `arquivo_aco` | 0,47 × 1,33 × 0,65 m | 2,4 mil | 2 × 1024 | Arquivo de chapa com 4 gavetas ocas (`gaveta_1` embaixo, como no antigo), puxador embutido, porta-etiqueta e fechadura. |
 
 Classes novas: `aco_arquivo`, `aco_estante`, `fita_parda`. Refazer: `python3 moveis_realistas/deposito/gerar.py todas 2048 /tmp/saida`.

@@ -325,3 +325,16 @@ Refazer: `python3 moveis_realistas/diversos/gerar.py todas 2048 /tmp/saida`.
 
 Classes novas: `gondola_branca`, `etiqueta_amarela`, `laminado_branco`, `granito`, `armario_verde`, `cromo`, `vinil_vermelho`, `sacola`, `cedula_*`, `vidro_visor`.
 Refazer: `python3 moveis_realistas/loja/gerar.py todas 2048 /tmp/saida`.
+
+## Depósito, espera, biblioteca e hotel (`servicos/`: `pallet`, `banco_espera`, `estante_biblioteca`, `frigobar`)
+
+`servicos/materiais.py` encadeia `loja/materiais.py`; os livros usam o `_livro` de `sala/modelo.py`. Mesmo nó que abre do antigo (`porta` do frigobar).
+
+| id | medidas | triângulos | texturas | o que tem |
+|---|---|---|---|---|
+| `pallet` | 1,20 × 0,15 × 0,80 m | 3 mil | 1 × 1024 | Pallet de pinho cru: 3 tábuas de baixo, 9 tacos com carimbo HT, 7 tábuas de cima pregadas (uma partida e afundada no meio). |
+| `banco_espera` | 1,92 × 0,85 × 0,53 m | 2,8 mil | 1 × 1024 | Longarina de tubo grafite com pés em T e sapatas, 3 conchas de polipropileno azul aparafusadas, braços entre os lugares, senha e copo esquecidos. |
+| `estante_biblioteca` | 1,04 × 2,25 × 0,64 m | 10,6 mil | 2 × 1024 | Estante dupla face de nogueira com laterais almofadadas, cornija e placas de latão (HISTÓRIA / LITERATURA); livros dos dois lados com vãos de saque e pilhas deitadas. |
+| `frigobar` | 0,48 × 0,55 × 0,55 m | 3,9 mil | 2 × 1024 | Minibar de hotel folheado de nogueira com puxador e plaqueta de latão, caixa interna branca, prateleira de arame, latas, garrafas e chocolate; porta com gaxeta e garrafinhas; grade e compressor atrás. |
+
+Classes novas: `assento_azul`, `aco_banco`, `liner_branco`, `chocolate` (e `capa_*`, `papel_livro` repetidas da sala). Refazer: `python3 moveis_realistas/servicos/gerar.py todas 2048 /tmp/saida`.

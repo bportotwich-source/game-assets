@@ -30,7 +30,7 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Escrivaninha com luminária (`escrivaninha`) | 2 | Escritório | 1,20 × 1,19 × 0,62 | 4 espaços: livros, pilhas, remedios | gaveta_1, gaveta_2, gaveta_3, gaveta_centro | - | 2256 |
 | Berço (`berco`) | 2 | Quarto | 1,28 × 0,95 × 0,72 | 2 espaços: roupas, remedios | - | - | 4628 |
 | Máquina de lavar (`maquina_lavar`) | 2 | Lavanderia | 0,60 × 0,85 × 0,61 | 3 espaços: roupas, limpeza | gaveta_sabao, porta | barricada | 2340 |
-| Aquecedor a óleo (`aquecedor`) | 2 | Quarto | 0,51 × 0,60 × 0,29 | - | - | - | 6400 |
+| Aquecedor a óleo (`aquecedor`) | 2 | Quarto | 0,62 × 0,60 × 0,35 | - | - | - | 3688 |
 | Gôndola de supermercado (`gondola`) | 3 | Loja | 1,00 × 1,65 × 0,88 | 16 espaços: comida, agua, higiene, limpeza | - | - | 1568 |
 | Balcão de caixa com registradora (`balcao_caixa`) | 3 | Loja | 1,84 × 1,15 × 0,64 | 4 espaços: moedas, pilhas, remedios | gaveta_dinheiro | barricada | 1064 |
 | Freezer horizontal (`freezer_horizontal`) | 3 | Loja | 1,50 × 0,90 × 0,66 | 10 espaços: comida | tampa_esq, tampa_dir | - | 976 |
@@ -53,8 +53,8 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Fogueira de pedras (`fogueira`) | 5 | Abrigo | 0,88 × 0,45 × 0,85 | - | - | - | 8200 |
 | Colchão no chão (`colchao_chao`) | 5 | Abrigo | 1,41 × 0,27 × 2,19 | - | - | dormir | 3972 |
 | Caixa de papelão de mudança (`caixa_papelao`) | 5 | Depósito | 0,50 × 0,37 × 0,40 | 4 espaços: utensilios, roupas, materiais | aba_esq, aba_dir, aba_frente, aba_tras | - | 712 |
-| Lixeira de rua com rodas (`lixeira`) | 5 | Rua e quintal | 0,61 × 1,05 × 0,84 | 5 espaços: comida, utensilios, materiais | tampa | barricada | 3060 |
-| Mala de viagem (`mala_viagem`) | 5 | Quarto | 0,75 × 0,25 × 0,52 | 5 espaços: roupas, remedios, utensilios | tampa | - | 2696 |
+| Lixeira de rua com rodas (`lixeira`) | 5 | Rua e quintal | 0,62 × 1,04 × 0,88 | 5 espaços: comida, utensilios, materiais | tampa | barricada | 2816 |
+| Mala de viagem (`mala_viagem`) | 5 | Quarto | 0,76 × 0,29 × 0,47 | 5 espaços: roupas, remedios, utensilios | tampa | - | 2252 |
 | Pilha de sucata (`pilha_sucata`) | 5 | Rua e quintal | 1,70 × 0,59 × 1,64 | - | - | - | 4040 |
 | Toco de rachar lenha (`toco_lenha`) | 5 | Rua e quintal | 1,09 × 0,50 × 0,74 | - | - | - | 1668 |
 | Pichação "NÃO ENTRE" (`pichacao_nao_entre`) | 6 | Sinais do fim do mundo | 1,80 × 0,90 × 0,00 | - | - | - | 12 |
@@ -95,7 +95,7 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Tapete de sala (`tapete_sala`) | 7 | Vida de antes | 2,10 × 0,01 × 1,40 | - | - | - | 732 |
 | Vitrola com discos (`vitrola`) | 7 | Vida de antes | 1,04 × 0,74 × 0,51 | - | tampa | - | 824 |
 | Fruteira com frutas podres (`fruteira_podre`) | 7 | Vida de antes | 0,44 × 0,29 × 0,34 | - | - | - | 2956 |
-| Desenho de criança na parede (`desenho_crianca`) | 7 | Vida de antes | 0,30 × 0,23 × 0,00 | - | - | - | 24 |
+| Desenho de criança na parede (`desenho_crianca`) | 7 | Vida de antes | 0,30 × 0,23 × 0,00 | - | - | - | 1184 |
 | Pilha de livros no chão (`pilha_livros`) | 7 | Vida de antes | 0,51 × 0,26 × 0,39 | 2 espaços: livros | - | - | 448 |
 | Lampião a querosene (`lampiao`) | 8 | Abrigo | 0,19 × 0,33 × 0,15 | - | - | - | 1028 |
 | Cordão de luzes (`cordao_luzes`) | 8 | Abrigo | 3,01 × 0,32 × 0,10 | - | - | - | 2292 |

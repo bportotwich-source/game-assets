@@ -43,9 +43,9 @@ def lixeira():
     for k in range(4):                                                      # nervuras verticais na frente e nos lados
         x = -150 + k * 100
         p.append(perfil([(D0 - 2, 80), (D1 - 2, H - 70), (D1 + 10, H - 70), (D0 + 6, 80)], x - 9, x + 9, PV, 2.0))
-    p.append(perfil([(-D0 - 40, 0), (-D0 + 60, 0), (-D0 + 60, 210), (-D0 - 40, 210)], -W0 + 30, W0 - 30, PV, 8.0))   # caixa do eixo atrás
-    p.append(cil((-300, 100, -D0 - 10), (300, 100, -D0 - 10), 11, 'zincado', n=10))
-    p += _roda(-300, 100, -D0 - 10, 100, 55) + _roda(300, 100, -D0 - 10, 100, 55)
+    p.append(perfil([(-D0 - 40, 0), (-D0 + 60, 0), (-D0 + 60, 210), (-D0 - 40, 210)], -W0 + 70, W0 - 70, PV, 8.0))   # caixa do eixo atrás
+    p.append(cil((-245, 100, -D0 - 10), (245, 100, -D0 - 10), 11, 'zincado', n=10))
+    p += _roda(-245, 100, -D0 - 10, 100, 55) + _roda(245, 100, -D0 - 10, 100, 55)
     p.append(cil((-W1 + 20, H - 40, -D1 - 45), (W1 - 20, H - 40, -D1 - 45), 16, PV, n=12))   # alça de puxar
     for s in (-1, 1):
         p.append(caixa(s * (W1 - 40) - 15, s * (W1 - 40) + 15, H - 90, H - 30, -D1 - 50, -D1 + 5, PV, 4.0))

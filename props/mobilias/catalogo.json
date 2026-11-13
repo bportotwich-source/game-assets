@@ -191,12 +191,13 @@
    ],
    "arquivo": "mobilias/estante_metal.glb",
    "tamanho_m": [
-    1.02,
+    1.029,
     1.9,
-    0.42
+    0.429
    ],
-   "triangulos": 5264,
-   "kb": 250.2
+   "triangulos": 2244,
+   "kb": 447.0,
+   "gerador": "moveis_realistas/deposito/gerar.py"
   },
   {
    "id": "guarda_roupa",
@@ -560,25 +561,26 @@
    "barricada": true,
    "arquivo": "mobilias/caixa_madeira.glb",
    "tamanho_m": [
-    0.844,
-    0.562,
-    0.644
+    0.847,
+    0.563,
+    0.653
    ],
-   "triangulos": 1972,
-   "kb": 190.3,
+   "triangulos": 3972,
+   "kb": 785.2,
    "partes": [
     {
      "no": "tampa",
      "origem": [
       0,
       0.52,
-      -0.30200000000000005
+      -0.302
      ],
      "tipo": "tampa",
      "eixo": "x",
      "abre_graus": -105
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/deposito/gerar.py"
   },
   {
    "id": "armario_aereo",
@@ -1232,10 +1234,10 @@
    "tamanho_m": [
     0.47,
     1.33,
-    0.645
+    0.649
    ],
-   "triangulos": 1000,
-   "kb": 48.4,
+   "triangulos": 2440,
+   "kb": 568.5,
    "partes": [
     {
      "no": "gaveta_1",
@@ -1293,7 +1295,8 @@
       0.45
      ]
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/deposito/gerar.py"
   },
   {
    "id": "armario_vestiario",
@@ -1939,11 +1942,11 @@
    "arquivo": "mobilias/caixa_papelao.glb",
    "tamanho_m": [
     0.502,
-    0.366,
-    0.401
+    0.367,
+    0.4
    ],
-   "triangulos": 208,
-   "kb": 41.0,
+   "triangulos": 712,
+   "kb": 180.7,
    "partes": [
     {
      "no": "aba_esq",
@@ -1989,7 +1992,8 @@
      "eixo": "x",
      "abre_graus": -205
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/deposito/gerar.py"
   },
   {
    "id": "lixeira",

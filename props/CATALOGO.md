@@ -9,7 +9,7 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Geladeira duplex (`geladeira`) | 1 | Cozinha | 0,70 × 1,76 × 0,71 | 12 espaços: comida, agua, remedios | porta_geladeira, porta_freezer | barricada | 4232 |
 | Fogão 4 bocas (`fogao`) | 1 | Cozinha | 0,56 × 0,98 × 0,65 | 4 espaços: comida, utensilios | gaveta, porta_forno | - | 8112 |
 | Balcão com pia (`balcao_pia`) | 1 | Cozinha | 1,22 × 1,19 × 0,63 | 6 espaços: utensilios, limpeza, ferramentas | porta_esq, porta_dir | - | 3912 |
-| Estante de aço (5 prateleiras) (`estante_metal`) | 1 | Depósito | 1,02 × 1,90 × 0,42 | 10 espaços: ferramentas, materiais, comida | - | - | 5264 |
+| Estante de aço (5 prateleiras) (`estante_metal`) | 1 | Depósito | 1,03 × 1,90 × 0,43 | 10 espaços: ferramentas, materiais, comida | - | - | 2244 |
 | Guarda-roupa de 2 portas (`guarda_roupa`) | 1 | Quarto | 1,05 × 2,00 × 0,61 | 10 espaços: roupas, tecido, mochila | porta_esq, porta_dir, gaveta | barricada | 9912 |
 | Cômoda de 3 gavetas (`comoda`) | 1 | Quarto | 0,93 × 0,85 × 0,47 | 6 espaços: roupas, remedios, pilhas | gaveta_1, gaveta_2, gaveta_3 | - | 9496 |
 | Criado-mudo (`criado_mudo`) | 1 | Quarto | 0,47 × 0,56 × 0,42 | 3 espaços: remedios, pilhas, livros | gaveta | - | 3956 |
@@ -19,7 +19,7 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Cadeira de madeira (`cadeira`) | 1 | Sala | 0,42 × 0,93 × 0,45 | - | - | sentar | 3400 |
 | Sofá 3 lugares (`sofa`) | 1 | Sala | 1,93 × 0,88 × 0,86 | 2 espaços: moedas, pilhas | - | barricada, dormir, sentar | 9692 |
 | Armário de banheiro com espelho (`armario_banheiro`) | 1 | Banheiro | 0,52 × 0,70 × 0,18 | 4 espaços: remedios, higiene | porta_espelho | - | 1432 |
-| Caixote de madeira (`caixa_madeira`) | 1 | Depósito | 0,84 × 0,56 × 0,64 | 8 espaços: comida, materiais, ferramentas, armas | tampa | barricada | 1972 |
+| Caixote de madeira (`caixa_madeira`) | 1 | Depósito | 0,85 × 0,56 × 0,65 | 8 espaços: comida, materiais, ferramentas, armas | tampa | barricada | 3972 |
 | Armário aéreo de cozinha (`armario_aereo`) | 2 | Cozinha | 0,82 × 0,64 × 0,38 | 6 espaços: comida, utensilios | porta_esq, porta_dir | - | 2108 |
 | Pia de coluna (`pia_banheiro`) | 2 | Banheiro | 0,54 × 0,99 × 0,45 | - | - | - | 2104 |
 | Vaso sanitário com caixa (`vaso_sanitario`) | 2 | Banheiro | 0,40 × 0,80 × 0,79 | 1 espaços: remedios, moedas | assento, tampa_caixa | - | 2274 |
@@ -36,7 +36,7 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Freezer horizontal (`freezer_horizontal`) | 3 | Loja | 1,50 × 0,90 × 0,66 | 10 espaços: comida | tampa_esq, tampa_dir | - | 976 |
 | Prateleira de pães (`prateleira_padaria`) | 3 | Loja | 1,22 × 1,63 × 0,52 | 6 espaços: comida | - | - | 12560 |
 | Mesa de escritório (`mesa_escritorio`) | 3 | Escritório | 1,40 × 1,14 × 0,73 | 3 espaços: pilhas, livros, moedas | gaveta | - | 952 |
-| Arquivo de aço 4 gavetas (`arquivo_aco`) | 3 | Escritório | 0,47 × 1,33 × 0,65 | 6 espaços: livros, mapas, moedas | gaveta_1, gaveta_2, gaveta_3, gaveta_4 | barricada | 1000 |
+| Arquivo de aço 4 gavetas (`arquivo_aco`) | 3 | Escritório | 0,47 × 1,33 × 0,65 | 6 espaços: livros, mapas, moedas | gaveta_1, gaveta_2, gaveta_3, gaveta_4 | barricada | 2440 |
 | Armário de vestiário (3 portas) (`armario_vestiario`) | 3 | Escritório | 0,90 × 1,85 × 0,52 | 9 espaços: roupas, mochila, armas, remedios | porta_1, porta_2, porta_3 | barricada | 984 |
 | Maca hospitalar (`maca`) | 3 | Saúde | 0,75 × 1,90 × 1,93 | - | - | dormir | 2300 |
 | Carrinho de compras (`carrinho_compras`) | 3 | Loja | 0,56 × 1,02 × 1,00 | 6 espaços: comida | - | barricada | 1544 |
@@ -52,7 +52,7 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Alarme de latas (`alarme_latas`) | 5 | Barricadas e alarmes | 1,06 × 0,79 × 0,11 | - | - | - | 3140 |
 | Fogueira de pedras (`fogueira`) | 5 | Abrigo | 0,88 × 0,45 × 0,85 | - | - | - | 8200 |
 | Colchão no chão (`colchao_chao`) | 5 | Abrigo | 1,41 × 0,27 × 2,19 | - | - | dormir | 3972 |
-| Caixa de papelão de mudança (`caixa_papelao`) | 5 | Depósito | 0,50 × 0,37 × 0,40 | 4 espaços: utensilios, roupas, materiais | aba_esq, aba_dir, aba_frente, aba_tras | - | 208 |
+| Caixa de papelão de mudança (`caixa_papelao`) | 5 | Depósito | 0,50 × 0,37 × 0,40 | 4 espaços: utensilios, roupas, materiais | aba_esq, aba_dir, aba_frente, aba_tras | - | 712 |
 | Lixeira de rua com rodas (`lixeira`) | 5 | Rua e quintal | 0,61 × 1,05 × 0,84 | 5 espaços: comida, utensilios, materiais | tampa | barricada | 3060 |
 | Mala de viagem (`mala_viagem`) | 5 | Quarto | 0,75 × 0,25 × 0,52 | 5 espaços: roupas, remedios, utensilios | tampa | - | 2696 |
 | Pilha de sucata (`pilha_sucata`) | 5 | Rua e quintal | 1,70 × 0,59 × 1,64 | - | - | - | 4040 |

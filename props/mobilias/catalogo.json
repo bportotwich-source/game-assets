@@ -36,10 +36,10 @@
    "tamanho_m": [
     0.7,
     1.762,
-    0.71
+    0.713
    ],
-   "triangulos": 1780,
-   "kb": 92.3,
+   "triangulos": 4232,
+   "kb": 818.3,
    "partes": [
     {
      "no": "porta_geladeira",
@@ -63,7 +63,8 @@
      "eixo": "y",
      "abre_graus": 110
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/cozinha/gerar.py"
   },
   {
    "id": "fogao",
@@ -85,10 +86,10 @@
    "tamanho_m": [
     0.56,
     0.98,
-    0.637
+    0.654
    ],
-   "triangulos": 4784,
-   "kb": 232.4,
+   "triangulos": 8112,
+   "kb": 1075.4,
    "partes": [
     {
      "no": "gaveta",
@@ -109,13 +110,14 @@
      "origem": [
       0,
       0.17,
-      0.30000000000000004
+      0.3
      ],
      "tipo": "porta",
      "eixo": "x",
      "abre_graus": 85
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/cozinha/gerar.py"
   },
   {
    "id": "balcao_pia",

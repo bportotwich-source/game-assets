@@ -224,7 +224,7 @@ Poltrona e sofá saem de `_estofado(W, H, D, lugares)`, com `_fofo` (almofadão 
 Classes novas: `estofado_verde` (gasto no meio do assento), `estofado_mostarda` (desbotado e encardido), `capa_1..6`, `papel_livro`, `tacha`. Os livros saem de `_livro` e `_por`
 com semente fixa. Refazer: `python3 moveis_realistas/sala/gerar.py todas 2048 /tmp/saida`.
 
-## Móveis de casa: cozinha (`cozinha/`: `balcao_pia`, `armario_aereo`)
+## Móveis de casa: cozinha (`cozinha/`: `balcao_pia`, `armario_aereo`, `geladeira`, `fogao`)
 
 Armários de madeira pintada de creme (`cozinha/materiais.py` encadeia `quarto/materiais.py`), com as mesmas dobradiças
 e os mesmos nós `porta_esq` e `porta_dir` dos antigos.
@@ -233,6 +233,9 @@ e os mesmos nós `porta_esq` e `porta_dir` dos antigos.
 |---|---|---|---|---|
 | `balcao_pia` | 1,22 × 1,19 × 0,63 m | 3,9 mil | corpo 2048, portas 1024 | Carcaça com prateleira e rodapé recuado, tampo de granito escuro com frontão, cuba de inox encaixada com ralo, torneira de bica alta e dois registros. Nós: `corpo`, `tampo`, `torneira`, `porta_esq`, `porta_dir`. |
 | `armario_aereo` | 0,82 × 0,64 × 0,38 m | 2,1 mil | 2 × 1024 | Carcaça com prateleira, cimalha e duas portas de moldura com puxador de alça. |
+| `geladeira` | 0,70 × 1,76 × 0,71 m | 4,2 mil | corpo 2048, portas 1024 | Duplex de chapa esmaltada de quina redonda: vãos forrados de plástico, prateleiras de arame, gaveta de legumes, termostato; portas `porta_geladeira` e `porta_freezer` com forro, prateleiras, borracha e puxador em pé. |
+| `fogao` | 0,56 × 0,98 × 0,65 m | 8,1 mil | corpo 2048, porta e gaveta 1024 | Mesa de inox com quatro bocas e grades de ferro, espelho atrás, cinco botões, forno com grade; `porta_forno` com visor de vidro escuro abre para baixo e `gaveta` de panelas desliza. |
 
-Classes novas: `tinta_creme` (amarelada de gordura, escorridos, lascada nas quinas), `pedra_pia` (granito de pintas), `ralo`.
+Classes novas: `tinta_creme` (amarelada de gordura, escorridos, lascada nas quinas), `pedra_pia` (granito de pintas), `ralo`,
+`esmalte_cozinha` (chapa branca encardida, ferrugem nas quinas), `liner`, `esmalte_forno`, `ferro_grade`, `baquelite`, `vidro_forno`.
 As portas saem de `_porta` e a caixa de `_carcaca`. Refazer: `python3 moveis_realistas/cozinha/gerar.py todas 2048 /tmp/saida`.

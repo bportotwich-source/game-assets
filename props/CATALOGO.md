@@ -6,8 +6,8 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 
 | Item | Lote | Cômodo | Medidas | Revistar | Partes móveis | Uso no jogo | Triângulos |
 |---|---|---|---|---|---|---|---|
-| Geladeira duplex (`geladeira`) | 1 | Cozinha | 0,70 × 1,76 × 0,71 | 12 espaços: comida, agua, remedios | porta_geladeira, porta_freezer | barricada | 1780 |
-| Fogão 4 bocas (`fogao`) | 1 | Cozinha | 0,56 × 0,98 × 0,64 | 4 espaços: comida, utensilios | gaveta, porta_forno | - | 4784 |
+| Geladeira duplex (`geladeira`) | 1 | Cozinha | 0,70 × 1,76 × 0,71 | 12 espaços: comida, agua, remedios | porta_geladeira, porta_freezer | barricada | 4232 |
+| Fogão 4 bocas (`fogao`) | 1 | Cozinha | 0,56 × 0,98 × 0,65 | 4 espaços: comida, utensilios | gaveta, porta_forno | - | 8112 |
 | Balcão com pia (`balcao_pia`) | 1 | Cozinha | 1,22 × 1,19 × 0,63 | 6 espaços: utensilios, limpeza, ferramentas | porta_esq, porta_dir | - | 3912 |
 | Estante de aço (5 prateleiras) (`estante_metal`) | 1 | Depósito | 1,02 × 1,90 × 0,42 | 10 espaços: ferramentas, materiais, comida | - | - | 5264 |
 | Guarda-roupa de 2 portas (`guarda_roupa`) | 1 | Quarto | 1,05 × 2,00 × 0,61 | 10 espaços: roupas, tecido, mochila | porta_esq, porta_dir, gaveta | barricada | 9912 |

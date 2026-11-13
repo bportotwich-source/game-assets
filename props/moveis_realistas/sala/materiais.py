@@ -13,6 +13,7 @@ CAPAS = [(0.230, 0.030, 0.028), (0.030, 0.075, 0.150), (0.040, 0.110, 0.060), (0
 # classe: cor base, rugosidade, metal, cor gasta, rug. gasta, metal gasto, quanto desgaste, grão, sujeira
 texturas.CLASSES.update({
     'estofado_verde': quarto._pano_cls((0.070, 0.115, 0.075)),
+    'estofado_mostarda': quarto._pano_cls((0.200, 0.120, 0.040)),
     'papel_livro':    ((0.560, 0.500, 0.370), 0.86, 0.0, (0.560, 0.500, 0.370), 0.86, 0.0, 0.0, 0.60, 1.4),
     'tacha':          ((0.380, 0.250, 0.080), 0.40, 1.0, (0.700, 0.520, 0.220), 0.28, 1.0, 0.80, 0.30, 1.2),
 })
@@ -28,6 +29,17 @@ def _estofado(nt, pos, S, nome):
     gasto = _math(nt, 'MULTIPLY', _math(nt, 'SUBTRACT', 1.0, _smooth(nt, _math(nt, 'ADD', r, _math(nt, 'MULTIPLY', _noise(nt, pos, 14.0, 3.0, 0.6), 0.10)), 0.08, 0.22)), 0.45)
     S['cor'] = _mix(nt, gasto, S['cor'], (0.200, 0.220, 0.160))
     po = _math(nt, 'MULTIPLY', quarto._cima(nt), 0.22)
+    S['cor'] = _mix(nt, po, S['cor'], (0.300, 0.270, 0.230))
+
+
+def _estofado_grande(nt, pos, S, nome):
+    """Tecido de poltrona e sofá: trama, desbotado em manchas largas, encardido, e poeira nas faces de cima."""
+    forja.VELHO['pano_cru'](nt, pos, S, nome)
+    f = _math(nt, 'MULTIPLY', _smooth(nt, _noise(nt, pos, 5.0, 3.0, 0.6), 0.42, 0.72), 0.40)
+    S['cor'] = _mix(nt, f, S['cor'], (0.300, 0.230, 0.130))
+    suj = _math(nt, 'MULTIPLY', _smooth(nt, _noise(nt, pos, 11.0, 4.0, 0.7), 0.55, 0.80), 0.35)
+    S['cor'] = _mix(nt, suj, S['cor'], (0.070, 0.050, 0.030))
+    po = _math(nt, 'MULTIPLY', quarto._cima(nt), 0.20)
     S['cor'] = _mix(nt, po, S['cor'], (0.300, 0.270, 0.230))
 
 
@@ -54,4 +66,4 @@ def _papel(nt, pos, S, nome):
     S['cor'] = _mix(nt, po, S['cor'], (0.330, 0.300, 0.260))
 
 
-forja.VELHO.update(estofado_verde=_estofado, papel_livro=_papel, **{f'capa_{i + 1}': _capa for i in range(len(CAPAS))})
+forja.VELHO.update(estofado_verde=_estofado, estofado_mostarda=_estofado_grande, papel_livro=_papel, **{f'capa_{i + 1}': _capa for i in range(len(CAPAS))})

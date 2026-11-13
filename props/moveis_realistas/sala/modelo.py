@@ -168,4 +168,119 @@ def estante_livros():
     parte('livros', liv, origem=G(0, 0, 0), grupo='B')
 
 
-FORMAS = {'cadeira': cadeira, 'mesa_jantar': mesa_jantar, 'estante_livros': estante_livros}
+# ------------------------------------------------------------------ poltrona e sofá
+EST = 'estofado_mostarda'
+
+
+def _liso(o):
+    for f in o.data.polygons:
+        f.use_smooth = True
+    return o
+
+
+def _fofo(x0, x1, y0, y1, z0, z1, mat=EST, r=30.0, bojo=10.0, eixo='y', cortes=7, semente=0.0):
+    """Almofadão: caixa de quinas bem redondas, estufada no meio da face `eixo` ('y' em cima, 'z' na frente) e um pouco amassada."""
+    import bmesh
+    from mathutils import noise, Vector
+    o = caixa(x0, x1, y0, y1, z0, z1, mat)
+    bm = bmesh.new()
+    bm.from_mesh(o.data)
+    bmesh.ops.subdivide_edges(bm, edges=bm.edges[:], cuts=cortes, use_grid_fill=True)
+    bm.to_mesh(o.data)
+    bm.free()
+    xm, ym, zm = (x0 + x1) / 2, (y0 + y1) / 2, (z0 + z1) / 2
+    hx, hy, hz = (x1 - x0) / 2, (y1 - y0) / 2, (z1 - z0) / 2
+    r = min(r, hx, hy, hz)
+
+    n = cortes + 1
+
+    def grade(t, a, b):
+        """Aperta as fileiras da grade nas quinas, para o arredondado ter três passos em vez de um chanfro."""
+        if n < 6:
+            return t
+        i = int(round((t - a) / (b - a) * n))
+        if i <= 2:
+            return a + (0.0, 0.35 * r, r)[i]
+        if i >= n - 2:
+            return b - (0.0, 0.35 * r, r)[n - i]
+        return a + r + (b - a - 2 * r) * (i - 2) / (n - 4)
+
+    def f(x, y, z):
+        x, y, z = grade(x, x0, x1), grade(y, y0, y1), grade(z, z0, z1)
+        u, v, w = (x - xm) / hx, (y - ym) / hy, (z - zm) / hz
+        cx, cy, cz = min(max(x, x0 + r), x1 - r), min(max(y, y0 + r), y1 - r), min(max(z, z0 + r), z1 - r)
+        dx, dy, dz = x - cx, y - cy, z - cz
+        L = math.sqrt(dx * dx + dy * dy + dz * dz)
+        if L > 1e-6:
+            x, y, z = cx + dx / L * r, cy + dy / L * r, cz + dz / L * r
+        ruga = noise.noise(Vector((x / 160.0 + semente, y / 160.0, z / 160.0 - semente))) * bojo * 0.35
+        if eixo == 'y':
+            g = (1 - u * u) * (1 - w * w)
+            if v > 0:
+                y += (bojo * g + ruga * g) * v
+        else:
+            g = (1 - u * u) * (1 - v * v)
+            if w > 0:
+                z += (bojo * g + ruga * g) * w
+        return x, y, z
+    return _liso(_mover(o, f))
+
+
+def _braco(s, W, D, ya, y0=95):
+    """Braço de rolo: corpo reto e o rolo em cima, numa peça só; tachas contornando a frente. s = -1 esquerdo, 1 direito."""
+    cx, cy, R = W / 2 - 85, ya - 85, 85
+    pts = [(cx - 60, y0), (cx + 75, y0)]
+    a0, a1 = -28.0, 225.0
+    n = 16
+    arco = [(cx + R * math.cos(math.radians(a0 + (a1 - a0) * k / n)), cy + R * math.sin(math.radians(a0 + (a1 - a0) * k / n))) for k in range(n + 1)]
+    pts += arco
+    zf = D / 2 - 6
+    o = frente([(s * x, y) for x, y in pts][::s], -D / 2 + 25, zf, EST, 0)
+    bevel(o, 14.0, seg=3, ang=50)
+    _liso(o)
+    p = [o]
+    # tachas na frente: acompanham o rolo e descem pelos dois lados
+    linha = [(cx + (R - 20) * math.cos(math.radians(a)), cy + (R - 20) * math.sin(math.radians(a))) for a in range(-20, 221, 20)]
+    linha += [(cx + 57, y) for y in range(int(cy) - 70, y0 + 20, -48)] + [(cx - 42, y) for y in range(int(cy) - 90, y0 + 20, -48)]
+    for x, y in linha:
+        p.append(_torno([(0, 0), (5.5, 0), (4.5, 2.2), (0, 3.4)], 'tacha', s * x, y, zf - 0.3, n=8, eixo=(0, 0, 1)))
+    return p
+
+
+def _estofado(W, H, D, lugares):
+    """Poltrona ou sofá de braço de rolo: base, braços, encosto deitado, almofadas soltas e pés de madeira."""
+    YB, YS = 95, 300                      # embaixo da base, em cima da base (onde assentam as almofadas)
+    ya = min(620, H - 300)                # topo dos braços
+    K = 0.065                             # quanto o encosto deita
+    xi = W / 2 - 172                      # vão entre os braços
+    p = [_fofo(-W / 2 + 30, W / 2 - 30, YB, YS, -D / 2 + 30, D / 2 - 12, r=16, bojo=0, cortes=5)]
+    for s in (-1, 1):
+        p += _braco(s, W, D, ya, YB)
+    enc = _fofo(-W / 2 + 150, W / 2 - 150, YS - 60, H, -D / 2 + 45, -D / 2 + 165, r=45, bojo=0, cortes=9)
+    p.append(_inclinar(enc, YS, K))
+    lw = 2 * xi / lugares
+    for k in range(lugares):
+        x0, x1 = -xi + k * lw + 3, -xi + (k + 1) * lw - 3
+        p.append(_fofo(x0, x1, YS - 4, YS + 140, -D / 2 + 160, D / 2, r=36, bojo=32, semente=k * 3.1))                   # assento
+        c = _fofo(x0 + 2, x1 - 2, YS + 128, H - 60, -D / 2 + 150, -D / 2 + 290, r=48, bojo=40, eixo='z', semente=7 + k * 2.3)   # encosto
+        p.append(_inclinar(c, YS, K))
+    parte('estofado', p, origem=G(0, 0, 0), grupo='A')
+    pes = []
+    for s in (-1, 1):
+        pes.append(_torno([(0, 0), (22, 0), (27, 8), (30, 30), (26, 52), (30, 62), (36, 76), (36, YB + 2), (0, YB + 2)], N + 'y', s * (W / 2 - 80), 0, D / 2 - 75, n=16))
+        pes.append(perfil([(-D / 2 + 20, 0), (-D / 2 + 62, 0), (-D / 2 + 100, YB + 2), (-D / 2 + 45, YB + 2)], min(s * (W / 2 - 105), s * (W / 2 - 55)), max(s * (W / 2 - 105), s * (W / 2 - 55)), N + 'y', 3.0))
+    if lugares > 1:                       # sofá: mais um par de pés no meio
+        pes.append(_torno([(0, 0), (22, 0), (27, 8), (30, 30), (26, 52), (30, 62), (36, 76), (36, YB + 2), (0, YB + 2)], N + 'y', 0, 0, D / 2 - 75, n=16))
+        pes.append(perfil([(-D / 2 + 20, 0), (-D / 2 + 62, 0), (-D / 2 + 100, YB + 2), (-D / 2 + 45, YB + 2)], -25, 25, N + 'y', 3.0))
+    parte('pes', pes, origem=G(0, 0, 0), grupo='A')
+
+
+def poltrona():
+    _estofado(870, 980, 850, 1)
+
+
+def sofa():
+    _estofado(1930, 880, 870, 3)
+
+
+FORMAS = {'cadeira': cadeira, 'mesa_jantar': mesa_jantar, 'estante_livros': estante_livros, 'poltrona': poltrona, 'sofa': sofa}

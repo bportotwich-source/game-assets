@@ -215,11 +215,12 @@
    "arquivo": "loot/kit_medico.glb",
    "tamanho_m": [
     0.26,
-    0.094,
-    0.198
+    0.095,
+    0.222
    ],
-   "triangulos": 328,
-   "kb": 18.0
+   "triangulos": 1715,
+   "kb": 228.3,
+   "gerador": "itens_realistas/remedios/gerar.py"
   },
   {
    "id": "frasco_remedio",
@@ -245,8 +246,12 @@
     0.084,
     0.046
    ],
-   "triangulos": 944,
-   "kb": 77.9
+   "triangulos": 2727,
+   "kb": 225.3,
+   "gerador": "itens_realistas/remedios/gerar.py",
+   "estados": {
+    "ervas": "loot/remedio_ervas.glb"
+   }
   },
   {
    "id": "atadura",
@@ -268,12 +273,13 @@
    "efeito": "para sangramento",
    "arquivo": "loot/atadura.glb",
    "tamanho_m": [
-    0.08,
+    0.078,
     0.061,
-    0.075
+    0.068
    ],
-   "triangulos": 844,
-   "kb": 99.9
+   "triangulos": 2976,
+   "kb": 286.3,
+   "gerador": "itens_realistas/remedios/gerar.py"
   },
   {
    "id": "martelo",
@@ -1099,8 +1105,9 @@
     0.018,
     0.024
    ],
-   "triangulos": 592,
-   "kb": 31.9
+   "triangulos": 768,
+   "kb": 107.3,
+   "gerador": "itens_realistas/remedios/gerar.py"
   },
   {
    "id": "mascara",
@@ -1148,12 +1155,13 @@
    "efeito": "sutura ferimentos; conserta roupas e mochilas",
    "arquivo": "loot/kit_costura.glb",
    "tamanho_m": [
-    0.226,
-    0.051,
-    0.154
+    0.228,
+    0.047,
+    0.156
    ],
-   "triangulos": 1280,
-   "kb": 193.8
+   "triangulos": 4566,
+   "kb": 688.3,
+   "gerador": "itens_realistas/remedios/gerar.py"
   },
   {
    "id": "bateria_carro",
@@ -2940,12 +2948,13 @@
    "efeito": "desinfeta ferimento, acende fogo, combustível da lamparina e do molotov",
    "arquivo": "loot/alcool.glb",
    "tamanho_m": [
-    0.09,
+    0.088,
     0.214,
-    0.06
+    0.058
    ],
-   "triangulos": 312,
-   "kb": 49.0
+   "triangulos": 1669,
+   "kb": 116.4,
+   "gerador": "itens_realistas/remedios/gerar.py"
   },
   {
    "id": "pedra_amolar",
@@ -3262,12 +3271,13 @@
    },
    "arquivo": "loot/curativo_improvisado.glb",
    "tamanho_m": [
-    0.137,
-    0.038,
-    0.085
+    0.136,
+    0.044,
+    0.089
    ],
-   "triangulos": 1734,
-   "kb": 135.7
+   "triangulos": 2740,
+   "kb": 244.2,
+   "gerador": "itens_realistas/remedios/gerar.py"
   },
   {
    "id": "tala_improvisada",
@@ -3300,12 +3310,13 @@
    },
    "arquivo": "loot/tala_improvisada.glb",
    "tamanho_m": [
-    0.42,
-    0.046,
-    0.126
+    0.416,
+    0.049,
+    0.125
    ],
-   "triangulos": 1952,
-   "kb": 225.7
+   "triangulos": 1988,
+   "kb": 586.3,
+   "gerador": "itens_realistas/remedios/gerar.py"
   },
   {
    "id": "armadilha_laco",

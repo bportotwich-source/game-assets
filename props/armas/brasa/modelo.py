@@ -258,14 +258,16 @@ def cartucho(c0, mat='laca_verde'):
             lathe([(38.4, 0), (38.4, 3.9), (43, 3.9), (50.5, 3.3), (54.5, 1.8), (56.2, 0.5), (56.3, 0)], 'cobre', n=18, c0=c0)]
 
 
-def carregador(grade=False):
+def carregador(grade=False, arco=200.0, base=True, mat=None):
     """Carregador curvo de aço de 30: nervura comprida estampada de cada lado, costura atrás,
     gancho na frente, trava atrás, chapa de base e um cartucho à vista.
-    grade=True: de polímero, com quadros rebaixados dos lados (o do fuzil tático)."""
-    ACO = POLIM if grade else globals()['ACO']
+    grade=True: de polímero, com quadros rebaixados dos lados (o do fuzil tático).
+    arco = comprimento do corpo pela curva (mm; o de 40 é mais comprido), base=False sem a chapa
+    de base (torre do tambor), mat troca o material do corpo."""
+    ACO = mat or (POLIM if grade else globals()['ACO'])
     R, G = 240.0, 28.0
     cx, cy = CAR_U + R, CAR_V
-    fi = 200.0 / R
+    fi = arco / R
     th = [math.pi + fi * i / 48 for i in range(49)]
     em = lambda r, t: (cx + r * math.cos(t), cy + r * math.sin(t))
     perfil = Polygon([em(R - G, t) for t in th] + [em(R + G, t) for t in th[::-1]]).buffer(0)
@@ -277,7 +279,7 @@ def carregador(grade=False):
         a, b = lados(s, 9.7, 14)
         cs.append(box(CAR_U - G - 2, CAR_U + G + 2, CAR_V - 1.5, CAR_V + 20, a, b, ACO))
     if grade:                                                                                 # quadros rebaixados (grade)
-        nl = 6
+        nl = max(1, round(6 * arco / 200.0))
         dt = (fi - 0.10) / nl
         for s in (-1, 1):
             a, b = lados(s, 9.9, 14)
@@ -308,9 +310,11 @@ def carregador(grade=False):
     b0 = (cx + R * c_, cy + R * s_)
     d, nn = (c_, s_), (-s_, c_)                                                               # ao longo da base (para trás) e para fora (para baixo)
     pt = lambda a, b: (b0[0] + d[0] * a + nn[0] * b, b0[1] + d[1] * a + nn[1] * b)
-    base = arred([pt(-G - 2.5, -1.5), pt(G + 2.5, -1.5), pt(G + 3.2, 4.2), pt(-G - 3.2, 4.2)], 1.5, 4)
-    o.append(bevel(solido(base, -12.9, 12.9, ACO), 0.8, 2, 40))
-    o.append(lathe([(0, 3.2), (1.4, 3.2), (1.9, 2.4), (1.9, 0)], 'fosf', n=14, c0=(*pt(-6, 4.2), 0), eixo=(nn[0], nn[1], 0)))   # botão da base
+    base_ = arred([pt(-G - 2.5, -1.5), pt(G + 2.5, -1.5), pt(G + 3.2, 4.2), pt(-G - 3.2, 4.2)], 1.5, 4)
+    if base:
+        o.append(bevel(solido(base_, -12.9, 12.9, ACO), 0.8, 2, 40))
+    if base:
+        o.append(lathe([(0, 3.2), (1.4, 3.2), (1.9, 2.4), (1.9, 0)], 'fosf', n=14, c0=(*pt(-6, 4.2), 0), eixo=(nn[0], nn[1], 0)))   # botão da base
     for s in (-1, 1):                                                                         # lábios
         a, b = lados(s, 4.6, 8.0)
         o.append(box(CAR_U - G + 3, CAR_U + G - 6, CAR_V + 7.0, CAR_V + 11.4, a, b, globals()['ACO']))

@@ -15,7 +15,9 @@ PROPS = os.path.dirname(os.path.dirname(AQUI))
 GERADOR = 'itens_realistas/ferramentas/gerar.py'
 TEXTURA = {'martelo': 512, 'machado': 1024, 'serrote': 1024, 'tabua': 1024, 'caixa_pregos': 512,
            'cano_metal': 512, 'chapa_metal': 1024, 'sucata_metal': 512,
-           'pa': 1024, 'enxada': 1024, 'faca_cozinha': 512, 'facao': 1024}   # lado da textura no GLB
+           'pa': 1024, 'enxada': 1024, 'faca_cozinha': 512, 'facao': 1024,
+           'pe_de_cabra': 1024, 'chave_inglesa': 512, 'faca_pedra': 512, 'lamina_forjada': 512}   # lado da textura no GLB
+SO_GLB = {'faca_pedra', 'lamina_forjada'}
 
 
 def medir(arq):
@@ -52,6 +54,9 @@ def gerar(forma, res=1024, saida=os.path.join(AQUI, 'saida')):
     arq = os.path.join(PROPS, 'loot', f'{forma}.glb')
     empacotar.main(os.path.join(pasta, f'{forma}_sem_tex.glb'), tex, arq, 'webp')
     tam, tris = medir(arq)
+    if forma in SO_GLB:                 # item que só existe no jogo (itens_extra.json): grava o GLB, sem registro no catálogo
+        print(f"{forma} {tris} tris {round(os.path.getsize(arq) / 1024, 1)} KB {tam}")
+        return
     arq_cat = os.path.join(PROPS, 'loot', 'catalogo.json')
     cat = json.load(open(arq_cat, encoding='utf-8'))
     r = next(x for x in cat['itens'] if x['id'] == forma)

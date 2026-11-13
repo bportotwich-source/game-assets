@@ -51,6 +51,9 @@ desenho próprio, sem marcas, com os dizeres em português:
 | Carne crua embrulhada | `carne_crua` | bife com capa de gordura e marmoreio sobre o papel de açougue aberto |
 | Carne defumada | `carne_defumada` | peça escura amarrada com barbante em gomos, ponta cortada e laço de pendurar |
 | Cesto de legumes | `cesto_legumes` | cesto de vime com alça trançada e forro de pano, alface, tomates e cenouras com rama |
+| Peixe fresco | `peixe_cru` | peixe inteiro deitado, dorso escuro, barriga clara, nadadeiras, olho e guelra (item só do jogo) |
+| Peixe assado | `peixe_assado` | o mesmo peixe tostado, com as marcas da grelha (item só do jogo) |
+| Carne assada | `carne_assada` | bife tostado com marcas de grelha, capa de gordura dourada e osso (item só do jogo) |
 
 ```
 python3 comida/ver.py formas.png lata_feijao             # confere as formas, sem assar
@@ -99,6 +102,10 @@ Ferramentas e materiais de craft, no mesmo tamanho, posição e ponto de pega do
 | Enxada | `enxada` | olho forjado com nervura, lâmina fechada para o lado do cabo, fio amolado; deitada apoia na quina da lâmina |
 | Faca de cozinha | `faca_cozinha` | lâmina de chef afinando até o fio, gola forjada, talas pretas com três rebites e a espiga aparecendo |
 | Facão | `facao` | lâmina larga na ponta com chanfro amolado, talas de madeira escura, rebites de latão e ilhós do cordão |
+| Pé de cabra | `pe_de_cabra` | barra sextavada pintada de azul, pescoço de ganso com unha fendida e ponta em cunha lixadas |
+| Chave inglesa | `chave_inglesa` | cabo com nervuras e furo, mordente fixo e móvel, rosca sem-fim recartilhada na janela |
+| Faca de pedra lascada | `faca_pedra` | lâmina de sílex lascada, cabo de galho e amarra de sisal (item só do jogo: grava o GLB, sem registro no catálogo) |
+| Lâmina forjada | `lamina_forjada` | lâmina preta de forja com o fio desbastado e espiga de dois furos (item só do jogo) |
 
 ```
 python3 ferramentas/ver.py formas.png                    # confere as formas, sem assar

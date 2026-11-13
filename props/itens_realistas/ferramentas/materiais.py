@@ -38,3 +38,5 @@ def _zinco(nt, pos, S, nome):
 
 
 forja.VELHO['zinco'] = _zinco
+
+texturas.CLASSES['pedra_lascada'] = ((0.090, 0.088, 0.085), 0.38, 0.0, (0.300, 0.290, 0.270), 0.55, 0.0, 0.45, 0.60, 0.8)   # sílex: escuro e liso, lascas claras nas arestas

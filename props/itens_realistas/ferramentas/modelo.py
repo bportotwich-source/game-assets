@@ -413,6 +413,126 @@ def facao():
     return raiz
 
 
+# ------------------------------------------------------------------ pé de cabra
+def pe_de_cabra():
+    Y, R = 11.0, 9.5
+    caminho = [(-298, 10.0, 0.10, 1.6), (-290, 6.4, 0.28, 1.5), (-281, 3.2, 0.5, 1.3), (-271, 1.0, 0.8, 1.1), (-260, 0, 1, 1)]   # (x, z, achatado, alargado)
+    caminho += [(-260 + 485.0 * k / 12, 0, 1, 1) for k in range(1, 13)]
+    CX, CZ, RC = 225.0, 62.0, 62.0
+    for k in range(1, 17):
+        a = math.radians(-90 + 205.0 * k / 16)
+        caminho.append((CX + RC * math.cos(a), CZ + RC * math.sin(a), 1, 1))
+    a = math.radians(115)
+    px, pz, tx, tz = CX + RC * math.cos(a), CZ + RC * math.sin(a), -math.sin(a), math.cos(a)
+    for d, sn, sy in ((9, 0.8, 1.1), (18, 0.5, 1.3), (27, 0.28, 1.5), (36, 0.10, 1.6)):
+        caminho.append((px + tx * d, pz + tz * d - 0.012 * d * d, sn, sy))
+    aneis = []
+    for i, (x, z, sn, sy) in enumerate(caminho):
+        a_, b_ = caminho[max(i - 1, 0)], caminho[min(i + 1, len(caminho) - 1)]
+        dx, dz = b_[0] - a_[0], b_[1] - a_[1]
+        d = math.hypot(dx, dz)
+        nx, nz = -dz / d, dx / d
+        anel = []
+        for k in range(6):
+            g = math.radians(60 * k + 30)
+            oy, on = R * math.cos(g) * sy, R * math.sin(g) * sn
+            anel.append(lib.P(*G(x + nx * on, Y + oy, z + nz * on)))
+        aneis.append(anel)
+    barra = lib.loft(aneis, 'esmalte_azul')
+    pintar(barra, 'aco_lamina', lambda c, n: c[2] < -268 or (-c[0] > 84 and c[2] < 214))             # pontas lixadas, sem tinta
+    fenda = [caminho[-1], caminho[-3]]
+    unha = planta([(fenda[0][0] - 1.5, fenda[0][1] - 1.5), (fenda[1][0], fenda[1][1] + 0.4), (fenda[0][0] + 1.0, fenda[0][1] + 2.0)], Y - 2.4, Y + 2.4, 'ferro_preto')   # fenda de arrancar prego
+    raiz = parte('barra', [barra], origem=G(0, 0, 0), grupo='A', suave=35)
+    parte('fenda', [unha], origem=G(0, 0, 0), pai=raiz, grupo='A')
+    return raiz
+
+
+# ------------------------------------------------------------------ chave inglesa
+def chave_inglesa():
+    Y = 6.5
+    cabo = bevel(planta(_curva([(-109, -9), (-109, 9), (-100, 12), (30, 13.5), (44, 15), (44, -14), (30, -12.5), (-100, -12)], 1), Y - 4.2, Y + 4.2, 'aco_ferramenta'), 1.2, 2)
+    borda = [bevel(planta([(-88, 8.2), (26, 9.8), (26, 12.6), (-88, 11.2)], Y - 5.4, Y + 5.4, 'aco_ferramenta'), 0.8, 1),
+             bevel(planta([(-88, -11.2), (26, -11.8), (26, -9.0), (-88, -8.2)], Y - 5.4, Y + 5.4, 'aco_ferramenta'), 0.8, 1)]      # nervuras do cabo
+    furo = lib.lathe([(0, 5.0), (0, 8.6), (9.6, 8.6), (9.6, 5.0)], 'aco_ferramenta', n=16, c0=G(-99, Y - 4.8, 0), eixo=G(0, 1, 0), anel=True)
+    corpo = bevel(planta(_curva([(36, -13), (50, -26), (72, -30), (92, -27), (107, -15), (107, -6), (84, -6), (84, 15), (64, 23), (36, 14)], 1), Y - 6.5, Y + 6.5, 'aco_ferramenta'), 1.4, 2)
+    pintar(corpo, 'aco_lamina', lambda c, n: -n[0] > 0.9 and c[2] > 84 and -c[0] < -4)             # face do mordente fixo
+    movel = bevel(planta([(84.4, 10), (107, 10), (107, 17), (99, 27), (86, 30), (84.4, 28)], Y - 6.5, Y + 6.5, 'aco_ferramenta'), 1.2, 2)
+    pintar(movel, 'aco_lamina', lambda c, n: -n[0] < -0.9 and c[2] > 86)
+    guia = caixa(78, 84.4, Y - 2.6, Y + 2.6, -4, 29, 'aco_ferramenta')
+    janela = caixa(64, 80, Y - 6.7, Y + 6.7, 0.5, 19.5, 'ferro_preto')
+    prof = [(0, 0), (0, 6.2)]
+    for k in range(8):
+        prof += [(0.4 + 2.1 * k, 7.3), (1.5 + 2.1 * k, 7.3), (2.0 + 2.1 * k, 6.2)]
+    prof += [(17.6, 6.2), (17.6, 0)]
+    rosca = lib.lathe(prof, 'inox', n=14, c0=G(72, Y, 1.2), eixo=G(0, 0, 1))
+    txt = [_deitado_x('200 mm', 5.0, -30, 0.6, Y + 4.25)]
+    raiz = parte('cabo', [cabo, furo] + borda, origem=G(0, 0, 0), grupo='A', suave=35)
+    parte('cabeca', [corpo, guia, janela], origem=G(0, 0, 0), pai=raiz, grupo='A', suave=35)
+    parte('mordente', [movel, rosca], origem=G(0, 0, 0), pai=raiz, grupo='A', suave=35)
+    parte('letras', txt, origem=G(0, 0, 0), pai=raiz, grupo='A')
+    return raiz
+
+
+def _deitado_x(s, tam, x, z, y, mat='aco_lamina'):
+    """Texto gravado numa face de cima, lido por quem olha de +z."""
+    o = letreiro(s, tam, 0, 0, 0, mat=mat)
+    return _mexer(o, lambda px, py, pz: (x + px, y, z - py + tam * 0.35))
+
+
+# ------------------------------------------------------------------ faca de pedra lascada
+def faca_pedra():
+    Y = 9.5
+    rnd = random.Random(21)
+    sec = []
+    xs = [-18 + 148.0 * k / 16 for k in range(17)]
+    for i, x in enumerate(xs):
+        u = (x + 18) / 148.0
+        larg = 21.0 * math.sin(math.pi * (0.16 + 0.80 * u)) ** 0.7 if u < 0.97 else 1.5
+        zs = -larg * 0.85 + rnd.uniform(-1.6, 1.6)
+        ze = larg * 1.0 + rnd.uniform(-2.4, 2.4)
+        sec.append((x, zs, zs + 0.45 * (ze - zs) + rnd.uniform(-3, 3), ze, max(1.2, 8.5 * (1 - 0.75 * u) + rnd.uniform(-1.2, 1.2))))
+    sec[-1] = (130.0, 1.0, 1.4, 1.8, 0.8)
+    lam = _gume(sec, 'pedra_lascada', Y)
+    cabo = _torno_x([(0, 0), (0, 9.5), (3, 11), (40, 11.6), (80, 10.6), (104, 11.4), (108, 9), (108, 0)], 'crua_x', -122, Y, n=14, achata=0.82)
+    amarra = []
+    for k in range(9):
+        x = 86 + k * 3.3
+        r = 11.6 + (0.5 if k % 2 else 0.0) + 0.5
+        amarra.append(lib.lathe([(x, r - 1.6), (x, r), (x + 3.1, r), (x + 3.1, r - 1.6)], 'sisal', n=14, c0=G(-122, Y, 0), eixo=G(1, 0, 0), anel=True))
+    for o in amarra:
+        c = lib.P(*G(0, Y, 0))
+        o.data.transform(Matrix.Translation(c) @ Matrix.Diagonal((1, 1, 0.86, 1)) @ Matrix.Translation(-c))
+    raiz = parte('cabo', [cabo], origem=G(0, 0, 0), grupo='A', suave=40)
+    parte('lamina', [lam], origem=G(0, 0, 0), pai=raiz, grupo='A', suave=12)
+    parte('amarra', amarra, origem=G(0, 0, 0), pai=raiz, grupo='A', suave=40)
+    return raiz
+
+
+# ------------------------------------------------------------------ lâmina forjada (sem cabo)
+def lamina_forjada():
+    Y = 3.0
+    sec = []
+    for k in range(19):
+        x = -20 + 190.0 * k / 18
+        u = k / 18
+        zs = -17.0 + 1.2 * math.sin(u * 9) if u < 0.6 else -17.0 + 15.0 * ((u - 0.6) / 0.4) ** 2.0
+        ze = 19.0 + 1.0 * math.sin(u * 7 + 1) if u < 0.45 else 19.0 - 19.5 * ((u - 0.45) / 0.55) ** 1.7
+        ze = max(ze, zs + 0.8)
+        sec.append((x, zs, zs + 0.70 * (ze - zs), ze, 4.2 * (1 - 0.55 * u)))
+    sec[-1] = (170.0, -1.6, -1.5, -1.4, 0.5)
+    lam = _gume(sec, 'ferro_preto', Y)
+
+    def zm(x):
+        return next((s_[2] for s_ in sec if s_[0] >= x - 1e-6), sec[-1][2])
+    pintar(lam, 'aco_lamina', lambda c, n: -c[0] > zm(c[2]) + 0.3)            # o fio já desbastado na pedra
+    espiga = bevel(planta([(-20, -9), (-20, 9), (-70, 6.5), (-104, 4.5), (-106, -4.5), (-70, -6.5)], Y - 1.9, Y + 1.9, 'ferro_preto'), 0.8, 1)
+    furos = [cil((x, Y - 2.0, 0), (x, Y + 2.0, 0), 2.3, 'carvao', n=10) for x in (-42, -78)]
+    raiz = parte('lamina', [lam], origem=G(0, 0, 0), grupo='A', suave=25)
+    parte('espiga', [espiga] + furos, origem=G(0, 0, 0), pai=raiz, grupo='A', suave=30)
+    return raiz
+
+
 FORMAS = {'martelo': martelo, 'machado': machado, 'serrote': serrote, 'tabua': tabua, 'caixa_pregos': caixa_pregos,
           'cano_metal': cano_metal, 'chapa_metal': chapa_metal, 'sucata_metal': sucata_metal,
-          'pa': pa, 'enxada': enxada, 'faca_cozinha': faca_cozinha, 'facao': facao}
+          'pa': pa, 'enxada': enxada, 'faca_cozinha': faca_cozinha, 'facao': facao,
+          'pe_de_cabra': pe_de_cabra, 'chave_inglesa': chave_inglesa, 'faca_pedra': faca_pedra, 'lamina_forjada': lamina_forjada}

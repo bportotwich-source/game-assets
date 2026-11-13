@@ -15,8 +15,10 @@ PROPS = os.path.dirname(os.path.dirname(AQUI))
 GERADOR = 'itens_realistas/comida/gerar.py'
 TEXTURA = {'lata_feijao': 512, 'lata_milho': 512, 'lata_sardinha': 512, 'pacote_arroz': 1024, 'caixa_cereal': 1024,
            'caixa_leite': 512, 'salgadinho': 1024, 'barra_chocolate': 512, 'arroz_cozido': 512,
-           'saco_farinha': 1024, 'pao_velho': 1024, 'pao_caseiro': 512, 'carne_crua': 1024, 'carne_defumada': 512, 'cesto_legumes': 1024}   # lado da textura no GLB
+           'saco_farinha': 1024, 'pao_velho': 1024, 'pao_caseiro': 512, 'carne_crua': 1024, 'carne_defumada': 512, 'cesto_legumes': 1024,
+           'peixe_cru': 512, 'peixe_assado': 512, 'carne_assada': 512}   # lado da textura no GLB
 ESTADO_DE = {'arroz_cozido': ('pacote_arroz', 'cozido')}
+SO_GLB = {'peixe_cru', 'peixe_assado', 'carne_assada'}   # itens que só existem no jogo (itens_extra.json): grava o GLB, sem registro no catálogo
 
 
 def medir(arq):
@@ -55,6 +57,9 @@ def gerar(forma, res=1024, saida=os.path.join(AQUI, 'saida')):
     tam, tris = medir(arq)
     arq_cat = os.path.join(PROPS, 'loot', 'catalogo.json')
     cat = json.load(open(arq_cat, encoding='utf-8'))
+    if forma in SO_GLB:
+        print(f"{forma} {tris} tris {round(os.path.getsize(arq) / 1024, 1)} KB {tam}")
+        return
     if forma in ESTADO_DE:              # o mesmo item em outro estado: entra em "estados" do item de origem, não é item de saque
         dono, nome = ESTADO_DE[forma]
         r = next(x for x in cat['itens'] if x['id'] == dono)

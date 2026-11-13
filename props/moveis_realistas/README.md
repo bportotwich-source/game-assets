@@ -267,3 +267,20 @@ dos antigos.
 | `arquivo_aco` | 0,47 × 1,33 × 0,65 m | 2,4 mil | 2 × 1024 | Arquivo de chapa com 4 gavetas ocas (`gaveta_1` embaixo, como no antigo), puxador embutido, porta-etiqueta e fechadura. |
 
 Classes novas: `aco_arquivo`, `aco_estante`, `fita_parda`. Refazer: `python3 moveis_realistas/deposito/gerar.py todas 2048 /tmp/saida`.
+
+## Decoração (`decoracao/`: `quadro_familia`, `relogio_parede`, `vaso_planta_morta`, `abajur`)
+
+Peças de ambiente sem partes que abrem (`decoracao/materiais.py` encadeia `banheiro/materiais.py`). Os de parede têm
+a parede em z = 0 e a base em y = 0, como os antigos.
+
+| id | medidas | triângulos | texturas | o que tem |
+|---|---|---|---|---|
+| `quadro_familia` | 0,60 × 0,45 × 0,03 m | 0,8 mil | 1 × 1024 | Moldura de nogueira com filete dourado, passe-partout e foto desbotada de uma família de cinco em silhueta, com manchas de umidade. |
+| `relogio_parede` | 0,32 × 0,32 × 0,045 m | 1,8 mil | 1 × 1024 | Caixa redonda preta, mostrador com os 12 números e as marcas dos minutos, ponteiros parados às 3:17 e o de segundos vermelho. |
+| `vaso_planta_morta` | 0,37 × 0,80 × 0,52 m | 3,0 mil | 2 × 1024 | Vaso de barro com pratinho e salitre, terra seca com torrões, quatro caules secos com folhas enroladas e folhas caídas em volta. |
+| `abajur` | 0,35 × 0,60 × 0,62 m | 2,5 mil | 1 × 1024 | Base de cerâmica azul torneada, haste e soquete de latão, lâmpada, cúpula de linho com aranha de arame, fio e tomada. |
+
+Classes novas: `foto_papel`, `foto_sombra`, `foto_meio`, `foto_pele`, `passepartout`, `terracota`, `terra_seca`, `galho_seco`,
+`folha_seca`, `ceramica_azul`, `cupula`, `vidro_lampada`. Sem vidro na frente do quadro e do relógio (os antigos tinham uma
+placa transparente). Refazer: `python3 moveis_realistas/decoracao/gerar.py todas 2048 /tmp/saida`.
+

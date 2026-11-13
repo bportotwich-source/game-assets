@@ -43,9 +43,13 @@ Ferramentas e materiais de craft, no mesmo tamanho, posição e ponto de pega do
 | Cano de ferro | `cano_metal` | tubo oco com rosca numa ponta e luva na outra |
 | Chapa de metal ondulada | `chapa_metal` | zinco com ferrugem ao longo das ondas, canto dobrado, parafusos de telhado |
 | Punhado de sucata | `sucata_metal` | cantoneira, chapa recortada, toco de cano, vergalhão, mola, parafuso, porcas e arruelas |
+| Pá de bico | `pa` | lâmina abaulada com pisantes e ponta lixada, encaixe que morre na lâmina, punho em D de aço com travessa de madeira |
+| Enxada | `enxada` | olho forjado com nervura, lâmina fechada para o lado do cabo, fio amolado; deitada apoia na quina da lâmina |
+| Faca de cozinha | `faca_cozinha` | lâmina de chef afinando até o fio, gola forjada, talas pretas com três rebites e a espiga aparecendo |
+| Facão | `facao` | lâmina larga na ponta com chanfro amolado, talas de madeira escura, rebites de latão e ilhós do cordão |
 
 ```
 python3 ferramentas/ver.py formas.png                    # confere as formas, sem assar
-python3 ferramentas/gerar.py todas 2048 /tmp/ferr        # assa e grava os 8 GLBs em props/loot (~12 min)
+python3 ferramentas/gerar.py todas 2048 /tmp/ferr        # assa e grava os 12 GLBs em props/loot (~20 min)
 python3 ferramentas/foto.py foto.png ../loot/martelo.glb ../loot/machado.glb
 ```

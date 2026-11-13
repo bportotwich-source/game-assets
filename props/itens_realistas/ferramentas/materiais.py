@@ -15,6 +15,15 @@ texturas.CLASSES.update({
 })
 
 
+# madeiras que faltavam: travessa do punho da pá (veio em z) e talas escuras do facão
+IMBUIA = ((0.120, 0.060, 0.028), 0.50, 0.0, (0.300, 0.180, 0.090), 0.58, 0.0, 0.70, 0.90, 1.4)
+texturas.CLASSES.update({'faia_z': forja.madeira.FAIA, 'imbuia_x': IMBUIA})
+forja.madeira.EIXO.setdefault('z', 'Y')
+for _c in ('faia_z', 'imbuia_x'):
+    forja.madeira.COR[_c] = forja.madeira.cor_madeira(_c)
+    texturas.RELEVO[_c] = forja.madeira.relevo_madeira(_c)
+
+
 def _zinco(nt, pos, S, nome):
     """Chapa galvanizada velha: ferrugem em manchas esticadas ao longo das ondas, zinco fosco no resto."""
     f = forja

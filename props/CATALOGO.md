@@ -18,11 +18,11 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Mesa de jantar (`mesa_jantar`) | 1 | Sala | 1,40 × 0,76 × 0,80 | - | - | barricada | 4284 |
 | Cadeira de madeira (`cadeira`) | 1 | Sala | 0,42 × 0,93 × 0,45 | - | - | sentar | 3400 |
 | Sofá 3 lugares (`sofa`) | 1 | Sala | 1,93 × 0,88 × 0,86 | 2 espaços: moedas, pilhas | - | barricada, dormir, sentar | 9692 |
-| Armário de banheiro com espelho (`armario_banheiro`) | 1 | Banheiro | 0,52 × 0,70 × 0,17 | 4 espaços: remedios, higiene | porta_espelho | - | 348 |
+| Armário de banheiro com espelho (`armario_banheiro`) | 1 | Banheiro | 0,52 × 0,70 × 0,18 | 4 espaços: remedios, higiene | porta_espelho | - | 1432 |
 | Caixote de madeira (`caixa_madeira`) | 1 | Depósito | 0,84 × 0,56 × 0,64 | 8 espaços: comida, materiais, ferramentas, armas | tampa | barricada | 1972 |
 | Armário aéreo de cozinha (`armario_aereo`) | 2 | Cozinha | 0,82 × 0,64 × 0,38 | 6 espaços: comida, utensilios | porta_esq, porta_dir | - | 2108 |
-| Pia de coluna (`pia_banheiro`) | 2 | Banheiro | 0,54 × 1,00 × 0,45 | - | - | - | 2780 |
-| Vaso sanitário com caixa (`vaso_sanitario`) | 2 | Banheiro | 0,40 × 0,81 × 0,63 | 1 espaços: remedios, moedas | assento, tampa_caixa | - | 2940 |
+| Pia de coluna (`pia_banheiro`) | 2 | Banheiro | 0,54 × 0,99 × 0,45 | - | - | - | 2104 |
+| Vaso sanitário com caixa (`vaso_sanitario`) | 2 | Banheiro | 0,40 × 0,80 × 0,79 | 1 espaços: remedios, moedas | assento, tampa_caixa | - | 2274 |
 | Banheira (`banheira`) | 2 | Banheiro | 1,60 × 0,62 × 0,74 | - | - | - | 798 |
 | Estante de livros (`estante_livros`) | 2 | Sala | 0,93 × 1,83 × 0,34 | 8 espaços: livros | - | barricada | 12516 |
 | Rack com TV (`rack_tv`) | 2 | Sala | 1,40 × 1,18 × 0,45 | 3 espaços: pilhas, eletronicos | porta_esq | - | 912 |

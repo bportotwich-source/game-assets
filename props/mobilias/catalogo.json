@@ -516,25 +516,26 @@
    "altura_sugerida_m": 1.2,
    "arquivo": "mobilias/armario_banheiro.glb",
    "tamanho_m": [
-    0.52,
-    0.7,
-    0.17
+    0.516,
+    0.702,
+    0.183
    ],
-   "triangulos": 348,
-   "kb": 21.6,
+   "triangulos": 1432,
+   "kb": 272.5,
    "partes": [
     {
      "no": "porta_espelho",
      "origem": [
       -0.25,
       0,
-      0.16
+      0.143
      ],
      "tipo": "porta",
      "eixo": "y",
      "abre_graus": -100
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/banheiro/gerar.py"
   },
   {
    "id": "caixa_madeira",
@@ -643,11 +644,12 @@
    "arquivo": "mobilias/pia_banheiro.glb",
    "tamanho_m": [
     0.54,
-    1.004,
-    0.45
+    0.987,
+    0.448
    ],
-   "triangulos": 2780,
-   "kb": 132.9
+   "triangulos": 2104,
+   "kb": 293.1,
+   "gerador": "moveis_realistas/banheiro/gerar.py"
   },
   {
    "id": "vaso_sanitario",
@@ -668,12 +670,12 @@
    "esconderijo": "tampa da caixa: saque escondido",
    "arquivo": "mobilias/vaso_sanitario.glb",
    "tamanho_m": [
-    0.4,
-    0.81,
-    0.63
+    0.404,
+    0.795,
+    0.789
    ],
-   "triangulos": 2940,
-   "kb": 142.1,
+   "triangulos": 2274,
+   "kb": 417.9,
    "partes": [
     {
      "no": "assento",
@@ -700,7 +702,8 @@
       0.04
      ]
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/banheiro/gerar.py"
   },
   {
    "id": "banheira",

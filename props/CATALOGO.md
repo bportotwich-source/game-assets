@@ -84,14 +84,14 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Churrasqueira de quintal (`churrasqueira`) | 6 | Rua e quintal | 0,60 × 1,06 × 0,63 | - | tampa | - | 2192 |
 | Cerca de madeira quebrada (`cerca_quebrada`) | 6 | Rua e quintal | 2,09 × 1,12 × 1,10 | - | - | - | 814 |
 | Mangueira de jardim enrolada (`mangueira_jardim`) | 6 | Rua e quintal | 0,80 × 0,04 × 0,82 | - | - | - | 4324 |
-| Quadro de família na parede (`quadro_familia`) | 7 | Vida de antes | 0,60 × 0,45 × 0,03 | - | - | - | 236 |
+| Quadro de família na parede (`quadro_familia`) | 7 | Vida de antes | 0,60 × 0,45 × 0,03 | - | - | - | 780 |
 | Bola de futebol murcha (`bola_futebol`) | 7 | Vida de antes | 0,22 × 0,19 × 0,22 | - | - | - | 320 |
 | Casinha de cachorro vazia (`casinha_cachorro`) | 7 | Vida de antes | 1,34 × 0,98 × 1,26 | - | - | - | 3016 |
-| Vaso com planta morta (`vaso_planta_morta`) | 7 | Vida de antes | 0,66 × 0,77 × 0,67 | - | - | - | 5680 |
-| Relógio de parede parado (`relogio_parede`) | 7 | Vida de antes | 0,32 × 0,32 × 0,04 | - | - | - | 1236 |
+| Vaso com planta morta (`vaso_planta_morta`) | 7 | Vida de antes | 0,37 × 0,80 × 0,52 | - | - | - | 3008 |
+| Relógio de parede parado (`relogio_parede`) | 7 | Vida de antes | 0,32 × 0,32 × 0,04 | - | - | - | 1758 |
 | Calendário na data do surto (`calendario_parede`) | 7 | Vida de antes | 0,30 × 0,45 × 0,02 | - | - | - | 1004 |
 | TV de tubo com tela rachada (`tv_tubo`) | 7 | Vida de antes | 0,66 × 0,85 × 0,64 | - | - | - | 492 |
-| Abajur (`abajur`) | 7 | Vida de antes | 0,34 × 0,60 × 0,62 | - | - | - | 828 |
+| Abajur (`abajur`) | 7 | Vida de antes | 0,35 × 0,60 × 0,62 | - | - | - | 2524 |
 | Tapete de sala (`tapete_sala`) | 7 | Vida de antes | 2,10 × 0,01 × 1,40 | - | - | - | 732 |
 | Vitrola com discos (`vitrola`) | 7 | Vida de antes | 1,04 × 0,74 × 0,51 | - | tampa | - | 824 |
 | Fruteira com frutas podres (`fruteira_podre`) | 7 | Vida de antes | 0,44 × 0,29 × 0,34 | - | - | - | 2956 |

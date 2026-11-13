@@ -25,7 +25,7 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Vaso sanitário com caixa (`vaso_sanitario`) | 2 | Banheiro | 0,40 × 0,80 × 0,79 | 1 espaços: remedios, moedas | assento, tampa_caixa | - | 2274 |
 | Banheira (`banheira`) | 2 | Banheiro | 1,60 × 0,62 × 0,74 | - | - | - | 798 |
 | Estante de livros (`estante_livros`) | 2 | Sala | 0,93 × 1,83 × 0,34 | 8 espaços: livros | - | barricada | 12516 |
-| Rack com TV (`rack_tv`) | 2 | Sala | 1,40 × 1,18 × 0,45 | 3 espaços: pilhas, eletronicos | porta_esq | - | 912 |
+| Rack com TV (`rack_tv`) | 2 | Sala | 1,40 × 1,18 × 0,46 | 3 espaços: pilhas, eletronicos | porta_esq | - | 2908 |
 | Poltrona (`poltrona`) | 2 | Sala | 0,87 × 0,98 × 0,85 | 1 espaços: moedas | - | sentar | 6352 |
 | Escrivaninha com luminária (`escrivaninha`) | 2 | Escritório | 1,20 × 1,19 × 0,62 | 4 espaços: livros, pilhas, remedios | gaveta_1, gaveta_2, gaveta_3, gaveta_centro | - | 2256 |
 | Berço (`berco`) | 2 | Quarto | 1,28 × 0,95 × 0,72 | 2 espaços: roupas, remedios | - | - | 4628 |
@@ -35,7 +35,7 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Balcão de caixa com registradora (`balcao_caixa`) | 3 | Loja | 1,84 × 1,15 × 0,64 | 4 espaços: moedas, pilhas, remedios | gaveta_dinheiro | barricada | 1064 |
 | Freezer horizontal (`freezer_horizontal`) | 3 | Loja | 1,50 × 0,90 × 0,66 | 10 espaços: comida | tampa_esq, tampa_dir | - | 976 |
 | Prateleira de pães (`prateleira_padaria`) | 3 | Loja | 1,22 × 1,63 × 0,52 | 6 espaços: comida | - | - | 12560 |
-| Mesa de escritório (`mesa_escritorio`) | 3 | Escritório | 1,40 × 1,14 × 0,73 | 3 espaços: pilhas, livros, moedas | gaveta | - | 952 |
+| Mesa de escritório (`mesa_escritorio`) | 3 | Escritório | 1,40 × 1,14 × 0,72 | 3 espaços: pilhas, livros, moedas | gaveta | - | 9028 |
 | Arquivo de aço 4 gavetas (`arquivo_aco`) | 3 | Escritório | 0,47 × 1,33 × 0,65 | 6 espaços: livros, mapas, moedas | gaveta_1, gaveta_2, gaveta_3, gaveta_4 | barricada | 2440 |
 | Armário de vestiário (3 portas) (`armario_vestiario`) | 3 | Escritório | 0,90 × 1,85 × 0,52 | 9 espaços: roupas, mochila, armas, remedios | porta_1, porta_2, porta_3 | barricada | 984 |
 | Maca hospitalar (`maca`) | 3 | Saúde | 0,75 × 1,90 × 1,93 | - | - | dormir | 2300 |
@@ -89,8 +89,8 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Casinha de cachorro vazia (`casinha_cachorro`) | 7 | Vida de antes | 1,34 × 0,98 × 1,26 | - | - | - | 3016 |
 | Vaso com planta morta (`vaso_planta_morta`) | 7 | Vida de antes | 0,37 × 0,80 × 0,52 | - | - | - | 3008 |
 | Relógio de parede parado (`relogio_parede`) | 7 | Vida de antes | 0,32 × 0,32 × 0,04 | - | - | - | 1758 |
-| Calendário na data do surto (`calendario_parede`) | 7 | Vida de antes | 0,30 × 0,45 × 0,02 | - | - | - | 1004 |
-| TV de tubo com tela rachada (`tv_tubo`) | 7 | Vida de antes | 0,66 × 0,85 × 0,64 | - | - | - | 492 |
+| Calendário na data do surto (`calendario_parede`) | 7 | Vida de antes | 0,30 × 0,45 × 0,02 | - | - | - | 1629 |
+| TV de tubo com tela rachada (`tv_tubo`) | 7 | Vida de antes | 0,66 × 0,85 × 0,64 | - | - | - | 1932 |
 | Abajur (`abajur`) | 7 | Vida de antes | 0,35 × 0,60 × 0,62 | - | - | - | 2524 |
 | Tapete de sala (`tapete_sala`) | 7 | Vida de antes | 2,10 × 0,01 × 1,40 | - | - | - | 732 |
 | Vitrola com discos (`vitrola`) | 7 | Vida de antes | 1,04 × 0,74 × 0,51 | - | tampa | - | 824 |

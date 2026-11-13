@@ -775,10 +775,10 @@
    "tamanho_m": [
     1.4,
     1.18,
-    0.454
+    0.462
    ],
-   "triangulos": 912,
-   "kb": 110.7,
+   "triangulos": 2908,
+   "kb": 577.5,
    "partes": [
     {
      "no": "porta_esq",
@@ -791,7 +791,8 @@
      "eixo": "y",
      "abre_graus": -100
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/escritorio/gerar.py"
   },
   {
    "id": "poltrona",
@@ -1186,12 +1187,12 @@
    ],
    "arquivo": "mobilias/mesa_escritorio.glb",
    "tamanho_m": [
-    1.404,
+    1.4,
     1.14,
-    0.727
+    0.722
    ],
-   "triangulos": 952,
-   "kb": 49.7,
+   "triangulos": 9028,
+   "kb": 763.9,
    "partes": [
     {
      "no": "gaveta",
@@ -1207,7 +1208,8 @@
       0.3
      ]
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/escritorio/gerar.py"
   },
   {
    "id": "arquivo_aco",
@@ -3069,10 +3071,11 @@
    "tamanho_m": [
     0.3,
     0.453,
-    0.023
+    0.02
    ],
-   "triangulos": 1004,
-   "kb": 74.4
+   "triangulos": 1629,
+   "kb": 312.7,
+   "gerador": "moveis_realistas/escritorio/gerar.py"
   },
   {
    "id": "tv_tubo",
@@ -3098,11 +3101,12 @@
    "arquivo": "mobilias/tv_tubo.glb",
    "tamanho_m": [
     0.66,
-    0.852,
-    0.644
+    0.853,
+    0.64
    ],
-   "triangulos": 492,
-   "kb": 27.3
+   "triangulos": 1932,
+   "kb": 380.9,
+   "gerador": "moveis_realistas/escritorio/gerar.py"
   },
   {
    "id": "abajur",

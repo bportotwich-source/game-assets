@@ -10,9 +10,9 @@ Gerado por `props/gerar_props.py` a partir de `mobilias/catalogo.json` e `loot/c
 | Fogão 4 bocas (`fogao`) | 1 | Cozinha | 0,56 × 0,98 × 0,64 | 4 espaços: comida, utensilios | gaveta, porta_forno | - | 4784 |
 | Balcão com pia (`balcao_pia`) | 1 | Cozinha | 1,22 × 1,23 × 0,63 | 6 espaços: utensilios, limpeza, ferramentas | porta_esq, porta_dir | - | 2408 |
 | Estante de aço (5 prateleiras) (`estante_metal`) | 1 | Depósito | 1,02 × 1,90 × 0,42 | 10 espaços: ferramentas, materiais, comida | - | - | 5264 |
-| Guarda-roupa 2 portas (`guarda_roupa`) | 1 | Quarto | 1,05 × 2,00 × 0,61 | 10 espaços: roupas, tecido, mochila | porta_esq, porta_dir, gaveta | barricada | 2444 |
-| Cômoda 3 gavetas (`comoda`) | 1 | Quarto | 0,93 × 0,85 × 0,47 | 6 espaços: roupas, remedios, pilhas | gaveta_1, gaveta_2, gaveta_3 | - | 2100 |
-| Criado-mudo (`criado_mudo`) | 1 | Quarto | 0,47 × 0,56 × 0,42 | 3 espaços: remedios, pilhas, livros | gaveta | - | 1740 |
+| Guarda-roupa de 2 portas (`guarda_roupa`) | 1 | Quarto | 1,05 × 2,00 × 0,61 | 10 espaços: roupas, tecido, mochila | porta_esq, porta_dir, gaveta | barricada | 9912 |
+| Cômoda de 3 gavetas (`comoda`) | 1 | Quarto | 0,93 × 0,85 × 0,47 | 6 espaços: roupas, remedios, pilhas | gaveta_1, gaveta_2, gaveta_3 | - | 9496 |
+| Criado-mudo (`criado_mudo`) | 1 | Quarto | 0,47 × 0,56 × 0,42 | 3 espaços: remedios, pilhas, livros | gaveta | - | 3956 |
 | Cama de casal (`cama_casal`) | 1 | Quarto | 1,48 × 1,05 × 1,98 | - | - | dormir | 11820 |
 | Cama de solteiro (`cama_solteiro`) | 1 | Quarto | 0,98 × 1,05 × 1,98 | - | - | dormir | 10076 |
 | Mesa de jantar (`mesa_jantar`) | 1 | Sala | 1,40 × 0,76 × 0,80 | - | - | barricada | 1820 |

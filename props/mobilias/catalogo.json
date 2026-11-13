@@ -197,7 +197,7 @@
   },
   {
    "id": "guarda_roupa",
-   "nome": "Guarda-roupa 2 portas",
+   "nome": "Guarda-roupa de 2 portas",
    "grupo": "mobilias",
    "categoria": "quarto",
    "montagem": "floor",
@@ -217,17 +217,17 @@
    "tamanho_m": [
     1.05,
     2.0,
-    0.606
+    0.613
    ],
-   "triangulos": 2444,
-   "kb": 257.3,
+   "triangulos": 9912,
+   "kb": 3342.2,
    "partes": [
     {
      "no": "porta_esq",
      "origem": [
       -0.5,
       0,
-      0.29200000000000004
+      0.292
      ],
      "tipo": "porta",
      "eixo": "y",
@@ -238,7 +238,7 @@
      "origem": [
       0.5,
       0,
-      0.29200000000000004
+      0.292
      ],
      "tipo": "porta",
      "eixo": "y",
@@ -258,11 +258,12 @@
       0.4
      ]
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/quarto/gerar.py"
   },
   {
    "id": "comoda",
-   "nome": "Cômoda 3 gavetas",
+   "nome": "Cômoda de 3 gavetas",
    "grupo": "mobilias",
    "categoria": "quarto",
    "montagem": "floor",
@@ -281,10 +282,10 @@
    "tamanho_m": [
     0.93,
     0.85,
-    0.473
+    0.47
    ],
-   "triangulos": 2100,
-   "kb": 169.5,
+   "triangulos": 9496,
+   "kb": 2257.6,
    "partes": [
     {
      "no": "gaveta_1",
@@ -328,7 +329,8 @@
       0.3
      ]
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/quarto/gerar.py"
   },
   {
    "id": "criado_mudo",
@@ -351,10 +353,10 @@
    "tamanho_m": [
     0.474,
     0.555,
-    0.418
+    0.417
    ],
-   "triangulos": 1740,
-   "kb": 175.3,
+   "triangulos": 3956,
+   "kb": 514.0,
    "partes": [
     {
      "no": "gaveta",
@@ -370,7 +372,8 @@
       0.26
      ]
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/quarto/gerar.py"
   },
   {
    "id": "cama_casal",

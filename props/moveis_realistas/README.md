@@ -239,3 +239,17 @@ e os mesmos nós `porta_esq` e `porta_dir` dos antigos.
 Classes novas: `tinta_creme` (amarelada de gordura, escorridos, lascada nas quinas), `pedra_pia` (granito de pintas), `ralo`,
 `esmalte_cozinha` (chapa branca encardida, ferrugem nas quinas), `liner`, `esmalte_forno`, `ferro_grade`, `baquelite`, `vidro_forno`.
 As portas saem de `_porta` e a caixa de `_carcaca`. Refazer: `python3 moveis_realistas/cozinha/gerar.py todas 2048 /tmp/saida`.
+
+## Móveis de casa: banheiro (`banheiro/`: `pia_banheiro`, `vaso_sanitario`, `armario_banheiro`)
+
+Louça branca torneada (`banheiro/materiais.py` encadeia `cozinha/materiais.py`); as bacias saem de `_oval`, um perfil
+girado e esticado em z. Mesmos nós que abrem dos antigos.
+
+| id | medidas | triângulos | texturas | o que tem |
+|---|---|---|---|---|
+| `pia_banheiro` | 0,54 × 0,99 × 0,45 m | 2,1 mil | 1 × 1024 | Pia de coluna: bacia oval com mesa dos metais, coluna torneada, bica curva, dois registros de cruzeta e ralo. |
+| `vaso_sanitario` | 0,40 × 0,80 × 0,79 m | 2,3 mil | 2 × 1024 | Bacia oval com pé, água, caixa acoplada oca com alavanca; `assento` (assento e tampa) levanta e `tampa_caixa` desliza (esconderijo). |
+| `armario_banheiro` | 0,52 × 0,70 × 0,18 m | 1,4 mil | 2 × 1024 | Armário de parede de madeira pintada com duas prateleiras de vidro fosco, luminária em cima e `porta_espelho` com espelho manchado. |
+
+Classes novas: `louca` (encardida, escorridos), `agua_vaso`, `espelho` (prata descascada e véu de poeira), `vidro_fosco`.
+Refazer: `python3 moveis_realistas/banheiro/gerar.py todas 2048 /tmp/saida`.

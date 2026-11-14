@@ -3940,10 +3940,10 @@
    "tamanho_m": [
     1.04,
     1.24,
-    0.544
+    0.559
    ],
-   "triangulos": 4572,
-   "kb": 328.1,
+   "triangulos": 10758,
+   "kb": 1195.4,
    "partes": [
     {
      "no": "gaveta_1_3",
@@ -3973,7 +3973,8 @@
       0.3
      ]
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/sortidos/gerar.py"
   },
   {
    "id": "carrinho_livros",
@@ -4839,12 +4840,13 @@
    "colisao": "caixa",
    "arquivo": "mobilias/balanca_medica.glb",
    "tamanho_m": [
-    0.4,
+    0.406,
     2.0,
-    0.55
+    0.532
    ],
-   "triangulos": 400,
-   "kb": 21.3
+   "triangulos": 5170,
+   "kb": 641.4,
+   "gerador": "moveis_realistas/sortidos/gerar.py"
   },
   {
    "id": "carrinho_emergencia",
@@ -5111,12 +5113,13 @@
    "barulho": "muito alto",
    "arquivo": "mobilias/jukebox.glb",
    "tamanho_m": [
-    0.9,
+    0.905,
     1.569,
-    0.645
+    0.634
    ],
-   "triangulos": 3084,
-   "kb": 228.8
+   "triangulos": 6289,
+   "kb": 651.0,
+   "gerador": "moveis_realistas/sortidos/gerar.py"
   },
   {
    "id": "chapa_lanchonete",
@@ -5999,10 +6002,11 @@
    "tamanho_m": [
     1.8,
     0.9,
-    0.2
+    0.17
    ],
-   "triangulos": 6980,
-   "kb": 445.7
+   "triangulos": 9906,
+   "kb": 1154.3,
+   "gerador": "moveis_realistas/sortidos/gerar.py"
   },
   {
    "id": "totem_ofertas",

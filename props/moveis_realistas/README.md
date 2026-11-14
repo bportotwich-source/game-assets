@@ -417,3 +417,15 @@ embolorados (`carrinho_assadeiras`); bicicleta caída de lado, apoiada no pedal 
 coroa, corrente enferrujada e selim (`bicicleta`); carrinho de mão de caçamba verde descascando, braços de tubo,
 cabos de madeira, roda de pneu e resto de areia com tijolos (`carrinho_mao`). Materiais encadeados de `abrigo/`.
 `python3 gerar.py todas`.
+
+## sortidos/ (lote 23)
+
+Painel perfurado de parede sobre sarrafos, com as ferramentas da bancada de trabalho penduradas (arco de serra,
+martelo, chaves de fenda, alicate, chaves combinadas), serrote, trena, rolo de extensão, silhuetas pintadas de uma
+chave e um martelo que sumiram, e prateleira de latas embaixo (`painel_ferramentas`); balança médica de coluna com
+plataforma de tapete de borracha, braços graduados com pesos de correr, tabela de peso colada e régua de altura com
+esquadro de cabeça (`balanca_medica`); fichário de catálogo de nogueira com vinte gavetinhas de etiqueta de latão
+sobre mesa de pernas torneadas, catálogos encadernados e uma caixa de fichas embaixo; `gaveta_1_3` e `gaveta_3_1`
+abrem cheias de fichas (`fichario_catalogo`); jukebox de arco com tubos de luz acesos (malhas `luz_ambar` e
+`luz_vermelha`), vidro transparente (`vidro_frente`) mostrando o toca-discos e o carrossel de discos, painel de
+seleção, moedeira e grade de cromo (`jukebox`). Materiais encadeados de `utilidades/`. `python3 gerar.py todas`.

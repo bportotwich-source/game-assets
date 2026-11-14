@@ -1109,12 +1109,12 @@
    ],
    "arquivo": "mobilias/freezer_horizontal.glb",
    "tamanho_m": [
-    1.5,
-    0.896,
-    0.663
+    1.508,
+    0.906,
+    0.679
    ],
-   "triangulos": 976,
-   "kb": 79.2,
+   "triangulos": 2615,
+   "kb": 924.9,
    "partes": [
     {
      "no": "tampa_esq",
@@ -1144,7 +1144,8 @@
       0
      ]
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/publico/gerar.py"
   },
   {
    "id": "prateleira_padaria",
@@ -1389,12 +1390,13 @@
    "estacao": "enfermaria (cura mais rápido)",
    "arquivo": "mobilias/maca.glb",
    "tamanho_m": [
-    0.751,
-    1.9,
-    1.93
+    0.799,
+    1.864,
+    1.824
    ],
-   "triangulos": 2300,
-   "kb": 162.4
+   "triangulos": 3572,
+   "kb": 495.9,
+   "gerador": "moveis_realistas/publico/gerar.py"
   },
   {
    "id": "carrinho_compras",
@@ -4358,11 +4360,11 @@
    "arquivo": "mobilias/mesa_maquina_escrever.glb",
    "tamanho_m": [
     1.4,
-    1.06,
-    0.775
+    1.182,
+    0.751
    ],
-   "triangulos": 2308,
-   "kb": 170.6,
+   "triangulos": 6860,
+   "kb": 1616.2,
    "partes": [
     {
      "no": "gaveta_1",
@@ -4378,7 +4380,8 @@
       0.32
      ]
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/publico/gerar.py"
   },
   {
    "id": "armario_armas",
@@ -4751,12 +4754,12 @@
    "colisao": "caixa",
    "arquivo": "mobilias/armario_remedios.glb",
    "tamanho_m": [
-    0.9,
+    0.913,
     1.8,
-    0.42
+    0.425
    ],
-   "triangulos": 2396,
-   "kb": 117.9,
+   "triangulos": 6000,
+   "kb": 1239.0,
    "partes": [
     {
      "no": "porta_esq",
@@ -4780,7 +4783,8 @@
      "eixo": "y",
      "abre_graus": 100
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/publico/gerar.py"
   },
   {
    "id": "biombo",

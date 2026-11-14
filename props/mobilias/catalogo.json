@@ -709,7 +709,7 @@
   },
   {
    "id": "banheira",
-   "nome": "Banheira",
+   "nome": "Banheira de pé",
    "grupo": "mobilias",
    "categoria": "banheiro",
    "montagem": "floor",
@@ -720,12 +720,13 @@
    "estacao": "reservatorio de agua (enche com chuva)",
    "arquivo": "mobilias/banheira.glb",
    "tamanho_m": [
-    1.6,
-    0.622,
-    0.74
+    1.613,
+    0.784,
+    0.75
    ],
-   "triangulos": 798,
-   "kb": 39.9
+   "triangulos": 2908,
+   "kb": 364.4,
+   "gerador": "moveis_realistas/casa/gerar.py"
   },
   {
    "id": "estante_livros",
@@ -954,10 +955,10 @@
    "tamanho_m": [
     0.6,
     0.85,
-    0.61
+    0.687
    ],
-   "triangulos": 2340,
-   "kb": 112.0,
+   "triangulos": 4249,
+   "kb": 520.6,
    "partes": [
     {
      "no": "gaveta_sabao",
@@ -976,15 +977,16 @@
     {
      "no": "porta",
      "origem": [
-      -0.18,
+      -0.197,
       0.4,
-      0.30000000000000004
+      0.31
      ],
      "tipo": "porta",
      "eixo": "y",
      "abre_graus": -110
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/casa/gerar.py"
   },
   {
    "id": "aquecedor",
@@ -3193,12 +3195,12 @@
    "usa": "energia",
    "arquivo": "mobilias/vitrola.glb",
    "tamanho_m": [
-    1.044,
-    0.738,
-    0.508
+    1.04,
+    0.684,
+    0.517
    ],
-   "triangulos": 824,
-   "kb": 208.6,
+   "triangulos": 4136,
+   "kb": 632.5,
    "partes": [
     {
      "no": "tampa",
@@ -3211,7 +3213,8 @@
      "eixo": "x",
      "abre_graus": -80
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/casa/gerar.py"
   },
   {
    "id": "fruteira_podre",
@@ -5045,7 +5048,7 @@
   },
   {
    "id": "mesa_booth",
-   "nome": "Mesa de booth com dois sofás",
+   "nome": "Mesa de lanchonete com dois sofás",
    "grupo": "mobilias",
    "categoria": "diner",
    "montagem": "floor",
@@ -5060,12 +5063,13 @@
    "modulo_m": 2.0,
    "arquivo": "mobilias/mesa_booth.glb",
    "tamanho_m": [
-    1.3,
+    1.304,
     1.17,
     1.9
    ],
-   "triangulos": 1312,
-   "kb": 65.7
+   "triangulos": 4790,
+   "kb": 1397.4,
+   "gerador": "moveis_realistas/casa/gerar.py"
   },
   {
    "id": "jukebox",

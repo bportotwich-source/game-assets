@@ -52,10 +52,11 @@ def freezer_horizontal():
             _mover(o, lambda a, b, cc: (x + a * math.cos(k) - cc * math.sin(k), 200 + b + (k % 4) * 30, z + a * math.sin(k) + cc * math.cos(k)))
         p.append(o)
     parte('freezer', p, origem=G(0, 0, 0), grupo='A')
-    for nome, x0, x1, y in (('tampa_esq', -X + 30, 15, H + 6), ('tampa_dir', -15, X - 30, H + 20)):
-        t = caixa(x0, x1, y, y + 14, Z0 + 26, Z1 - 26, 'plastico_cinza', 3.0)
+    for nome, x0, x1, y in (('tampa_esq', -X + 30, 15, H + 6), ('tampa_dir', -15, X - 30, H + 23)):
+        zf = Z1 - 10 if nome == 'tampa_dir' else Z1 - 32                     # a de cima sai mais à frente: a mira acha ela com a de baixo aberta por baixo
+        t = caixa(x0, x1, y, y + 14, Z0 + 26, zf, 'plastico_cinza', 3.0)
         cut(t, caixa(x0 + 30, x1 - 30, y - 5, y + 20, Z0 + 56, Z1 - 56, 'plastico_cinza'))
-        pux = caixa(x0 + 20 if nome == 'tampa_dir' else x1 - 70, x0 + 70 if nome == 'tampa_dir' else x1 - 20, y + 14, y + 26, -150, 150, 'plastico_preto', 4.0)
+        pux = caixa(x0 + 20 if nome == 'tampa_dir' else x1 - 70, x0 + 70 if nome == 'tampa_dir' else x1 - 20, y + 14, y + 17, -150, 150, 'plastico_preto', 1.0)   # puxador rente (o jogo mira a tampa de cima)
         tampa = parte(nome, [t, pux], origem=G(0, 0, 0), grupo='B')
         parte('vidro_' + nome, [caixa(x0 + 30, x1 - 30, y + 5, y + 9, Z0 + 56, Z1 - 56, 'vidro_visor')], origem=G(0, 0, 0), pai=tampa, grupo='B')
 

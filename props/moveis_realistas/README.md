@@ -407,3 +407,13 @@ aberto, cobertor jogado, travesseiro, vela no pires e garrafa d'água (`colchao_
 de PROCURADO com rosto e de AVISO de toque de recolher, tachinhas e um recado (`quadro_procurados`); riscos de carvão
 na parede contando 33 dias, em grupos de cinco, com "DIA 33" (`contagem_dias`). Materiais encadeados de `atendimento/`.
 `python3 gerar.py todas`.
+
+## utilidades/ (lote 22)
+
+Vitrine giratória de tortas de inox com cúpula e prateleiras de vidro transparente (malhas `vidro_cupula` e
+`vidro_prateleiras`), tortas de morango e creme, duas já cortadas, com bolor (`vitrine_tortas`); carrinho de
+assadeiras de inox com doze cantoneiras, rodízios e assadeiras de pães, algumas tiradas, uma ou outra puxada e pães
+embolorados (`carrinho_assadeiras`); bicicleta caída de lado, apoiada no pedal e na ponta do guidão, com raios,
+coroa, corrente enferrujada e selim (`bicicleta`); carrinho de mão de caçamba verde descascando, braços de tubo,
+cabos de madeira, roda de pneu e resto de areia com tijolos (`carrinho_mao`). Materiais encadeados de `abrigo/`.
+`python3 gerar.py todas`.

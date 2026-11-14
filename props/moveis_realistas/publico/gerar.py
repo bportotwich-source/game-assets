@@ -1,4 +1,5 @@
-"""Gera o freezer horizontal, a mesa com máquina de escrever, o armário de remédios e a maca:
+"""Gera o freezer horizontal, a mesa com máquina de escrever, o armário de remédios, a maca, o globo terrestre, a cesta de
+compras, a cadeira de rodas e o biombo:
 modelo, UVs, bake das texturas e o GLB do jogo em props/mobilias, e atualiza o registro em props/mobilias/catalogo.json.
 
 uso: python3 gerar.py [forma|todas] [resolução] [saída]     (precisa de: pip install bpy pillow numpy)
@@ -16,9 +17,10 @@ PROPS = os.path.dirname(os.path.dirname(AQUI))
 GERADOR = 'moveis_realistas/publico/gerar.py'
 # lado da textura de cada grupo dentro do GLB
 TEXTURA = {'freezer_horizontal': {'A': 2048, 'B': 512}, 'mesa_maquina_escrever': {'A': 2048, 'B': 512}, 'armario_remedios': {'A': 2048, 'B': 512},
-           'maca': {'A': 1024}}
+           'maca': {'A': 1024}, 'globo_terrestre': {'A': 1024}, 'cesta_compras': {'A': 512}, 'cadeira_rodas': {'A': 1024}, 'biombo': {'A': 1024}}
 NOME = {'freezer_horizontal': 'Freezer horizontal', 'mesa_maquina_escrever': 'Mesa com máquina de escrever', 'armario_remedios': 'Armário de remédios com vidro',
-        'maca': 'Maca hospitalar'}
+        'maca': 'Maca hospitalar', 'globo_terrestre': 'Globo terrestre de mesa', 'cesta_compras': 'Cesta de compras', 'cadeira_rodas': 'Cadeira de rodas',
+        'biombo': 'Biombo hospitalar'}
 PARTES = {}     # tampas, gaveta e portas: os nós dos móveis antigos (o catálogo já tem)
 VIDROS = {'freezer_horizontal': ('vidro_tampa_esq', 'vidro_tampa_dir'), 'armario_remedios': ('vidro_porta_esq', 'vidro_porta_dir')}
 

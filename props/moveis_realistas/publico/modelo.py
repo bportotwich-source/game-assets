@@ -241,4 +241,213 @@ def maca():
     parte('maca', p, origem=G(0, 0, 0), grupo='A')
 
 
-FORMAS = {'freezer_horizontal': freezer_horizontal, 'mesa_maquina_escrever': mesa_maquina_escrever, 'armario_remedios': armario_remedios, 'maca': maca}
+# ---------------------------------------------------------------------------- GLOBO TERRESTRE
+_CONTINENTES = [   # (latitude, longitude, raio em graus) de manchas que somadas lembram os continentes
+    (50, -100, 18), (40, -90, 14), (60, -120, 14), (65, -45, 9), (25, -100, 8), (15, -88, 5),       # América do Norte e Groenlândia
+    (-10, -60, 15), (-25, -60, 11), (-40, -68, 7), (5, -70, 8),                                    # América do Sul
+    (10, 20, 16), (-10, 25, 13), (-28, 25, 8), (25, 10, 12), (-20, 47, 4),                          # África
+    (50, 15, 9), (55, 40, 12), (60, 90, 18), (45, 80, 14), (35, 105, 14), (25, 80, 8), (20, 45, 8),   # Europa e Ásia
+    (65, 140, 12), (0, 115, 6), (-25, 135, 12), (-40, 172, 3), (-78, 0, 14), (-78, 120, 14), (-78, -120, 14)]
+
+
+def globo_terrestre():
+    R, CY = 150, 250
+    p = [_torno([(0, 0), (100, 0), (104, 6), (100, 14), (60, 24), (40, 30), (30, 40), (22, 44), (0, 44)], 'nogueira_y', 0, 0, 0, n=24)]
+    p.append(_torno([(0, 44), (12, 44), (12, 70), (0, 70)], 'latao', 0, 0, 0, n=10))
+    inc = math.radians(23.5)
+    def gira(x, y, z):                                                       # eixo inclinado para o lado (em torno de z)
+        return (x * math.cos(inc) - y * math.sin(inc), CY + x * math.sin(inc) + y * math.cos(inc), z)
+    esf = _torno([(R * math.sin(math.radians(a)), -R * math.cos(math.radians(a))) for a in range(0, 181, 10)], 'globo_mar', 0, 0, 0, n=28)
+    _mover(esf, gira)
+    p.append(esf)
+    rnd = random.Random(23)
+    import bmesh
+    centro = lib.P(*G(*gira(0, 0, 0)))
+    def ponto(a, b, h=R + 1.0):
+        x, y, z = h * math.cos(a) * math.cos(b), h * math.sin(a), h * math.cos(a) * math.sin(b)
+        return lib.P(*G(*gira(x, y, z)))
+    N = 14
+    for lat, lon, r in _CONTINENTES:                                          # manchas de terra: leque em dois anéis, rente à esfera
+        for _ in range(3):
+            la, lo = math.radians(lat + rnd.uniform(-r, r) * 0.45), math.radians(lon + rnd.uniform(-r, r) * 0.45)
+            fs = [rnd.uniform(0.55, 1.0) * math.radians(r * 0.75) for _ in range(N)]
+            bm = bmesh.new()
+            c = bm.verts.new(ponto(la, lo))
+            aneis = [[bm.verts.new(ponto(la + f * rr * math.sin(2 * math.pi * k / N), lo + f * rr * math.cos(2 * math.pi * k / N) / max(math.cos(la), 0.3)))
+                      for k, rr in enumerate(fs)] for f in (0.5, 1.0)]
+            fa = [bm.faces.new((c, aneis[0][k], aneis[0][(k + 1) % N])) for k in range(N)]
+            fa += [bm.faces.new((aneis[0][k], aneis[1][k], aneis[1][(k + 1) % N], aneis[0][(k + 1) % N])) for k in range(N)]
+            bm.normal_update()
+            if fa[0].normal.dot(c.co - centro) < 0:                           # virada para fora da esfera
+                for f in fa:
+                    f.normal_flip()
+            me = lib.bpy.data.meshes.new('mancha')
+            bm.to_mesh(me)
+            o = lib.bpy.data.objects.new('mancha', me)
+            lib.bpy.context.scene.collection.objects.link(o)
+            o.data.materials.append(lib.bpy.data.materials.get('globo_terra') or _mat_de('globo_terra'))
+            p.append(o)
+    mer = _anel([(R + 6, -3), (R + 12, -3), (R + 12, 3), (R + 6, 3)], 'latao', 0, 0, 0, n=40, eixo=(0, 0, 1))   # meridiano
+    _mover(mer, gira)
+    p.append(mer)
+    p.append(cil(gira(0, -R - 14, 0), gira(0, R + 14, 0), 4, 'latao', n=8))
+    a, b = gira(0, -R - 12, 0), (0, 70, 0)
+    p.append(_fio([b, (b[0] + (a[0] - b[0]) * 0.5, (a[1] + b[1]) / 2, 0), a], 7, 'latao', res=2))
+    parte('globo', p, origem=G(0, 0, 0), grupo='A')
+
+
+def _mat_de(nome):
+    o = _torno([(0, 0), (1, 0), (0, 1)], nome, n=3)
+    m = o.data.materials[0]
+    lib.bpy.data.objects.remove(o)
+    return m
+
+
+def _anel(prof, mat, x=0, y=0, z=0, n=20, eixo=(0, 1, 0)):
+    return lib.lathe([(h, r) for r, h in prof], mat, n=n, c0=G(x, y, z), eixo=G(*eixo), anel=True)
+
+
+# ---------------------------------------------------------------------------- CESTA DE COMPRAS
+def cesta_compras():
+    V = 'plastico_vermelho'
+    X0, Z0, X1, Z1, H = 235, 145, 205, 120, 300                               # meia largura e meio fundo em cima e embaixo
+    def lado(f, y):                                                           # contorno na altura y (f de 0 embaixo a 1 em cima)
+        x, z = X1 + (X0 - X1) * f, Z1 + (Z0 - Z1) * f
+        return [(-x, y, -z), (x, y, -z), (x, y, z), (-x, y, z)]
+    p = [caixa(-X1, X1, 0, 8, -Z1, Z1, V, 2.0)]                               # fundo
+    for k in range(9):
+        x = -X1 + 20 + k * (2 * X1 - 40) / 8
+        p.append(caixa(x - 3, x + 3, -3, 0, -Z1 + 6, Z1 - 6, V))                # pezinhos de baixo
+    for k in range(7):                                                        # arcos deitados das paredes
+        f = (k + 0.5) / 7
+        p.append(_fio(lado(f, 12 + f * (H - 30)), 4, V, fechado=True, res=1))
+    p.append(_fio(lado(1, H - 8), 9, V, fechado=True, res=1))                  # borda grossa
+    n = 30
+    for k in range(n):                                                        # montantes
+        t = (k + 0.5) / n
+        a = _no_perim(lado(0, 6), t)
+        b = _no_perim(lado(1, H - 8), t)
+        p.append(cil(a, b, 4, V, n=5))
+    for s in (-1, 1):                                                         # alças deitadas para fora
+        arco = [(s * (X0 - 20), H - 4, -110)] + [(s * (X0 + 40 + 30 * math.sin(math.radians(t))), H - 4 - 28 * math.sin(math.radians(t)), -110 * math.cos(math.radians(t))) for t in range(20, 180, 20)] + [(s * (X0 - 20), H - 4, 110)]
+        p.append(_fio(arco, 7, 'plastico_preto', res=2))
+    p.append(caixa(-60, 60, H - 60, H - 20, Z0 + 4, Z0 + 6, 'luminoso', 1.0))   # etiqueta do mercado
+    p.append(letreiro('MERCADO', 12, 0, H - 46, Z0 + 6.2, 'vermelho'))
+    p.append(_torno([(0, 0), (28, 0), (33, 8), (33, 112), (27, 122), (0, 122)], 'lata_laranja', 0, 0, 0, n=12))   # uma lata deitada esquecida
+    _mover(p[-1], lambda x, y, z: (y - 60, 41 + x, -30 + z))
+    parte('cesta', p, origem=G(0, 0, 0), grupo='A')
+
+
+def _no_perim(cs, t):
+    lados = [math.dist(cs[i], cs[(i + 1) % 4]) for i in range(4)]
+    d = t * sum(lados)
+    for i in range(4):
+        if d <= lados[i] or i == 3:
+            f = min(d / lados[i], 1.0)
+            a, b = cs[i], cs[(i + 1) % 4]
+            return tuple(a[k] + (b[k] - a[k]) * f for k in range(3))
+        d -= lados[i]
+
+
+# ---------------------------------------------------------------------------- CADEIRA DE RODAS
+def _roda(x, y, z, R, raios=24):
+    """Roda grande de cadeira de rodas, no plano yz (eixo x)."""
+    p = [_anel([(R - 22, -14), (R - 6, -16), (R, -8), (R, 8), (R - 6, 16), (R - 22, 14)], 'borracha', x, y, z, n=40, eixo=(1, 0, 0))]   # pneu
+    p.append(_anel([(R - 34, -9), (R - 22, -9), (R - 22, 9), (R - 34, 9)], 'cromo', x, y, z, n=40, eixo=(1, 0, 0)))                        # aro
+    s = 1 if x > 0 else -1
+    p.append(_anel([(R - 40, -5), (R - 30, -5), (R - 30, 5), (R - 40, 5)], 'cromo', x + s * 34, y, z, n=36, eixo=(1, 0, 0)))               # aro de empurrar
+    for k in range(6):
+        a = 2 * math.pi * k / 6
+        p.append(cil((x, y + (R - 30) * math.sin(a), z + (R - 30) * math.cos(a)), (x + s * 34, y + (R - 35) * math.sin(a), z + (R - 35) * math.cos(a)), 3, 'cromo', n=5))
+    p.append(_torno([(0, -30), (30, -30), (30, 30), (0, 30)], 'cromo', x, y, z, n=14, eixo=(1, 0, 0)))                                       # cubo
+    for k in range(raios):
+        a = 2 * math.pi * k / raios
+        dx = 24 if k % 2 else -24
+        p.append(cil((x + dx, y + 24 * math.sin(a + 0.3), z + 24 * math.cos(a + 0.3)), (x, y + (R - 34) * math.sin(a), z + (R - 34) * math.cos(a)), 1.4, 'inox', n=4))
+    return p
+
+
+def _rodizio(x, z):
+    p = [cil((x, 300, z), (x, 210, z), 10, 'cromo', n=8)]
+    p.append(caixa(x - 26, x + 26, 190, 214, z - 50, z + 10, 'cromo', 3.0))
+    for s in (-1, 1):
+        p.append(caixa(x + s * 22 - 3, x + s * 22 + 3, 75, 200, z - 50, z - 30, 'cromo', 1.5))
+    p.append(_torno([(0, -16), (65, -16), (75, -8), (76, 0), (75, 8), (65, 16), (0, 16)], 'borracha', x, 78, z - 40, n=18, eixo=(1, 0, 0)))
+    return p
+
+
+def cadeira_rodas():
+    A, W, ZT, ZF = 'cromo', 230, -200, 280                                    # meia largura do assento, eixo das rodas, frente
+    p = []
+    for s in (-1, 1):
+        x = s * W
+        p += _roda(s * 300, 300, ZT, 300)
+        p.append(cil((s * 300, 300, ZT), (x, 300, ZT), 9, A, n=8))             # eixo
+        p.append(_fio([(x, 960, -330), (x, 880, -320), (x, 520, -280), (x, 300, -250), (x, 300, ZF), (x, 520, ZF - 20), (x, 520, -250)], 12, A, res=2))   # quadro lateral
+        p.append(cil((x, 960, -330), (x, 1000, -420), 12, A, n=10))           # manopla
+        p.append(_torno([(0, 0), (16, 0), (17, 6), (17, 110), (16, 116), (0, 116)], 'borracha', 0, 0, 0, n=10, eixo=(0, 0.4, -0.92)))
+        _mover(p[-1], lambda a, b, c, x=x: (x + a, 960 + b + 22, -330 + c - 50))
+        p.append(_fio([(x, 520, 200), (x, 700, 190), (x, 700, -180), (x, 560, -260)], 10, A, res=2))      # braço
+        p.append(caixa(x - 25, x + 25, 700, 728, -170, 170, 'plastico_preto', 8.0))                      # apoio de braço
+        p += _rodizio(s * (W - 10), ZF)
+        p.append(_fio([(x, 520, ZF - 10), (x - s * 10, 300, ZF + 90), (x - s * 10, 140, ZF + 150)], 10, A, res=2))   # perna do apoio de pé
+        p.append(caixa(x - s * 10 - 95 * (s > 0) - 5 * (s < 0), x - s * 10 + 95 * (s < 0) + 5 * (s > 0), 130, 142, ZF + 120, ZF + 240, 'plastico_preto', 4.0))   # apoio de pé
+    p.append(cil((-W, 300, -250), (W, 300, ZF - 30), 9, A, n=8))               # X dobrável embaixo do assento
+    p.append(cil((W, 300, -250), (-W, 300, ZF - 30), 9, A, n=8))
+    assento = caixa(-W + 6, W - 6, 508, 520, -250, ZF - 20, 'pano_azul', 4.0)
+    _mover(assento, lambda x, y, z: (x, y - 18 * (1 - (x / W) ** 2), z))      # lona cede no meio
+    p.append(assento)
+    enc = caixa(-W + 6, W - 6, 530, 900, -2, 6, 'pano_azul', 3.0)
+    _mover(enc, lambda x, y, z: (x, y, -300 - (y - 530) * 0.08 + z - 14 * (1 - (x / W) ** 2)))
+    p.append(enc)
+    parte('cadeira', p, origem=G(0, 0, 0), grupo='A')
+
+
+# ---------------------------------------------------------------------------- BIOMBO
+def biombo():
+    A, H, L = 'cromo', 1700, 540
+    # três folhas em zigue-zague, vista de cima
+    cantos = [(-810, -60), (-280, 60), (280, -60), (810, 60)]
+    p = []
+    for i in range(3):
+        (xa, za), (xb, zb) = cantos[i], cantos[i + 1]
+        if i == 0:
+            p.append(_fio([(xa, 120, za), (xa, H, za)], 12, A, res=1))
+        p.append(_fio([(xb, 120, zb), (xb, H, zb)], 12, A, res=1))
+        for y in (300, H - 40):
+            p.append(cil((xa, y, za), (xb, y, zb), 9, A, n=8))
+        # cortina franzida entre as barras
+        n = 26
+        pts = []
+        for k in range(n + 1):
+            f = k / n
+            x, z = xa + (xb - xa) * f, za + (zb - za) * f
+            nx, nz = -(zb - za) / math.dist((xa, za), (xb, zb)), (xb - xa) / math.dist((xa, za), (xb, zb))
+            o = 14 * math.sin(f * math.pi * 12)
+            pts.append((x + nx * o, z + nz * o))
+        for k in range(n):
+            (x0, z0), (x1, z1) = pts[k], pts[k + 1]
+            p.append(planta(_quad(x0, z0, x1, z1), 320, H - 60, 'cortina_verde'))
+        for k in range(10):                                                    # argolas
+            f = (k + 0.5) / 10
+            x, z = xa + (xb - xa) * f, za + (zb - za) * f
+            p.append(_anel([(10, -3), (14, -3), (14, 3), (10, 3)], A, x, H - 52, z, n=10, eixo=(0, 0, 1)))
+    for x, z in cantos:                                                        # rodízios
+        p.append(caixa(x - 18, x + 18, 100, 122, z - 18, z + 18, A, 2.0))
+        p.append(caixa(x - 12, x + 12, 40, 100, z - 30, z + 4, 'zincado', 1.5))
+        p.append(_torno([(0, -10), (34, -10), (40, -4), (40, 4), (34, 10), (0, 10)], 'borracha', x, 40, z - 18, n=14, eixo=(1, 0, 0)))
+        p.append(_torno([(0, 0), (14, 0), (14, 10), (8, 14), (0, 14)], 'plastico_preto', x, H, z, n=10))
+    parte('biombo', p, origem=G(0, 0, 0), grupo='A')
+
+
+def _quad(x0, z0, x1, z1):
+    """Faixa fina de cortina (2 mm) entre dois pontos vistos de cima."""
+    d = math.dist((x0, z0), (x1, z1)) or 1
+    nx, nz = -(z1 - z0) / d, (x1 - x0) / d
+    pts = [(x0 - nx, z0 - nz), (x1 - nx, z1 - nz), (x1 + nx, z1 + nz), (x0 + nx, z0 + nz)]
+    area = sum(a[0] * b[1] - b[0] * a[1] for a, b in zip(pts, pts[1:] + pts[:1]))
+    return pts if area > 0 else pts[::-1]
+
+
+FORMAS = {'freezer_horizontal': freezer_horizontal, 'mesa_maquina_escrever': mesa_maquina_escrever, 'armario_remedios': armario_remedios, 'maca': maca, 'globo_terrestre': globo_terrestre, 'cesta_compras': cesta_compras,
+          'cadeira_rodas': cadeira_rodas, 'biombo': biombo}

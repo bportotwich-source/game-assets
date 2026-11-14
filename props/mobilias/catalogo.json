@@ -5312,10 +5312,11 @@
    "tamanho_m": [
     0.93,
     1.5,
-    0.47
+    0.466
    ],
-   "triangulos": 4580,
-   "kb": 218.9
+   "triangulos": 9351,
+   "kb": 1163.0,
+   "gerador": "moveis_realistas/comercio/gerar.py"
   },
   {
    "id": "freezer_sorvete",
@@ -5340,12 +5341,12 @@
    "observacao": "sorvete derretido: só o picolé de água (sede -10)",
    "arquivo": "mobilias/freezer_sorvete.glb",
    "tamanho_m": [
-    1.2,
-    0.877,
-    0.662
+    1.208,
+    0.88,
+    0.664
    ],
-   "triangulos": 224,
-   "kb": 36.1,
+   "triangulos": 5071,
+   "kb": 559.2,
    "partes": [
     {
      "no": "tampa_1",
@@ -5375,7 +5376,8 @@
       0
      ]
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/comercio/gerar.py"
   },
   {
    "id": "calibrador_pneu",
@@ -6115,11 +6117,12 @@
    "arquivo": "mobilias/relogio_ponto.glb",
    "tamanho_m": [
     0.96,
-    0.8,
-    0.22
+    0.83,
+    0.196
    ],
-   "triangulos": 1328,
-   "kb": 74.6
+   "triangulos": 6249,
+   "kb": 798.4,
+   "gerador": "moveis_realistas/comercio/gerar.py"
   },
   {
    "id": "paleteira",
@@ -6545,12 +6548,13 @@
    "observacao": "com bateria e gás, ergue escombros pesados",
    "arquivo": "mobilias/empilhadeira.glb",
    "tamanho_m": [
-    1.2,
-    2.5,
-    3.0
+    1.244,
+    2.528,
+    2.99
    ],
-   "triangulos": 6448,
-   "kb": 310.3
+   "triangulos": 10756,
+   "kb": 1621.9,
+   "gerador": "moveis_realistas/comercio/gerar.py"
   },
   {
    "id": "carcaca_carro",

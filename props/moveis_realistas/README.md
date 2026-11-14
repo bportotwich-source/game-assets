@@ -440,3 +440,15 @@ com tanque de óleo velho, um cesto mergulhado e outro escorrendo, termostato, l
 chapa de lanchonete sobre mesa de inox com quatro registros, crosta queimada, espátula, bisnagas, calha de gordura e
 botijão de gás com mangueira na prateleira de baixo (`chapa_lanchonete`). Materiais encadeados de `sortidos/`.
 `python3 gerar.py todas`.
+
+## comercio/ (lote 25)
+
+Freezer de sorvete de picolés com frente estampada (marca inventada), aro azul, tampas de vidro transparente que
+correm de lado (`tampa_1` e `tampa_2`, com as malhas `vidro_tampa_*`) e, dentro, água do que derreteu, caixas de
+picolé, potes e picolés soltos (`freezer_sorvete`); expositor de óleo de motor de posto, estante vermelha com
+travessas em X, frascos de 1 L de três tipos com vagas dos levados, galões de 4 L, funil e placa no alto
+(`expositor_oleo`); relógio de ponto de parede com dois porta-cartões de dez bolsos, cartões com marcações, mostrador
+parado, janela da data e um cartão enfiado na fenda (`relogio_ponto`); empilhadeira a gás com pneus de gomos,
+contrapeso, banco, volante, alavancas, proteção de cima com giroflex e faróis, botijão deitado atrás, torre com
+correntes e cilindros, grade de encosto e garfos (`empilhadeira`). Materiais encadeados de `lanchonete/`.
+`python3 gerar.py todas`.

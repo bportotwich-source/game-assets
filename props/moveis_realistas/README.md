@@ -379,3 +379,11 @@ levantado, grades abaixadas e suporte de soro (`maca`). No lote 18: globo terres
 rentes à esfera (`globo_terrestre`), cesta de compras de plástico (`cesta_compras`), cadeira de rodas de raios
 (`cadeira_rodas`) e biombo de três folhas com cortina franzida (`biombo`). Materiais encadeados de `mercado/`. Os vidros são malhas filhas
 das tampas e portas (`vidro_*`), trocadas pelo vidro transparente liso no gerar.py. `python3 gerar.py todas`.
+
+## variados/ (lote 19)
+
+Carrinho de emergência vermelho com desfibrilador, cilindro de oxigênio e gaveta de cima que abre
+(`carrinho_emergencia`, gaveta_1), estante porta-pallet de dois vãos com os pallets realistas de `servicos/` e caixas
+(`porta_pallet`), prateleira de pães de madeira com prateleiras inclinadas (`prateleira_padaria`) e beliche de abrigo de
+tubo de aço com estrado de fitas, colchões, travesseiros e escada (`beliche`). Materiais encadeados de `publico/`.
+`python3 gerar.py todas`.

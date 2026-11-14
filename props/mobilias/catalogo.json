@@ -1165,12 +1165,13 @@
    ],
    "arquivo": "mobilias/prateleira_padaria.glb",
    "tamanho_m": [
-    1.22,
+    1.2,
     1.63,
-    0.52
+    0.5
    ],
-   "triangulos": 12560,
-   "kb": 1033.5
+   "triangulos": 7905,
+   "kb": 775.1,
+   "gerador": "moveis_realistas/variados/gerar.py"
   },
   {
    "id": "mesa_escritorio",
@@ -1511,12 +1512,13 @@
    "vagas": 2,
    "arquivo": "mobilias/beliche.glb",
    "tamanho_m": [
-    0.944,
+    1.01,
     1.75,
-    2.027
+    2.064
    ],
-   "triangulos": 7568,
-   "kb": 655.0
+   "triangulos": 5460,
+   "kb": 688.2,
+   "gerador": "moveis_realistas/variados/gerar.py"
   },
   {
    "id": "mesa_radio",
@@ -4858,12 +4860,12 @@
    "colisao": "caixa",
    "arquivo": "mobilias/carrinho_emergencia.glb",
    "tamanho_m": [
-    0.901,
-    1.091,
-    0.59
+    0.892,
+    1.264,
+    0.593
    ],
-   "triangulos": 4180,
-   "kb": 199.7,
+   "triangulos": 4548,
+   "kb": 502.3,
    "partes": [
     {
      "no": "gaveta_1",
@@ -4879,7 +4881,8 @@
       0.3
      ]
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/variados/gerar.py"
   },
   {
    "id": "cofres_aluguel",
@@ -6479,12 +6482,13 @@
    "interacao": "dá para escalar (2 níveis): vigia dentro do armazém",
    "arquivo": "mobilias/porta_pallet.glb",
    "tamanho_m": [
-    2.74,
+    2.82,
     3.6,
-    1.24
+    1.32
    ],
-   "triangulos": 28240,
-   "kb": 1946.3
+   "triangulos": 28510,
+   "kb": 2351.7,
+   "gerador": "moveis_realistas/variados/gerar.py"
   },
   {
    "id": "empilhadeira",

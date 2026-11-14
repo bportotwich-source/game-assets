@@ -369,3 +369,11 @@ Geladeira vertical de bebidas (`geladeira_bebidas`, porta de vidro com a dobradi
 arame (`carrinho_compras`). Materiais encadeados de `casa/`. O vidro da porta é uma malha filha da porta (`vidro_porta`)
 que o gerar.py troca pelo vidro transparente liso (`fabrica.materiais_lisos`), para as bebidas aparecerem.
 `python3 gerar.py todas`.
+
+## publico/ (lote 17)
+
+Freezer horizontal com tampas de correr de vidro (`freezer_horizontal`, tampa_esq e tampa_dir), mesa de aço de repartição
+com máquina de escrever, papéis, carimbo e telefone de disco (`mesa_maquina_escrever`, gaveta_1), armário de remédios
+com portas de vidro e prateleiras cheias (`armario_remedios`, porta_esq e porta_dir) e maca hospitalar com encosto
+levantado, grades abaixadas e suporte de soro (`maca`). Materiais encadeados de `mercado/`. Os vidros são malhas filhas
+das tampas e portas (`vidro_*`), trocadas pelo vidro transparente liso no gerar.py. `python3 gerar.py todas`.

@@ -843,12 +843,12 @@
    ],
    "arquivo": "mobilias/escrivaninha.glb",
    "tamanho_m": [
-    1.2,
-    1.187,
-    0.624
+    1.18,
+    1.133,
+    0.616
    ],
-   "triangulos": 2256,
-   "kb": 182.6,
+   "triangulos": 6922,
+   "kb": 856.0,
    "partes": [
     {
      "no": "gaveta_1",
@@ -906,7 +906,8 @@
       0.3
      ]
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/casa/gerar.py"
   },
   {
    "id": "berco",
@@ -1415,12 +1416,13 @@
    "empurrar": true,
    "arquivo": "mobilias/carrinho_compras.glb",
    "tamanho_m": [
-    0.56,
-    1.016,
-    1.001
+    0.573,
+    1.015,
+    1.008
    ],
-   "triangulos": 1544,
-   "kb": 75.8
+   "triangulos": 4452,
+   "kb": 743.5,
+   "gerador": "moveis_realistas/mercado/gerar.py"
   },
   {
    "id": "bancada_trabalho",
@@ -3169,12 +3171,13 @@
    "esconde": "alçapão ou dinheiro por baixo (evento)",
    "arquivo": "mobilias/tapete_sala.glb",
    "tamanho_m": [
-    2.1,
+    2.134,
     0.008,
     1.4
    ],
-   "triangulos": 732,
-   "kb": 145.6
+   "triangulos": 2272,
+   "kb": 932.1,
+   "gerador": "moveis_realistas/casa/gerar.py"
   },
   {
    "id": "vitrola",
@@ -5428,10 +5431,10 @@
    "tamanho_m": [
     0.7,
     2.0,
-    0.687
+    0.713
    ],
-   "triangulos": 3324,
-   "kb": 162.3,
+   "triangulos": 6991,
+   "kb": 1366.7,
    "partes": [
     {
      "no": "porta",
@@ -5444,7 +5447,8 @@
      "eixo": "y",
      "abre_graus": 100
     }
-   ]
+   ],
+   "gerador": "moveis_realistas/mercado/gerar.py"
   },
   {
    "id": "cesta_compras",

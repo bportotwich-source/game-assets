@@ -387,3 +387,13 @@ Carrinho de emergência vermelho com desfibrilador, cilindro de oxigênio e gave
 (`porta_pallet`), prateleira de pães de madeira com prateleiras inclinadas (`prateleira_padaria`) e beliche de abrigo de
 tubo de aço com estrado de fitas, colchões, travesseiros e escada (`beliche`). Materiais encadeados de `publico/`.
 `python3 gerar.py todas`.
+
+## atendimento/ (lote 20)
+
+Mural de cortiça de parede com moldura, cabeçalho escrito à mão, doze fotos 3x4 com nome (rosto, cabelo, ombros),
+recados amarelos, tachinhas e furos antigos (`mural_desaparecidos`); suporte de soro de cinco pés com rodízios, trava
+de altura, quatro ganchos, bolsa de 500 ml com rótulo, câmara de gotas, pinça e equipo preso com esparadrapo
+(`suporte_soro`); banco de praça de ferro fundido verde descascando com ripas de madeira gasta, parafusos e um jornal
+esquecido (`banco_praca`); balcão de recepção com painéis almofadados, tampo de granito, campainha, livro de hóspedes,
+placa, mesa de dentro com telefone, monitor de tubo e fichas, e quadro de chaves numeradas na parede de trás
+(`balcao_recepcao`, nós `balcao` e `quadro_chaves`). Materiais encadeados de `publico/`. `python3 gerar.py todas`.

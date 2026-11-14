@@ -353,3 +353,11 @@ Classes novas: `assento_azul`, `aco_banco`, `liner_branco`, `chocolate` (e `capa
 | `pilha_livros` | 0,50 × 0,25 × 0,34 m | 0,7 mil | 1 × 512 | Sete livros deitados empilhados meio tortos e um caído ao lado. |
 
 Classes novas: `lasca`, `pasta_parda`, `carimbo_azul` (e `estofado_verde`, `tacha` repetidas da sala). Refazer: `python3 moveis_realistas/sinais/gerar.py todas 2048 /tmp/saida`.
+
+## casa/ (lote 15)
+
+Mesa de lanchonete com dois sofás (`mesa_booth`), vitrola de móvel (`vitrola`, tampa abre), máquina de lavar de frente
+(`maquina_lavar`, porta e gaveta de sabão) e banheira de pé (`banheira`). Materiais encadeados de `sinais/`.
+A casca da banheira é um torneado só esticado em estádio (`_estadio`), com a louça de dentro como segundo material:
+dois torneados abertos levam tampa nas pontas e cobrem o vão. Aros abertos (sanfona e aro da porta) usam `_anel`.
+`python3 gerar.py todas`.

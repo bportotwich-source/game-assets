@@ -429,3 +429,14 @@ sobre mesa de pernas torneadas, catálogos encadernados e uma caixa de fichas em
 abrem cheias de fichas (`fichario_catalogo`); jukebox de arco com tubos de luz acesos (malhas `luz_ambar` e
 `luz_vermelha`), vidro transparente (`vidro_frente`) mostrando o toca-discos e o carrossel de discos, painel de
 seleção, moedeira e grade de cromo (`jukebox`). Materiais encadeados de `utilidades/`. `python3 gerar.py todas`.
+
+## lanchonete/ (lote 24)
+
+Máquina de refrigerante de balcão de inox com painel de três marcas inventadas (COLA, GUARANÁ, LARANJA), seis válvulas
+com alavanca, uma emperrada, bandeja de pingos com grelha e copos de papel esquecidos (`maquina_refrigerante`);
+masseira espiral de padaria com base, coluna e cabeçote pintados, bacia de inox com a massa, espiral, barra
+quebra-massa, grade de proteção, painel de botões e botão de emergência (`masseira`); fritadeira industrial de piso
+com tanque de óleo velho, um cesto mergulhado e outro escorrendo, termostato, luz piloto e porta (`fritadeira`);
+chapa de lanchonete sobre mesa de inox com quatro registros, crosta queimada, espátula, bisnagas, calha de gordura e
+botijão de gás com mangueira na prateleira de baixo (`chapa_lanchonete`). Materiais encadeados de `sortidos/`.
+`python3 gerar.py todas`.

@@ -1,4 +1,4 @@
-"""Gera a mesa de lanchonete, a vitrola, a máquina de lavar e a banheira:
+"""Gera a mesa de lanchonete, a vitrola, a máquina de lavar, a banheira, o tapete de sala e a escrivaninha:
 modelo, UVs, bake das texturas e o GLB do jogo em props/mobilias, e atualiza o registro em props/mobilias/catalogo.json.
 
 uso: python3 gerar.py [forma|todas] [resolução] [saída]     (precisa de: pip install bpy pillow numpy)
@@ -15,8 +15,8 @@ from PIL import Image
 PROPS = os.path.dirname(os.path.dirname(AQUI))
 GERADOR = 'moveis_realistas/casa/gerar.py'
 # lado da textura de cada grupo dentro do GLB
-TEXTURA = {'mesa_booth': {'A': 2048}, 'vitrola': {'A': 1024, 'B': 512}, 'maquina_lavar': {'A': 1024, 'B': 512}, 'banheira': {'A': 1024}}
-NOME = {'mesa_booth': 'Mesa de lanchonete com dois sofás', 'vitrola': 'Vitrola com discos', 'maquina_lavar': 'Máquina de lavar', 'banheira': 'Banheira de pé'}
+TEXTURA = {'mesa_booth': {'A': 2048}, 'vitrola': {'A': 1024, 'B': 512}, 'maquina_lavar': {'A': 1024, 'B': 512}, 'banheira': {'A': 1024}, 'tapete_sala': {'A': 1024}, 'escrivaninha': {'A': 1024, 'B': 512}}
+NOME = {'mesa_booth': 'Mesa de lanchonete com dois sofás', 'vitrola': 'Vitrola com discos', 'maquina_lavar': 'Máquina de lavar', 'banheira': 'Banheira de pé', 'tapete_sala': 'Tapete de sala', 'escrivaninha': 'Escrivaninha com luminária'}
 # a porta da máquina gira na dobradiça do aro novo; o resto dos nós é o do móvel antigo (o catálogo já tem)
 PARTES = {'maquina_lavar': [{'no': 'gaveta_sabao', 'origem': [0, 0, 0], 'tipo': 'gaveta', 'desliza': [0, 0, 0.18]},
                             {'no': 'porta', 'origem': [-0.197, 0.4, 0.31], 'tipo': 'porta', 'eixo': 'y', 'abre_graus': -110}]}

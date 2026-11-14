@@ -354,10 +354,18 @@ Classes novas: `assento_azul`, `aco_banco`, `liner_branco`, `chocolate` (e `capa
 
 Classes novas: `lasca`, `pasta_parda`, `carimbo_azul` (e `estofado_verde`, `tacha` repetidas da sala). Refazer: `python3 moveis_realistas/sinais/gerar.py todas 2048 /tmp/saida`.
 
-## casa/ (lote 15)
+## casa/ (lotes 15 e 16)
 
 Mesa de lanchonete com dois sofás (`mesa_booth`), vitrola de móvel (`vitrola`, tampa abre), máquina de lavar de frente
-(`maquina_lavar`, porta e gaveta de sabão) e banheira de pé (`banheira`). Materiais encadeados de `sinais/`.
+(`maquina_lavar`, porta e gaveta de sabão), banheira de pé (`banheira`), tapete de sala com barra, losangos, medalhão e
+franjas (`tapete_sala`) e escrivaninha de gaveteiro com luminária de banqueiro (`escrivaninha`, gaveta_1..3 e gaveta_centro). Materiais encadeados de `sinais/`.
 A casca da banheira é um torneado só esticado em estádio (`_estadio`), com a louça de dentro como segundo material:
 dois torneados abertos levam tampa nas pontas e cobrem o vão. Aros abertos (sanfona e aro da porta) usam `_anel`.
+`python3 gerar.py todas`.
+
+## mercado/ (lote 16)
+
+Geladeira vertical de bebidas (`geladeira_bebidas`, porta de vidro com a dobradiça na direita) e carrinho de compras de
+arame (`carrinho_compras`). Materiais encadeados de `casa/`. O vidro da porta é uma malha filha da porta (`vidro_porta`)
+que o gerar.py troca pelo vidro transparente liso (`fabrica.materiais_lisos`), para as bebidas aparecerem.
 `python3 gerar.py todas`.

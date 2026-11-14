@@ -1,7 +1,8 @@
-"""Mesa de lanchonete com dois sofás, vitrola de móvel, máquina de lavar de frente e banheira de pé no nível realista.
+"""Mesa de lanchonete com dois sofás, vitrola de móvel, máquina de lavar de frente, banheira de pé, tapete de sala e
+escrivaninha com luminária no nível realista.
 
 Medidas em mm nas coordenadas do jogo (ver ../base.py): x largura, y altura, +z a frente. As medidas de fora e os nós que
-abrem (tampa da vitrola, porta e gaveta de sabão da máquina) são os dos móveis antigos de props/mobilias."""
+abrem (tampa da vitrola, porta e gaveta de sabão da máquina, gavetas da escrivaninha) são os dos móveis antigos de props/mobilias."""
 import math, os, random, importlib.util
 import lib
 from base import G, caixa, cil, planta, perfil, frente, cut, bevel, parte, letreiro
@@ -233,4 +234,105 @@ def banheira():
     parte('banheira', p, origem=G(0, 0, 0), grupo='A')
 
 
-FORMAS = {'mesa_booth': mesa_booth, 'vitrola': vitrola, 'maquina_lavar': maquina_lavar, 'banheira': banheira}
+# ---------------------------------------------------------------------------- TAPETE DE SALA
+def _retangulo(x0, x1, z0, z1, l, y0, y1, mat):
+    """Faixa retangular de largura l (moldura) deitada no chão."""
+    return [caixa(x0, x1, y0, y1, z0, z0 + l, mat), caixa(x0, x1, y0, y1, z1 - l, z1, mat),
+            caixa(x0, x0 + l, y0, y1, z0 + l, z1 - l, mat), caixa(x1 - l, x1, y0, y1, z0 + l, z1 - l, mat)]
+
+
+def tapete_sala():
+    X, Z = 1000, 700
+    p = [caixa(-X, X, 0, 5, -Z, Z, 'la_vinho', 1.5)]                         # campo
+    p += _retangulo(-X + 30, X - 30, -Z + 30, Z - 30, 110, 5, 5.8, 'la_azul')   # barra larga
+    p += _retangulo(-X + 50, X - 50, -Z + 50, Z - 50, 14, 5.8, 6.4, 'la_creme')
+    p += _retangulo(-X + 158, X - 158, -Z + 158, Z - 158, 10, 5, 5.8, 'la_creme')
+    for k in range(18):                                                       # losangos na barra
+        for z, x0, x1 in ((-Z + 85, -X + 120, X - 120), (Z - 85, -X + 120, X - 120)):
+            x = x0 + (x1 - x0) * k / 17
+            p.append(_poligono_t([(x - 30, z), (x, z - 28), (x + 30, z), (x, z + 28)], 5.8, 6.4, 'la_creme'))
+    for k in range(12):
+        for x, z0, z1 in ((-X + 85, -Z + 120, Z - 120), (X - 85, -Z + 120, Z - 120)):
+            z = z0 + (z1 - z0) * k / 11
+            p.append(_poligono_t([(x - 28, z), (x, z - 30), (x + 28, z), (x, z + 30)], 5.8, 6.4, 'la_creme'))
+    # medalhão do meio e cantoneiras
+    def estrela(cx, cz, r0, r1, n, y0, y1, mat):
+        pts = [(cx + (r1 if i % 2 == 0 else r0) * math.cos(math.pi * i / n) * 1.25, cz + (r1 if i % 2 == 0 else r0) * math.sin(math.pi * i / n)) for i in range(2 * n)]
+        return _poligono_t(pts, y0, y1, mat)
+    p.append(estrela(0, 0, 200, 300, 8, 5, 5.8, 'la_azul'))
+    p.append(estrela(0, 0, 110, 180, 8, 5.8, 6.4, 'la_creme'))
+    p.append(estrela(0, 0, 40, 70, 6, 6.4, 7.0, 'la_vinho'))
+    for sx in (-1, 1):
+        for sz in (-1, 1):
+            cx, cz = sx * (X - 168), sz * (Z - 168)
+            p.append(_poligono_t([(cx, cz), (cx - sx * 200, cz), (cx, cz - sz * 160)], 5, 5.8, 'la_azul'))
+    for sx in (-1, 1):                                                        # franjas nas pontas
+        for k in range(46):
+            z = -Z + 20 + k * (2 * Z - 40) / 45
+            p.append(cil((sx * X, 2.5, z), (sx * (X + 55 + (k * 7) % 13), 1.6, z + ((k * 5) % 7 - 3)), 2.2, 'franja', n=4))
+    o = lib.join(p, 'tapete')
+    parte('tapete', [o], origem=G(0, 0, 0), grupo='A')
+
+
+def _poligono_t(pts, y0, y1, mat):
+    area = sum(a[0] * b[1] - b[0] * a[1] for a, b in zip(pts, pts[1:] + pts[:1]))
+    return planta(pts if area > 0 else pts[::-1], y0, y1, mat)
+
+
+# ---------------------------------------------------------------------------- ESCRIVANINHA
+def escrivaninha():
+    N, X, Z0, Z1, T = 'nogueira_', 580, -290, 270, 730
+    PX0, PX1 = 110, X - 10                                                    # gaveteiro da direita
+    c = caixa(PX0, PX1, 70, T, Z0, Z1, N + 'y')
+    for y0, y1 in ((90, 290), (310, 490), (510, 700)):
+        cut(c, caixa(PX0 + 22, PX1 - 22, y0, y1, Z0 + 20, Z1 + 5, N + 'y'))
+    p = [c]
+    p.append(caixa(PX0 + 6, PX1 - 6, 0, 70, Z0 + 10, Z1 - 30, 'nogueira_x'))        # rodapé recuado
+    lado = caixa(-X + 10, -X + 40, 0, T, Z0, Z1, N + 'y', 2.0)                     # lateral da esquerda
+    cut(lado, caixa(-X + 5, -X + 45, -5, 120, Z0 + 70, Z1 - 70, N + 'y'))          # recorte do pé
+    p.append(lado)
+    p.append(caixa(-X + 40, PX0, 300, T, Z0 + 10, Z0 + 28, N + 'y'))                # painel de trás
+    c2 = caixa(-X + 40, PX0, 610, T, Z0 + 28, Z1, N + 'x')                          # caixa da gaveta do meio
+    cut(c2, caixa(-X + 60, PX0 - 20, 625, 712, Z0 + 40, Z1 + 5, N + 'x'))
+    cut(c2, caixa(-X + 41, PX0 - 1, 600, 625, Z0 + 27, Z1 + 5, N + 'x'))            # vão das pernas por baixo
+    p.append(c2)
+    p += q._tampo(X + 10, T, Z0 - 6, Z1 + 30)
+    # mata-borrão, livro, porta-lápis e a luminária de banqueiro
+    TY = T + 26
+    p.append(caixa(-260, 240, TY, TY + 3, -60, 230, 'couro', 2.0))
+    p.append(caixa(-252, 232, TY + 3, TY + 3.6, -52, 222, 'pano_verde'))
+    rnd = random.Random(8)
+    o = sala._livro(40, 230, 160, 'capa_2', rnd)
+    sala._por(o, 300, TY + 40, 60, deitado=True)
+    p.append(o)
+    p.append(cil((470, TY, -150), (470, TY + 100, -150), 36, 'latao_fosco', n=16))
+    for k in range(3):
+        a = k * 2.1
+        p.append(cil((470 + 12 * math.cos(a), TY + 50, -150 + 12 * math.sin(a)), (470 + 24 * math.cos(a), TY + 170 + k * 10, -150 + 24 * math.sin(a)), 3.6, ('lapis', 'tinta_preta', 'plastico_azul')[k], n=6))
+    lx, lz = -380, -150
+    p.append(_torno([(0, 0), (110, 0), (112, 6), (105, 18), (70, 26), (24, 30), (0, 30)], 'latao', lx, TY, lz, n=24))
+    p.append(_torno([(10, 30), (10, 300), (0, 300)], 'latao', lx, TY, lz, n=10))
+    p.append(cil((lx - 150, TY + 300, lz + 40), (lx + 150, TY + 300, lz + 40), 8, 'latao', n=8))
+    p.append(cil((lx, TY + 290, lz), (lx, TY + 300, lz + 40), 8, 'latao', n=8))
+    v = perfil([(-110, 0), (-100, 0), (-55, 34), (0, 52), (55, 34), (100, 0), (110, 0), (55, 46), (0, 66), (-55, 46)], lx - 170, lx + 170, 'vidro_verde', 3.0)   # cúpula
+    _mover(v, lambda x, y, z: (x, TY + 312 + y, lz + 50 + z * 0.6))
+    p.append(v)
+    p.append(caixa(lx - 172, lx + 172, TY + 310, TY + 313, lz - 18, lz + 118, 'latao'))
+    p.append(_fio([(lx + 90, TY + 270, lz + 50), (lx + 90, TY + 150, lz + 50)], 1.2, 'latao', res=1))      # cordinha
+    p.append(_torno([(0, 0), (6, 0), (6, 16), (0, 18)], 'latao', lx + 90, TY + 132, lz + 50, n=8))
+    p.append(_fio([(lx - 60, TY + 4, lz - 60), (lx - 120, TY + 2, Z0 + 10), (lx - 120, 500, Z0 - 10), (lx - 100, 20, Z0 - 10)], 3.0, 'plastico_preto', res=2))
+    parte('escrivaninha', p, origem=G(0, 0, 0), grupo='A')
+    for i, (y0, y1) in enumerate(((90, 290), (310, 490), (510, 700))):
+        g = q._gaveta(PX0 + 24, PX1 - 24, y0, y1, Z0 + 30, Z1, pux=((PX0 + PX1) / 2,), esp=20)
+        if i == 0:
+            for k in range(3):
+                g.append(cil((PX0 + 80 + k * 18, y0 + 26, 40), (PX0 + 80 + k * 18, y0 + 26, 90), 7.2, 'cobre', n=8))   # pilhas
+        if i == 1:
+            g.append(caixa(PX0 + 60, PX0 + 250, y0 + 18, y0 + 50, -150, 60, 'papel_livro', 1.0))
+        parte(f'gaveta_{i + 1}', g, origem=G(0, 0, 0), grupo='B')
+    g = q._gaveta(-X + 62, PX0 - 22, 627, 710, Z0 + 50, Z1, pux=(-X / 2 + 60,), esp=20)
+    g.append(_torno([(0, 0), (16, 0), (16, 80), (0, 80)], 'vidro_ambar', -300, 640, 0, n=10, eixo=(0, 0, 1)))   # vidro de remédio deitado
+    parte('gaveta_centro', g, origem=G(0, 0, 0), grupo='B')
+
+
+FORMAS = {'mesa_booth': mesa_booth, 'vitrola': vitrola, 'maquina_lavar': maquina_lavar, 'banheira': banheira, 'tapete_sala': tapete_sala, 'escrivaninha': escrivaninha}

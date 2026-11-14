@@ -255,6 +255,10 @@ def pontos_acessorio(g, reg):
             f = _faixa(v, 1, 0.5 * (y0 + y1) - 0.004, 0.5 * (y0 + y1) + 0.004)
             return [('ref_guarda_mao', raiz, np.array([0.0, 0.5 * (y0 + y1), 0.5 * (f[:, 2].min() + f[:, 2].max())]), 0.0)]
         return [('ref_guarda_mao', raiz, np.array([0.0, y0, 0.5 * (v[:, 2].min() + v[:, 2].max())]), 0.0)]  # batente/curta: palma embaixo
+    if reg['categoria'] == 'guarda_mao' and reg['encaixe'] == 'guarda_mao_m4':   # guarda-mão de troca da M4A1: palma embaixo, no meio
+        v = g.verts_tudo(); zm = 0.5 * (v[:, 2].min() + v[:, 2].max())
+        f = _faixa(v, 2, zm - 0.01, zm + 0.01)
+        return [('ref_guarda_mao', raiz, np.array([0.0, f[:, 1].min(), zm]), 0.0)]
     return []
 
 

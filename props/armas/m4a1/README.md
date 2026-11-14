@@ -42,16 +42,48 @@ python3 empacotar.py saida/m4a1_sem_tex.glb saida/tex m4a1.glb webp
 conferência. Um grupo de textura que já existe em `saida/tex` não é assado de novo;
 `REASSAR=E,F` força os grupos listados.
 
-## Versões de jogo
+## Versões de jogo (peças trocáveis)
 
-`python3 jogo.py saida` grava três montagens em `props/armas/armas/` e as põe no
-`catalogo.json`, no padrão das outras armas (nós `gatilho`, `ferrolho`, `carregador`...,
-`boca_fogo`, `saida_estojo`, `mira_ferro`, pontos `ref_*` e animações embutidas):
+A M4A1 do jogo é uma arma base com encaixes, como o fuzil Vigília (que é feito das mesmas
+peças): `troca.py` diz o que vai em cada GLB e `gerar_troca.py` gera tudo.
 
-| id | Montagem |
+```
+python3 gerar_troca.py catalogo                 # registros no catalogo.json (sem Blender)
+python3 gerar_troca.py base 2048 saida_base     # props/armas/armas/fuzil_m4a1.glb (receptores, cano, punho, carregador de metal)
+python3 gerar_troca.py <acessorio> 1024 saida_x # props/armas/acessorios/<acessorio>.glb
+python3 gerar.py 1024 saida_m4                  # a M4A1 inteira, para as versões leves
+python3 gerar_troca.py montagens saida_m4       # fuzil_m4a1_luneta/_tatico (cópias da base) e as 3 versões leves
+```
+
+Encaixes da base: os do Vigília, nos mesmos lugares (punho, mira, alça, massa, boca, carregador,
+coronha, empunhadura, lanterna, laser, bipé, bandoleira), mais `encaixe_guarda_mao`,
+`encaixe_alavanca` (dentro do nó `alavanca`) e `encaixe_mira_45`. Empunhadura, lanterna, laser,
+bipé, bandoleira, massa e mira a 45° pedem o guarda-mão longo (`requer`); a alça rebatível não
+cabe com a alça de transporte (`proibe`).
+
+| Acessório | Peças da M4A1 | Encaixe |
+| --- | --- | --- |
+| `guarda_mao_classico_m4` | guarda-mão superior e inferior, anel delta, tampa, base de massa com pinos, zarelho da frente | `guarda_mao_m4` |
+| `guarda_mao_longo_m4` | guarda-mão longo, porca do cano, bloco de gás baixo | `guarda_mao_m4` |
+| `alca_transporte_m4` | alça de transporte com a mira, tambor e botão (nó `olho` no furo; `ferro`: não deita as outras miras) | `trilho_mira` |
+| `luneta_m4` | luneta 2-8× e suporte (campo `optica`) | `trilho_mira` |
+| `mira_prismatica_m4` | mira prismática 3×, tampas e suporte (campo `optica`) | `trilho_mira` |
+| `mira_45_m4` | mira reflex e suporte a 45° | `mira_45_m4` |
+| `punho_vazado_m4` | punho vazado | `punho_ar` |
+| `alavanca_ambi_m4` | alavanca de manejo ambidestra | `alavanca_ar` |
+| `coronha_moderna_ar` | tubo vermelho, placa, porca e coronha moderna | `coronha_ar` |
+
+O resto das montagens antigas usa os acessórios que já existem: `quebra_chamas_556`,
+`supressor_556`, `coronha_retratil_ar` (a coronha da M4A1), `coronha_fixa_ar`, `carregador_556_30`,
+`tambor_556_60_tatico`, `empunhadura_angulada`, `empunhadura_vertical`, `lanterna_compacta` e
+`modulo_laser`.
+
+| id | Peças de fábrica |
 | --- | --- |
-| `fuzil_m4a1` | clássica: alça de transporte, trilho quádruplo, coronha retrátil |
-| `fuzil_m4a1_luneta` | guarda-mão longo, supressor, luneta, empunhadura angulada, carregador de polímero, coronha fixa |
-| `fuzil_m4a1_tatico` | guarda-mão longo, supressor, prismática, reflex, laser, lanterna, empunhadura vertical, tambor de 60, punho vazado, tubo vermelho, coronha moderna |
+| `fuzil_m4a1` | guarda-mão clássico, alça de transporte, quebra-chamas, coronha retrátil |
+| `fuzil_m4a1_luneta` | guarda-mão longo, luneta, supressor, empunhadura angulada, carregador de polímero, coronha fixa |
+| `fuzil_m4a1_tatico` | guarda-mão longo, prismática, mira a 45°, supressor, laser, lanterna, empunhadura vertical, tambor de 60, punho vazado, alavanca ambidestra, coronha moderna |
 
-Os acessórios vêm fixos em cada montagem; não usam os nós `encaixe_*` de troca das outras armas.
+As três montagens usam o mesmo modelo base (GLB copiado com a raiz renomeada); a versão leve
+de cada uma (chão, armário) é a montagem de fábrica inteira numa malha só, e o `tamanho_m` do
+catálogo é o dela.

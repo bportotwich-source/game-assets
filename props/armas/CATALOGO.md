@@ -42,15 +42,15 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Coquetel molotov (`coquetel_molotov`) | fogo | - | 40 | 18 m | 0,5/s | 10 m | 1 | 0,7 kg |  | acender, arremessar, inspecionar, ocioso |
 | Bomba de pregos (lata) (`bomba_pregos`) | estilhaços | - | 90 | 15 m | 0,4/s | 60 m | 1 | 0,6 kg |  | acender, arremessar, ocioso |
 | Isca sonora (despertador) (`isca_sonora`) | som | - | 0 | 14 m | 0,5/s | 35 m | 30 | 0,35 kg |  | dar_corda, tocar, arremessar, ocioso |
-| Fuzil M4A1 (`fuzil_m4a1`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,4 kg |  | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, ocioso |
-| Fuzil M4A1 com luneta (`fuzil_m4a1_luneta`) | 5,56 | 30 | 42 | 140 m | 11/s | 60 m | 3000 | 4,3 kg |  | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, ocioso |
-| Fuzil M4A1 tático (`fuzil_m4a1_tatico`) | 5,56 | 60 | 42 | 100 m | 11/s | 60 m | 3000 | 5,2 kg |  | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, ocioso |
+| Fuzil M4A1 (`fuzil_m4a1`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,1 kg | guarda_mao, punho, alavanca, mira, mira_45, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
+| Fuzil M4A1 com luneta (`fuzil_m4a1_luneta`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,1 kg | guarda_mao, punho, alavanca, mira, mira_45, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
+| Fuzil M4A1 tático (`fuzil_m4a1_tatico`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,1 kg | guarda_mao, punho, alavanca, mira, mira_45, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
 
 ## Acessórios
 
 | Acessório | Tipo | Encaixe | Efeito no jogo | Peso | Raridade | Triângulos |
 |---|---|---|---|---|---|---|
-| Protetor de rosca 9 mm (`protetor_rosca_9mm`) | Boca do cano | `boca_rosca_9mm` | - | 0,01 kg | comum | 640 |
+| Protetor de rosca 9 mm (`protetor_rosca_9mm`) | Boca do cano | `boca_rosca_9mm` | - | 0,01 kg | comum | 1536 |
 | Supressor 9 mm (`supressor_9mm`) | Boca do cano | `boca_rosca_9mm` | ruido_m ×0,3, dano ×0,95, alcance_m ×1,05, recuo ×0,85 | 0,2 kg | raro | 5072 |
 | Compensador 9 mm (`compensador_9mm`) | Boca do cano | `boca_rosca_9mm` | recuo ×0,7, ruido_m ×1,15 | 0,04 kg | incomum | 548 |
 | Supressor improvisado (garrafa PET) (`supressor_garrafa`) | Boca do cano | `boca_rosca_9mm` | ruido_m ×0,55, precisao ×0,8 | 0,08 kg | comum | 2672 |
@@ -58,102 +58,102 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Mira laser de trilho (`laser_pistola`) | Trilho | `trilho_curto` | precisao_sem_mirar ×1,35 | 0,06 kg | raro | 848 |
 | Lanterna com laser (`combo_lanterna_laser`) | Trilho | `trilho_curto` | precisao_sem_mirar ×1,35 | 0,15 kg | muito raro | 3224 |
 | Mira de ponto vermelho compacta (`mira_ponto_vermelho_compacta`) | Miras | `mira_ferrolho` | precisao_mirando ×1,25, tempo_mirar ×0,85 | 0,03 kg | raro | 1316 |
-| Carregador 9 mm (15) (`carregador_9mm`) | Carregadores | `carregador_9mm` | - | 0,09 kg | comum | 1192 |
-| Carregador 9 mm estendido (24) (`carregador_9mm_estendido`) | Carregadores | `carregador_9mm` | recarga_s ×1,1 | 0,13 kg | raro | 1386 |
-| Carregador rápido .38 (6) (`carregador_rapido_38`) | Recarga rápida | `recarga_38` | recarga_s ×0,55 | 0,1 kg | incomum | 4484 |
+| Carregador 9 mm (15) (`carregador_9mm`) | Carregadores | `carregador_9mm` | - | 0,09 kg | comum | 3598 |
+| Carregador 9 mm estendido (24) (`carregador_9mm_estendido`) | Carregadores | `carregador_9mm` | recarga_s ×1,1 | 0,13 kg | raro | 3604 |
+| Carregador rápido .38 (6) (`carregador_rapido_38`) | Recarga rápida | `recarga_38` | recarga_s ×0,55 | 0,1 kg | incomum | 6140 |
 | Mira de ponto vermelho para revólver (`mira_ponto_vermelho_revolver`) | Miras | `mira_revolver` | precisao_mirando ×1,3, tempo_mirar ×0,8, alcance_m ×1,2 | 0,12 kg | raro | 2300 |
 | Talas de madeira .38 (`empunhadura_madeira_38`) | Empunhaduras | `punho_38` | - | 0,08 kg | comum | 17598 |
 | Empunhadura de borracha .38 (`empunhadura_borracha_38`) | Empunhaduras | `punho_38` | recuo ×0,8, precisao ×1,05 | 0,1 kg | incomum | 12304 |
 | Coldre de couro (revólver) (`coldre_revolver`) | Coldres | `coldre` | tempo_sacar ×0,7 | 0,22 kg | comum | 1772 |
-| Coronha retrátil (espingarda) (`coronha_retratil_12`) | Coronhas | `coronha_12` | recuo ×0,6, precisao ×1,35 | 0,42 kg | incomum | 15612 |
-| Coronha fixa de polímero (espingarda) (`coronha_fixa_12`) | Coronhas | `coronha_12` | recuo ×0,55, precisao ×1,4 | 0,6 kg | comum | 20172 |
+| Coronha retrátil (espingarda) (`coronha_retratil_12`) | Coronhas | `coronha_12` | recuo ×0,6, precisao ×1,35 | 0,42 kg | incomum | 4478 |
+| Coronha fixa de polímero (espingarda) (`coronha_fixa_12`) | Coronhas | `coronha_12` | recuo ×0,55, precisao ×1,4 | 0,6 kg | comum | 12134 |
 | Tampa do tubo (espingarda) (`tampa_tubo_12`) | Tubo do carregador | `tubo_12` | - | 0,04 kg | comum | 1024 |
 | Prolongador do tubo (+1) (`prolongador_tubo_12`) | Tubo do carregador | `tubo_12` | - | 0,15 kg | raro | 2896 |
 | Choke estendido com portas (`choke_estendido_12`) | Boca do cano | `boca_12` | dispersao_graus ×0,6, alcance_m ×1,3, recuo ×0,9 | 0,07 kg | raro | 1492 |
-| Freio dentado de arrombamento (`freio_rompimento_12`) | Boca do cano | `boca_12` | recuo ×0,85, dano_coronhada ×1,6, ruido_m ×1,1 | 0,12 kg | raro | 1252 |
+| Freio dentado de arrombamento (`freio_rompimento_12`) | Boca do cano | `boca_12` | recuo ×0,85, dano_coronhada ×1,6, ruido_m ×1,1 | 0,12 kg | raro | 2140 |
 | Lanterna de cano (espingarda) (`lanterna_cano_12`) | Lanternas | `cano_12` | - | 0,2 kg | incomum | 6200 |
 | Porta-cartuchos lateral (6) (`porta_cartuchos_lateral_12`) | Porta-cartuchos | `lateral_12` | recarga_s ×0,85 | 0,26 kg | incomum | 6224 |
 | Mira de ponto vermelho de tubo (`mira_ponto_vermelho_tubo`) | Miras | `trilho_mira` | precisao_mirando ×1,3, tempo_mirar ×0,8 | 0,16 kg | raro | 3592 |
 | Bandoleira de náilon (`bandoleira`) | Bandoleiras | `bandoleira` | tempo_sacar ×0,85 | 0,15 kg | comum | 5372 |
-| Luneta 3-9× com retículo iluminado (`luneta_3_9`) | Miras | `trilho_mira` | precisao_mirando ×1,6, tempo_mirar ×1,35, alcance_m ×1,6 | 0,62 kg | raro | 6512 |
-| Luneta 4× fixa (`luneta_4x`) | Miras | `trilho_mira` | precisao_mirando ×1,45, tempo_mirar ×1,2, alcance_m ×1,4 | 0,38 kg | incomum | 5172 |
+| Luneta 3-9× com retículo iluminado (`luneta_3_9`) | Miras | `trilho_mira` | precisao_mirando ×1,6, tempo_mirar ×1,35, alcance_m ×1,6 | 0,62 kg | raro | 9954 |
+| Luneta 4× fixa (`luneta_4x`) | Miras | `trilho_mira` | precisao_mirando ×1,45, tempo_mirar ×1,2, alcance_m ×1,4 | 0,38 kg | incomum | 8843 |
 | Bipé dobrável (`bipe`) | Bipés | `bipe` | precisao_deitado ×1,5, recuo_deitado ×0,6 | 0,36 kg | incomum | 2372 |
-| Protetor de rosca .308 (`protetor_rosca_308`) | Boca do cano | `boca_308` | - | 0,02 kg | comum | 832 |
-| Freio de boca .308 (`freio_boca_308`) | Boca do cano | `boca_308` | recuo ×0,55, ruido_m ×1,2 | 0,11 kg | incomum | 1360 |
+| Protetor de rosca .308 (`protetor_rosca_308`) | Boca do cano | `boca_308` | - | 0,02 kg | comum | 1536 |
+| Freio de boca .308 (`freio_boca_308`) | Boca do cano | `boca_308` | recuo ×0,55, ruido_m ×1,2 | 0,11 kg | incomum | 1396 |
 | Supressor de fuzil .308 (`supressor_308`) | Boca do cano | `boca_308` | ruido_m ×0,35, recuo ×0,8, precisao ×1,03 | 0,55 kg | muito raro | 4512 |
-| Carregador .308 (10) (`carregador_308_10`) | Carregadores | `carregador_308` | - | 0,2 kg | incomum | 1076 |
-| Carregador .308 (5) (`carregador_308_5`) | Carregadores | `carregador_308` | - | 0,13 kg | comum | 1004 |
-| Coronha retrátil (fuzil) (`coronha_retratil_ar`) | Coronhas | `coronha_ar` | recuo ×0,65, precisao ×1,3 | 0,42 kg | incomum | 15612 |
-| Coronha fixa (fuzil) (`coronha_fixa_ar`) | Coronhas | `coronha_ar` | recuo ×0,6, precisao ×1,35 | 0,6 kg | comum | 20172 |
+| Carregador .308 (10) (`carregador_308_10`) | Carregadores | `carregador_308` | - | 0,2 kg | incomum | 2462 |
+| Carregador .308 (5) (`carregador_308_5`) | Carregadores | `carregador_308` | - | 0,13 kg | comum | 1564 |
+| Coronha retrátil (fuzil) (`coronha_retratil_ar`) | Coronhas | `coronha_ar` | recuo ×0,65, precisao ×1,3 | 0,42 kg | incomum | 4930 |
+| Coronha fixa (fuzil) (`coronha_fixa_ar`) | Coronhas | `coronha_ar` | recuo ×0,6, precisao ×1,35 | 0,6 kg | comum | 12134 |
 | Mira holográfica (`mira_holografica`) | Miras | `trilho_mira` | precisao_mirando ×1,35, tempo_mirar ×0,7 | 0,32 kg | muito raro | 1160 |
-| Luneta 1-6× (`luneta_1_6`) | Miras | `trilho_mira` | precisao_mirando ×1,5, tempo_mirar ×1,1, alcance_m ×1,5 | 0,55 kg | muito raro | 6512 |
-| Alça de mira rebatível (`alca_rebativel`) | Miras | `alca_trilho` | - | 0,04 kg | comum | 862 |
-| Massa de mira rebatível (`massa_rebativel`) | Miras | `massa_trilho` | - | 0,03 kg | comum | 648 |
+| Luneta 1-6× (`luneta_1_6`) | Miras | `trilho_mira` | precisao_mirando ×1,5, tempo_mirar ×1,1, alcance_m ×1,5 | 0,55 kg | muito raro | 10347 |
+| Alça de mira rebatível (`alca_rebativel`) | Miras | `alca_trilho` | - | 0,04 kg | comum | 1100 |
+| Massa de mira rebatível (`massa_rebativel`) | Miras | `massa_trilho` | - | 0,03 kg | comum | 788 |
 | Empunhadura vertical (`empunhadura_vertical`) | Empunhaduras | `mlok_baixo` | recuo ×0,85, precisao_rajada ×1,25 | 0,09 kg | incomum | 12444 |
 | Empunhadura angulada (`empunhadura_angulada`) | Empunhaduras | `mlok_baixo` | recuo ×0,9, tempo_mirar ×0,9 | 0,06 kg | incomum | 7070 |
 | Lanterna de fuzil (`lanterna_fuzil`) | Lanternas | `mlok_lado` | - | 0,16 kg | incomum | 5576 |
 | Caixa de laser e luz (`laser_fuzil`) | Lasers | `mlok_esq` | precisao_sem_mirar ×1,4 | 0,2 kg | muito raro | 1352 |
-| Quebra-chamas 5,56 (`quebra_chamas_556`) | Boca do cano | `boca_556` | clarao ×0,4 | 0,05 kg | comum | 782 |
+| Quebra-chamas 5,56 (`quebra_chamas_556`) | Boca do cano | `boca_556` | clarao ×0,4 | 0,05 kg | comum | 1844 |
 | Compensador 5,56 (`compensador_556`) | Boca do cano | `boca_556` | recuo ×0,7, ruido_m ×1,15 | 0,07 kg | incomum | 820 |
 | Supressor 5,56 (`supressor_556`) | Boca do cano | `boca_556` | ruido_m ×0,35, recuo ×0,85, clarao ×0,1 | 0,45 kg | muito raro | 4076 |
-| Carregador 5,56 (30) (`carregador_556_30`) | Carregadores | `carregador_556` | - | 0,13 kg | incomum | 4468 |
-| Tambor 5,56 (60) (`tambor_556_60`) | Carregadores | `carregador_556` | recarga_s ×1,4, tempo_mirar ×1,15 | 0,6 kg | muito raro | 4980 |
-| Tambor tático 5,56 (60) (`tambor_556_60_tatico`) | Carregadores | `carregador_556` | recarga_s ×1,35, tempo_mirar ×1,13 | 0,55 kg | muito raro | 6396 |
-| Carregador longo 5,56 (60) (`carregador_556_60`) | Carregadores | `carregador_556` | recarga_s ×1,2, tempo_mirar ×1,08 | 0,45 kg | muito raro | 13840 |
+| Carregador 5,56 (30) (`carregador_556_30`) | Carregadores | `carregador_556` | - | 0,13 kg | incomum | 2128 |
+| Tambor 5,56 (60) (`tambor_556_60`) | Carregadores | `carregador_556` | recarga_s ×1,4, tempo_mirar ×1,15 | 0,6 kg | muito raro | 2236 |
+| Tambor tático 5,56 (60) (`tambor_556_60_tatico`) | Carregadores | `carregador_556` | recarga_s ×1,35, tempo_mirar ×1,13 | 0,55 kg | muito raro | 3983 |
+| Carregador longo 5,56 (60) (`carregador_556_60`) | Carregadores | `carregador_556` | recarga_s ×1,2, tempo_mirar ×1,08 | 0,45 kg | muito raro | 2765 |
 | Módulo de mira laser (`modulo_laser`) | Lasers | `mlok_esq` | precisao_sem_mirar ×1,5 | 0,2 kg | muito raro | 4148 |
 | Módulo de mira laser (caramelo) (`modulo_laser_tan`) | Lasers | `mlok_esq` | precisao_sem_mirar ×1,5 | 0,2 kg | muito raro | 4148 |
-| Lanterna compacta de trilho (`lanterna_compacta`) | Lanternas | `mlok_lado` | - | 0,11 kg | incomum | 2104 |
+| Lanterna compacta de trilho (`lanterna_compacta`) | Lanternas | `mlok_lado` | - | 0,11 kg | incomum | 3441 |
 | Empunhadura curta inclinada (`empunhadura_curta`) | Empunhaduras | `mlok_baixo` | recuo ×0,9, tempo_mirar ×0,92 | 0,05 kg | incomum | 6808 |
 | Empunhadura vertical quadrada (`empunhadura_quadrada`) | Empunhaduras | `mlok_baixo` | recuo ×0,82, precisao_rajada ×1,3 | 0,1 kg | incomum | 1820 |
 | Empunhadura cilíndrica recartilhada (`empunhadura_cilindrica`) | Empunhaduras | `mlok_baixo` | recuo ×0,84, precisao_rajada ×1,28 | 0,12 kg | raro | 1948 |
 | Batente de mão (`batente_mao`) | Empunhaduras | `mlok_baixo` | recuo ×0,92, tempo_mirar ×0,9 | 0,04 kg | incomum | 1984 |
-| Empunhadura curta inclinada (caramelo) (`empunhadura_curta_tan`) | Empunhaduras | `mlok_baixo` | recuo ×0,9, tempo_mirar ×0,92 | 0,05 kg | incomum | 6808 |
-| Coronha retrátil caramelo (`coronha_retratil_ar_tan`) | Coronhas | `coronha_ar` | recuo ×0,7, precisao ×1,25 | 0,25 kg | raro | 15612 |
-| Supressor 5,56 caramelo (`supressor_556_tan`) | Boca do cano | `boca_556` | ruido_m ×0,3, clarao ×0,05, recuo ×0,85 | 0,45 kg | muito raro | 4076 |
-| Carregador 5,56 (30) caramelo (`carregador_556_30_tan`) | Carregadores | `carregador_556` | - | 0,13 kg | incomum | 4468 |
-| Coronha de madeira (fuzil 7,62) (`coronha_madeira_ak`) | Coronhas | `coronha_ak` | recuo ×0,65, precisao ×1,3 | 0,6 kg | comum | 20280 |
-| Coronha rebatível de tubo (fuzil 7,62) (`coronha_rebativel_ak`) | Coronhas | `coronha_ak` | recuo ×0,75, precisao ×1,15, tempo_mirar ×0,9 | 0,45 kg | raro | 2772 |
-| Freio de boca inclinado (7,62) (`freio_ak`) | Boca do cano | `boca_762` | recuo ×0,85 | 0,03 kg | comum | 744 |
+| Empunhadura curta inclinada (caramelo) (`empunhadura_curta_tan`) | Empunhaduras | `mlok_baixo` | recuo ×0,9, tempo_mirar ×0,92 | 0,05 kg | incomum | 2144 |
+| Coronha retrátil caramelo (`coronha_retratil_ar_tan`) | Coronhas | `coronha_ar` | recuo ×0,7, precisao ×1,25 | 0,25 kg | raro | 4930 |
+| Supressor 5,56 caramelo (`supressor_556_tan`) | Boca do cano | `boca_556` | ruido_m ×0,3, clarao ×0,05, recuo ×0,85 | 0,45 kg | muito raro | 2968 |
+| Carregador 5,56 (30) caramelo (`carregador_556_30_tan`) | Carregadores | `carregador_556` | - | 0,13 kg | incomum | 2128 |
+| Coronha de madeira (fuzil 7,62) (`coronha_madeira_ak`) | Coronhas | `coronha_ak` | recuo ×0,65, precisao ×1,3 | 0,6 kg | comum | 7100 |
+| Coronha rebatível de tubo (fuzil 7,62) (`coronha_rebativel_ak`) | Coronhas | `coronha_ak` | recuo ×0,75, precisao ×1,15, tempo_mirar ×0,9 | 0,45 kg | raro | 3392 |
+| Freio de boca inclinado (7,62) (`freio_ak`) | Boca do cano | `boca_762` | recuo ×0,85 | 0,03 kg | comum | 1448 |
 | Supressor 7,62 (`supressor_762`) | Boca do cano | `boca_762` | ruido_m ×0,35, clarao ×0,05, recuo ×0,8 | 0,55 kg | muito raro | 2752 |
 | Mira de ponto com montagem lateral (`mira_lateral_ak`) | Miras | `trilho_lateral_ak` | precisao_mirando ×1,3, tempo_mirar ×0,8 | 0,3 kg | raro | 2172 |
 | Luneta 4× com montagem lateral (`luneta_lateral_ak`) | Miras | `trilho_lateral_ak` | precisao_mirando ×1,55, tempo_mirar ×1,15, alcance_m ×1,6 | 0,6 kg | muito raro | 2384 |
 | Baioneta (fuzil 7,62) (`baioneta_ak`) | Baionetas | `baioneta_ak` | tempo_mirar ×1,05 | 0,32 kg | incomum | 4836 |
-| Carregador 7,62 (30) (`carregador_762_30`) | Carregadores | `carregador_762` | - | 0,33 kg | incomum | 7600 |
-| Carregador 7,62 (40) (`carregador_762_40`) | Carregadores | `carregador_762` | recarga_s ×1,08 | 0,42 kg | raro | 7600 |
-| Tambor 7,62 (75) (`tambor_762_75`) | Carregadores | `carregador_762` | recarga_s ×1,5, tempo_mirar ×1,2 | 1,0 kg | muito raro | 4800 |
-| Guarda-mão de madeira (fuzil 7,62) (`guarda_mao_madeira_ak`) | Guarda-mãos | `guarda_mao_ak` | - | 0,25 kg | comum | 7164 |
+| Carregador 7,62 (30) (`carregador_762_30`) | Carregadores | `carregador_762` | - | 0,33 kg | incomum | 7986 |
+| Carregador 7,62 (40) (`carregador_762_40`) | Carregadores | `carregador_762` | recarga_s ×1,08 | 0,42 kg | raro | 8982 |
+| Tambor 7,62 (75) (`tambor_762_75`) | Carregadores | `carregador_762` | recarga_s ×1,5, tempo_mirar ×1,2 | 1,0 kg | muito raro | 7286 |
+| Guarda-mão de madeira (fuzil 7,62) (`guarda_mao_madeira_ak`) | Guarda-mãos | `guarda_mao_ak` | - | 0,25 kg | comum | 9084 |
 | Guarda-mão de polímero com nervuras (`guarda_mao_polimero_ak`) | Guarda-mãos | `guarda_mao_ak` | precisao_rajada ×1,05 | 0,2 kg | incomum | 8436 |
 | Guarda-mão de quatro trilhos (`guarda_mao_trilhos_ak`) | Guarda-mãos | `guarda_mao_ak` | recuo ×0,97 | 0,38 kg | raro | 5744 |
-| Tampa com trilho (fuzil 7,62) (`tampa_trilho_ak`) | Tampas | `tampa_ak` | - | 0,22 kg | raro | 2620 |
-| Coronha de polímero (fuzil 7,62) (`coronha_polimero_ak`) | Coronhas | `coronha_ak` | recuo ×0,65, precisao ×1,3 | 0,5 kg | incomum | 17572 |
-| Coronha retrátil com adaptador (fuzil 7,62) (`coronha_retratil_ak`) | Coronhas | `coronha_ak` | recuo ×0,68, precisao ×1,28 | 0,55 kg | raro | 16096 |
+| Tampa com trilho (fuzil 7,62) (`tampa_trilho_ak`) | Tampas | `tampa_ak` | - | 0,22 kg | raro | 3324 |
+| Coronha de polímero (fuzil 7,62) (`coronha_polimero_ak`) | Coronhas | `coronha_ak` | recuo ×0,65, precisao ×1,3 | 0,5 kg | incomum | 10950 |
+| Coronha retrátil com adaptador (fuzil 7,62) (`coronha_retratil_ak`) | Coronhas | `coronha_ak` | recuo ×0,68, precisao ×1,28 | 0,55 kg | raro | 7826 |
 | Freio de três câmaras (7,62) (`compensador_ak`) | Boca do cano | `boca_762` | recuo ×0,72, ruido_m ×1,1 | 0,12 kg | raro | 1508 |
 | Alça rebatível de polímero (`alca_polimero`) | Miras | `alca_trilho` | - | 0,03 kg | incomum | 1584 |
 | Massa rebatível de polímero (`massa_polimero`) | Miras | `massa_trilho` | - | 0,025 kg | incomum | 1464 |
 | Alça rebatível de polímero (caramelo) (`alca_polimero_tan`) | Miras | `alca_trilho` | - | 0,03 kg | incomum | 1584 |
 | Massa rebatível de polímero (caramelo) (`massa_polimero_tan`) | Miras | `massa_trilho` | - | 0,025 kg | incomum | 1464 |
-| Empunhadura vertical curta (`empunhadura_reta`) | Empunhaduras | `mlok_baixo` | recuo ×0,87, precisao_rajada ×1,2 | 0,07 kg | incomum | 10404 |
+| Empunhadura vertical curta (`empunhadura_reta`) | Empunhaduras | `mlok_baixo` | recuo ×0,87, precisao_rajada ×1,2 | 0,07 kg | incomum | 2000 |
 | Empunhadura vertical curta (caramelo) (`empunhadura_reta_tan`) | Empunhaduras | `mlok_baixo` | recuo ×0,87, precisao_rajada ×1,2 | 0,07 kg | incomum | 10404 |
-| Coronha leve vazada (fuzil 5,56) (`coronha_leve_ar`) | Coronhas | `coronha_ar` | recuo ×0,66, precisao ×1,3 | 0,3 kg | raro | 14554 |
-| Coronha leve vazada caramelo (fuzil 5,56) (`coronha_leve_ar_tan`) | Coronhas | `coronha_ar` | recuo ×0,66, precisao ×1,3 | 0,3 kg | raro | 14554 |
-| Coronha leve vazada com adaptador (fuzil 7,62) (`coronha_leve_ak`) | Coronhas | `coronha_ak` | recuo ×0,66, precisao ×1,3 | 0,3 kg | raro | 15038 |
-| Coronha leve vazada caramelo com adaptador (fuzil 7,62) (`coronha_leve_ak_tan`) | Coronhas | `coronha_ak` | recuo ×0,66, precisao ×1,3 | 0,3 kg | raro | 15038 |
-| Carregador 7,62 de polímero (30) (`carregador_762_30_grade`) | Carregadores | `carregador_762` | - | 0,25 kg | incomum | 12552 |
-| Coronha vazada fixa (fuzil 7,62) (`coronha_esqueleto_ak`) | Coronhas | `coronha_ak` | recuo ×0,68, precisao ×1,28 | 0,42 kg | raro | 1932 |
-| Guarda-mão de fendas (fuzil 7,62) (`guarda_mao_fendas_ak`) | Guarda-mãos | `guarda_mao_ak` | recuo ×0,98 | 0,3 kg | raro | 9038 |
-| Mira reflexa de tubo inclinado (`mira_reflexa`) | Miras | `trilho_mira` | precisao_mirando ×1,3, tempo_mirar ×0,72 | 0,28 kg | muito raro | 2072 |
-| Tiras de borracha no guarda-mão (`elastico_ak`) | Enfeites | `guarda_mao_enfeite` | - | 0,01 kg | comum | 640 |
-| Tampa com trilho (fuzil 7,62) (gasto) (`tampa_trilho_ak_gasto`) | Tampas | `tampa_ak` | - | 0,22 kg | raro | 2620 |
-| Mira reflexa de tubo inclinado (gasto) (`mira_reflexa_gasto`) | Miras | `trilho_mira` | precisao_mirando ×1,3, tempo_mirar ×0,72 | 0,28 kg | muito raro | 2072 |
-| Guarda-mão de fendas (fuzil 7,62) (gasto) (`guarda_mao_fendas_ak_gasto`) | Guarda-mãos | `guarda_mao_ak` | recuo ×0,98 | 0,3 kg | raro | 9038 |
-| Coronha vazada fixa (fuzil 7,62) (gasto) (`coronha_esqueleto_ak_gasto`) | Coronhas | `coronha_ak` | recuo ×0,68, precisao ×1,28 | 0,42 kg | raro | 1932 |
-| Supressor 7,62 (gasto) (`supressor_762_gasto`) | Boca do cano | `boca_762` | ruido_m ×0,35, clarao ×0,05, recuo ×0,8 | 0,55 kg | muito raro | 2752 |
-| Lanterna compacta de trilho (gasto) (`lanterna_compacta_gasto`) | Lanternas | `mlok_lado` | - | 0,11 kg | incomum | 2104 |
-| Carregador 7,62 de polímero (30) (gasto) (`carregador_762_30_grade_gasto`) | Carregadores | `carregador_762` | - | 0,25 kg | incomum | 12552 |
-| Carregador da submetralhadora (20) (`carregador_smg_20`) | Carregadores | `carregador_smg` | recarga_s ×0,95 | 0,1 kg | incomum | 1624 |
-| Carregador da submetralhadora (30) (`carregador_smg_30`) | Carregadores | `carregador_smg` | - | 0,13 kg | incomum | 1672 |
-| Carregador da submetralhadora (40) (`carregador_smg_40`) | Carregadores | `carregador_smg` | recarga_s ×1,08 | 0,17 kg | raro | 1768 |
-| Empunhadura frontal dobrável (`empunhadura_dobravel`) | Empunhaduras | `mlok_baixo` | recuo ×0,88, precisao_rajada ×1,2 | 0,08 kg | incomum | 8600 |
+| Coronha leve vazada (fuzil 5,56) (`coronha_leve_ar`) | Coronhas | `coronha_ar` | recuo ×0,66, precisao ×1,3 | 0,3 kg | raro | 6948 |
+| Coronha leve vazada caramelo (fuzil 5,56) (`coronha_leve_ar_tan`) | Coronhas | `coronha_ar` | recuo ×0,66, precisao ×1,3 | 0,3 kg | raro | 6948 |
+| Coronha leve vazada com adaptador (fuzil 7,62) (`coronha_leve_ak`) | Coronhas | `coronha_ak` | recuo ×0,66, precisao ×1,3 | 0,3 kg | raro | 9844 |
+| Coronha leve vazada caramelo com adaptador (fuzil 7,62) (`coronha_leve_ak_tan`) | Coronhas | `coronha_ak` | recuo ×0,66, precisao ×1,3 | 0,3 kg | raro | 9844 |
+| Carregador 7,62 de polímero (30) (`carregador_762_30_grade`) | Carregadores | `carregador_762` | - | 0,25 kg | incomum | 7478 |
+| Coronha vazada fixa (fuzil 7,62) (`coronha_esqueleto_ak`) | Coronhas | `coronha_ak` | recuo ×0,68, precisao ×1,28 | 0,42 kg | raro | 7086 |
+| Guarda-mão de fendas (fuzil 7,62) (`guarda_mao_fendas_ak`) | Guarda-mãos | `guarda_mao_ak` | recuo ×0,98 | 0,3 kg | raro | 9024 |
+| Mira reflexa de tubo inclinado (`mira_reflexa`) | Miras | `trilho_mira` | precisao_mirando ×1,3, tempo_mirar ×0,72 | 0,28 kg | muito raro | 2090 |
+| Tiras de borracha no guarda-mão (`elastico_ak`) | Enfeites | `guarda_mao_enfeite` | - | 0,01 kg | comum | 1536 |
+| Tampa com trilho (fuzil 7,62) (gasto) (`tampa_trilho_ak_gasto`) | Tampas | `tampa_ak` | - | 0,22 kg | raro | 3324 |
+| Mira reflexa de tubo inclinado (gasto) (`mira_reflexa_gasto`) | Miras | `trilho_mira` | precisao_mirando ×1,3, tempo_mirar ×0,72 | 0,28 kg | muito raro | 2090 |
+| Guarda-mão de fendas (fuzil 7,62) (gasto) (`guarda_mao_fendas_ak_gasto`) | Guarda-mãos | `guarda_mao_ak` | recuo ×0,98 | 0,3 kg | raro | 9024 |
+| Coronha vazada fixa (fuzil 7,62) (gasto) (`coronha_esqueleto_ak_gasto`) | Coronhas | `coronha_ak` | recuo ×0,68, precisao ×1,28 | 0,42 kg | raro | 7086 |
+| Supressor 7,62 (gasto) (`supressor_762_gasto`) | Boca do cano | `boca_762` | ruido_m ×0,35, clarao ×0,05, recuo ×0,8 | 0,55 kg | muito raro | 2888 |
+| Lanterna compacta de trilho (gasto) (`lanterna_compacta_gasto`) | Lanternas | `mlok_lado` | - | 0,11 kg | incomum | 3441 |
+| Carregador 7,62 de polímero (30) (gasto) (`carregador_762_30_grade_gasto`) | Carregadores | `carregador_762` | - | 0,25 kg | incomum | 7478 |
+| Carregador da submetralhadora (20) (`carregador_smg_20`) | Carregadores | `carregador_smg` | recarga_s ×0,95 | 0,1 kg | incomum | 3972 |
+| Carregador da submetralhadora (30) (`carregador_smg_30`) | Carregadores | `carregador_smg` | - | 0,13 kg | incomum | 3992 |
+| Carregador da submetralhadora (40) (`carregador_smg_40`) | Carregadores | `carregador_smg` | recarga_s ×1,08 | 0,17 kg | raro | 3976 |
+| Empunhadura frontal dobrável (`empunhadura_dobravel`) | Empunhaduras | `mlok_baixo` | recuo ×0,88, precisao_rajada ×1,2 | 0,08 kg | incomum | 2232 |
 | Supressor 9 mm (areia) (`supressor_9mm_tan`) | Boca do cano | `boca_rosca_9mm` | ruido_m ×0,3, dano ×0,95, alcance_m ×1,05, recuo ×0,85 | 0,2 kg | raro | 5072 |
 | Supressor 9 mm (verde-oliva) (`supressor_9mm_verde`) | Boca do cano | `boca_rosca_9mm` | ruido_m ×0,3, dano ×0,95, alcance_m ×1,05, recuo ×0,85 | 0,2 kg | raro | 5072 |
 | Supressor 9 mm (cinza) (`supressor_9mm_cinza`) | Boca do cano | `boca_rosca_9mm` | ruido_m ×0,3, dano ×0,95, alcance_m ×1,05, recuo ×0,85 | 0,2 kg | raro | 5072 |
@@ -165,39 +165,48 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Punho emborrachado com cavas (caramelo) (`punho_cavas_tan`) | Punhos | `punho_ar` | recuo ×0,95, estabilidade_mirando ×1,1 | 0,09 kg | incomum | 15960 |
 | Punho reto de polímero (`punho_reto`) | Punhos | `punho_ar` | tempo_mirar ×0,95 | 0,06 kg | incomum | 21556 |
 | Punho reto de polímero (caramelo) (`punho_reto_tan`) | Punhos | `punho_ar` | tempo_mirar ×0,95 | 0,06 kg | incomum | 21556 |
-| Carregador da Ciclone (17) (`carregador_ciclone_17`) | Carregadores | `carregador_ciclone` | recarga_s ×0,95 | 0,09 kg | incomum | 1480 |
-| Carregador da Ciclone (30) (`carregador_ciclone_30`) | Carregadores | `carregador_ciclone` | - | 0,14 kg | incomum | 1672 |
-| Tambor da Ciclone (50) (`tambor_ciclone_50`) | Carregadores | `carregador_ciclone` | recarga_s ×1,25, tempo_mirar ×1,08 | 0,55 kg | muito raro | 2116 |
-| Luneta 4× pequena (`luneta_4x_22`) | Miras | `trilho_mira` | precisao_mirando ×1,35, tempo_mirar ×1,1, alcance_m ×1,4 | 0,26 kg | comum | 5172 |
-| Alça de lâmina do .22 (`alca_cano_22`) | Miras | `alca_cano_22` | - | 0,01 kg | comum | 412 |
-| Protetor de rosca .22 (`protetor_rosca_22`) | Boca do cano | `boca_22` | - | 0,01 kg | comum | 720 |
+| Carregador da Ciclone (17) (`carregador_ciclone_17`) | Carregadores | `carregador_ciclone` | recarga_s ×0,95 | 0,09 kg | incomum | 3705 |
+| Carregador da Ciclone (30) (`carregador_ciclone_30`) | Carregadores | `carregador_ciclone` | - | 0,14 kg | incomum | 4082 |
+| Tambor da Ciclone (50) (`tambor_ciclone_50`) | Carregadores | `carregador_ciclone` | recarga_s ×1,25, tempo_mirar ×1,08 | 0,55 kg | muito raro | 6181 |
+| Luneta 4× pequena (`luneta_4x_22`) | Miras | `trilho_mira` | precisao_mirando ×1,35, tempo_mirar ×1,1, alcance_m ×1,4 | 0,26 kg | comum | 8706 |
+| Alça de lâmina do .22 (`alca_cano_22`) | Miras | `alca_cano_22` | - | 0,01 kg | comum | 580 |
+| Protetor de rosca .22 (`protetor_rosca_22`) | Boca do cano | `boca_22` | - | 0,01 kg | comum | 672 |
 | Supressor .22 (`supressor_22`) | Boca do cano | `boca_22` | ruido_m ×0,25, precisao ×1,04, alcance_m ×0,95 | 0,16 kg | raro | 1808 |
-| Carregador rotativo .22 (10) (`carregador_22_10`) | Carregadores | `carregador_22` | - | 0,05 kg | comum | 1228 |
-| Carregador .22 (25) (`carregador_22_25`) | Carregadores | `carregador_22` | recarga_s ×1,1 | 0,12 kg | incomum | 1096 |
-| Coronha de precisão (fuzil) (`coronha_precisao_ar`) | Coronhas | `coronha_ar` | recuo ×0,85, precisao_mirando ×1,15, tempo_mirar ×1,1 | 0,95 kg | raro | 20888 |
-| Coronha de precisão preta (fuzil) (`coronha_precisao_ar_preta`) | Coronhas | `coronha_ar` | recuo ×0,85, precisao_mirando ×1,15, tempo_mirar ×1,1 | 0,95 kg | raro | 20888 |
-| Luneta 5-25× de precisão (`luneta_5_25`) | Miras | `trilho_mira` | precisao_mirando ×1,7, tempo_mirar ×1,3, alcance_m ×2,2 | 0,98 kg | muito raro | 6528 |
-| Carregador .308 de fuzil (20) (`carregador_ar10_20`) | Carregadores | `carregador_ar10` | - | 0,2 kg | raro | 5196 |
-| Carregador .308 de fuzil (10) (`carregador_ar10_10`) | Carregadores | `carregador_ar10` | recarga_s ×0,95 | 0,13 kg | incomum | 4688 |
+| Carregador rotativo .22 (10) (`carregador_22_10`) | Carregadores | `carregador_22` | - | 0,05 kg | comum | 1662 |
+| Carregador .22 (25) (`carregador_22_25`) | Carregadores | `carregador_22` | recarga_s ×1,1 | 0,12 kg | incomum | 2545 |
+| Coronha de precisão (fuzil) (`coronha_precisao_ar`) | Coronhas | `coronha_ar` | recuo ×0,85, precisao_mirando ×1,15, tempo_mirar ×1,1 | 0,95 kg | raro | 10288 |
+| Coronha de precisão preta (fuzil) (`coronha_precisao_ar_preta`) | Coronhas | `coronha_ar` | recuo ×0,85, precisao_mirando ×1,15, tempo_mirar ×1,1 | 0,95 kg | raro | 10288 |
+| Luneta 5-25× de precisão (`luneta_5_25`) | Miras | `trilho_mira` | precisao_mirando ×1,7, tempo_mirar ×1,3, alcance_m ×2,2 | 0,98 kg | muito raro | 10378 |
+| Carregador .308 de fuzil (20) (`carregador_ar10_20`) | Carregadores | `carregador_ar10` | - | 0,2 kg | raro | 2928 |
+| Carregador .308 de fuzil (10) (`carregador_ar10_10`) | Carregadores | `carregador_ar10` | recarga_s ×0,95 | 0,13 kg | incomum | 1808 |
 | Talas pontilhadas (Guardiã) (`talas_guardia`) | Empunhaduras | `talas_guardia` | - | 0,04 kg | comum | 15902 |
 | Talas pontilhadas pretas (Guardiã) (`talas_guardia_preta`) | Empunhaduras | `talas_guardia` | - | 0,04 kg | comum | 15902 |
 | Talas de nogueira (Guardiã) (`talas_guardia_madeira`) | Empunhaduras | `talas_guardia` | - | 0,05 kg | incomum | 15654 |
 | Empunhadura de borracha (Guardiã) (`talas_guardia_borracha`) | Empunhaduras | `talas_guardia` | recuo ×0,85, precisao ×1,04 | 0,07 kg | incomum | 12336 |
-| Carregador 9 mm da Guardiã (17) (`carregador_guardia_17`) | Carregadores | `carregador_guardia` | - | 0,1 kg | incomum | 1078 |
-| Carregador 9 mm estendido da Guardiã (20) (`carregador_guardia_20`) | Carregadores | `carregador_guardia` | recarga_s ×1,05 | 0,12 kg | raro | 1228 |
+| Carregador 9 mm da Guardiã (17) (`carregador_guardia_17`) | Carregadores | `carregador_guardia` | - | 0,1 kg | incomum | 3572 |
+| Carregador 9 mm estendido da Guardiã (20) (`carregador_guardia_20`) | Carregadores | `carregador_guardia` | recarga_s ×1,05 | 0,12 kg | raro | 5200 |
 | Coldre de náilon com trava (Guardiã) (`coldre_guardia`) | Coldres | `coldre_guardia` | tempo_sacar ×0,75 | 0,24 kg | incomum | 1828 |
 | Mira de pinos (arco) (`mira_pinos_arco`) | Miras | `rosca_mira_arco` | precisao_mirando ×1,35 | 0,12 kg | raro | 2916 |
 | Estabilizador longo (arco) (`estabilizador_arco`) | Estabilizadores | `rosca_estabilizador` | precisao ×1,12, tremor ×0,75 | 0,2 kg | raro | 1664 |
 | Estabilizador curto (arco) (`estabilizador_curto_arco`) | Estabilizadores | `rosca_estabilizador` | precisao ×1,05, tremor ×0,88 | 0,12 kg | incomum | 1664 |
 | Aljava de arco (4 flechas) (`aljava_arco`) | Aljavas | `aljava_arco` | recarga_s ×0,8 | 0,25 kg | incomum | 3316 |
-| Soltador de pulso (`soltador_pulso`) | Soltadores | `loop_d` | precisao ×1,1, tremor ×0,9 | 0,09 kg | incomum | 2092 |
-| Mira de 5 pinos com luz (`mira_pinos_luz`) | Miras | `rosca_mira_composto` | precisao_mirando ×1,45 | 0,16 kg | raro | 10148 |
+| Soltador de pulso (`soltador_pulso`) | Soltadores | `loop_d` | precisao ×1,1, tremor ×0,9 | 0,09 kg | incomum | 2764 |
+| Mira de 5 pinos com luz (`mira_pinos_luz`) | Miras | `rosca_mira_composto` | precisao_mirando ×1,45 | 0,16 kg | raro | 6392 |
 | Aljava de arco composto (5 flechas) (`aljava_composto`) | Aljavas | `aljava_composto` | recarga_s ×0,8 | 0,3 kg | incomum | 5766 |
-| Luneta de besta (distâncias) (`luneta_besta`) | Miras | `trilho_mira` | precisao_mirando ×1,4, tempo_mirar ×1,1, alcance_m ×1,2 | 0,32 kg | incomum | 5408 |
-| Estribo de besta (`estribo_besta`) | Estribos | `estribo_besta` | armar_s ×0,78 | 0,18 kg | comum | 5056 |
+| Luneta de besta (distâncias) (`luneta_besta`) | Miras | `trilho_mira` | precisao_mirando ×1,4, tempo_mirar ×1,1, alcance_m ×1,2 | 0,32 kg | incomum | 8921 |
+| Estribo de besta (`estribo_besta`) | Estribos | `estribo_besta` | armar_s ×0,78 | 0,18 kg | comum | 3420 |
 | Bainha de cinto (faca de combate) (`bainha_cinto_faca`) | Bainhas | `bainha_faca` | sacar_s ×0,85 | 0,14 kg | comum | 10892 |
 | Bainha de lona (facão) (`bainha_lona_facao`) | Bainhas | `bainha_facao` | sacar_s ×0,9 | 0,18 kg | comum | 13026 |
 | Capa da lâmina (machadinha) (`capa_machadinha`) | Capas | `capa_machadinha` | - | 0,07 kg | comum | 3180 |
+| Guarda-mão de trilho quádruplo (M4A1) (`guarda_mao_classico_m4`) | Guarda-mãos | `guarda_mao_m4` | - | 0,32 kg | incomum | 14216 |
+| Guarda-mão longo vazado (M4A1) (`guarda_mao_longo_m4`) | Guarda-mãos | `guarda_mao_m4` | precisao ×1,05 | 0,36 kg | raro | 9736 |
+| Alça de transporte com mira (M4A1) (`alca_transporte_m4`) | Miras | `trilho_mira` | - | 0,27 kg | incomum | 2056 |
+| Luneta 2-8× (M4A1) (`luneta_m4`) | Miras | `trilho_mira` | precisao_mirando ×1,5, tempo_mirar ×1,15, alcance_m ×1,75 | 0,62 kg | muito raro | 4682 |
+| Mira prismática 3× (M4A1) (`mira_prismatica_m4`) | Miras | `trilho_mira` | precisao_mirando ×1,35, tempo_mirar ×0,95, alcance_m ×1,25 | 0,45 kg | muito raro | 2714 |
+| Mira reflex a 45° (M4A1) (`mira_45_m4`) | Miras a 45° | `mira_45_m4` | tempo_mirar ×0,9 | 0,12 kg | raro | 784 |
+| Punho vazado de alumínio (`punho_vazado_m4`) | Punhos | `punho_ar` | recuo ×0,97 | 0,09 kg | incomum | 664 |
+| Alavanca de manejo ambidestra (`alavanca_ambi_m4`) | Alavancas de manejo | `alavanca_ar` | recarga_s ×0,95 | 0,05 kg | incomum | 588 |
+| Coronha moderna (fuzil) (`coronha_moderna_ar`) | Coronhas | `coronha_ar` | recuo ×0,6, precisao ×1,32 | 0,48 kg | raro | 6484 |
 
 ## Munição e efeitos
 
@@ -230,14 +239,14 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Estojo de sinal (vazio) (`estojo_sinal`) | Estojos | Estojo vazio que sai na recarga (o jogo cria um em saida_estojo). | 880 |
 | Caixa de sinais vermelhos (6) (`caixa_sinal_vermelho`) | Caixas de munição | Caixa de papelão com 6 cartuchos de sinal vermelho em pé. A tampa abre (nó "tampa", animação "abrir"). | 4988 |
 | Caixa de sinais verdes (6) (`caixa_sinal_verde`) | Caixas de munição | Caixa de papelão com 6 cartuchos de sinal verde em pé. A tampa abre (nó "tampa", animação "abrir"). | 4172 |
-| Flecha de caça (`flecha_caca`) | Munição | Haste de fibra com ponta de 3 lâminas: corta fundo, mas a ponta pode quebrar ao recuperar. Pivô no entalhe (ponto que encosta na corda). | 662 |
-| Flecha improvisada (prego) (`flecha_prego`) | Munição | Prego amarrado na ponta com fita: fácil de fazer na bancada, erra mais e quebra fácil. Pivô no entalhe (ponto que encosta na corda). | 1610 |
-| Flecha de ponta de campo (`flecha_campo`) | Munição | Ponta de aço simples: entra menos, mas quase sempre dá para usar de novo. Pivô no entalhe (ponto que encosta na corda). | 638 |
-| Flecha de carbono (caça) (`flecha_carbono`) | Munição | Haste de carbono com ponta de 3 lâminas e nock luminoso (acende no disparo: fácil de achar no mato). Serve nos dois arcos. Pivô no entalhe (ponto que encosta na corda). | 866 |
-| Flecha de carbono (treino) (`flecha_carbono_campo`) | Munição | Ponta de campo simples: quase sempre volta inteira. Serve nos dois arcos. Pivô no entalhe (ponto que encosta na corda). | 766 |
-| Virote de caça (`virote_caca`) | Munição | Haste de carbono com ponta de 3 lâminas: atravessa fundo. Pivô na nock (ponto que encosta na corda). | 882 |
-| Virote de ponta de campo (`virote_campo`) | Munição | Ponta simples de aço: quase sempre dá para usar de novo. Pivô na nock (ponto que encosta na corda). | 846 |
-| Virote improvisado (prego) (`virote_prego`) | Munição | Haste de cabo de vassoura com um prego preso com fita: feito na bancada, erra mais. Pivô na nock (ponto que encosta na corda). | 1950 |
+| Flecha de caça (`flecha_caca`) | Munição | Haste de fibra com ponta de 3 lâminas: corta fundo, mas a ponta pode quebrar ao recuperar. Pivô no entalhe (ponto que encosta na corda). | 1246 |
+| Flecha improvisada (prego) (`flecha_prego`) | Munição | Prego amarrado na ponta com fita: fácil de fazer na bancada, erra mais e quebra fácil. Pivô no entalhe (ponto que encosta na corda). | 938 |
+| Flecha de ponta de campo (`flecha_campo`) | Munição | Ponta de aço simples: entra menos, mas quase sempre dá para usar de novo. Pivô no entalhe (ponto que encosta na corda). | 1110 |
+| Flecha de carbono (caça) (`flecha_carbono`) | Munição | Haste de carbono com ponta de 3 lâminas e nock luminoso (acende no disparo: fácil de achar no mato). Serve nos dois arcos. Pivô no entalhe (ponto que encosta na corda). | 1246 |
+| Flecha de carbono (treino) (`flecha_carbono_campo`) | Munição | Ponta de campo simples: quase sempre volta inteira. Serve nos dois arcos. Pivô no entalhe (ponto que encosta na corda). | 1110 |
+| Virote de caça (`virote_caca`) | Munição | Haste de carbono com ponta de 3 lâminas: atravessa fundo. Pivô na nock (ponto que encosta na corda). | 1178 |
+| Virote de ponta de campo (`virote_campo`) | Munição | Ponta simples de aço: quase sempre dá para usar de novo. Pivô na nock (ponto que encosta na corda). | 1042 |
+| Virote improvisado (prego) (`virote_prego`) | Munição | Haste de cabo de vassoura com um prego preso com fita: feito na bancada, erra mais. Pivô na nock (ponto que encosta na corda). | 870 |
 | Clarão de boca (`clarao_boca`) | Efeitos | Mostrar por 1 ou 2 quadros no encaixe boca_fogo a cada tiro; girar ao acaso em -Z e variar a escala (0,8 a 1,2). Material emissivo com transparência. | 372 |
 | Luz do sinal vermelho (`sinal_luz_vermelha`) | Efeitos | Bola de luz que sobe até ~80 m e desce devagar por 7 s. Pôr uma luz omnidirecional vermelha forte no centro e piscar a escala (0,9 a 1,1). Material emissivo com transparência no halo. | 1920 |
 | Luz do sinal verde (`sinal_luz_verde`) | Efeitos | Igual ao vermelho, em verde. Pôr uma luz omnidirecional verde forte no centro. | 1920 |
@@ -287,25 +296,25 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Carabina Paciência .308 de caça**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
 - **Carabina Paciência .308 de caça**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
 - **Carabina Paciência .308 de caça**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, empunhadura_reta, empunhadura_reta_tan, batente_mao
-- **Fuzil Vigília 5,56**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan
-- **Fuzil Vigília 5,56**, `encaixe_mira`: mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa
+- **Fuzil Vigília 5,56**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan, punho_vazado_m4
+- **Fuzil Vigília 5,56**, `encaixe_mira`: mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa, luneta_m4, mira_prismatica_m4
 - **Fuzil Vigília 5,56**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
 - **Fuzil Vigília 5,56**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
 - **Fuzil Vigília 5,56**, `encaixe_boca`: quebra_chamas_556, compensador_556, supressor_556, supressor_556_tan
 - **Fuzil Vigília 5,56**, `encaixe_carregador`: carregador_556_30, carregador_556_60, tambor_556_60, carregador_556_30_tan, tambor_556_60_tatico
-- **Fuzil Vigília 5,56**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan, coronha_leve_ar, coronha_leve_ar_tan
+- **Fuzil Vigília 5,56**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan, coronha_leve_ar, coronha_leve_ar_tan, coronha_moderna_ar
 - **Fuzil Vigília 5,56**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, batente_mao, empunhadura_reta, empunhadura_reta_tan, empunhadura_dobravel
 - **Fuzil Vigília 5,56**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
 - **Fuzil Vigília 5,56**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
 - **Fuzil Vigília 5,56**, `encaixe_bipe`: bipe
 - **Fuzil Vigília 5,56**, `encaixe_bandoleira`: bandoleira
-- **Fuzil Vigília 5,56 bicolor**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan
-- **Fuzil Vigília 5,56 bicolor**, `encaixe_mira`: mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan, punho_vazado_m4
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_mira`: mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa, luneta_m4, mira_prismatica_m4
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_boca`: quebra_chamas_556, compensador_556, supressor_556, supressor_556_tan
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_carregador`: carregador_556_30, carregador_556_60, tambor_556_60, carregador_556_30_tan, tambor_556_60_tatico
-- **Fuzil Vigília 5,56 bicolor**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan, coronha_leve_ar, coronha_leve_ar_tan
+- **Fuzil Vigília 5,56 bicolor**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan, coronha_leve_ar, coronha_leve_ar_tan, coronha_moderna_ar
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, batente_mao, empunhadura_reta, empunhadura_reta_tan, empunhadura_dobravel
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
@@ -321,7 +330,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Fuzil Brasa 7,62**, `encaixe_guarda_mao`: guarda_mao_madeira_ak, guarda_mao_polimero_ak, guarda_mao_trilhos_ak, guarda_mao_fendas_ak
 - **Fuzil Brasa 7,62**, `encaixe_enfeite`: elastico_ak
 - **Fuzil Brasa 7,62**, `encaixe_tampa`: tampa_trilho_ak
-- **Fuzil Brasa 7,62**, `encaixe_mira_tampa`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x
+- **Fuzil Brasa 7,62**, `encaixe_mira_tampa`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, luneta_m4, mira_prismatica_m4
 - **Fuzil Brasa 7,62**, `encaixe_baioneta`: baioneta_ak
 - **Fuzil Brasa 7,62**, `encaixe_bandoleira`: bandoleira
 - **Fuzil Brasa 7,62 tático**, `encaixe_mira`: mira_lateral_ak, luneta_lateral_ak
@@ -334,7 +343,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Fuzil Brasa 7,62 tático**, `encaixe_guarda_mao`: guarda_mao_madeira_ak, guarda_mao_polimero_ak, guarda_mao_trilhos_ak, guarda_mao_fendas_ak, guarda_mao_fendas_ak_gasto
 - **Fuzil Brasa 7,62 tático**, `encaixe_enfeite`: elastico_ak
 - **Fuzil Brasa 7,62 tático**, `encaixe_tampa`: tampa_trilho_ak, tampa_trilho_ak_gasto
-- **Fuzil Brasa 7,62 tático**, `encaixe_mira_tampa`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa_gasto
+- **Fuzil Brasa 7,62 tático**, `encaixe_mira_tampa`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa_gasto, luneta_m4, mira_prismatica_m4
 - **Fuzil Brasa 7,62 tático**, `encaixe_baioneta`: baioneta_ak
 - **Fuzil Brasa 7,62 tático**, `encaixe_bandoleira`: bandoleira
 - **Submetralhadora Faísca 9 mm**, `encaixe_mira`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo
@@ -370,7 +379,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Pistola Sentinela 9 mm (cinza)**, `encaixe_boca`: protetor_rosca_9mm, supressor_9mm, supressor_9mm_tan, supressor_9mm_verde, supressor_9mm_cinza, compensador_9mm, supressor_garrafa
 - **Pistola Sentinela 9 mm (cinza)**, `encaixe_trilho`: lanterna_pistola, laser_pistola, combo_lanterna_laser
 - **Pistola Sentinela 9 mm (cinza)**, `encaixe_carregador`: carregador_9mm, carregador_9mm_estendido
-- **Submetralhadora Ciclone 9 mm**, `encaixe_mira`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo, luneta_1_6
+- **Submetralhadora Ciclone 9 mm**, `encaixe_mira`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo, luneta_1_6, luneta_m4, mira_prismatica_m4
 - **Submetralhadora Ciclone 9 mm**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
 - **Submetralhadora Ciclone 9 mm**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
 - **Submetralhadora Ciclone 9 mm**, `encaixe_boca`: protetor_rosca_9mm, supressor_9mm, supressor_9mm_tan, supressor_9mm_verde, supressor_9mm_cinza, compensador_9mm, supressor_garrafa
@@ -379,7 +388,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Submetralhadora Ciclone 9 mm**, `encaixe_lanterna`: lanterna_compacta, lanterna_fuzil
 - **Submetralhadora Ciclone 9 mm**, `encaixe_laser`: modulo_laser, modulo_laser_tan, laser_fuzil
 - **Submetralhadora Ciclone 9 mm**, `encaixe_bandoleira`: bandoleira
-- **Submetralhadora Ciclone 9 mm (areia)**, `encaixe_mira`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo, luneta_1_6
+- **Submetralhadora Ciclone 9 mm (areia)**, `encaixe_mira`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo, luneta_1_6, luneta_m4, mira_prismatica_m4
 - **Submetralhadora Ciclone 9 mm (areia)**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
 - **Submetralhadora Ciclone 9 mm (areia)**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
 - **Submetralhadora Ciclone 9 mm (areia)**, `encaixe_boca`: protetor_rosca_9mm, supressor_9mm, supressor_9mm_tan, supressor_9mm_verde, supressor_9mm_cinza, compensador_9mm, supressor_garrafa
@@ -405,25 +414,25 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Rifle Pardal .22 sintético**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
 - **Rifle Pardal .22 sintético**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, empunhadura_reta, empunhadura_reta_tan, batente_mao
 - **Pistola sinalizadora**, `encaixe_cartucho`: cartucho_sinal_vermelho, cartucho_sinal_verde
-- **Fuzil Atalaia .308 de precisão**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan
-- **Fuzil Atalaia .308 de precisão**, `encaixe_mira`: luneta_5_25, luneta_3_9, luneta_4x, luneta_1_6, mira_holografica, mira_ponto_vermelho_tubo, mira_reflexa
+- **Fuzil Atalaia .308 de precisão**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan, punho_vazado_m4
+- **Fuzil Atalaia .308 de precisão**, `encaixe_mira`: luneta_5_25, luneta_3_9, luneta_4x, luneta_1_6, mira_holografica, mira_ponto_vermelho_tubo, mira_reflexa, luneta_m4, mira_prismatica_m4
 - **Fuzil Atalaia .308 de precisão**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
 - **Fuzil Atalaia .308 de precisão**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
 - **Fuzil Atalaia .308 de precisão**, `encaixe_boca`: protetor_rosca_308, freio_boca_308, supressor_308
 - **Fuzil Atalaia .308 de precisão**, `encaixe_carregador`: carregador_ar10_20, carregador_ar10_10
-- **Fuzil Atalaia .308 de precisão**, `encaixe_coronha`: coronha_precisao_ar, coronha_precisao_ar_preta, coronha_retratil_ar, coronha_fixa_ar
+- **Fuzil Atalaia .308 de precisão**, `encaixe_coronha`: coronha_precisao_ar, coronha_precisao_ar_preta, coronha_retratil_ar, coronha_fixa_ar, coronha_moderna_ar
 - **Fuzil Atalaia .308 de precisão**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_quadrada
 - **Fuzil Atalaia .308 de precisão**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
 - **Fuzil Atalaia .308 de precisão**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
 - **Fuzil Atalaia .308 de precisão**, `encaixe_bipe`: bipe
 - **Fuzil Atalaia .308 de precisão**, `encaixe_bandoleira`: bandoleira
-- **Fuzil Atalaia .308 curto**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan
-- **Fuzil Atalaia .308 curto**, `encaixe_mira`: luneta_5_25, luneta_3_9, luneta_4x, luneta_1_6, mira_holografica, mira_ponto_vermelho_tubo, mira_reflexa
+- **Fuzil Atalaia .308 curto**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan, punho_vazado_m4
+- **Fuzil Atalaia .308 curto**, `encaixe_mira`: luneta_5_25, luneta_3_9, luneta_4x, luneta_1_6, mira_holografica, mira_ponto_vermelho_tubo, mira_reflexa, luneta_m4, mira_prismatica_m4
 - **Fuzil Atalaia .308 curto**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
 - **Fuzil Atalaia .308 curto**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
 - **Fuzil Atalaia .308 curto**, `encaixe_boca`: protetor_rosca_308, freio_boca_308, supressor_308
 - **Fuzil Atalaia .308 curto**, `encaixe_carregador`: carregador_ar10_20, carregador_ar10_10
-- **Fuzil Atalaia .308 curto**, `encaixe_coronha`: coronha_precisao_ar, coronha_precisao_ar_preta, coronha_retratil_ar, coronha_fixa_ar
+- **Fuzil Atalaia .308 curto**, `encaixe_coronha`: coronha_precisao_ar, coronha_precisao_ar_preta, coronha_retratil_ar, coronha_fixa_ar, coronha_moderna_ar
 - **Fuzil Atalaia .308 curto**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_quadrada
 - **Fuzil Atalaia .308 curto**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
 - **Fuzil Atalaia .308 curto**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
@@ -457,3 +466,48 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Faca de combate**, `cinto`: bainha_cinto_faca
 - **Facão de mato**, `cinto`: bainha_lona_facao
 - **Machadinha tática**, `capa`: capa_machadinha
+- **Fuzil M4A1**, `encaixe_guarda_mao`: guarda_mao_classico_m4, guarda_mao_longo_m4
+- **Fuzil M4A1**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan
+- **Fuzil M4A1**, `encaixe_alavanca`: alavanca_ambi_m4
+- **Fuzil M4A1**, `encaixe_mira`: alca_transporte_m4, mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa
+- **Fuzil M4A1**, `encaixe_mira_45`: mira_45_m4
+- **Fuzil M4A1**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
+- **Fuzil M4A1**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
+- **Fuzil M4A1**, `encaixe_boca`: quebra_chamas_556, compensador_556, supressor_556, supressor_556_tan
+- **Fuzil M4A1**, `encaixe_carregador`: carregador_556_30, carregador_556_60, tambor_556_60, carregador_556_30_tan, tambor_556_60_tatico
+- **Fuzil M4A1**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan, coronha_leve_ar, coronha_leve_ar_tan
+- **Fuzil M4A1**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, batente_mao, empunhadura_reta, empunhadura_reta_tan, empunhadura_dobravel
+- **Fuzil M4A1**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
+- **Fuzil M4A1**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
+- **Fuzil M4A1**, `encaixe_bipe`: bipe
+- **Fuzil M4A1**, `encaixe_bandoleira`: bandoleira
+- **Fuzil M4A1 com luneta**, `encaixe_guarda_mao`: guarda_mao_classico_m4, guarda_mao_longo_m4
+- **Fuzil M4A1 com luneta**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan
+- **Fuzil M4A1 com luneta**, `encaixe_alavanca`: alavanca_ambi_m4
+- **Fuzil M4A1 com luneta**, `encaixe_mira`: alca_transporte_m4, mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa
+- **Fuzil M4A1 com luneta**, `encaixe_mira_45`: mira_45_m4
+- **Fuzil M4A1 com luneta**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
+- **Fuzil M4A1 com luneta**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
+- **Fuzil M4A1 com luneta**, `encaixe_boca`: quebra_chamas_556, compensador_556, supressor_556, supressor_556_tan
+- **Fuzil M4A1 com luneta**, `encaixe_carregador`: carregador_556_30, carregador_556_60, tambor_556_60, carregador_556_30_tan, tambor_556_60_tatico
+- **Fuzil M4A1 com luneta**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan, coronha_leve_ar, coronha_leve_ar_tan
+- **Fuzil M4A1 com luneta**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, batente_mao, empunhadura_reta, empunhadura_reta_tan, empunhadura_dobravel
+- **Fuzil M4A1 com luneta**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
+- **Fuzil M4A1 com luneta**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
+- **Fuzil M4A1 com luneta**, `encaixe_bipe`: bipe
+- **Fuzil M4A1 com luneta**, `encaixe_bandoleira`: bandoleira
+- **Fuzil M4A1 tático**, `encaixe_guarda_mao`: guarda_mao_classico_m4, guarda_mao_longo_m4
+- **Fuzil M4A1 tático**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan
+- **Fuzil M4A1 tático**, `encaixe_alavanca`: alavanca_ambi_m4
+- **Fuzil M4A1 tático**, `encaixe_mira`: alca_transporte_m4, mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa
+- **Fuzil M4A1 tático**, `encaixe_mira_45`: mira_45_m4
+- **Fuzil M4A1 tático**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
+- **Fuzil M4A1 tático**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
+- **Fuzil M4A1 tático**, `encaixe_boca`: quebra_chamas_556, compensador_556, supressor_556, supressor_556_tan
+- **Fuzil M4A1 tático**, `encaixe_carregador`: carregador_556_30, carregador_556_60, tambor_556_60, carregador_556_30_tan, tambor_556_60_tatico
+- **Fuzil M4A1 tático**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan, coronha_leve_ar, coronha_leve_ar_tan
+- **Fuzil M4A1 tático**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, batente_mao, empunhadura_reta, empunhadura_reta_tan, empunhadura_dobravel
+- **Fuzil M4A1 tático**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
+- **Fuzil M4A1 tático**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
+- **Fuzil M4A1 tático**, `encaixe_bipe`: bipe
+- **Fuzil M4A1 tático**, `encaixe_bandoleira`: bandoleira

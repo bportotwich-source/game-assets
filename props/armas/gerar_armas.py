@@ -1084,7 +1084,7 @@ CAB = {
                     'modificadores': 'multiplicadores aplicados à arma pelo acessório', 'valor_troca': 'preço na troca entre comunidades'},
 }
 NOMES = {'rifle': 'Rifles', 'arco': 'Arcos', 'estabilizador': 'Estabilizadores', 'aljava': 'Aljavas', 'soltador': 'Soltadores', 'besta': 'Bestas', 'estribo': 'Estribos', 'faca': 'Facas', 'facao': 'Facões', 'machadinha': 'Machadinhas', 'lanca': 'Lanças', 'bastao': 'Bastões', 'arremessavel': 'Arremessáveis', 'capa': 'Capas', 'bainha': 'Bainhas', 'punho': 'Punhos', 'enfeite': 'Enfeites', 'guarda_mao': 'Guarda-mãos', 'tampa': 'Tampas', 'baioneta': 'Baionetas', 'fuzil': 'Fuzis', 'laser': 'Lasers', 'carabina': 'Carabinas', 'bipe': 'Bipés', 'espingarda': 'Espingardas', 'coronha': 'Coronhas', 'tubo': 'Tubo do carregador', 'lanterna': 'Lanternas', 'porta_cartuchos': 'Porta-cartuchos', 'bandoleira': 'Bandoleiras', 'revolver': 'Revólveres', 'recarga': 'Recarga rápida', 'empunhadura': 'Empunhaduras', 'coldre': 'Coldres', 'pistola': 'Pistolas', 'boca': 'Boca do cano', 'trilho': 'Trilho', 'mira': 'Miras', 'carregador': 'Carregadores',
-         'municao': 'Munição', 'estojo': 'Estojos', 'caixa': 'Caixas de munição', 'efeito': 'Efeitos'}
+         'municao': 'Munição', 'estojo': 'Estojos', 'caixa': 'Caixas de munição', 'efeito': 'Efeitos', 'mira_45': 'Miras a 45°', 'alavanca': 'Alavancas de manejo'}
 
 
 def catalogo_md(cat):

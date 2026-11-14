@@ -2515,7 +2515,8 @@
       "punho_cavas",
       "punho_cavas_tan",
       "punho_reto",
-      "punho_reto_tan"
+      "punho_reto_tan",
+      "punho_vazado_m4"
      ],
      "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
      "explodir_m": [
@@ -2538,7 +2539,9 @@
       "mira_ponto_vermelho_tubo",
       "luneta_1_6",
       "luneta_4x",
-      "mira_reflexa"
+      "mira_reflexa",
+      "luneta_m4",
+      "mira_prismatica_m4"
      ],
      "explodir_m": [
       0.0,
@@ -2647,7 +2650,8 @@
       "coronha_fixa_ar",
       "coronha_retratil_ar_tan",
       "coronha_leve_ar",
-      "coronha_leve_ar_tan"
+      "coronha_leve_ar_tan",
+      "coronha_moderna_ar"
      ],
      "padrao": "coronha_retratil_ar",
      "explodir_m": [
@@ -3073,7 +3077,8 @@
       "punho_cavas",
       "punho_cavas_tan",
       "punho_reto",
-      "punho_reto_tan"
+      "punho_reto_tan",
+      "punho_vazado_m4"
      ],
      "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
      "explodir_m": [
@@ -3096,7 +3101,9 @@
       "mira_ponto_vermelho_tubo",
       "luneta_1_6",
       "luneta_4x",
-      "mira_reflexa"
+      "mira_reflexa",
+      "luneta_m4",
+      "mira_prismatica_m4"
      ],
      "padrao": "luneta_1_6",
      "explodir_m": [
@@ -3206,7 +3213,8 @@
       "coronha_fixa_ar",
       "coronha_retratil_ar_tan",
       "coronha_leve_ar",
-      "coronha_leve_ar_tan"
+      "coronha_leve_ar_tan",
+      "coronha_moderna_ar"
      ],
      "padrao": "coronha_retratil_ar_tan",
      "explodir_m": [
@@ -3836,7 +3844,9 @@
       "mira_reflexa",
       "mira_ponto_vermelho_tubo",
       "luneta_1_6",
-      "luneta_4x"
+      "luneta_4x",
+      "luneta_m4",
+      "mira_prismatica_m4"
      ],
      "descricao": "só existe com a tampa com trilho",
      "explodir_m": [
@@ -4407,7 +4417,9 @@
       "mira_ponto_vermelho_tubo",
       "luneta_1_6",
       "luneta_4x",
-      "mira_reflexa_gasto"
+      "mira_reflexa_gasto",
+      "luneta_m4",
+      "mira_prismatica_m4"
      ],
      "descricao": "só existe com a tampa com trilho",
      "padrao": "mira_reflexa_gasto",
@@ -6725,7 +6737,9 @@
       "mira_holografica",
       "mira_reflexa",
       "mira_ponto_vermelho_tubo",
-      "luneta_1_6"
+      "luneta_1_6",
+      "luneta_m4",
+      "mira_prismatica_m4"
      ],
      "descricao": "trilho de cima",
      "explodir_m": [
@@ -7210,7 +7224,9 @@
       "mira_holografica",
       "mira_reflexa",
       "mira_ponto_vermelho_tubo",
-      "luneta_1_6"
+      "luneta_1_6",
+      "luneta_m4",
+      "mira_prismatica_m4"
      ],
      "descricao": "trilho de cima",
      "explodir_m": [
@@ -8791,7 +8807,8 @@
       "punho_cavas",
       "punho_cavas_tan",
       "punho_reto",
-      "punho_reto_tan"
+      "punho_reto_tan",
+      "punho_vazado_m4"
      ],
      "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
      "explodir_m": [
@@ -8816,7 +8833,9 @@
       "luneta_1_6",
       "mira_holografica",
       "mira_ponto_vermelho_tubo",
-      "mira_reflexa"
+      "mira_reflexa",
+      "luneta_m4",
+      "mira_prismatica_m4"
      ],
      "padrao": "luneta_5_25",
      "explodir_m": [
@@ -8932,7 +8951,8 @@
       "coronha_precisao_ar",
       "coronha_precisao_ar_preta",
       "coronha_retratil_ar",
-      "coronha_fixa_ar"
+      "coronha_fixa_ar",
+      "coronha_moderna_ar"
      ],
      "padrao": "coronha_precisao_ar",
      "explodir_m": [
@@ -9342,7 +9362,8 @@
       "punho_cavas",
       "punho_cavas_tan",
       "punho_reto",
-      "punho_reto_tan"
+      "punho_reto_tan",
+      "punho_vazado_m4"
      ],
      "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
      "explodir_m": [
@@ -9367,7 +9388,9 @@
       "luneta_1_6",
       "mira_holografica",
       "mira_ponto_vermelho_tubo",
-      "mira_reflexa"
+      "mira_reflexa",
+      "luneta_m4",
+      "mira_prismatica_m4"
      ],
      "padrao": "luneta_5_25",
      "explodir_m": [
@@ -9483,7 +9506,8 @@
       "coronha_precisao_ar",
       "coronha_precisao_ar_preta",
       "coronha_retratil_ar",
-      "coronha_fixa_ar"
+      "coronha_fixa_ar",
+      "coronha_moderna_ar"
      ],
      "padrao": "coronha_precisao_ar",
      "explodir_m": [
@@ -12896,29 +12920,27 @@
    "recarga_vazia_s": 2.6,
    "precisao": 0.8,
    "ruido_m": 160,
-   "peso_kg": 3.4,
+   "peso_kg": 3.1,
    "raridade": "raro",
    "valor_troca": 180,
    "onde": [
     "quartel",
     "delegacia"
    ],
-   "descricao": "Fuzil 5,56 clássico e bem detalhado: alça de transporte com mira, guarda-mão de trilho quádruplo, coronha retrátil e carregador de metal de 30. Cada peça é um nó próprio do modelo.",
+   "descricao": "Fuzil 5,56 clássico, de peças trocáveis como o Vigília: guarda-mão, alça de transporte, boca, coronha, punho, alavanca de manejo e carregador saem e entram pela tela da arma. Vem com o guarda-mão de trilho quádruplo, a alça de transporte, o quebra-chamas e a coronha retrátil. Modelo detalhado, com texturas assadas.",
    "arquivo": "armas/fuzil_m4a1.glb",
-   "tamanho_m": [
-    0.06,
-    0.282,
-    0.848
-   ],
-   "triangulos": 39068,
-   "kb": 6095.2,
-   "gerador": "m4a1/jogo.py",
+   "gerador": "m4a1/gerar_troca.py",
    "partes": [
     {
      "no": "punho",
      "tipo": "troca",
-     "descricao": "punho de pistola",
-     "pai": "fuzil_m4a1"
+     "descricao": "punho de pistola (troca pelo encaixe_punho)",
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      -0.0,
+      -0.06,
+      0.02
+     ]
     },
     {
      "no": "gatilho",
@@ -12926,37 +12948,62 @@
      "eixo": "x",
      "curso_graus": -12,
      "descricao": "puxa para trás",
-     "pai": "fuzil_m4a1"
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
     },
     {
      "no": "seletor",
      "tipo": "gira",
-     "eixo": "x",
+     "eixo": "z",
      "curso_graus": 90,
-     "descricao": "seguro / semi (90°) / auto (180°)",
-     "pai": "fuzil_m4a1"
+     "descricao": "trava / semi (90°) / auto (180°)",
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ]
     },
     {
      "no": "ferrolho",
      "tipo": "desliza",
      "curso_m": -0.08,
      "descricao": "transportador: recua 80 mm a cada tiro; fica atrás com o carregador vazio",
-     "pai": "fuzil_m4a1"
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      0.04,
+      0.05,
+      0.05
+     ]
     },
     {
      "no": "alavanca",
      "tipo": "desliza",
      "curso_m": -0.065,
      "descricao": "alavanca de manejo (puxa e solta)",
-     "pai": "fuzil_m4a1"
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      -0.0,
+      0.04,
+      0.06
+     ]
     },
     {
      "no": "tampa_janela",
      "tipo": "gira",
-     "eixo": "z",
-     "curso_graus": -110,
+     "eixo": "x",
+     "curso_graus": 100,
      "descricao": "abre no primeiro tiro e fica aberta",
-     "pai": "fuzil_m4a1"
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      0.04,
+      -0.01,
+      0.0
+     ]
     },
     {
      "no": "retem_ferrolho",
@@ -12964,18 +13011,30 @@
      "eixo": "z",
      "curso_graus": -8,
      "descricao": "retém do ferrolho (esquerda)",
-     "pai": "fuzil_m4a1"
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      -0.03,
+      0.0,
+      -0.0
+     ]
     },
     {
      "no": "carregador",
      "tipo": "remove",
      "direcao": [
-      0,
-      -1,
-      0
+      0.12,
+      -0.99,
+      0.0
      ],
-     "descricao": "sai para baixo",
-     "pai": "fuzil_m4a1"
+     "municao": "municao_556",
+     "capacidade": 30,
+     "descricao": "carregador curvo de 30",
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      0.0,
+      -0.1,
+      -0.02
+     ]
     }
    ],
    "animacoes": {
@@ -12997,7 +13056,7 @@
     "recarregar": {
      "duracao_s": 2.2,
      "laco": false,
-     "descricao": "carregador cai (0,35 s) e o novo entra (1,72 s)"
+     "descricao": "aperta o retém, carregador cai (0,35 s), novo entra (1,72 s); trocar o nó carregador entre 0,6 e 1,3 s"
     },
     "recarregar_vazia": {
      "duracao_s": 2.6,
@@ -13007,7 +13066,12 @@
     "trocar_modo": {
      "duracao_s": 0.5,
      "laco": false,
-     "descricao": "seletor: seguro -> semi -> auto (no jogo, pare na posição escolhida)"
+     "descricao": "seletor: trava -> semi -> auto (no jogo, pare na posição escolhida)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.8,
+     "laco": false,
+     "descricao": "puxa a alavanca até ver o cartucho na câmara, solta e mostra o outro lado"
     },
     "ocioso": {
      "duracao_s": 3.0,
@@ -13042,8 +13106,8 @@
      "pai": "fuzil_m4a1",
      "posicao_m": [
       0.0,
-      0.062,
-      -0.29
+      0.074,
+      -0.337
      ],
      "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
     },
@@ -13052,7 +13116,7 @@
      "pai": "fuzil_m4a1",
      "posicao_m": [
       0.0,
-      0.0445,
+      0.0344,
       0.2674
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
@@ -13062,8 +13126,8 @@
      "pai": "fuzil_m4a1",
      "posicao_m": [
       0.0,
-      0.1493,
-      0.0
+      0.1425,
+      0.003
      ],
      "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
     },
@@ -13073,7 +13137,7 @@
      "posicao_m": [
       0.0,
       0.093,
-      -0.581
+      -0.555
      ],
      "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
     },
@@ -13087,7 +13151,401 @@
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_guarda_mao",
+     "tipo": "guarda_mao_m4",
+     "pai": "fuzil_m4a1",
+     "posicao_m": [
+      0.0,
+      0.093,
+      -0.182
+     ],
+     "aceita": [
+      "guarda_mao_classico_m4",
+      "guarda_mao_longo_m4"
+     ],
+     "descricao": "guarda-mão: o clássico traz a massa fixa; o longo libera os trilhos de baixo e dos lados",
+     "padrao": "guarda_mao_classico_m4"
+    },
+    {
+     "no": "encaixe_punho",
+     "tipo": "punho_ar",
+     "pai": "punho",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "substitui": "punho",
+     "aceita": [
+      "punho_ar",
+      "punho_ar_tan",
+      "punho_cavas",
+      "punho_cavas_tan",
+      "punho_reto",
+      "punho_reto_tan",
+      "punho_vazado_m4"
+     ],
+     "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
+     "explodir_m": [
+      -0.0,
+      -0.08,
+      0.02
+     ]
+    },
+    {
+     "no": "encaixe_alavanca",
+     "tipo": "alavanca_ar",
+     "pai": "alavanca",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "substitui": "alavanca",
+     "aceita": [
+      "alavanca_ambi_m4"
+     ],
+     "descricao": "filho do nó alavanca (anda com ela); ao pôr uma alavanca aqui, esconda as malhas do nó alavanca"
+    },
+    {
+     "no": "encaixe_mira",
+     "tipo": "trilho_mira",
+     "pai": "fuzil_m4a1",
+     "posicao_m": [
+      0.0,
+      0.123,
+      -0.117
+     ],
+     "aceita": [
+      "alca_transporte_m4",
+      "mira_holografica",
+      "mira_ponto_vermelho_tubo",
+      "luneta_1_6",
+      "luneta_4x",
+      "mira_reflexa",
+      "luneta_m4",
+      "mira_prismatica_m4"
+     ],
+     "explodir_m": [
+      0.0,
+      0.07,
+      0.0
+     ],
+     "padrao": "alca_transporte_m4"
+    },
+    {
+     "no": "encaixe_mira_45",
+     "tipo": "mira_45_m4",
+     "pai": "fuzil_m4a1",
+     "posicao_m": [
+      0.0,
+      0.123,
+      -0.239
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     },
+     "aceita": [
+      "mira_45_m4"
+     ],
+     "descricao": "trilho de cima do guarda-mão longo, na frente da mira principal"
+    },
+    {
+     "no": "encaixe_alca",
+     "tipo": "alca_trilho",
+     "pai": "fuzil_m4a1",
+     "posicao_m": [
+      0.0,
+      0.123,
+      0.003
+     ],
+     "aceita": [
+      "alca_rebativel",
+      "alca_polimero",
+      "alca_polimero_tan"
+     ],
+     "rebate_com": "encaixe_mira",
+     "descricao": "não cabe com a alça de transporte; deita (animação \"dobrar\" do acessório) quando há mira ou luneta no encaixe_mira",
+     "explodir_m": [
+      -0.0,
+      0.05,
+      0.02
+     ],
+     "proibe": {
+      "encaixe_mira": [
+       "alca_transporte_m4"
+      ]
+     }
+    },
+    {
+     "no": "encaixe_massa",
+     "tipo": "massa_trilho",
+     "pai": "fuzil_m4a1",
+     "posicao_m": [
+      0.0,
+      0.123,
+      -0.462
+     ],
+     "aceita": [
+      "massa_rebativel",
+      "massa_polimero",
+      "massa_polimero_tan"
+     ],
+     "rebate_com": "encaixe_mira",
+     "descricao": "deita (animação \"dobrar\" do acessório) quando há mira ou luneta no encaixe_mira",
+     "explodir_m": [
+      0.0,
+      0.05,
+      -0.02
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     }
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_556",
+     "pai": "fuzil_m4a1",
+     "posicao_m": [
+      0.0,
+      0.093,
+      -0.541
+     ],
+     "aceita": [
+      "quebra_chamas_556",
+      "compensador_556",
+      "supressor_556",
+      "supressor_556_tan"
+     ],
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.08
+     ],
+     "padrao": "quebra_chamas_556"
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_556",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_556_30",
+      "carregador_556_60",
+      "tambor_556_60",
+      "carregador_556_30_tan",
+      "tambor_556_60_tatico"
+     ],
+     "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda as malhas do nó carregador"
+    },
+    {
+     "no": "encaixe_coronha",
+     "tipo": "coronha_ar",
+     "pai": "fuzil_m4a1",
+     "posicao_m": [
+      0.0,
+      0.093,
+      0.015
+     ],
+     "aceita": [
+      "coronha_retratil_ar",
+      "coronha_fixa_ar",
+      "coronha_retratil_ar_tan",
+      "coronha_leve_ar",
+      "coronha_leve_ar_tan",
+      "coronha_moderna_ar"
+     ],
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.08
+     ],
+     "padrao": "coronha_retratil_ar"
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "fuzil_m4a1",
+     "posicao_m": [
+      0.0,
+      0.074,
+      -0.337
+     ],
+     "aceita": [
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_quadrada",
+      "empunhadura_cilindrica",
+      "batente_mao",
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "empunhadura_dobravel"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     }
+    },
+    {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "fuzil_m4a1",
+     "posicao_m": [
+      0.02,
+      0.087,
+      -0.437
+     ],
+     "aceita": [
+      "lanterna_fuzil",
+      "lanterna_compacta"
+     ],
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     }
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "fuzil_m4a1",
+     "posicao_m": [
+      -0.02,
+      0.087,
+      -0.437
+     ],
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "lado esquerdo do guarda-mão (a lanterna fica no direito)",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     }
+    },
+    {
+     "no": "encaixe_bipe",
+     "tipo": "bipe",
+     "pai": "fuzil_m4a1",
+     "posicao_m": [
+      0.0,
+      0.074,
+      -0.467
+     ],
+     "aceita": [
+      "bipe"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     }
+    },
+    {
+     "no": "encaixe_bandoleira",
+     "tipo": "bandoleira",
+     "pai": "fuzil_m4a1",
+     "posicao_m": [
+      -0.02,
+      0.087,
+      -0.462
+     ],
+     "aceita": [
+      "bandoleira"
+     ],
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     }
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "fuzil_m4a1",
+     "posicao_m": [
+      0.0,
+      0.093,
+      -0.555
+     ],
+     "descricao": "clarão de boca e origem do disparo (-Z)"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "fuzil_m4a1",
+     "posicao_m": [
+      0.0148,
+      0.093,
+      -0.127
+     ],
+     "descricao": "onde nasce o estojo (vai para a direita e um pouco para trás)"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "fuzil_m4a1",
+     "posicao_m": [
+      0.0,
+      0.1425,
+      0.003
+     ],
+     "descricao": "centro do furo da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z) sem mira acoplada"
+    }
+   ],
+   "tamanho_m": [
+    0.059,
+    0.282,
+    0.848
+   ],
+   "triangulos": 16558,
+   "arquivo_leve": "armas/fuzil_m4a1_leve.glb",
+   "triangulos_leve": 5994,
+   "kb_leve": 1142.8,
+   "kb": 2556.3
   },
   {
    "id": "fuzil_m4a1_luneta",
@@ -13106,34 +13564,32 @@
    "estojo_s": 0.02,
    "variante_de": "fuzil_m4a1",
    "capacidade": 30,
-   "alcance_m": 140,
+   "alcance_m": 80,
    "recarga_s": 2.2,
    "recarga_vazia_s": 2.6,
-   "precisao": 0.92,
-   "ruido_m": 60,
-   "peso_kg": 4.3,
+   "precisao": 0.8,
+   "ruido_m": 160,
+   "peso_kg": 3.1,
    "raridade": "muito raro",
    "valor_troca": 260,
    "onde": [
     "quartel",
     "delegacia"
    ],
-   "descricao": "A M4A1 montada para tiro de longe: guarda-mão longo vazado, supressor, luneta em suporte de peça única, empunhadura angulada, carregador de polímero e coronha fixa. O supressor baixa o ruído para 60 m.",
+   "descricao": "A M4A1 montada para tiro de longe: guarda-mão longo vazado, supressor, luneta de 2 a 8×, empunhadura angulada, carregador de polímero e coronha fixa. Todas as peças saem e entram pela tela da arma. Modelo detalhado, com texturas assadas.",
    "arquivo": "armas/fuzil_m4a1_luneta.glb",
-   "tamanho_m": [
-    0.07,
-    0.323,
-    1.006
-   ],
-   "triangulos": 40520,
-   "kb": 8731.4,
-   "gerador": "m4a1/jogo.py",
+   "gerador": "m4a1/gerar_troca.py",
    "partes": [
     {
      "no": "punho",
      "tipo": "troca",
-     "descricao": "punho de pistola",
-     "pai": "fuzil_m4a1_luneta"
+     "descricao": "punho de pistola (troca pelo encaixe_punho)",
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      -0.0,
+      -0.06,
+      0.02
+     ]
     },
     {
      "no": "gatilho",
@@ -13141,37 +13597,62 @@
      "eixo": "x",
      "curso_graus": -12,
      "descricao": "puxa para trás",
-     "pai": "fuzil_m4a1_luneta"
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
     },
     {
      "no": "seletor",
      "tipo": "gira",
-     "eixo": "x",
+     "eixo": "z",
      "curso_graus": 90,
-     "descricao": "seguro / semi (90°) / auto (180°)",
-     "pai": "fuzil_m4a1_luneta"
+     "descricao": "trava / semi (90°) / auto (180°)",
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ]
     },
     {
      "no": "ferrolho",
      "tipo": "desliza",
      "curso_m": -0.08,
      "descricao": "transportador: recua 80 mm a cada tiro; fica atrás com o carregador vazio",
-     "pai": "fuzil_m4a1_luneta"
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      0.04,
+      0.05,
+      0.05
+     ]
     },
     {
      "no": "alavanca",
      "tipo": "desliza",
      "curso_m": -0.065,
      "descricao": "alavanca de manejo (puxa e solta)",
-     "pai": "fuzil_m4a1_luneta"
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      -0.0,
+      0.04,
+      0.06
+     ]
     },
     {
      "no": "tampa_janela",
      "tipo": "gira",
-     "eixo": "z",
-     "curso_graus": -110,
+     "eixo": "x",
+     "curso_graus": 100,
      "descricao": "abre no primeiro tiro e fica aberta",
-     "pai": "fuzil_m4a1_luneta"
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      0.04,
+      -0.01,
+      0.0
+     ]
     },
     {
      "no": "retem_ferrolho",
@@ -13179,18 +13660,30 @@
      "eixo": "z",
      "curso_graus": -8,
      "descricao": "retém do ferrolho (esquerda)",
-     "pai": "fuzil_m4a1_luneta"
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      -0.03,
+      0.0,
+      -0.0
+     ]
     },
     {
      "no": "carregador",
      "tipo": "remove",
      "direcao": [
-      0,
-      -1,
-      0
+      0.12,
+      -0.99,
+      0.0
      ],
-     "descricao": "sai para baixo",
-     "pai": "fuzil_m4a1_luneta"
+     "municao": "municao_556",
+     "capacidade": 30,
+     "descricao": "carregador curvo de 30",
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      0.0,
+      -0.1,
+      -0.02
+     ]
     }
    ],
    "animacoes": {
@@ -13212,7 +13705,7 @@
     "recarregar": {
      "duracao_s": 2.2,
      "laco": false,
-     "descricao": "carregador cai (0,35 s) e o novo entra (1,72 s)"
+     "descricao": "aperta o retém, carregador cai (0,35 s), novo entra (1,72 s); trocar o nó carregador entre 0,6 e 1,3 s"
     },
     "recarregar_vazia": {
      "duracao_s": 2.6,
@@ -13222,7 +13715,12 @@
     "trocar_modo": {
      "duracao_s": 0.5,
      "laco": false,
-     "descricao": "seletor: seguro -> semi -> auto (no jogo, pare na posição escolhida)"
+     "descricao": "seletor: trava -> semi -> auto (no jogo, pare na posição escolhida)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.8,
+     "laco": false,
+     "descricao": "puxa a alavanca até ver o cartucho na câmara, solta e mostra o outro lado"
     },
     "ocioso": {
      "duracao_s": 3.0,
@@ -13257,8 +13755,8 @@
      "pai": "fuzil_m4a1_luneta",
      "posicao_m": [
       0.0,
-      0.026,
-      -0.3435
+      0.074,
+      -0.337
      ],
      "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
     },
@@ -13267,8 +13765,8 @@
      "pai": "fuzil_m4a1_luneta",
      "posicao_m": [
       0.0,
-      0.0413,
-      0.2769
+      0.0424,
+      0.3539
      ],
      "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
     },
@@ -13277,8 +13775,8 @@
      "pai": "fuzil_m4a1_luneta",
      "posicao_m": [
       0.0,
-      0.161,
-      0.028
+      0.1425,
+      0.003
      ],
      "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
     },
@@ -13288,7 +13786,7 @@
      "posicao_m": [
       0.0,
       0.093,
-      -0.729
+      -0.555
      ],
      "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
     },
@@ -13297,12 +13795,408 @@
      "pai": "carregador",
      "posicao_m": [
       0.0,
-      -0.1017,
-      -0.1599
+      -0.0937,
+      -0.1582
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_guarda_mao",
+     "tipo": "guarda_mao_m4",
+     "pai": "fuzil_m4a1_luneta",
+     "posicao_m": [
+      0.0,
+      0.093,
+      -0.182
+     ],
+     "aceita": [
+      "guarda_mao_classico_m4",
+      "guarda_mao_longo_m4"
+     ],
+     "descricao": "guarda-mão: o clássico traz a massa fixa; o longo libera os trilhos de baixo e dos lados",
+     "padrao": "guarda_mao_longo_m4"
+    },
+    {
+     "no": "encaixe_punho",
+     "tipo": "punho_ar",
+     "pai": "punho",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "substitui": "punho",
+     "aceita": [
+      "punho_ar",
+      "punho_ar_tan",
+      "punho_cavas",
+      "punho_cavas_tan",
+      "punho_reto",
+      "punho_reto_tan",
+      "punho_vazado_m4"
+     ],
+     "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
+     "explodir_m": [
+      -0.0,
+      -0.08,
+      0.02
+     ]
+    },
+    {
+     "no": "encaixe_alavanca",
+     "tipo": "alavanca_ar",
+     "pai": "alavanca",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "substitui": "alavanca",
+     "aceita": [
+      "alavanca_ambi_m4"
+     ],
+     "descricao": "filho do nó alavanca (anda com ela); ao pôr uma alavanca aqui, esconda as malhas do nó alavanca"
+    },
+    {
+     "no": "encaixe_mira",
+     "tipo": "trilho_mira",
+     "pai": "fuzil_m4a1_luneta",
+     "posicao_m": [
+      0.0,
+      0.123,
+      -0.117
+     ],
+     "aceita": [
+      "alca_transporte_m4",
+      "mira_holografica",
+      "mira_ponto_vermelho_tubo",
+      "luneta_1_6",
+      "luneta_4x",
+      "mira_reflexa",
+      "luneta_m4",
+      "mira_prismatica_m4"
+     ],
+     "explodir_m": [
+      0.0,
+      0.07,
+      0.0
+     ],
+     "padrao": "luneta_m4"
+    },
+    {
+     "no": "encaixe_mira_45",
+     "tipo": "mira_45_m4",
+     "pai": "fuzil_m4a1_luneta",
+     "posicao_m": [
+      0.0,
+      0.123,
+      -0.239
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     },
+     "aceita": [
+      "mira_45_m4"
+     ],
+     "descricao": "trilho de cima do guarda-mão longo, na frente da mira principal"
+    },
+    {
+     "no": "encaixe_alca",
+     "tipo": "alca_trilho",
+     "pai": "fuzil_m4a1_luneta",
+     "posicao_m": [
+      0.0,
+      0.123,
+      0.003
+     ],
+     "aceita": [
+      "alca_rebativel",
+      "alca_polimero",
+      "alca_polimero_tan"
+     ],
+     "rebate_com": "encaixe_mira",
+     "descricao": "não cabe com a alça de transporte; deita (animação \"dobrar\" do acessório) quando há mira ou luneta no encaixe_mira",
+     "explodir_m": [
+      -0.0,
+      0.05,
+      0.02
+     ],
+     "proibe": {
+      "encaixe_mira": [
+       "alca_transporte_m4"
+      ]
+     }
+    },
+    {
+     "no": "encaixe_massa",
+     "tipo": "massa_trilho",
+     "pai": "fuzil_m4a1_luneta",
+     "posicao_m": [
+      0.0,
+      0.123,
+      -0.462
+     ],
+     "aceita": [
+      "massa_rebativel",
+      "massa_polimero",
+      "massa_polimero_tan"
+     ],
+     "rebate_com": "encaixe_mira",
+     "descricao": "deita (animação \"dobrar\" do acessório) quando há mira ou luneta no encaixe_mira",
+     "explodir_m": [
+      0.0,
+      0.05,
+      -0.02
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     }
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_556",
+     "pai": "fuzil_m4a1_luneta",
+     "posicao_m": [
+      0.0,
+      0.093,
+      -0.541
+     ],
+     "aceita": [
+      "quebra_chamas_556",
+      "compensador_556",
+      "supressor_556",
+      "supressor_556_tan"
+     ],
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.08
+     ],
+     "padrao": "supressor_556"
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_556",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_556_30",
+      "carregador_556_60",
+      "tambor_556_60",
+      "carregador_556_30_tan",
+      "tambor_556_60_tatico"
+     ],
+     "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda as malhas do nó carregador",
+     "padrao": "carregador_556_30"
+    },
+    {
+     "no": "encaixe_coronha",
+     "tipo": "coronha_ar",
+     "pai": "fuzil_m4a1_luneta",
+     "posicao_m": [
+      0.0,
+      0.093,
+      0.015
+     ],
+     "aceita": [
+      "coronha_retratil_ar",
+      "coronha_fixa_ar",
+      "coronha_retratil_ar_tan",
+      "coronha_leve_ar",
+      "coronha_leve_ar_tan",
+      "coronha_moderna_ar"
+     ],
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.08
+     ],
+     "padrao": "coronha_fixa_ar"
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "fuzil_m4a1_luneta",
+     "posicao_m": [
+      0.0,
+      0.074,
+      -0.337
+     ],
+     "aceita": [
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_quadrada",
+      "empunhadura_cilindrica",
+      "batente_mao",
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "empunhadura_dobravel"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     },
+     "padrao": "empunhadura_angulada"
+    },
+    {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "fuzil_m4a1_luneta",
+     "posicao_m": [
+      0.02,
+      0.087,
+      -0.437
+     ],
+     "aceita": [
+      "lanterna_fuzil",
+      "lanterna_compacta"
+     ],
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     }
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "fuzil_m4a1_luneta",
+     "posicao_m": [
+      -0.02,
+      0.087,
+      -0.437
+     ],
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "lado esquerdo do guarda-mão (a lanterna fica no direito)",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     }
+    },
+    {
+     "no": "encaixe_bipe",
+     "tipo": "bipe",
+     "pai": "fuzil_m4a1_luneta",
+     "posicao_m": [
+      0.0,
+      0.074,
+      -0.467
+     ],
+     "aceita": [
+      "bipe"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     }
+    },
+    {
+     "no": "encaixe_bandoleira",
+     "tipo": "bandoleira",
+     "pai": "fuzil_m4a1_luneta",
+     "posicao_m": [
+      -0.02,
+      0.087,
+      -0.462
+     ],
+     "aceita": [
+      "bandoleira"
+     ],
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     }
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "fuzil_m4a1_luneta",
+     "posicao_m": [
+      0.0,
+      0.093,
+      -0.555
+     ],
+     "descricao": "clarão de boca e origem do disparo (-Z)"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "fuzil_m4a1_luneta",
+     "posicao_m": [
+      0.0148,
+      0.093,
+      -0.127
+     ],
+     "descricao": "onde nasce o estojo (vai para a direita e um pouco para trás)"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "fuzil_m4a1_luneta",
+     "posicao_m": [
+      0.0,
+      0.1425,
+      0.003
+     ],
+     "descricao": "centro do furo da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z) sem mira acoplada"
+    }
+   ],
+   "tamanho_m": [
+    0.07,
+    0.322,
+    1.005
+   ],
+   "triangulos": 16558,
+   "kb": 2556.6,
+   "arquivo_leve": "armas/fuzil_m4a1_luneta_leve.glb",
+   "triangulos_leve": 5979,
+   "kb_leve": 1040.3
   },
   {
    "id": "fuzil_m4a1_tatico",
@@ -13320,36 +14214,33 @@
    "durabilidade": 3000,
    "estojo_s": 0.02,
    "variante_de": "fuzil_m4a1",
-   "apoio_vertical": true,
-   "capacidade": 60,
-   "alcance_m": 100,
-   "recarga_s": 2.8,
-   "recarga_vazia_s": 3.2,
-   "precisao": 0.85,
-   "ruido_m": 60,
-   "peso_kg": 5.2,
+   "capacidade": 30,
+   "alcance_m": 80,
+   "recarga_s": 2.2,
+   "recarga_vazia_s": 2.6,
+   "precisao": 0.8,
+   "ruido_m": 160,
+   "peso_kg": 3.1,
    "raridade": "muito raro",
    "valor_troca": 300,
    "onde": [
     "quartel",
     "delegacia"
    ],
-   "descricao": "A M4A1 com tudo: guarda-mão longo, supressor, mira prismática com tampas, reflex a 45°, módulo laser, lanterna, empunhadura vertical vazada, carregador de tambor de 60, punho vazado, alavanca ambidestra, tubo vermelho e coronha moderna. Pesada, mas silenciosa e com muita munição.",
+   "descricao": "A M4A1 com tudo: guarda-mão longo, supressor, mira prismática, reflex a 45°, módulo laser, lanterna, empunhadura vertical, tambor de 60, punho vazado, alavanca ambidestra e coronha moderna. Todas as peças saem e entram pela tela da arma. Modelo detalhado, com texturas assadas.",
    "arquivo": "armas/fuzil_m4a1_tatico.glb",
-   "tamanho_m": [
-    0.12,
-    0.332,
-    1.007
-   ],
-   "triangulos": 43271,
-   "kb": 8921.7,
-   "gerador": "m4a1/jogo.py",
+   "gerador": "m4a1/gerar_troca.py",
    "partes": [
     {
      "no": "punho",
      "tipo": "troca",
-     "descricao": "punho de pistola",
-     "pai": "fuzil_m4a1_tatico"
+     "descricao": "punho de pistola (troca pelo encaixe_punho)",
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      -0.0,
+      -0.06,
+      0.02
+     ]
     },
     {
      "no": "gatilho",
@@ -13357,37 +14248,62 @@
      "eixo": "x",
      "curso_graus": -12,
      "descricao": "puxa para trás",
-     "pai": "fuzil_m4a1_tatico"
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
     },
     {
      "no": "seletor",
      "tipo": "gira",
-     "eixo": "x",
+     "eixo": "z",
      "curso_graus": 90,
-     "descricao": "seguro / semi (90°) / auto (180°)",
-     "pai": "fuzil_m4a1_tatico"
+     "descricao": "trava / semi (90°) / auto (180°)",
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ]
     },
     {
      "no": "ferrolho",
      "tipo": "desliza",
      "curso_m": -0.08,
      "descricao": "transportador: recua 80 mm a cada tiro; fica atrás com o carregador vazio",
-     "pai": "fuzil_m4a1_tatico"
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      0.04,
+      0.05,
+      0.05
+     ]
     },
     {
      "no": "alavanca",
      "tipo": "desliza",
      "curso_m": -0.065,
      "descricao": "alavanca de manejo (puxa e solta)",
-     "pai": "fuzil_m4a1_tatico"
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      -0.0,
+      0.04,
+      0.06
+     ]
     },
     {
      "no": "tampa_janela",
      "tipo": "gira",
-     "eixo": "z",
-     "curso_graus": -110,
+     "eixo": "x",
+     "curso_graus": 100,
      "descricao": "abre no primeiro tiro e fica aberta",
-     "pai": "fuzil_m4a1_tatico"
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      0.04,
+      -0.01,
+      0.0
+     ]
     },
     {
      "no": "retem_ferrolho",
@@ -13395,18 +14311,30 @@
      "eixo": "z",
      "curso_graus": -8,
      "descricao": "retém do ferrolho (esquerda)",
-     "pai": "fuzil_m4a1_tatico"
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      -0.03,
+      0.0,
+      -0.0
+     ]
     },
     {
      "no": "carregador",
      "tipo": "remove",
      "direcao": [
-      0,
-      -1,
-      0
+      0.12,
+      -0.99,
+      0.0
      ],
-     "descricao": "sai para baixo",
-     "pai": "fuzil_m4a1_tatico"
+     "municao": "municao_556",
+     "capacidade": 30,
+     "descricao": "carregador curvo de 30",
+     "pai": "fuzil_m4a1",
+     "explodir_m": [
+      0.0,
+      -0.1,
+      -0.02
+     ]
     }
    ],
    "animacoes": {
@@ -13426,19 +14354,24 @@
      "descricao": "pose parada: ferrolho atrás"
     },
     "recarregar": {
-     "duracao_s": 2.8,
+     "duracao_s": 2.2,
      "laco": false,
-     "descricao": "carregador cai (0,35 s) e o novo entra (2,19 s)"
+     "descricao": "aperta o retém, carregador cai (0,35 s), novo entra (1,72 s); trocar o nó carregador entre 0,6 e 1,3 s"
     },
     "recarregar_vazia": {
-     "duracao_s": 3.31,
+     "duracao_s": 2.6,
      "laco": false,
-     "descricao": "troca o carregador e bate no retém: o ferrolho fecha (2,5 s)"
+     "descricao": "troca o carregador e bate no retém: o ferrolho fecha (2,0 s)"
     },
     "trocar_modo": {
      "duracao_s": 0.5,
      "laco": false,
-     "descricao": "seletor: seguro -> semi -> auto (no jogo, pare na posição escolhida)"
+     "descricao": "seletor: trava -> semi -> auto (no jogo, pare na posição escolhida)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.8,
+     "laco": false,
+     "descricao": "puxa a alavanca até ver o cartucho na câmara, solta e mostra o outro lado"
     },
     "ocioso": {
      "duracao_s": 3.0,
@@ -13455,7 +14388,7 @@
       0.0,
       0.0
      ],
-     "inclinacao_graus": 18.6,
+     "inclinacao_graus": 18.8,
      "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
     },
     {
@@ -13473,8 +14406,8 @@
      "pai": "fuzil_m4a1_tatico",
      "posicao_m": [
       0.0,
-      0.0197,
-      -0.3229
+      0.074,
+      -0.337
      ],
      "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
     },
@@ -13493,8 +14426,8 @@
      "pai": "fuzil_m4a1_tatico",
      "posicao_m": [
       0.0,
-      0.167,
-      -0.028
+      0.1425,
+      0.003
      ],
      "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
     },
@@ -13504,7 +14437,7 @@
      "posicao_m": [
       0.0,
       0.093,
-      -0.729
+      -0.555
      ],
      "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
     },
@@ -13513,12 +14446,413 @@
      "pai": "carregador",
      "posicao_m": [
       0.0,
-      -0.075,
-      -0.141
+      -0.0937,
+      -0.1582
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
     }
-   ]
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_guarda_mao",
+     "tipo": "guarda_mao_m4",
+     "pai": "fuzil_m4a1_tatico",
+     "posicao_m": [
+      0.0,
+      0.093,
+      -0.182
+     ],
+     "aceita": [
+      "guarda_mao_classico_m4",
+      "guarda_mao_longo_m4"
+     ],
+     "descricao": "guarda-mão: o clássico traz a massa fixa; o longo libera os trilhos de baixo e dos lados",
+     "padrao": "guarda_mao_longo_m4"
+    },
+    {
+     "no": "encaixe_punho",
+     "tipo": "punho_ar",
+     "pai": "punho",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "substitui": "punho",
+     "aceita": [
+      "punho_ar",
+      "punho_ar_tan",
+      "punho_cavas",
+      "punho_cavas_tan",
+      "punho_reto",
+      "punho_reto_tan",
+      "punho_vazado_m4"
+     ],
+     "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
+     "explodir_m": [
+      -0.0,
+      -0.08,
+      0.02
+     ],
+     "padrao": "punho_vazado_m4"
+    },
+    {
+     "no": "encaixe_alavanca",
+     "tipo": "alavanca_ar",
+     "pai": "alavanca",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "substitui": "alavanca",
+     "aceita": [
+      "alavanca_ambi_m4"
+     ],
+     "descricao": "filho do nó alavanca (anda com ela); ao pôr uma alavanca aqui, esconda as malhas do nó alavanca",
+     "padrao": "alavanca_ambi_m4"
+    },
+    {
+     "no": "encaixe_mira",
+     "tipo": "trilho_mira",
+     "pai": "fuzil_m4a1_tatico",
+     "posicao_m": [
+      0.0,
+      0.123,
+      -0.117
+     ],
+     "aceita": [
+      "alca_transporte_m4",
+      "mira_holografica",
+      "mira_ponto_vermelho_tubo",
+      "luneta_1_6",
+      "luneta_4x",
+      "mira_reflexa",
+      "luneta_m4",
+      "mira_prismatica_m4"
+     ],
+     "explodir_m": [
+      0.0,
+      0.07,
+      0.0
+     ],
+     "padrao": "mira_prismatica_m4"
+    },
+    {
+     "no": "encaixe_mira_45",
+     "tipo": "mira_45_m4",
+     "pai": "fuzil_m4a1_tatico",
+     "posicao_m": [
+      0.0,
+      0.123,
+      -0.239
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     },
+     "aceita": [
+      "mira_45_m4"
+     ],
+     "descricao": "trilho de cima do guarda-mão longo, na frente da mira principal",
+     "padrao": "mira_45_m4"
+    },
+    {
+     "no": "encaixe_alca",
+     "tipo": "alca_trilho",
+     "pai": "fuzil_m4a1_tatico",
+     "posicao_m": [
+      0.0,
+      0.123,
+      0.003
+     ],
+     "aceita": [
+      "alca_rebativel",
+      "alca_polimero",
+      "alca_polimero_tan"
+     ],
+     "rebate_com": "encaixe_mira",
+     "descricao": "não cabe com a alça de transporte; deita (animação \"dobrar\" do acessório) quando há mira ou luneta no encaixe_mira",
+     "explodir_m": [
+      -0.0,
+      0.05,
+      0.02
+     ],
+     "proibe": {
+      "encaixe_mira": [
+       "alca_transporte_m4"
+      ]
+     }
+    },
+    {
+     "no": "encaixe_massa",
+     "tipo": "massa_trilho",
+     "pai": "fuzil_m4a1_tatico",
+     "posicao_m": [
+      0.0,
+      0.123,
+      -0.462
+     ],
+     "aceita": [
+      "massa_rebativel",
+      "massa_polimero",
+      "massa_polimero_tan"
+     ],
+     "rebate_com": "encaixe_mira",
+     "descricao": "deita (animação \"dobrar\" do acessório) quando há mira ou luneta no encaixe_mira",
+     "explodir_m": [
+      0.0,
+      0.05,
+      -0.02
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     }
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_556",
+     "pai": "fuzil_m4a1_tatico",
+     "posicao_m": [
+      0.0,
+      0.093,
+      -0.541
+     ],
+     "aceita": [
+      "quebra_chamas_556",
+      "compensador_556",
+      "supressor_556",
+      "supressor_556_tan"
+     ],
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.08
+     ],
+     "padrao": "supressor_556"
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_556",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "substitui": "carregador",
+     "aceita": [
+      "carregador_556_30",
+      "carregador_556_60",
+      "tambor_556_60",
+      "carregador_556_30_tan",
+      "tambor_556_60_tatico"
+     ],
+     "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda as malhas do nó carregador",
+     "padrao": "tambor_556_60_tatico"
+    },
+    {
+     "no": "encaixe_coronha",
+     "tipo": "coronha_ar",
+     "pai": "fuzil_m4a1_tatico",
+     "posicao_m": [
+      0.0,
+      0.093,
+      0.015
+     ],
+     "aceita": [
+      "coronha_retratil_ar",
+      "coronha_fixa_ar",
+      "coronha_retratil_ar_tan",
+      "coronha_leve_ar",
+      "coronha_leve_ar_tan",
+      "coronha_moderna_ar"
+     ],
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.08
+     ],
+     "padrao": "coronha_moderna_ar"
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "fuzil_m4a1_tatico",
+     "posicao_m": [
+      0.0,
+      0.074,
+      -0.337
+     ],
+     "aceita": [
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_curta_tan",
+      "empunhadura_quadrada",
+      "empunhadura_cilindrica",
+      "batente_mao",
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "empunhadura_dobravel"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     },
+     "padrao": "empunhadura_vertical"
+    },
+    {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "fuzil_m4a1_tatico",
+     "posicao_m": [
+      0.02,
+      0.087,
+      -0.437
+     ],
+     "aceita": [
+      "lanterna_fuzil",
+      "lanterna_compacta"
+     ],
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     },
+     "padrao": "lanterna_compacta"
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "fuzil_m4a1_tatico",
+     "posicao_m": [
+      -0.02,
+      0.087,
+      -0.437
+     ],
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "descricao": "lado esquerdo do guarda-mão (a lanterna fica no direito)",
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     },
+     "padrao": "modulo_laser"
+    },
+    {
+     "no": "encaixe_bipe",
+     "tipo": "bipe",
+     "pai": "fuzil_m4a1_tatico",
+     "posicao_m": [
+      0.0,
+      0.074,
+      -0.467
+     ],
+     "aceita": [
+      "bipe"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     }
+    },
+    {
+     "no": "encaixe_bandoleira",
+     "tipo": "bandoleira",
+     "pai": "fuzil_m4a1_tatico",
+     "posicao_m": [
+      -0.02,
+      0.087,
+      -0.462
+     ],
+     "aceita": [
+      "bandoleira"
+     ],
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_m4"
+      ]
+     }
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "fuzil_m4a1_tatico",
+     "posicao_m": [
+      0.0,
+      0.093,
+      -0.555
+     ],
+     "descricao": "clarão de boca e origem do disparo (-Z)"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "fuzil_m4a1_tatico",
+     "posicao_m": [
+      0.0148,
+      0.093,
+      -0.127
+     ],
+     "descricao": "onde nasce o estojo (vai para a direita e um pouco para trás)"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "fuzil_m4a1_tatico",
+     "posicao_m": [
+      0.0,
+      0.1425,
+      0.003
+     ],
+     "descricao": "centro do furo da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z) sem mira acoplada"
+    }
+   ],
+   "tamanho_m": [
+    0.121,
+    0.331,
+    1.006
+   ],
+   "triangulos": 16558,
+   "kb": 2556.6,
+   "arquivo_leve": "armas/fuzil_m4a1_tatico_leve.glb",
+   "triangulos_leve": 5976,
+   "kb_leve": 1187.7
   }
  ],
  "acessorios": [
@@ -19223,6 +20557,373 @@
    ],
    "triangulos": 3180,
    "kb": 194.3
+  },
+  {
+   "id": "guarda_mao_classico_m4",
+   "grupo": "acessorios",
+   "nome": "Guarda-mão de trilho quádruplo (M4A1)",
+   "categoria": "guarda_mao",
+   "encaixe": "guarda_mao_m4",
+   "peso_kg": 0.32,
+   "raridade": "incomum",
+   "valor_troca": 15,
+   "modificadores": {},
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "Guarda-mão de trilho quádruplo com anel delta e a base de massa fixa no cano: a massa de mira e o zarelho da frente vêm com ele. Não tem trilho livre para empunhadura, lanterna ou laser. Modelo detalhado, peça da M4A1, com texturas assadas.",
+   "arquivo": "acessorios/guarda_mao_classico_m4.glb",
+   "gerador": "m4a1/gerar_troca.py",
+   "tamanho_m": [
+    0.058,
+    0.104,
+    0.24
+   ],
+   "triangulos": 14216,
+   "pontos_ref": [
+    {
+     "no": "ref_guarda_mao",
+     "pai": "guarda_mao_classico_m4",
+     "posicao_m": [
+      0.0,
+      -0.031,
+      -0.123
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    }
+   ],
+   "kb": 1470.2
+  },
+  {
+   "id": "guarda_mao_longo_m4",
+   "grupo": "acessorios",
+   "nome": "Guarda-mão longo vazado (M4A1)",
+   "categoria": "guarda_mao",
+   "encaixe": "guarda_mao_m4",
+   "peso_kg": 0.36,
+   "raridade": "raro",
+   "valor_troca": 30,
+   "modificadores": {
+    "precisao": 1.05
+   },
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "Guarda-mão longo vazado com trilho contínuo em cima e fendas dos lados e embaixo: recebe empunhadura, lanterna, laser, bipé, massa rebatível e a mira a 45°. Bloco de gás baixo, sem massa fixa. Modelo detalhado, peça da M4A1, com texturas assadas.",
+   "arquivo": "acessorios/guarda_mao_longo_m4.glb",
+   "gerador": "m4a1/gerar_troca.py",
+   "tamanho_m": [
+    0.04,
+    0.054,
+    0.333
+   ],
+   "triangulos": 9736,
+   "pontos_ref": [
+    {
+     "no": "ref_guarda_mao",
+     "pai": "guarda_mao_longo_m4",
+     "posicao_m": [
+      0.0,
+      -0.019,
+      -0.1695
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    }
+   ],
+   "kb": 1002.9
+  },
+  {
+   "id": "alca_transporte_m4",
+   "grupo": "acessorios",
+   "nome": "Alça de transporte com mira (M4A1)",
+   "categoria": "mira",
+   "encaixe": "trilho_mira",
+   "ferro": true,
+   "peso_kg": 0.27,
+   "raridade": "incomum",
+   "valor_troca": 15,
+   "modificadores": {},
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "linha_de_visada": "encaixe \"olho\" (furo da alça)",
+   "descricao": "Alça de transporte com a mira de furo, tambor de elevação e botão de deriva. Mira junto com a massa fixa do guarda-mão clássico. Modelo detalhado, peça da M4A1, com texturas assadas.",
+   "arquivo": "acessorios/alca_transporte_m4.glb",
+   "gerador": "m4a1/gerar_troca.py",
+   "encaixes": [
+    {
+     "no": "olho",
+     "tipo": "mira",
+     "pai": "alca_transporte_m4",
+     "posicao_m": [
+      0.0,
+      0.0326,
+      0.117
+     ],
+     "descricao": "linha de visada"
+    }
+   ],
+   "tamanho_m": [
+    0.045,
+    0.052,
+    0.19
+   ],
+   "triangulos": 2056,
+   "kb": 337.6
+  },
+  {
+   "id": "luneta_m4",
+   "grupo": "acessorios",
+   "nome": "Luneta 2-8× (M4A1)",
+   "categoria": "mira",
+   "encaixe": "trilho_mira",
+   "aumento": [
+    2,
+    8
+   ],
+   "peso_kg": 0.62,
+   "raridade": "muito raro",
+   "valor_troca": 120,
+   "modificadores": {
+    "precisao_mirando": 1.5,
+    "tempo_mirar": 1.15,
+    "alcance_m": 1.75
+   },
+   "onde": [
+    "quartel"
+   ],
+   "linha_de_visada": "encaixe \"olho\"; zoom de 2× a 8×",
+   "optica": {
+    "tipo": "luneta",
+    "aumento": [
+     2,
+     8
+    ],
+    "iluminado": true,
+    "ocular_m": [
+     0.0,
+     0.038,
+     0.1312
+    ],
+    "raio_ocular_m": 0.0165,
+    "objetiva_m": [
+     0.0,
+     0.038,
+     -0.1308
+    ]
+   },
+   "descricao": "Luneta de 2 a 8× em suporte de peça única com dois anéis, torres recartilhadas e alavanca de aumento. Modelo detalhado, peça da M4A1, com texturas assadas.",
+   "arquivo": "acessorios/luneta_m4.glb",
+   "gerador": "m4a1/gerar_troca.py",
+   "encaixes": [
+    {
+     "no": "olho",
+     "tipo": "mira",
+     "pai": "luneta_m4",
+     "posicao_m": [
+      0.0,
+      0.038,
+      0.137
+     ],
+     "descricao": "linha de visada"
+    }
+   ],
+   "tamanho_m": [
+    0.07,
+    0.081,
+    0.28
+   ],
+   "triangulos": 4682,
+   "kb": 618.5
+  },
+  {
+   "id": "mira_prismatica_m4",
+   "grupo": "acessorios",
+   "nome": "Mira prismática 3× (M4A1)",
+   "categoria": "mira",
+   "encaixe": "trilho_mira",
+   "aumento": [
+    3,
+    3
+   ],
+   "peso_kg": 0.45,
+   "raridade": "muito raro",
+   "valor_troca": 95,
+   "modificadores": {
+    "precisao_mirando": 1.35,
+    "tempo_mirar": 0.95,
+    "alcance_m": 1.25
+   },
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "linha_de_visada": "encaixe \"olho\"; 3× fixo",
+   "optica": {
+    "tipo": "luneta",
+    "aumento": [
+     3,
+     3
+    ],
+    "iluminado": true,
+    "ocular_m": [
+     0.0,
+     0.044,
+     0.0782
+    ],
+    "raio_ocular_m": 0.0145,
+    "objetiva_m": [
+     0.0,
+     0.044,
+     -0.0378
+    ]
+   },
+   "descricao": "Mira prismática de 3× com retículo iluminado, tampas de lente basculantes e suporte alto. Modelo detalhado, peça da M4A1, com texturas assadas.",
+   "arquivo": "acessorios/mira_prismatica_m4.glb",
+   "gerador": "m4a1/gerar_troca.py",
+   "encaixes": [
+    {
+     "no": "olho",
+     "tipo": "mira",
+     "pai": "mira_prismatica_m4",
+     "posicao_m": [
+      0.0,
+      0.044,
+      0.084
+     ],
+     "descricao": "linha de visada"
+    }
+   ],
+   "tamanho_m": [
+    0.048,
+    0.117,
+    0.157
+   ],
+   "triangulos": 2714,
+   "kb": 439.4
+  },
+  {
+   "id": "mira_45_m4",
+   "grupo": "acessorios",
+   "nome": "Mira reflex a 45° (M4A1)",
+   "categoria": "mira_45",
+   "encaixe": "mira_45_m4",
+   "peso_kg": 0.12,
+   "raridade": "raro",
+   "valor_troca": 45,
+   "modificadores": {
+    "tempo_mirar": 0.9
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Mira reflex pequena num suporte inclinado a 45° no trilho de cima do guarda-mão longo, para usar ao lado da luneta ou da prismática. Modelo detalhado, peça da M4A1, com texturas assadas.",
+   "arquivo": "acessorios/mira_45_m4.glb",
+   "gerador": "m4a1/gerar_troca.py",
+   "tamanho_m": [
+    0.084,
+    0.046,
+    0.046
+   ],
+   "triangulos": 784,
+   "kb": 187.3
+  },
+  {
+   "id": "punho_vazado_m4",
+   "grupo": "acessorios",
+   "nome": "Punho vazado de alumínio",
+   "categoria": "punho",
+   "encaixe": "punho_ar",
+   "peso_kg": 0.09,
+   "raridade": "incomum",
+   "valor_troca": 10,
+   "modificadores": {
+    "recuo": 0.97
+   },
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "Punho de alumínio vazado, mais em pé, com ressalto para o dedo médio. Modelo detalhado, peça da M4A1, com texturas assadas.",
+   "arquivo": "acessorios/punho_vazado_m4.glb",
+   "gerador": "m4a1/gerar_troca.py",
+   "tamanho_m": [
+    0.021,
+    0.114,
+    0.083
+   ],
+   "triangulos": 664,
+   "kb": 144.1
+  },
+  {
+   "id": "alavanca_ambi_m4",
+   "grupo": "acessorios",
+   "nome": "Alavanca de manejo ambidestra",
+   "categoria": "alavanca",
+   "encaixe": "alavanca_ar",
+   "peso_kg": 0.05,
+   "raridade": "incomum",
+   "valor_troca": 10,
+   "modificadores": {
+    "recarga_s": 0.95
+   },
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "Alavanca de manejo com asas dos dois lados (caramelo): dá para puxar com qualquer mão. Modelo detalhado, peça da M4A1, com texturas assadas.",
+   "arquivo": "acessorios/alavanca_ambi_m4.glb",
+   "gerador": "m4a1/gerar_troca.py",
+   "tamanho_m": [
+    0.068,
+    0.006,
+    0.043
+   ],
+   "triangulos": 588,
+   "kb": 210.8
+  },
+  {
+   "id": "coronha_moderna_ar",
+   "grupo": "acessorios",
+   "nome": "Coronha moderna (fuzil)",
+   "categoria": "coronha",
+   "encaixe": "coronha_ar",
+   "peso_kg": 0.48,
+   "raridade": "raro",
+   "valor_troca": 28,
+   "modificadores": {
+    "recuo": 0.6,
+    "precisao": 1.32
+   },
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "Coronha moderna de polímero com apoio de rosto e soleira de borracha, num tubo octogonal vermelho. Modelo detalhado, peça da M4A1, com texturas assadas.",
+   "arquivo": "acessorios/coronha_moderna_ar.glb",
+   "gerador": "m4a1/gerar_troca.py",
+   "tamanho_m": [
+    0.041,
+    0.143,
+    0.263
+   ],
+   "triangulos": 6484,
+   "pontos_ref": [
+    {
+     "no": "ref_coronha",
+     "pai": "coronha_moderna_ar",
+     "posicao_m": [
+      0.0,
+      -0.0519,
+      0.2629
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    }
+   ],
+   "kb": 605.6
   }
  ],
  "municao": [

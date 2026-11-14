@@ -397,3 +397,13 @@ de altura, quatro ganchos, bolsa de 500 ml com rótulo, câmara de gotas, pinça
 esquecido (`banco_praca`); balcão de recepção com painéis almofadados, tampo de granito, campainha, livro de hóspedes,
 placa, mesa de dentro com telefone, monitor de tubo e fichas, e quadro de chaves numeradas na parede de trás
 (`balcao_recepcao`, nós `balcao` e `quadro_chaves`). Materiais encadeados de `publico/`. `python3 gerar.py todas`.
+
+## abrigo/ (lote 21)
+
+Máquina de lanches azul com vitrine de vidro trincado (transparente, malha `vidro_frente`), cinco prateleiras de molas
+com pacotes e chocolates (algumas molas vazias), etiquetas A1-E5, visor "SEM ENERGIA", teclado, moedeiro, aceitador
+de notas e boca de retirada com um pacote esquecido (`maquina_lanches`); colchão de solteiro velho sobre papelão
+aberto, cobertor jogado, travesseiro, vela no pires e garrafa d'água (`colchao_chao`); quadro de cortiça com cartazes
+de PROCURADO com rosto e de AVISO de toque de recolher, tachinhas e um recado (`quadro_procurados`); riscos de carvão
+na parede contando 33 dias, em grupos de cinco, com "DIA 33" (`contagem_dias`). Materiais encadeados de `atendimento/`.
+`python3 gerar.py todas`.

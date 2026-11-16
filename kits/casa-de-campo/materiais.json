@@ -1,0 +1,58 @@
+{
+ "kit": "casa-de-campo",
+ "gerado_por": "scripts/materiais/mapear.py",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "brick": {
+   "material": "tijolo_vermelho"
+  },
+  "deck": {
+   "material": "deck",
+   "sem_uv": true
+  },
+  "door": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.574,
+    0.722,
+    0.867
+   ]
+  },
+  "frame": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "lattice": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.784,
+    0.658,
+    0.578
+   ]
+  },
+  "plaster": {
+   "material": "reboco_claro"
+  },
+  "sash": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "shingles": {
+   "material": "telha_asfaltica"
+  },
+  "siding": {
+   "material": "tabua_branca",
+   "cor": [
+    0.834,
+    0.868,
+    0.672
+   ]
+  },
+  "trim": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  }
+ }
+}

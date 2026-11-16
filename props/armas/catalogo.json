@@ -351,6 +351,19 @@
       0.0159
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "ferrolho",
+     "posicao_m": [
+      -0.0125,
+      0.0732,
+      -0.0353
+     ],
+     "mao": "esquerda",
+     "jeito": "esquerda",
+     "peca": "ferrolho",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "sentinela/jogo.py",
@@ -691,6 +704,19 @@
       -0.036
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "cao",
+     "posicao_m": [
+      0.0,
+      0.0874,
+      -0.0042
+     ],
+     "mao": "direita",
+     "jeito": "polegar",
+     "peca": "cao",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "revolver/jogo.py",
@@ -1144,6 +1170,19 @@
       -0.173
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "telha",
+     "posicao_m": [
+      -0.0005,
+      0.0377,
+      -0.3393
+     ],
+     "mao": "esquerda",
+     "jeito": "baixo",
+     "peca": "telha",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "espingarda/jogo.py",
@@ -1563,6 +1602,19 @@
       -0.173
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "telha",
+     "posicao_m": [
+      -0.0005,
+      0.0377,
+      -0.3253
+     ],
+     "mao": "esquerda",
+     "jeito": "baixo",
+     "peca": "telha",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "espingarda/jogo.py",
@@ -1961,6 +2013,19 @@
       -0.1385
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0676,
+      0.0556,
+      -0.045
+     ],
+     "mao": "direita",
+     "jeito": "lado",
+     "peca": "ferrolho",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "carabina/jogo.py",
@@ -2347,6 +2412,19 @@
       -0.1255
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0609,
+      0.0445,
+      -0.032
+     ],
+     "mao": "direita",
+     "jeito": "lado",
+     "peca": "ferrolho",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "carabina/jogo.py",
@@ -2910,6 +2988,19 @@
       -0.1599
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "alavanca",
+     "posicao_m": [
+      0.025,
+      0.1092,
+      0.017
+     ],
+     "mao": "direita",
+     "jeito": "lado",
+     "peca": "alavanca",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "vigilia/jogo.py",
@@ -3475,6 +3566,19 @@
       -0.1599
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "alavanca",
+     "posicao_m": [
+      0.025,
+      0.1092,
+      0.017
+     ],
+     "mao": "direita",
+     "jeito": "lado",
+     "peca": "alavanca",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "vigilia/jogo.py",
@@ -4034,6 +4138,19 @@
       -0.1724
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.032,
+      0.0987,
+      -0.1348
+     ],
+     "mao": "direita",
+     "jeito": "lado",
+     "peca": "ferrolho",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "brasa/jogo.py",
@@ -4609,6 +4726,19 @@
       -0.173
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.032,
+      0.0987,
+      -0.1348
+     ],
+     "mao": "direita",
+     "jeito": "lado",
+     "peca": "ferrolho",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "brasa/jogo.py",
@@ -5156,6 +5286,19 @@
       -0.2133
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0447,
+      0.0933,
+      -0.1998
+     ],
+     "mao": "direita",
+     "jeito": "lado",
+     "peca": "ferrolho",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "triangulos": 31775,
@@ -5709,6 +5852,19 @@
       -0.2133
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0447,
+      0.0933,
+      -0.1998
+     ],
+     "mao": "direita",
+     "jeito": "lado",
+     "peca": "ferrolho",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "triangulos": 31775,
@@ -6196,6 +6352,19 @@
       0.008
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "alavanca",
+     "posicao_m": [
+      0.0275,
+      0.0985,
+      0.092
+     ],
+     "mao": "direita",
+     "jeito": "lado",
+     "peca": "alavanca",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "smg/jogo.py",
@@ -6678,6 +6847,19 @@
       0.008
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "alavanca",
+     "posicao_m": [
+      0.0275,
+      0.0985,
+      0.092
+     ],
+     "mao": "direita",
+     "jeito": "lado",
+     "peca": "alavanca",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "smg/jogo.py",
@@ -7020,6 +7202,19 @@
       0.0159
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "ferrolho",
+     "posicao_m": [
+      -0.0125,
+      0.0732,
+      -0.0353
+     ],
+     "mao": "esquerda",
+     "jeito": "esquerda",
+     "peca": "ferrolho",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "sentinela/jogo.py",
@@ -7362,6 +7557,19 @@
       0.0159
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "ferrolho",
+     "posicao_m": [
+      -0.0125,
+      0.0732,
+      -0.0353
+     ],
+     "mao": "esquerda",
+     "jeito": "esquerda",
+     "peca": "ferrolho",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "sentinela/jogo.py",
@@ -7704,6 +7912,19 @@
       0.0159
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "ferrolho",
+     "posicao_m": [
+      -0.0125,
+      0.0732,
+      -0.0353
+     ],
+     "mao": "esquerda",
+     "jeito": "esquerda",
+     "peca": "ferrolho",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "sentinela/jogo.py",
@@ -8191,6 +8412,19 @@
       -0.1328
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "alavanca",
+     "posicao_m": [
+      -0.029,
+      0.0719,
+      -0.1423
+     ],
+     "mao": "esquerda",
+     "jeito": "esquerda",
+     "peca": "alavanca",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "ciclone/jogo.py",
@@ -8678,6 +8912,19 @@
       -0.1328
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "alavanca",
+     "posicao_m": [
+      -0.029,
+      0.0719,
+      -0.1423
+     ],
+     "mao": "esquerda",
+     "jeito": "esquerda",
+     "peca": "alavanca",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "ciclone/jogo.py",
@@ -9080,6 +9327,19 @@
       -0.104
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0441,
+      0.0446,
+      -0.035
+     ],
+     "mao": "direita",
+     "jeito": "lado",
+     "peca": "ferrolho",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "pardal/jogo.py",
@@ -9482,6 +9742,19 @@
       -0.104
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "ferrolho",
+     "posicao_m": [
+      0.0441,
+      0.0446,
+      -0.035
+     ],
+     "mao": "direita",
+     "jeito": "lado",
+     "peca": "ferrolho",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "pardal/jogo.py",
@@ -9746,6 +10019,19 @@
       -0.058
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "cao",
+     "posicao_m": [
+      0.0,
+      0.0755,
+      -0.0034
+     ],
+     "mao": "direita",
+     "jeito": "polegar",
+     "peca": "cao",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "sinalizadora/jogo.py",
@@ -10301,6 +10587,19 @@
       -0.1562
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "alavanca",
+     "posicao_m": [
+      0.0275,
+      0.1178,
+      0.0221
+     ],
+     "mao": "direita",
+     "jeito": "lado",
+     "peca": "alavanca",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "atalaia/jogo.py",
@@ -10856,6 +11155,19 @@
       -0.1562
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "alavanca",
+     "posicao_m": [
+      0.0275,
+      0.1178,
+      0.0221
+     ],
+     "mao": "direita",
+     "jeito": "lado",
+     "peca": "alavanca",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "atalaia/jogo.py",
@@ -11255,6 +11567,19 @@
       0.0172
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "ferrolho",
+     "posicao_m": [
+      -0.0126,
+      0.0728,
+      -0.0421
+     ],
+     "mao": "esquerda",
+     "jeito": "esquerda",
+     "peca": "ferrolho",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "guardia/jogo.py",
@@ -11654,6 +11979,19 @@
       0.0172
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "ferrolho",
+     "posicao_m": [
+      -0.0126,
+      0.0728,
+      -0.0421
+     ],
+     "mao": "esquerda",
+     "jeito": "esquerda",
+     "peca": "ferrolho",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "gerador": "guardia/jogo.py",
@@ -14257,6 +14595,19 @@
       -0.1582
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "alavanca",
+     "posicao_m": [
+      0.025,
+      0.1092,
+      0.017
+     ],
+     "mao": "direita",
+     "jeito": "lado",
+     "peca": "alavanca",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "encaixes": [
@@ -14906,6 +15257,19 @@
       -0.1582
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "alavanca",
+     "posicao_m": [
+      0.025,
+      0.1092,
+      0.017
+     ],
+     "mao": "direita",
+     "jeito": "lado",
+     "peca": "alavanca",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "encaixes": [
@@ -15557,6 +15921,19 @@
       -0.1582
      ],
      "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    },
+    {
+     "no": "ref_manejo",
+     "pai": "alavanca",
+     "posicao_m": [
+      0.025,
+      0.1092,
+      0.017
+     ],
+     "mao": "direita",
+     "jeito": "lado",
+     "peca": "alavanca",
+     "descricao": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
     }
    ],
    "encaixes": [
@@ -23492,6 +23869,84 @@
   "ref_mira": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)",
   "ref_cano": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)",
   "ref_carregador": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)",
-  "ref_corda": "mão que puxa a corda (arco e besta): ponto de encaixe da flecha na corda"
+  "ref_corda": "mão que puxa a corda (arco e besta): ponto de encaixe da flecha na corda",
+  "ref_manejo": "peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)"
+ },
+ "padrao_ancoras": {
+  "versao": 1,
+  "documento": "props/armas/PADRAO_ANCORAS.md",
+  "eixos": "cano para -Z, direita +X, cima +Y, origem no centro do punho (dedo médio), metros",
+  "grupos": {
+   "ombro": [
+    "fuzil",
+    "carabina",
+    "rifle",
+    "submetralhadora",
+    "espingarda"
+   ],
+   "mao": [
+    "pistola",
+    "revolver"
+   ],
+   "besta": [
+    "besta"
+   ],
+   "arco": [
+    "arco"
+   ],
+   "duas_maos": [
+    "lanca",
+    "bastao"
+   ],
+   "uma_mao": [
+    "faca",
+    "facao",
+    "machadinha",
+    "arremessavel"
+   ]
+  },
+  "obrigatorios": {
+   "ombro": [
+    "ref_punho",
+    "ref_gatilho",
+    "ref_guarda_mao",
+    "ref_coronha?",
+    "ref_mira",
+    "ref_cano",
+    "ref_carregador",
+    "ref_manejo"
+   ],
+   "mao": [
+    "ref_punho",
+    "ref_gatilho",
+    "ref_guarda_mao",
+    "ref_mira",
+    "ref_cano",
+    "ref_carregador",
+    "ref_manejo"
+   ],
+   "besta": [
+    "ref_punho",
+    "ref_gatilho",
+    "ref_guarda_mao",
+    "ref_coronha",
+    "ref_mira",
+    "ref_cano",
+    "ref_carregador"
+   ],
+   "arco": [
+    "ref_punho",
+    "ref_corda",
+    "ref_mira",
+    "ref_cano"
+   ],
+   "duas_maos": [
+    "ref_punho",
+    "ref_guarda_mao"
+   ],
+   "uma_mao": [
+    "ref_punho"
+   ]
+  }
  }
 }

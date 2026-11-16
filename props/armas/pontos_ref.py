@@ -30,7 +30,31 @@ DESCR = {
     'ref_cano': 'boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)',
     'ref_carregador': 'mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)',
     'ref_corda': 'mão que puxa a corda (arco e besta): ponto de encaixe da flecha na corda',
+    'ref_manejo': 'peça que a mão puxa para alimentar a arma (alavanca de manejo, manete do ferrolho, ferrolho da pistola, '
+                  'telha, cão): onde a mão pega; anda com a peça. O catálogo diz a mão e o jeito (lado, esquerda, baixo, polegar)',
 }
+
+# ---------------------------------------------------------------------------- o padrão (PADRAO_ANCORAS.md)
+# Versão do padrão e quais pontos cada tipo de arma tem que ter. "coronha?" = só se a arma tiver coronha montada.
+PADRAO_VERSAO = 1
+GRUPOS = {
+    'ombro': ('fuzil', 'carabina', 'rifle', 'submetralhadora', 'espingarda'),
+    'mao': ('pistola', 'revolver'),
+    'besta': ('besta',), 'arco': ('arco',), 'duas_maos': ('lanca', 'bastao'),
+    'uma_mao': ('faca', 'facao', 'machadinha', 'arremessavel'),
+}
+OBRIGATORIOS = {
+    'ombro': ['ref_punho', 'ref_gatilho', 'ref_guarda_mao', 'ref_coronha?', 'ref_mira', 'ref_cano', 'ref_carregador', 'ref_manejo'],
+    'mao': ['ref_punho', 'ref_gatilho', 'ref_guarda_mao', 'ref_mira', 'ref_cano', 'ref_carregador', 'ref_manejo'],
+    'besta': ['ref_punho', 'ref_gatilho', 'ref_guarda_mao', 'ref_coronha', 'ref_mira', 'ref_cano', 'ref_carregador'],
+    'arco': ['ref_punho', 'ref_corda', 'ref_mira', 'ref_cano'],
+    'duas_maos': ['ref_punho', 'ref_guarda_mao'],
+    'uma_mao': ['ref_punho'],
+}
+
+
+def grupo_de(cat):
+    return next((g for g, cs in GRUPOS.items() if cat in cs), 'uma_mao')
 
 INCLINACAO = {'pistola': 18, 'revolver': 22, 'fuzil': 22, 'submetralhadora': 16, 'espingarda': 24, 'carabina': 26, 'rifle': 28,
               'besta': 20}
@@ -187,6 +211,33 @@ def carregador_baixo(g, no):
     return np.array([0.0, y0 + 0.025, 0.5 * (f[:, 2].min() + f[:, 2].max())])
 
 
+MANEJO = {}   # id -> {'mao', 'jeito', 'peca'} do último ponto_manejo (vai para o catálogo)
+
+
+def ponto_manejo(g, cat):
+    """Onde a mão pega a peça que alimenta a arma (o mesmo critério que o jogo usava medindo na hora, arma._onde_pegar).
+    Devolve (peça, posição no mundo da arma, {'mao', 'jeito', 'peca'}) ou None."""
+    curta = cat in ('pistola', 'revolver')
+    for peca in ('telha', 'alavanca', 'ferrolho', 'cao'):
+        if not g.tem(peca): continue
+        v = g.verts(peca, fundo=True)
+        if not len(v): continue
+        lo, hi = v.min(0), v.max(0); c = 0.5 * (lo + hi)
+        if peca == 'telha':
+            return peca, np.array([c[0], lo[1], c[2]]), {'mao': 'esquerda', 'jeito': 'baixo', 'peca': peca}
+        if peca == 'cao':                                            # cão do revólver: o polegar puxa por cima, atrás
+            return peca, np.array([c[0], hi[1], hi[2]]), {'mao': 'direita', 'jeito': 'polegar', 'peca': peca}
+        if curta:                                                    # ferrolho da pistola: pelo lado esquerdo, atrás
+            return peca, np.array([lo[0], c[1], c[2] + 0.55 * (hi[2] - c[2])]), {'mao': 'esquerda', 'jeito': 'esquerda', 'peca': peca}
+        if hi[0] < 0.005 and c[0] < -0.005:                          # manete do lado esquerdo (Ciclone): a mão esquerda, por esse lado
+            return peca, v[np.argmin(v[:, 0])], {'mao': 'esquerda', 'jeito': 'esquerda', 'peca': peca}
+        dir_ = v[np.argmax(v[:, 0])]
+        if peca == 'alavanca' or dir_[0] < 0.028:                    # alavanca de manejo (ou ferrolho sem manete): por trás
+            return peca, np.array([hi[0], c[1], hi[2] - 0.012]), {'mao': 'direita', 'jeito': 'lado', 'peca': peca}
+        return peca, dir_, {'mao': 'direita', 'jeito': 'lado', 'peca': peca}   # manete do ferrolho: o ponto mais à direita
+    return None
+
+
 def coronha_padrao(g, reg, cat_ac):
     """Soleira da coronha: acessorio padrao no encaixe_coronha, ou a malha da propria arma."""
     if g.tem('ombro'): return g.pos('ombro'), g.nome_pai('ombro')
@@ -228,6 +279,8 @@ def pontos_arma(g, reg, cat_ac):
         elif g.tem('tambor'): add('ref_carregador', 'tambor', g.pos('tambor'))
         elif g.tem('entrada_cartucho'): copia('ref_carregador', 'entrada_cartucho')
         elif g.tem('cartucho'): add('ref_carregador', 'cartucho', g.pos('cartucho'))
+        m = ponto_manejo(g, cat)
+        if m: add('ref_manejo', m[0], m[1]); MANEJO[raiz] = m[2]
     elif cat == 'besta':
         add('ref_punho', raiz, (0, 0, 0), inclinacao_punho(g, INCLINACAO[cat]))
         add('ref_gatilho', 'gatilho', ponto_gatilho(g))
@@ -291,6 +344,7 @@ def injetar(g, pontos):
         nos.append(n); nos[ip].setdefault('children', []).append(len(nos) - 1)
         r = {'no': no, 'pai': pai, 'posicao_m': [round(float(c), 4) for c in pw]}
         if inc: r['inclinacao_graus'] = inc
+        if no == 'ref_manejo' and _ID_ATUAL[0] in MANEJO: r.update(MANEJO[_ID_ATUAL[0]])
         r['descricao'] = DESCR[no]; saida.append(r)
     return saida
 
@@ -308,14 +362,80 @@ def _recarregar(js):
     return g.__dict__
 
 
+_ID_ATUAL = ['']
+
+
 def aplicar_item(reg, grupo, cat_ac):
-    arq = os.path.join(AQUI, reg['arquivo']); g = Glb(arq)
+    arq = os.path.join(AQUI, reg['arquivo']); g = Glb(arq); _ID_ATUAL[0] = reg['id']
     pts = pontos_arma(g, reg, cat_ac) if grupo == 'armas' else pontos_acessorio(g, reg) if grupo == 'acessorios' else []
     if not pts and not any(str(n.get('name', '')).startswith('ref_') for n in g.js['nodes']): return None
     saida = injetar(g, pts); gravar_glb(arq, g.js, g.bin)
     if saida: reg['pontos_ref'] = saida
     else: reg.pop('pontos_ref', None)
     return saida
+
+
+# ============================================================================ conferência do padrão
+def _pos_ref(g):
+    return {n: g.pos(n) for n in g.idx if n and str(n).startswith('ref_')}
+
+
+def conferir(reg, g=None):
+    """Confere uma arma contra o padrão (PADRAO_ANCORAS.md): pontos obrigatórios e regras de geometria.
+    Devolve lista de problemas (vazia = conforme)."""
+    g = g or Glb(os.path.join(AQUI, reg['arquivo'])); P = _pos_ref(g); cat = reg['categoria']; gr = grupo_de(cat); erros = []
+    for no in OBRIGATORIOS[gr]:
+        opc = no.endswith('?'); no = no.rstrip('?')
+        if no not in P and not (opc and not g.tem('encaixe_coronha') and not g.tem('coronha') and not reg.get('encaixes')):
+            if not opc or no == 'ref_coronha' and (g.tem('coronha') or any(e.get('padrao') for e in reg.get('encaixes', []) if e['no'] == 'encaixe_coronha')):
+                erros.append(f'falta {no}')
+    def regra(ok, txt):
+        if not ok: erros.append(txt)
+    cm = lambda v: f'{v * 100:.1f} cm'
+    if 'ref_punho' in P: regra(np.linalg.norm(P['ref_punho']) < 0.002 or gr in ('duas_maos',), 'ref_punho fora da origem')
+    if gr in ('ombro', 'mao', 'besta') and {'ref_punho', 'ref_gatilho'} <= P.keys():
+        t = P['ref_gatilho']
+        regra(-0.085 <= t[2] <= -0.005, f'gatilho a {cm(-t[2])} na frente do punho (padrão 0,5 a 8,5 cm)')
+        regra(-0.005 <= t[1] <= 0.07, f'gatilho a {cm(t[1])} de altura (padrão -0,5 a 7 cm)')
+        regra(np.linalg.norm(t) <= 0.105, f'gatilho a {cm(np.linalg.norm(t))} do meio do punho (o indicador alcança até 10,5 cm)')
+        regra(abs(t[0]) <= 0.006, f'gatilho fora do meio ({cm(t[0])})')
+        inc = next((p.get('inclinacao_graus', 0) for p in reg.get('pontos_ref', []) if p['no'] == 'ref_punho'), 0)
+        regra(3 <= inc <= 40, f'ângulo do punho {inc}° (padrão 3 a 40°)')
+    if 'ref_guarda_mao' in P and 'ref_gatilho' in P:
+        a = P['ref_guarda_mao']
+        if gr in ('ombro', 'besta'):
+            regra(a[2] <= P['ref_gatilho'][2] - 0.06, f'apoio só {cm(P["ref_gatilho"][2] - a[2])} na frente do gatilho (padrão ≥ 6 cm)')
+            regra(abs(a[0]) <= 0.012, f'apoio fora do meio ({cm(a[0])})')
+            regra(np.linalg.norm(a - P['ref_punho']) <= 0.55, f'apoio a {cm(np.linalg.norm(a))} do punho (braço não alcança, padrão ≤ 55 cm)')
+        else:
+            regra(a[0] <= -0.008 and abs(a[2]) <= 0.05, 'apoio da pistola fora do lado esquerdo do punho')
+    if 'ref_coronha' in P: regra(P['ref_coronha'][2] >= 0.10 and abs(P['ref_coronha'][0]) <= 0.02, f'coronha fora do lugar ({cm(P["ref_coronha"][2])} atrás)')
+    if 'ref_mira' in P and gr != 'arco':
+        regra(P['ref_mira'][1] >= 0.015, f'mira só {cm(P["ref_mira"][1])} acima do punho')
+        regra(abs(P['ref_mira'][0]) <= 0.006, f'mira fora do meio ({cm(P["ref_mira"][0])})')
+    if 'ref_cano' in P and 'ref_mira' in P and gr != 'arco':
+        regra(P['ref_cano'][2] < P['ref_mira'][2], 'boca do cano atrás da mira')
+    if 'ref_carregador' in P: regra(abs(P['ref_carregador'][2]) <= 0.4, 'carregador longe demais do punho')
+    if 'ref_manejo' in P:
+        regra(np.linalg.norm(P['ref_manejo']) <= 0.45, f'manejo a {cm(np.linalg.norm(P["ref_manejo"]))} do punho (padrão ≤ 45 cm)')
+        regra(any(p['no'] == 'ref_manejo' and 'jeito' in p for p in reg.get('pontos_ref', [])), 'ref_manejo sem mão/jeito no catálogo')
+    return erros
+
+
+def conferir_tudo(cat, ids=()):
+    total = 0
+    for r in cat['armas']:
+        if ids and r['id'] not in ids: continue
+        e = conferir(r); total += bool(e)
+        print(f"{r['id']:28s} {'conforme' if not e else 'NÃO CONFORME: ' + '; '.join(e)}")
+    print(f'{len(cat["armas"]) - total if not ids else len(ids) - total} conformes, {total} fora do padrão')
+    return total
+
+
+def bloco_padrao():
+    return {'versao': PADRAO_VERSAO, 'documento': 'props/armas/PADRAO_ANCORAS.md',
+            'eixos': 'cano para -Z, direita +X, cima +Y, origem no centro do punho (dedo médio), metros',
+            'grupos': {g: list(c) for g, c in GRUPOS.items()}, 'obrigatorios': OBRIGATORIOS}
 
 
 def main(ids):
@@ -327,8 +447,13 @@ def main(ids):
             s = aplicar_item(r, grupo, cat_ac)
             if s: print(f"{r['id']:28s} " + '  '.join(f"{p['no'][4:]}{'∠' + str(p['inclinacao_graus']) if 'inclinacao_graus' in p else ''}" for p in s))
     cat['pontos_ref'] = {k: v for k, v in DESCR.items()}
+    cat['padrao_ancoras'] = bloco_padrao()
     json.dump(cat, open(arq, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    return conferir_tudo(cat, ids)
 
 
 if __name__ == '__main__':
+    if sys.argv[1:2] == ['--conferir']:          # só confere, não grava nada (sai com erro se alguma arma estiver fora)
+        c = json.load(open(os.path.join(AQUI, 'catalogo.json'), encoding='utf-8'))
+        sys.exit(1 if conferir_tudo(c, sys.argv[2:]) else 0)
     main(sys.argv[1:])

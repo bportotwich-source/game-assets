@@ -16,6 +16,8 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Fuzil Vigília 5,56 bicolor (`fuzil_556_bicolor`) | 5,56 | 30 | 42 | 80 m | 11/s | 160 m | 3000 | 3,3 kg | punho, mira, alca, massa, boca, carregador, coronha, empunhadura, lanterna, laser, bipe, bandoleira | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
 | Fuzil Brasa 7,62 (`fuzil_762`) | 7,62×39 | 30 | 55 | 70 m | 10/s | 180 m | 6000 | 3,6 kg | mira, boca, carregador, coronha, empunhadura, lanterna, laser, guarda_mao, enfeite, tampa, mira_tampa, baioneta, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
 | Fuzil Brasa 7,62 tático (`fuzil_762_tatico`) | 7,62×39 | 30 | 55 | 70 m | 10/s | 180 m | 6000 | 3,6 kg | mira, boca, carregador, coronha, empunhadura, lanterna, laser, guarda_mao, enfeite, tampa, mira_tampa, baioneta, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
+| Fuzil AKMN 7,62 (`fuzil_akmn`) | 7,62×39 | 30 | 55 | 70 m | 10/s | 180 m | 6000 | 3,3 kg | mira, mira_trilho, boca, carregador, coronha, punho, guarda_mao, empunhadura, lanterna, laser, enfeite, baioneta, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
+| Fuzil AKMN tático 7,62 (`fuzil_akmn_tatico`) | 7,62×39 | 30 | 55 | 70 m | 10/s | 180 m | 6000 | 3,6 kg | mira, mira_trilho, boca, carregador, coronha, punho, guarda_mao, empunhadura, lanterna, laser, enfeite, baioneta, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, inspecionar, ocioso |
 | Submetralhadora Faísca 9 mm (`smg_9mm`) | 9 mm | 30 | 28 | 40 m | 14/s | 120 m | 5000 | 1,9 kg | mira, alca, massa, boca, carregador, empunhadura, lanterna, laser, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, estender, recolher, inspecionar, ocioso |
 | Submetralhadora Faísca 9 mm caramelo (`smg_9mm_tan`) | 9 mm | 30 | 28 | 40 m | 14/s | 120 m | 5000 | 1,9 kg | mira, alca, massa, boca, carregador, empunhadura, lanterna, laser, bandoleira | atirar, atirar_ultimo, recarregar, recarregar_vazia, trocar_modo, estender, recolher, inspecionar, ocioso |
 | Pistola Sentinela 9 mm (areia) (`pistola_9mm_tan`) | 9 mm | 15 | 34 | 25 m | 4,0/s | 60 m | 600 | 0,78 kg | mira, ponte, boca, trilho, carregador | atirar, atirar_ultimo, vazia, recarregar, recarregar_vazia, inspecionar, ocioso |
@@ -207,6 +209,16 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 | Punho vazado de alumínio (`punho_vazado_m4`) | Punhos | `punho_ar` | recuo ×0,97 | 0,09 kg | incomum | 664 |
 | Alavanca de manejo ambidestra (`alavanca_ambi_m4`) | Alavancas de manejo | `alavanca_ar` | recarga_s ×0,95 | 0,05 kg | incomum | 588 |
 | Coronha moderna (fuzil) (`coronha_moderna_ar`) | Coronhas | `coronha_ar` | recuo ×0,6, precisao ×1,32 | 0,48 kg | raro | 6484 |
+| Coronha de madeira (AKMN) (`coronha_madeira_akmn`) | Coronhas | `coronha_ak` | recuo ×0,65, precisao ×1,3 | 0,6 kg | comum | 2714 |
+| Guarda-mão de madeira (AKMN) (`guarda_mao_madeira_akmn`) | Guarda-mãos | `guarda_mao_ak` | - | 0,3 kg | comum | 3611 |
+| Punho de baquelite (AKMN) (`punho_akmn`) | Punhos | `punho_ak` | - | 0,08 kg | comum | 862 |
+| Freio de boca inclinado (AKMN) (`freio_akmn`) | Boca do cano | `boca_762` | recuo ×0,85 | 0,03 kg | comum | 768 |
+| Coronha rebatível de alumínio (AKMN) (`coronha_rebativel_akmn`) | Coronhas | `coronha_ak` | recuo ×0,6, precisao ×1,35 | 0,55 kg | raro | 4350 |
+| Guarda-mão longo com trilhos (AKMN) (`guarda_mao_longo_akmn`) | Guarda-mãos | `guarda_mao_ak` | precisao ×1,05 | 0,45 kg | raro | 15494 |
+| Punho ergonômico de polímero (AKMN) (`punho_tatico_akmn`) | Punhos | `punho_ak` | recuo ×0,97 | 0,09 kg | incomum | 1404 |
+| Carregador 7,62 de polímero (30) (`carregador_762_30_polimero`) | Carregadores | `carregador_762` | - | 0,25 kg | incomum | 4486 |
+| Trilho superior de montagem lateral (AKMN) (`trilho_lateral_akmn`) | Trilho | `trilho_lateral_ak` | - | 0,2 kg | raro | 3207 |
+| Batente de mão curto (AKMN) (`batente_akmn`) | Empunhaduras | `mlok_baixo` | recuo ×0,93, tempo_mirar ×0,92 | 0,03 kg | incomum | 721 |
 
 ## Munição e efeitos
 
@@ -322,7 +334,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Fuzil Vigília 5,56 bicolor**, `encaixe_bandoleira`: bandoleira
 - **Fuzil Brasa 7,62**, `encaixe_mira`: mira_lateral_ak, luneta_lateral_ak
 - **Fuzil Brasa 7,62**, `encaixe_boca`: freio_ak, compensador_ak, supressor_762
-- **Fuzil Brasa 7,62**, `encaixe_carregador`: carregador_762_30, carregador_762_30_grade, carregador_762_40, tambor_762_75
+- **Fuzil Brasa 7,62**, `encaixe_carregador`: carregador_762_30, carregador_762_30_grade, carregador_762_40, tambor_762_75, carregador_762_30_polimero
 - **Fuzil Brasa 7,62**, `encaixe_coronha`: coronha_madeira_ak, coronha_polimero_ak, coronha_rebativel_ak, coronha_retratil_ak, coronha_leve_ak, coronha_leve_ak_tan, coronha_esqueleto_ak
 - **Fuzil Brasa 7,62**, `encaixe_empunhadura`: empunhadura_reta, empunhadura_reta_tan, empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_quadrada, empunhadura_cilindrica, batente_mao
 - **Fuzil Brasa 7,62**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
@@ -335,7 +347,7 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Fuzil Brasa 7,62**, `encaixe_bandoleira`: bandoleira
 - **Fuzil Brasa 7,62 tático**, `encaixe_mira`: mira_lateral_ak, luneta_lateral_ak
 - **Fuzil Brasa 7,62 tático**, `encaixe_boca`: freio_ak, compensador_ak, supressor_762, supressor_762_gasto
-- **Fuzil Brasa 7,62 tático**, `encaixe_carregador`: carregador_762_30, carregador_762_30_grade, carregador_762_40, tambor_762_75, carregador_762_30_grade_gasto
+- **Fuzil Brasa 7,62 tático**, `encaixe_carregador`: carregador_762_30, carregador_762_30_grade, carregador_762_40, tambor_762_75, carregador_762_30_grade_gasto, carregador_762_30_polimero
 - **Fuzil Brasa 7,62 tático**, `encaixe_coronha`: coronha_madeira_ak, coronha_polimero_ak, coronha_rebativel_ak, coronha_retratil_ak, coronha_leve_ak, coronha_leve_ak_tan, coronha_esqueleto_ak, coronha_esqueleto_ak_gasto
 - **Fuzil Brasa 7,62 tático**, `encaixe_empunhadura`: empunhadura_reta, empunhadura_reta_tan, empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_quadrada, empunhadura_cilindrica, batente_mao
 - **Fuzil Brasa 7,62 tático**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta, lanterna_compacta_gasto
@@ -346,6 +358,32 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Fuzil Brasa 7,62 tático**, `encaixe_mira_tampa`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa_gasto, luneta_m4, mira_prismatica_m4
 - **Fuzil Brasa 7,62 tático**, `encaixe_baioneta`: baioneta_ak
 - **Fuzil Brasa 7,62 tático**, `encaixe_bandoleira`: bandoleira
+- **Fuzil AKMN 7,62**, `encaixe_mira`: trilho_lateral_akmn, mira_lateral_ak, luneta_lateral_ak
+- **Fuzil AKMN 7,62**, `encaixe_mira_trilho`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, luneta_m4, mira_prismatica_m4
+- **Fuzil AKMN 7,62**, `encaixe_boca`: freio_akmn, freio_ak, compensador_ak, supressor_762
+- **Fuzil AKMN 7,62**, `encaixe_carregador`: carregador_762_30, carregador_762_30_grade, carregador_762_40, tambor_762_75, carregador_762_30_polimero, carregador_762_30_polimero
+- **Fuzil AKMN 7,62**, `encaixe_coronha`: coronha_madeira_akmn, coronha_rebativel_akmn
+- **Fuzil AKMN 7,62**, `encaixe_punho`: punho_akmn, punho_tatico_akmn
+- **Fuzil AKMN 7,62**, `encaixe_guarda_mao`: guarda_mao_madeira_akmn, guarda_mao_longo_akmn
+- **Fuzil AKMN 7,62**, `encaixe_empunhadura`: empunhadura_reta, empunhadura_reta_tan, empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_quadrada, empunhadura_cilindrica, batente_mao, batente_akmn
+- **Fuzil AKMN 7,62**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
+- **Fuzil AKMN 7,62**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
+- **Fuzil AKMN 7,62**, `encaixe_enfeite`: elastico_ak
+- **Fuzil AKMN 7,62**, `encaixe_baioneta`: baioneta_ak
+- **Fuzil AKMN 7,62**, `encaixe_bandoleira`: bandoleira
+- **Fuzil AKMN tático 7,62**, `encaixe_mira`: trilho_lateral_akmn, mira_lateral_ak, luneta_lateral_ak
+- **Fuzil AKMN tático 7,62**, `encaixe_mira_trilho`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, luneta_m4, mira_prismatica_m4
+- **Fuzil AKMN tático 7,62**, `encaixe_boca`: freio_akmn, freio_ak, compensador_ak, supressor_762
+- **Fuzil AKMN tático 7,62**, `encaixe_carregador`: carregador_762_30, carregador_762_30_grade, carregador_762_40, tambor_762_75, carregador_762_30_polimero, carregador_762_30_polimero
+- **Fuzil AKMN tático 7,62**, `encaixe_coronha`: coronha_madeira_akmn, coronha_rebativel_akmn
+- **Fuzil AKMN tático 7,62**, `encaixe_punho`: punho_akmn, punho_tatico_akmn
+- **Fuzil AKMN tático 7,62**, `encaixe_guarda_mao`: guarda_mao_madeira_akmn, guarda_mao_longo_akmn
+- **Fuzil AKMN tático 7,62**, `encaixe_empunhadura`: empunhadura_reta, empunhadura_reta_tan, empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_quadrada, empunhadura_cilindrica, batente_mao, batente_akmn
+- **Fuzil AKMN tático 7,62**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
+- **Fuzil AKMN tático 7,62**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
+- **Fuzil AKMN tático 7,62**, `encaixe_enfeite`: elastico_ak
+- **Fuzil AKMN tático 7,62**, `encaixe_baioneta`: baioneta_ak
+- **Fuzil AKMN tático 7,62**, `encaixe_bandoleira`: bandoleira
 - **Submetralhadora Faísca 9 mm**, `encaixe_mira`: mira_holografica, mira_reflexa, mira_ponto_vermelho_tubo
 - **Submetralhadora Faísca 9 mm**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
 - **Submetralhadora Faísca 9 mm**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
@@ -467,45 +505,45 @@ Gerado por `props/armas/gerar_armas.py` a partir de `catalogo.json`. Medidas em 
 - **Facão de mato**, `cinto`: bainha_lona_facao
 - **Machadinha tática**, `capa`: capa_machadinha
 - **Fuzil M4A1**, `encaixe_guarda_mao`: guarda_mao_classico_m4, guarda_mao_longo_m4
-- **Fuzil M4A1**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan
+- **Fuzil M4A1**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan, punho_vazado_m4
 - **Fuzil M4A1**, `encaixe_alavanca`: alavanca_ambi_m4
-- **Fuzil M4A1**, `encaixe_mira`: alca_transporte_m4, mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa
+- **Fuzil M4A1**, `encaixe_mira`: alca_transporte_m4, mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa, luneta_m4, mira_prismatica_m4
 - **Fuzil M4A1**, `encaixe_mira_45`: mira_45_m4
 - **Fuzil M4A1**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
 - **Fuzil M4A1**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
 - **Fuzil M4A1**, `encaixe_boca`: quebra_chamas_556, compensador_556, supressor_556, supressor_556_tan
 - **Fuzil M4A1**, `encaixe_carregador`: carregador_556_30, carregador_556_60, tambor_556_60, carregador_556_30_tan, tambor_556_60_tatico
-- **Fuzil M4A1**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan, coronha_leve_ar, coronha_leve_ar_tan
+- **Fuzil M4A1**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan, coronha_leve_ar, coronha_leve_ar_tan, coronha_moderna_ar
 - **Fuzil M4A1**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, batente_mao, empunhadura_reta, empunhadura_reta_tan, empunhadura_dobravel
 - **Fuzil M4A1**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
 - **Fuzil M4A1**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
 - **Fuzil M4A1**, `encaixe_bipe`: bipe
 - **Fuzil M4A1**, `encaixe_bandoleira`: bandoleira
 - **Fuzil M4A1 com luneta**, `encaixe_guarda_mao`: guarda_mao_classico_m4, guarda_mao_longo_m4
-- **Fuzil M4A1 com luneta**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan
+- **Fuzil M4A1 com luneta**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan, punho_vazado_m4
 - **Fuzil M4A1 com luneta**, `encaixe_alavanca`: alavanca_ambi_m4
-- **Fuzil M4A1 com luneta**, `encaixe_mira`: alca_transporte_m4, mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa
+- **Fuzil M4A1 com luneta**, `encaixe_mira`: alca_transporte_m4, mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa, luneta_m4, mira_prismatica_m4
 - **Fuzil M4A1 com luneta**, `encaixe_mira_45`: mira_45_m4
 - **Fuzil M4A1 com luneta**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
 - **Fuzil M4A1 com luneta**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
 - **Fuzil M4A1 com luneta**, `encaixe_boca`: quebra_chamas_556, compensador_556, supressor_556, supressor_556_tan
 - **Fuzil M4A1 com luneta**, `encaixe_carregador`: carregador_556_30, carregador_556_60, tambor_556_60, carregador_556_30_tan, tambor_556_60_tatico
-- **Fuzil M4A1 com luneta**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan, coronha_leve_ar, coronha_leve_ar_tan
+- **Fuzil M4A1 com luneta**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan, coronha_leve_ar, coronha_leve_ar_tan, coronha_moderna_ar
 - **Fuzil M4A1 com luneta**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, batente_mao, empunhadura_reta, empunhadura_reta_tan, empunhadura_dobravel
 - **Fuzil M4A1 com luneta**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
 - **Fuzil M4A1 com luneta**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan
 - **Fuzil M4A1 com luneta**, `encaixe_bipe`: bipe
 - **Fuzil M4A1 com luneta**, `encaixe_bandoleira`: bandoleira
 - **Fuzil M4A1 tático**, `encaixe_guarda_mao`: guarda_mao_classico_m4, guarda_mao_longo_m4
-- **Fuzil M4A1 tático**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan
+- **Fuzil M4A1 tático**, `encaixe_punho`: punho_ar, punho_ar_tan, punho_cavas, punho_cavas_tan, punho_reto, punho_reto_tan, punho_vazado_m4
 - **Fuzil M4A1 tático**, `encaixe_alavanca`: alavanca_ambi_m4
-- **Fuzil M4A1 tático**, `encaixe_mira`: alca_transporte_m4, mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa
+- **Fuzil M4A1 tático**, `encaixe_mira`: alca_transporte_m4, mira_holografica, mira_ponto_vermelho_tubo, luneta_1_6, luneta_4x, mira_reflexa, luneta_m4, mira_prismatica_m4
 - **Fuzil M4A1 tático**, `encaixe_mira_45`: mira_45_m4
 - **Fuzil M4A1 tático**, `encaixe_alca`: alca_rebativel, alca_polimero, alca_polimero_tan
 - **Fuzil M4A1 tático**, `encaixe_massa`: massa_rebativel, massa_polimero, massa_polimero_tan
 - **Fuzil M4A1 tático**, `encaixe_boca`: quebra_chamas_556, compensador_556, supressor_556, supressor_556_tan
 - **Fuzil M4A1 tático**, `encaixe_carregador`: carregador_556_30, carregador_556_60, tambor_556_60, carregador_556_30_tan, tambor_556_60_tatico
-- **Fuzil M4A1 tático**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan, coronha_leve_ar, coronha_leve_ar_tan
+- **Fuzil M4A1 tático**, `encaixe_coronha`: coronha_retratil_ar, coronha_fixa_ar, coronha_retratil_ar_tan, coronha_leve_ar, coronha_leve_ar_tan, coronha_moderna_ar
 - **Fuzil M4A1 tático**, `encaixe_empunhadura`: empunhadura_vertical, empunhadura_angulada, empunhadura_curta, empunhadura_curta_tan, empunhadura_quadrada, empunhadura_cilindrica, batente_mao, empunhadura_reta, empunhadura_reta_tan, empunhadura_dobravel
 - **Fuzil M4A1 tático**, `encaixe_lanterna`: lanterna_fuzil, lanterna_compacta
 - **Fuzil M4A1 tático**, `encaixe_laser`: laser_fuzil, modulo_laser, modulo_laser_tan

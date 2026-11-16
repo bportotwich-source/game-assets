@@ -2,7 +2,7 @@
 
 Armas, acessórios e munição **originais** para o jogo **Recomeço** (`docs/plano-jogo-sobrevivencia.md`), gerados por script
 (`gerar_armas.py`, Python + trimesh + booleanos manifold, primitivas de `props/gerar_props.py` e `scripts/detalhe`).
-Nenhum modelo copia uma arma comercial: formas, nomes e marcas (Sentinela, Guardião...) são inventados.
+Nenhum modelo copia uma arma comercial: formas, nomes e marcas (Sentinela, Guardião...) são inventados. Exceção: o AKMN (`akmn/`), modelo de terceiros com licença CC BY 4.0 e crédito ao autor.
 
 As ferramentas que também servem de arma (martelo, pé de cabra, machado, chave inglesa, taco, cano) continuam em `props/loot/`.
 Aqui ficam as armas de verdade: divididas em partes, com encaixes para acessórios e animações.
@@ -108,6 +108,8 @@ A espingarda recarrega **um cartucho por vez** (`recarga_por_cartucho`, a anima�
 | 20 | Lança improvisada (faca presa num cabo) | - | receita: cabo + faca + fita | **feita**: cabo de vassoura pintado (tinta gasta, rosca de plástico, cordão de pendurar), faca de cozinha na ponta serrada presa com prego, 2 abraçadeiras, fita prata e arame; pegas de fita e de pano. Faca e amarração são peças removíveis (troca da faca). Animações: estocar, estocada forte, golpe lateral, empurrar, firmar no chão, refazer fita, inspecionar, ocioso |
 | 21 | Bastão com pregos / com arame farpado (melhoria do taco do loot) | - | receita na bancada | **feita**: taco de freixo gasto com pega de fita isolante; versão com 21 pregos batidos (alguns entortados) e versão com arame farpado de dois fios torcidos enrolado e amarrado nas pontas. Animações: golpear, golpe forte, cutucar, puxar (quando prende), inspecionar, ocioso |
 | 22 | Coquetel molotov, bomba de pregos (lata), isca sonora (despertador) | pavio, ponteiro | - | **feita**: garrafa de vidro com combustível, rótulo rasgado e pano amarrado (pavio removível, encaixe de chama); lata canelada com pregos presos por fita e pavio verde; despertador de corda com 2 campainhas, martelo e 3 ponteiros que giram. Animações: acender, arremessar, dar corda, tocar (laço), inspecionar, ocioso |
+
+| 23 | **Fuzil AKMN 7,62** (modelo de terceiros: suspensy, CC BY 4.0; ver `akmn/README.md`) e a montagem tática | tampa, gatilho, seletor, ferrolho, carregador (as do Brasa) | coronha, guarda-mão e punho de madeira/baquelite, freio inclinado; peças táticas: coronha rebatível de alumínio, guarda-mão longo com trilhos, punho ergonômico, carregador de polímero (serve no Brasa), trilho superior de montagem lateral e batente; aceita os acessórios do Brasa de cano, carregador, trilho lateral e trilhos | **feita** |
 
 O arco, a lança e o facão do lote 4 de `props/loot/` são itens de loot simples (uma peça só); aqui eles ganham a versão completa, com partes, acessórios e animações.
 

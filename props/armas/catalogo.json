@@ -3645,7 +3645,8 @@
       "carregador_762_30",
       "carregador_762_30_grade",
       "carregador_762_40",
-      "tambor_762_75"
+      "tambor_762_75",
+      "carregador_762_30_polimero"
      ],
      "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda o original"
     },
@@ -4203,7 +4204,8 @@
       "carregador_762_30_grade",
       "carregador_762_40",
       "tambor_762_75",
-      "carregador_762_30_grade_gasto"
+      "carregador_762_30_grade_gasto",
+      "carregador_762_30_polimero"
      ],
      "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda o original"
     },
@@ -4613,6 +4615,1111 @@
    "arquivo_leve": "armas/fuzil_762_tatico_leve.glb",
    "triangulos_leve": 6000,
    "kb_leve": 919.3
+  },
+  {
+   "id": "fuzil_akmn",
+   "nome": "Fuzil AKMN 7,62",
+   "grupo": "armas",
+   "categoria": "fuzil",
+   "classe": "fogo",
+   "calibre": "7,62×39",
+   "municao": "municao_762",
+   "capacidade": 30,
+   "dano": 55,
+   "alcance_m": 70,
+   "alcance_max_m": 350,
+   "modo": "semiautomático e automático (seletor)",
+   "tiros_por_s": 10,
+   "recarga_s": 2.5,
+   "recarga_vazia_s": 3.0,
+   "precisao": 0.68,
+   "recuo": 0.5,
+   "ruido_m": 180,
+   "durabilidade": 6000,
+   "peso_kg": 3.3,
+   "raridade": "raro",
+   "valor_troca": 170,
+   "onde": [
+    "quartel",
+    "delegacia",
+    "fabrica"
+   ],
+   "estojo_s": 0.02,
+   "descricao": "Fuzil 7,62 de receptor estampado, a versão modernizada com trilho lateral para mira: coronha e guarda-mão de madeira, punho de baquelite e freio de boca inclinado. Robusto e de coice forte. Aceita os acessórios do Brasa 7,62 de cano, carregador, trilho lateral e trilhos, e as peças táticas próprias. Modelo de suspensy (CC BY 4.0).",
+   "arquivo": "armas/fuzil_akmn.glb",
+   "partes": [
+    {
+     "no": "tampa",
+     "tipo": "remove",
+     "descricao": "tampa do receptor com nervuras (sai para limpar)",
+     "pai": "fuzil_akmn",
+     "explodir_m": [
+      0.0,
+      0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": -12,
+     "descricao": "puxa para trás",
+     "pai": "fuzil_akmn",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "seletor",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -14,
+     "descricao": "alavanca: em cima trava (e fecha a fenda), meio automático (-7°), embaixo semi (-14°)",
+     "pai": "fuzil_akmn",
+     "explodir_m": [
+      0.04,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": -0.115,
+     "descricao": "transportador com a alavanca de manejo à direita: recua 115 mm",
+     "pai": "fuzil_akmn",
+     "explodir_m": [
+      0.04,
+      0.05,
+      0.06
+     ]
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      0.3,
+      -0.95,
+      0.0
+     ],
+     "municao": "municao_762",
+     "capacidade": 30,
+     "descricao": "carregador de aço de 30: entra pela frente (gancho) e gira para trás até travar",
+     "pai": "fuzil_akmn",
+     "explodir_m": [
+      0.0,
+      -0.12,
+      -0.02
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_mira",
+     "tipo": "trilho_lateral_ak",
+     "pai": "fuzil_akmn",
+     "posicao_m": [
+      -0.0165,
+      0.0695,
+      -0.0427
+     ],
+     "descricao": "trilho de cauda de andorinha do lado esquerdo",
+     "aceita": [
+      "trilho_lateral_akmn",
+      "mira_lateral_ak",
+      "luneta_lateral_ak"
+     ],
+     "explodir_m": [
+      -0.08,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_mira_trilho",
+     "tipo": "trilho_mira",
+     "pai": "fuzil_akmn",
+     "posicao_m": [
+      0.0,
+      0.1414,
+      -0.0752
+     ],
+     "requer": {
+      "encaixe_mira": "trilho_lateral_akmn"
+     },
+     "descricao": "só existe com o trilho superior de montagem lateral",
+     "explodir_m": [
+      0.0,
+      0.07,
+      0.0
+     ],
+     "aceita": [
+      "mira_holografica",
+      "mira_reflexa",
+      "mira_ponto_vermelho_tubo",
+      "luneta_1_6",
+      "luneta_4x",
+      "luneta_m4",
+      "mira_prismatica_m4"
+     ]
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_762",
+     "pai": "fuzil_akmn",
+     "posicao_m": [
+      0.0,
+      0.084,
+      -0.5918
+     ],
+     "aceita": [
+      "freio_akmn",
+      "freio_ak",
+      "compensador_ak",
+      "supressor_762"
+     ],
+     "padrao": "freio_akmn",
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.08
+     ]
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_762",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "substitui": "carregador",
+     "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda o original",
+     "aceita": [
+      "carregador_762_30",
+      "carregador_762_30_grade",
+      "carregador_762_40",
+      "tambor_762_75",
+      "carregador_762_30_polimero",
+      "carregador_762_30_polimero"
+     ]
+    },
+    {
+     "no": "encaixe_coronha",
+     "tipo": "coronha_ak",
+     "pai": "fuzil_akmn",
+     "posicao_m": [
+      0.0,
+      0.085,
+      0.0293
+     ],
+     "aceita": [
+      "coronha_madeira_akmn",
+      "coronha_rebativel_akmn"
+     ],
+     "padrao": "coronha_madeira_akmn",
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.08
+     ]
+    },
+    {
+     "no": "encaixe_punho",
+     "tipo": "punho_ak",
+     "pai": "fuzil_akmn",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.03
+     ],
+     "aceita": [
+      "punho_akmn",
+      "punho_tatico_akmn"
+     ],
+     "padrao": "punho_akmn"
+    },
+    {
+     "no": "encaixe_guarda_mao",
+     "tipo": "guarda_mao_ak",
+     "pai": "fuzil_akmn",
+     "posicao_m": [
+      0.0,
+      0.084,
+      -0.1816
+     ],
+     "aceita": [
+      "guarda_mao_madeira_akmn",
+      "guarda_mao_longo_akmn"
+     ],
+     "padrao": "guarda_mao_madeira_akmn",
+     "explodir_m": [
+      0.05,
+      -0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "fuzil_akmn",
+     "posicao_m": [
+      0.0,
+      0.051,
+      -0.3147
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_akmn"
+      ]
+     },
+     "descricao": "fendas de baixo do guarda-mão longo",
+     "aceita": [
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_quadrada",
+      "empunhadura_cilindrica",
+      "batente_mao",
+      "batente_akmn"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "fuzil_akmn",
+     "posicao_m": [
+      0.0216,
+      0.0855,
+      -0.3252
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_akmn"
+      ]
+     },
+     "descricao": "fendas da direita do guarda-mão longo",
+     "aceita": [
+      "lanterna_fuzil",
+      "lanterna_compacta"
+     ],
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "fuzil_akmn",
+     "posicao_m": [
+      -0.0207,
+      0.0855,
+      -0.3252
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_akmn"
+      ]
+     },
+     "descricao": "fendas da esquerda do guarda-mão longo",
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_enfeite",
+     "tipo": "guarda_mao_enfeite",
+     "pai": "fuzil_akmn",
+     "posicao_m": [
+      0.0,
+      0.0865,
+      -0.3844
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_madeira_akmn"
+      ]
+     },
+     "descricao": "tiras de borracha em volta do guarda-mão",
+     "aceita": [
+      "elastico_ak"
+     ],
+     "explodir_m": [
+      0.04,
+      0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_baioneta",
+     "tipo": "baioneta_ak",
+     "pai": "fuzil_akmn",
+     "posicao_m": [
+      0.0,
+      0.0745,
+      -0.5308
+     ],
+     "aceita": [
+      "baioneta_ak"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_bandoleira",
+     "tipo": "bandoleira",
+     "pai": "fuzil_akmn",
+     "posicao_m": [
+      -0.0098,
+      0.0745,
+      -0.5308
+     ],
+     "aceita": [
+      "bandoleira"
+     ],
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "fuzil_akmn",
+     "posicao_m": [
+      0.0,
+      0.084,
+      -0.6227
+     ],
+     "descricao": "clarão de boca e origem do disparo (-Z)"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "fuzil_akmn",
+     "posicao_m": [
+      0.0138,
+      0.1,
+      -0.1722
+     ],
+     "descricao": "onde nasce o estojo (sai para a direita, para a frente e para cima)"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "fuzil_akmn",
+     "posicao_m": [
+      0.0,
+      0.1339,
+      -0.2052
+     ],
+     "descricao": "fundo do entalhe da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z)"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.1,
+     "laco": false,
+     "descricao": "um tiro (repita a 10 por segundo): ferrolho recua 115 mm, coice forte que sobe o cano"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.1,
+     "laco": false,
+     "descricao": "último tiro: este fuzil não trava o ferrolho atrás, ele volta à frente com a câmara vazia"
+    },
+    "recarregar": {
+     "duracao_s": 2.5,
+     "laco": false,
+     "descricao": "aperta a pá, carregador gira para a frente e cai (0,7 s); o novo engancha na frente e gira para trás (1,95 s); troque o nó entre 0,7 e 1,4 s"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 3.0,
+     "laco": false,
+     "descricao": "igual à recarga e no fim puxa a alavanca de manejo para pôr um cartucho na câmara"
+    },
+    "trocar_modo": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "seletor: trava -> automático -> semi (no jogo, pare na posição escolhida)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.8,
+     "laco": false,
+     "descricao": "puxa a alavanca até ver o cartucho na câmara, solta e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   },
+   "gerador": "akmn/jogo.py",
+   "arquivo_leve": "armas/fuzil_akmn_leve.glb",
+   "credito": "Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "fuzil_akmn",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 8.8,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0651,
+      -0.0767
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "fuzil_akmn",
+     "posicao_m": [
+      0.0,
+      0.051,
+      -0.3147
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "fuzil_akmn",
+     "posicao_m": [
+      0.0,
+      0.0387,
+      0.2666
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "fuzil_akmn",
+     "posicao_m": [
+      0.0,
+      0.1339,
+      -0.2052
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "fuzil_akmn",
+     "posicao_m": [
+      0.0,
+      0.084,
+      -0.6227
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.0967,
+      -0.2133
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ],
+   "triangulos": 31775,
+   "kb": 6694.3,
+   "tamanho_m": [
+    0.075,
+    0.259,
+    0.674
+   ],
+   "triangulos_leve": 6000,
+   "kb_leve": 1606.3
+  },
+  {
+   "id": "fuzil_akmn_tatico",
+   "nome": "Fuzil AKMN tático 7,62",
+   "grupo": "armas",
+   "categoria": "fuzil",
+   "classe": "fogo",
+   "calibre": "7,62×39",
+   "municao": "municao_762",
+   "capacidade": 30,
+   "dano": 55,
+   "alcance_m": 70,
+   "alcance_max_m": 350,
+   "modo": "semiautomático e automático (seletor)",
+   "tiros_por_s": 10,
+   "recarga_s": 2.5,
+   "recarga_vazia_s": 3.0,
+   "precisao": 0.68,
+   "recuo": 0.5,
+   "ruido_m": 180,
+   "durabilidade": 6000,
+   "peso_kg": 3.6,
+   "raridade": "muito raro",
+   "valor_troca": 260,
+   "onde": [
+    "quartel"
+   ],
+   "estojo_s": 0.02,
+   "descricao": "O mesmo AKMN montado com peças táticas: coronha rebatível de alumínio, guarda-mão longo com trilhos e batente, punho ergonômico, carregador de polímero e trilho superior de montagem lateral para mira. Modelo de suspensy (CC BY 4.0).",
+   "arquivo": "armas/fuzil_akmn_tatico.glb",
+   "partes": [
+    {
+     "no": "tampa",
+     "tipo": "remove",
+     "descricao": "tampa do receptor com nervuras (sai para limpar)",
+     "pai": "fuzil_akmn_tatico",
+     "explodir_m": [
+      0.0,
+      0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "gatilho",
+     "tipo": "gira",
+     "eixo": "x",
+     "curso_graus": -12,
+     "descricao": "puxa para trás",
+     "pai": "fuzil_akmn_tatico",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "seletor",
+     "tipo": "gira",
+     "eixo": "z",
+     "curso_graus": -14,
+     "descricao": "alavanca: em cima trava (e fecha a fenda), meio automático (-7°), embaixo semi (-14°)",
+     "pai": "fuzil_akmn_tatico",
+     "explodir_m": [
+      0.04,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "ferrolho",
+     "tipo": "desliza",
+     "curso_m": -0.115,
+     "descricao": "transportador com a alavanca de manejo à direita: recua 115 mm",
+     "pai": "fuzil_akmn_tatico",
+     "explodir_m": [
+      0.04,
+      0.05,
+      0.06
+     ]
+    },
+    {
+     "no": "carregador",
+     "tipo": "remove",
+     "direcao": [
+      0.3,
+      -0.95,
+      0.0
+     ],
+     "municao": "municao_762",
+     "capacidade": 30,
+     "descricao": "carregador de aço de 30: entra pela frente (gancho) e gira para trás até travar",
+     "pai": "fuzil_akmn_tatico",
+     "explodir_m": [
+      0.0,
+      -0.12,
+      -0.02
+     ]
+    }
+   ],
+   "encaixes": [
+    {
+     "no": "encaixe_mira",
+     "tipo": "trilho_lateral_ak",
+     "pai": "fuzil_akmn_tatico",
+     "posicao_m": [
+      -0.0165,
+      0.0695,
+      -0.0427
+     ],
+     "descricao": "trilho de cauda de andorinha do lado esquerdo",
+     "aceita": [
+      "trilho_lateral_akmn",
+      "mira_lateral_ak",
+      "luneta_lateral_ak"
+     ],
+     "explodir_m": [
+      -0.08,
+      0.0,
+      -0.0
+     ],
+     "padrao": "trilho_lateral_akmn"
+    },
+    {
+     "no": "encaixe_mira_trilho",
+     "tipo": "trilho_mira",
+     "pai": "fuzil_akmn_tatico",
+     "posicao_m": [
+      0.0,
+      0.1414,
+      -0.0752
+     ],
+     "requer": {
+      "encaixe_mira": "trilho_lateral_akmn"
+     },
+     "descricao": "só existe com o trilho superior de montagem lateral",
+     "explodir_m": [
+      0.0,
+      0.07,
+      0.0
+     ],
+     "aceita": [
+      "mira_holografica",
+      "mira_reflexa",
+      "mira_ponto_vermelho_tubo",
+      "luneta_1_6",
+      "luneta_4x",
+      "luneta_m4",
+      "mira_prismatica_m4"
+     ]
+    },
+    {
+     "no": "encaixe_boca",
+     "tipo": "boca_762",
+     "pai": "fuzil_akmn_tatico",
+     "posicao_m": [
+      0.0,
+      0.084,
+      -0.5918
+     ],
+     "aceita": [
+      "freio_akmn",
+      "freio_ak",
+      "compensador_ak",
+      "supressor_762"
+     ],
+     "explodir_m": [
+      0.0,
+      0.0,
+      -0.08
+     ],
+     "padrao": "freio_akmn"
+    },
+    {
+     "no": "encaixe_carregador",
+     "tipo": "carregador_762",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "substitui": "carregador",
+     "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda o original",
+     "aceita": [
+      "carregador_762_30",
+      "carregador_762_30_grade",
+      "carregador_762_40",
+      "tambor_762_75",
+      "carregador_762_30_polimero",
+      "carregador_762_30_polimero"
+     ],
+     "padrao": "carregador_762_30_polimero"
+    },
+    {
+     "no": "encaixe_coronha",
+     "tipo": "coronha_ak",
+     "pai": "fuzil_akmn_tatico",
+     "posicao_m": [
+      0.0,
+      0.085,
+      0.0293
+     ],
+     "aceita": [
+      "coronha_madeira_akmn",
+      "coronha_rebativel_akmn"
+     ],
+     "explodir_m": [
+      -0.0,
+      0.0,
+      0.08
+     ],
+     "padrao": "coronha_rebativel_akmn"
+    },
+    {
+     "no": "encaixe_punho",
+     "tipo": "punho_ak",
+     "pai": "fuzil_akmn_tatico",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.03
+     ],
+     "aceita": [
+      "punho_akmn",
+      "punho_tatico_akmn"
+     ],
+     "padrao": "punho_tatico_akmn"
+    },
+    {
+     "no": "encaixe_guarda_mao",
+     "tipo": "guarda_mao_ak",
+     "pai": "fuzil_akmn_tatico",
+     "posicao_m": [
+      0.0,
+      0.084,
+      -0.1816
+     ],
+     "aceita": [
+      "guarda_mao_madeira_akmn",
+      "guarda_mao_longo_akmn"
+     ],
+     "explodir_m": [
+      0.05,
+      -0.05,
+      0.0
+     ],
+     "padrao": "guarda_mao_longo_akmn"
+    },
+    {
+     "no": "encaixe_empunhadura",
+     "tipo": "mlok_baixo",
+     "pai": "fuzil_akmn_tatico",
+     "posicao_m": [
+      0.0,
+      0.051,
+      -0.3147
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_akmn"
+      ]
+     },
+     "descricao": "fendas de baixo do guarda-mão longo",
+     "aceita": [
+      "empunhadura_reta",
+      "empunhadura_reta_tan",
+      "empunhadura_vertical",
+      "empunhadura_angulada",
+      "empunhadura_curta",
+      "empunhadura_quadrada",
+      "empunhadura_cilindrica",
+      "batente_mao",
+      "batente_akmn"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.0
+     ],
+     "padrao": "batente_akmn"
+    },
+    {
+     "no": "encaixe_lanterna",
+     "tipo": "mlok_lado",
+     "pai": "fuzil_akmn_tatico",
+     "posicao_m": [
+      0.0216,
+      0.0855,
+      -0.3252
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_akmn"
+      ]
+     },
+     "descricao": "fendas da direita do guarda-mão longo",
+     "aceita": [
+      "lanterna_fuzil",
+      "lanterna_compacta"
+     ],
+     "explodir_m": [
+      0.06,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_laser",
+     "tipo": "mlok_esq",
+     "pai": "fuzil_akmn_tatico",
+     "posicao_m": [
+      -0.0207,
+      0.0855,
+      -0.3252
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_longo_akmn"
+      ]
+     },
+     "descricao": "fendas da esquerda do guarda-mão longo",
+     "aceita": [
+      "laser_fuzil",
+      "modulo_laser",
+      "modulo_laser_tan"
+     ],
+     "explodir_m": [
+      -0.06,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "encaixe_enfeite",
+     "tipo": "guarda_mao_enfeite",
+     "pai": "fuzil_akmn_tatico",
+     "posicao_m": [
+      0.0,
+      0.0865,
+      -0.3844
+     ],
+     "requer": {
+      "encaixe_guarda_mao": [
+       "guarda_mao_madeira_akmn"
+      ]
+     },
+     "descricao": "tiras de borracha em volta do guarda-mão",
+     "aceita": [
+      "elastico_ak"
+     ],
+     "explodir_m": [
+      0.04,
+      0.06,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_baioneta",
+     "tipo": "baioneta_ak",
+     "pai": "fuzil_akmn_tatico",
+     "posicao_m": [
+      0.0,
+      0.0745,
+      -0.5308
+     ],
+     "aceita": [
+      "baioneta_ak"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.05,
+      0.0
+     ]
+    },
+    {
+     "no": "encaixe_bandoleira",
+     "tipo": "bandoleira",
+     "pai": "fuzil_akmn_tatico",
+     "posicao_m": [
+      -0.0098,
+      0.0745,
+      -0.5308
+     ],
+     "aceita": [
+      "bandoleira"
+     ],
+     "explodir_m": [
+      -0.04,
+      0.0,
+      -0.0
+     ]
+    },
+    {
+     "no": "boca_fogo",
+     "tipo": "efeito",
+     "pai": "fuzil_akmn_tatico",
+     "posicao_m": [
+      0.0,
+      0.084,
+      -0.6227
+     ],
+     "descricao": "clarão de boca e origem do disparo (-Z)"
+    },
+    {
+     "no": "saida_estojo",
+     "tipo": "efeito",
+     "pai": "fuzil_akmn_tatico",
+     "posicao_m": [
+      0.0138,
+      0.1,
+      -0.1722
+     ],
+     "descricao": "onde nasce o estojo (sai para a direita, para a frente e para cima)"
+    },
+    {
+     "no": "mira_ferro",
+     "tipo": "mira",
+     "pai": "fuzil_akmn_tatico",
+     "posicao_m": [
+      0.0,
+      0.1339,
+      -0.2052
+     ],
+     "descricao": "fundo do entalhe da alça: câmera de 1ª pessoa olha daqui pela ponta da massa (-Z)"
+    }
+   ],
+   "animacoes": {
+    "atirar": {
+     "duracao_s": 0.1,
+     "laco": false,
+     "descricao": "um tiro (repita a 10 por segundo): ferrolho recua 115 mm, coice forte que sobe o cano"
+    },
+    "atirar_ultimo": {
+     "duracao_s": 0.1,
+     "laco": false,
+     "descricao": "último tiro: este fuzil não trava o ferrolho atrás, ele volta à frente com a câmara vazia"
+    },
+    "recarregar": {
+     "duracao_s": 2.5,
+     "laco": false,
+     "descricao": "aperta a pá, carregador gira para a frente e cai (0,7 s); o novo engancha na frente e gira para trás (1,95 s); troque o nó entre 0,7 e 1,4 s"
+    },
+    "recarregar_vazia": {
+     "duracao_s": 3.0,
+     "laco": false,
+     "descricao": "igual à recarga e no fim puxa a alavanca de manejo para pôr um cartucho na câmara"
+    },
+    "trocar_modo": {
+     "duracao_s": 0.5,
+     "laco": false,
+     "descricao": "seletor: trava -> automático -> semi (no jogo, pare na posição escolhida)"
+    },
+    "inspecionar": {
+     "duracao_s": 2.8,
+     "laco": false,
+     "descricao": "puxa a alavanca até ver o cartucho na câmara, solta e mostra o outro lado"
+    },
+    "ocioso": {
+     "duracao_s": 3.0,
+     "laco": true,
+     "descricao": "respiração leve parado"
+    }
+   },
+   "gerador": "akmn/jogo.py",
+   "arquivo_leve": "armas/fuzil_akmn_tatico_leve.glb",
+   "credito": "Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "pontos_ref": [
+    {
+     "no": "ref_punho",
+     "pai": "fuzil_akmn_tatico",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "inclinacao_graus": 6.2,
+     "descricao": "mão que segura o punho: centro da empunhadura na altura do dedo médio; o -Y do nó desce ao longo do punho (inclinado para trás pelo ângulo do punho), o -Z aponta para o cano"
+    },
+    {
+     "no": "ref_gatilho",
+     "pai": "gatilho",
+     "posicao_m": [
+      0.0,
+      0.0651,
+      -0.0767
+     ],
+     "descricao": "ponta do dedo indicador: face da frente do gatilho, onde o dedo apoia antes de puxar"
+    },
+    {
+     "no": "ref_guarda_mao",
+     "pai": "fuzil_akmn_tatico",
+     "posicao_m": [
+      0.0,
+      0.051,
+      -0.3147
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    },
+    {
+     "no": "ref_coronha",
+     "pai": "fuzil_akmn_tatico",
+     "posicao_m": [
+      0.0,
+      0.0496,
+      0.2495
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    },
+    {
+     "no": "ref_mira",
+     "pai": "fuzil_akmn_tatico",
+     "posicao_m": [
+      0.0,
+      0.1339,
+      -0.2052
+     ],
+     "descricao": "linha do olho na mira aberta: centro da alça, o olho fica atrás dele no eixo -Z (com luneta ou ponto vermelho, usar o nó `olho` do acessório)"
+    },
+    {
+     "no": "ref_cano",
+     "pai": "fuzil_akmn_tatico",
+     "posicao_m": [
+      0.0,
+      0.084,
+      -0.6227
+     ],
+     "descricao": "boca do cano: origem do tiro e do clarão (o mesmo lugar de boca_fogo)"
+    },
+    {
+     "no": "ref_carregador",
+     "pai": "carregador",
+     "posicao_m": [
+      0.0,
+      -0.0967,
+      -0.2133
+     ],
+     "descricao": "mão da recarga: onde a mão esquerda pega o carregador (anda com ele na animação de recarga)"
+    }
+   ],
+   "triangulos": 31775,
+   "kb": 6694.4,
+   "tamanho_m": [
+    0.075,
+    0.259,
+    0.674
+   ],
+   "triangulos_leve": 5968,
+   "kb_leve": 1923.6
   },
   {
    "id": "smg_9mm",
@@ -20924,6 +22031,315 @@
     }
    ],
    "kb": 605.6
+  },
+  {
+   "id": "coronha_madeira_akmn",
+   "nome": "Coronha de madeira (AKMN)",
+   "grupo": "acessorios",
+   "categoria": "coronha",
+   "encaixe": "coronha_ak",
+   "peso_kg": 0.6,
+   "raridade": "comum",
+   "valor_troca": 14,
+   "modificadores": {
+    "recuo": 0.65,
+    "precisao": 1.3
+   },
+   "onde": [
+    "quartel",
+    "fabrica",
+    "armazem"
+   ],
+   "descricao": "Coronha fixa de madeira com soleira de aço e zarelho. Vem no AKMN. Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "arquivo": "acessorios/coronha_madeira_akmn.glb",
+   "gerador": "akmn/jogo.py",
+   "credito": "Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "pontos_ref": [
+    {
+     "no": "ref_coronha",
+     "pai": "coronha_madeira_akmn",
+     "posicao_m": [
+      0.0,
+      -0.0463,
+      0.2373
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    }
+   ],
+   "triangulos": 2714,
+   "kb": 664.1,
+   "tamanho_m": [
+    0.041,
+    0.101,
+    0.271
+   ]
+  },
+  {
+   "id": "guarda_mao_madeira_akmn",
+   "nome": "Guarda-mão de madeira (AKMN)",
+   "grupo": "acessorios",
+   "categoria": "guarda_mao",
+   "encaixe": "guarda_mao_ak",
+   "peso_kg": 0.3,
+   "raridade": "comum",
+   "valor_troca": 8,
+   "modificadores": {},
+   "onde": [
+    "quartel",
+    "fabrica"
+   ],
+   "descricao": "Guarda-mão e capa do tubo de gás de madeira, com a trava e a vareta de limpeza. Vem no AKMN. Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "arquivo": "acessorios/guarda_mao_madeira_akmn.glb",
+   "gerador": "akmn/jogo.py",
+   "credito": "Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "triangulos": 3611,
+   "kb": 646.2,
+   "tamanho_m": [
+    0.05,
+    0.079,
+    0.405
+   ]
+  },
+  {
+   "id": "punho_akmn",
+   "nome": "Punho de baquelite (AKMN)",
+   "grupo": "acessorios",
+   "categoria": "punho",
+   "encaixe": "punho_ak",
+   "peso_kg": 0.08,
+   "raridade": "comum",
+   "valor_troca": 5,
+   "modificadores": {},
+   "onde": [
+    "quartel",
+    "fabrica"
+   ],
+   "descricao": "Punho de baquelite vermelho-escuro com quadriculado. Vem no AKMN. Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "arquivo": "acessorios/punho_akmn.glb",
+   "gerador": "akmn/jogo.py",
+   "credito": "Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "triangulos": 862,
+   "kb": 133.5,
+   "tamanho_m": [
+    0.026,
+    0.106,
+    0.073
+   ]
+  },
+  {
+   "id": "freio_akmn",
+   "nome": "Freio de boca inclinado (AKMN)",
+   "grupo": "acessorios",
+   "categoria": "boca",
+   "encaixe": "boca_762",
+   "peso_kg": 0.03,
+   "raridade": "comum",
+   "valor_troca": 6,
+   "modificadores": {
+    "recuo": 0.85
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Bocal cortado em diagonal que segura a subida do cano. Vem no AKMN. Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "arquivo": "acessorios/freio_akmn.glb",
+   "gerador": "akmn/jogo.py",
+   "credito": "Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "triangulos": 768,
+   "kb": 83.0,
+   "tamanho_m": [
+    0.018,
+    0.018,
+    0.031
+   ]
+  },
+  {
+   "id": "coronha_rebativel_akmn",
+   "nome": "Coronha rebatível de alumínio (AKMN)",
+   "grupo": "acessorios",
+   "categoria": "coronha",
+   "encaixe": "coronha_ak",
+   "peso_kg": 0.55,
+   "raridade": "raro",
+   "valor_troca": 40,
+   "modificadores": {
+    "recuo": 0.6,
+    "precisao": 1.35
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Coronha tática de alumínio com adaptador, apoio de rosto e soleira serrilhada. Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "arquivo": "acessorios/coronha_rebativel_akmn.glb",
+   "gerador": "akmn/jogo.py",
+   "credito": "Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "pontos_ref": [
+    {
+     "no": "ref_coronha",
+     "pai": "coronha_rebativel_akmn",
+     "posicao_m": [
+      0.0,
+      -0.0354,
+      0.2202
+     ],
+     "descricao": "ombro: centro da soleira da coronha montada por padrão (a coronha trocada traz o seu próprio ref_coronha)"
+    }
+   ],
+   "triangulos": 4350,
+   "kb": 836.4,
+   "tamanho_m": [
+    0.044,
+    0.097,
+    0.25
+   ]
+  },
+  {
+   "id": "guarda_mao_longo_akmn",
+   "nome": "Guarda-mão longo com trilhos (AKMN)",
+   "grupo": "acessorios",
+   "categoria": "guarda_mao",
+   "encaixe": "guarda_mao_ak",
+   "peso_kg": 0.45,
+   "raridade": "raro",
+   "valor_troca": 45,
+   "modificadores": {
+    "precisao": 1.05
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Guarda-mão de alumínio que vai até a massa, com trilhos em cima e fendas dos lados e embaixo: libera empunhadura, lanterna e laser. Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "arquivo": "acessorios/guarda_mao_longo_akmn.glb",
+   "gerador": "akmn/jogo.py",
+   "credito": "Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "triangulos": 15494,
+   "kb": 2057.6,
+   "tamanho_m": [
+    0.042,
+    0.076,
+    0.349
+   ]
+  },
+  {
+   "id": "punho_tatico_akmn",
+   "nome": "Punho ergonômico de polímero (AKMN)",
+   "grupo": "acessorios",
+   "categoria": "punho",
+   "encaixe": "punho_ak",
+   "peso_kg": 0.09,
+   "raridade": "incomum",
+   "valor_troca": 15,
+   "modificadores": {
+    "recuo": 0.97
+   },
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "Punho de polímero com apoio para a palma e cavas para os dedos. Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "arquivo": "acessorios/punho_tatico_akmn.glb",
+   "gerador": "akmn/jogo.py",
+   "credito": "Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "triangulos": 1404,
+   "kb": 754.5,
+   "tamanho_m": [
+    0.024,
+    0.11,
+    0.078
+   ]
+  },
+  {
+   "id": "carregador_762_30_polimero",
+   "nome": "Carregador 7,62 de polímero (30)",
+   "grupo": "acessorios",
+   "categoria": "carregador",
+   "encaixe": "carregador_762",
+   "peso_kg": 0.25,
+   "raridade": "incomum",
+   "valor_troca": 14,
+   "modificadores": {},
+   "onde": [
+    "quartel",
+    "delegacia"
+   ],
+   "descricao": "Carregador de polímero preto com grade em relevo, mais leve que o de aço. Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "arquivo": "acessorios/carregador_762_30_polimero.glb",
+   "gerador": "akmn/jogo.py",
+   "credito": "Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "capacidade": 30,
+   "municao": "municao_762",
+   "triangulos": 4486,
+   "kb": 923.8,
+   "tamanho_m": [
+    0.029,
+    0.204,
+    0.148
+   ]
+  },
+  {
+   "id": "trilho_lateral_akmn",
+   "nome": "Trilho superior de montagem lateral (AKMN)",
+   "grupo": "acessorios",
+   "categoria": "trilho",
+   "encaixe": "trilho_lateral_ak",
+   "peso_kg": 0.2,
+   "raridade": "raro",
+   "valor_troca": 30,
+   "modificadores": {},
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Montagem que prende no trilho do lado esquerdo e põe um trilho por cima da tampa para mira holográfica, de ponto ou luneta (encaixe_mira_trilho). Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "arquivo": "acessorios/trilho_lateral_akmn.glb",
+   "gerador": "akmn/jogo.py",
+   "credito": "Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "triangulos": 3207,
+   "kb": 930.2,
+   "tamanho_m": [
+    0.042,
+    0.086,
+    0.191
+   ]
+  },
+  {
+   "id": "batente_akmn",
+   "nome": "Batente de mão curto (AKMN)",
+   "grupo": "acessorios",
+   "categoria": "empunhadura",
+   "encaixe": "mlok_baixo",
+   "peso_kg": 0.03,
+   "raridade": "incomum",
+   "valor_troca": 10,
+   "modificadores": {
+    "recuo": 0.93,
+    "tempo_mirar": 0.92
+   },
+   "onde": [
+    "quartel"
+   ],
+   "descricao": "Batente inclinado embaixo do guarda-mão: a mão encosta e não escorrega. Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "arquivo": "acessorios/batente_akmn.glb",
+   "gerador": "akmn/jogo.py",
+   "credito": "Modelo \"AKMN\" e \"AKMN Zenitco\" de suspensy (sketchfab.com/suspensy, artstation.com/artwork/P463rB), licença CC BY 4.0; adaptado para o Recomeço.",
+   "pontos_ref": [
+    {
+     "no": "ref_guarda_mao",
+     "pai": "batente_akmn",
+     "posicao_m": [
+      0.0,
+      -0.013,
+      0.0
+     ],
+     "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
+    }
+   ],
+   "triangulos": 721,
+   "kb": 535.8,
+   "tamanho_m": [
+    0.024,
+    0.032,
+    0.042
+   ]
   }
  ],
  "municao": [

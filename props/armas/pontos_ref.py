@@ -36,7 +36,11 @@ INCLINACAO = {'pistola': 18, 'revolver': 22, 'fuzil': 22, 'submetralhadora': 16,
               'besta': 20}
 
 # ajustes finos por arma (id -> {ponto: {'d': (dx,dy,dz) somado, 'inclinacao': graus}})
-AJUSTE = {}
+AJUSTE = {
+    # o punho do AKMN é acessório (encaixe_punho): o ângulo vem do punho que vem montado, medido com inclinacao_punho
+    'fuzil_akmn': {'ref_punho': {'inclinacao': 8.8}},          # punho_akmn
+    'fuzil_akmn_tatico': {'ref_punho': {'inclinacao': 6.2}},   # punho_tatico_akmn
+}
 
 
 # ============================================================================ leitura do GLB

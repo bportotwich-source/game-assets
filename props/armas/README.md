@@ -31,6 +31,8 @@ props/armas/
   identidade** (o pivô do acessório já é o ponto de encaixe). O `tipo` do encaixe tem que bater com o `encaixe` do acessório;
   `aceita` lista os compatíveis e `padrao` o que vem montado. Encaixes ficam presos à peça certa (a mira de ferrolho anda com o
   ferrolho, o supressor anda com o cano, o carregador trocado anda com a animação de recarga).
+  Exceção: um encaixe com o campo `ajuste` recebe também acessório de outro tipo, deslocado e girado (punho de 7,62 em fuzil de
+  alumínio, com adaptador): ver `punhos/README.md`.
 - **Pontos de efeito:** `boca_fogo` (clarão e origem do tiro, raycast para -Z), `saida_estojo` (onde nasce o estojo ejetado),
   `mira_ferro` (linha de visada), e nos acessórios `olho` (centro da lente), `feixe` (SpotLight3D da lanterna), `laser`.
 - **Pontos de referência do personagem** (`pontos_ref.py`, nós `ref_*`, lista em `pontos_ref` no catálogo): onde o corpo encosta

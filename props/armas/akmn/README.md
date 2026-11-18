@@ -27,7 +27,8 @@ lanterna e laser no guarda-mão longo) mais `encaixe_punho` (punho trocável) e 
 (mira em cima do trilho de montagem lateral). Aceita os acessórios do Brasa que não dependem do
 formato do receptor: freio, compensador e supressor 7,62, todos os carregadores 7,62, mira e luneta
 de montagem lateral, empunhaduras, lanternas, lasers, tiras de borracha e baioneta. O carregador de
-polímero novo também serve no Brasa.
+polímero novo também serve no Brasa. Os dois punhos também entram no Brasa, nos fuzis de alumínio (5,56, M4A1,
+.308 de precisão) e na carabina .308: ver `../punhos/README.md` (campo `ajuste` do encaixe e o adaptador).
 
 ## Como refazer
 

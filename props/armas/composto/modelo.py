@@ -403,7 +403,7 @@ def laco_d():
 def visor():
     """Visor de corda (peep): disco com furo, já inclinado para ficar de frente para o olho com o arco puxado."""
     c0 = (VISOR0[0], VISOR0[1], 0)
-    d = lathe([(-2.2, 1.9), (-2.2, 5.0), (-1.0, 6.2), (1.0, 6.2), (2.2, 5.0), (2.2, 1.9)], 'anod_laranja', n=28, c0=c0, anel=True)
+    d = lathe([(-1.6, 3.6), (-1.6, 5.6), (-0.8, 6.6), (0.8, 6.6), (1.6, 5.6), (1.6, 3.6)], 'anod_laranja', n=36, c0=c0, anel=True)   # furo de caça (7 mm): o fino tapava a mira de pinos
     cut(d, [lathe([(-0.6, 5.6), (-0.6, 8), (0.6, 8), (0.6, 5.6)], 'anod_laranja', n=28, c0=c0, anel=True)])
     return parte('visor_corda', [_gira_w(d, -G_VISOR, VISOR0)], origem=c0, grupo='B', suave=40)
 

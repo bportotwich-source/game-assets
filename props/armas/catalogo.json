@@ -1,6 +1,6 @@
 {
  "escala": "1 unidade = 1 m, Y para cima. Armas em posição de tiro: cano para -Z, lado direito +X, pivô na empunhadura.",
- "encaixes": "nós vazios \"encaixe_<tipo>\" com a orientação da arma; o acessório entra como filho do nó, transformação identidade. O \"tipo\" do encaixe tem que bater com o \"encaixe\" do acessório. Os acessórios têm o pivô no ponto de encaixe.",
+ "encaixes": "nós vazios \"encaixe_<tipo>\" com a orientação da arma; o acessório entra como filho do nó, transformação identidade. O \"tipo\" do encaixe tem que bater com o \"encaixe\" do acessório. Os acessórios têm o pivô no ponto de encaixe. Um encaixe pode ter \"ajuste\": {tipo do acessório: {posicao_m, inclinacao_graus, com}} para receber acessório de outro tipo (punho de 7,62 em fuzil de alumínio): o acessório entra deslocado, girado para trás em volta do X e com a peça \"com\" (adaptador) ao lado.",
  "partes": "partes móveis são nós do GLB: tipo desliza (curso_m ao longo do cano), gira (eixo, curso_graus), remove (direcao).",
  "animacoes": "animações glTF embutidas, só das peças da arma (sem mãos); o nó raiz também se mexe (coice, recarga, inspeção).",
  "campos_jogo": {
@@ -1610,6 +1610,17 @@
    "kb": 4261.3,
    "partes": [
     {
+     "no": "punho",
+     "tipo": "troca",
+     "descricao": "punho de pistola (troca pelo encaixe_punho)",
+     "pai": "carabina_308",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.02
+     ]
+    },
+    {
      "no": "apoio_face",
      "tipo": "desliza",
      "curso_m": 0.012,
@@ -1851,6 +1862,45 @@
       -0.163
      ],
      "descricao": "onde nasce o estojo (quando o ferrolho volta, aos 0,6 s do \"atirar\")"
+    },
+    {
+     "no": "encaixe_punho",
+     "tipo": "punho_ar",
+     "pai": "punho",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "substitui": "punho",
+     "aceita": [
+      "punho_ar",
+      "punho_ar_tan",
+      "punho_cavas",
+      "punho_cavas_tan",
+      "punho_reto",
+      "punho_reto_tan",
+      "punho_vazado_m4",
+      "punho_akmn",
+      "punho_tatico_akmn"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.08,
+      0.02
+     ],
+     "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
+     "ajuste": {
+      "punho_ak": {
+       "posicao_m": [
+        -0.0,
+        -0.048,
+        0.017
+       ],
+       "inclinacao_graus": 8.6,
+       "com": "adaptador_punho_762"
+      }
+     }
     }
    ],
    "animacoes": {
@@ -2516,14 +2566,27 @@
       "punho_cavas_tan",
       "punho_reto",
       "punho_reto_tan",
-      "punho_vazado_m4"
+      "punho_vazado_m4",
+      "punho_akmn",
+      "punho_tatico_akmn"
      ],
      "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
      "explodir_m": [
       -0.0,
       -0.08,
       0.02
-     ]
+     ],
+     "ajuste": {
+      "punho_ak": {
+       "posicao_m": [
+        0,
+        -0.048,
+        0.017
+       ],
+       "inclinacao_graus": 10.0,
+       "com": "adaptador_punho_762"
+      }
+     }
     },
     {
      "no": "encaixe_mira",
@@ -3078,14 +3141,27 @@
       "punho_cavas_tan",
       "punho_reto",
       "punho_reto_tan",
-      "punho_vazado_m4"
+      "punho_vazado_m4",
+      "punho_akmn",
+      "punho_tatico_akmn"
      ],
      "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
      "explodir_m": [
       -0.0,
       -0.08,
       0.02
-     ]
+     ],
+     "ajuste": {
+      "punho_ak": {
+       "posicao_m": [
+        0,
+        -0.048,
+        0.017
+       ],
+       "inclinacao_graus": 10.0,
+       "com": "adaptador_punho_762"
+      }
+     }
     },
     {
      "no": "encaixe_mira",
@@ -3522,6 +3598,17 @@
    "kb": 3349.1,
    "partes": [
     {
+     "no": "punho",
+     "tipo": "troca",
+     "descricao": "punho de pistola (troca pelo encaixe_punho)",
+     "pai": "fuzil_762",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.02
+     ]
+    },
+    {
      "no": "tampa",
      "tipo": "remove",
      "descricao": "tampa do receptor (sai para limpar)",
@@ -3649,6 +3736,37 @@
       "carregador_762_30_polimero"
      ],
      "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda o original"
+    },
+    {
+     "no": "encaixe_punho",
+     "tipo": "punho_ak",
+     "pai": "punho",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "substitui": "punho",
+     "aceita": [
+      "punho_akmn",
+      "punho_tatico_akmn"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.08,
+      0.02
+     ],
+     "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
+     "ajuste": {
+      "punho_ak": {
+       "posicao_m": [
+        0.0,
+        0.0188,
+        0.004
+       ],
+       "inclinacao_graus": 0.0
+      }
+     }
     },
     {
      "no": "encaixe_coronha",
@@ -4079,6 +4197,17 @@
    "kb": 3627.9,
    "partes": [
     {
+     "no": "punho",
+     "tipo": "troca",
+     "descricao": "punho de pistola (troca pelo encaixe_punho)",
+     "pai": "fuzil_762_tatico",
+     "explodir_m": [
+      0.0,
+      -0.06,
+      0.02
+     ]
+    },
+    {
      "no": "tampa",
      "tipo": "remove",
      "descricao": "tampa do receptor (sai para limpar)",
@@ -4208,6 +4337,37 @@
       "carregador_762_30_polimero"
      ],
      "descricao": "filho do nó carregador; ao pôr um carregador aqui, esconda o original"
+    },
+    {
+     "no": "encaixe_punho",
+     "tipo": "punho_ak",
+     "pai": "punho",
+     "posicao_m": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "substitui": "punho",
+     "aceita": [
+      "punho_akmn",
+      "punho_tatico_akmn"
+     ],
+     "explodir_m": [
+      0.0,
+      -0.08,
+      0.02
+     ],
+     "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
+     "ajuste": {
+      "punho_ak": {
+       "posicao_m": [
+        0.0,
+        0.0188,
+        0.004
+       ],
+       "inclinacao_graus": 0.0
+      }
+     }
     },
     {
      "no": "encaixe_coronha",
@@ -9915,14 +10075,27 @@
       "punho_cavas_tan",
       "punho_reto",
       "punho_reto_tan",
-      "punho_vazado_m4"
+      "punho_vazado_m4",
+      "punho_akmn",
+      "punho_tatico_akmn"
      ],
      "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
      "explodir_m": [
       -0.0,
       -0.08,
       0.02
-     ]
+     ],
+     "ajuste": {
+      "punho_ak": {
+       "posicao_m": [
+        0,
+        -0.049,
+        0.018
+       ],
+       "inclinacao_graus": 7.8,
+       "com": "adaptador_punho_762"
+      }
+     }
     },
     {
      "no": "encaixe_mira",
@@ -10470,14 +10643,27 @@
       "punho_cavas_tan",
       "punho_reto",
       "punho_reto_tan",
-      "punho_vazado_m4"
+      "punho_vazado_m4",
+      "punho_akmn",
+      "punho_tatico_akmn"
      ],
      "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
      "explodir_m": [
       -0.0,
       -0.08,
       0.02
-     ]
+     ],
+     "ajuste": {
+      "punho_ak": {
+       "posicao_m": [
+        0,
+        -0.049,
+        0.018
+       ],
+       "inclinacao_graus": 7.8,
+       "com": "adaptador_punho_762"
+      }
+     }
     },
     {
      "no": "encaixe_mira",
@@ -11994,8 +12180,8 @@
     0.864,
     0.782
    ],
-   "triangulos": 52667,
-   "kb": 5029.9,
+   "triangulos": 52795,
+   "kb": 5021.9,
    "partes": [
     {
      "no": "braco_cima",
@@ -12353,7 +12539,7 @@
    "gerador": "composto/jogo.py",
    "arquivo_leve": "armas/arco_composto_leve.glb",
    "triangulos_leve": 5976,
-   "kb_leve": 1243.2
+   "kb_leve": 1250.8
   },
   {
    "id": "besta_recurva",
@@ -14293,14 +14479,27 @@
       "punho_cavas_tan",
       "punho_reto",
       "punho_reto_tan",
-      "punho_vazado_m4"
+      "punho_vazado_m4",
+      "punho_akmn",
+      "punho_tatico_akmn"
      ],
      "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
      "explodir_m": [
       -0.0,
       -0.08,
       0.02
-     ]
+     ],
+     "ajuste": {
+      "punho_ak": {
+       "posicao_m": [
+        0,
+        -0.048,
+        0.017
+       ],
+       "inclinacao_graus": 10.0,
+       "com": "adaptador_punho_762"
+      }
+     }
     },
     {
      "no": "encaixe_alavanca",
@@ -14942,14 +15141,27 @@
       "punho_cavas_tan",
       "punho_reto",
       "punho_reto_tan",
-      "punho_vazado_m4"
+      "punho_vazado_m4",
+      "punho_akmn",
+      "punho_tatico_akmn"
      ],
      "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
      "explodir_m": [
       -0.0,
       -0.08,
       0.02
-     ]
+     ],
+     "ajuste": {
+      "punho_ak": {
+       "posicao_m": [
+        0,
+        -0.048,
+        0.017
+       ],
+       "inclinacao_graus": 10.0,
+       "com": "adaptador_punho_762"
+      }
+     }
     },
     {
      "no": "encaixe_alavanca",
@@ -15593,7 +15805,9 @@
       "punho_cavas_tan",
       "punho_reto",
       "punho_reto_tan",
-      "punho_vazado_m4"
+      "punho_vazado_m4",
+      "punho_akmn",
+      "punho_tatico_akmn"
      ],
      "descricao": "filho do nó punho; ao pôr um punho aqui, esconda as malhas do nó punho",
      "explodir_m": [
@@ -15601,7 +15815,18 @@
       -0.08,
       0.02
      ],
-     "padrao": "punho_vazado_m4"
+     "padrao": "punho_vazado_m4",
+     "ajuste": {
+      "punho_ak": {
+       "posicao_m": [
+        0,
+        -0.048,
+        0.017
+       ],
+       "inclinacao_graus": 10.0,
+       "com": "adaptador_punho_762"
+      }
+     }
     },
     {
      "no": "encaixe_alavanca",
@@ -16090,16 +16315,16 @@
     "posto",
     "galeria"
    ],
-   "descricao": "Lanterna de 600 lm presa no trilho. Ilumina sem ocupar a mão, mas a luz atrai zumbis que estão de frente.",
+   "descricao": "Lanterna de 600 lm para o trilho curto das pistolas e do revólver: caixa de alumínio com a pilha atravessada, cabeça com coroa dentada e teclas de borracha dos dois lados, ao alcance do dedo. Modelo detalhado, com texturas assadas.",
    "liga_desliga": "no \"luz\": ligue um SpotLight3D no encaixe \"feixe\" (aponta para -Z)",
    "arquivo": "acessorios/lanterna_pistola.glb",
    "tamanho_m": [
-    0.032,
+    0.033,
     0.035,
-    0.081
+    0.075
    ],
-   "triangulos": 4468,
-   "kb": 226.1,
+   "triangulos": 3896,
+   "kb": 532.5,
    "encaixes": [
     {
      "no": "feixe",
@@ -16112,7 +16337,8 @@
      ],
      "descricao": "SpotLight3D aqui, apontando para -Z"
     }
-   ]
+   ],
+   "gerador": "lanterna/jogo.py"
   },
   {
    "id": "laser_pistola",
@@ -16132,16 +16358,16 @@
     "quartel",
     "galeria"
    ],
-   "descricao": "Ponto vermelho projetado: acerta melhor atirando sem mirar pela alça.",
+   "descricao": "Mira laser vermelha para o trilho curto: caixinha de polímero com ajustes de latão de deriva e elevação, botão dos dois lados e pilha de moeda. Modelo detalhado, com texturas assadas.",
    "liga_desliga": "raio laser a partir do encaixe \"laser\" (para -Z), ponto onde bater",
    "arquivo": "acessorios/laser_pistola.glb",
    "tamanho_m": [
-    0.029,
-    0.028,
+    0.033,
+    0.031,
     0.052
    ],
-   "triangulos": 848,
-   "kb": 50.7,
+   "triangulos": 1555,
+   "kb": 455.1,
    "encaixes": [
     {
      "no": "laser",
@@ -16154,7 +16380,8 @@
      ],
      "descricao": "origem do raio laser (-Z)"
     }
-   ]
+   ],
+   "gerador": "lanterna/jogo.py"
   },
   {
    "id": "combo_lanterna_laser",
@@ -16178,15 +16405,15 @@
    "onde": [
     "quartel"
    ],
-   "descricao": "Lanterna e laser num corpo só, com chave de três posições.",
+   "descricao": "Lanterna de 500 lm com o módulo do laser pendurado embaixo e chave de três posições atrás (lanterna, laser ou os dois). Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/combo_lanterna_laser.glb",
    "tamanho_m": [
-    0.03,
-    0.041,
+    0.033,
+    0.044,
     0.089
    ],
-   "triangulos": 3224,
-   "kb": 171.2,
+   "triangulos": 3793,
+   "kb": 530.5,
    "encaixes": [
     {
      "no": "feixe",
@@ -16210,7 +16437,8 @@
      ],
      "descricao": "origem do laser (-Z)"
     }
-   ]
+   ],
+   "gerador": "lanterna/jogo.py"
   },
   {
    "id": "mira_ponto_vermelho_compacta",
@@ -16235,12 +16463,12 @@
    "descricao": "Mira refletora pequena para o ferrolho da pistola: ponto vermelho, mira mais rápido.",
    "arquivo": "acessorios/mira_ponto_vermelho_compacta.glb",
    "tamanho_m": [
-    0.025,
     0.026,
+    0.027,
     0.034
    ],
-   "triangulos": 1316,
-   "kb": 73.9,
+   "triangulos": 1261,
+   "kb": 260.7,
    "encaixes": [
     {
      "no": "olho",
@@ -16253,7 +16481,22 @@
      ],
      "descricao": "centro da lente: linha de visada"
     }
-   ]
+   ],
+   "gerador": "miras/jogo.py",
+   "optica": {
+    "tipo": "ponto",
+    "aumento": [
+     1,
+     1
+    ],
+    "ocular_m": [
+     0.0,
+     0.0145,
+     -0.0116
+    ],
+    "raio_ocular_m": 0.0069,
+    "iluminado": true
+   }
   },
   {
    "id": "carregador_9mm",
@@ -16362,25 +16605,40 @@
    "descricao": "Tubo de ponto vermelho com base parafusada na ponte do revólver. Mira rápido e acerta mais longe.",
    "arquivo": "acessorios/mira_ponto_vermelho_revolver.glb",
    "tamanho_m": [
-    0.035,
-    0.041,
+    0.038,
+    0.039,
     0.074
    ],
-   "triangulos": 2300,
-   "kb": 116.9,
+   "triangulos": 4418,
+   "kb": 547.1,
    "encaixes": [
     {
      "no": "olho",
      "tipo": "mira",
      "pai": "mira_ponto_vermelho_revolver",
      "posicao_m": [
-      -0.0,
+      0.0,
       0.0215,
       0.03
      ],
      "descricao": "ocular: linha de visada"
     }
-   ]
+   ],
+   "gerador": "miras/jogo.py",
+   "optica": {
+    "tipo": "ponto",
+    "aumento": [
+     1,
+     1
+    ],
+    "ocular_m": [
+     0.0,
+     0.0215,
+     0.026
+    ],
+    "raio_ocular_m": 0.0115,
+    "iluminado": true
+   }
   },
   {
    "id": "empunhadura_madeira_38",
@@ -16726,15 +16984,15 @@
     "delegacia"
    ],
    "liga_desliga": "SpotLight3D no encaixe \"feixe\" (para -Z)",
-   "descricao": "Abraçadeira no cano e no tubo com lanterna de 800 lm do lado direito e botão de pressão.",
+   "descricao": "Abraçadeira de duas voltas, no cano e no tubo da espingarda, com a lanterna de 800 lm do lado direito e botão de pressão na tampa de trás. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/lanterna_cano_12.glb",
    "tamanho_m": [
-    0.061,
-    0.053,
-    0.099
+    0.071,
+    0.064,
+    0.097
    ],
-   "triangulos": 6200,
-   "kb": 302.4,
+   "triangulos": 5562,
+   "kb": 608.6,
    "encaixes": [
     {
      "no": "feixe",
@@ -16747,7 +17005,8 @@
      ],
      "descricao": "SpotLight3D aqui (-Z)"
     }
-   ]
+   ],
+   "gerador": "lanterna/jogo.py"
   },
   {
    "id": "porta_cartuchos_lateral_12",
@@ -16802,12 +17061,12 @@
    "descricao": "Tubo de 30 mm com tampas basculantes (nós \"tampa_frente\" e \"tampa_tras\"), trava de alavanca no trilho e torres de ajuste. Serve em toda arma com trilho de cima.",
    "arquivo": "acessorios/mira_ponto_vermelho_tubo.glb",
    "tamanho_m": [
-    0.047,
-    0.089,
-    0.108
+    0.045,
+    0.091,
+    0.112
    ],
-   "triangulos": 3592,
-   "kb": 182.8,
+   "triangulos": 5653,
+   "kb": 672.6,
    "partes": [
     {
      "no": "tampa_frente",
@@ -16860,6 +17119,21 @@
      "laco": false,
      "descricao": "abre as tampas (mola)"
     }
+   },
+   "gerador": "miras/jogo.py",
+   "optica": {
+    "tipo": "ponto",
+    "aumento": [
+     1,
+     1
+    ],
+    "ocular_m": [
+     0.0,
+     0.03,
+     0.0285
+    ],
+    "raio_ocular_m": 0.0133,
+    "iluminado": true
    }
   },
   {
@@ -17378,25 +17652,40 @@
    "descricao": "Janela retangular com retículo de anel e ponto: mira com os dois olhos abertos, a mais rápida para perto.",
    "arquivo": "acessorios/mira_holografica.glb",
    "tamanho_m": [
-    0.036,
-    0.053,
-    0.09
+    0.038,
+    0.055,
+    0.088
    ],
-   "triangulos": 1160,
-   "kb": 58.5,
+   "triangulos": 2082,
+   "kb": 268.7,
    "encaixes": [
     {
      "no": "olho",
      "tipo": "mira",
      "pai": "mira_holografica",
      "posicao_m": [
-      -0.0,
+      0.0,
       0.0288,
       0.012
      ],
      "descricao": "linha de visada"
     }
-   ]
+   ],
+   "gerador": "miras/jogo.py",
+   "optica": {
+    "tipo": "holografica",
+    "aumento": [
+     1,
+     1
+    ],
+    "ocular_m": [
+     0.0,
+     0.02875,
+     -0.001
+    ],
+    "raio_ocular_m": 0.0147,
+    "iluminado": true
+   }
   },
   {
    "id": "luneta_1_6",
@@ -17479,11 +17768,11 @@
    "arquivo": "acessorios/alca_rebativel.glb",
    "tamanho_m": [
     0.034,
-    0.032,
+    0.033,
     0.024
    ],
-   "triangulos": 1100,
-   "kb": 310.2,
+   "triangulos": 1260,
+   "kb": 319.0,
    "partes": [
     {
      "no": "lamina",
@@ -17651,15 +17940,15 @@
     "posto"
    ],
    "liga_desliga": "SpotLight3D no encaixe \"feixe\" (para -Z)",
-   "descricao": "Lanterna de 1000 lm presa no lado direito do guarda-mão, com botão de cauda.",
+   "descricao": "Lanterna de 1000 lm de duas pilhas: corpo comprido recartilhado, pescoço com aletas, cabeça larga e suporte de dois anéis aparafusado nas fendas do guarda-mão. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/lanterna_fuzil.glb",
    "tamanho_m": [
     0.033,
     0.029,
     0.099
    ],
-   "triangulos": 5576,
-   "kb": 267.3,
+   "triangulos": 6146,
+   "kb": 666.0,
    "encaixes": [
     {
      "no": "feixe",
@@ -17672,7 +17961,8 @@
      ],
      "descricao": "SpotLight3D aqui (-Z)"
     }
-   ]
+   ],
+   "gerador": "lanterna/jogo.py"
   },
   {
    "id": "laser_fuzil",
@@ -17697,15 +17987,15 @@
     "quartel"
    ],
    "liga_desliga": "laser no encaixe \"laser\" e luz no encaixe \"feixe\" (para -Z)",
-   "descricao": "Caixa presa no lado esquerdo do guarda-mão (trilho curto de M-LOK) com laser vermelho e luz auxiliar, chave de 3 posições e tampas das lentes.",
+   "descricao": "Caixa de alumínio do lado esquerdo do guarda-mão com mira laser e farolete: seletor de modo e botão em cima, ajustes de latão, pilha atrás e tomada para botão remoto. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/laser_fuzil.glb",
    "tamanho_m": [
     0.04,
-    0.041,
-    0.086
+    0.044,
+    0.087
    ],
-   "triangulos": 1352,
-   "kb": 73.5,
+   "triangulos": 2572,
+   "kb": 365.7,
    "encaixes": [
     {
      "no": "laser",
@@ -17729,7 +18019,8 @@
      ],
      "descricao": "SpotLight3D (-Z)"
     }
-   ]
+   ],
+   "gerador": "lanterna/jogo.py"
   },
   {
    "id": "quebra_chamas_556",
@@ -18613,12 +18904,12 @@
    "descricao": "Montagem que prende no trilho do lado esquerdo e põe uma mira de ponto vermelho por cima da tampa.",
    "arquivo": "acessorios/mira_lateral_ak.glb",
    "tamanho_m": [
-    0.045,
-    0.086,
-    0.087
+    0.051,
+    0.09,
+    0.088
    ],
-   "triangulos": 2172,
-   "kb": 111.5,
+   "triangulos": 6528,
+   "kb": 640.9,
    "encaixes": [
     {
      "no": "olho",
@@ -18631,7 +18922,22 @@
      ],
      "descricao": "linha de visada"
     }
-   ]
+   ],
+   "gerador": "miras/jogo.py",
+   "optica": {
+    "tipo": "ponto",
+    "aumento": [
+     1,
+     1
+    ],
+    "ocular_m": [
+     0.016300000000000002,
+     0.058,
+     0.0295
+    ],
+    "raio_ocular_m": 0.012,
+    "iluminado": true
+   }
   },
   {
    "id": "luneta_lateral_ak",
@@ -18655,12 +18961,12 @@
    "descricao": "Luneta curta de 4× com retículo em divisa, presa na montagem do lado esquerdo.",
    "arquivo": "acessorios/luneta_lateral_ak.glb",
    "tamanho_m": [
-    0.05,
-    0.091,
+    0.057,
+    0.1,
     0.189
    ],
-   "triangulos": 2384,
-   "kb": 127.4,
+   "triangulos": 8667,
+   "kb": 837.0,
    "encaixes": [
     {
      "no": "olho",
@@ -18673,7 +18979,28 @@
      ],
      "descricao": "linha de visada"
     }
-   ]
+   ],
+   "gerador": "miras/jogo.py",
+   "optica": {
+    "tipo": "luneta",
+    "aumento": [
+     4,
+     4
+    ],
+    "ocular_m": [
+     0.016300000000000002,
+     0.061,
+     0.0843
+    ],
+    "raio_ocular_m": 0.0145,
+    "objetiva_m": [
+     0.016300000000000002,
+     0.061,
+     -0.0923
+    ],
+    "reticulo": "cruz",
+    "iluminado": false
+   }
   },
   {
    "id": "baioneta_ak",
@@ -19057,11 +19384,11 @@
    "arquivo": "acessorios/alca_polimero.glb",
    "tamanho_m": [
     0.028,
-    0.031,
-    0.034
+    0.033,
+    0.038
    ],
-   "triangulos": 1584,
-   "kb": 84.3,
+   "triangulos": 1148,
+   "kb": 401.5,
    "partes": [
     {
      "no": "lamina",
@@ -19083,7 +19410,8 @@
      "laco": false,
      "descricao": "rebate a mira"
     }
-   }
+   },
+   "gerador": "miras/jogo.py"
   },
   {
    "id": "massa_polimero",
@@ -19099,11 +19427,11 @@
    "arquivo": "acessorios/massa_polimero.glb",
    "tamanho_m": [
     0.028,
-    0.031,
-    0.034
+    0.033,
+    0.038
    ],
-   "triangulos": 1464,
-   "kb": 74.6,
+   "triangulos": 684,
+   "kb": 375.3,
    "partes": [
     {
      "no": "lamina",
@@ -19125,7 +19453,8 @@
      "laco": false,
      "descricao": "rebate a mira"
     }
-   }
+   },
+   "gerador": "miras/jogo.py"
   },
   {
    "id": "alca_polimero_tan",
@@ -19141,11 +19470,11 @@
    "arquivo": "acessorios/alca_polimero_tan.glb",
    "tamanho_m": [
     0.028,
-    0.031,
-    0.034
+    0.033,
+    0.038
    ],
-   "triangulos": 1584,
-   "kb": 84.4,
+   "triangulos": 1148,
+   "kb": 294.7,
    "partes": [
     {
      "no": "lamina",
@@ -19167,7 +19496,8 @@
      "laco": false,
      "descricao": "rebate a mira"
     }
-   }
+   },
+   "gerador": "miras/jogo.py"
   },
   {
    "id": "massa_polimero_tan",
@@ -19183,11 +19513,11 @@
    "arquivo": "acessorios/massa_polimero_tan.glb",
    "tamanho_m": [
     0.028,
-    0.031,
-    0.034
+    0.033,
+    0.038
    ],
-   "triangulos": 1464,
-   "kb": 74.6,
+   "triangulos": 684,
+   "kb": 256.9,
    "partes": [
     {
      "no": "lamina",
@@ -19209,7 +19539,8 @@
      "laco": false,
      "descricao": "rebate a mira"
     }
-   }
+   },
+   "gerador": "miras/jogo.py"
   },
   {
    "id": "empunhadura_reta",
@@ -20306,8 +20637,8 @@
     0.081,
     0.098
    ],
-   "triangulos": 3024,
-   "kb": 154.8,
+   "triangulos": 4337,
+   "kb": 465.6,
    "encaixes": [
     {
      "no": "olho",
@@ -20320,7 +20651,22 @@
      ],
      "descricao": "centro da lente: linha de visada"
     }
-   ]
+   ],
+   "gerador": "miras/jogo.py",
+   "optica": {
+    "tipo": "ponto",
+    "aumento": [
+     1,
+     1
+    ],
+    "ocular_m": [
+     0.0,
+     0.0627,
+     -0.0131
+    ],
+    "raio_ocular_m": 0.0069,
+    "iluminado": true
+   }
   },
   {
    "id": "ponte_mira_pistola_tan",
@@ -20348,8 +20694,8 @@
     0.081,
     0.098
    ],
-   "triangulos": 3024,
-   "kb": 155.7,
+   "triangulos": 4337,
+   "kb": 480.1,
    "encaixes": [
     {
      "no": "olho",
@@ -20362,7 +20708,22 @@
      ],
      "descricao": "centro da lente: linha de visada"
     }
-   ]
+   ],
+   "gerador": "miras/jogo.py",
+   "optica": {
+    "tipo": "ponto",
+    "aumento": [
+     1,
+     1
+    ],
+    "ocular_m": [
+     0.0,
+     0.0627,
+     -0.0131
+    ],
+    "raio_ocular_m": 0.0069,
+    "iluminado": true
+   }
   },
   {
    "id": "punho_ar",
@@ -20374,15 +20735,16 @@
    "modificadores": {},
    "raridade": "comum",
    "valor_troca": 5,
-   "descricao": "O punho que vem no fuzil: polímero com área pontilhada.",
+   "descricao": "O punho que vem no fuzil: polímero com quadriculado dos lados, ressalto para o dedo médio e a base oca com o parafuso. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/punho_ar.glb",
    "tamanho_m": [
-    0.033,
-    0.111,
-    0.078
+    0.029,
+    0.114,
+    0.083
    ],
-   "triangulos": 20692,
-   "kb": 1174.4
+   "triangulos": 2780,
+   "kb": 488.1,
+   "gerador": "punhos/jogo.py"
   },
   {
    "id": "punho_ar_tan",
@@ -20394,15 +20756,16 @@
    "modificadores": {},
    "raridade": "comum",
    "valor_troca": 5,
-   "descricao": "O punho original em caramelo.",
+   "descricao": "O punho que vem no fuzil: polímero com quadriculado dos lados, ressalto para o dedo médio e a base oca com o parafuso. Em caramelo. Modelo detalhado, com texturas assadas.",
    "arquivo": "acessorios/punho_ar_tan.glb",
    "tamanho_m": [
-    0.033,
-    0.111,
-    0.078
+    0.029,
+    0.114,
+    0.083
    ],
-   "triangulos": 20692,
-   "kb": 1174.7
+   "triangulos": 2780,
+   "kb": 503.6,
+   "gerador": "punhos/jogo.py"
   },
   {
    "id": "punho_cavas",
@@ -20415,7 +20778,7 @@
     "recuo": 0.95,
     "estabilidade_mirando": 1.1
    },
-   "descricao": "Borracha com textura de pedrinhas em toda a volta, ressalto para o dedo médio, cavas para os outros dedos e base larga que apoia a mão. Não escorrega com a mão suada ou molhada.",
+   "descricao": "Borracha moldada com grão de pedrinhas em toda a volta, ressalto para o dedo médio, três cavas para os dedos, palma cheia e sapata larga na base. Não escorrega com a mão suada ou molhada. Modelo detalhado, com texturas assadas.",
    "raridade": "incomum",
    "valor_troca": 10,
    "onde": [
@@ -20425,12 +20788,13 @@
    ],
    "arquivo": "acessorios/punho_cavas.glb",
    "tamanho_m": [
-    0.045,
-    0.117,
-    0.086
+    0.032,
+    0.127,
+    0.089
    ],
-   "triangulos": 15960,
-   "kb": 1108.6
+   "triangulos": 4690,
+   "kb": 688.4,
+   "gerador": "punhos/jogo.py"
   },
   {
    "id": "punho_cavas_tan",
@@ -20443,7 +20807,7 @@
     "recuo": 0.95,
     "estabilidade_mirando": 1.1
    },
-   "descricao": "O punho emborrachado com cavas em caramelo.",
+   "descricao": "Borracha moldada com grão de pedrinhas em toda a volta, ressalto para o dedo médio, três cavas para os dedos, palma cheia e sapata larga na base. Não escorrega com a mão suada ou molhada. Em caramelo. Modelo detalhado, com texturas assadas.",
    "raridade": "incomum",
    "valor_troca": 10,
    "onde": [
@@ -20453,12 +20817,13 @@
    ],
    "arquivo": "acessorios/punho_cavas_tan.glb",
    "tamanho_m": [
-    0.045,
-    0.117,
-    0.086
+    0.032,
+    0.127,
+    0.089
    ],
-   "triangulos": 15960,
-   "kb": 1110.0
+   "triangulos": 4690,
+   "kb": 702.2,
+   "gerador": "punhos/jogo.py"
   },
   {
    "id": "punho_reto",
@@ -20470,7 +20835,7 @@
    "modificadores": {
     "tempo_mirar": 0.95
    },
-   "descricao": "Punho mais em pé e liso, com rabo de castor que protege a mão, painel de textura fina dos lados e compartimento com tampa no fundo (cabe pilha ou bilhete).",
+   "descricao": "Punho mais em pé, com rabo de castor que protege a mão, painéis de pontilhado fino dos lados, nervuras na frente e nas costas e compartimento com tampa no fundo (cabe pilha ou bilhete). Modelo detalhado, com texturas assadas.",
    "raridade": "incomum",
    "valor_troca": 10,
    "onde": [
@@ -20480,12 +20845,13 @@
    ],
    "arquivo": "acessorios/punho_reto.glb",
    "tamanho_m": [
-    0.03,
-    0.115,
-    0.075
+    0.027,
+    0.126,
+    0.065
    ],
-   "triangulos": 21556,
-   "kb": 1224.4
+   "triangulos": 5226,
+   "kb": 598.6,
+   "gerador": "punhos/jogo.py"
   },
   {
    "id": "punho_reto_tan",
@@ -20497,7 +20863,7 @@
    "modificadores": {
     "tempo_mirar": 0.95
    },
-   "descricao": "O punho reto de polímero em caramelo.",
+   "descricao": "Punho mais em pé, com rabo de castor que protege a mão, painéis de pontilhado fino dos lados, nervuras na frente e nas costas e compartimento com tampa no fundo (cabe pilha ou bilhete). Em caramelo. Modelo detalhado, com texturas assadas.",
    "raridade": "incomum",
    "valor_troca": 10,
    "onde": [
@@ -20507,12 +20873,13 @@
    ],
    "arquivo": "acessorios/punho_reto_tan.glb",
    "tamanho_m": [
-    0.03,
-    0.115,
-    0.075
+    0.027,
+    0.126,
+    0.065
    ],
-   "triangulos": 21556,
-   "kb": 1227.7
+   "triangulos": 5226,
+   "kb": 614.0,
+   "gerador": "punhos/jogo.py"
   },
   {
    "id": "carregador_ciclone_17",
@@ -21261,12 +21628,12 @@
    "descricao": "Haste aparafusada no lado direito do punho com um aro e 3 pinos de fibra (verde 10 m, laranja 20 m, vermelho 30 m) que brilham com pouca luz.",
    "arquivo": "acessorios/mira_pinos_arco.glb",
    "tamanho_m": [
-    0.041,
+    0.047,
     0.053,
-    0.086
+    0.087
    ],
-   "triangulos": 2916,
-   "kb": 133.4,
+   "triangulos": 2588,
+   "kb": 369.2,
    "encaixes": [
     {
      "no": "olho",
@@ -21279,7 +21646,8 @@
      ],
      "descricao": "olho na âncora: pino de cima (verde) = 10 m, do meio = 20 m, de baixo = 30 m"
     }
-   ]
+   ],
+   "gerador": "miras/jogo.py"
   },
   {
    "id": "estabilizador_arco",
@@ -21414,19 +21782,19 @@
    "descricao": "Aro com 5 pinos de fibra (10, 20, 30, 40 e 50 m), luz que acende os pinos no escuro e nível de bolha embaixo para não entortar o arco.",
    "arquivo": "acessorios/mira_pinos_luz.glb",
    "tamanho_m": [
-    0.059,
+    0.069,
     0.089,
     0.107
    ],
    "triangulos": 6392,
-   "kb": 768.5,
+   "kb": 770.1,
    "encaixes": [
     {
      "no": "olho",
      "tipo": "mira",
      "pai": "mira_pinos_luz",
      "posicao_m": [
-      -0.0128,
+      -0.0228,
       -0.025,
       0.6389
      ],
@@ -21778,8 +22146,8 @@
     0.052,
     0.19
    ],
-   "triangulos": 2056,
-   "kb": 337.6
+   "triangulos": 2172,
+   "kb": 383.9
   },
   {
    "id": "luneta_m4",
@@ -21964,6 +22332,25 @@
    ],
    "triangulos": 664,
    "kb": 144.1
+  },
+  {
+   "id": "adaptador_punho_762",
+   "grupo": "acessorios",
+   "nome": "Adaptador de punho 7,62",
+   "categoria": "adaptador",
+   "peso_kg": 0.05,
+   "modificadores": {},
+   "descricao": "Bloco de aço que aparafusa embaixo do receptor de alumínio e dá a face plana onde assentam os punhos de 7,62 (baquelite e ergonômico). O jogo põe sozinho quando um punho de 7,62 entra num fuzil 5,56 ou .308. Modelo detalhado, com texturas assadas.",
+   "arquivo": "acessorios/adaptador_punho_762.glb",
+   "tamanho_m": [
+    0.029,
+    0.026,
+    0.062
+   ],
+   "triangulos": 224,
+   "gerador": "punhos/jogo.py",
+   "kb": 123.4,
+   "uso": "o jogo monta sozinho junto com um punho de 7,62 num encaixe punho_ar (campo \"ajuste\" do encaixe); não é item"
   },
   {
    "id": "alavanca_ambi_m4",

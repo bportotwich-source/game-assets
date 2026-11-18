@@ -84,7 +84,16 @@ func por_acessorio(no: String, acessorio_id: String) -> bool:
 		return true
 	instalados[no] = acessorio_id
 	var a := item(acessorio_id)
-	alvo.add_child(load(RAIZ + a["arquivo"]).instantiate())
+	# "ajuste" do encaixe: acessório de outro tipo entra deslocado, girado para trás e com a peça "com" (adaptador) ao lado.
+	var aj: Dictionary = e.get("ajuste", {}).get(String(a.get("encaixe", "")), {})
+	if aj.has("com"):
+		alvo.add_child(load(RAIZ + item(aj["com"])["arquivo"]).instantiate())
+	var peca: Node3D = load(RAIZ + a["arquivo"]).instantiate()
+	alvo.add_child(peca)
+	if not aj.is_empty():
+		var p: Array = aj.get("posicao_m", [0, 0, 0])
+		peca.position = Vector3(p[0], p[1], p[2])
+		peca.rotation.x = -deg_to_rad(float(aj.get("inclinacao_graus", 0.0)))
 	_rebater_miras()
 	return true
 

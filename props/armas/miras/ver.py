@@ -7,7 +7,7 @@ import bpy
 from mathutils import Vector
 
 CORES = {'anod': (0.12, 0.12, 0.13), 'serr': (0.3, 0.3, 0.32), 'fosf': (0.07, 0.07, 0.07), 'inox': (0.5, 0.5, 0.5),
-         'lente_clara': (0.5, 0.7, 0.9), 'tinta': (0.85, 0.85, 0.85), 'led': (0.8, 0.05, 0.05),
+         'lente_clara': (0.5, 0.7, 0.9), 'polim': (0.16, 0.16, 0.15), 'tan': (0.5, 0.4, 0.27), 'borracha': (0.05, 0.05, 0.05), 'anod_tubo': (0.13, 0.13, 0.14), 'tinta': (0.85, 0.85, 0.85), 'led': (0.8, 0.05, 0.05),
          'anod_laranja': (0.7, 0.2, 0.03), 'tinta_viva': (0.8, 0.86, 0.3), 'fibra_verde': (0.2, 1, 0.3), 'fibra_amarelo': (1, 0.85, 0.05),
          'fibra_vermelho': (1, 0.1, 0.05), 'luz_fria': (0.75, 0.9, 1)}
 

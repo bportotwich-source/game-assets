@@ -345,6 +345,8 @@ def alca_transporte():
     bevel(arc, 1.3, 2)
     cx = extr([(-144, 37.5), (-144, 59), (-157, 68.5), (-190, 68.5), (-196, 60), (-196, 37.5)], -11.6, 11.6, 'anod')
     cut(cx, [box(-205, -171, 55, 80, -7.6, 7.6, 'anod'),
+             box(-173, -140, 58.6, 80, -4.6, 4.6, 'anod'),              # canal da visada: sem ele o bloco tapava o furo
+
              box(-181.5, -150.5, 40.2, 46.2, -20, 20, 'anod'),
              pin(-182, 62, 2.6, -20, 20, 'anod')])
     bevel(cx, 0.9, 1)
@@ -352,7 +354,7 @@ def alca_transporte():
     a = parte('alca_transporte', [base, arc, cx, barra], origem=(-100, 30.25, 0), grupo='D')
     # abertura da alça de mira (folha rebatível em L)
     f = extr(ret_arred(-5.6, 5.6, 55.2, 69.5, 2.0, 3), -183.2, -180.8, 'fosf', plane='wv')
-    cut(f, [cyl((-190, 62.6, 0), (-175, 62.6, 0), 1.7, 'fosf', n=14)])
+    cut(f, [cyl((-190, 62.6, 0), (-175, 62.6, 0), 2.6, 'fosf', n=28)])      # furo largo: o fino fecha visto do olho do jogador
     f2 = box(-180.9, -171.5, 55.2, 57.4, -5.6, 5.6, 'fosf')
     cut(f2, [cyl((-176, 50, 0), (-176, 60, 0), 2.7, 'fosf', n=14)])
     parte('alca_mira', [f, f2, pin(-182, 56.3, 1.2, -7.6, 7.6, 'inox', n=8)], origem=(-182, 56.3, 0), pai=a, grupo='D')

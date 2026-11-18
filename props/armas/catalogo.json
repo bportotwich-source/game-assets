@@ -12180,8 +12180,8 @@
     0.864,
     0.782
    ],
-   "triangulos": 52667,
-   "kb": 5029.9,
+   "triangulos": 52795,
+   "kb": 5021.9,
    "partes": [
     {
      "no": "braco_cima",
@@ -12539,7 +12539,7 @@
    "gerador": "composto/jogo.py",
    "arquivo_leve": "armas/arco_composto_leve.glb",
    "triangulos_leve": 5976,
-   "kb_leve": 1243.2
+   "kb_leve": 1250.8
   },
   {
    "id": "besta_recurva",
@@ -16463,12 +16463,12 @@
    "descricao": "Mira refletora pequena para o ferrolho da pistola: ponto vermelho, mira mais rápido.",
    "arquivo": "acessorios/mira_ponto_vermelho_compacta.glb",
    "tamanho_m": [
-    0.025,
     0.026,
+    0.027,
     0.034
    ],
-   "triangulos": 1316,
-   "kb": 73.9,
+   "triangulos": 1261,
+   "kb": 260.7,
    "encaixes": [
     {
      "no": "olho",
@@ -16481,7 +16481,22 @@
      ],
      "descricao": "centro da lente: linha de visada"
     }
-   ]
+   ],
+   "gerador": "miras/jogo.py",
+   "optica": {
+    "tipo": "ponto",
+    "aumento": [
+     1,
+     1
+    ],
+    "ocular_m": [
+     0.0,
+     0.0145,
+     -0.0116
+    ],
+    "raio_ocular_m": 0.0069,
+    "iluminado": true
+   }
   },
   {
    "id": "carregador_9mm",
@@ -16590,25 +16605,40 @@
    "descricao": "Tubo de ponto vermelho com base parafusada na ponte do revólver. Mira rápido e acerta mais longe.",
    "arquivo": "acessorios/mira_ponto_vermelho_revolver.glb",
    "tamanho_m": [
-    0.035,
-    0.041,
+    0.038,
+    0.039,
     0.074
    ],
-   "triangulos": 2300,
-   "kb": 116.9,
+   "triangulos": 4418,
+   "kb": 547.1,
    "encaixes": [
     {
      "no": "olho",
      "tipo": "mira",
      "pai": "mira_ponto_vermelho_revolver",
      "posicao_m": [
-      -0.0,
+      0.0,
       0.0215,
       0.03
      ],
      "descricao": "ocular: linha de visada"
     }
-   ]
+   ],
+   "gerador": "miras/jogo.py",
+   "optica": {
+    "tipo": "ponto",
+    "aumento": [
+     1,
+     1
+    ],
+    "ocular_m": [
+     0.0,
+     0.0215,
+     0.026
+    ],
+    "raio_ocular_m": 0.0115,
+    "iluminado": true
+   }
   },
   {
    "id": "empunhadura_madeira_38",
@@ -17031,12 +17061,12 @@
    "descricao": "Tubo de 30 mm com tampas basculantes (nós \"tampa_frente\" e \"tampa_tras\"), trava de alavanca no trilho e torres de ajuste. Serve em toda arma com trilho de cima.",
    "arquivo": "acessorios/mira_ponto_vermelho_tubo.glb",
    "tamanho_m": [
-    0.047,
-    0.089,
-    0.108
+    0.045,
+    0.091,
+    0.112
    ],
-   "triangulos": 3592,
-   "kb": 182.8,
+   "triangulos": 5653,
+   "kb": 672.6,
    "partes": [
     {
      "no": "tampa_frente",
@@ -17089,6 +17119,21 @@
      "laco": false,
      "descricao": "abre as tampas (mola)"
     }
+   },
+   "gerador": "miras/jogo.py",
+   "optica": {
+    "tipo": "ponto",
+    "aumento": [
+     1,
+     1
+    ],
+    "ocular_m": [
+     0.0,
+     0.03,
+     0.0285
+    ],
+    "raio_ocular_m": 0.0133,
+    "iluminado": true
    }
   },
   {
@@ -17607,25 +17652,40 @@
    "descricao": "Janela retangular com retículo de anel e ponto: mira com os dois olhos abertos, a mais rápida para perto.",
    "arquivo": "acessorios/mira_holografica.glb",
    "tamanho_m": [
-    0.036,
-    0.053,
-    0.09
+    0.038,
+    0.055,
+    0.088
    ],
-   "triangulos": 1160,
-   "kb": 58.5,
+   "triangulos": 2082,
+   "kb": 268.7,
    "encaixes": [
     {
      "no": "olho",
      "tipo": "mira",
      "pai": "mira_holografica",
      "posicao_m": [
-      -0.0,
+      0.0,
       0.0288,
       0.012
      ],
      "descricao": "linha de visada"
     }
-   ]
+   ],
+   "gerador": "miras/jogo.py",
+   "optica": {
+    "tipo": "holografica",
+    "aumento": [
+     1,
+     1
+    ],
+    "ocular_m": [
+     0.0,
+     0.02875,
+     -0.001
+    ],
+    "raio_ocular_m": 0.0147,
+    "iluminado": true
+   }
   },
   {
    "id": "luneta_1_6",
@@ -17708,11 +17768,11 @@
    "arquivo": "acessorios/alca_rebativel.glb",
    "tamanho_m": [
     0.034,
-    0.032,
+    0.033,
     0.024
    ],
-   "triangulos": 1100,
-   "kb": 310.2,
+   "triangulos": 1260,
+   "kb": 319.0,
    "partes": [
     {
      "no": "lamina",
@@ -18844,12 +18904,12 @@
    "descricao": "Montagem que prende no trilho do lado esquerdo e põe uma mira de ponto vermelho por cima da tampa.",
    "arquivo": "acessorios/mira_lateral_ak.glb",
    "tamanho_m": [
-    0.045,
-    0.086,
-    0.087
+    0.051,
+    0.09,
+    0.088
    ],
-   "triangulos": 2172,
-   "kb": 111.5,
+   "triangulos": 6528,
+   "kb": 640.9,
    "encaixes": [
     {
      "no": "olho",
@@ -18862,7 +18922,22 @@
      ],
      "descricao": "linha de visada"
     }
-   ]
+   ],
+   "gerador": "miras/jogo.py",
+   "optica": {
+    "tipo": "ponto",
+    "aumento": [
+     1,
+     1
+    ],
+    "ocular_m": [
+     0.016300000000000002,
+     0.058,
+     0.0295
+    ],
+    "raio_ocular_m": 0.012,
+    "iluminado": true
+   }
   },
   {
    "id": "luneta_lateral_ak",
@@ -18886,12 +18961,12 @@
    "descricao": "Luneta curta de 4× com retículo em divisa, presa na montagem do lado esquerdo.",
    "arquivo": "acessorios/luneta_lateral_ak.glb",
    "tamanho_m": [
-    0.05,
-    0.091,
+    0.057,
+    0.1,
     0.189
    ],
-   "triangulos": 2384,
-   "kb": 127.4,
+   "triangulos": 8667,
+   "kb": 837.0,
    "encaixes": [
     {
      "no": "olho",
@@ -18904,7 +18979,28 @@
      ],
      "descricao": "linha de visada"
     }
-   ]
+   ],
+   "gerador": "miras/jogo.py",
+   "optica": {
+    "tipo": "luneta",
+    "aumento": [
+     4,
+     4
+    ],
+    "ocular_m": [
+     0.016300000000000002,
+     0.061,
+     0.0843
+    ],
+    "raio_ocular_m": 0.0145,
+    "objetiva_m": [
+     0.016300000000000002,
+     0.061,
+     -0.0923
+    ],
+    "reticulo": "cruz",
+    "iluminado": false
+   }
   },
   {
    "id": "baioneta_ak",
@@ -19288,11 +19384,11 @@
    "arquivo": "acessorios/alca_polimero.glb",
    "tamanho_m": [
     0.028,
-    0.031,
-    0.034
+    0.033,
+    0.038
    ],
-   "triangulos": 1584,
-   "kb": 84.3,
+   "triangulos": 1148,
+   "kb": 401.5,
    "partes": [
     {
      "no": "lamina",
@@ -19314,7 +19410,8 @@
      "laco": false,
      "descricao": "rebate a mira"
     }
-   }
+   },
+   "gerador": "miras/jogo.py"
   },
   {
    "id": "massa_polimero",
@@ -19330,11 +19427,11 @@
    "arquivo": "acessorios/massa_polimero.glb",
    "tamanho_m": [
     0.028,
-    0.031,
-    0.034
+    0.033,
+    0.038
    ],
-   "triangulos": 1464,
-   "kb": 74.6,
+   "triangulos": 684,
+   "kb": 375.3,
    "partes": [
     {
      "no": "lamina",
@@ -19356,7 +19453,8 @@
      "laco": false,
      "descricao": "rebate a mira"
     }
-   }
+   },
+   "gerador": "miras/jogo.py"
   },
   {
    "id": "alca_polimero_tan",
@@ -19372,11 +19470,11 @@
    "arquivo": "acessorios/alca_polimero_tan.glb",
    "tamanho_m": [
     0.028,
-    0.031,
-    0.034
+    0.033,
+    0.038
    ],
-   "triangulos": 1584,
-   "kb": 84.4,
+   "triangulos": 1148,
+   "kb": 294.7,
    "partes": [
     {
      "no": "lamina",
@@ -19398,7 +19496,8 @@
      "laco": false,
      "descricao": "rebate a mira"
     }
-   }
+   },
+   "gerador": "miras/jogo.py"
   },
   {
    "id": "massa_polimero_tan",
@@ -19414,11 +19513,11 @@
    "arquivo": "acessorios/massa_polimero_tan.glb",
    "tamanho_m": [
     0.028,
-    0.031,
-    0.034
+    0.033,
+    0.038
    ],
-   "triangulos": 1464,
-   "kb": 74.6,
+   "triangulos": 684,
+   "kb": 256.9,
    "partes": [
     {
      "no": "lamina",
@@ -19440,7 +19539,8 @@
      "laco": false,
      "descricao": "rebate a mira"
     }
-   }
+   },
+   "gerador": "miras/jogo.py"
   },
   {
    "id": "empunhadura_reta",
@@ -20537,8 +20637,8 @@
     0.081,
     0.098
    ],
-   "triangulos": 3024,
-   "kb": 154.8,
+   "triangulos": 4337,
+   "kb": 465.6,
    "encaixes": [
     {
      "no": "olho",
@@ -20551,7 +20651,22 @@
      ],
      "descricao": "centro da lente: linha de visada"
     }
-   ]
+   ],
+   "gerador": "miras/jogo.py",
+   "optica": {
+    "tipo": "ponto",
+    "aumento": [
+     1,
+     1
+    ],
+    "ocular_m": [
+     0.0,
+     0.0627,
+     -0.0131
+    ],
+    "raio_ocular_m": 0.0069,
+    "iluminado": true
+   }
   },
   {
    "id": "ponte_mira_pistola_tan",
@@ -20579,8 +20694,8 @@
     0.081,
     0.098
    ],
-   "triangulos": 3024,
-   "kb": 155.7,
+   "triangulos": 4337,
+   "kb": 480.1,
    "encaixes": [
     {
      "no": "olho",
@@ -20593,7 +20708,22 @@
      ],
      "descricao": "centro da lente: linha de visada"
     }
-   ]
+   ],
+   "gerador": "miras/jogo.py",
+   "optica": {
+    "tipo": "ponto",
+    "aumento": [
+     1,
+     1
+    ],
+    "ocular_m": [
+     0.0,
+     0.0627,
+     -0.0131
+    ],
+    "raio_ocular_m": 0.0069,
+    "iluminado": true
+   }
   },
   {
    "id": "punho_ar",
@@ -21498,12 +21628,12 @@
    "descricao": "Haste aparafusada no lado direito do punho com um aro e 3 pinos de fibra (verde 10 m, laranja 20 m, vermelho 30 m) que brilham com pouca luz.",
    "arquivo": "acessorios/mira_pinos_arco.glb",
    "tamanho_m": [
-    0.041,
+    0.047,
     0.053,
-    0.086
+    0.087
    ],
-   "triangulos": 2916,
-   "kb": 133.4,
+   "triangulos": 2588,
+   "kb": 369.2,
    "encaixes": [
     {
      "no": "olho",
@@ -21516,7 +21646,8 @@
      ],
      "descricao": "olho na âncora: pino de cima (verde) = 10 m, do meio = 20 m, de baixo = 30 m"
     }
-   ]
+   ],
+   "gerador": "miras/jogo.py"
   },
   {
    "id": "estabilizador_arco",
@@ -21651,19 +21782,19 @@
    "descricao": "Aro com 5 pinos de fibra (10, 20, 30, 40 e 50 m), luz que acende os pinos no escuro e nível de bolha embaixo para não entortar o arco.",
    "arquivo": "acessorios/mira_pinos_luz.glb",
    "tamanho_m": [
-    0.059,
+    0.069,
     0.089,
     0.107
    ],
    "triangulos": 6392,
-   "kb": 768.5,
+   "kb": 770.1,
    "encaixes": [
     {
      "no": "olho",
      "tipo": "mira",
      "pai": "mira_pinos_luz",
      "posicao_m": [
-      -0.0128,
+      -0.0228,
       -0.025,
       0.6389
      ],
@@ -22015,8 +22146,8 @@
     0.052,
     0.19
    ],
-   "triangulos": 2056,
-   "kb": 337.6
+   "triangulos": 2172,
+   "kb": 383.9
   },
   {
    "id": "luneta_m4",

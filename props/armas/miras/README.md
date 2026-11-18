@@ -7,6 +7,11 @@ próprio, sem marcas.
 |---|---|---|
 | `mira_reflexa`, `mira_reflexa_gasto` | mira de ponto de corpo baixo, janela redonda num capuz inclinado | `olho` |
 | `alca_rebativel`, `massa_rebativel` | miras de ferro que deitam | `lamina`, animação `dobrar` |
+| `mira_ponto_vermelho_compacta`, `ponte_mira_pistola`(+`_tan`), `mira_ponto_vermelho_revolver` | pontos vermelhos de pistola e revólver | `olho`, malha `_lente`, campo `optica` |
+| `mira_holografica`, `mira_ponto_vermelho_tubo` | holográfica e tubo de ponto para trilho (o tubo tem as tampas `tampa_frente`/`tampa_tras`) | `olho`, malha `_lente`, campo `optica` |
+| `alca_polimero`, `massa_polimero` (+`_tan`) | miras de polímero que deitam | `lamina`, animação `dobrar` |
+| `mira_lateral_ak`, `luneta_lateral_ak` | ponto vermelho e luneta 4× na montagem lateral do fuzil 7,62 | `olho`, malha `_lente`, campo `optica` |
+| `mira_pinos_arco` | mira de 3 pinos de fibra do arco simples | `olho` |
 | `mira_pinos_luz` | mira de 5 pinos de fibra do arco composto, com luz e nível de bolha | `olho` |
 
 Na reflexa a lente é uma malha separada (`<id>_lente`) de vidro transparente, e o catálogo ganha o

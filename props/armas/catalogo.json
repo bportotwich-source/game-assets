@@ -17859,24 +17859,25 @@
    "descricao": "Empunhadura arredondada com apoio de dedos, presa por M-LOK: segura o cano nas rajadas. Guarda pilhas na tampa de baixo.",
    "arquivo": "acessorios/empunhadura_vertical.glb",
    "tamanho_m": [
-    0.028,
+    0.027,
     0.099,
     0.04
    ],
-   "triangulos": 12444,
-   "kb": 696.7,
+   "triangulos": 2792,
+   "kb": 466.7,
    "pontos_ref": [
     {
      "no": "ref_guarda_mao",
      "pai": "empunhadura_vertical",
      "posicao_m": [
       0.0,
-      -0.0495,
-      -0.0018
+      -0.0496,
+      0.0005
      ],
      "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
     }
-   ]
+   ],
+   "gerador": "empunhaduras/jogo.py"
   },
   {
    "id": "empunhadura_angulada",
@@ -17898,24 +17899,25 @@
    "descricao": "Rampa angulada para a palma da mão: a mão vai mais à frente e o fuzil sobe à mira mais rápido.",
    "arquivo": "acessorios/empunhadura_angulada.glb",
    "tamanho_m": [
-    0.025,
-    0.036,
-    0.07
+    0.026,
+    0.037,
+    0.072
    ],
-   "triangulos": 7070,
-   "kb": 333.3,
+   "triangulos": 800,
+   "kb": 364.1,
    "pontos_ref": [
     {
      "no": "ref_guarda_mao",
      "pai": "empunhadura_angulada",
      "posicao_m": [
       0.0,
-      -0.036,
+      -0.0365,
       0.0
      ],
      "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
     }
-   ]
+   ],
+   "gerador": "empunhaduras/jogo.py"
   },
   {
    "id": "lanterna_fuzil",
@@ -18397,8 +18399,8 @@
     0.047,
     0.053
    ],
-   "triangulos": 6808,
-   "kb": 321.0,
+   "triangulos": 2144,
+   "kb": 397.0,
    "pontos_ref": [
     {
      "no": "ref_guarda_mao",
@@ -18410,7 +18412,8 @@
      ],
      "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
     }
-   ]
+   ],
+   "gerador": "empunhaduras/jogo.py"
   },
   {
    "id": "empunhadura_quadrada",
@@ -18436,20 +18439,21 @@
     0.119,
     0.044
    ],
-   "triangulos": 1820,
-   "kb": 95.6,
+   "triangulos": 3712,
+   "kb": 443.7,
    "pontos_ref": [
     {
      "no": "ref_guarda_mao",
      "pai": "empunhadura_quadrada",
      "posicao_m": [
       0.0,
-      -0.0597,
+      -0.0595,
       0.0
      ],
      "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
     }
-   ]
+   ],
+   "gerador": "empunhaduras/jogo.py"
   },
   {
    "id": "empunhadura_cilindrica",
@@ -18474,8 +18478,8 @@
     0.117,
     0.046
    ],
-   "triangulos": 1948,
-   "kb": 107.5,
+   "triangulos": 2408,
+   "kb": 436.6,
    "pontos_ref": [
     {
      "no": "ref_guarda_mao",
@@ -18483,11 +18487,12 @@
      "posicao_m": [
       0.0,
       -0.0584,
-      0.0121
+      0.0116
      ],
      "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
     }
-   ]
+   ],
+   "gerador": "empunhaduras/jogo.py"
   },
   {
    "id": "batente_mao",
@@ -18509,24 +18514,25 @@
    "descricao": "Gancho vazado na frente do guarda-mão: a mão encosta nele e não escorrega para o cano quente.",
    "arquivo": "acessorios/batente_mao.glb",
    "tamanho_m": [
-    0.02,
-    0.045,
-    0.078
+    0.018,
+    0.046,
+    0.077
    ],
-   "triangulos": 1984,
-   "kb": 94.9,
+   "triangulos": 1008,
+   "kb": 324.8,
    "pontos_ref": [
     {
      "no": "ref_guarda_mao",
      "pai": "batente_mao",
      "posicao_m": [
       0.0,
-      -0.0452,
-      0.003
+      -0.0459,
+      0.0045
      ],
      "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
     }
-   ]
+   ],
+   "gerador": "empunhaduras/jogo.py"
   },
   {
    "id": "empunhadura_curta_tan",
@@ -19605,8 +19611,8 @@
     0.076,
     0.036
    ],
-   "triangulos": 10404,
-   "kb": 551.9,
+   "triangulos": 2000,
+   "kb": 421.0,
    "pontos_ref": [
     {
      "no": "ref_guarda_mao",
@@ -19614,11 +19620,12 @@
      "posicao_m": [
       0.0,
       -0.038,
-      -0.0001
+      0.001
      ],
      "descricao": "mão de apoio: palma embaixo do guarda-mão (fuzis, espingardas), na telha da espingarda de bomba, ou do lado esquerdo do punho nas pistolas (pegada de duas mãos)"
     }
-   ]
+   ],
+   "gerador": "empunhaduras/jogo.py"
   },
   {
    "id": "coronha_leve_ar",

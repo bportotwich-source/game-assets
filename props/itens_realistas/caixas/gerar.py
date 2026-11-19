@@ -13,7 +13,7 @@ from PIL import Image
 
 PROPS = os.path.dirname(os.path.dirname(AQUI))
 GERADOR = 'itens_realistas/caixas/gerar.py'
-TEXTURA = {'estojo_diversos': 1024}   # lado da textura no GLB
+TEXTURA = {k: 1024 for k in modelo.FORMAS}   # lado da textura no GLB
 ESTADO_DE = {}
 SO_GLB = set(modelo.FORMAS)               # itens só do jogo (recomeco jogo/dados/itens_extra.json): grava o GLB, sem registro no catálogo
 

@@ -328,13 +328,24 @@ def _quat_x(graus):
 def injetar(g, pontos):
     js = g.js; nos = js['nodes']
     velhos = {i for i, n in enumerate(nos) if str(n.get('name', '')).startswith('ref_')}
-    if velhos:                                                     # refazer: tira os ref_ antigos (sempre os ultimos nos)
-        assert min(velhos) == len(nos) - len(velhos), 'ref_ fora do fim da lista de nos'
+    if velhos:                                                     # refazer: tira os ref_ antigos
+        # (normalmente os ultimos nos; se o gerador acrescentou nos depois deles, renumera os outros)
+        novo = {}
+        for i in range(len(nos)):
+            if i not in velhos: novo[i] = len(novo)
         for n in nos:
             if 'children' in n:
-                n['children'] = [c for c in n['children'] if c not in velhos]
+                n['children'] = [novo[c] for c in n['children'] if c not in velhos]
                 if not n['children']: n.pop('children')
-        del nos[min(velhos):]
+        for sc in js.get('scenes', []):
+            sc['nodes'] = [novo[c] for c in sc.get('nodes', []) if c not in velhos]
+        for sk in js.get('skins', []):
+            sk['joints'] = [novo[c] for c in sk['joints']]
+            if 'skeleton' in sk: sk['skeleton'] = novo[sk['skeleton']]
+        for an in js.get('animations', []):
+            for ch in an.get('channels', []):
+                if 'node' in ch.get('target', {}): ch['target']['node'] = novo[ch['target']['node']]
+        js['nodes'] = nos = [n for i, n in enumerate(nos) if i not in velhos]
         g = Glb.__new__(Glb); g.__dict__.update(_recarregar(js))
     saida = []
     for no, pai, pw, inc in pontos:

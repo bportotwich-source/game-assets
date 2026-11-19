@@ -1,0 +1,136 @@
+{
+"origem": "mira_ponto_vermelho_tubo.glb",
+"nos": [
+{
+"no": "tampa_frente",
+"pai": null,
+"posicao": [
+0.0,
+0.0485,
+-0.038
+]
+},
+{
+"no": "tampa_tras",
+"pai": null,
+"posicao": [
+-0.0,
+0.0485,
+0.034
+]
+},
+{
+"no": "olho",
+"pai": null,
+"posicao": [
+-0.0,
+0.03,
+0.034
+]
+}
+],
+"animacoes": [
+{
+"nome": "fechar_tampas",
+"faixas": [
+{
+"no": "tampa_frente",
+"caminho": "rotation",
+"interp": "LINEAR",
+"t": [
+0.0,
+0.3
+],
+"v": [
+[
+0.0,
+0.0,
+0.0,
+1.0
+],
+[
+-0.965926,
+0.0,
+-0.0,
+0.258819
+]
+]
+},
+{
+"no": "tampa_tras",
+"caminho": "rotation",
+"interp": "LINEAR",
+"t": [
+0.0,
+0.3
+],
+"v": [
+[
+0.0,
+0.0,
+0.0,
+1.0
+],
+[
+0.965926,
+0.0,
+0.0,
+0.258819
+]
+]
+}
+]
+},
+{
+"nome": "abrir_tampas",
+"faixas": [
+{
+"no": "tampa_frente",
+"caminho": "rotation",
+"interp": "LINEAR",
+"t": [
+0.0,
+0.25
+],
+"v": [
+[
+-0.965926,
+0.0,
+-0.0,
+0.258819
+],
+[
+0.0,
+0.0,
+0.0,
+1.0
+]
+]
+},
+{
+"no": "tampa_tras",
+"caminho": "rotation",
+"interp": "LINEAR",
+"t": [
+0.0,
+0.25
+],
+"v": [
+[
+0.965926,
+0.0,
+0.0,
+0.258819
+],
+[
+0.0,
+0.0,
+0.0,
+1.0
+]
+]
+}
+]
+}
+]
+}

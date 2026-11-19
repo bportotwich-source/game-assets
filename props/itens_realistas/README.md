@@ -112,3 +112,24 @@ python3 ferramentas/ver.py formas.png                    # confere as formas, se
 python3 ferramentas/gerar.py todas 2048 /tmp/ferr        # assa e grava os 12 GLBs em props/loot (~20 min)
 python3 ferramentas/foto.py foto.png ../loot/martelo.glb ../loot/machado.glb
 ```
+
+## caixas/
+
+Caixas de itens do jogo (ocupam pouco na mochila e têm uma grade maior por dentro; ver `conteiner` em
+`jogo/dados/itens_extra.json` do Recomeço). Desenho próprio, sem marcas. São itens só do jogo: o gerador
+grava o GLB em `props/loot`, sem registro no catálogo. Usa as classes e funções de `remedios/`.
+
+| Item | Arquivo | O que tem |
+|---|---|---|
+| Caixa de itens diversos | `estojo_diversos` | caixa rígida grafite, tampa com três almofadas, junta, dois fechos, alças laterais, cantoneiras e etiqueta |
+| Caixa de munição | `estojo_municao` | caixa estreita verde oliva, alça dobrável em cima, dois fechos e etiqueta amarela |
+| Caixa de armas | `estojo_armas` | estojo comprido verde, tampa com réguas de empilhar, quatro fechos, olhais de cadeado e alça |
+| Maleta de remédios | `estojo_remedios` | maleta rígida branca com cruz vermelha na tampa e na frente, três fechos de metal e plaquinha |
+| Bolsa térmica de comida | `estojo_comida` | bolsa de pano azul com zíper em volta da tampa, bolso na frente, bolsos de garrafa e alça de ombro |
+| Caixote enorme | `caixote_enorme` | caixote de tábuas com sarrafos, travessas inclinadas, tampa com réguas, fechos e dobradiças de ferro e patins |
+
+```
+python3 caixas/ver.py formas.png estojo_armas             # confere as formas, sem assar
+python3 caixas/gerar.py todas 2048 /tmp/caixas            # assa e grava os 6 GLBs em props/loot (~2 min cada)
+python3 caixas/foto.py foto.png ../loot/estojo_armas.glb ../loot/caixote_enorme.glb
+```

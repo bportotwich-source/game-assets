@@ -5,6 +5,7 @@ sys.path[:0] = [AQUI, os.path.join(os.path.dirname(AQUI), 'm4a1')]
 import materiais, modelo
 
 NOS = {'empunhadura_reta': {None: ['punho']}, 'empunhadura_curta_tan': {None: ['punho']},
+       'empunhadura_reta_tan': {None: ['punho']}, 'empunhadura_curta': {None: ['punho']}, 'empunhadura_vertical': {None: ['punho']}, 'empunhadura_angulada': {None: ['punho']}, 'empunhadura_quadrada': {None: ['punho']}, 'empunhadura_cilindrica': {None: ['punho']}, 'batente_mao': {None: ['punho']},
        'empunhadura_dobravel': {None: ['base'], 'haste': ['haste']}}
 
 

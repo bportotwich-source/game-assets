@@ -1,0 +1,43 @@
+{
+ "kit": "banco-googie",
+ "gerado_por": "scripts/materiais/mapear.py",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "brick": {
+   "material": "tijolo_vermelho"
+  },
+  "concrete": {
+   "material": "concreto"
+  },
+  "door_int": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.866,
+    0.749,
+    0.645
+   ]
+  },
+  "frame": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.979,
+    0.922,
+    0.763
+   ]
+  },
+  "plaster": {
+   "material": "reboco_claro"
+  },
+  "trim": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.754,
+    0.635,
+    0.558
+   ]
+  }
+ }
+}

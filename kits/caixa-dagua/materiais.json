@@ -1,0 +1,38 @@
+{
+ "kit": "caixa-dagua",
+ "gerado_por": "scripts/materiais/mapear.py",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "brick": {
+   "material": "tijolo_vermelho"
+  },
+  "concrete": {
+   "material": "concreto"
+  },
+  "coping": {
+   "material": "pedra_clara",
+   "sem_uv": true
+  },
+  "door": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.646,
+    0.749,
+    0.748
+   ]
+  },
+  "frame": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.599,
+    0.709,
+    0.711
+   ]
+  },
+  "plaster": {
+   "material": "reboco_claro"
+  }
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "kit": "hotel",
+ "gerado_por": "scripts/materiais/mapear.py",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "brick": {
+   "material": "tijolo_vermelho"
+  },
+  "cill": {
+   "material": "pedra_clara",
+   "sem_uv": true
+  },
+  "concrete": {
+   "material": "concreto"
+  },
+  "door": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.754,
+    0.666,
+    0.598
+   ]
+  },
+  "door_int": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "frame": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.565,
+    0.593,
+    0.653
+   ]
+  },
+  "plaster": {
+   "material": "reboco_claro"
+  },
+  "render": {
+   "material": "reboco_externo"
+  },
+  "trim": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  }
+ }
+}

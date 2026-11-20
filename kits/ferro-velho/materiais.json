@@ -1,0 +1,46 @@
+{
+ "kit": "ferro-velho",
+ "gerado_por": "scripts/materiais/mapear.py",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "block": {
+   "material": "bloco"
+  },
+  "concrete": {
+   "material": "concreto"
+  },
+  "coping": {
+   "material": "pedra_clara",
+   "sem_uv": true
+  },
+  "frame": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.574,
+    0.593,
+    0.645
+   ]
+  },
+  "plaster": {
+   "material": "reboco_claro"
+  },
+  "render": {
+   "material": "reboco_externo",
+   "cor": [
+    0.965,
+    0.935,
+    0.846
+   ]
+  },
+  "trim": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.682,
+    0.722,
+    0.748
+   ]
+  }
+ }
+}

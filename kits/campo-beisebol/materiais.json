@@ -1,0 +1,44 @@
+{
+ "kit": "campo-beisebol",
+ "gerado_por": "scripts/materiais/mapear.py",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "block": {
+   "material": "bloco"
+  },
+  "concrete": {
+   "material": "concreto"
+  },
+  "door_g": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.476,
+    0.709,
+    0.627
+   ]
+  },
+  "frame": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "plaster": {
+   "material": "reboco_claro"
+  },
+  "shingle": {
+   "material": "telha_barro"
+  },
+  "siding": {
+   "material": "tabua_branca"
+  },
+  "trim": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.79,
+    0.485,
+    0.547
+   ]
+  }
+ }
+}

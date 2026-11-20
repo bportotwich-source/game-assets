@@ -1,0 +1,65 @@
+{
+ "kit": "casa-barcos",
+ "gerado_por": "scripts/materiais/mapear.py",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "brick": {
+   "material": "tijolo_vermelho"
+  },
+  "cill": {
+   "material": "pedra_clara",
+   "sem_uv": true
+  },
+  "concrete": {
+   "material": "concreto"
+  },
+  "deck": {
+   "material": "deck"
+  },
+  "door": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.754,
+    0.602,
+    0.513
+   ]
+  },
+  "door_int": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "floor": {
+   "material": "assoalho"
+  },
+  "frame": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "paving": {
+   "material": "concreto"
+  },
+  "plaster": {
+   "material": "reboco_claro"
+  },
+  "sash": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "shingles": {
+   "material": "telha_barro"
+  },
+  "stone": {
+   "material": "cantaria",
+   "cor": [
+    0.731,
+    0.704,
+    0.673
+   ]
+  },
+  "trim": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  }
+ }
+}

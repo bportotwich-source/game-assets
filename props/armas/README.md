@@ -68,6 +68,12 @@ props/armas/
 | `modificadores` (acessórios) | multiplicadores aplicados à arma, ex.: supressor `ruido_m ×0,3` |
 | `receita` (improvisados) | o que gasta para fazer na bancada |
 
+## Tamanho das coronhas (ajustar_coronhas.py)
+
+Medida da coronha (do gatilho até a soleira, ao longo do cano) num tamanho que a personagem de 1,68 m apoia no ombro sem a coronha entrar no tronco: **35 a 35,5 cm** nas armas longas (AK de madeira, AK esqueleto, coronha fixa AR, coronha de precisão), e a SMG 9mm com a coronha aberta (31 cm). O grip vertical da M4 tática e da Ciclone foi recuado no trilho (9,7 cm e 2,5 cm) para o braço esquerdo alcançar.
+
+`ajustar_coronhas.py` mexe direto nos GLB (encolhe a malha da coronha entre dois z, sem remodelar) e no `catalogo.json`. Ele marca cada arquivo e não aplica duas vezes. **Se um gerador do Blender refizer estes GLB, rode `python3 ajustar_coronhas.py` de novo.** `--medir` mostra as medidas.
+
 ## Uso no Godot
 
 ```gdscript

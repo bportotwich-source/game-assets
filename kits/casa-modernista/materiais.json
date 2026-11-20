@@ -1,0 +1,52 @@
+{
+ "kit": "casa-modernista",
+ "gerado_por": "scripts/materiais/mapear.py",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "concrete": {
+   "material": "concreto"
+  },
+  "door": {
+   "material": "tinta_creme",
+   "cor": [
+    0.953,
+    0.727,
+    0.21
+   ]
+  },
+  "door_int": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.974,
+    0.881,
+    0.79
+   ]
+  },
+  "floor": {
+   "material": "assoalho"
+  },
+  "frame": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "plaster": {
+   "material": "reboco_claro"
+  },
+  "render": {
+   "material": "reboco_externo"
+  },
+  "stone2": {
+   "material": "cantaria",
+   "cor": [
+    0.817,
+    0.74,
+    0.678
+   ]
+  },
+  "trim": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  }
+ }
+}

@@ -1,0 +1,76 @@
+{
+ "kit": "concha-acustica",
+ "gerado_por": "scripts/materiais/mapear.py",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "brick": {
+   "material": "tijolo_vermelho"
+  },
+  "concrete": {
+   "material": "concreto"
+  },
+  "coping": {
+   "material": "pedra_clara",
+   "sem_uv": true
+  },
+  "door": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.754,
+    0.517,
+    0.513
+   ]
+  },
+  "door_int": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.992,
+    0.955,
+    0.902
+   ]
+  },
+  "frame": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.574,
+    0.593,
+    0.645
+   ]
+  },
+  "plaster": {
+   "material": "reboco_claro"
+  },
+  "render": {
+   "material": "reboco_externo",
+   "cor": [
+    1.0,
+    1.0,
+    0.927
+   ]
+  },
+  "sash": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "stone": {
+   "material": "cantaria",
+   "cor": [
+    0.979,
+    0.943,
+    0.906
+   ]
+  },
+  "trim": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.689,
+    0.635,
+    0.598
+   ]
+  }
+ }
+}

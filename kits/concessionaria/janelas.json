@@ -1,0 +1,93 @@
+{
+ "_leia": "Folhas de janela separadas por scripts/detalhe/folhas.py. Cada peca tem nos \"folha\" (e \"folha_2\"...) com a origem no eixo. desliza: subir curso_m em Y. gira: girar em Y ate angulo_graus na dobradica (o sinal ja abre para dentro, -Z). eixo_m e a origem do no na peca.",
+ "k_win": [
+  {
+   "no": "folha",
+   "tipo": "gira",
+   "dobradica": "esquerda",
+   "angulo_graus": 85,
+   "eixo_m": [
+    -0.754,
+    1.446,
+    -0.09
+   ],
+   "largura_m": 1.508,
+   "altura_m": 1.108
+  }
+ ],
+ "k_win_n_r": [
+  {
+   "no": "folha",
+   "tipo": "gira",
+   "dobradica": "esquerda",
+   "angulo_graus": 85,
+   "eixo_m": [
+    -0.454,
+    1.446,
+    -0.09
+   ],
+   "largura_m": 0.908,
+   "altura_m": 1.108
+  }
+ ],
+ "s_win": [
+  {
+   "no": "folha",
+   "tipo": "gira",
+   "dobradica": "esquerda",
+   "angulo_graus": 85,
+   "eixo_m": [
+    -0.954,
+    0.256,
+    -0.094
+   ],
+   "largura_m": 1.908,
+   "altura_m": 3.298
+  }
+ ],
+ "s_win_r": [
+  {
+   "no": "folha",
+   "tipo": "gira",
+   "dobradica": "esquerda",
+   "angulo_graus": 85,
+   "eixo_m": [
+    -0.954,
+    0.256,
+    -0.094
+   ],
+   "largura_m": 1.658,
+   "altura_m": 3.298
+  }
+ ],
+ "s_win_s": [
+  {
+   "no": "folha",
+   "tipo": "gira",
+   "dobradica": "esquerda",
+   "angulo_graus": 85,
+   "eixo_m": [
+    -0.62,
+    0.97,
+    -0.122
+   ],
+   "largura_m": 1.24,
+   "altura_m": 1.186
+  }
+ ],
+ "s_win_s_r": [
+  {
+   "no": "folha",
+   "tipo": "gira",
+   "dobradica": "esquerda",
+   "angulo_graus": 85,
+   "eixo_m": [
+    -0.62,
+    0.97,
+    -0.122
+   ],
+   "largura_m": 1.24,
+   "altura_m": 1.186
+  }
+ ]
+}

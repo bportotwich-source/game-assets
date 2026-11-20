@@ -1,0 +1,26 @@
+{
+ "kit": "patio-missoes",
+ "gerado_por": "scripts/materiais/mapear.py",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "plaster": {
+   "material": "reboco_claro"
+  },
+  "plinth": {
+   "material": "concreto",
+   "cor": [
+    0.93,
+    0.672,
+    0.509
+   ]
+  },
+  "render": {
+   "material": "reboco_externo",
+   "cor": [
+    1.0,
+    0.956,
+    0.887
+   ]
+  }
+ }
+}

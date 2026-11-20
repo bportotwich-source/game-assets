@@ -1,0 +1,33 @@
+{
+ "_leia": "Folhas de janela separadas por scripts/detalhe/folhas.py. Cada peca tem nos \"folha\" (e \"folha_2\"...) com a origem no eixo. desliza: subir curso_m em Y. gira: girar em Y ate angulo_graus na dobradica (o sinal ja abre para dentro, -Z). eixo_m e a origem do no na peca.",
+ "b_win": [
+  {
+   "no": "folha",
+   "tipo": "gira",
+   "dobradica": "esquerda",
+   "angulo_graus": 85,
+   "eixo_m": [
+    -0.82,
+    1.97,
+    -0.122
+   ],
+   "largura_m": 1.64,
+   "altura_m": 1.08
+  }
+ ],
+ "g_win": [
+  {
+   "no": "folha",
+   "tipo": "gira",
+   "dobradica": "esquerda",
+   "angulo_graus": 85,
+   "eixo_m": [
+    -0.975,
+    0.35,
+    -0.03
+   ],
+   "largura_m": 1.95,
+   "altura_m": 2.1
+  }
+ ]
+}

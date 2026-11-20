@@ -1,0 +1,78 @@
+{
+ "kit": "fazenda",
+ "gerado_por": "scripts/materiais/mapear.py",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "brick": {
+   "material": "tijolo_vermelho"
+  },
+  "cap": {
+   "material": "pedra_clara"
+  },
+  "concrete": {
+   "material": "concreto"
+  },
+  "deck": {
+   "material": "deck"
+  },
+  "door": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.537,
+    0.642,
+    0.627
+   ]
+  },
+  "door_int": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "floor": {
+   "material": "assoalho"
+  },
+  "frame": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "plaster": {
+   "material": "reboco_claro"
+  },
+  "sash": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "shingles": {
+   "material": "telha_asfaltica"
+  },
+  "shutter": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.508,
+    0.547,
+    0.568
+   ]
+  },
+  "siding": {
+   "material": "tabua_branca",
+   "cor": [
+    0.943,
+    0.921,
+    0.861
+   ]
+  },
+  "stone": {
+   "material": "cantaria",
+   "cor": [
+    0.751,
+    0.73,
+    0.723
+   ]
+  },
+  "trim": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  }
+ }
+}

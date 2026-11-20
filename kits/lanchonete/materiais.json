@@ -1,0 +1,57 @@
+{
+ "kit": "lanchonete",
+ "gerado_por": "scripts/materiais/mapear.py",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "brick": {
+   "material": "tijolo_vermelho"
+  },
+  "cill": {
+   "material": "pedra_clara",
+   "sem_uv": true
+  },
+  "concrete": {
+   "material": "concreto"
+  },
+  "door": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.929,
+    0.527,
+    0.513
+   ]
+  },
+  "door_int": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "frame": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.615,
+    0.584,
+    0.578
+   ]
+  },
+  "plaster": {
+   "material": "reboco_claro"
+  },
+  "render": {
+   "material": "reboco_externo",
+   "cor": [
+    0.991,
+    0.917,
+    0.751
+   ]
+  },
+  "shingles": {
+   "material": "telha_barro"
+  },
+  "trim": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  }
+ }
+}

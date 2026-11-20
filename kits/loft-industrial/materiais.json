@@ -1,0 +1,53 @@
+{
+ "kit": "loft-industrial",
+ "gerado_por": "scripts/materiais/mapear.py",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "brick": {
+   "material": "tijolo_vermelho"
+  },
+  "concrete": {
+   "material": "concreto"
+  },
+  "deck": {
+   "material": "deck"
+  },
+  "door": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.696,
+    0.584,
+    0.513
+   ]
+  },
+  "door_int": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.974,
+    0.95,
+    0.93
+   ]
+  },
+  "frame": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.574,
+    0.593,
+    0.645
+   ]
+  },
+  "lattice": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "plaster": {
+   "material": "reboco_claro"
+  },
+  "stone": {
+   "material": "cantaria"
+  }
+ }
+}

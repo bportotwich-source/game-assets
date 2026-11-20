@@ -1,0 +1,135 @@
+{
+ "_leia": "Folhas de janela separadas por scripts/detalhe/folhas.py. Cada peca tem nos \"folha\" (e \"folha_2\"...) com a origem no eixo. desliza: subir curso_m em Y. gira: girar em Y ate angulo_graus na dobradica (o sinal ja abre para dentro, -Z). eixo_m e a origem do no na peca.",
+ "h_back_window": [
+  {
+   "no": "folha",
+   "tipo": "gira",
+   "dobradica": "esquerda",
+   "angulo_graus": 85,
+   "eixo_m": [
+    -0.6,
+    1.2,
+    -0.1
+   ],
+   "largura_m": 1.2,
+   "altura_m": 3.25
+  }
+ ],
+ "h_front_window": [
+  {
+   "no": "folha",
+   "tipo": "gira",
+   "dobradica": "esquerda",
+   "angulo_graus": 85,
+   "eixo_m": [
+    -0.6,
+    1.2,
+    -0.1
+   ],
+   "largura_m": 1.2,
+   "altura_m": 3.25
+  }
+ ],
+ "h_side_window_l0": [
+  {
+   "no": "folha",
+   "tipo": "gira",
+   "dobradica": "esquerda",
+   "angulo_graus": 85,
+   "eixo_m": [
+    -0.6,
+    1.2,
+    -0.1
+   ],
+   "largura_m": 1.2,
+   "altura_m": 3.25
+  }
+ ],
+ "h_side_window_l1": [
+  {
+   "no": "folha",
+   "tipo": "gira",
+   "dobradica": "esquerda",
+   "angulo_graus": 85,
+   "eixo_m": [
+    -0.6,
+    1.2,
+    -0.1
+   ],
+   "largura_m": 1.2,
+   "altura_m": 3.25
+  }
+ ],
+ "h_side_window_r0": [
+  {
+   "no": "folha",
+   "tipo": "gira",
+   "dobradica": "esquerda",
+   "angulo_graus": 85,
+   "eixo_m": [
+    -0.6,
+    1.2,
+    -0.1
+   ],
+   "largura_m": 1.2,
+   "altura_m": 3.25
+  }
+ ],
+ "h_side_window_r1": [
+  {
+   "no": "folha",
+   "tipo": "gira",
+   "dobradica": "esquerda",
+   "angulo_graus": 85,
+   "eixo_m": [
+    -0.6,
+    1.2,
+    -0.1
+   ],
+   "largura_m": 1.2,
+   "altura_m": 3.25
+  }
+ ],
+ "o_g_window": [
+  {
+   "no": "folha",
+   "tipo": "desliza",
+   "curso_m": 0.564,
+   "eixo_m": [
+    0.0,
+    0.972,
+    -0.13
+   ],
+   "largura_m": 0.88,
+   "altura_m": 0.604
+  }
+ ],
+ "o_u1_window": [
+  {
+   "no": "folha",
+   "tipo": "desliza",
+   "curso_m": 0.564,
+   "eixo_m": [
+    0.0,
+    0.972,
+    -0.13
+   ],
+   "largura_m": 0.88,
+   "altura_m": 0.604
+  }
+ ],
+ "o_u2_window": [
+  {
+   "no": "folha",
+   "tipo": "desliza",
+   "curso_m": 0.564,
+   "eixo_m": [
+    0.0,
+    0.972,
+    -0.13
+   ],
+   "largura_m": 0.88,
+   "altura_m": 0.604
+  }
+ ]
+}

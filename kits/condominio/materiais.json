@@ -1,0 +1,59 @@
+{
+ "kit": "condominio",
+ "gerado_por": "scripts/materiais/mapear.py",
+ "convencao": "nome do material nas peças -> material de materiais/ (ver materiais/LEIA-ME.md). sem_uv: a peça não tem UV, o ladrilho é projetado pelas três faces. cor: multiplica a cor do ladrilho.",
+ "materiais": {
+  "brick": {
+   "material": "tijolo_vermelho"
+  },
+  "concrete": {
+   "material": "concreto"
+  },
+  "coping": {
+   "material": "pedra_clara",
+   "sem_uv": true
+  },
+  "deck": {
+   "material": "deck"
+  },
+  "door": {
+   "material": "tinta_creme",
+   "sem_uv": true,
+   "cor": [
+    0.591,
+    0.673,
+    0.748
+   ]
+  },
+  "door_int": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "frame": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "plaster": {
+   "material": "reboco_claro"
+  },
+  "sash": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  },
+  "shingles": {
+   "material": "telha_asfaltica"
+  },
+  "siding": {
+   "material": "tabua_branca",
+   "cor": [
+    0.987,
+    0.925,
+    0.807
+   ]
+  },
+  "trim": {
+   "material": "tinta_creme",
+   "sem_uv": true
+  }
+ }
+}
